@@ -1,0 +1,44 @@
+pipeline:
+  instant_threshold: 85
+  digest_threshold: 70
+  digest_max_items: 15
+
+sources:
+  greenhouse:
+    enabled: true
+    boards:
+      - stripe
+      - datadog
+      - elastic
+      - gitlab
+    content: true
+
+scoring:
+  include:
+    roles:
+      - "data analyst"
+      - "analytics engineer"
+      - "product analyst"
+    skills:
+      - "sql"
+      - "python"
+      - "postgres"
+      - "dbt"
+      - "data quality"
+  exclude:
+    keywords:
+      - "intern"
+      - "stage"
+      - "tirocinio"
+      - "call center"
+      - "promoter"
+  weights: {}
+
+storage:
+  sqlite_path: "data/jobintel.sqlite"
+
+notify:
+  mode: "stdout"
+  telegram:
+    bot_token: ""
+    chat_id: ""

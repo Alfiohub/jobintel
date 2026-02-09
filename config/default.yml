@@ -1,0 +1,27 @@
+pipeline:
+  instant_threshold: 85
+  digest_threshold: 70
+  digest_max_items: 15
+
+sources:
+  greenhouse:
+    enabled: true
+    boards: []
+    content: true
+
+scoring:
+  include:
+    roles: []
+    skills: []
+  exclude:
+    keywords: []
+  weights: {}
+
+storage:
+  sqlite_path: "data/jobintel.sqlite"
+
+notify:
+  mode: "stdout"
+  telegram:
+    bot_token: ""
+    chat_id: ""

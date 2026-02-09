@@ -1,0 +1,3 @@
+# jobintel
+
+Job intelligence pipeline.
