@@ -31,13 +31,7 @@ cp config/examples/data_analyst.yml config/local.yml
 
 ## Esecuzione
 ```bash
-uv run jobintel run --config config/local.yml
-```
-
-## Discovery (branch aggregators)
-Nel branch `feature/aggregators` trovi il comando per scoprire board Greenhouse via TheirStack:
-```bash
-uv run jobintel discover --config config/discovery.yml
+uv run jobintel --config config/local.yml
 ```
 
 ## Dove finiscono i dati
