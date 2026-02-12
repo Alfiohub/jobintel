@@ -59,7 +59,7 @@ class GreenhouseCollector(Collector):
             else:
                 out.extend(res)
         if not out and errors:
-            raise RuntimeError(f\"Greenhouse failed: {errors[0]}\")
+            raise RuntimeError(f"Greenhouse failed: {errors[0]}")
         return out
 
     async def _fetch_board_async(
@@ -97,7 +97,7 @@ class GreenhouseCollector(Collector):
             except Exception as e:
                 last = e
                 await asyncio.sleep(1.5 * (i + 1))
-        raise RuntimeError(f\"Greenhouse failed: {last}\")
+        raise RuntimeError(f"Greenhouse failed: {last}")
 
     def _fetch_board(self, board: GreenhouseBoard) -> list[JobPost]:
 

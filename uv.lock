@@ -329,6 +329,7 @@ source = { editable = "." }
 dependencies = [
     { name = "ddgs" },
     { name = "fastapi" },
+    { name = "httpx" },
     { name = "pyyaml" },
     { name = "requests" },
     { name = "uvicorn" },
@@ -338,6 +339,7 @@ dependencies = [
 requires-dist = [
     { name = "ddgs" },
     { name = "fastapi" },
+    { name = "httpx" },
     { name = "pyyaml" },
     { name = "requests" },
     { name = "uvicorn" },
