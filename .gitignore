@@ -8,3 +8,5 @@ build/
 .pytest_cache/
 data/
 *.sqlite
+config/local.yml
+apk.txt

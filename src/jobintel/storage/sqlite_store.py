@@ -19,6 +19,9 @@ CREATE TABLE IF NOT EXISTS seen_jobs (
   company     TEXT NOT NULL,
   title       TEXT NOT NULL,
   url         TEXT NOT NULL,
+  location    TEXT,
+  remote      INTEGER,
+  published_at TEXT,
   notified    INTEGER NOT NULL DEFAULT 0
 );
 """
@@ -30,6 +33,18 @@ class SQLiteStore(Store):
         Path(db_path).parent.mkdir(parents=True, exist_ok=True)
         with sqlite3.connect(self.db_path) as con:
             con.execute(SCHEMA)
+            self._ensure_columns(con)
+
+    def _ensure_columns(self, con: sqlite3.Connection) -> None:
+        existing = {row[1] for row in con.execute("PRAGMA table_info(seen_jobs)")}
+        cols = {
+            "location": "TEXT",
+            "remote": "INTEGER",
+            "published_at": "TEXT",
+        }
+        for name, typ in cols.items():
+            if name not in existing:
+                con.execute(f"ALTER TABLE seen_jobs ADD COLUMN {name} {typ}")
 
     def filter_new(self, jobs: Sequence[ScoredJob]) -> list[ScoredJob]:
         out: list[ScoredJob] = []
@@ -51,8 +66,8 @@ class SQLiteStore(Store):
                     continue
 
                 con.execute(
-                    "INSERT INTO seen_jobs(fingerprint, first_seen, last_seen, score, source, company, title, url, notified) "
-                    "VALUES(?,?,?,?,?,?,?,?,0)",
+                    "INSERT INTO seen_jobs(fingerprint, first_seen, last_seen, score, source, company, title, url, location, remote, published_at, notified) "
+                    "VALUES(?,?,?,?,?,?,?,?,?,?,?,0)",
                     (
                         fp,
                         now,
@@ -62,6 +77,9 @@ class SQLiteStore(Store):
                         j.post.company,
                         j.post.title,
                         j.post.url,
+                        j.post.location,
+                        1 if j.post.remote else 0 if j.post.remote is False else None,
+                        j.post.published_at.isoformat() if j.post.published_at else None,
                     ),
                 )
                 out.append(j)

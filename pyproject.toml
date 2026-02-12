@@ -17,6 +17,10 @@ classifiers = [
 dependencies = [
   "requests",
   "pyyaml",
+  "ddgs",
+  "fastapi",
+  "uvicorn",
+  "httpx",
 ]
 
 [project.scripts]

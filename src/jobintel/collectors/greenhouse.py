@@ -3,7 +3,9 @@ from __future__ import annotations
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from typing import Any, Mapping, Optional
+import asyncio
 import time
+import httpx
 import requests
 
 from ..interfaces import Collector
@@ -26,24 +28,76 @@ class GreenhouseCollector(Collector):
         content: bool = True,
         timeout_s: int = 20,
         retries: int = 3,
+        max_concurrency: int = 8,
     ):
         self.boards = boards
         self.content = content
         self.timeout = timeout_s
         self.retries = retries
+        self.max_concurrency = max_concurrency
 
     def name(self) -> str:
         return "greenhouse"
 
     def fetch(self) -> list[JobPost]:
+        # Use async to speed up network-bound fetches.
+        return asyncio.run(self._fetch_all())
 
+    async def _fetch_all(self) -> list[JobPost]:
+        if not self.boards:
+            return []
+        sem = asyncio.Semaphore(self.max_concurrency)
+        timeout = httpx.Timeout(self.timeout)
+        async with httpx.AsyncClient(timeout=timeout) as client:
+            tasks = [self._fetch_board_async(client, b, sem) for b in self.boards]
+            results = await asyncio.gather(*tasks, return_exceptions=True)
         out: list[JobPost] = []
-
-        for b in self.boards:
-            out.extend(self._fetch_board(b))
-            time.sleep(0.2)
-
+        errors: list[Exception] = []
+        for res in results:
+            if isinstance(res, Exception):
+                errors.append(res)
+            else:
+                out.extend(res)
+        if not out and errors:
+            raise RuntimeError(f\"Greenhouse failed: {errors[0]}\")
         return out
+
+    async def _fetch_board_async(
+        self,
+        client: httpx.AsyncClient,
+        board: GreenhouseBoard,
+        sem: asyncio.Semaphore,
+    ) -> list[JobPost]:
+        async with sem:
+            return await self._fetch_board_async_inner(client, board)
+
+    async def _fetch_board_async_inner(
+        self,
+        client: httpx.AsyncClient,
+        board: GreenhouseBoard,
+    ) -> list[JobPost]:
+        params = {"content": "true"} if self.content else None
+        url = f"{self.BASE_URL}/{board.token}/jobs"
+        data = await self._get_async(client, url, params)
+        jobs = data.get("jobs", [])
+        out: list[JobPost] = []
+        for j in jobs:
+            p = self._map(board, j)
+            if p:
+                out.append(p)
+        return out
+
+    async def _get_async(self, client: httpx.AsyncClient, url: str, params=None) -> dict:
+        last: Exception | None = None
+        for i in range(self.retries):
+            try:
+                r = await client.get(url, params=params)
+                r.raise_for_status()
+                return r.json()
+            except Exception as e:
+                last = e
+                await asyncio.sleep(1.5 * (i + 1))
+        raise RuntimeError(f\"Greenhouse failed: {last}\")
 
     def _fetch_board(self, board: GreenhouseBoard) -> list[JobPost]:
 
