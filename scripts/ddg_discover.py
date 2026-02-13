@@ -10,85 +10,138 @@ from ddgs import DDGS
 
 
 GREENHOUSE_HOSTS = {"boards.greenhouse.io", "job-boards.greenhouse.io"}
+SMARTRECRUITERS_HOSTS = {"jobs.smartrecruiters.com", "careers.smartrecruiters.com"}
 GH_API = "https://boards-api.greenhouse.io/v1/boards/{slug}/jobs"
+SR_API = "https://api.smartrecruiters.com/v1/companies/{company}/postings"
 
 
-def _extract_slug(url: str) -> str | None:
+def _extract_target(url: str) -> tuple[str, str] | None:
     try:
         u = urlparse(url)
         host = (u.netloc or "").lower()
         parts = [p for p in (u.path or "").split("/") if p]
         if not parts:
             return None
-        # ignore embed/app paths
-        if parts[0].lower() in {"embed", "job_board", "job_app"}:
-            return None
-        slug = parts[0].lower()
+
         if host in GREENHOUSE_HOSTS:
-            return slug
+            # ignore embed/app paths
+            if parts[0].lower() in {"embed", "job_board", "job_app"}:
+                return None
+            return "greenhouse", parts[0].lower()
+
+        if host in SMARTRECRUITERS_HOSTS:
+            company = parts[0].strip()
+            if company.lower() in {"search-jobs", "jobs"}:
+                return None
+            return "smartrecruiters", company
+
     except Exception:
         return None
     return None
 
 
-def _is_bad_slug(slug: str) -> bool:
-    s = slug.lower()
+def _is_bad_slug(source: str, slug: str) -> bool:
+    if source == "smartrecruiters":
+        return False
+    s = slug.strip().lower()
     return any(k in s for k in ["referral", "internal", "test"])
 
 
-def _probe(slug: str) -> bool:
+def _probe_greenhouse(slug: str) -> bool:
     url = GH_API.format(slug=slug)
     try:
         r = requests.get(url, timeout=15, headers={"User-Agent": "jobintel/0.1"})
         if r.status_code != 200:
-            print(f"Probe failed {slug}: {r.status_code}")
+            print(f"Probe failed greenhouse:{slug}: {r.status_code}")
             return False
         data = r.json()
-        print(f"Probe ok {slug}: {len(data.get('jobs', []))} jobs")
+        print(f"Probe ok greenhouse:{slug}: {len(data.get('jobs', []))} jobs")
         return isinstance(data, dict) and "jobs" in data
     except Exception:
-        print(f"Probe failed {slug}: exception")
+        print(f"Probe failed greenhouse:{slug}: exception")
         return False
 
 
-def discover_from_ddg(queries: list[str], max_results: int = 50) -> list[str]:
-    boards: list[str] = []
-    seen = set()
+def _probe_smartrecruiters(company: str) -> bool:
+    url = SR_API.format(company=company)
+    try:
+        r = requests.get(url, params={"limit": 1}, timeout=15, headers={"User-Agent": "jobintel/0.1"})
+        if r.status_code != 200:
+            print(f"Probe failed smartrecruiters:{company}: {r.status_code}")
+            return False
+        data = r.json()
+        content = data.get("content", []) if isinstance(data, dict) else []
+        print(f"Probe ok smartrecruiters:{company}: {len(content)} sample jobs")
+        return isinstance(data, dict) and "content" in data
+    except Exception:
+        print(f"Probe failed smartrecruiters:{company}: exception")
+        return False
+
+
+def _probe(source: str, slug: str) -> bool:
+    if source == "greenhouse":
+        return _probe_greenhouse(slug)
+    if source == "smartrecruiters":
+        return _probe_smartrecruiters(slug)
+    return False
+
+
+def discover_from_ddg(queries: list[str], max_results: int = 50) -> dict[str, list[str]]:
+    targets: dict[str, list[str]] = {"greenhouse": [], "smartrecruiters": []}
+    seen: dict[str, set[str]] = {"greenhouse": set(), "smartrecruiters": set()}
 
     with DDGS() as ddgs:
         for q in queries:
             results = ddgs.text(q, max_results=max_results)
-        for r in results:
-            url = r.get("href") or r.get("url")
-            if not isinstance(url, str):
-                continue
-            print(f"DDG hit: {url}")
-            slug = _extract_slug(url)
-            if not slug or slug in seen or _is_bad_slug(slug):
-                continue
-            seen.add(slug)
-            if _probe(slug):
-                boards.append(slug)
-            time.sleep(0.3)
-            time.sleep(1.0)
+            for r in results:
+                url = r.get("href") or r.get("url")
+                if not isinstance(url, str):
+                    continue
+                print(f"DDG hit: {url}")
 
-    return boards
+                target = _extract_target(url)
+                if not target:
+                    continue
+                source, slug = target
+                key = slug.lower()
+
+                if key in seen[source] or _is_bad_slug(source, slug):
+                    continue
+                seen[source].add(key)
+
+                if _probe(source, slug):
+                    targets[source].append(slug)
+                time.sleep(0.4)
+
+    return targets
 
 
-def _load_existing(path: Path) -> list[str]:
+def _load_existing(path: Path) -> dict[str, list[str]]:
     if not path.exists():
-        return []
+        return {"greenhouse": [], "smartrecruiters": []}
+
     data = yaml.safe_load(path.read_text()) or {}
-    boards = data.get("sources", {}).get("greenhouse", {}).get("boards", []) or []
-    return [b for b in boards if isinstance(b, str)]
+    sources = data.get("sources", {}) if isinstance(data, dict) else {}
+    gh_boards = sources.get("greenhouse", {}).get("boards", []) if isinstance(sources, dict) else []
+    sr_companies = (
+        sources.get("smartrecruiters", {}).get("companies", []) if isinstance(sources, dict) else []
+    )
+
+    return {
+        "greenhouse": [b for b in gh_boards if isinstance(b, str)],
+        "smartrecruiters": [c for c in sr_companies if isinstance(c, str)],
+    }
 
 
-def write_targets(path: Path, boards: list[str]) -> None:
+def write_targets(path: Path, targets: dict[str, list[str]]) -> None:
     existing = _load_existing(path)
-    merged = list(dict.fromkeys(existing + boards))
+    merged_gh = list(dict.fromkeys(existing["greenhouse"] + targets["greenhouse"]))
+    merged_sr = list(dict.fromkeys(existing["smartrecruiters"] + targets["smartrecruiters"]))
+
     payload = {
         "sources": {
-            "greenhouse": {"enabled": True, "boards": merged, "content": True},
+            "greenhouse": {"enabled": True, "boards": merged_gh, "content": True},
+            "smartrecruiters": {"enabled": True, "companies": merged_sr, "limit": 100},
         }
     }
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -107,13 +160,18 @@ def main() -> None:
         "site:boards.greenhouse.io Amsterdam data",
         "site:boards.greenhouse.io distributed data",
         "site:boards.greenhouse.io SQL",
+        "site:jobs.smartrecruiters.com remote data",
+        "site:jobs.smartrecruiters.com data analyst",
+        "site:jobs.smartrecruiters.com analytics",
+        "site:jobs.smartrecruiters.com python",
     ]
 
-    boards = discover_from_ddg(queries, max_results=50)
+    targets = discover_from_ddg(queries, max_results=50)
     out = Path("config/generated/targets.yml")
-    write_targets(out, boards)
+    write_targets(out, targets)
     print(f"Wrote {out}")
-    print(f"GH boards: {len(boards)}")
+    print(f"GH boards: {len(targets['greenhouse'])}")
+    print(f"SR companies: {len(targets['smartrecruiters'])}")
 
 
 if __name__ == "__main__":

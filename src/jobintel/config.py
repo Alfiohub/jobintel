@@ -17,6 +17,13 @@ class GreenhouseConfig:
 
 
 @dataclass(frozen=True, slots=True)
+class SmartRecruitersCfg:
+    enabled: bool
+    companies: tuple[str, ...]
+    limit: int = 100
+
+
+@dataclass(frozen=True, slots=True)
 class NotifyConfig:
     mode: str
     telegram_bot_token: str
@@ -40,6 +47,7 @@ class ScoringConfig:
 class AppConfig:
     pipeline: PipelineConfig
     greenhouse: GreenhouseConfig
+    smartrecruiters: SmartRecruitersCfg
     scoring: ScoringConfig
     storage: StorageConfig
     notify: NotifyConfig
@@ -72,6 +80,12 @@ def load_config(path: str | Path) -> AppConfig:
         bool(_get(data, "sources.greenhouse.content", True)),
     )
 
+    smartrecruiters = SmartRecruitersCfg(
+        bool(_get(data, "sources.smartrecruiters.enabled", False)),
+        tuple(_get(data, "sources.smartrecruiters.companies", []) or []),
+        int(_get(data, "sources.smartrecruiters.limit", 100)),
+    )
+
     scoring = ScoringConfig(
         tuple(_get(data, "scoring.include.roles", []) or []),
         tuple(_get(data, "scoring.include.skills", []) or []),
@@ -89,4 +103,4 @@ def load_config(path: str | Path) -> AppConfig:
         str(_get(data, "notify.telegram.chat_id", "")),
     )
 
-    return AppConfig(pipeline, greenhouse, scoring, storage, notify)
+    return AppConfig(pipeline, greenhouse, smartrecruiters, scoring, storage, notify)

@@ -5,6 +5,7 @@ import argparse
 from .config import load_config
 from .pipeline import Pipeline
 from .collectors.greenhouse import GreenhouseBoard, GreenhouseCollector
+from .collectors.smartrecruiters import SmartRecruitersCollector, SmartRecruitersConfig
 from .scoring.rule_based import RuleBasedScorer
 from .storage.sqlite_store import SQLiteStore
 from .notify.stdout import StdoutNotifier
@@ -21,6 +22,15 @@ def main() -> None:
     if cfg.greenhouse.enabled and cfg.greenhouse.boards:
         boards = [GreenhouseBoard(token=t, company_name=t) for t in cfg.greenhouse.boards]
         collectors.append(GreenhouseCollector(boards=boards, content=cfg.greenhouse.content))
+    if cfg.smartrecruiters.enabled and cfg.smartrecruiters.companies:
+        collectors.append(
+            SmartRecruitersCollector(
+                SmartRecruitersConfig(
+                    companies=cfg.smartrecruiters.companies,
+                    limit=cfg.smartrecruiters.limit,
+                )
+            )
+        )
 
     scorer = RuleBasedScorer(cfg.scoring)
     store = SQLiteStore(cfg.storage.sqlite_path)

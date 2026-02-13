@@ -12,6 +12,11 @@ sources:
       - elastic
       - gitlab
     content: true
+  smartrecruiters:
+    enabled: false
+    companies:
+      - smartrecruiters
+    limit: 100
 
 scoring:
   include:

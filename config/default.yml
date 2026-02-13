@@ -8,6 +8,10 @@ sources:
     enabled: true
     boards: []
     content: true
+  smartrecruiters:
+    enabled: false
+    companies: []
+    limit: 100
 
 scoring:
   include:
