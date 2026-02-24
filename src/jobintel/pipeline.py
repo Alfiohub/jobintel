@@ -4,6 +4,7 @@ from dataclasses import dataclass
 from typing import Sequence
 
 from .interfaces import Collector, Logger, Notifier, Scorer, Store, null_logger
+from .enrichment import EnrichmentRules
 
 
 @dataclass(frozen=True, slots=True)
@@ -19,6 +20,7 @@ class Pipeline:
         self,
         collectors: Sequence[Collector],
         scorer: Scorer,
+        enricher: EnrichmentRules,
         store: Store,
         notifier: Notifier,
         config: PipelineConfig = PipelineConfig(),
@@ -26,6 +28,7 @@ class Pipeline:
     ):
         self.collectors = collectors
         self.scorer = scorer
+        self.enricher = enricher
         self.store = store
         self.notifier = notifier
         self.cfg = config
@@ -47,6 +50,15 @@ class Pipeline:
 
         if not posts:
             self.log.info("No posts fetched.")
+            return
+
+        posts, enrich_stats = self.enricher.enrich_many(posts)
+        self.log.info(
+            f"Enrichment: in={enrich_stats.input_count} out={enrich_stats.output_count} "
+            f"dropped_low_quality={enrich_stats.low_quality_dropped}"
+        )
+        if not posts:
+            self.log.info("No posts after enrichment/quality gates.")
             return
 
         scored = self.scorer.score(posts)

@@ -1,6 +1,6 @@
 sources:
   greenhouse:
-    enabled: true
+    enabled: false
     boards:
     - found
     - omadahealth
@@ -1921,21 +1921,6 @@ sources:
     - cc
     - ccah
     - ccscorpcareers
-    - underdogfantasy
-    - technergetics
-    - embrace
-    - zscaler
-    - yougov
-    - krollbondratingagency
-    - nearsure
-    - omnipresent
-    - sanmaremployeeopenings
-    - kargo
-    - scout24
-    - leaseweb
-    - gropyus
-    - zipcolimited
-    - maddoxindustrialtransformer
     content: true
   smartrecruiters:
     enabled: true
@@ -2652,28 +2637,3 @@ sources:
     - scyneadvisory
     - upeducation
     limit: 100
-  lever:
-    enabled: true
-    companies:
-    - wypoon
-    - palantir
-    - pryon
-    - zoox
-    - rapidai
-    - sporty
-    - aofl
-    - vrchat
-    - nimblerx
-    - spotify
-    - wealthfront
-    - netomi
-    - drivetrain
-    - doola
-    - binance
-    - gohighlevel
-    - rackspace
-    - rws
-    - welocalize
-    - workwave
-    - dlocal
-    - verifiable

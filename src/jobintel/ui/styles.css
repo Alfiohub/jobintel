@@ -1,0 +1,126 @@
+:root {
+  --bg: #f5f2eb;
+  --panel: #fffdf8;
+  --ink: #1c1a17;
+  --muted: #6b6256;
+  --line: #dfd4c1;
+  --accent: #006d77;
+  --danger: #af2333;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at 20% 10%, #fff3d9, var(--bg));
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--line);
+  background: #fff8ea;
+}
+
+h1 { margin: 0; font-size: 1.2rem; letter-spacing: 0.03em; }
+h2 { margin: 0 0 10px; font-size: 1.05rem; }
+
+.user-row { display: flex; gap: 8px; align-items: center; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  padding: 12px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+  min-height: 70vh;
+}
+
+.stack { display: grid; gap: 10px; }
+.card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+}
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.badge {
+  background: #f1ebe0;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+}
+
+.actions, .toolbar, .webhook-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+button {
+  border: 1px solid var(--line);
+  background: #fffdf7;
+  color: var(--ink);
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover { border-color: var(--accent); }
+button.danger { color: #fff; background: var(--danger); border-color: var(--danger); }
+
+input {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 7px 8px;
+  width: 100%;
+  min-width: 0;
+}
+
+label {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+select {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 8px;
+  width: 100%;
+  min-width: 0;
+  background: #fff;
+}
+
+.job-title {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.job-title:hover { text-decoration: underline; }
+
+.meta, .reasons, .criteria, .hint {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 1100px) {
+  .layout { grid-template-columns: 1fr; }
+  .panel { min-height: auto; }
+}

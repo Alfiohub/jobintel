@@ -1,0 +1,17 @@
+sources:
+  greenhouse:
+    enabled: false
+    boards: []
+    content: true
+  smartrecruiters:
+    enabled: true
+    companies:
+    - Visa
+    - Cricut
+    - InformaGroupPlc
+    - MassiveInsights
+    - Financeactive
+    - Dynatrace1
+    - FannieMae
+    - BertoniSolutions
+    limit: 100

@@ -4,11 +4,11 @@ import argparse
 
 from .config import load_config
 from .pipeline import Pipeline
-from .collectors.greenhouse import GreenhouseBoard, GreenhouseCollector
-from .collectors.smartrecruiters import SmartRecruitersCollector, SmartRecruitersConfig
 from .scoring.rule_based import RuleBasedScorer
 from .storage.sqlite_store import SQLiteStore
 from .notify.stdout import StdoutNotifier
+from .source_registry import build_collectors_from_sources
+from .enrichment import EnrichmentRules
 
 
 def main() -> None:
@@ -18,27 +18,20 @@ def main() -> None:
 
     cfg = load_config(args.config)
 
-    collectors = []
-    if cfg.greenhouse.enabled and cfg.greenhouse.boards:
-        boards = [GreenhouseBoard(token=t, company_name=t) for t in cfg.greenhouse.boards]
-        collectors.append(GreenhouseCollector(boards=boards, content=cfg.greenhouse.content))
-    if cfg.smartrecruiters.enabled and cfg.smartrecruiters.companies:
-        collectors.append(
-            SmartRecruitersCollector(
-                SmartRecruitersConfig(
-                    companies=cfg.smartrecruiters.companies,
-                    limit=cfg.smartrecruiters.limit,
-                )
-            )
-        )
+    collectors = build_collectors_from_sources(cfg.sources_raw)
 
     scorer = RuleBasedScorer(cfg.scoring)
+    enricher = EnrichmentRules(
+        enabled=cfg.enrichment.enabled,
+        min_quality_score=cfg.enrichment.min_quality_score,
+    )
     store = SQLiteStore(cfg.storage.sqlite_path)
     notifier = StdoutNotifier()
 
     pipe = Pipeline(
         collectors=collectors,
         scorer=scorer,
+        enricher=enricher,
         store=store,
         notifier=notifier,
         config=cfg.pipeline,

@@ -10,7 +10,9 @@ from ..matching import build_job_text, contains_any_term, contains_term, normali
 
 
 def _fingerprint(p: JobPost) -> str:
-    key = f"{p.source}|{p.company}|{p.url}".strip().lower()
+    if p.id:
+        return p.id[:16]
+    key = f"{p.source}|{p.company_name}|{p.url}".strip().lower()
     return hashlib.sha256(key.encode("utf-8")).hexdigest()[:16]
 
 

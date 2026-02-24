@@ -24,6 +24,12 @@ class SmartRecruitersCfg:
 
 
 @dataclass(frozen=True, slots=True)
+class LeverCfg:
+    enabled: bool
+    companies: tuple[str, ...]
+
+
+@dataclass(frozen=True, slots=True)
 class NotifyConfig:
     mode: str
     telegram_bot_token: str
@@ -44,10 +50,19 @@ class ScoringConfig:
 
 
 @dataclass(frozen=True, slots=True)
+class EnrichmentConfig:
+    enabled: bool
+    min_quality_score: float
+
+
+@dataclass(frozen=True, slots=True)
 class AppConfig:
     pipeline: PipelineConfig
     greenhouse: GreenhouseConfig
     smartrecruiters: SmartRecruitersCfg
+    lever: LeverCfg
+    sources_raw: Mapping[str, Mapping[str, Any]]
+    enrichment: EnrichmentConfig
     scoring: ScoringConfig
     storage: StorageConfig
     notify: NotifyConfig
@@ -67,6 +82,9 @@ def _get(d: Mapping[str, Any], path: str, default: Any) -> Any:
 def load_config(path: str | Path) -> AppConfig:
 
     data = yaml.safe_load(Path(path).read_text()) or {}
+    raw_sources = _get(data, "sources", {}) or {}
+    if not isinstance(raw_sources, Mapping):
+        raw_sources = {}
 
     pipeline = PipelineConfig(
         int(_get(data, "pipeline.instant_threshold", 85)),
@@ -85,12 +103,20 @@ def load_config(path: str | Path) -> AppConfig:
         tuple(_get(data, "sources.smartrecruiters.companies", []) or []),
         int(_get(data, "sources.smartrecruiters.limit", 100)),
     )
+    lever = LeverCfg(
+        bool(_get(data, "sources.lever.enabled", False)),
+        tuple(_get(data, "sources.lever.companies", []) or []),
+    )
 
     scoring = ScoringConfig(
         tuple(_get(data, "scoring.include.roles", []) or []),
         tuple(_get(data, "scoring.include.skills", []) or []),
         tuple(_get(data, "scoring.exclude.keywords", []) or []),
         _get(data, "scoring.weights", {}) or {},
+    )
+    enrichment = EnrichmentConfig(
+        bool(_get(data, "enrichment.enabled", True)),
+        float(_get(data, "enrichment.min_quality_score", 0.25)),
     )
 
     storage = StorageConfig(
@@ -103,4 +129,14 @@ def load_config(path: str | Path) -> AppConfig:
         str(_get(data, "notify.telegram.chat_id", "")),
     )
 
-    return AppConfig(pipeline, greenhouse, smartrecruiters, scoring, storage, notify)
+    return AppConfig(
+        pipeline,
+        greenhouse,
+        smartrecruiters,
+        lever,
+        {k: v for k, v in raw_sources.items() if isinstance(k, str) and isinstance(v, Mapping)},
+        enrichment,
+        scoring,
+        storage,
+        notify,
+    )

@@ -7,7 +7,43 @@ from typing import Any, Mapping, Optional
 import requests
 
 from ..interfaces import Collector
+from ..canonical import validate_canonical
 from ..model import JobPost
+
+SOURCE_NAME = "smartrecruiters"
+
+
+def _as_bool(v: Any, default: bool = False) -> bool:
+    if isinstance(v, bool):
+        return v
+    if v is None:
+        return default
+    if isinstance(v, str):
+        return v.strip().lower() in {"1", "true", "yes", "on"}
+    return bool(v)
+
+
+def _as_str_list(v: Any) -> list[str]:
+    if not isinstance(v, (list, tuple)):
+        return []
+    out: list[str] = []
+    for x in v:
+        if isinstance(x, str) and x.strip():
+            out.append(x.strip())
+    return out
+
+
+def build_collector(cfg: Mapping[str, Any]) -> Collector | None:
+    if not _as_bool(cfg.get("enabled"), default=False):
+        return None
+    companies = _as_str_list(cfg.get("companies"))
+    if not companies:
+        return None
+    try:
+        limit = int(cfg.get("limit", 100) or 100)
+    except Exception:
+        limit = 100
+    return SmartRecruitersCollector(SmartRecruitersConfig(companies=tuple(companies), limit=limit))
 
 
 @dataclass(frozen=True, slots=True)
@@ -35,16 +71,32 @@ class SmartRecruitersCollector(Collector):
 
     def _fetch_company(self, company: str) -> list[JobPost]:
         url = self.BASE.format(company=company)
-        params = {"limit": self.cfg.limit}
-        data = self._get(url, params=params)
-        postings = data.get("content", []) if isinstance(data, Mapping) else []
-
         out: list[JobPost] = []
-        for p in postings:
-            if isinstance(p, Mapping):
-                mapped = self._map(company, p)
-                if mapped:
-                    out.append(mapped)
+        limit = max(1, int(self.cfg.limit))
+        offset = 0
+
+        while True:
+            params = {"limit": limit, "offset": offset}
+            data = self._get(url, params=params)
+            postings = data.get("content", []) if isinstance(data, Mapping) else []
+            if not isinstance(postings, list) or not postings:
+                break
+
+            for p in postings:
+                if isinstance(p, Mapping):
+                    mapped = self._map(company, p)
+                    if mapped:
+                        out.append(mapped)
+
+            total_found = data.get("totalFound") if isinstance(data, Mapping) else None
+            if isinstance(total_found, int):
+                offset += len(postings)
+                if offset >= total_found:
+                    break
+            else:
+                if len(postings) < limit:
+                    break
+                offset += len(postings)
         return out
 
     def _get(self, url: str, params: Mapping[str, Any]) -> Mapping[str, Any]:
@@ -85,25 +137,35 @@ class SmartRecruitersCollector(Collector):
         elif isinstance(location_obj, str):
             location = location_obj.strip()
 
-        remote = None
+        workplace_type = None
         txt = f"{title} {location}"
         if "remote" in txt.lower():
-            remote = True
+            workplace_type = "remote"
 
         published_at = _parse_dt(j.get("releasedDate") or j.get("createdOn") or j.get("updatedOn"))
 
-        return JobPost(
-            title=title,
-            company=company_slug,
-            location=location,
-            url=url,
+        loc_city = str(location_obj.get("city") or "").strip() if isinstance(location_obj, Mapping) else None
+        loc_region = str(location_obj.get("region") or "").strip() if isinstance(location_obj, Mapping) else None
+        loc_country = str(location_obj.get("country") or "").strip() if isinstance(location_obj, Mapping) else None
+        post = JobPost.from_source(
             source="smartrecruiters",
-            remote=remote,
-            published_at=published_at,
-            description="",
+            source_org=company_slug,
+            external_id=str(j.get("id") or j.get("ref") or "").strip() or None,
+            title=title,
+            company_name=company_slug,
+            location_raw=location,
+            city=loc_city or None,
+            region=loc_region or None,
+            country_code=loc_country or None,
+            workplace_type=workplace_type,
+            url=url,
+            posted_at=published_at,
+            description_text="",
             tags=(),
-            raw=dict(j),
+            raw_payload=dict(j),
         )
+        validate_canonical(post)
+        return post
 
 
 def _parse_dt(v: Any) -> Optional[datetime]:

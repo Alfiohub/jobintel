@@ -9,7 +9,41 @@ import httpx
 import requests
 
 from ..interfaces import Collector
+from ..canonical import validate_canonical
 from ..model import JobPost
+
+SOURCE_NAME = "greenhouse"
+
+
+def _as_bool(v: Any, default: bool = False) -> bool:
+    if isinstance(v, bool):
+        return v
+    if v is None:
+        return default
+    if isinstance(v, str):
+        return v.strip().lower() in {"1", "true", "yes", "on"}
+    return bool(v)
+
+
+def _as_str_list(v: Any) -> list[str]:
+    if not isinstance(v, (list, tuple)):
+        return []
+    out: list[str] = []
+    for x in v:
+        if isinstance(x, str) and x.strip():
+            out.append(x.strip())
+    return out
+
+
+def build_collector(cfg: Mapping[str, Any]) -> Collector | None:
+    if not _as_bool(cfg.get("enabled"), default=True):
+        return None
+    boards = _as_str_list(cfg.get("boards"))
+    if not boards:
+        return None
+    content = _as_bool(cfg.get("content"), default=True)
+    board_objs = [GreenhouseBoard(token=t, company_name=t) for t in boards]
+    return GreenhouseCollector(boards=board_objs, content=content)
 
 
 @dataclass(frozen=True, slots=True)
@@ -162,27 +196,31 @@ class GreenhouseCollector(Collector):
 
         description = "\n\n".join(desc_parts)
 
-        remote = None
+        workplace_type = None
 
         txt = f"{title} {location} {description}".lower()
 
         if any(k in txt for k in ["remote", "distributed", "anywhere"]):
-            remote = True
+            workplace_type = "remote"
 
         published = _parse_dt(j.get("updated_at"))
 
-        return JobPost(
-            title=title,
-            company=board.company_name,
-            location=location,
-            url=url,
+        post = JobPost.from_source(
             source="greenhouse",
-            remote=remote,
-            published_at=published,
-            description=description,
+            source_org=board.token,
+            external_id=str(j.get("id") or "").strip() or None,
+            title=title,
+            company_name=board.company_name,
+            location_raw=location,
+            url=url,
+            workplace_type=workplace_type,
+            posted_at=published,
+            description_text=description,
             tags=(),
-            raw=dict(j),
+            raw_payload=dict(j),
         )
+        validate_canonical(post)
+        return post
 
 
 def _parse_dt(v: Any) -> Optional[datetime]:

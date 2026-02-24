@@ -39,6 +39,10 @@ scoring:
       - "promoter"
   weights: {}
 
+enrichment:
+  enabled: true
+  min_quality_score: 0.25
+
 storage:
   sqlite_path: "data/jobintel.sqlite"
 

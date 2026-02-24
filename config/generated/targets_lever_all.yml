@@ -1,6 +1,6 @@
 sources:
   greenhouse:
-    enabled: true
+    enabled: false
     boards:
     - found
     - omadahealth
@@ -1938,7 +1938,7 @@ sources:
     - maddoxindustrialtransformer
     content: true
   smartrecruiters:
-    enabled: true
+    enabled: false
     companies:
     - visa
     - cricut
