@@ -10,3 +10,5 @@ data/
 *.sqlite
 config/local.yml
 apk.txt
+
+.secrets/
