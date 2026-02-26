@@ -1,0 +1,60 @@
+openapi: 3.1.0
+info:
+  title: Joballert API
+  version: 1.0.0
+servers:
+  - url: http://127.0.0.1:8001
+security:
+  - bearerAuth: []
+paths:
+  /v1/jobs:
+    get:
+      summary: List jobs
+      responses:
+        '200':
+          description: OK
+  /v1/filters:
+    get:
+      summary: List saved filters
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create saved filter
+      responses:
+        '201':
+          description: Created
+  /v1/filters/{filter_id}/matches/refresh:
+    post:
+      summary: Refresh matches
+      parameters:
+        - name: filter_id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '200':
+          description: OK
+  /v1/filters/{filter_id}/notifications/webhook-send:
+    post:
+      summary: Send webhook notifications
+      parameters:
+        - name: filter_id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '200':
+          description: OK
+  /v1/ops/metrics:
+    get:
+      summary: Operational metrics
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
