@@ -27,6 +27,14 @@ dependencies = [
 dev = [
   "pytest>=8.0.0",
 ]
+ner = [
+  "transformers>=4.0.0",
+  "datasets>=2.0.0",
+  "evaluate>=0.4.0",
+  "seqeval>=1.2.2",
+  "accelerate>=0.30.0",
+  "sentencepiece>=0.2.0",
+]
 
 [project.scripts]
 jobintel = "jobintel.main:main"

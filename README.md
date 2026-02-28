@@ -34,6 +34,11 @@ source .venv/bin/activate
 uv pip install -e .
 ```
 
+Per gli script NER/training:
+```bash
+uv pip install -e ".[ner]"
+```
+
 ## Comandi rapidi (per chi non sa nulla)
 
 ### 1) Scopri aziende (automatico)
