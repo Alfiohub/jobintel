@@ -2,6 +2,21 @@
 
 Pipeline di job intelligence: raccoglie, valuta, deduplica e notifica offerte di lavoro.
 
+## Stato Del Repo
+- `src/jobintel/*`: runtime attuale del prodotto
+- `modules/*`: target architecture del monorepo, ancora in migrazione
+- `scripts/train_ner_baseline.py` e docs NER: baseline sperimentale per training locale/Colab
+- `data/` e `.secrets/`: locali, non fanno parte del repo pubblico
+
+## Mappa Progetto
+- Runtime attuale: `src/jobintel/*`
+- Moduli target (monorepo): `modules/*`
+- Contratti:
+  - `openapi_v1.yaml`
+  - `db_schema_v1.sql`
+  - `architecture_v1.md`
+- Documentazione operativa: `docs/README.md`
+
 ## Cosa fa
 - Colleziona job da Greenhouse
 - Assegna uno score con regole semplici
@@ -57,6 +72,7 @@ uv run --active uvicorn jobintel.api:app --reload --port 8001
 
 Esempi:
 - `http://127.0.0.1:8001/jobs`
+- `http://127.0.0.1:8001/v1/jobs`
 - `http://127.0.0.1:8001/jobs?min_score=80`
 - `http://127.0.0.1:8001/jobs?remote=true`
 - `http://127.0.0.1:8001/jobs?location=Europe`
@@ -66,6 +82,16 @@ Esempi:
 Esempi:
 - `config/default.yml`
 - `config/examples/data_analyst.yml`
+- `config/examples/local.example.yml`
 
 ## Dove finiscono i dati
 SQLite in `data/jobintel.sqlite`.
+
+## Test rapidi
+```bash
+uv run --active pytest -q
+```
+
+## Sicurezza
+- Non committare chiavi/API token.
+- Usa variabili ambiente per script locali e non versionare config/secrets locali.

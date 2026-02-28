@@ -1,0 +1,10 @@
+[
+  {
+    "input": "data/ner/external/raw/sample.jsonl",
+    "dataset_name": "sample_dataset",
+    "label_map": "config/examples/ner_label_map_example.json",
+    "default_source_field": "description_text",
+    "annotation_status": "converted",
+    "id_prefix": "sample"
+  }
+]

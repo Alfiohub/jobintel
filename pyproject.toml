@@ -21,7 +21,6 @@ dependencies = [
   "fastapi",
   "uvicorn",
   "httpx",
-  "google-api-python-client>=2.190.0",
 ]
 
 [project.optional-dependencies]
