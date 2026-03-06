@@ -35,6 +35,7 @@ This PR delivers MVP `v0.1.0-mvp` for the micro-SaaS job intelligence flow.
 - `docs/embedding_policy.md`
 - `docs/title_taxonomy.md`
 - `docs/jobs_indexed_contract.md`
+- `docs/skills_taxonomy_v1.md`
 
 ## Release
 - Tag pushed: `v0.1.0-mvp`
@@ -181,14 +182,18 @@ Files:
 - `docs/semantic_eval_top3_prefilled.csv`
 - `docs/title_normalization_eval.md`
 - `docs/title_normalization_unmatched_top50.csv`
+- `docs/skills_taxonomy_eval.md`
 - `automation/microsaas/benchmark_semantic.py`
 - `automation/microsaas/export_semantic_eval_csv.py`
 - `automation/microsaas/eval_title_normalization.py`
+- `automation/microsaas/eval_skills_taxonomy.py`
+- `automation/microsaas/skills_aliases_v1.json`
 
 Uso:
 - confronto hash/openai su corpus comune
 - validazione top-3 rilevanza per query.
 - eval title normalization (coverage, role family distribution, top unmatched).
+- eval skills taxonomy (unique skills, top skills, alias normalization).
 
 ---
 

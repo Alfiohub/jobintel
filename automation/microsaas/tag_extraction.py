@@ -1,11 +1,15 @@
 from __future__ import annotations
 
+import json
 import re
+from pathlib import Path
 from typing import Any
 
 
 SKILL_PATTERNS: dict[str, str] = {
+    r"\bpy\b": "py",
     r"\bpython\b": "python",
+    r"\bjs\b": "js",
     r"\bsql\b": "sql",
     r"\bpostgres(?:ql)?\b": "postgresql",
     r"\bmysql\b": "mysql",
@@ -26,12 +30,25 @@ SKILL_PATTERNS: dict[str, str] = {
     r"\bpower\s?bi\b": "power_bi",
     r"\breact\b": "react",
     r"\bnode(?:\.js)?\b": "nodejs",
+    r"\bts\b": "ts",
     r"\btypescript\b": "typescript",
     r"\bjavascript\b": "javascript",
     r"\bjava\b": "java",
     r"\bmachine learning\b": "machine_learning",
     r"\bllm\b|\blarge language model": "llm",
 }
+
+
+_ALIASES_PATH = Path(__file__).with_name("skills_aliases_v1.json")
+try:
+    _ALIASES_RAW = json.loads(_ALIASES_PATH.read_text(encoding="utf-8"))
+    SKILL_ALIASES: dict[str, str] = {
+        str(k).strip().lower(): str(v).strip().lower()
+        for k, v in _ALIASES_RAW.items()
+        if str(k).strip() and str(v).strip()
+    }
+except FileNotFoundError:
+    SKILL_ALIASES = {}
 
 SENIORITY_PATTERNS: list[tuple[str, str]] = [
     (r"\bintern(?:ship)?\b", "intern"),
@@ -168,7 +185,8 @@ def _extract_skills(text: str) -> list[str]:
     for pattern, skill in SKILL_PATTERNS.items():
         if re.search(pattern, text, flags=re.IGNORECASE):
             found.append(skill)
-    return sorted(set(found))
+    normalized = [SKILL_ALIASES.get(s.strip().lower(), s.strip().lower()) for s in found]
+    return sorted(set(normalized))
 
 
 def _split_location(location_clean: str) -> tuple[str | None, str | None]:

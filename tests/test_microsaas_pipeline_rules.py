@@ -179,6 +179,22 @@ def test_extract_tags_role_salary_and_skills() -> None:
     assert {"python", "sql", "airflow", "aws"}.issubset(set(tags["skills"]))
 
 
+def test_extract_tags_normalizes_skill_aliases() -> None:
+    row = {
+        "title": "Software Engineer",
+        "location_raw": "Remote",
+        "description_text": (
+            "Tech stack: py, js, ts, k8s, node.js and powerbi. "
+            "Also experience with machine learning and large language model systems."
+        ),
+        "language": "en",
+    }
+    clean = clean_row(row)
+    tags = extract_tags(clean, normalized_title="software_engineer")
+    got = set(tags["skills"])
+    assert {"python", "javascript", "typescript", "kubernetes", "nodejs", "power_bi", "machine_learning", "llm"}.issubset(got)
+
+
 def test_compute_embedding_hash_mode_returns_vector() -> None:
     emb, model = compute_embedding(
         "data engineer python sql",
