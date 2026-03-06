@@ -29,6 +29,8 @@ Checklist go-live MVP: `docs/mvp_go_live_checklist.md`
 Documentazione tecnica MVP: `docs/mvp_technical_documentation.md`
 Title taxonomy: `docs/title_taxonomy.md`
 Data contract `jobs_indexed`: `docs/jobs_indexed_contract.md`
+Skills taxonomy v1: `docs/skills_taxonomy_v1.md`
+Template PR v0.2: `docs/pr_v0.2_template.md`
 Roadmap post-MVP: `docs/microsaas_post_mvp_steps.md`
 Policy embeddings/provider: `docs/embedding_policy.md`
 
@@ -76,6 +78,14 @@ Per smoke test rapido:
 MAX_ROWS=50 ./automation/microsaas/run_microsaas.sh
 ```
 
+Smoke E2E completo (test + pipeline + quality gates + API):
+```bash
+MAX_ROWS=2000 EMBEDDING_MODE=hash ./automation/microsaas/smoke_e2e_mvp.sh \
+  data/ner/phase1_greenhouse/all_greenhouse_jobs_en.jsonl \
+  data/microsaas/run_smoke \
+  data/jobintel_microsaas_smoke.sqlite
+```
+
 Nota pratica su chiamate utente:
 - Non è necessario chiamare OpenAI/Gemini a ogni request utente.
 - Flusso consigliato: embedding annunci calcolati offline in indexing; in runtime utente fai SQL filtri.
@@ -117,6 +127,10 @@ Esempi:
 ```bash
 uv run --active pytest -q
 ```
+
+Baseline qualità (2000 annunci EN):
+- `other_like`: `10.75%`
+- `salary_outlier_gt1M`: `0`
 
 ## Sicurezza
 - Non committare chiavi/API token.
