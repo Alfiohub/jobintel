@@ -7,7 +7,16 @@ Usa questa checklist per chiudere il rilascio MVP senza riaprire scope.
 - [ ] Solo bugfix/stabilità/integration
 - [ ] Policy embedding confermata (`docs/embedding_policy.md`)
 
-## 2) Data pipeline (2000 annunci)
+## 2) Smoke E2E (consigliato)
+- [ ] Eseguito smoke script unico:
+```bash
+MAX_ROWS=2000 EMBEDDING_MODE=hash ./automation/microsaas/smoke_e2e_mvp.sh \
+  data/ner/phase1_greenhouse/all_greenhouse_jobs_en.jsonl \
+  data/microsaas/run_smoke \
+  data/jobintel_microsaas_smoke.sqlite
+```
+
+## 3) Data pipeline (2000 annunci)
 - [ ] Eseguito run ufficiale:
 ```bash
 MAX_ROWS=2000 EMBEDDING_MODE=hash ./automation/microsaas/run_microsaas.sh \
@@ -21,10 +30,10 @@ MAX_ROWS=2000 EMBEDDING_MODE=hash ./automation/microsaas/run_microsaas.sh \
   - `data/microsaas/run/jobs_indexed.jsonl`
   - `data/jobintel_microsaas.sqlite`
 - [ ] KPI minimi verificati:
-  - `other_like <= 25%`
+  - `other_like <= 12%`
   - `salary_outlier_gt1M = 0` (con regole correnti)
 
-## 3) API readiness
+## 4) API readiness
 - [ ] Avvio API:
 ```bash
 uv run --active uvicorn jobintel.api:app --reload --port 8001
@@ -38,24 +47,24 @@ uv run --active uvicorn jobintel.api:app --reload --port 8001
   - [ ] `hybrid_score`
   - [ ] `mismatch_penalty`
 
-## 4) Frontend MVP integration
+## 5) Frontend MVP integration
 - [ ] Frontend usa `/v1/indexed/jobs`
 - [ ] Frontend usa `/v1/indexed/filters/options`
 - [ ] Filtri base funzionano (role/seniority/location/employment/skills)
 - [ ] Ricerca semantica funzionante da UI
 
-## 5) Qualità semantica
+## 6) Qualità semantica
 - [ ] CSV eval compilato (manuale o prefill + review):
   - `docs/semantic_eval_top3.csv`
   - `docs/semantic_eval_top3_prefilled.csv`
 - [ ] Decisione policy finale validata con risultati (`hash` vs `openai`)
 
-## 6) Sicurezza e config
+## 7) Sicurezza e config
 - [ ] Nessuna API key committata
 - [ ] Variabili ambiente impostate localmente (`OPENAI_API_KEY`, opzionale `GOOGLE_API_KEY`)
 - [ ] `.gitignore` copre `data/` e `*.sqlite`
 
-## 7) Tag/release MVP
+## 8) Tag/release MVP
 - [ ] Branch pulita e commit finale
 - [ ] Tag creato (es. `v0.1.0-mvp`)
 - [ ] Note rilascio con:
@@ -63,4 +72,3 @@ uv run --active uvicorn jobintel.api:app --reload --port 8001
   - endpoint supportati
   - policy embedding
   - limiti noti post-MVP
-

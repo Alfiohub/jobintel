@@ -19,9 +19,10 @@ MVP micro-SaaS per job intelligence su corpus Greenhouse EN (2000 annunci).
   - rerank ibrido (`semantic_score`, `hybrid_score`, `mismatch_penalty`)
 
 ## Qualità raggiunta (MVP)
-- `other_like` ridotto a ~21.5% su 2000 record
+- `other_like` ridotto a ~10.75% su 2000 record
 - outlier salary (`salary_max > 1,000,000`) ridotti a 0 con regole aggiornate
 - benchmark semantic hash vs openai eseguito e valutazione top-3 disponibile
+- smoke E2E unificato disponibile: `automation/microsaas/smoke_e2e_mvp.sh`
 
 ## Policy embedding
 - default runtime: `hash`
@@ -40,4 +41,3 @@ MVP micro-SaaS per job intelligence su corpus Greenhouse EN (2000 annunci).
 - tassonomia ruoli ancora espandibile (target riduzione ulteriore di `other`)
 - review umana non ancora integrata in UI
 - ottimizzazione ranking semantico iterativa
-

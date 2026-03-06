@@ -52,6 +52,83 @@ def test_normalize_title_consultant_not_other() -> None:
     assert group == "business"
 
 
+def test_normalize_title_product_management_not_other() -> None:
+    normalized, family, group = normalize_title("Director, Product Management")
+    assert normalized == "product_manager"
+    assert family == "product_management"
+    assert group == "product"
+
+
+def test_normalize_title_machine_learning_scientist_not_other() -> None:
+    normalized, family, group = normalize_title("Staff/Senior Machine Learning Scientist (Ad Cloud)")
+    assert normalized == "ml_scientist"
+    assert family == "machine_learning"
+    assert group == "data"
+
+
+def test_normalize_title_legal_counsel_not_other() -> None:
+    normalized, family, group = normalize_title("Senior Employment Counsel")
+    assert normalized == "legal_counsel"
+    assert family == "legal"
+    assert group == "business"
+
+
+def test_normalize_title_accountant_not_other() -> None:
+    normalized, family, group = normalize_title("Assistant Controller - US Region")
+    assert normalized == "accountant"
+    assert family == "finance"
+    assert group == "finance"
+
+
+def test_normalize_title_product_design_not_other() -> None:
+    normalized, family, group = normalize_title("Director, Product Design")
+    assert normalized == "product_designer"
+    assert family == "design"
+    assert group == "design"
+
+
+def test_normalize_title_salesforce_admin_not_other() -> None:
+    normalized, family, group = normalize_title("Senior Salesforce Administrator")
+    assert normalized == "systems_administrator"
+    assert family == "it_operations"
+    assert group == "engineering"
+
+
+def test_normalize_title_strategic_accounts_not_other() -> None:
+    normalized, family, group = normalize_title("Director of Strategic Accounts, Central U.S.")
+    assert normalized == "account_manager"
+    assert family == "sales"
+    assert group == "business"
+
+
+def test_normalize_title_tpm_not_other() -> None:
+    normalized, family, group = normalize_title("Director of TPM, Connected Devices")
+    assert normalized == "technical_program_manager"
+    assert family == "program_management"
+    assert group == "product"
+
+
+def test_normalize_title_chief_revenue_officer_not_other() -> None:
+    normalized, family, group = normalize_title("Chief Revenue Officer")
+    assert normalized == "chief_revenue_officer"
+    assert family == "executive_leadership"
+    assert group == "business"
+
+
+def test_normalize_title_technical_support_not_other() -> None:
+    normalized, family, group = normalize_title("Technical Support Specialist - Spanish")
+    assert normalized == "it_support_specialist"
+    assert family == "it_operations"
+    assert group == "engineering"
+
+
+def test_normalize_title_alliance_director_not_other() -> None:
+    normalized, family, group = normalize_title("Dell Global Alliance Director")
+    assert normalized == "alliance_manager"
+    assert family == "partnerships"
+    assert group == "business"
+
+
 def test_extract_location_type_prefers_hybrid_over_remote() -> None:
     text = "This role is hybrid. You can work remotely two days per week."
     assert _extract_location_type(text) == "hybrid"
