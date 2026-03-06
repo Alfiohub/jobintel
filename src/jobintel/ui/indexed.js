@@ -12,7 +12,7 @@ const el = {
   results: document.getElementById("results"),
 };
 
-const DB_PATH = "data/jobintel_microsaas.sqlite";
+const DB_PATH = new URLSearchParams(window.location.search).get("db_path") || "data/jobintel_microsaas.sqlite";
 const DEFAULT_PROVIDER = "openai";
 const FALLBACK_PROVIDER = "hash";
 
@@ -27,6 +27,13 @@ function addOptions(selectEl, values) {
     opt.textContent = value;
     selectEl.appendChild(opt);
   }
+}
+
+function asRows(payload) {
+  if (Array.isArray(payload)) return payload;
+  if (payload && Array.isArray(payload.items)) return payload.items;
+  if (payload && Array.isArray(payload.rows)) return payload.rows;
+  return [];
 }
 
 function jobCard(job) {
@@ -108,10 +115,25 @@ async function loadOptions() {
 }
 
 async function search() {
+  const hasInput = Boolean(
+    el.semanticQuery.value.trim() ||
+    el.roleFamily.value ||
+    el.seniority.value ||
+    el.locationType.value ||
+    el.employmentType.value ||
+    el.skill.value
+  );
+  if (!hasInput) {
+    el.results.innerHTML = "";
+    setStatus("Imposta almeno una query o un filtro, poi premi Cerca.");
+    return;
+  }
+
   setStatus("Searching...");
+  const queryText = el.semanticQuery.value.trim();
   const params = {
     db_path: DB_PATH,
-    semantic_query: el.semanticQuery.value.trim(),
+    semantic_query: queryText,
     semantic_provider: DEFAULT_PROVIDER,
     role_family: el.roleFamily.value,
     seniority: el.seniority.value,
@@ -126,19 +148,41 @@ async function search() {
   } catch (e) {
     // Transparent fallback for user experience.
     data = await api("/v1/indexed/jobs", { ...params, semantic_provider: FALLBACK_PROVIDER });
-    setStatus(`Found ${data.length} jobs (fallback mode).`);
+    const rows = asRows(data);
+    setStatus(`Found ${rows.length} jobs (fallback mode).`);
+  }
+  const rows = asRows(data);
+  let finalRows = rows;
+  if (!finalRows.length && queryText) {
+    // If semantic retrieval returns no rows, try lexical fallback.
+    const lexical = await api("/v1/indexed/jobs", {
+      db_path: DB_PATH,
+      q: queryText,
+      role_family: el.roleFamily.value,
+      seniority: el.seniority.value,
+      location_type: el.locationType.value,
+      employment_type: el.employmentType.value,
+      skill: el.skill.value,
+      limit: el.limit.value || 20,
+    });
+    finalRows = asRows(lexical);
+    if (finalRows.length) {
+      setStatus(`Found ${finalRows.length} jobs (lexical fallback).`);
+    }
   }
   el.results.innerHTML = "";
-  if (!data.length) {
+  if (!finalRows.length) {
     const empty = document.createElement("div");
     empty.className = "nores";
     empty.textContent = "Nessun risultato. Prova a cambiare query o filtri.";
     el.results.appendChild(empty);
   } else {
-    for (const row of data) {
+    for (const row of finalRows) {
       el.results.appendChild(jobCard(row));
     }
-    setStatus(`Found ${data.length} jobs.`);
+    if (!el.status.textContent.includes("fallback")) {
+      setStatus(`Found ${finalRows.length} jobs.`);
+    }
   }
 }
 
@@ -157,9 +201,13 @@ el.searchBtn.addEventListener("click", () => {
 });
 el.resetBtn.addEventListener("click", () => {
   resetForm();
-  setStatus("Reset.");
+  el.results.innerHTML = "";
+  setStatus("Reset completato. Imposta query/filtri e premi Cerca.");
 });
 
 loadOptions()
-  .then(() => search())
+  .then(() => {
+    el.results.innerHTML = "";
+    setStatus("Pronto. Imposta query o filtri e premi Cerca.");
+  })
   .catch((e) => setStatus(`Error: ${e.message}`));
