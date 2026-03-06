@@ -893,6 +893,14 @@ def ui_page() -> FileResponse:
     return FileResponse(page)
 
 
+@app.get("/ui-indexed", include_in_schema=False)
+def ui_indexed_page() -> FileResponse:
+    page = _UI_DIR / "indexed.html"
+    if not page.exists():
+        raise HTTPException(status_code=404, detail="Indexed UI not found")
+    return FileResponse(page)
+
+
 @app.get("/jobs")
 def list_jobs(
     db_path: str = Query("data/jobintel.sqlite"),

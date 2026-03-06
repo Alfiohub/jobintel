@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JobIntel - Trova il lavoro giusto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f2f5f3;
+      --card: #ffffff;
+      --ink: #102019;
+      --muted: #5d6e65;
+      --line: #c9d6d0;
+      --brand: #0d8f73;
+      --brand-ink: #ffffff;
+      --brand-soft: #d8f3ea;
+      --accent: #f59e0b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Space Grotesk", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 8%, #d5eee5 0%, transparent 28%),
+        radial-gradient(circle at 88% 18%, #f9ead0 0%, transparent 30%),
+        var(--bg);
+    }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 20px 16px 40px; }
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #073b3a 55%, #0d8f73 100%);
+      color: #f8fafc;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 20px 40px rgba(7, 59, 58, 0.24);
+      margin-bottom: 14px;
+    }
+    .hero h1 { margin: 0 0 6px; font-size: 30px; line-height: 1.05; }
+    .hero p { margin: 0; color: #d1fae5; }
+    .searchbar {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+    }
+    .searchbar input {
+      border: 0;
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 16px;
+      outline: 2px solid transparent;
+    }
+    .searchbar input:focus { outline-color: #38bdf8; }
+    .searchbar button {
+      border: 0;
+      border-radius: 12px;
+      background: #f59e0b;
+      color: #111827;
+      font-weight: 700;
+      padding: 0 16px;
+      cursor: pointer;
+    }
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+    .filters {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 8px;
+      align-items: end;
+    }
+    label {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+    select, input, button {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px;
+      font-family: inherit;
+      font-size: 14px;
+      background: #fff;
+    }
+    .actions { display: flex; gap: 8px; }
+    .btn {
+      border: 0;
+      border-radius: 10px;
+      background: var(--brand);
+      color: var(--brand-ink);
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .btn.secondary { background: #334155; color: #fff; }
+    .status { color: var(--muted); font-size: 13px; }
+    .results-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .job {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      background: #fff;
+    }
+    .job h3 { margin: 0 0 6px; font-size: 17px; line-height: 1.25; }
+    .job h3 a { color: #0f172a; text-decoration: none; }
+    .job h3 a:hover { text-decoration: underline; }
+    .meta { color: var(--muted); font-size: 12px; margin-bottom: 6px; }
+    .salary { font-size: 12px; color: #0f5132; background: var(--brand-soft); border-radius: 999px; padding: 2px 8px; display: inline-block; margin-bottom: 8px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag { border-radius: 999px; font-size: 11px; padding: 2px 8px; background: #edf2f7; color: #334155; }
+    .nores { color: var(--muted); font-size: 14px; padding: 14px; text-align: center; }
+    @media (max-width: 980px) { .filters { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    @media (max-width: 760px) {
+      .searchbar { grid-template-columns: 1fr; }
+      .cards { grid-template-columns: 1fr; }
+      .filters { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 520px) { .filters { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>Trova il lavoro giusto, più in fretta</h1>
+      <p>Ricerca semantica + filtri chiari. Senza rumore.</p>
+      <div class="searchbar">
+        <input id="semanticQuery" placeholder="Es. Senior Data Engineer remoto con Python e dbt" />
+        <button id="searchBtn">Cerca</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="filters">
+        <div>
+          <label for="roleFamily">Area ruolo</label>
+          <select id="roleFamily"><option value="">Tutte</option></select>
+        </div>
+        <div>
+          <label for="seniority">Seniority</label>
+          <select id="seniority"><option value="">Tutte</option></select>
+        </div>
+        <div>
+          <label for="locationType">Modalità</label>
+          <select id="locationType"><option value="">Tutte</option></select>
+        </div>
+        <div>
+          <label for="employmentType">Contratto</label>
+          <select id="employmentType"><option value="">Tutti</option></select>
+        </div>
+        <div>
+          <label for="skill">Skill</label>
+          <select id="skill"><option value="">Tutte</option></select>
+        </div>
+        <div>
+          <label for="limit">Risultati</label>
+          <input id="limit" type="number" value="20" min="1" max="100" />
+        </div>
+      </div>
+      <div class="actions" style="margin-top:10px;">
+        <button id="resetBtn" class="btn secondary">Reset filtri</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="results-head">
+        <div id="status" class="status">Caricamento...</div>
+      </div>
+      <div id="results" class="cards"></div>
+    </section>
+  </div>
+
+  <script src="/ui-assets/indexed.js"></script>
+</body>
+</html>

@@ -26,6 +26,9 @@ Pipeline di job intelligence per micro-SaaS: ingestione annunci, normalizzazione
 
 Checklist esecuzione MVP: `docs/microsaas_mvp_checklist.md`
 Checklist go-live MVP: `docs/mvp_go_live_checklist.md`
+Documentazione tecnica MVP: `docs/mvp_technical_documentation.md`
+Title taxonomy: `docs/title_taxonomy.md`
+Data contract `jobs_indexed`: `docs/jobs_indexed_contract.md`
 Roadmap post-MVP: `docs/microsaas_post_mvp_steps.md`
 Policy embeddings/provider: `docs/embedding_policy.md`
 
