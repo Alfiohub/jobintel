@@ -5,6 +5,10 @@ from typing import Any
 import sqlite3
 import json
 from datetime import timedelta
+import hashlib
+import math
+import os
+import re
 from pathlib import Path
 from urllib import error as urlerror
 from urllib import request as urlrequest
@@ -145,6 +149,243 @@ def _ensure_notification_targets_table(con: sqlite3.Connection) -> None:
         CREATE INDEX IF NOT EXISTS idx_notification_targets_filter_id ON notification_targets(filter_id, is_active);
         """
     )
+
+
+def _ensure_microsaas_tables(con: sqlite3.Connection) -> None:
+    con.executescript(
+        """
+        CREATE TABLE IF NOT EXISTS jobs_indexed (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          clean_job_id INTEGER NOT NULL,
+          source TEXT NOT NULL,
+          source_job_id TEXT,
+          source_org TEXT,
+          url TEXT NOT NULL,
+          company_name TEXT NOT NULL,
+          title_raw TEXT NOT NULL,
+          title_clean TEXT NOT NULL,
+          normalized_title TEXT,
+          role_family TEXT,
+          occupation_group TEXT,
+          seniority TEXT,
+          employment_type TEXT,
+          location_type TEXT,
+          city TEXT,
+          region TEXT,
+          country TEXT,
+          salary_min INTEGER,
+          salary_max INTEGER,
+          salary_currency TEXT,
+          skills_json TEXT NOT NULL DEFAULT '[]',
+          tags_json TEXT NOT NULL DEFAULT '{}',
+          embedding_json TEXT,
+          embedding_model TEXT,
+          tagger_version TEXT,
+          tag_confidence REAL,
+          indexed_at TEXT NOT NULL
+        );
+        """
+    )
+
+
+def _to_float_list(value: str | None) -> list[float]:
+    if not value:
+        return []
+    try:
+        obj = json.loads(value)
+    except Exception:
+        return []
+    if not isinstance(obj, list):
+        return []
+    out: list[float] = []
+    for x in obj:
+        try:
+            out.append(float(x))
+        except Exception:
+            continue
+    return out
+
+
+def _hash_embedding(text: str, dim: int) -> list[float]:
+    if dim <= 0:
+        return []
+    digest = hashlib.sha256(text.encode("utf-8")).digest()
+    out: list[float] = []
+    for i in range(dim):
+        b = digest[i % len(digest)]
+        out.append((float(b) / 127.5) - 1.0)
+    return out
+
+
+def _embed_openai(text: str, model: str, timeout_sec: int) -> list[float]:
+    api_key = os.environ.get("OPENAI_API_KEY", "").strip()
+    if not api_key:
+        raise RuntimeError("OPENAI_API_KEY is required for semantic_provider=openai")
+    payload = {"model": model, "input": text}
+    req = urlrequest.Request(
+        "https://api.openai.com/v1/embeddings",
+        data=json.dumps(payload).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        },
+        method="POST",
+    )
+    with urlrequest.urlopen(req, timeout=timeout_sec) as resp:
+        body = resp.read().decode("utf-8")
+    obj = json.loads(body)
+    data = obj.get("data")
+    if not isinstance(data, list) or not data:
+        raise RuntimeError("OpenAI embeddings: invalid response data")
+    emb = data[0].get("embedding")
+    if not isinstance(emb, list):
+        raise RuntimeError("OpenAI embeddings: missing embedding vector")
+    return [float(x) for x in emb]
+
+
+def _embed_gemini(text: str, model: str, timeout_sec: int) -> list[float]:
+    api_key = os.environ.get("GOOGLE_API_KEY", "").strip()
+    if not api_key:
+        raise RuntimeError("GOOGLE_API_KEY is required for semantic_provider=gemini")
+    payload = {"content": {"parts": [{"text": text}]}}
+    req = urlrequest.Request(
+        f"https://generativelanguage.googleapis.com/v1beta/models/{model}:embedContent?key={api_key}",
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    with urlrequest.urlopen(req, timeout=timeout_sec) as resp:
+        body = resp.read().decode("utf-8")
+    obj = json.loads(body)
+    emb_obj = obj.get("embedding")
+    if not isinstance(emb_obj, dict):
+        raise RuntimeError("Gemini embeddings: invalid response embedding")
+    values = emb_obj.get("values")
+    if not isinstance(values, list):
+        raise RuntimeError("Gemini embeddings: missing values vector")
+    return [float(x) for x in values]
+
+
+def _compute_query_embedding(
+    query: str,
+    *,
+    semantic_provider: str,
+    semantic_model: str | None,
+    timeout_sec: int,
+    hash_dim: int,
+) -> tuple[list[float], str]:
+    provider = semantic_provider.strip().lower()
+    if provider == "hash":
+        return (_hash_embedding(query, hash_dim) if hash_dim > 0 else []), "hash_v1"
+    if provider == "openai":
+        model = (semantic_model or "text-embedding-3-small").strip()
+        return _embed_openai(query, model=model, timeout_sec=timeout_sec), model
+    if provider == "gemini":
+        model = (semantic_model or "text-embedding-004").strip()
+        return _embed_gemini(query, model=model, timeout_sec=timeout_sec), model
+    raise RuntimeError(f"Unsupported semantic_provider: {semantic_provider}")
+
+
+def _cosine(a: list[float], b: list[float]) -> float:
+    if not a or not b:
+        return 0.0
+    n = min(len(a), len(b))
+    if n == 0:
+        return 0.0
+    aa = a[:n]
+    bb = b[:n]
+    dot = sum(x * y for x, y in zip(aa, bb))
+    na = math.sqrt(sum(x * x for x in aa))
+    nb = math.sqrt(sum(y * y for y in bb))
+    if na == 0.0 or nb == 0.0:
+        return 0.0
+    return dot / (na * nb)
+
+
+_QUERY_STOPWORDS = {
+    "the",
+    "a",
+    "an",
+    "and",
+    "or",
+    "for",
+    "of",
+    "in",
+    "to",
+    "with",
+    "senior",
+    "junior",
+    "staff",
+    "principal",
+    "lead",
+    "head",
+}
+_CRITICAL_QUERY_TOKENS = {
+    "ml",
+    "llm",
+    "recruiter",
+    "frontend",
+    "react",
+    "typescript",
+    "devops",
+    "kubernetes",
+    "terraform",
+    "architect",
+    "analyst",
+}
+
+
+def _query_tokens(query: str) -> list[str]:
+    out: list[str] = []
+    for tok in re.findall(r"[a-z0-9+#]+", query.lower()):
+        if tok in _QUERY_STOPWORDS or len(tok) <= 1:
+            continue
+        out.append(tok)
+    return out
+
+
+def _count_hits(tokens: list[str], text: str) -> int:
+    if not tokens or not text:
+        return 0
+    return sum(1 for tok in tokens if tok in text)
+
+
+def _hybrid_semantic_score(item: dict[str, Any], *, query_tokens: list[str], semantic_score: float) -> tuple[float, float]:
+    if not query_tokens:
+        return semantic_score, 0.0
+    title_text = " ".join(
+        [
+            str(item.get("title_clean") or ""),
+            str(item.get("normalized_title") or ""),
+            str(item.get("role_family") or ""),
+        ]
+    ).lower()
+    skills_text = " ".join(str(s) for s in (item.get("skills") or [])).lower()
+    all_text = " ".join(
+        [
+            title_text,
+            skills_text,
+            str(item.get("employment_type") or ""),
+            str(item.get("location_type") or ""),
+        ]
+    ).lower()
+
+    all_hits = _count_hits(query_tokens, all_text)
+    title_hits = _count_hits(query_tokens, title_text)
+    skills_hits = _count_hits(query_tokens, skills_text)
+    lexical_score = (
+        0.50 * (all_hits / len(query_tokens))
+        + 0.30 * (title_hits / len(query_tokens))
+        + 0.20 * (skills_hits / len(query_tokens))
+    )
+
+    # Penalize critical token misses (e.g. "ml", "frontend", "recruiter").
+    critical = [tok for tok in query_tokens if tok in _CRITICAL_QUERY_TOKENS]
+    miss_count = sum(1 for tok in critical if tok not in all_text)
+    mismatch_penalty = min(0.45, miss_count * 0.15)
+
+    hybrid = (0.65 * semantic_score) + (0.35 * lexical_score) - mismatch_penalty
+    return hybrid, mismatch_penalty
 
 
 def _to_list(value: Any) -> list[str]:
@@ -397,6 +638,251 @@ def _parse_date(value: str | None) -> str | None:
         return dt.isoformat()
     except Exception:
         return None
+
+
+@app.get("/v1/indexed/jobs")
+def list_indexed_jobs(
+    db_path: str = Query("data/jobintel_microsaas.sqlite"),
+    q: str | None = None,
+    company: str | None = None,
+    source: str | None = None,
+    normalized_title: str | None = None,
+    role_family: str | None = None,
+    seniority: str | None = None,
+    location_type: str | None = None,
+    employment_type: str | None = None,
+    country: str | None = None,
+    city: str | None = None,
+    skill: str | None = None,
+    semantic_query: str | None = None,
+    semantic_provider: str = Query("hash"),
+    semantic_model: str | None = None,
+    semantic_timeout_sec: int = Query(20, ge=5, le=60),
+    limit: int = Query(50, ge=1, le=200),
+    offset: int = Query(0, ge=0),
+) -> list[dict[str, Any]]:
+    where: list[str] = []
+    params: list[Any] = []
+
+    if q:
+        where.append("(title_raw LIKE ? OR title_clean LIKE ? OR company_name LIKE ? OR url LIKE ?)")
+        like = f"%{q}%"
+        params.extend([like, like, like, like])
+    if company:
+        where.append("company_name = ?")
+        params.append(company)
+    if source:
+        where.append("source = ?")
+        params.append(source)
+    if normalized_title:
+        where.append("normalized_title = ?")
+        params.append(normalized_title)
+    if role_family:
+        where.append("role_family = ?")
+        params.append(role_family)
+    if seniority:
+        where.append("seniority = ?")
+        params.append(seniority)
+    if location_type:
+        where.append("location_type = ?")
+        params.append(location_type)
+    if employment_type:
+        where.append("employment_type = ?")
+        params.append(employment_type)
+    if country:
+        where.append("country = ?")
+        params.append(country)
+    if city:
+        where.append("city = ?")
+        params.append(city)
+
+    sql = (
+        "SELECT id, source, source_job_id, source_org, url, company_name, title_raw, title_clean, "
+        "normalized_title, role_family, occupation_group, seniority, employment_type, location_type, "
+        "city, region, country, salary_min, salary_max, salary_currency, skills_json, tags_json, "
+        "embedding_json, embedding_model, tagger_version, tag_confidence, indexed_at "
+        "FROM jobs_indexed"
+    )
+    if where:
+        sql += " WHERE " + " AND ".join(where)
+    sql += " ORDER BY indexed_at DESC LIMIT ? OFFSET ?"
+    params.extend([limit * (5 if semantic_query else 1), offset])
+
+    with _connect(db_path) as con:
+        _ensure_microsaas_tables(con)
+        rows = con.execute(sql, params).fetchall()
+
+    items: list[dict[str, Any]] = []
+    skill_filter = skill.strip().lower() if skill else None
+    for r in rows:
+        skills = [str(x) for x in json.loads(r["skills_json"] or "[]")]
+        if skill_filter and skill_filter not in {s.lower() for s in skills}:
+            continue
+        items.append(
+            {
+                "id": r["id"],
+                "source": r["source"],
+                "source_job_id": r["source_job_id"],
+                "source_org": r["source_org"],
+                "url": r["url"],
+                "company_name": r["company_name"],
+                "title_raw": r["title_raw"],
+                "title_clean": r["title_clean"],
+                "normalized_title": r["normalized_title"],
+                "role_family": r["role_family"],
+                "occupation_group": r["occupation_group"],
+                "seniority": r["seniority"],
+                "employment_type": r["employment_type"],
+                "location_type": r["location_type"],
+                "city": r["city"],
+                "region": r["region"],
+                "country": r["country"],
+                "salary_min": r["salary_min"],
+                "salary_max": r["salary_max"],
+                "salary_currency": r["salary_currency"],
+                "skills": skills,
+                "tags": json.loads(r["tags_json"] or "{}"),
+                "embedding_model": r["embedding_model"],
+                "tagger_version": r["tagger_version"],
+                "tag_confidence": r["tag_confidence"],
+                "indexed_at": r["indexed_at"],
+                "_embedding": _to_float_list(r["embedding_json"]),
+            }
+        )
+
+    if semantic_query:
+        q_tokens = _query_tokens(semantic_query)
+        dim = 0
+        for item in items:
+            if item["_embedding"]:
+                dim = len(item["_embedding"])
+                break
+        try:
+            q_emb, q_model = _compute_query_embedding(
+                semantic_query,
+                semantic_provider=semantic_provider,
+                semantic_model=semantic_model,
+                timeout_sec=semantic_timeout_sec,
+                hash_dim=dim,
+            )
+        except urlerror.HTTPError as e:
+            raise HTTPException(status_code=502, detail=f"semantic embedding HTTP error: {e.code}") from e
+        except urlerror.URLError as e:
+            raise HTTPException(status_code=502, detail=f"semantic embedding network error: {e}") from e
+        except RuntimeError as e:
+            raise HTTPException(status_code=400, detail=str(e)) from e
+
+        for item in items:
+            sem = _cosine(q_emb, item["_embedding"])
+            hybrid, penalty = _hybrid_semantic_score(item, query_tokens=q_tokens, semantic_score=sem)
+            item["semantic_score"] = round(sem, 6)
+            item["hybrid_score"] = round(hybrid, 6)
+            item["mismatch_penalty"] = round(penalty, 6)
+            item["semantic_query_model"] = q_model
+        items.sort(key=lambda item: item.get("hybrid_score", item.get("semantic_score", 0.0)), reverse=True)
+
+    out: list[dict[str, Any]] = []
+    for item in items[:limit]:
+        item.pop("_embedding", None)
+        out.append(item)
+    return out
+
+
+@app.get("/v1/indexed/filters/options")
+def list_indexed_filter_options(
+    db_path: str = Query("data/jobintel_microsaas.sqlite"),
+    top_skills: int = Query(200, ge=20, le=1000),
+) -> dict[str, list[str]]:
+    with _connect(db_path) as con:
+        _ensure_microsaas_tables(con)
+        normalized_title = [
+            row["v"]
+            for row in con.execute(
+                "SELECT normalized_title AS v, COUNT(*) AS c FROM jobs_indexed "
+                "WHERE normalized_title IS NOT NULL AND normalized_title <> '' "
+                "GROUP BY normalized_title ORDER BY c DESC, v ASC"
+            )
+        ]
+        role_family = [
+            row["v"]
+            for row in con.execute(
+                "SELECT role_family AS v, COUNT(*) AS c FROM jobs_indexed "
+                "WHERE role_family IS NOT NULL AND role_family <> '' "
+                "GROUP BY role_family ORDER BY c DESC, v ASC"
+            )
+        ]
+        seniority = [
+            row["v"]
+            for row in con.execute(
+                "SELECT seniority AS v, COUNT(*) AS c FROM jobs_indexed "
+                "WHERE seniority IS NOT NULL AND seniority <> '' "
+                "GROUP BY seniority ORDER BY c DESC, v ASC"
+            )
+        ]
+        location_type = [
+            row["v"]
+            for row in con.execute(
+                "SELECT location_type AS v, COUNT(*) AS c FROM jobs_indexed "
+                "WHERE location_type IS NOT NULL AND location_type <> '' "
+                "GROUP BY location_type ORDER BY c DESC, v ASC"
+            )
+        ]
+        employment_type = [
+            row["v"]
+            for row in con.execute(
+                "SELECT employment_type AS v, COUNT(*) AS c FROM jobs_indexed "
+                "WHERE employment_type IS NOT NULL AND employment_type <> '' "
+                "GROUP BY employment_type ORDER BY c DESC, v ASC"
+            )
+        ]
+        countries = [
+            row["v"]
+            for row in con.execute(
+                "SELECT country AS v, COUNT(*) AS c FROM jobs_indexed "
+                "WHERE country IS NOT NULL AND country <> '' "
+                "GROUP BY country ORDER BY c DESC, v ASC"
+            )
+        ]
+        sources = [
+            row["v"]
+            for row in con.execute(
+                "SELECT source AS v, COUNT(*) AS c FROM jobs_indexed "
+                "WHERE source IS NOT NULL AND source <> '' "
+                "GROUP BY source ORDER BY c DESC, v ASC"
+            )
+        ]
+
+        try:
+            skills = [
+                row["v"]
+                for row in con.execute(
+                    "SELECT LOWER(j.value) AS v, COUNT(*) AS c "
+                    "FROM jobs_indexed e, json_each(e.skills_json) j "
+                    "WHERE j.value IS NOT NULL AND j.value <> '' "
+                    "GROUP BY LOWER(j.value) ORDER BY c DESC, v ASC LIMIT ?",
+                    (top_skills,),
+                )
+            ]
+        except sqlite3.OperationalError:
+            skill_counts: dict[str, int] = {}
+            for row in con.execute("SELECT skills_json FROM jobs_indexed"):
+                for s in json.loads(row["skills_json"] or "[]"):
+                    k = str(s).strip().lower()
+                    if not k:
+                        continue
+                    skill_counts[k] = skill_counts.get(k, 0) + 1
+            skills = [k for k, _ in sorted(skill_counts.items(), key=lambda kv: (-kv[1], kv[0]))[:top_skills]]
+
+    return {
+        "normalized_title": normalized_title,
+        "role_family": role_family,
+        "seniority": seniority,
+        "location_type": location_type,
+        "employment_type": employment_type,
+        "country": countries,
+        "source": sources,
+        "skills": skills,
+    }
 
 
 @app.get("/ui", include_in_schema=False)

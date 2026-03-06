@@ -1,6 +1,6 @@
 # Import External NER Data
 
-Use `scripts/import_external_ner.py` to convert external datasets to project schema.
+Use `automation/legacy_ner/import_external_ner.py` to convert external datasets to project schema.
 
 ## Supported input patterns
 - `.jsonl` with one object per line
@@ -12,7 +12,7 @@ Entity input styles supported:
 
 ## Basic command
 ```bash
-uv run --active python scripts/import_external_ner.py \
+uv run --active python automation/legacy_ner/import_external_ner.py \
   --input data/ner/external/raw/sample.jsonl \
   --output data/ner/external/converted/sample_converted.jsonl \
   --dataset-name sample_dataset
@@ -32,7 +32,7 @@ If external labels differ, provide a JSON map:
 
 Run with mapping:
 ```bash
-uv run --active python scripts/import_external_ner.py \
+uv run --active python automation/legacy_ner/import_external_ner.py \
   --input data/ner/external/raw/sample.jsonl \
   --output data/ner/external/converted/sample_converted.jsonl \
   --dataset-name sample_dataset \

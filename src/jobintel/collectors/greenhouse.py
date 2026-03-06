@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from datetime import datetime, timezone
+from html import unescape
+import re
 from typing import Any, Mapping, Optional
 import asyncio
 import time
@@ -13,6 +15,8 @@ from ..canonical import validate_canonical
 from ..model import JobPost
 
 SOURCE_NAME = "greenhouse"
+_HTML_TAG_RE = re.compile(r"<[^>]+>")
+_WHITESPACE_RE = re.compile(r"\s+")
 
 
 def _as_bool(v: Any, default: bool = False) -> bool:
@@ -184,17 +188,7 @@ class GreenhouseCollector(Collector):
         elif isinstance(loc, str):
             location = loc.strip()
 
-        desc_parts = []
-
-        content = j.get("content")
-
-        if isinstance(content, dict):
-            for k in ("description", "requirements", "responsibilities"):
-                v = content.get(k)
-                if isinstance(v, str) and v.strip():
-                    desc_parts.append(v.strip())
-
-        description = "\n\n".join(desc_parts)
+        description = _extract_description(j.get("content"))
 
         workplace_type = None
 
@@ -216,6 +210,7 @@ class GreenhouseCollector(Collector):
             workplace_type=workplace_type,
             posted_at=published,
             description_text=description,
+            language=_extract_language(j),
             tags=(),
             raw_payload=dict(j),
         )
@@ -238,3 +233,32 @@ def _parse_dt(v: Any) -> Optional[datetime]:
 
     except Exception:
         return None
+
+
+def _strip_html(text: str) -> str:
+    plain = unescape(text)
+    plain = re.sub(r"(?i)<br\s*/?>", "\n", plain)
+    plain = re.sub(r"(?i)</p>|</div>|</li>|</h[1-6]>", "\n", plain)
+    plain = _HTML_TAG_RE.sub(" ", plain)
+    plain = _WHITESPACE_RE.sub(" ", plain)
+    return plain.strip()
+
+
+def _extract_description(content: Any) -> str:
+    if isinstance(content, str):
+        return _strip_html(content)
+    if isinstance(content, dict):
+        desc_parts: list[str] = []
+        for key in ("description", "requirements", "responsibilities", "content"):
+            value = content.get(key)
+            if isinstance(value, str) and value.strip():
+                desc_parts.append(_strip_html(value))
+        return "\n\n".join(part for part in desc_parts if part)
+    return ""
+
+
+def _extract_language(payload: Mapping[str, Any]) -> str | None:
+    language = payload.get("language")
+    if isinstance(language, str) and language.strip():
+        return language.strip()
+    return None

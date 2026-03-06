@@ -2,6 +2,11 @@
 
 This file is the source of truth for where things belong.
 
+## Primary Product Flow (current priority)
+- `ingest -> clean -> normalize_title -> tag -> embed -> index -> search`
+- Keep this flow in runtime code under `src/jobintel/*`.
+- Keep NER experiments isolated from this path.
+
 ## Runtime application
 - `src/jobintel/`
   - current production/runtime code
@@ -25,7 +30,10 @@ Notes:
 
 ## Config and scripts
 - `config/`: source and generated configuration
-- `scripts/`: operational scripts and data/NER tooling
+- `automation/`: operational scripts and tooling
+  - `automation/microsaas/`: primary product-flow automation (batch indexing, export)
+  - `automation/legacy_ner/`: archived/experimental NER helpers
+  - root-level `automation/*.py` only for generic ops not tied to a specific pipeline
 
 ## Tests
 - `tests/`: automated tests

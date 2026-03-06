@@ -55,7 +55,7 @@ def main() -> None:
             out_path = converted_dir / out_name
             cmd = [
                 sys.executable,
-                'scripts/import_external_ner.py',
+                'automation/legacy_ner/import_external_ner.py',
                 '--input', str(input_path),
                 '--output', str(out_path),
                 '--dataset-name', dataset_name,
@@ -71,7 +71,7 @@ def main() -> None:
             run_cmd(cmd)
             converted_inputs.append(out_path)
 
-    merge_cmd = [sys.executable, 'scripts/merge_ner_datasets.py']
+    merge_cmd = [sys.executable, 'automation/legacy_ner/merge_ner_datasets.py']
     for p in args.internal_input:
         merge_cmd.extend(['--input', p])
     for p in converted_inputs:
@@ -85,7 +85,7 @@ def main() -> None:
 
     split_cmd = [
         sys.executable,
-        'scripts/split_ner_dataset.py',
+        'automation/legacy_ner/split_ner_dataset.py',
         '--input', str(merged_path),
         '--output-dir', str(split_dir),
         '--train-ratio', str(args.train_ratio),

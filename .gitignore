@@ -6,6 +6,7 @@ build/
 .venv/
 .env
 .pytest_cache/
+artifacts/
 data/
 *.sqlite
 config/local.yml

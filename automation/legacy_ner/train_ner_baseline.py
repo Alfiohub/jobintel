@@ -6,6 +6,7 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
+import math
 
 LABELS = [
     'ROLE',
@@ -45,10 +46,11 @@ def build_combined_text(row: dict[str, Any]) -> PreparedRecord:
     title = str(row.get('title') or '')
     description = str(row.get('description_text') or '')
     location = str(row.get('location_raw') or '')
+    # Put short, high-signal fields first so they survive tokenizer truncation.
     sections = [
         ('title', title),
-        ('description_text', description),
         ('location_raw', location),
+        ('description_text', description),
     ]
 
     parts: list[str] = []
@@ -114,10 +116,16 @@ def main() -> None:
     ap.add_argument('--batch-size', type=int, default=4)
     ap.add_argument('--learning-rate', type=float, default=3e-5)
     ap.add_argument('--max-length', type=int, default=512)
+    ap.add_argument(
+        '--weighted-loss',
+        action='store_true',
+        help='Use class-weighted cross-entropy to reduce O-class collapse',
+    )
     args = ap.parse_args()
 
     try:
         import numpy as np
+        import torch
         from datasets import Dataset, DatasetDict
         import evaluate
         from transformers import (
@@ -187,6 +195,39 @@ def main() -> None:
         return tokenized
 
     encoded = dataset.map(tokenize_and_align_labels, batched=True, remove_columns=dataset['train'].column_names)
+    train_label_counts = np.zeros(len(label_list), dtype=np.int64)
+    total_train_tokens = 0
+    for row in encoded['train']['labels']:
+        for lab in row:
+            if int(lab) == -100:
+                continue
+            train_label_counts[int(lab)] += 1
+            total_train_tokens += 1
+    non_o_tokens = int(train_label_counts[1:].sum())
+    non_o_ratio = (float(non_o_tokens) / float(total_train_tokens)) if total_train_tokens else 0.0
+    print(
+        f"Train tokens (non -100): {total_train_tokens} | "
+        f"non-O tokens: {non_o_tokens} | ratio: {non_o_ratio:.5f}"
+    )
+    class_weights = None
+    if args.weighted_loss:
+        weights = np.ones(len(label_list), dtype=np.float32)
+        nonzero = train_label_counts > 0
+        if nonzero.any():
+            total = float(train_label_counts[nonzero].sum())
+            denom = float(nonzero.sum())
+            for idx in range(len(label_list)):
+                c = int(train_label_counts[idx])
+                if c <= 0:
+                    weights[idx] = 1.0
+                else:
+                    # Smoothed inverse-frequency weighting to reduce O dominance.
+                    inv = total / (denom * float(c))
+                    weights[idx] = float(math.sqrt(inv))
+            weights = np.clip(weights, 0.2, 8.0)
+        class_weights = torch.tensor(weights, dtype=torch.float32)
+        print('Using weighted loss. Sample class weights:')
+        print({label_list[i]: round(float(class_weights[i]), 4) for i in range(min(10, len(label_list)))})
 
     metric = evaluate.load('seqeval')
 
@@ -238,20 +279,43 @@ def main() -> None:
         report_to='none',
     )
 
-    trainer = Trainer(
-        **(
-            {
-                'model': model,
-                'args': training_args,
-                'train_dataset': encoded['train'],
-                'eval_dataset': encoded['valid'],
-                'data_collator': DataCollatorForTokenClassification(tokenizer=tokenizer),
-                'compute_metrics': compute_metrics,
-                # Newer transformers versions replaced `tokenizer=` with `processing_class=`.
-                ('processing_class' if 'processing_class' in inspect.signature(Trainer.__init__).parameters else 'tokenizer'): tokenizer,
-            }
+    trainer_kwargs = {
+        'model': model,
+        'args': training_args,
+        'train_dataset': encoded['train'],
+        'eval_dataset': encoded['valid'],
+        'data_collator': DataCollatorForTokenClassification(tokenizer=tokenizer),
+        'compute_metrics': compute_metrics,
+        # Newer transformers versions replaced `tokenizer=` with `processing_class=`.
+        ('processing_class' if 'processing_class' in inspect.signature(Trainer.__init__).parameters else 'tokenizer'): tokenizer,
+    }
+    if args.weighted_loss and class_weights is not None:
+        class WeightedTrainer(Trainer):
+            def __init__(self, *w_args: Any, class_weights: Any, num_labels: int, **w_kwargs: Any):
+                super().__init__(*w_args, **w_kwargs)
+                self._class_weights = class_weights
+                self._num_labels = num_labels
+
+            def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
+                labels = inputs.get('labels')
+                outputs = model(**inputs)
+                logits = outputs.get('logits')
+                loss_fct = torch.nn.CrossEntropyLoss(
+                    weight=self._class_weights.to(logits.device),
+                    ignore_index=-100,
+                )
+                loss = loss_fct(logits.view(-1, self._num_labels), labels.view(-1))
+                if return_outputs:
+                    return loss, outputs
+                return loss
+
+        trainer = WeightedTrainer(
+            **trainer_kwargs,
+            class_weights=class_weights,
+            num_labels=len(label_list),
         )
-    )
+    else:
+        trainer = Trainer(**trainer_kwargs)
 
     trainer.train()
     test_metrics = trainer.evaluate(encoded['test'])

@@ -7,7 +7,7 @@ Use the internal baseline split already prepared in this repo:
 
 ## 1. Upload to Colab
 Upload these files plus:
-- `scripts/train_ner_baseline.py`
+- `automation/legacy_ner/train_ner_baseline.py`
 
 ## 2. Install deps
 ```bash
