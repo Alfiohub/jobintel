@@ -179,12 +179,16 @@ Files:
 - `docs/semantic_benchmark_hash_vs_openai.md`
 - `docs/semantic_eval_top3.csv`
 - `docs/semantic_eval_top3_prefilled.csv`
+- `docs/title_normalization_eval.md`
+- `docs/title_normalization_unmatched_top50.csv`
 - `automation/microsaas/benchmark_semantic.py`
 - `automation/microsaas/export_semantic_eval_csv.py`
+- `automation/microsaas/eval_title_normalization.py`
 
 Uso:
 - confronto hash/openai su corpus comune
 - validazione top-3 rilevanza per query.
+- eval title normalization (coverage, role family distribution, top unmatched).
 
 ---
 
