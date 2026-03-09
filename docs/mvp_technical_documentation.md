@@ -80,6 +80,21 @@ Fasi:
    - scrive `jobs_indexed`
    - cache per `content_hash` in `extraction_cache`.
 
+### 2.1) Incremental, idempotency e retry policy (v0.2 foundation)
+- Processing incrementale per job:
+  - `new` se non esiste precedente record con stesso `source+url`
+  - `skipped` se `content_hash` invariato
+  - `updated` se `content_hash` cambiato
+  - `failed` su errore non recuperabile
+- Retry per-riga:
+  - savepoint DB per singolo record
+  - rollback/release savepoint su errore
+  - nessuna scrittura parziale in caso di failure di una riga
+  - tentativi configurabili con `ROW_MAX_RETRIES`
+- Osservabilità run:
+  - tabella `pipeline_runs` con contatori (`processed/skipped/updated/failed/cache_hits`)
+  - artifact `pipeline_report.json` generato a ogni run
+
 ---
 
 ## 3) Database model (MVP)
@@ -241,6 +256,11 @@ MAX_ROWS=2000 EMBEDDING_MODE=hash ./automation/microsaas/smoke_e2e_mvp.sh \
 Unit test principale:
 ```bash
 PYTHONPATH=. uv run --active pytest -q tests/test_microsaas_pipeline_rules.py
+```
+
+Unit/integration incrementale (lifecycle + pipeline_runs):
+```bash
+PYTHONPATH=. uv run --active pytest -q tests/test_microsaas_incremental_lifecycle.py
 ```
 
 Go-live checklist:
