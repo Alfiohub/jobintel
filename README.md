@@ -96,6 +96,13 @@ MAX_ROWS=2000 EMBEDDING_MODE=hash ./automation/microsaas/smoke_e2e_mvp.sh \
 ```
 Il smoke verifica anche la presenza/consistenza di `pipeline_report.json`.
 
+Benchmark qualità search (manual eval top-3):
+```bash
+uv run --active python automation/microsaas/report_search_eval.py \
+  --csv docs/semantic_eval_top3_prefilled.csv \
+  --out docs/search_benchmark_results_v1.md
+```
+
 Nota pratica su chiamate utente:
 - Non è necessario chiamare OpenAI/Gemini a ogni request utente.
 - Flusso consigliato: embedding annunci calcolati offline in indexing; in runtime utente fai SQL filtri.
