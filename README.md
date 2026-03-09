@@ -113,6 +113,20 @@ uv run --active python automation/microsaas/build_gold_eval_set.py \
 ```
 Schema annotazione: `docs/gold_eval_annotation_schema.md`
 
+Autolabel gold eval con Ollama (Qwen), per ridurre review manuale:
+```bash
+# 1) avvia ollama e scarica modello (una volta sola)
+ollama pull qwen2.5:7b
+
+# 2) autolabel batch (esempio prime 100 righe)
+uv run --active python automation/microsaas/autolabel_gold_eval.py \
+  --input docs/gold_eval_set_v1.csv \
+  --out docs/gold_eval_set_v1_autolabeled.csv \
+  --model qwen2.5:7b \
+  --limit 100
+```
+Output aggiunge: `label_source`, `label_model`, `label_confidence`, `needs_review`.
+
 Nota pratica su chiamate utente:
 - Non è necessario chiamare OpenAI/Gemini a ogni request utente.
 - Flusso consigliato: embedding annunci calcolati offline in indexing; in runtime utente fai SQL filtri.
