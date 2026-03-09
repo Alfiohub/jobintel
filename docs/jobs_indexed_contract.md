@@ -65,6 +65,18 @@ Serve per evitare regressioni tra pipeline, API e frontend.
 - `processing_version` (TEXT | NULL)
 - `extraction_version` (TEXT | NULL)
 
+## Required vs Optional (v2)
+- Required (NOT NULL/always expected in payload): `source`, `url`, `company_name`, `title_raw`, `title_clean`, `skills_json`, `tags_json`, `indexed_at`.
+- Optional nullable: tutti i campi estratti/inferiti (`normalized_title`, `role_family`, salary, experience, education, embedding, confidence, lifecycle metadata).
+
+## Field Origin (v2)
+- Source payload: `source`, `source_job_id`, `source_org`, `url`, `company_name`, `title_raw`.
+- Cleaning stage: `title_clean`, `content_hash`.
+- Title normalization stage: `normalized_title`, `role_family`, `occupation_group`.
+- Tag extraction stage: `seniority`, `employment_type`, `location_type`, `city`, `region`, `country`, `salary_*`, `experience_*`, `education_*`, `skills_json`, `tags_json`, `tagger_version`, `tag_confidence`.
+- Embedding stage: `embedding_json`, `embedding_model`.
+- Index lifecycle stage: `processing_state`, `first_seen_at`, `last_seen_at`, `processing_version`, `extraction_version`, `indexed_at`.
+
 ## Allowed values (MVP)
 - `location_type`: `remote | hybrid | onsite`
 - `employment_type`: `full_time | part_time | contract | internship | temporary`

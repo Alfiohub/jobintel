@@ -103,6 +103,16 @@ uv run --active python automation/microsaas/report_search_eval.py \
   --out docs/search_benchmark_results_v1.md
 ```
 
+Build gold eval set stratificato (Settimana 2):
+```bash
+uv run --active python automation/microsaas/build_gold_eval_set.py \
+  --db data/jobintel_microsaas.sqlite \
+  --out docs/gold_eval_set_v1.csv \
+  --size 800 \
+  --seed 42
+```
+Schema annotazione: `docs/gold_eval_annotation_schema.md`
+
 Nota pratica su chiamate utente:
 - Non è necessario chiamare OpenAI/Gemini a ogni request utente.
 - Flusso consigliato: embedding annunci calcolati offline in indexing; in runtime utente fai SQL filtri.
