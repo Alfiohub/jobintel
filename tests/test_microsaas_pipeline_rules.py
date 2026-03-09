@@ -195,6 +195,39 @@ def test_extract_tags_normalizes_skill_aliases() -> None:
     assert {"python", "javascript", "typescript", "kubernetes", "nodejs", "power_bi", "machine_learning", "llm"}.issubset(got)
 
 
+def test_extract_tags_experience_min_and_education_level() -> None:
+    row = {
+        "title": "Backend Engineer",
+        "location_raw": "Remote",
+        "description_text": (
+            "We require 3+ years of experience in backend systems. "
+            "Bachelor's degree in Computer Science required."
+        ),
+        "language": "en",
+    }
+    clean = clean_row(row)
+    tags = extract_tags(clean, normalized_title="backend_engineer")
+    assert tags["experience_years_min"] == 3
+    assert tags["experience_years_max"] is None
+    assert tags["experience_required"] is True
+    assert tags["education_level"] == "bachelor"
+    assert tags["degree_required"] is True
+
+
+def test_extract_tags_experience_range() -> None:
+    row = {
+        "title": "Data Engineer",
+        "location_raw": "Berlin, DE",
+        "description_text": "Looking for 5-7 years of experience in data platforms.",
+        "language": "en",
+    }
+    clean = clean_row(row)
+    tags = extract_tags(clean, normalized_title="data_engineer")
+    assert tags["experience_years_min"] == 5
+    assert tags["experience_years_max"] == 7
+    assert tags["experience_required"] is True
+
+
 def test_compute_embedding_hash_mode_returns_vector() -> None:
     emb, model = compute_embedding(
         "data engineer python sql",

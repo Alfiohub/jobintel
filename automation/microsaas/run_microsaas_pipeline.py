@@ -6,6 +6,8 @@ import json
 import os
 import re
 import sqlite3
+import time
+import uuid
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from html import unescape
@@ -37,6 +39,9 @@ _HTML_TAG_RE = re.compile(r"<[^>]+>")
 _WS_RE = re.compile(r"\s+")
 _BR_RE = re.compile(r"(?i)<br\s*/?>")
 _BLOCK_CLOSE_RE = re.compile(r"(?i)</p>|</div>|</li>|</h[1-6]>")
+
+PIPELINE_VERSION = "v0.2.0"
+EXTRACTION_VERSION = "rules_v2"
 
 SKILL_PATTERNS: dict[str, str] = {
     r"\bpython\b": "python",
@@ -429,6 +434,134 @@ def compute_embedding(
 def ensure_microsaas_schema(con: sqlite3.Connection) -> None:
     schema_path = Path("db_schema_microsaas.sql")
     con.executescript(schema_path.read_text(encoding="utf-8"))
+    _ensure_column(con, "jobs_indexed", "content_hash", "TEXT")
+    _ensure_column(con, "jobs_indexed", "processing_state", "TEXT")
+    _ensure_column(con, "jobs_indexed", "first_seen_at", "TEXT")
+    _ensure_column(con, "jobs_indexed", "last_seen_at", "TEXT")
+    _ensure_column(con, "jobs_indexed", "processing_version", "TEXT")
+    _ensure_column(con, "jobs_indexed", "extraction_version", "TEXT")
+    _ensure_column(con, "jobs_indexed", "experience_years_min", "INTEGER")
+    _ensure_column(con, "jobs_indexed", "experience_years_max", "INTEGER")
+    _ensure_column(con, "jobs_indexed", "experience_required", "INTEGER")
+    _ensure_column(con, "jobs_indexed", "experience_text_raw", "TEXT")
+    _ensure_column(con, "jobs_indexed", "education_level", "TEXT")
+    _ensure_column(con, "jobs_indexed", "degree_required", "INTEGER")
+    _ensure_column(con, "jobs_indexed", "education_text_raw", "TEXT")
+    _ensure_column(con, "extraction_cache", "experience_years_min", "INTEGER")
+    _ensure_column(con, "extraction_cache", "experience_years_max", "INTEGER")
+    _ensure_column(con, "extraction_cache", "experience_required", "INTEGER")
+    _ensure_column(con, "extraction_cache", "experience_text_raw", "TEXT")
+    _ensure_column(con, "extraction_cache", "education_level", "TEXT")
+    _ensure_column(con, "extraction_cache", "degree_required", "INTEGER")
+    _ensure_column(con, "extraction_cache", "education_text_raw", "TEXT")
+    con.execute("CREATE INDEX IF NOT EXISTS ix_jobs_indexed_content_hash ON jobs_indexed(content_hash)")
+    con.execute("CREATE INDEX IF NOT EXISTS ix_jobs_indexed_processing_state ON jobs_indexed(processing_state)")
+    _ensure_table_pipeline_runs(con)
+
+
+def _ensure_column(con: sqlite3.Connection, table: str, column: str, ddl: str) -> None:
+    cols = {row[1] for row in con.execute(f"PRAGMA table_info({table})")}
+    if column not in cols:
+        con.execute(f"ALTER TABLE {table} ADD COLUMN {column} {ddl}")
+
+
+def _ensure_table_pipeline_runs(con: sqlite3.Connection) -> None:
+    con.execute(
+        """
+        CREATE TABLE IF NOT EXISTS pipeline_runs (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          run_id TEXT NOT NULL UNIQUE,
+          input_path TEXT NOT NULL,
+          output_dir TEXT NOT NULL,
+          db_path TEXT,
+          started_at TEXT NOT NULL,
+          finished_at TEXT,
+          duration_seconds REAL,
+          total_rows INTEGER NOT NULL DEFAULT 0,
+          processed INTEGER NOT NULL DEFAULT 0,
+          skipped INTEGER NOT NULL DEFAULT 0,
+          updated INTEGER NOT NULL DEFAULT 0,
+          failed INTEGER NOT NULL DEFAULT 0,
+          cache_hits INTEGER NOT NULL DEFAULT 0,
+          pipeline_version TEXT,
+          extraction_version TEXT
+        )
+        """
+    )
+
+
+def start_pipeline_run(
+    con: sqlite3.Connection,
+    *,
+    input_path: str,
+    output_dir: str,
+    db_path: str,
+) -> str:
+    run_id = f"{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')}_{uuid.uuid4().hex[:8]}"
+    con.execute(
+        """
+        INSERT INTO pipeline_runs(
+          run_id, input_path, output_dir, db_path, started_at, pipeline_version, extraction_version
+        ) VALUES(?,?,?,?,?,?,?)
+        """,
+        (run_id, input_path, output_dir, db_path, now_iso(), PIPELINE_VERSION, EXTRACTION_VERSION),
+    )
+    return run_id
+
+
+def finish_pipeline_run(
+    con: sqlite3.Connection,
+    *,
+    run_id: str,
+    started_monotonic: float,
+    total_rows: int,
+    processed: int,
+    skipped: int,
+    updated: int,
+    failed: int,
+    cache_hits: int,
+) -> None:
+    con.execute(
+        """
+        UPDATE pipeline_runs
+        SET finished_at=?,
+            duration_seconds=?,
+            total_rows=?,
+            processed=?,
+            skipped=?,
+            updated=?,
+            failed=?,
+            cache_hits=?
+        WHERE run_id=?
+        """,
+        (
+            now_iso(),
+            round(time.monotonic() - started_monotonic, 3),
+            total_rows,
+            processed,
+            skipped,
+            updated,
+            failed,
+            cache_hits,
+            run_id,
+        ),
+    )
+
+
+def previous_content_hash_for_job(con: sqlite3.Connection, *, source: str, url: str) -> str | None:
+    row = con.execute(
+        """
+        SELECT jc.content_hash
+        FROM raw_jobs rj
+        JOIN jobs_clean jc ON jc.raw_job_id = rj.id
+        WHERE rj.source=? AND rj.url=?
+        LIMIT 1
+        """,
+        (source, url),
+    ).fetchone()
+    if row is None or not row[0]:
+        return None
+    return str(row[0])
 
 
 def save_to_db(
@@ -442,6 +575,7 @@ def save_to_db(
     tags: dict[str, Any],
     embedding: list[float] | None,
     embedding_model: str | None,
+    processing_state: str,
 ) -> None:
     now = now_iso()
     con.execute(
@@ -513,9 +647,11 @@ def save_to_db(
         INSERT INTO extraction_cache(
           content_hash, normalized_title, role_family, occupation_group, seniority, employment_type,
           location_type, city, region, country, salary_min, salary_max, salary_currency,
+          experience_years_min, experience_years_max, experience_required, experience_text_raw,
+          education_level, degree_required, education_text_raw,
           skills_json, tags_json, embedding_json, embedding_model, tagger_version, tag_confidence,
           created_at, updated_at
-        ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+        ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
         ON CONFLICT(content_hash) DO UPDATE SET
           normalized_title=excluded.normalized_title,
           role_family=excluded.role_family,
@@ -529,6 +665,13 @@ def save_to_db(
           salary_min=excluded.salary_min,
           salary_max=excluded.salary_max,
           salary_currency=excluded.salary_currency,
+          experience_years_min=excluded.experience_years_min,
+          experience_years_max=excluded.experience_years_max,
+          experience_required=excluded.experience_required,
+          experience_text_raw=excluded.experience_text_raw,
+          education_level=excluded.education_level,
+          degree_required=excluded.degree_required,
+          education_text_raw=excluded.education_text_raw,
           skills_json=excluded.skills_json,
           tags_json=excluded.tags_json,
           embedding_json=excluded.embedding_json,
@@ -551,6 +694,13 @@ def save_to_db(
             tags.get("salary_min"),
             tags.get("salary_max"),
             tags.get("salary_currency"),
+            tags.get("experience_years_min"),
+            tags.get("experience_years_max"),
+            int(bool(tags.get("experience_required"))) if tags.get("experience_required") is not None else None,
+            tags.get("experience_text_raw"),
+            tags.get("education_level"),
+            int(bool(tags.get("degree_required"))) if tags.get("degree_required") is not None else None,
+            tags.get("education_text_raw"),
             json.dumps(tags.get("skills") or [], ensure_ascii=False),
             json.dumps(tags.get("tags") or {}, ensure_ascii=False),
             json.dumps(embedding or [], ensure_ascii=False) if embedding is not None else None,
@@ -562,14 +712,24 @@ def save_to_db(
         ),
     )
 
+    existing_idx = con.execute(
+        "SELECT first_seen_at FROM jobs_indexed WHERE clean_job_id=?",
+        (clean_job_id,),
+    ).fetchone()
+    first_seen_at = str(existing_idx[0]) if existing_idx and existing_idx[0] else now
+
     con.execute(
         """
         INSERT INTO jobs_indexed(
           clean_job_id, source, source_job_id, source_org, url, company_name, title_raw, title_clean,
           normalized_title, role_family, occupation_group, seniority, employment_type, location_type,
-          city, region, country, salary_min, salary_max, salary_currency, skills_json, tags_json,
-          embedding_json, embedding_model, tagger_version, tag_confidence, indexed_at
-        ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+          city, region, country, salary_min, salary_max, salary_currency,
+          experience_years_min, experience_years_max, experience_required, experience_text_raw,
+          education_level, degree_required, education_text_raw,
+          skills_json, tags_json,
+          embedding_json, embedding_model, content_hash, processing_state, first_seen_at, last_seen_at,
+          processing_version, extraction_version, tagger_version, tag_confidence, indexed_at
+        ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
         ON CONFLICT(clean_job_id) DO UPDATE SET
           source=excluded.source,
           source_job_id=excluded.source_job_id,
@@ -590,10 +750,23 @@ def save_to_db(
           salary_min=excluded.salary_min,
           salary_max=excluded.salary_max,
           salary_currency=excluded.salary_currency,
+          experience_years_min=excluded.experience_years_min,
+          experience_years_max=excluded.experience_years_max,
+          experience_required=excluded.experience_required,
+          experience_text_raw=excluded.experience_text_raw,
+          education_level=excluded.education_level,
+          degree_required=excluded.degree_required,
+          education_text_raw=excluded.education_text_raw,
           skills_json=excluded.skills_json,
           tags_json=excluded.tags_json,
           embedding_json=excluded.embedding_json,
           embedding_model=excluded.embedding_model,
+          content_hash=excluded.content_hash,
+          processing_state=excluded.processing_state,
+          first_seen_at=COALESCE(jobs_indexed.first_seen_at, excluded.first_seen_at),
+          last_seen_at=excluded.last_seen_at,
+          processing_version=excluded.processing_version,
+          extraction_version=excluded.extraction_version,
           tagger_version=excluded.tagger_version,
           tag_confidence=excluded.tag_confidence,
           indexed_at=excluded.indexed_at
@@ -619,10 +792,23 @@ def save_to_db(
             tags.get("salary_min"),
             tags.get("salary_max"),
             tags.get("salary_currency"),
+            tags.get("experience_years_min"),
+            tags.get("experience_years_max"),
+            int(bool(tags.get("experience_required"))) if tags.get("experience_required") is not None else None,
+            tags.get("experience_text_raw"),
+            tags.get("education_level"),
+            int(bool(tags.get("degree_required"))) if tags.get("degree_required") is not None else None,
+            tags.get("education_text_raw"),
             json.dumps(tags.get("skills") or [], ensure_ascii=False),
             json.dumps(tags.get("tags") or {}, ensure_ascii=False),
             json.dumps(embedding or [], ensure_ascii=False) if embedding is not None else None,
             embedding_model,
+            clean.content_hash,
+            processing_state,
+            first_seen_at,
+            now,
+            PIPELINE_VERSION,
+            EXTRACTION_VERSION,
             str(tags.get("tagger_version") or ""),
             float(tags.get("tag_confidence") or 0.0),
             now,
@@ -647,23 +833,45 @@ def main() -> None:
     ap.add_argument("--gemini-embedding-model", default="text-embedding-004")
     ap.add_argument("--embedding-timeout-sec", type=int, default=30)
     ap.add_argument("--embedding-max-chars", type=int, default=4000)
+    ap.add_argument(
+        "--row-max-retries",
+        type=int,
+        default=1,
+        help="Max retry attempts per row on transient failures (>=1).",
+    )
     args = ap.parse_args()
 
     inp = Path(args.input)
     out_dir = Path(args.output_dir)
     rows = read_jsonl(inp, max_rows=args.max_rows)
+    started_monotonic = time.monotonic()
 
     raw_out: list[dict[str, Any]] = []
     clean_out: list[dict[str, Any]] = []
     indexed_out: list[dict[str, Any]] = []
     cache: dict[str, dict[str, Any]] = {}
+    state_counts = {"new": 0, "processed": 0, "updated": 0, "skipped": 0, "failed": 0}
 
     con = None
+    run_id: str | None = None
     if not args.no_db:
         Path(args.db).parent.mkdir(parents=True, exist_ok=True)
         con = sqlite3.connect(args.db)
         ensure_microsaas_schema(con)
-        for row in con.execute("SELECT content_hash, normalized_title, role_family, occupation_group, seniority, employment_type, location_type, city, region, country, salary_min, salary_max, salary_currency, skills_json, tags_json, embedding_json, embedding_model, tagger_version, tag_confidence FROM extraction_cache"):
+        run_id = start_pipeline_run(
+            con,
+            input_path=str(inp),
+            output_dir=str(out_dir),
+            db_path=str(Path(args.db)),
+        )
+        for row in con.execute(
+            "SELECT content_hash, normalized_title, role_family, occupation_group, seniority, employment_type, "
+            "location_type, city, region, country, salary_min, salary_max, salary_currency, "
+            "experience_years_min, experience_years_max, experience_required, experience_text_raw, "
+            "education_level, degree_required, education_text_raw, "
+            "skills_json, tags_json, embedding_json, embedding_model, tagger_version, tag_confidence "
+            "FROM extraction_cache"
+        ):
             cache[row[0]] = {
                 "normalized_title": row[1],
                 "role_family": row[2],
@@ -677,150 +885,290 @@ def main() -> None:
                 "salary_min": row[10],
                 "salary_max": row[11],
                 "salary_currency": row[12],
-                "skills": json.loads(row[13] or "[]"),
-                "tags": json.loads(row[14] or "{}"),
-                "embedding": json.loads(row[15]) if row[15] else None,
-                "embedding_model": row[16],
-                "tagger_version": row[17],
-                "tag_confidence": row[18],
+                "experience_years_min": row[13],
+                "experience_years_max": row[14],
+                "experience_required": (bool(row[15]) if row[15] is not None else None),
+                "experience_text_raw": row[16],
+                "education_level": row[17],
+                "degree_required": (bool(row[18]) if row[18] is not None else None),
+                "education_text_raw": row[19],
+                "skills": json.loads(row[20] or "[]"),
+                "tags": json.loads(row[21] or "{}"),
+                "embedding": json.loads(row[22]) if row[22] else None,
+                "embedding_model": row[23],
+                "tagger_version": row[24],
+                "tag_confidence": row[25],
             }
 
     now = now_iso()
     cache_hits = 0
-    for row in rows:
-        source = str(row.get("source") or "greenhouse")
-        source_job_id = str(row.get("external_id") or row.get("source_job_id") or "")
-        raw_row = {
-            "source": source,
-            "source_job_id": source_job_id,
-            "source_org": str(row.get("source_org") or ""),
-            "url": str(row.get("url") or ""),
-            "title_raw": str(row.get("title") or ""),
-            "company_raw": str(row.get("company_name") or ""),
-            "location_raw": str(row.get("location_raw") or ""),
-            "description_raw": str(row.get("description_text") or ""),
-            "language_hint": str(row.get("language") or ""),
-            "payload_json": row,
-            "fetched_at": now,
-        }
-        clean = clean_row(row)
-        clean_row_out = {
-            "source": source,
-            "source_job_id": source_job_id,
-            "url": raw_row["url"],
-            "title_clean": clean.title_clean,
-            "description_clean": clean.description_clean,
-            "requirements_clean": clean.requirements_clean,
-            "responsibilities_clean": clean.responsibilities_clean,
-            "location_clean": clean.location_clean,
-            "language": clean.language,
-            "content_hash": clean.content_hash,
-            "content_fingerprint": clean.content_fingerprint,
-            "cleaned_at": now,
-        }
-
-        cached = cache.get(clean.content_hash)
-        if cached is not None:
-            cache_hits += 1
-            normalized_title = str(cached.get("normalized_title") or "other")
-            role_family = str(cached.get("role_family") or "other")
-            occupation_group = str(cached.get("occupation_group") or "other")
-            tags = {
-                "normalized_title": normalized_title,
-                "seniority": cached.get("seniority"),
-                "employment_type": cached.get("employment_type"),
-                "location_type": cached.get("location_type"),
-                "city": cached.get("city"),
-                "region": cached.get("region"),
-                "country": cached.get("country"),
-                "salary_min": cached.get("salary_min"),
-                "salary_max": cached.get("salary_max"),
-                "salary_currency": cached.get("salary_currency"),
-                "skills": list(cached.get("skills") or []),
-                "tags": dict(cached.get("tags") or {}),
-                "tagger_version": str(cached.get("tagger_version") or "cache_v1"),
-                "tag_confidence": float(cached.get("tag_confidence") or 0.5),
-            }
-            embedding = cached.get("embedding")
-            embedding_model = cached.get("embedding_model")
-        else:
-            normalized_title, role_family, occupation_group = normalize_title(clean.title_clean)
-            tags = extract_tags(clean, normalized_title=normalized_title)
-            embedding_text = f"{clean.title_clean}\n{clean.requirements_clean}\n{clean.responsibilities_clean}\n{clean.description_clean}"
-            embedding_text = embedding_text[: max(200, args.embedding_max_chars)]
+    for row_idx, row in enumerate(rows, start=1):
+        attempts = max(1, args.row_max_retries)
+        last_exc: Exception | None = None
+        for attempt in range(1, attempts + 1):
+            savepoint_name = f"row_{row_idx}_{attempt}"
+            if con is not None:
+                con.execute(f"SAVEPOINT {savepoint_name}")
             try:
-                embedding, embedding_model = compute_embedding(
-                    embedding_text,
-                    mode=args.embedding_mode,
-                    openai_model=args.openai_embedding_model,
-                    gemini_model=args.gemini_embedding_model,
-                    timeout_s=max(5, args.embedding_timeout_sec),
-                )
-            except urlerror.HTTPError as e:
-                raise RuntimeError(f"embedding API HTTP error ({args.embedding_mode}): {e.code}") from e
-            except urlerror.URLError as e:
-                raise RuntimeError(f"embedding API network error ({args.embedding_mode}): {e}") from e
+                source = str(row.get("source") or "greenhouse")
+                source_job_id = str(row.get("external_id") or row.get("source_job_id") or "")
+                raw_row = {
+                    "source": source,
+                    "source_job_id": source_job_id,
+                    "source_org": str(row.get("source_org") or ""),
+                    "url": str(row.get("url") or ""),
+                    "title_raw": str(row.get("title") or ""),
+                    "company_raw": str(row.get("company_name") or ""),
+                    "location_raw": str(row.get("location_raw") or ""),
+                    "description_raw": str(row.get("description_text") or ""),
+                    "language_hint": str(row.get("language") or ""),
+                    "payload_json": row,
+                    "fetched_at": now,
+                }
+                clean = clean_row(row)
+                clean_row_out = {
+                    "source": source,
+                    "source_job_id": source_job_id,
+                    "url": raw_row["url"],
+                    "title_clean": clean.title_clean,
+                    "description_clean": clean.description_clean,
+                    "requirements_clean": clean.requirements_clean,
+                    "responsibilities_clean": clean.responsibilities_clean,
+                    "location_clean": clean.location_clean,
+                    "language": clean.language,
+                    "content_hash": clean.content_hash,
+                    "content_fingerprint": clean.content_fingerprint,
+                    "cleaned_at": now,
+                }
 
-        indexed_row = {
-            "source": source,
-            "source_job_id": source_job_id,
-            "source_org": raw_row["source_org"],
-            "url": raw_row["url"],
-            "company_name": str(row.get("company_name") or ""),
-            "title_raw": raw_row["title_raw"],
-            "title_clean": clean.title_clean,
-            "normalized_title": normalized_title,
-            "role_family": role_family,
-            "occupation_group": occupation_group,
-            "seniority": tags.get("seniority"),
-            "employment_type": tags.get("employment_type"),
-            "location_type": tags.get("location_type"),
-            "city": tags.get("city"),
-            "region": tags.get("region"),
-            "country": tags.get("country"),
-            "salary_min": tags.get("salary_min"),
-            "salary_max": tags.get("salary_max"),
-            "salary_currency": tags.get("salary_currency"),
-            "skills": tags.get("skills") or [],
-            "tags": tags.get("tags") or {},
-            "embedding": embedding,
-            "embedding_model": embedding_model,
-            "tagger_version": tags.get("tagger_version"),
-            "tag_confidence": tags.get("tag_confidence"),
-            "indexed_at": now,
-            "content_hash": clean.content_hash,
-        }
+                prev_hash: str | None = None
+                if con is not None:
+                    prev_hash = previous_content_hash_for_job(con, source=source, url=raw_row["url"])
 
-        raw_out.append(raw_row)
-        clean_out.append(clean_row_out)
-        indexed_out.append(indexed_row)
+                base_state = "processed"
+                if prev_hash is None:
+                    base_state = "new"
+                elif prev_hash == clean.content_hash:
+                    base_state = "skipped"
+                else:
+                    base_state = "updated"
 
-        if con is not None:
-            save_to_db(
-                con,
-                raw_row=row,
-                clean=clean,
-                normalized_title=normalized_title,
-                role_family=role_family,
-                occupation_group=occupation_group,
-                tags=tags,
-                embedding=embedding,
-                embedding_model=embedding_model,
+                cached = cache.get(clean.content_hash)
+                if cached is not None:
+                    cache_hits += 1
+                    normalized_title = str(cached.get("normalized_title") or "other")
+                    role_family = str(cached.get("role_family") or "other")
+                    occupation_group = str(cached.get("occupation_group") or "other")
+                    tags = {
+                        "normalized_title": normalized_title,
+                        "seniority": cached.get("seniority"),
+                        "employment_type": cached.get("employment_type"),
+                        "location_type": cached.get("location_type"),
+                        "city": cached.get("city"),
+                        "region": cached.get("region"),
+                        "country": cached.get("country"),
+                    "salary_min": cached.get("salary_min"),
+                    "salary_max": cached.get("salary_max"),
+                    "salary_currency": cached.get("salary_currency"),
+                    "experience_years_min": cached.get("experience_years_min"),
+                    "experience_years_max": cached.get("experience_years_max"),
+                    "experience_required": cached.get("experience_required"),
+                    "experience_text_raw": cached.get("experience_text_raw"),
+                    "education_level": cached.get("education_level"),
+                    "degree_required": cached.get("degree_required"),
+                    "education_text_raw": cached.get("education_text_raw"),
+                    "skills": list(cached.get("skills") or []),
+                    "tags": dict(cached.get("tags") or {}),
+                    "tagger_version": str(cached.get("tagger_version") or "cache_v1"),
+                        "tag_confidence": float(cached.get("tag_confidence") or 0.5),
+                    }
+                    embedding = cached.get("embedding")
+                    embedding_model = cached.get("embedding_model")
+                else:
+                    normalized_title, role_family, occupation_group = normalize_title(clean.title_clean)
+                    tags = extract_tags(clean, normalized_title=normalized_title)
+                    embedding_text = f"{clean.title_clean}\n{clean.requirements_clean}\n{clean.responsibilities_clean}\n{clean.description_clean}"
+                    embedding_text = embedding_text[: max(200, args.embedding_max_chars)]
+                    try:
+                        embedding, embedding_model = compute_embedding(
+                            embedding_text,
+                            mode=args.embedding_mode,
+                            openai_model=args.openai_embedding_model,
+                            gemini_model=args.gemini_embedding_model,
+                            timeout_s=max(5, args.embedding_timeout_sec),
+                        )
+                    except urlerror.HTTPError as e:
+                        raise RuntimeError(f"embedding API HTTP error ({args.embedding_mode}): {e.code}") from e
+                    except urlerror.URLError as e:
+                        raise RuntimeError(f"embedding API network error ({args.embedding_mode}): {e}") from e
+
+                processing_state = base_state
+                if base_state == "skipped" and cached is None:
+                    processing_state = "processed"
+
+                indexed_row = {
+                    "source": source,
+                    "source_job_id": source_job_id,
+                    "source_org": raw_row["source_org"],
+                    "url": raw_row["url"],
+                    "company_name": str(row.get("company_name") or ""),
+                    "title_raw": raw_row["title_raw"],
+                    "title_clean": clean.title_clean,
+                    "normalized_title": normalized_title,
+                    "role_family": role_family,
+                    "occupation_group": occupation_group,
+                    "seniority": tags.get("seniority"),
+                    "employment_type": tags.get("employment_type"),
+                    "location_type": tags.get("location_type"),
+                    "city": tags.get("city"),
+                    "region": tags.get("region"),
+                    "country": tags.get("country"),
+                    "salary_min": tags.get("salary_min"),
+                    "salary_max": tags.get("salary_max"),
+                    "salary_currency": tags.get("salary_currency"),
+                    "experience_years_min": tags.get("experience_years_min"),
+                    "experience_years_max": tags.get("experience_years_max"),
+                    "experience_required": tags.get("experience_required"),
+                    "experience_text_raw": tags.get("experience_text_raw"),
+                    "education_level": tags.get("education_level"),
+                    "degree_required": tags.get("degree_required"),
+                    "education_text_raw": tags.get("education_text_raw"),
+                    "skills": tags.get("skills") or [],
+                    "tags": tags.get("tags") or {},
+                    "embedding": embedding,
+                    "embedding_model": embedding_model,
+                    "tagger_version": tags.get("tagger_version"),
+                    "tag_confidence": tags.get("tag_confidence"),
+                    "indexed_at": now,
+                    "content_hash": clean.content_hash,
+                    "processing_state": processing_state,
+                    "processing_version": PIPELINE_VERSION,
+                    "extraction_version": EXTRACTION_VERSION,
+                }
+
+                raw_out.append(raw_row)
+                clean_out.append(clean_row_out)
+                indexed_out.append(indexed_row)
+
+                if con is not None:
+                    save_to_db(
+                        con,
+                        raw_row=row,
+                        clean=clean,
+                        normalized_title=normalized_title,
+                        role_family=role_family,
+                        occupation_group=occupation_group,
+                        tags=tags,
+                        embedding=embedding,
+                        embedding_model=embedding_model,
+                        processing_state=processing_state,
+                    )
+
+                if processing_state == "updated":
+                    state_counts["updated"] += 1
+                elif processing_state == "skipped":
+                    state_counts["skipped"] += 1
+                elif processing_state == "new":
+                    state_counts["new"] += 1
+                else:
+                    state_counts["processed"] += 1
+                if con is not None:
+                    con.execute(f"RELEASE SAVEPOINT {savepoint_name}")
+                last_exc = None
+                break
+            except Exception as exc:
+                last_exc = exc
+                if con is not None:
+                    con.execute(f"ROLLBACK TO SAVEPOINT {savepoint_name}")
+                    con.execute(f"RELEASE SAVEPOINT {savepoint_name}")
+                if attempt < attempts:
+                    print(
+                        f"WARN: retry row={row_idx} attempt={attempt}/{attempts}"
+                        f" source={row.get('source')} url={row.get('url')} error={exc}"
+                    )
+                    continue
+        if last_exc is not None:
+            state_counts["failed"] += 1
+            print(
+                f"WARN: failed row source={row.get('source')} url={row.get('url')}"
+                f" attempts={attempts} error={last_exc}"
             )
-
-    if con is not None:
-        con.commit()
-        con.close()
 
     write_jsonl(out_dir / "raw_jobs.jsonl", raw_out)
     write_jsonl(out_dir / "jobs_clean.jsonl", clean_out)
     write_jsonl(out_dir / "jobs_indexed.jsonl", indexed_out)
+
+    total = len(indexed_out)
+    other_like = sum(
+        1
+        for r in indexed_out
+        if (
+            r.get("normalized_title") == "other"
+            or r.get("role_family") == "other"
+            or r.get("occupation_group") == "other"
+        )
+    )
+    salary_outlier = sum(
+        1 for r in indexed_out if isinstance(r.get("salary_max"), int) and r["salary_max"] > 1_000_000
+    )
+    unmatched_titles: dict[str, int] = {}
+    for r in indexed_out:
+        if r.get("normalized_title") == "other":
+            t = str(r.get("title_clean") or "").strip().lower()
+            if t:
+                unmatched_titles[t] = unmatched_titles.get(t, 0) + 1
+    top_unmatched = sorted(unmatched_titles.items(), key=lambda x: x[1], reverse=True)[:10]
+    report = {
+        "pipeline_version": PIPELINE_VERSION,
+        "extraction_version": EXTRACTION_VERSION,
+        "input_rows": len(rows),
+        "indexed_rows": total,
+        "processed": state_counts["processed"] + state_counts["new"],
+        "new": state_counts["new"],
+        "skipped": state_counts["skipped"],
+        "updated": state_counts["updated"],
+        "failed": state_counts["failed"],
+        "cache_hits": cache_hits,
+        "other_like": other_like,
+        "other_like_pct": round((other_like * 100.0 / total), 2) if total else 0.0,
+        "salary_outlier_gt1M": salary_outlier,
+        "runtime_seconds": round(time.monotonic() - started_monotonic, 3),
+        "top10_unmatched_titles": [
+            {"title_clean": t, "count": c} for t, c in top_unmatched
+        ],
+    }
+    report_path = out_dir / "pipeline_report.json"
+    report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    if con is not None:
+        if run_id is not None:
+            finish_pipeline_run(
+                con,
+                run_id=run_id,
+                started_monotonic=started_monotonic,
+                total_rows=len(rows),
+                processed=state_counts["processed"] + state_counts["new"],
+                skipped=state_counts["skipped"],
+                updated=state_counts["updated"],
+                failed=state_counts["failed"],
+                cache_hits=cache_hits,
+            )
+        con.commit()
+        con.close()
 
     print(f"Input rows: {len(rows)}")
     print(f"Cache hits: {cache_hits}")
     print(f"Wrote: {out_dir / 'raw_jobs.jsonl'}")
     print(f"Wrote: {out_dir / 'jobs_clean.jsonl'}")
     print(f"Wrote: {out_dir / 'jobs_indexed.jsonl'}")
+    print(f"Wrote: {report_path}")
+    print(
+        "Run stats:"
+        f" processed={report['processed']}"
+        f" skipped={report['skipped']}"
+        f" updated={report['updated']}"
+        f" failed={report['failed']}"
+    )
     if args.no_db:
         print("DB: skipped (--no-db)")
     else:

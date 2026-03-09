@@ -16,8 +16,13 @@ MAX_ROWS="${MAX_ROWS}" EMBEDDING_MODE="${EMBEDDING_MODE}" \
   ./automation/microsaas/run_microsaas.sh "${INPUT_PATH}" "${OUT_DIR}" "${DB_PATH}"
 
 INDEXED_JSONL="${OUT_DIR}/jobs_indexed.jsonl"
+REPORT_JSON="${OUT_DIR}/pipeline_report.json"
 if [[ ! -f "${INDEXED_JSONL}" ]]; then
   echo "Missing output: ${INDEXED_JSONL}" >&2
+  exit 1
+fi
+if [[ ! -f "${REPORT_JSON}" ]]; then
+  echo "Missing output: ${REPORT_JSON}" >&2
   exit 1
 fi
 
@@ -48,6 +53,25 @@ if other_pct > 12.0:
 if salary_outlier > 0:
     raise SystemExit(f"FAIL: salary_outlier_gt1M {salary_outlier} > 0")
 print("PASS: quality gates")
+PY
+
+uv run python - <<'PY' "${REPORT_JSON}"
+import json
+import sys
+from pathlib import Path
+
+report = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+required = ["processed", "skipped", "updated", "failed", "cache_hits", "runtime_seconds"]
+missing = [k for k in required if k not in report]
+if missing:
+    raise SystemExit(f"FAIL: missing report keys: {missing}")
+print(
+    "PASS: pipeline report",
+    f"processed={report['processed']}",
+    f"skipped={report['skipped']}",
+    f"updated={report['updated']}",
+    f"failed={report['failed']}",
+)
 PY
 
 echo "[4/5] API smoke"
@@ -97,3 +121,4 @@ echo "[5/5] Done"
 echo "Smoke E2E OK"
 echo "DB: ${DB_PATH}"
 echo "Indexed: ${INDEXED_JSONL}"
+echo "Report: ${REPORT_JSON}"

@@ -65,10 +65,23 @@ CREATE TABLE IF NOT EXISTS jobs_indexed (
   salary_min INTEGER,
   salary_max INTEGER,
   salary_currency TEXT,
+  experience_years_min INTEGER,
+  experience_years_max INTEGER,
+  experience_required INTEGER,         -- 0/1
+  experience_text_raw TEXT,
+  education_level TEXT,                -- none | high_school | bachelor | master | phd | unspecified
+  degree_required INTEGER,             -- 0/1
+  education_text_raw TEXT,
   skills_json TEXT NOT NULL DEFAULT '[]',
   tags_json TEXT NOT NULL DEFAULT '{}',
   embedding_json TEXT,                 -- keep JSON array in SQLite prototype
   embedding_model TEXT,
+  content_hash TEXT,
+  processing_state TEXT,               -- new | processed | updated | skipped | failed
+  first_seen_at TEXT,
+  last_seen_at TEXT,
+  processing_version TEXT,
+  extraction_version TEXT,
   tagger_version TEXT,
   tag_confidence REAL,
   indexed_at TEXT NOT NULL,
@@ -103,6 +116,13 @@ CREATE TABLE IF NOT EXISTS extraction_cache (
   salary_min INTEGER,
   salary_max INTEGER,
   salary_currency TEXT,
+  experience_years_min INTEGER,
+  experience_years_max INTEGER,
+  experience_required INTEGER,         -- 0/1
+  experience_text_raw TEXT,
+  education_level TEXT,                -- none | high_school | bachelor | master | phd | unspecified
+  degree_required INTEGER,             -- 0/1
+  education_text_raw TEXT,
   skills_json TEXT NOT NULL DEFAULT '[]',
   tags_json TEXT NOT NULL DEFAULT '{}',
   embedding_json TEXT,
@@ -113,3 +133,22 @@ CREATE TABLE IF NOT EXISTS extraction_cache (
   updated_at TEXT NOT NULL
 );
 
+-- 5) Pipeline run history (incremental observability)
+CREATE TABLE IF NOT EXISTS pipeline_runs (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  run_id TEXT NOT NULL UNIQUE,
+  input_path TEXT NOT NULL,
+  output_dir TEXT NOT NULL,
+  db_path TEXT,
+  started_at TEXT NOT NULL,
+  finished_at TEXT,
+  duration_seconds REAL,
+  total_rows INTEGER NOT NULL DEFAULT 0,
+  processed INTEGER NOT NULL DEFAULT 0,
+  skipped INTEGER NOT NULL DEFAULT 0,
+  updated INTEGER NOT NULL DEFAULT 0,
+  failed INTEGER NOT NULL DEFAULT 0,
+  cache_hits INTEGER NOT NULL DEFAULT 0,
+  pipeline_version TEXT,
+  extraction_version TEXT
+);

@@ -4,7 +4,7 @@ Questo documento definisce il contratto logico stabile della vista/tabella `jobs
 Serve per evitare regressioni tra pipeline, API e frontend.
 
 ## Contract Version
-- `jobs_indexed_contract_version = v1`
+- `jobs_indexed_contract_version = v2`
 
 ## Stable Fields
 
@@ -37,6 +37,15 @@ Serve per evitare regressioni tra pipeline, API e frontend.
 - `salary_max` (INTEGER | NULL)
 - `salary_currency` (TEXT | NULL)
 
+### Experience / education (v0.2 foundations)
+- `experience_years_min` (INTEGER | NULL)
+- `experience_years_max` (INTEGER | NULL)
+- `experience_required` (INTEGER 0/1 | NULL)
+- `experience_text_raw` (TEXT | NULL)
+- `education_level` (TEXT | NULL)
+- `degree_required` (INTEGER 0/1 | NULL)
+- `education_text_raw` (TEXT | NULL)
+
 ### Skills / tags
 - `skills_json` (TEXT JSON array, never NULL; default `[]`)
 - `tags_json` (TEXT JSON object, never NULL; default `{}`)
@@ -49,6 +58,12 @@ Serve per evitare regressioni tra pipeline, API e frontend.
 
 ### Metadata
 - `indexed_at` (TEXT ISO datetime)
+- `content_hash` (TEXT | NULL)
+- `processing_state` (TEXT | NULL)
+- `first_seen_at` (TEXT ISO datetime | NULL)
+- `last_seen_at` (TEXT ISO datetime | NULL)
+- `processing_version` (TEXT | NULL)
+- `extraction_version` (TEXT | NULL)
 
 ## Allowed values (MVP)
 - `location_type`: `remote | hybrid | onsite`
@@ -67,6 +82,5 @@ Ogni breaking change a `jobs_indexed` richiede:
 3. update test/benchmark.
 
 ## Non-goals in MVP
-- campi enterprise (es. `salary_period`, `years_experience_min`, `education_level`) non sono parte del contratto stabile MVP.
+- campi enterprise avanzati (es. `salary_period`, degree major taxonomy) non sono parte del contratto stabile MVP.
 - eventuali campi aggiuntivi sono backward-compatible solo se opzionali.
-

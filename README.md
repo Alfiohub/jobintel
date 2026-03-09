@@ -50,10 +50,19 @@ Esegue pipeline batch locale end-to-end e produce:
 - `raw_jobs.jsonl`
 - `jobs_clean.jsonl`
 - `jobs_indexed.jsonl`
-- SQLite (`raw_jobs`, `jobs_clean`, `jobs_indexed`, `extraction_cache`)
+- `pipeline_report.json` (KPI run: processed/skipped/updated/failed/cache_hits/runtime)
+- SQLite (`raw_jobs`, `jobs_clean`, `jobs_indexed`, `extraction_cache`, `pipeline_runs`)
 
 ```bash
 MAX_ROWS=2000 EMBEDDING_MODE=hash ./automation/microsaas/run_microsaas.sh \
+  data/ner/phase1_greenhouse/all_greenhouse_jobs_en.jsonl \
+  data/microsaas/run \
+  data/jobintel_microsaas.sqlite
+```
+
+Retry per-riga (transient failures) via variabile ambiente:
+```bash
+ROW_MAX_RETRIES=2 MAX_ROWS=2000 EMBEDDING_MODE=hash ./automation/microsaas/run_microsaas.sh \
   data/ner/phase1_greenhouse/all_greenhouse_jobs_en.jsonl \
   data/microsaas/run \
   data/jobintel_microsaas.sqlite
@@ -85,6 +94,7 @@ MAX_ROWS=2000 EMBEDDING_MODE=hash ./automation/microsaas/smoke_e2e_mvp.sh \
   data/microsaas/run_smoke \
   data/jobintel_microsaas_smoke.sqlite
 ```
+Il smoke verifica anche la presenza/consistenza di `pipeline_report.json`.
 
 Nota pratica su chiamate utente:
 - Non è necessario chiamare OpenAI/Gemini a ogni request utente.

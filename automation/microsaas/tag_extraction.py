@@ -78,6 +78,20 @@ _SALARY_NEGATIVE_CONTEXT_RE = re.compile(
     flags=re.IGNORECASE,
 )
 
+_EXPERIENCE_RANGE_RE = re.compile(
+    r"(?i)\b(\d{1,2})\s*(?:\+|plus)?\s*(?:-|to|–|—)\s*(\d{1,2})\+?\s+years?\s+(?:of\s+)?experience\b"
+)
+_EXPERIENCE_MIN_RE = re.compile(
+    r"(?i)\b(?:at least|min(?:imum)?|minimum of|required:?)?\s*(\d{1,2})\+?\s+years?\s+(?:of\s+)?experience\b"
+)
+
+_EDUCATION_PATTERNS: list[tuple[re.Pattern[str], str]] = [
+    (re.compile(r"(?i)\bph\.?d\b|\bdoctorate\b"), "phd"),
+    (re.compile(r"(?i)\bmaster'?s?\b|\bmsc\b|\bms\b|\bma\b|\bmba\b"), "master"),
+    (re.compile(r"(?i)\bbachelor'?s?\b|\bbsc\b|\bbs\b|\bba\b"), "bachelor"),
+    (re.compile(r"(?i)\bhigh school\b"), "high_school"),
+]
+
 
 def _extract_seniority(text: str) -> str | None:
     for pattern, value in SENIORITY_PATTERNS:
@@ -189,6 +203,35 @@ def _extract_skills(text: str) -> list[str]:
     return sorted(set(normalized))
 
 
+def _extract_experience(text: str) -> tuple[int | None, int | None, bool | None, str | None]:
+    for m in _EXPERIENCE_RANGE_RE.finditer(text):
+        lo = int(m.group(1))
+        hi = int(m.group(2))
+        if 0 <= lo <= 40 and 0 <= hi <= 40 and lo <= hi:
+            return lo, hi, True, m.group(0).strip()
+    m = _EXPERIENCE_MIN_RE.search(text)
+    if m:
+        lo = int(m.group(1))
+        if 0 <= lo <= 40:
+            return lo, None, True, m.group(0).strip()
+    return None, None, None, None
+
+
+def _extract_education(text: str) -> tuple[str | None, bool | None, str | None]:
+    lowered = text.lower()
+    degree_required: bool | None = None
+    if re.search(r"\b(?:degree|required|required qualification)\b", lowered):
+        degree_required = True
+    elif re.search(r"\bdegree preferred\b|\bequivalent experience\b", lowered):
+        degree_required = False
+
+    for pattern, level in _EDUCATION_PATTERNS:
+        m = pattern.search(text)
+        if m:
+            return level, degree_required, m.group(0).strip()
+    return None, degree_required, None
+
+
 def _split_location(location_clean: str) -> tuple[str | None, str | None]:
     if not location_clean:
         return None, None
@@ -205,6 +248,8 @@ def extract_tags(clean: Any, normalized_title: str) -> dict[str, Any]:
     location_type = extract_location_type(text)
     city, region = _split_location(clean.location_clean)
     salary_min, salary_max, salary_currency = extract_salary(clean.description_clean)
+    exp_min, exp_max, exp_required, exp_raw = _extract_experience(clean.description_clean)
+    edu_level, degree_required, edu_raw = _extract_education(clean.description_clean)
     skills = _extract_skills(text)
     confidence = 0.35
     for value in (seniority, employment_type, location_type, salary_min):
@@ -224,10 +269,19 @@ def extract_tags(clean: Any, normalized_title: str) -> dict[str, Any]:
         "salary_min": salary_min,
         "salary_max": salary_max,
         "salary_currency": salary_currency,
+        "experience_years_min": exp_min,
+        "experience_years_max": exp_max,
+        "experience_required": exp_required,
+        "experience_text_raw": exp_raw,
+        "education_level": edu_level,
+        "degree_required": degree_required,
+        "education_text_raw": edu_raw,
         "skills": skills,
         "tags": {
             "skills_count": len(skills),
             "has_salary": bool(salary_min or salary_max),
+            "has_experience": bool(exp_min is not None or exp_max is not None),
+            "has_education": bool(edu_level),
         },
         "tagger_version": "rules_v1",
         "tag_confidence": round(confidence, 4),
