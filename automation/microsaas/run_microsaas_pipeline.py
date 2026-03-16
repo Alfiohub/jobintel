@@ -23,16 +23,17 @@ except ModuleNotFoundError:
 
 try:
     from automation.microsaas.tag_extraction import (
-        extract_location_type as _extract_location_type_mod,
-        extract_salary as _extract_salary_mod,
         extract_tags as _extract_tags_mod,
     )
 except ModuleNotFoundError:
     from tag_extraction import (
-        extract_location_type as _extract_location_type_mod,
-        extract_salary as _extract_salary_mod,
         extract_tags as _extract_tags_mod,
     )
+
+try:
+    from automation.microsaas.taxonomy_mapping import map_taxonomy as _map_taxonomy
+except ModuleNotFoundError:
+    from taxonomy_mapping import map_taxonomy as _map_taxonomy
 
 
 _HTML_TAG_RE = re.compile(r"<[^>]+>")
@@ -42,137 +43,6 @@ _BLOCK_CLOSE_RE = re.compile(r"(?i)</p>|</div>|</li>|</h[1-6]>")
 
 PIPELINE_VERSION = "v0.2.0"
 EXTRACTION_VERSION = "rules_v2"
-
-SKILL_PATTERNS: dict[str, str] = {
-    r"\bpython\b": "python",
-    r"\bsql\b": "sql",
-    r"\bpostgres(?:ql)?\b": "postgresql",
-    r"\bmysql\b": "mysql",
-    r"\bsnowflake\b": "snowflake",
-    r"\bbigquery\b": "bigquery",
-    r"\bdbt\b": "dbt",
-    r"\bspark\b": "spark",
-    r"\bairflow\b": "airflow",
-    r"\bdatabricks\b": "databricks",
-    r"\baws\b": "aws",
-    r"\bazure\b": "azure",
-    r"\bgcp\b|\bgoogle cloud\b": "gcp",
-    r"\bdocker\b": "docker",
-    r"\bkubernetes\b|\bk8s\b": "kubernetes",
-    r"\bterraform\b": "terraform",
-    r"\bexcel\b": "excel",
-    r"\btableau\b": "tableau",
-    r"\bpower\s?bi\b": "power_bi",
-    r"\breact\b": "react",
-    r"\bnode(?:\.js)?\b": "nodejs",
-    r"\btypescript\b": "typescript",
-    r"\bjavascript\b": "javascript",
-    r"\bjava\b": "java",
-    r"\bmachine learning\b": "machine_learning",
-    r"\bllm\b|\blarge language model": "llm",
-}
-
-SENIORITY_PATTERNS: list[tuple[str, str]] = [
-    (r"\bintern(?:ship)?\b", "intern"),
-    (r"\bjunior\b|\bjr\.?\b", "junior"),
-    (r"\bassociate\b", "associate"),
-    (r"\bsenior\b|\bsr\.?\b", "senior"),
-    (r"\bstaff\b", "staff"),
-    (r"\bprincipal\b", "principal"),
-    (r"\blead\b", "lead"),
-    (r"\bmanager\b", "manager"),
-    (r"\bdirector\b", "director"),
-    (r"\bhead\b", "head"),
-    (r"\bvp\b|\bvice president\b", "vp"),
-]
-
-TITLE_RULES: list[tuple[str, str, str, str]] = [
-    (r"\binterested in joining our team\b|\bgeneral application\b", "general_application", "recruiting", "hr"),
-    (r"\bfield cto\b|\bchief technology officer\b|\bcto\b", "chief_technology_officer", "executive_leadership", "business"),
-    (r"\bprincipal enterprise architect\b|\benterprise architect\b", "enterprise_architect", "architecture", "engineering"),
-    (r"\bsolutions architect\b", "solutions_architect", "architecture", "engineering"),
-    (r"\baccount executive\b", "account_executive", "sales", "business"),
-    (r"\bstrategic accounts?\b|\bclient value partner\b", "account_manager", "sales", "business"),
-    (r"\baccount management\b|\baccount manager\b", "account_manager", "sales", "business"),
-    (r"\bbusiness development representative\b|\bbdr\b", "business_development_representative", "sales", "business"),
-    (r"\bsales development representative\b|\bsdr\b", "business_development_representative", "sales", "business"),
-    (r"\bchief revenue officer\b|\bcro\b", "chief_revenue_officer", "executive_leadership", "business"),
-    (r"\bhead of industry\b|\bindustry lead\b", "industry_lead", "sales", "business"),
-    (r"\bsales\b", "sales_representative", "sales", "business"),
-    (r"\bbusiness analyst\b|\bba\s*-", "business_analyst", "business_analysis", "business"),
-    (r"\bcorporate development\b", "corporate_development", "strategy", "business"),
-    (r"\btechnical recruiter\b", "technical_recruiter", "recruiting", "hr"),
-    (r"\bexecutive search lead\b", "technical_recruiter", "recruiting", "hr"),
-    (r"\bhr business partner\b|\bpeople business partner\b|\bhrbp\b", "hr_business_partner", "hr", "hr"),
-    (r"\bhr generalist\b", "hr_generalist", "hr", "hr"),
-    (r"\bimplementation consultant\b", "implementation_consultant", "consulting", "business"),
-    (r"\bmanagement consultant\b|\bsenior consultant\b|\blead consultant\b|\bconsultant\b", "consultant", "consulting", "business"),
-    (r"\binstallations specialist\b", "implementation_consultant", "consulting", "business"),
-    (r"\binstall coordinator\b", "implementation_coordinator", "consulting", "business"),
-    (r"\bai coach\b|\bagile coach\b", "consultant", "consulting", "business"),
-    (r"\bai governance\b|\bai transformation\b|\bai delivery lead\b|\bmanaging principal\b", "consultant", "consulting", "business"),
-    (r"\binvestment analyst\b", "investment_analyst", "finance", "finance"),
-    (r"\baccountant\b|\bcontroller\b|\bauditor\b", "accountant", "finance", "finance"),
-    (r"\bcommissions analyst\b|\bpricing analyst\b", "financial_analyst", "finance", "finance"),
-    (r"\bstrategic finance\b|\bfinancial analyst\b|\bfinance analyst\b", "financial_analyst", "finance", "finance"),
-    (r"\bcounsel\b|\battorney\b|\blegal\b", "legal_counsel", "legal", "business"),
-    (r"\bcustomer success\b", "customer_success_manager", "customer_success", "business"),
-    (r"\brole readiness specialist\b|\bwinback specialist\b", "customer_success_manager", "customer_success", "business"),
-    (r"\bclient services?\b|\btechnical account management\b", "customer_success_manager", "customer_success", "business"),
-    (r"\bdata analytics director\b|\bdirector of data analytics\b", "analytics_director", "data_analytics", "data"),
-    (r"\banalytics director\b", "analytics_director", "data_analytics", "data"),
-    (r"\bdata analytics manager\b|\banalytics manager\b", "analytics_manager", "data_analytics", "data"),
-    (r"\banalytics engineer\b", "analytics_engineer", "data_analytics", "data"),
-    (r"\bbusiness intelligence analyst\b|\bbi analyst\b", "business_intelligence_analyst", "data_analytics", "data"),
-    (r"\bbusiness intelligence engineer\b|\bbi engineer\b", "business_intelligence_engineer", "data_analytics", "data"),
-    (r"\bdata analyst\b|\banalyst, data\b", "data_analyst", "data_analytics", "data"),
-    (r"\bdata engineer\b", "data_engineer", "data_engineering", "data"),
-    (r"\bdata scientist\b", "data_scientist", "data_science", "data"),
-    (r"\bmachine learning scientist\b|\bml scientist\b", "ml_scientist", "machine_learning", "data"),
-    (r"\bmachine learning engineer\b|\bml engineer\b", "ml_engineer", "machine_learning", "data"),
-    (r"\bai (technical )?architect\b|\bai deployment architect\b", "enterprise_architect", "architecture", "engineering"),
-    (r"\bbackend engineer\b|\bbackend developer\b", "backend_engineer", "backend", "engineering"),
-    (r"\bfrontend engineer\b|\bfrontend developer\b", "frontend_engineer", "frontend", "engineering"),
-    (r"\bfull[ -]?stack engineer\b|\bfull[ -]?stack developer\b", "fullstack_engineer", "fullstack", "engineering"),
-    (r"\bdevops\b", "devops_engineer", "devops", "engineering"),
-    (r"\bsite reliability\b|\bsre\b", "site_reliability_engineer", "sre", "engineering"),
-    (r"\bsoftware engineer\b|\bsoftware developer\b", "software_engineer", "software_engineering", "engineering"),
-    (r"\bproduct manager\b|\bproduct management\b", "product_manager", "product_management", "product"),
-    (r"\btpm\b|\btechnical program manager\b", "technical_program_manager", "program_management", "product"),
-    (r"\btechnology program analyst\b", "program_analyst", "program_management", "product"),
-    (r"\bux designer\b|\bui designer\b|\bproduct designer\b|\bproduct design\b", "product_designer", "design", "design"),
-    (r"\bcontent designer\b|\blearning designer\b", "content_designer", "design", "design"),
-    (r"\bsalesforce administrator\b|\bnetsuite administrator\b|\bsystems administrator\b", "systems_administrator", "it_operations", "engineering"),
-    (r"\boffice administrator\b|\bworkplace experience specialist\b", "office_administrator", "operations", "business"),
-    (r"\bnetsuite analyst\b", "business_systems_analyst", "business_analysis", "business"),
-    (r"\bworkforce management analyst\b", "operations_analyst", "operations", "business"),
-    (r"\btalent development partner\b|\bpeople business partnerships?\b", "hr_business_partner", "hr", "hr"),
-    (r"\btalent scientist\b|\btalent science\b", "talent_analytics_specialist", "hr", "hr"),
-    (r"\bhead of talent development\b", "hr_manager", "hr", "hr"),
-    (r"\btelehealth provider\b", "healthcare_provider", "healthcare", "business"),
-    (r"\bsecurity .*systems specialist\b|\bdesktop systems specialist\b|\bit support specialist\b", "it_support_specialist", "it_operations", "engineering"),
-    (r"\btechnical support\b", "it_support_specialist", "it_operations", "engineering"),
-    (r"\balliances?\b", "alliance_manager", "partnerships", "business"),
-    (r"\btechnical lead\b", "software_engineer", "software_engineering", "engineering"),
-    (r"\btraining localization intern\b", "localization_intern", "operations", "business"),
-    (r"\bseo\b", "seo_specialist", "marketing", "business"),
-    (r"\bmarketing\b", "marketing_specialist", "marketing", "business"),
-    (r"\brecruiter\b|\btalent acquisition\b", "technical_recruiter", "recruiting", "hr"),
-    (r"\boperations specialist\b|\boperations coordinator\b", "operations_specialist", "operations", "business"),
-]
-
-SALARY_PATTERNS: list[str] = [
-    r"(?:\$|EUR|GBP|CAD|AUD)\s?\d[\d,]*(?:\.\d+)?\s*[kmb]?\s?(?:-|to|–|—)\s?(?:\$|EUR|GBP|CAD|AUD)?\s?\d[\d,]*(?:\.\d+)?\s*[kmb]?(?:\s?(?:/|per)\s?(?:year|yr|hour|hr))?",
-    r"\b\d[\d,]*(?:\.\d+)?\s*[kmb]?\s?(?:-|to|–|—)\s?\d[\d,]*(?:\.\d+)?\s*[kmb]?\s?(?:USD|EUR|GBP|CAD|AUD)\b",
-]
-_SALARY_POSITIVE_CONTEXT_RE = re.compile(
-    r"\bsalary\b|\bcompensation\b|\bpay range\b|\bbase pay\b|\bbase salary\b|\bote\b|\bannual(?:ly)?\b|\bper year\b|\byearly\b|\bper hour\b|\bhourly\b",
-    flags=re.IGNORECASE,
-)
-_SALARY_NEGATIVE_CONTEXT_RE = re.compile(
-    r"\bbacked by\b|\braised\b|\bfunding\b|\bseries [a-z]\b|\bvaluation\b|\bpatients?\b|\bcustomers?\b|\busers?\b|\bemployees?\b",
-    flags=re.IGNORECASE,
-)
 
 
 @dataclass(frozen=True)
@@ -277,75 +147,6 @@ def clean_row(row: dict[str, Any]) -> CleanRow:
     )
 
 
-def normalize_title(title_clean: str) -> tuple[str, str, str]:
-    return _normalize_title(title_clean)
-
-
-def _extract_seniority(text: str) -> str | None:
-    for pattern, value in SENIORITY_PATTERNS:
-        if re.search(pattern, text, flags=re.IGNORECASE):
-            return value
-    return None
-
-
-def _extract_employment_type(text: str) -> str | None:
-    if re.search(r"\bfull[ -]?time\b", text, flags=re.IGNORECASE):
-        return "full_time"
-    if re.search(r"\bpart[ -]?time\b", text, flags=re.IGNORECASE):
-        return "part_time"
-    if re.search(r"\bcontract(?:or)?\b|\bfreelance\b", text, flags=re.IGNORECASE):
-        return "contract"
-    if re.search(r"\bintern(?:ship)?\b", text, flags=re.IGNORECASE):
-        return "internship"
-    if re.search(r"\btemporary\b|\btemp\b", text, flags=re.IGNORECASE):
-        return "temporary"
-    return None
-
-
-def _extract_location_type(text: str) -> str | None:
-    return _extract_location_type_mod(text)
-
-
-def _parse_salary_number(num_text: str) -> int | None:
-    m = re.match(r"(?i)^\s*(\d[\d,]*(?:\.\d+)?)\s*([kmb])?\s*$", num_text)
-    if not m:
-        return None
-    base = float(m.group(1).replace(",", ""))
-    mult = (m.group(2) or "").lower()
-    if mult == "k":
-        base *= 1_000
-    elif mult == "m":
-        base *= 1_000_000
-    elif mult == "b":
-        base *= 1_000_000_000
-    return int(base)
-
-
-def _extract_salary(text: str) -> tuple[int | None, int | None, str | None]:
-    return _extract_salary_mod(text)
-
-
-def _extract_skills(text: str) -> list[str]:
-    found: list[str] = []
-    for pattern, skill in SKILL_PATTERNS.items():
-        if re.search(pattern, text, flags=re.IGNORECASE):
-            found.append(skill)
-    return sorted(set(found))
-
-
-def _split_location(location_clean: str) -> tuple[str | None, str | None]:
-    if not location_clean:
-        return None, None
-    parts = [p.strip() for p in location_clean.split(",") if p.strip()]
-    if len(parts) >= 2:
-        return parts[0], parts[1]
-    return parts[0], None
-
-
-def extract_tags(clean: CleanRow, normalized_title: str) -> dict[str, Any]:
-    return _extract_tags_mod(clean, normalized_title=normalized_title)
-
-
 def fake_embedding(text: str, dim: int = 24) -> list[float]:
     digest = hashlib.sha256(text.encode("utf-8")).digest()
     out: list[float] = []
@@ -440,6 +241,10 @@ def ensure_microsaas_schema(con: sqlite3.Connection) -> None:
     _ensure_column(con, "jobs_indexed", "last_seen_at", "TEXT")
     _ensure_column(con, "jobs_indexed", "processing_version", "TEXT")
     _ensure_column(con, "jobs_indexed", "extraction_version", "TEXT")
+    _ensure_column(con, "jobs_indexed", "taxonomy_source", "TEXT")
+    _ensure_column(con, "jobs_indexed", "taxonomy_code", "TEXT")
+    _ensure_column(con, "jobs_indexed", "taxonomy_label", "TEXT")
+    _ensure_column(con, "jobs_indexed", "taxonomy_match_confidence", "REAL")
     _ensure_column(con, "jobs_indexed", "experience_years_min", "INTEGER")
     _ensure_column(con, "jobs_indexed", "experience_years_max", "INTEGER")
     _ensure_column(con, "jobs_indexed", "experience_required", "INTEGER")
@@ -447,6 +252,11 @@ def ensure_microsaas_schema(con: sqlite3.Connection) -> None:
     _ensure_column(con, "jobs_indexed", "education_level", "TEXT")
     _ensure_column(con, "jobs_indexed", "degree_required", "INTEGER")
     _ensure_column(con, "jobs_indexed", "education_text_raw", "TEXT")
+    _ensure_column(con, "jobs_indexed", "title_confidence", "REAL")
+    _ensure_column(con, "jobs_indexed", "location_confidence", "REAL")
+    _ensure_column(con, "jobs_indexed", "salary_confidence", "REAL")
+    _ensure_column(con, "jobs_indexed", "experience_confidence", "REAL")
+    _ensure_column(con, "jobs_indexed", "education_confidence", "REAL")
     _ensure_column(con, "extraction_cache", "experience_years_min", "INTEGER")
     _ensure_column(con, "extraction_cache", "experience_years_max", "INTEGER")
     _ensure_column(con, "extraction_cache", "experience_required", "INTEGER")
@@ -454,6 +264,15 @@ def ensure_microsaas_schema(con: sqlite3.Connection) -> None:
     _ensure_column(con, "extraction_cache", "education_level", "TEXT")
     _ensure_column(con, "extraction_cache", "degree_required", "INTEGER")
     _ensure_column(con, "extraction_cache", "education_text_raw", "TEXT")
+    _ensure_column(con, "extraction_cache", "taxonomy_source", "TEXT")
+    _ensure_column(con, "extraction_cache", "taxonomy_code", "TEXT")
+    _ensure_column(con, "extraction_cache", "taxonomy_label", "TEXT")
+    _ensure_column(con, "extraction_cache", "taxonomy_match_confidence", "REAL")
+    _ensure_column(con, "extraction_cache", "title_confidence", "REAL")
+    _ensure_column(con, "extraction_cache", "location_confidence", "REAL")
+    _ensure_column(con, "extraction_cache", "salary_confidence", "REAL")
+    _ensure_column(con, "extraction_cache", "experience_confidence", "REAL")
+    _ensure_column(con, "extraction_cache", "education_confidence", "REAL")
     con.execute("CREATE INDEX IF NOT EXISTS ix_jobs_indexed_content_hash ON jobs_indexed(content_hash)")
     con.execute("CREATE INDEX IF NOT EXISTS ix_jobs_indexed_processing_state ON jobs_indexed(processing_state)")
     _ensure_table_pipeline_runs(con)
@@ -645,17 +464,25 @@ def save_to_db(
     con.execute(
         """
         INSERT INTO extraction_cache(
-          content_hash, normalized_title, role_family, occupation_group, seniority, employment_type,
+          content_hash, normalized_title, role_family, occupation_group,
+          taxonomy_source, taxonomy_code, taxonomy_label, taxonomy_match_confidence,
+          seniority, employment_type,
           location_type, city, region, country, salary_min, salary_max, salary_currency,
           experience_years_min, experience_years_max, experience_required, experience_text_raw,
           education_level, degree_required, education_text_raw,
-          skills_json, tags_json, embedding_json, embedding_model, tagger_version, tag_confidence,
+          skills_json, tags_json, embedding_json, embedding_model, tagger_version,
+          title_confidence, location_confidence, salary_confidence, experience_confidence, education_confidence,
+          tag_confidence,
           created_at, updated_at
-        ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+        ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
         ON CONFLICT(content_hash) DO UPDATE SET
           normalized_title=excluded.normalized_title,
           role_family=excluded.role_family,
           occupation_group=excluded.occupation_group,
+          taxonomy_source=excluded.taxonomy_source,
+          taxonomy_code=excluded.taxonomy_code,
+          taxonomy_label=excluded.taxonomy_label,
+          taxonomy_match_confidence=excluded.taxonomy_match_confidence,
           seniority=excluded.seniority,
           employment_type=excluded.employment_type,
           location_type=excluded.location_type,
@@ -677,6 +504,11 @@ def save_to_db(
           embedding_json=excluded.embedding_json,
           embedding_model=excluded.embedding_model,
           tagger_version=excluded.tagger_version,
+          title_confidence=excluded.title_confidence,
+          location_confidence=excluded.location_confidence,
+          salary_confidence=excluded.salary_confidence,
+          experience_confidence=excluded.experience_confidence,
+          education_confidence=excluded.education_confidence,
           tag_confidence=excluded.tag_confidence,
           updated_at=excluded.updated_at
         """,
@@ -685,6 +517,10 @@ def save_to_db(
             normalized_title,
             role_family,
             occupation_group,
+            tags.get("taxonomy_source"),
+            tags.get("taxonomy_code"),
+            tags.get("taxonomy_label"),
+            float(tags.get("taxonomy_match_confidence") or 0.0),
             tags.get("seniority"),
             tags.get("employment_type"),
             tags.get("location_type"),
@@ -706,6 +542,11 @@ def save_to_db(
             json.dumps(embedding or [], ensure_ascii=False) if embedding is not None else None,
             embedding_model,
             str(tags.get("tagger_version") or ""),
+            float(tags.get("title_confidence") or 0.0),
+            float(tags.get("location_confidence") or 0.0),
+            float(tags.get("salary_confidence") or 0.0),
+            float(tags.get("experience_confidence") or 0.0),
+            float(tags.get("education_confidence") or 0.0),
             float(tags.get("tag_confidence") or 0.0),
             now,
             now,
@@ -722,14 +563,18 @@ def save_to_db(
         """
         INSERT INTO jobs_indexed(
           clean_job_id, source, source_job_id, source_org, url, company_name, title_raw, title_clean,
-          normalized_title, role_family, occupation_group, seniority, employment_type, location_type,
+          normalized_title, role_family, occupation_group,
+          taxonomy_source, taxonomy_code, taxonomy_label, taxonomy_match_confidence,
+          seniority, employment_type, location_type,
           city, region, country, salary_min, salary_max, salary_currency,
           experience_years_min, experience_years_max, experience_required, experience_text_raw,
           education_level, degree_required, education_text_raw,
           skills_json, tags_json,
           embedding_json, embedding_model, content_hash, processing_state, first_seen_at, last_seen_at,
-          processing_version, extraction_version, tagger_version, tag_confidence, indexed_at
-        ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+          processing_version, extraction_version, tagger_version,
+          title_confidence, location_confidence, salary_confidence, experience_confidence, education_confidence,
+          tag_confidence, indexed_at
+        ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
         ON CONFLICT(clean_job_id) DO UPDATE SET
           source=excluded.source,
           source_job_id=excluded.source_job_id,
@@ -741,6 +586,10 @@ def save_to_db(
           normalized_title=excluded.normalized_title,
           role_family=excluded.role_family,
           occupation_group=excluded.occupation_group,
+          taxonomy_source=excluded.taxonomy_source,
+          taxonomy_code=excluded.taxonomy_code,
+          taxonomy_label=excluded.taxonomy_label,
+          taxonomy_match_confidence=excluded.taxonomy_match_confidence,
           seniority=excluded.seniority,
           employment_type=excluded.employment_type,
           location_type=excluded.location_type,
@@ -768,6 +617,11 @@ def save_to_db(
           processing_version=excluded.processing_version,
           extraction_version=excluded.extraction_version,
           tagger_version=excluded.tagger_version,
+          title_confidence=excluded.title_confidence,
+          location_confidence=excluded.location_confidence,
+          salary_confidence=excluded.salary_confidence,
+          experience_confidence=excluded.experience_confidence,
+          education_confidence=excluded.education_confidence,
           tag_confidence=excluded.tag_confidence,
           indexed_at=excluded.indexed_at
         """,
@@ -783,6 +637,10 @@ def save_to_db(
             normalized_title,
             role_family,
             occupation_group,
+            tags.get("taxonomy_source"),
+            tags.get("taxonomy_code"),
+            tags.get("taxonomy_label"),
+            float(tags.get("taxonomy_match_confidence") or 0.0),
             tags.get("seniority"),
             tags.get("employment_type"),
             tags.get("location_type"),
@@ -810,6 +668,11 @@ def save_to_db(
             PIPELINE_VERSION,
             EXTRACTION_VERSION,
             str(tags.get("tagger_version") or ""),
+            float(tags.get("title_confidence") or 0.0),
+            float(tags.get("location_confidence") or 0.0),
+            float(tags.get("salary_confidence") or 0.0),
+            float(tags.get("experience_confidence") or 0.0),
+            float(tags.get("education_confidence") or 0.0),
             float(tags.get("tag_confidence") or 0.0),
             now,
         ),
@@ -865,39 +728,52 @@ def main() -> None:
             db_path=str(Path(args.db)),
         )
         for row in con.execute(
-            "SELECT content_hash, normalized_title, role_family, occupation_group, seniority, employment_type, "
+            "SELECT content_hash, normalized_title, role_family, occupation_group, "
+            "taxonomy_source, taxonomy_code, taxonomy_label, taxonomy_match_confidence, "
+            "seniority, employment_type, "
             "location_type, city, region, country, salary_min, salary_max, salary_currency, "
             "experience_years_min, experience_years_max, experience_required, experience_text_raw, "
             "education_level, degree_required, education_text_raw, "
-            "skills_json, tags_json, embedding_json, embedding_model, tagger_version, tag_confidence "
+            "skills_json, tags_json, embedding_json, embedding_model, tagger_version, "
+            "title_confidence, location_confidence, salary_confidence, experience_confidence, education_confidence, "
+            "tag_confidence "
             "FROM extraction_cache"
         ):
             cache[row[0]] = {
                 "normalized_title": row[1],
                 "role_family": row[2],
                 "occupation_group": row[3],
-                "seniority": row[4],
-                "employment_type": row[5],
-                "location_type": row[6],
-                "city": row[7],
-                "region": row[8],
-                "country": row[9],
-                "salary_min": row[10],
-                "salary_max": row[11],
-                "salary_currency": row[12],
-                "experience_years_min": row[13],
-                "experience_years_max": row[14],
-                "experience_required": (bool(row[15]) if row[15] is not None else None),
-                "experience_text_raw": row[16],
-                "education_level": row[17],
-                "degree_required": (bool(row[18]) if row[18] is not None else None),
-                "education_text_raw": row[19],
-                "skills": json.loads(row[20] or "[]"),
-                "tags": json.loads(row[21] or "{}"),
-                "embedding": json.loads(row[22]) if row[22] else None,
-                "embedding_model": row[23],
-                "tagger_version": row[24],
-                "tag_confidence": row[25],
+                "taxonomy_source": row[4],
+                "taxonomy_code": row[5],
+                "taxonomy_label": row[6],
+                "taxonomy_match_confidence": row[7],
+                "seniority": row[8],
+                "employment_type": row[9],
+                "location_type": row[10],
+                "city": row[11],
+                "region": row[12],
+                "country": row[13],
+                "salary_min": row[14],
+                "salary_max": row[15],
+                "salary_currency": row[16],
+                "experience_years_min": row[17],
+                "experience_years_max": row[18],
+                "experience_required": (bool(row[19]) if row[19] is not None else None),
+                "experience_text_raw": row[20],
+                "education_level": row[21],
+                "degree_required": (bool(row[22]) if row[22] is not None else None),
+                "education_text_raw": row[23],
+                "skills": json.loads(row[24] or "[]"),
+                "tags": json.loads(row[25] or "{}"),
+                "embedding": json.loads(row[26]) if row[26] else None,
+                "embedding_model": row[27],
+                "tagger_version": row[28],
+                "title_confidence": row[29],
+                "location_confidence": row[30],
+                "salary_confidence": row[31],
+                "experience_confidence": row[32],
+                "education_confidence": row[33],
+                "tag_confidence": row[34],
             }
 
     now = now_iso()
@@ -961,32 +837,46 @@ def main() -> None:
                     occupation_group = str(cached.get("occupation_group") or "other")
                     tags = {
                         "normalized_title": normalized_title,
+                        "taxonomy_source": cached.get("taxonomy_source"),
+                        "taxonomy_code": cached.get("taxonomy_code"),
+                        "taxonomy_label": cached.get("taxonomy_label"),
+                        "taxonomy_match_confidence": float(cached.get("taxonomy_match_confidence") or 0.0),
                         "seniority": cached.get("seniority"),
                         "employment_type": cached.get("employment_type"),
                         "location_type": cached.get("location_type"),
                         "city": cached.get("city"),
                         "region": cached.get("region"),
                         "country": cached.get("country"),
-                    "salary_min": cached.get("salary_min"),
-                    "salary_max": cached.get("salary_max"),
-                    "salary_currency": cached.get("salary_currency"),
-                    "experience_years_min": cached.get("experience_years_min"),
-                    "experience_years_max": cached.get("experience_years_max"),
-                    "experience_required": cached.get("experience_required"),
-                    "experience_text_raw": cached.get("experience_text_raw"),
-                    "education_level": cached.get("education_level"),
-                    "degree_required": cached.get("degree_required"),
-                    "education_text_raw": cached.get("education_text_raw"),
-                    "skills": list(cached.get("skills") or []),
-                    "tags": dict(cached.get("tags") or {}),
-                    "tagger_version": str(cached.get("tagger_version") or "cache_v1"),
+                        "salary_min": cached.get("salary_min"),
+                        "salary_max": cached.get("salary_max"),
+                        "salary_currency": cached.get("salary_currency"),
+                        "experience_years_min": cached.get("experience_years_min"),
+                        "experience_years_max": cached.get("experience_years_max"),
+                        "experience_required": cached.get("experience_required"),
+                        "experience_text_raw": cached.get("experience_text_raw"),
+                        "education_level": cached.get("education_level"),
+                        "degree_required": cached.get("degree_required"),
+                        "education_text_raw": cached.get("education_text_raw"),
+                        "title_confidence": float(cached.get("title_confidence") or 0.0),
+                        "location_confidence": float(cached.get("location_confidence") or 0.0),
+                        "salary_confidence": float(cached.get("salary_confidence") or 0.0),
+                        "experience_confidence": float(cached.get("experience_confidence") or 0.0),
+                        "education_confidence": float(cached.get("education_confidence") or 0.0),
+                        "skills": list(cached.get("skills") or []),
+                        "tags": dict(cached.get("tags") or {}),
+                        "tagger_version": str(cached.get("tagger_version") or "cache_v1"),
                         "tag_confidence": float(cached.get("tag_confidence") or 0.5),
                     }
                     embedding = cached.get("embedding")
                     embedding_model = cached.get("embedding_model")
                 else:
-                    normalized_title, role_family, occupation_group = normalize_title(clean.title_clean)
-                    tags = extract_tags(clean, normalized_title=normalized_title)
+                    normalized_title, role_family, occupation_group = _normalize_title(clean.title_clean)
+                    tags = _extract_tags_mod(clean, normalized_title=normalized_title)
+                    taxonomy = _map_taxonomy(normalized_title, role_family, occupation_group)
+                    tags["taxonomy_source"] = taxonomy.get("taxonomy_source")
+                    tags["taxonomy_code"] = taxonomy.get("taxonomy_code")
+                    tags["taxonomy_label"] = taxonomy.get("taxonomy_label")
+                    tags["taxonomy_match_confidence"] = float(taxonomy.get("taxonomy_match_confidence") or 0.0)
                     embedding_text = f"{clean.title_clean}\n{clean.requirements_clean}\n{clean.responsibilities_clean}\n{clean.description_clean}"
                     embedding_text = embedding_text[: max(200, args.embedding_max_chars)]
                     try:
@@ -1017,6 +907,10 @@ def main() -> None:
                     "normalized_title": normalized_title,
                     "role_family": role_family,
                     "occupation_group": occupation_group,
+                    "taxonomy_source": tags.get("taxonomy_source"),
+                    "taxonomy_code": tags.get("taxonomy_code"),
+                    "taxonomy_label": tags.get("taxonomy_label"),
+                    "taxonomy_match_confidence": tags.get("taxonomy_match_confidence"),
                     "seniority": tags.get("seniority"),
                     "employment_type": tags.get("employment_type"),
                     "location_type": tags.get("location_type"),
@@ -1033,6 +927,11 @@ def main() -> None:
                     "education_level": tags.get("education_level"),
                     "degree_required": tags.get("degree_required"),
                     "education_text_raw": tags.get("education_text_raw"),
+                    "title_confidence": tags.get("title_confidence"),
+                    "location_confidence": tags.get("location_confidence"),
+                    "salary_confidence": tags.get("salary_confidence"),
+                    "experience_confidence": tags.get("experience_confidence"),
+                    "education_confidence": tags.get("education_confidence"),
                     "skills": tags.get("skills") or [],
                     "tags": tags.get("tags") or {},
                     "embedding": embedding,

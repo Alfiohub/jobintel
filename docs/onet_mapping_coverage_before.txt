@@ -1,0 +1,34 @@
+O*NET Mapping Coverage Report
+Total jobs considered: 1025
+Matched count: 811
+No match count: 214
+Coverage percent: 79.12%
+
+Counts by onet_match_type:
+- normalized_exact: 702
+- no_match_low_score: 214
+- exact: 71
+- manual_crosswalk: 24
+- fuzzy: 14
+
+Top normalized_title without match:
+- manager: 62
+- other: 53
+- backend_engineer: 21
+- alliance_manager: 14
+- consultant: 7
+- ml_engineer: 7
+- systems_administrator: 7
+- technical_program_manager: 7
+- fullstack_engineer: 6
+- hr_business_partner: 6
+- analytics_engineer: 5
+- hr_generalist: 5
+- talent_analytics_specialist: 4
+- seo_specialist: 3
+- general_application: 2
+- chief_revenue_officer: 1
+- frontend_engineer: 1
+- healthcare_provider: 1
+- hr_manager: 1
+- implementation_coordinator: 1

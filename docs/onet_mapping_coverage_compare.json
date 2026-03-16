@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "before_total_jobs_considered": 1025,
+    "after_total_jobs_considered": 1025,
+    "delta_total_jobs_considered": 0,
+    "before_matched_count": 811,
+    "after_matched_count": 811,
+    "delta_matched_count": 0,
+    "before_no_match_count": 214,
+    "after_no_match_count": 214,
+    "delta_no_match_count": 0,
+    "before_coverage_percent": 79.12,
+    "after_coverage_percent": 79.12,
+    "delta_coverage_percent": 0.0
+  },
+  "counts_by_onet_match_type_delta": {
+    "exact": {
+      "before": 71,
+      "after": 71,
+      "delta": 0
+    },
+    "fuzzy": {
+      "before": 14,
+      "after": 14,
+      "delta": 0
+    },
+    "manual_crosswalk": {
+      "before": 24,
+      "after": 24,
+      "delta": 0
+    },
+    "no_match_low_score": {
+      "before": 214,
+      "after": 214,
+      "delta": 0
+    },
+    "normalized_exact": {
+      "before": 702,
+      "after": 702,
+      "delta": 0
+    }
+  }
+}

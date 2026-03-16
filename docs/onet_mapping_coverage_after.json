@@ -1,0 +1,95 @@
+{
+  "total_jobs_considered": 1025,
+  "matched_count": 811,
+  "no_match_count": 214,
+  "coverage_percent": 79.12,
+  "counts_by_onet_match_type": {
+    "normalized_exact": 702,
+    "no_match_low_score": 214,
+    "exact": 71,
+    "manual_crosswalk": 24,
+    "fuzzy": 14
+  },
+  "top_normalized_title_without_match": [
+    {
+      "normalized_title": "manager",
+      "count": 62
+    },
+    {
+      "normalized_title": "other",
+      "count": 53
+    },
+    {
+      "normalized_title": "backend_engineer",
+      "count": 21
+    },
+    {
+      "normalized_title": "alliance_manager",
+      "count": 14
+    },
+    {
+      "normalized_title": "consultant",
+      "count": 7
+    },
+    {
+      "normalized_title": "ml_engineer",
+      "count": 7
+    },
+    {
+      "normalized_title": "systems_administrator",
+      "count": 7
+    },
+    {
+      "normalized_title": "technical_program_manager",
+      "count": 7
+    },
+    {
+      "normalized_title": "fullstack_engineer",
+      "count": 6
+    },
+    {
+      "normalized_title": "hr_business_partner",
+      "count": 6
+    },
+    {
+      "normalized_title": "analytics_engineer",
+      "count": 5
+    },
+    {
+      "normalized_title": "hr_generalist",
+      "count": 5
+    },
+    {
+      "normalized_title": "talent_analytics_specialist",
+      "count": 4
+    },
+    {
+      "normalized_title": "seo_specialist",
+      "count": 3
+    },
+    {
+      "normalized_title": "general_application",
+      "count": 2
+    },
+    {
+      "normalized_title": "chief_revenue_officer",
+      "count": 1
+    },
+    {
+      "normalized_title": "frontend_engineer",
+      "count": 1
+    },
+    {
+      "normalized_title": "healthcare_provider",
+      "count": 1
+    },
+    {
+      "normalized_title": "hr_manager",
+      "count": 1
+    },
+    {
+      "normalized_title": "implementation_coordinator",
+      "count": 1
+    }
+  ]
+}

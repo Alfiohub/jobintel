@@ -1,0 +1,198 @@
+O*NET No-Match Analysis
+Total no-match rows: 235
+
+Counts per normalized_title without match:
+- manager: 81
+- other: 53
+- backend_engineer: 21
+- alliance_manager: 14
+- technical_program_manager: 9
+- systems_administrator: 7
+- consultant: 7
+- ml_engineer: 7
+- hr_business_partner: 6
+- fullstack_engineer: 6
+- analytics_engineer: 5
+- hr_generalist: 5
+- talent_analytics_specialist: 4
+- seo_specialist: 3
+- general_application: 2
+- healthcare_provider: 1
+- implementation_coordinator: 1
+- chief_revenue_officer: 1
+- hr_manager: 1
+- frontend_engineer: 1
+
+Top title_clean per problematic normalized_title:
+- manager
+  - Senior GTM Enablement Manager | EMEA | Remote: 4
+  - Project Manager - Ubuntu Embedded Systems: 3
+  - Manager, AI Outcomes: 3
+  - Partner Success Manager - Installations: 2
+  - AI Outcomes Manager- Central: 2
+  - AI Outcomes Manager- East: 2
+  - AI Outcomes Manager- West: 2
+  - Delivery Excellence Manager- Central: 2
+  - Delivery Excellence Manager- East: 2
+  - Accounting Manager, Corporate Accounting: 1
+  - Senior Member Growth Manager: 1
+  - Manager, Solution Services (Remote elegible - Costa Rica): 1
+  - Program Manager, Localization: 1
+  - Sr. Manager, Accounting (Hybrid in Bangalore): 1
+  - Sr. Systems Project Manager (Hybrid in Bangalore): 1
+  - Associate Manager, Deal Desk - (Remote): 1
+  - Enablement Program Manager: 1
+  - Public Sector Partner Manager: 1
+  - Regional Partner Manager, Mexico: 1
+  - Senior Insurance Partner Manager (Carriers): 1
+- other
+  - Information Systems - Open Source Technical Architect: 1
+  - Junior Ads Specialist: 1
+  - Public Cloud Enablement Professional: 1
+  - Représentant du Développement des Ventes: 1
+  - Representante de Desarrollo de Ventas: 1
+  - Senior Design Researcher - User Science: 1
+  - Senior Jira Administrator: 1
+  - Software Architect - Containers / Virtualisation: 1
+  - Technical Author (multiple roles and seniority levels): 1
+  - Threat Intelligence Lead: 1
+  - Accounting Apprentice: 1
+  - Customer Education and Certification Lead: 1
+  - Customer Reference Specialist (Contract): 1
+  - Head of Human Resources (Americas): 1
+  - Head of Partnerships - EMEA: 1
+  - Industry Principal - CPG, Retail, Manufacturing: 1
+  - Onboarding & Training Lead: 1
+  - Partner Innovation Architect: 1
+  - Recruiting Coordinator (Contract): 1
+  - Regional Vice President- San Francisco: 1
+- backend_engineer
+  - Sr. Backend Engineer: 1
+  - Senior Backend Engineer - Grafana App Platform | Canada | Remote: 1
+  - Senior Backend Engineer - Grafana App Platform | US (EST) | Remote: 1
+  - Senior Backend Engineer - Grafana k6 | Germany | Remote: 1
+  - Senior Backend Engineer - Grafana k6 | Spain | Remote: 1
+  - Senior Backend Engineer - Grafana k6 | Sweden | Remote: 1
+  - Senior Backend Engineer - Grafana k6 | UK | Remote: 1
+  - Senior Backend Engineer - Mimir | Canada | Remote: 1
+  - Senior Backend Engineer | Mimir OSS | Germany | Remote: 1
+  - Senior Backend Engineer | Mimir OSS | Spain | Remote: 1
+  - Senior Backend Engineer | Mimir OSS | Sweden | Remote: 1
+  - Senior Backend Engineer | Mimir OSS | United Kingdom | Remote: 1
+  - Senior Backend Engineer - Mimir | USA | Remote: 1
+  - Staff Backend Engineer - Adaptive Telemetry | Germany | Remote: 1
+  - Staff Backend Engineer - Adaptive Telemetry | Spain | Remote: 1
+  - Staff Backend Engineer - Adaptive Telemetry | Sweden | Remote: 1
+  - Staff Backend Engineer - Adaptive Telemetry | UK | Remote: 1
+  - Staff Backend Engineer - Databases Pyroscope | Canada | Remote: 1
+  - Staff Backend Engineer - Databases Pyroscope | US | Remote: 1
+  - Staff Backend Engineer - Observability Knowledge Graph Backend | Canada | Remote: 1
+- alliance_manager
+  - Strategic Alliance Manager: 1
+  - Alliances Field Engineer: 1
+  - Cloud Alliances Business Development Lead: 1
+  - Dell Global Alliance Director: 1
+  - Global Head of Cloud Alliances: 1
+  - Global Head of GSI Alliances: 1
+  - IBM Global Alliance Director: 1
+  - ISV Technical Alliance Manager: 1
+  - Silicon Alliances Ecosystem Development Manager: 1
+  - Silicon Alliances Ecosystem Development Manager - APAC: 1
+  - Silicon Alliances Ecosystem Development Manager - Shanghai or Beijing: 1
+  - Software Alliance Ecosystem Manager: 1
+  - Software Alliances Director, Americas: 1
+  - Software Alliances Director, EMEA: 1
+- technical_program_manager
+  - Sr. Technical Program Manager (Hybrid in Bangalore): 1
+  - Director of TPM, Connected Devices: 1
+  - Senior Security Technical Program Manager: 1
+  - Senior Technical Program Manager: 1
+  - Senior Technical Program Manager, Billing (TPM): 1
+  - Senior Technical Program Manager, Infrastructure (TPM): 1
+  - Senior Technical Program Manager (TPM): 1
+  - Technical Program Manager, Connectors (TPM): 1
+  - Technical Program Manager, Data: 1
+- systems_administrator
+  - Senior Salesforce Administrator: 1
+  - Salesforce Administrator (Remote Eligible - Costa Rica): 1
+  - Senior NetSuite Administrator (Hybrid in Bangalore): 1
+  - Senior NetSuite Administrator (in Bangalore): 1
+  - Associate Systems Administrator (Salesforce): 1
+  - NetSuite Administrator: 1
+  - Salesforce Administrator: 1
+- consultant
+  - Business Value Consultant: 2
+  - AI Coach (Gemini, Copilot, ChatGPT, Claude): 2
+  - GenAI Curriculum Consultant: 2
+  - Embedded Linux Consultant - Japan: 1
+- ml_engineer
+  - Machine Learning Engineer, AI Assistant + Autonomous AI Agents: 1
+  - Machine Learning Engineer, Enterprise Brain: 1
+  - Machine Learning Engineer, Infrastructure: 1
+  - Machine Learning Engineer, Search Quality: 1
+  - Senior ML Engineer, Product: 1
+  - Staff ML Engineer, Product: 1
+  - Senior AI/ML Engineer: 1
+- hr_business_partner
+  - HR Business Partner (HRBP): 2
+  - Talent Development Partner: 1
+  - VP, People Business Partnerships: 1
+  - Associate People Business Partner: 1
+  - People Business Partner | 12 Month Contract | Sydney or Melbourne | Remote: 1
+- fullstack_engineer
+  - Senior Full Stack Engineer, Account Linking: 1
+  - Senior Full Stack Engineer, AI & Data Products: 1
+  - Senior Full Stack Engineer, Compass: 1
+  - Senior Full Stack Engineer, Credit Products: 1
+  - Senior Full Stack Engineer, Horizon: 1
+  - Senior Full Stack Engineer, Product: 1
+- analytics_engineer
+  - Principal Analytics Engineer (Data Architect) - Hybrid in Bangalore: 1
+  - Sr. Analytics Engineer- Hybrid in Bangalore: 1
+  - MAAS Data Center Infrastructure Engineer (Toronto area): 1
+  - Python Engineer - Data Center Hardware Integration (Taipei): 1
+  - Analytics Engineer: 1
+- hr_generalist
+  - Graduate HR Generalist - AMER: 1
+  - Graduate HR Generalist - APAC: 1
+  - HR Generalist: 1
+  - Lead HR Generalist - Americas: 1
+  - Senior HR Generalist - EMEA: 1
+- talent_analytics_specialist
+  - Director, Talent Science: 1
+  - Graduate Talent Scientist: 1
+  - Talent Scientist: 1
+  - Talent Scientist - Graduate Lead: 1
+- seo_specialist
+  - Lead International SEO: 2
+  - Lead Technical SEO: 1
+- general_application
+  - Interested in joining our team?: 2
+- healthcare_provider
+  - Telehealth Provider (MD & DO): 1
+- implementation_coordinator
+  - Install Coordinator-1 (Spanish): 1
+- chief_revenue_officer
+  - Chief Revenue Officer: 1
+- hr_manager
+  - Head of Talent Development: 1
+- frontend_engineer
+  - Web Frontend Engineer - JS, CSS, React, Flutter: 1
+
+Counts per role_family without match:
+- operations: 81
+- other: 53
+- backend: 21
+- hr: 16
+- partnerships: 14
+- program_management: 9
+- consulting: 8
+- it_operations: 7
+- machine_learning: 7
+- fullstack: 6
+- data_analytics: 5
+- marketing: 3
+- recruiting: 2
+- healthcare: 1
+- executive_leadership: 1
+- frontend: 1

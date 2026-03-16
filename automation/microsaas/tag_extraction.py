@@ -5,6 +5,11 @@ import re
 from pathlib import Path
 from typing import Any
 
+try:
+    from automation.microsaas.location_normalization import normalize_location as _normalize_location
+except ModuleNotFoundError:
+    from location_normalization import normalize_location as _normalize_location
+
 
 SKILL_PATTERNS: dict[str, str] = {
     r"\bpy\b": "py",
@@ -232,13 +237,8 @@ def _extract_education(text: str) -> tuple[str | None, bool | None, str | None]:
     return None, degree_required, None
 
 
-def _split_location(location_clean: str) -> tuple[str | None, str | None]:
-    if not location_clean:
-        return None, None
-    parts = [p.strip() for p in location_clean.split(",") if p.strip()]
-    if len(parts) >= 2:
-        return parts[0], parts[1]
-    return parts[0], None
+def _clamp01(value: float) -> float:
+    return max(0.0, min(1.0, value))
 
 
 def extract_tags(clean: Any, normalized_title: str) -> dict[str, Any]:
@@ -246,26 +246,86 @@ def extract_tags(clean: Any, normalized_title: str) -> dict[str, Any]:
     seniority = _extract_seniority(text)
     employment_type = _extract_employment_type(text)
     location_type = extract_location_type(text)
-    city, region = _split_location(clean.location_clean)
+    location_info = _normalize_location(
+        location_clean=str(clean.location_clean or ""),
+        description_clean=str(clean.description_clean or ""),
+        location_type=location_type,
+    )
     salary_min, salary_max, salary_currency = extract_salary(clean.description_clean)
     exp_min, exp_max, exp_required, exp_raw = _extract_experience(clean.description_clean)
     edu_level, degree_required, edu_raw = _extract_education(clean.description_clean)
     skills = _extract_skills(text)
-    confidence = 0.35
-    for value in (seniority, employment_type, location_type, salary_min):
-        if value:
-            confidence += 0.1
-    if skills:
-        confidence += min(0.25, len(skills) * 0.03)
-    confidence = max(0.0, min(1.0, confidence))
+    title_confidence = 0.3
+    if str(clean.title_clean or "").strip():
+        title_confidence += 0.2
+    if normalized_title and normalized_title != "other":
+        title_confidence += 0.4
+    if seniority:
+        title_confidence += 0.1
+    title_confidence = _clamp01(title_confidence)
+
+    location_confidence = 0.1
+    if location_type:
+        location_confidence += 0.2
+    if location_info.get("country"):
+        location_confidence += 0.4
+    if location_info.get("city"):
+        location_confidence += 0.3
+    elif location_info.get("region"):
+        location_confidence += 0.15
+    location_confidence = _clamp01(location_confidence)
+
+    salary_confidence = 0.05
+    if salary_min is not None:
+        salary_confidence += 0.25
+    if salary_max is not None:
+        salary_confidence += 0.25
+    if salary_min is not None and salary_max is not None:
+        salary_confidence += 0.2
+    if salary_currency:
+        salary_confidence += 0.25
+    salary_confidence = _clamp01(salary_confidence)
+
+    experience_confidence = 0.05
+    if exp_raw:
+        experience_confidence += 0.25
+    if exp_min is not None:
+        experience_confidence += 0.3
+    if exp_max is not None:
+        experience_confidence += 0.3
+    if exp_min is not None and exp_max is not None:
+        experience_confidence += 0.1
+    experience_confidence = _clamp01(experience_confidence)
+
+    education_confidence = 0.05
+    if edu_raw:
+        education_confidence += 0.25
+    if edu_level in {"bachelor", "master", "phd", "high_school"}:
+        education_confidence += 0.6
+    elif edu_level:
+        education_confidence += 0.35
+    if degree_required is not None:
+        education_confidence += 0.1
+    education_confidence = _clamp01(education_confidence)
+
+    confidence = _clamp01(
+        (
+            title_confidence
+            + location_confidence
+            + salary_confidence
+            + experience_confidence
+            + education_confidence
+        )
+        / 5.0
+    )
     return {
         "normalized_title": normalized_title,
         "seniority": seniority,
         "employment_type": employment_type,
         "location_type": location_type,
-        "city": city,
-        "region": region,
-        "country": None,
+        "city": location_info.get("city"),
+        "region": location_info.get("region"),
+        "country": location_info.get("country"),
         "salary_min": salary_min,
         "salary_max": salary_max,
         "salary_currency": salary_currency,
@@ -276,13 +336,20 @@ def extract_tags(clean: Any, normalized_title: str) -> dict[str, Any]:
         "education_level": edu_level,
         "degree_required": degree_required,
         "education_text_raw": edu_raw,
+        "title_confidence": round(title_confidence, 4),
+        "location_confidence": round(location_confidence, 4),
+        "salary_confidence": round(salary_confidence, 4),
+        "experience_confidence": round(experience_confidence, 4),
+        "education_confidence": round(education_confidence, 4),
         "skills": skills,
         "tags": {
             "skills_count": len(skills),
             "has_salary": bool(salary_min or salary_max),
             "has_experience": bool(exp_min is not None or exp_max is not None),
             "has_education": bool(edu_level),
+            "country_source": location_info.get("country_source"),
+            "location_resolution_notes": location_info.get("location_resolution_notes"),
         },
-        "tagger_version": "rules_v1",
+        "tagger_version": "rules_v2",
         "tag_confidence": round(confidence, 4),
     }

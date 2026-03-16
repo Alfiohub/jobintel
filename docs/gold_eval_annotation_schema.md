@@ -8,6 +8,9 @@ Questo file definisce come compilare `docs/gold_eval_set_v1.csv` per la valutazi
 - experience extraction quality
 - education extraction quality
 - soft skills (lista controllata, facoltativa in v1)
+- location/country quality
+- seniority and employment type quality
+- salary extraction quality (se presente)
 
 ## Label Columns
 - `gold_normalized_title`:
@@ -31,6 +34,33 @@ Questo file definisce come compilare `docs/gold_eval_set_v1.csv` per la valutazi
 - `gold_soft_skills`:
   - lista separata da `;` con taxonomy ridotta
   - v1 consigliata: `communication;teamwork;leadership;problem_solving;adaptability;stakeholder_management;attention_to_detail;time_management`
+- `gold_location_type`:
+  - valori ammessi: `remote`, `hybrid`, `onsite`, `unspecified`
+  - vuoto se non deducibile
+- `gold_country`:
+  - nome paese (es. `Italy`) o ISO-2 (es. `IT`)
+  - vuoto se non deducibile
+- `gold_location_city`:
+  - città della sede principale dell'annuncio
+  - vuoto se non deducibile
+- `gold_employment_type`:
+  - valori ammessi: `full_time`, `part_time`, `contract`, `internship`, `temporary`, `unspecified`
+- `gold_seniority`:
+  - valori ammessi: `intern`, `junior`, `mid`, `senior`, `lead`, `manager`, `director`, `executive`, `unspecified`
+- `gold_language_requirements`:
+  - lista separata da `;` (es. `english;italian`)
+  - vuoto se non deducibile
+- `gold_salary_min` / `gold_salary_max`:
+  - numeri interi (senza separatori)
+  - vuoto se non deducibile
+- `gold_salary_currency`:
+  - preferire ISO-3 (es. `USD`, `EUR`, `GBP`)
+  - vuoto se non deducibile
+- `gold_salary_period`:
+  - valori ammessi: `hourly`, `daily`, `weekly`, `monthly`, `yearly`, `unspecified`
+- `gold_tools_tech`:
+  - lista canonica separata da `;` (es. `python;sql;aws`)
+  - vuoto se non deducibile
 
 ## QA Columns
 - `labeler`: iniziali o username annotatore
@@ -48,4 +78,3 @@ Questo file definisce come compilare `docs/gold_eval_set_v1.csv` per la valutazi
 - dimensione raccomandata: `700-800` righe
 - stratificazione per `role_family` con almeno 1 campione per famiglia presente
 - campionamento riproducibile via seed (`build_gold_eval_set.py --seed`)
-
