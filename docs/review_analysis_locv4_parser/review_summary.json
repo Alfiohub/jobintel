@@ -1,0 +1,92 @@
+{
+  "input_csv": "docs/gold_eval_set_v1_en_locv4_parser.csv",
+  "total_rows": 800,
+  "total_review_rows": 129,
+  "counts_by_category": {
+    "low_confidence": 59,
+    "uncategorized_review": 53,
+    "missing_role_family": 21,
+    "location_without_country": 15,
+    "too_many_core_fields_missing": 15,
+    "missing_normalized_title": 8,
+    "sparse_output": 3
+  },
+  "counts_by_primary_review_category": {
+    "low_confidence": 59,
+    "uncategorized_review": 53,
+    "missing_role_family": 9,
+    "location_without_country": 4,
+    "too_many_core_fields_missing": 3,
+    "missing_normalized_title": 1
+  },
+  "top_category_combinations": [
+    {
+      "combination": "uncategorized_review",
+      "count": 53
+    },
+    {
+      "combination": "low_confidence",
+      "count": 34
+    },
+    {
+      "combination": "low_confidence|too_many_core_fields_missing",
+      "count": 6
+    },
+    {
+      "combination": "low_confidence|location_without_country",
+      "count": 6
+    },
+    {
+      "combination": "missing_role_family",
+      "count": 5
+    },
+    {
+      "combination": "missing_role_family|location_without_country",
+      "count": 4
+    },
+    {
+      "combination": "location_without_country",
+      "count": 4
+    },
+    {
+      "combination": "too_many_core_fields_missing",
+      "count": 3
+    },
+    {
+      "combination": "low_confidence|missing_normalized_title|missing_role_family",
+      "count": 3
+    },
+    {
+      "combination": "low_confidence|missing_role_family|too_many_core_fields_missing|sparse_output",
+      "count": 2
+    },
+    {
+      "combination": "low_confidence|missing_role_family|too_many_core_fields_missing",
+      "count": 2
+    },
+    {
+      "combination": "low_confidence|missing_normalized_title",
+      "count": 2
+    },
+    {
+      "combination": "low_confidence|missing_role_family|location_without_country",
+      "count": 1
+    },
+    {
+      "combination": "low_confidence|missing_normalized_title|missing_role_family|too_many_core_fields_missing",
+      "count": 1
+    },
+    {
+      "combination": "low_confidence|missing_role_family",
+      "count": 1
+    },
+    {
+      "combination": "low_confidence|missing_normalized_title|missing_role_family|too_many_core_fields_missing|sparse_output",
+      "count": 1
+    },
+    {
+      "combination": "missing_normalized_title|missing_role_family",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "gold_csv_input": "docs/gold_eval_set_v1_en_locv4_autolabeled.csv",
+  "queue_csv_input": "docs/manual_review_queue_filled.csv",
+  "output_csv": "docs/gold_eval_set_v1_en_locv4_autolabeled.csv",
+  "dry_run": false,
+  "touched_job_ids": 67,
+  "stats": {
+    "queue_rows": 67,
+    "decision_needs_manual_rule": 56,
+    "set_in_review": 60,
+    "updated_notes": 67,
+    "decision_reject": 4,
+    "changed_gold_title": 4,
+    "decision_accept": 7
+  },
+  "backup_csv": "docs/gold_eval_set_v1_en_locv4_autolabeled.csv.bak"
+}

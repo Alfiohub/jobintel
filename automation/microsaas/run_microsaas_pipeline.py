@@ -99,11 +99,27 @@ def _extract_description(row: dict[str, Any]) -> str:
     desc = str(row.get("description_text") or "").strip()
     if desc:
         return desc
+    desc_legacy = str(row.get("description_raw") or "").strip()
+    if desc_legacy:
+        return _strip_html(desc_legacy)
     raw = row.get("raw_payload")
     if isinstance(raw, dict):
         content = raw.get("content")
         if isinstance(content, str) and content.strip():
             return _strip_html(content)
+    raw_legacy = row.get("payload_json")
+    if isinstance(raw_legacy, dict):
+        desc2 = raw_legacy.get("description_text")
+        if isinstance(desc2, str) and desc2.strip():
+            return desc2.strip()
+        content = raw_legacy.get("content")
+        if isinstance(content, str) and content.strip():
+            return _strip_html(content)
+        nested_raw = raw_legacy.get("raw_payload")
+        if isinstance(nested_raw, dict):
+            nested_content = nested_raw.get("content")
+            if isinstance(nested_content, str) and nested_content.strip():
+                return _strip_html(nested_content)
     return ""
 
 
@@ -123,11 +139,12 @@ def _extract_sections(text: str) -> tuple[str, str]:
 
 
 def clean_row(row: dict[str, Any]) -> CleanRow:
-    title_raw = str(row.get("title") or "").strip()
+    payload_json = row.get("payload_json") if isinstance(row.get("payload_json"), dict) else {}
+    title_raw = str(row.get("title") or row.get("title_raw") or payload_json.get("title") or "").strip()
     location_raw = str(row.get("location_raw") or "").strip()
     description = _extract_description(row)
     req, resp = _extract_sections(description)
-    language = str(row.get("language") or "").strip().lower() or "en"
+    language = str(row.get("language") or row.get("language_hint") or "").strip().lower() or "en"
     title_clean = _WS_RE.sub(" ", title_raw).strip()
     location_clean = _WS_RE.sub(" ", location_raw).strip()
     description_clean = _WS_RE.sub(" ", description).strip()
