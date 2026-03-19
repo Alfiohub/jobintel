@@ -1,0 +1,60 @@
+{
+  "input_csv": "docs/gold_eval_set_v1_en_locv2_autolabeled.csv",
+  "total_rows": 800,
+  "total_review_rows": 800,
+  "counts_by_category": {
+    "low_confidence": 800,
+    "missing_normalized_title": 800,
+    "too_many_core_fields_missing": 156,
+    "location_without_country": 151,
+    "missing_role_family": 149,
+    "sparse_output": 99,
+    "timeout_error": 1
+  },
+  "counts_by_primary_review_category": {
+    "low_confidence": 799,
+    "timeout_error": 1
+  },
+  "top_category_combinations": [
+    {
+      "combination": "low_confidence|missing_normalized_title",
+      "count": 473
+    },
+    {
+      "combination": "low_confidence|missing_normalized_title|location_without_country",
+      "count": 114
+    },
+    {
+      "combination": "low_confidence|missing_normalized_title|missing_role_family|too_many_core_fields_missing|sparse_output",
+      "count": 86
+    },
+    {
+      "combination": "low_confidence|missing_normalized_title|too_many_core_fields_missing",
+      "count": 54
+    },
+    {
+      "combination": "low_confidence|missing_normalized_title|missing_role_family|location_without_country",
+      "count": 29
+    },
+    {
+      "combination": "low_confidence|missing_normalized_title|missing_role_family",
+      "count": 28
+    },
+    {
+      "combination": "low_confidence|missing_normalized_title|too_many_core_fields_missing|sparse_output",
+      "count": 7
+    },
+    {
+      "combination": "low_confidence|missing_normalized_title|missing_role_family|location_without_country|too_many_core_fields_missing|sparse_output",
+      "count": 5
+    },
+    {
+      "combination": "low_confidence|missing_normalized_title|location_without_country|too_many_core_fields_missing",
+      "count": 3
+    },
+    {
+      "combination": "timeout_error|low_confidence|missing_normalized_title|missing_role_family|too_many_core_fields_missing|sparse_output",
+      "count": 1
+    }
+  ]
+}

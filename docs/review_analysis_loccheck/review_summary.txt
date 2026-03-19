@@ -1,0 +1,48 @@
+Review Analysis Summary
+Input: docs/gold_eval_set_v1_en_autolabeled.csv
+Total rows: 800
+Total review rows: 215
+
+Counts By Category:
+- location_without_country: 152
+- low_confidence: 84
+- missing_role_family: 44
+- missing_normalized_title: 31
+- salary_without_period: 16
+- too_many_core_fields_missing: 9
+- sparse_output: 6
+- timeout_error: 6
+
+Counts By Primary Review Category:
+- location_without_country: 115
+- low_confidence: 79
+- missing_role_family: 10
+- timeout_error: 6
+- missing_normalized_title: 3
+- salary_without_period: 2
+
+Top Category Combinations:
+- location_without_country: 107
+- low_confidence: 24
+- low_confidence|location_without_country: 18
+- low_confidence|missing_role_family|location_without_country: 8
+- low_confidence|missing_normalized_title|missing_role_family: 8
+- location_without_country|salary_without_period: 8
+- low_confidence|missing_normalized_title: 5
+- low_confidence|missing_role_family: 5
+- timeout_error|low_confidence|missing_normalized_title|missing_role_family|too_many_core_fields_missing|sparse_output: 5
+- missing_role_family: 5
+- low_confidence|missing_normalized_title|location_without_country: 3
+- low_confidence|missing_normalized_title|missing_role_family|location_without_country: 3
+- salary_without_period: 2
+- missing_normalized_title: 2
+- missing_role_family|location_without_country: 2
+- low_confidence|missing_normalized_title|missing_role_family|too_many_core_fields_missing: 1
+- low_confidence|missing_normalized_title|missing_role_family|too_many_core_fields_missing|sparse_output: 1
+- missing_role_family|too_many_core_fields_missing: 1
+- low_confidence|salary_without_period: 1
+- timeout_error|location_without_country: 1
+
+Wrote: docs/review_analysis_loccheck/review_cases.csv
+Wrote: docs/review_analysis_loccheck/review_summary.json
+Per-primary CSV files: 6

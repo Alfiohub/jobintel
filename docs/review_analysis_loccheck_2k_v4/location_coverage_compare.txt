@@ -1,0 +1,25 @@
+BEFORE DB: data/jobintel_microsaas.sqlite
+- total: 2000
+- with_country: 0 (0.0%)
+- no_country: 2000 (100.0%)
+- missing_country_by_location_type:
+  - remote: 822
+  - hybrid: 734
+  - (empty): 409
+  - onsite: 35
+
+AFTER DB: data/jobintel_microsaas_loccheck_2k_v4.sqlite
+- total: 2000
+- with_country: 1211 (60.55%)
+- no_country: 789 (39.45%)
+- missing_country_by_location_type:
+  - remote: 340
+  - hybrid: 232
+  - (empty): 208
+  - onsite: 9
+
+DELTA (after-before):
+- with_country: 1211
+- with_country_pct: 60.55 pp
+- no_country: -1211
+- no_country_pct: -60.55 pp

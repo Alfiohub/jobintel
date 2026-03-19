@@ -99,7 +99,9 @@ CITY_TO_COUNTRY = {
 _DESC_LOCATION_PATTERNS = [
     re.compile(r"(?i)\bbased in ([a-z .'-]{2,40})"),
     re.compile(r"(?i)\bremote across (?:the )?([a-z .'-]{2,40})"),
+    re.compile(r"(?i)\bremote from (?:the )?([a-z .'-]{2,40})"),
     re.compile(r"(?i)\bmust be located in (?:the )?([a-z .'-]{2,40})"),
+    re.compile(r"(?i)\blocated in (?:the )?([a-z .'-]{2,40})"),
     re.compile(r"(?i)\bremote in (?:the )?([a-z .'-]{2,40})"),
     re.compile(r"(?i)\bhybrid in ([a-z .'-]{2,40})"),
 ]
@@ -221,6 +223,16 @@ def _infer_from_description(description_clean: str) -> tuple[str | None, str | N
         country = CITY_TO_COUNTRY.get(_norm(candidate))
         if country:
             return country, "description_clean_city_lookup"
+
+    # Broad fallback for explicit country mentions in "remote/located" constraints.
+    lowered = desc.lower()
+    if any(tok in lowered for tok in ("remote", "located in", "based in", "work from")):
+        for alias, iso in COUNTRY_ALIASES.items():
+            if len(alias) <= 2:
+                continue
+            if re.search(rf"(?i)\b{re.escape(alias)}\b", desc):
+                return iso, "description_clean_country_mention"
+
     return None, None
 
 

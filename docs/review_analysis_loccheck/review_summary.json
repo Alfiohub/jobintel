@@ -1,0 +1,105 @@
+{
+  "input_csv": "docs/gold_eval_set_v1_en_autolabeled.csv",
+  "total_rows": 800,
+  "total_review_rows": 215,
+  "counts_by_category": {
+    "location_without_country": 152,
+    "low_confidence": 84,
+    "missing_role_family": 44,
+    "missing_normalized_title": 31,
+    "salary_without_period": 16,
+    "too_many_core_fields_missing": 9,
+    "sparse_output": 6,
+    "timeout_error": 6
+  },
+  "counts_by_primary_review_category": {
+    "location_without_country": 115,
+    "low_confidence": 79,
+    "missing_role_family": 10,
+    "timeout_error": 6,
+    "missing_normalized_title": 3,
+    "salary_without_period": 2
+  },
+  "top_category_combinations": [
+    {
+      "combination": "location_without_country",
+      "count": 107
+    },
+    {
+      "combination": "low_confidence",
+      "count": 24
+    },
+    {
+      "combination": "low_confidence|location_without_country",
+      "count": 18
+    },
+    {
+      "combination": "low_confidence|missing_role_family|location_without_country",
+      "count": 8
+    },
+    {
+      "combination": "low_confidence|missing_normalized_title|missing_role_family",
+      "count": 8
+    },
+    {
+      "combination": "location_without_country|salary_without_period",
+      "count": 8
+    },
+    {
+      "combination": "low_confidence|missing_normalized_title",
+      "count": 5
+    },
+    {
+      "combination": "low_confidence|missing_role_family",
+      "count": 5
+    },
+    {
+      "combination": "timeout_error|low_confidence|missing_normalized_title|missing_role_family|too_many_core_fields_missing|sparse_output",
+      "count": 5
+    },
+    {
+      "combination": "missing_role_family",
+      "count": 5
+    },
+    {
+      "combination": "low_confidence|missing_normalized_title|location_without_country",
+      "count": 3
+    },
+    {
+      "combination": "low_confidence|missing_normalized_title|missing_role_family|location_without_country",
+      "count": 3
+    },
+    {
+      "combination": "salary_without_period",
+      "count": 2
+    },
+    {
+      "combination": "missing_normalized_title",
+      "count": 2
+    },
+    {
+      "combination": "missing_role_family|location_without_country",
+      "count": 2
+    },
+    {
+      "combination": "low_confidence|missing_normalized_title|missing_role_family|too_many_core_fields_missing",
+      "count": 1
+    },
+    {
+      "combination": "low_confidence|missing_normalized_title|missing_role_family|too_many_core_fields_missing|sparse_output",
+      "count": 1
+    },
+    {
+      "combination": "missing_role_family|too_many_core_fields_missing",
+      "count": 1
+    },
+    {
+      "combination": "low_confidence|salary_without_period",
+      "count": 1
+    },
+    {
+      "combination": "timeout_error|location_without_country",
+      "count": 1
+    }
+  ]
+}

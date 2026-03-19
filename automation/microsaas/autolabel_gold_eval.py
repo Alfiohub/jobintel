@@ -374,6 +374,17 @@ def _normalize_llm_output(out: dict[str, Any], *, min_confidence: float) -> dict
     salary_max = _to_salary_int_str(out.get("gold_salary_max"))
     if salary_min and salary_max and int(salary_min) > int(salary_max):
         salary_min, salary_max = salary_max, salary_min
+    salary_currency = _normalize_currency(out.get("gold_salary_currency"))
+
+    # Heuristic fallback for missing salary period:
+    # - large numeric ranges with currency are almost always yearly
+    # - smaller numeric ranges with currency are treated as hourly
+    if not sal_period_s and salary_currency and (salary_min or salary_max):
+        anchor = int(salary_max or salary_min or "0")
+        if anchor >= 1000:
+            sal_period_s = "yearly"
+        elif anchor > 0:
+            sal_period_s = "hourly"
 
     return {
         "gold_normalized_title": str(out.get("gold_normalized_title") or "").strip(),
@@ -392,7 +403,7 @@ def _normalize_llm_output(out: dict[str, Any], *, min_confidence: float) -> dict
         "gold_language_requirements": _normalize_semicolon_list(out.get("gold_language_requirements")),
         "gold_salary_min": salary_min,
         "gold_salary_max": salary_max,
-        "gold_salary_currency": _normalize_currency(out.get("gold_salary_currency")),
+        "gold_salary_currency": salary_currency,
         "gold_salary_period": sal_period_s,
         "gold_tools_tech": _normalize_semicolon_list(out.get("gold_tools_tech")),
         "review_status": "in_review" if needs_review else "approved",
