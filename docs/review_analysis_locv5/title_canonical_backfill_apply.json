@@ -1,0 +1,21 @@
+{
+  "input_csv": "docs/gold_eval_set_v1_en_locv5_autolabeled.csv",
+  "output_csv": "docs/gold_eval_set_v1_en_locv5_autolabeled.csv",
+  "dry_run": false,
+  "changed_rows": 732,
+  "queue_rows": 68,
+  "stats": {
+    "total_rows": 800,
+    "set_from_gold_text": 700,
+    "changed_rows": 732,
+    "keep_empty": 35,
+    "queue_missing_gold_role_family_with_canonical_title": 26,
+    "queue_gold_vs_pred_title_mismatch": 16,
+    "keep_token": 38,
+    "set_from_pred_fallback": 1,
+    "set_other": 26,
+    "queue_title_still_other_after_canonicalization": 26
+  },
+  "backup_csv": "docs/gold_eval_set_v1_en_locv5_autolabeled.csv.bak",
+  "queue_csv": "docs/manual_review_queue_locv5.csv"
+}

@@ -1,0 +1,12 @@
+{
+  "gold_csv_input": "docs/gold_eval_set_v1_en_locv5_autolabeled.csv",
+  "queue_csv_input": "docs/manual_review_queue_locv5.csv",
+  "output_csv": "docs/gold_eval_set_v1_en_locv5_autolabeled.csv",
+  "dry_run": false,
+  "touched_job_ids": 0,
+  "stats": {
+    "queue_rows": 68,
+    "skip_empty_decision": 68
+  },
+  "backup_csv": "docs/gold_eval_set_v1_en_locv5_autolabeled.csv.bak"
+}

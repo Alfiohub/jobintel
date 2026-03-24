@@ -2,6 +2,11 @@ from __future__ import annotations
 
 import re
 
+try:
+    from automation.microsaas.reference_aliases import load_country_aliases
+except ModuleNotFoundError:
+    from reference_aliases import load_country_aliases
+
 
 COUNTRY_ALIASES: dict[str, str] = {
     "us": "US",
@@ -49,7 +54,12 @@ COUNTRY_ALIASES: dict[str, str] = {
     "australia": "AU",
     "in": "IN",
     "india": "IN",
+    "tw": "TW",
+    "taiwan": "TW",
+    "hk": "HK",
+    "hong kong": "HK",
 }
+COUNTRY_ALIASES = load_country_aliases(COUNTRY_ALIASES)
 
 REGION_TOKENS = {
     "emea": "EMEA",
@@ -253,11 +263,16 @@ def normalize_location(
 
     lt = _s(location_type).lower()
     if lt == "remote":
-        if city:
-            notes.append("remote_city_cleared")
-        city = None
-        if not country:
-            notes.append("remote_without_country")
+        # Keep explicit geographic info from location_clean (e.g. "Taipei, Taiwan").
+        # Remote describes work mode and should not automatically erase valid city/country.
+        if city and country:
+            notes.append("remote_with_explicit_city_preserved")
+        else:
+            if city:
+                notes.append("remote_city_cleared")
+            city = None
+            if not country:
+                notes.append("remote_without_country")
 
     if not country and _region_from_text(location_clean):
         notes.append("region_scope_only")

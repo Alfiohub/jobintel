@@ -1,0 +1,14 @@
+{
+  "input_csv": "docs/gold_eval_set_v2_en_locv6r_autolabeled.csv",
+  "output_csv": "docs/gold_eval_set_v2_en_locv6r_autolabeled.csv",
+  "dry_run": false,
+  "changed_rows": 0,
+  "queue_rows": 92,
+  "stats": {
+    "total_rows": 255,
+    "keep_token": 255,
+    "queue_title_still_other_after_canonicalization": 92
+  },
+  "backup_csv": "docs/gold_eval_set_v2_en_locv6r_autolabeled.csv.bak",
+  "queue_csv": "docs/manual_review_queue_locv6r.csv"
+}

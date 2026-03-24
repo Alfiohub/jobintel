@@ -1,0 +1,10 @@
+Manual Review Queue Apply Report
+Gold input: docs/gold_eval_set_v1_en_locv5_autolabeled.csv
+Queue input: docs/manual_review_queue_locv5.csv
+Output: docs/gold_eval_set_v1_en_locv5_autolabeled.csv
+Dry-run: 0
+Touched job ids: 0
+
+Stats:
+- queue_rows: 68
+- skip_empty_decision: 68

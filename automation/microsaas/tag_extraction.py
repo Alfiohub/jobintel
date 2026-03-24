@@ -9,6 +9,10 @@ try:
     from automation.microsaas.location_normalization import normalize_location as _normalize_location
 except ModuleNotFoundError:
     from location_normalization import normalize_location as _normalize_location
+try:
+    from automation.microsaas.reference_aliases import load_currency_aliases
+except ModuleNotFoundError:
+    from reference_aliases import load_currency_aliases
 
 
 SKILL_PATTERNS: dict[str, str] = {
@@ -70,8 +74,10 @@ SENIORITY_PATTERNS: list[tuple[str, str]] = [
 ]
 
 SALARY_PATTERNS: list[str] = [
-    r"(?:\$|EUR|GBP|CAD|AUD)\s?\d[\d,]*(?:\.\d+)?\s*[kmb]?\s?(?:-|to|–|—)\s?(?:\$|EUR|GBP|CAD|AUD)?\s?\d[\d,]*(?:\.\d+)?\s*[kmb]?(?:\s?(?:/|per)\s?(?:year|yr|hour|hr))?",
-    r"\b\d[\d,]*(?:\.\d+)?\s*[kmb]?\s?(?:-|to|–|—)\s?\d[\d,]*(?:\.\d+)?\s*[kmb]?\s?(?:USD|EUR|GBP|CAD|AUD)\b",
+    r"(?:\$|€|£|[A-Z]{3})\s?\d[\d.,]*\s*[kmb]?\s?(?:-|to|–|—)\s?(?:\$|€|£|[A-Z]{3})?\s?\d[\d.,]*\s*[kmb]?(?:\s?(?:/|per)\s?(?:year|yr|hour|hr))?",
+    r"\b\d[\d.,]*\s*[kmb]?\s?(?:-|to|–|—)\s?\d[\d.,]*\s*[kmb]?\s?[A-Z]{3}\b",
+    r"\b\d[\d.,]*\s*[kmb]?\s?[A-Z]{3}\s?(?:-|to|–|—)\s?\d[\d.,]*\s*[kmb]?\s?[A-Z]{3}\b",
+    r"\b\d[\d.,]*\s*[kmb]?\s?(?:-|to|–|—)\s?\d[\d.,]*\s*[kmb]?\b",
 ]
 
 _SALARY_POSITIVE_CONTEXT_RE = re.compile(
@@ -96,6 +102,33 @@ _EDUCATION_PATTERNS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"(?i)\bbachelor'?s?\b|\bbsc\b|\bbs\b|\bba\b"), "bachelor"),
     (re.compile(r"(?i)\bhigh school\b"), "high_school"),
 ]
+
+_CURRENCY_ALIASES = load_currency_aliases(
+    {
+        "$": "USD",
+        "€": "EUR",
+        "£": "GBP",
+    }
+)
+
+
+def _detect_currency(text: str) -> str | None:
+    if "$" in text:
+        return "USD"
+    if "€" in text:
+        return "EUR"
+    if "£" in text:
+        return "GBP"
+
+    lowered = text.lower()
+    for alias in sorted(_CURRENCY_ALIASES.keys(), key=len, reverse=True):
+        if alias in {"$", "€", "£"}:
+            continue
+        if not alias:
+            continue
+        if re.search(rf"\b{re.escape(alias)}\b", lowered):
+            return _CURRENCY_ALIASES[alias]
+    return None
 
 
 def _extract_seniority(text: str) -> str | None:
@@ -130,10 +163,26 @@ def extract_location_type(text: str) -> str | None:
 
 
 def _parse_salary_number(num_text: str) -> int | None:
-    m = re.match(r"(?i)^\s*(\d[\d,]*(?:\.\d+)?)\s*([kmb])?\s*$", num_text)
+    m = re.match(r"(?i)^\s*(\d[\d.,]*)\s*([kmb])?\s*$", num_text)
     if not m:
         return None
-    base = float(m.group(1).replace(",", ""))
+    raw = m.group(1).strip().strip(".,")
+    if not raw:
+        return None
+    if "." in raw and "," in raw:
+        if raw.rfind(",") > raw.rfind("."):
+            # e.g. 90.000,50
+            raw = raw.replace(".", "").replace(",", ".")
+        else:
+            # e.g. 90,000.50
+            raw = raw.replace(",", "")
+    elif re.match(r"^\d{1,3}(?:\.\d{3})+$", raw):
+        # e.g. 90.000
+        raw = raw.replace(".", "")
+    else:
+        raw = raw.replace(",", "")
+
+    base = float(raw)
     mult = (m.group(2) or "").lower()
     if mult == "k":
         base *= 1_000
@@ -145,20 +194,12 @@ def _parse_salary_number(num_text: str) -> int | None:
 
 
 def extract_salary(text: str) -> tuple[int | None, int | None, str | None]:
-    text_upper = text.upper()
-    default_currency: str | None = None
-    if "$" in text:
-        default_currency = "USD"
-    elif "EUR" in text_upper or "€" in text:
-        default_currency = "EUR"
-    elif "GBP" in text_upper or "£" in text:
-        default_currency = "GBP"
-    elif "CAD" in text_upper:
-        default_currency = "CAD"
-    elif "AUD" in text_upper:
-        default_currency = "AUD"
+    # Normalize common HTML spaces from raw postings.
+    text = text.replace("&nbsp;", " ").replace("\xa0", " ")
+    default_currency: str | None = _detect_currency(text)
 
-    chunks = [c.strip() for c in re.split(r"[.\n;]+", text) if c.strip()]
+    # Keep '.' to avoid breaking european thousands/decimals inside salary spans.
+    chunks = [c.strip() for c in re.split(r"[\n;]+", text) if c.strip()]
     for chunk in chunks:
         if _SALARY_NEGATIVE_CONTEXT_RE.search(chunk):
             continue
@@ -168,23 +209,12 @@ def extract_salary(text: str) -> tuple[int | None, int | None, str | None]:
             if not m:
                 continue
             span = m.group(0)
-            span_upper = span.upper()
-            currency = default_currency
-            if "$" in span:
-                currency = "USD"
-            elif "EUR" in span_upper or "€" in span:
-                currency = "EUR"
-            elif "GBP" in span_upper or "£" in span:
-                currency = "GBP"
-            elif "CAD" in span_upper:
-                currency = "CAD"
-            elif "AUD" in span_upper:
-                currency = "AUD"
+            currency = _detect_currency(span) or default_currency
 
             if re.search(r"(?i)\d[\d,]*(?:\.\d+)?\s*[mb]\+?", span) and not has_positive_context:
                 continue
 
-            nums_raw = re.findall(r"(?i)\d[\d,]*(?:\.\d+)?\s*[kmb]?", span)
+            nums_raw = re.findall(r"(?i)\d[\d.,]*\s*[kmb]?", span)
             vals = [v for v in (_parse_salary_number(x) for x in nums_raw) if v is not None]
             if not vals:
                 continue
@@ -192,8 +222,11 @@ def extract_salary(text: str) -> tuple[int | None, int | None, str | None]:
             s_max = max(vals)
             if s_max > 2_000_000 and not re.search(r"(?i)\b(per hour|hourly|/hr|per day|daily)\b", chunk):
                 continue
-            if not has_positive_context and not re.search(r"(?i)\b(per year|yearly|annual|/yr|/year|per hour|hourly|/hr)\b", chunk):
-                continue
+            has_period_hint = bool(re.search(r"(?i)\b(per year|yearly|annual|annually|/yr|/year|per hour|hourly|/hr)\b", chunk))
+            if not has_positive_context and not has_period_hint:
+                # Accept clear currency ranges even without explicit "salary"/"annual" tokens.
+                if not currency or s_max < 10_000:
+                    continue
             return s_min, s_max, currency
 
     return None, None, None

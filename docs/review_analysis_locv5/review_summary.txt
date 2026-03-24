@@ -1,0 +1,47 @@
+Review Analysis Summary
+Input: docs/gold_eval_set_v1_en_locv5_autolabeled.csv
+Total rows: 800
+Total review rows: 120
+
+Counts By Category:
+- low_confidence: 82
+- missing_role_family: 53
+- missing_normalized_title: 35
+- too_many_core_fields_missing: 30
+- location_without_country: 15
+- sparse_output: 11
+- uncategorized_review: 3
+
+Counts By Primary Review Category:
+- low_confidence: 82
+- missing_role_family: 21
+- location_without_country: 6
+- too_many_core_fields_missing: 4
+- missing_normalized_title: 4
+- uncategorized_review: 3
+
+Top Category Combinations:
+- low_confidence: 34
+- missing_role_family: 20
+- low_confidence|missing_normalized_title|missing_role_family|too_many_core_fields_missing|sparse_output: 7
+- low_confidence|missing_normalized_title: 6
+- low_confidence|missing_normalized_title|missing_role_family: 6
+- low_confidence|missing_role_family|too_many_core_fields_missing: 6
+- location_without_country: 6
+- too_many_core_fields_missing: 4
+- low_confidence|missing_normalized_title|missing_role_family|too_many_core_fields_missing: 4
+- low_confidence|missing_normalized_title|location_without_country: 3
+- uncategorized_review: 3
+- low_confidence|too_many_core_fields_missing: 3
+- low_confidence|location_without_country: 3
+- low_confidence|missing_role_family: 3
+- low_confidence|missing_normalized_title|too_many_core_fields_missing|sparse_output: 2
+- low_confidence|missing_role_family|too_many_core_fields_missing|sparse_output: 2
+- missing_normalized_title: 2
+- missing_normalized_title|missing_role_family: 2
+- low_confidence|missing_normalized_title|too_many_core_fields_missing: 1
+- low_confidence|missing_normalized_title|missing_role_family|location_without_country|too_many_core_fields_missing: 1
+
+Wrote: docs/review_analysis_locv5/review_cases.csv
+Wrote: docs/review_analysis_locv5/review_summary.json
+Per-primary CSV files: 6

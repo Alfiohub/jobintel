@@ -61,187 +61,272 @@ def _render_home_html() -> str:
   <title>opus.est</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --canvas:#F6F4EF;--stone:#E7E2D8;--line:#D5CEC2;--graphite:#2B2A28;--ink:#171816;--muted:#7A7770;--accent:#2F5D5A;
-      --r-sm:8px;--r-md:12px;--s1:8px;--s2:16px;--s3:24px;--s4:32px;--s5:48px;--s6:64px;--s7:96px;
+      --offwhite:#f3f2ee;
+      --panel:#f8f7f4;
+      --line:#d6d4cd;
+      --ink:#1f1f1d;
+      --muted:#66655f;
+      --accent:#2c2c29;
     }
-    *{box-sizing:border-box}html,body{margin:0;padding:0}
-    body{font-family:Manrope,system-ui,sans-serif;background:var(--canvas);color:var(--graphite);line-height:1.5}
-    .container{width:min(1140px,calc(100% - 48px));margin:0 auto}
-    .topbar{position:sticky;top:0;background:rgba(246,244,239,.93);backdrop-filter:blur(4px);border-bottom:1px solid var(--line)}
-    .topbar .container{height:74px;display:flex;justify-content:space-between;align-items:center}
-    .wordmark{font-family:Fraunces,serif;font-size:1.5rem;color:var(--ink);text-decoration:none}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border-radius:8px;border:1px solid var(--line);text-decoration:none;color:var(--graphite);font-weight:600;transition:.2s ease}
-    .btn:hover{transform:translateY(-2px)}
-    .btn.primary{background:var(--accent);border-color:var(--accent);color:#f4f5f3}
-    .hero{padding:var(--s7) 0 var(--s6);display:grid;grid-template-columns:1.2fr .8fr;gap:var(--s6);align-items:end}
-    h1,h2,h3{font-family:Fraunces,serif;color:var(--ink);line-height:1.1;margin:0 0 var(--s3)}
-    h1{font-size:clamp(2.2rem,6vw,4.9rem)}h2{font-size:clamp(1.6rem,3vw,2.5rem)}h3{font-size:1.25rem}
-    p{margin:0 0 var(--s2);color:var(--muted);max-width:64ch}
-    .hero-actions{display:flex;gap:var(--s2);flex-wrap:wrap;margin-top:var(--s4)}
-    .panel{border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,#faf9f6,#f1ede4);padding:var(--s4)}
-    .label{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-    .panel .big{font-family:Fraunces,serif;color:var(--ink);font-size:clamp(1.6rem,2.7vw,2.4rem);margin:14px 0 10px}
-    .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#f9f7f2}
-    .trust .container{display:grid;grid-template-columns:repeat(4,1fr);min-height:104px;align-items:center;gap:var(--s4)}
-    .trust strong{display:block;color:var(--ink);font-size:1.2rem}.trust span{color:var(--muted);font-size:.9rem}
-    .section{padding:var(--s7) 0}
-    .jobs-head{display:flex;justify-content:space-between;align-items:end;gap:var(--s4);margin-bottom:var(--s5)}
-    .jobs{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3)}
-    .card{border:1px solid var(--line);border-radius:8px;background:#fbfaf7;padding:28px;transition:.2s ease}
-    .card:hover{transform:translateY(-3px);border-color:#c5bcaf}
-    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:var(--s3)}
-    .chip{border:1px solid var(--line);border-radius:6px;padding:4px 8px;font-size:.78rem;color:var(--muted);background:#f5f2ec}
-    .footrow{margin-top:var(--s4);padding-top:var(--s3);border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:.88rem}
-    .line-top{border-top:1px solid var(--line)} .value{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3)}
-    .value article{border-top:1px solid var(--line);padding-top:var(--s3)}
-    .quote{border:1px solid var(--line);border-radius:12px;padding:var(--s6);background:#faf8f3}
-    blockquote{margin:0;font-family:Fraunces,serif;color:var(--ink);font-size:clamp(1.2rem,2.2vw,1.8rem);max-width:40ch}
-    .cta{border:1px solid var(--line);border-radius:12px;background:var(--stone);padding:var(--s6);display:flex;justify-content:space-between;align-items:center;gap:var(--s4)}
-    footer{border-top:1px solid var(--line);padding:var(--s5) 0;color:var(--muted);font-size:.9rem}
-    footer .container{display:flex;justify-content:space-between;gap:var(--s2);flex-wrap:wrap}
-    @media (max-width:980px){.hero{grid-template-columns:1fr}.trust .container,.jobs,.value{grid-template-columns:1fr 1fr}.cta{flex-direction:column;align-items:flex-start}}
-    @media (max-width:680px){.container{width:min(1140px,calc(100% - 32px))}.jobs,.value,.trust .container{grid-template-columns:1fr}.hero-actions .btn{width:100%;justify-content:center}}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:"Source Sans 3",sans-serif;background:var(--offwhite);color:var(--ink)}
+    .container{max-width:1180px;margin:0 auto;padding:0 20px}
+    .topbar{position:sticky;top:0;background:rgba(243,242,238,.95);border-bottom:1px solid var(--line);z-index:8}
+    .topbar .container{height:64px;display:flex;justify-content:space-between;align-items:center}
+    .brand{font-weight:700;letter-spacing:.02em;text-decoration:none;color:var(--ink)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 14px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);text-decoration:none;font-weight:600}
+    .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+    .hero{padding:58px 0 44px;display:grid;grid-template-columns:1.35fr .65fr;gap:18px}
+    h1{margin:0 0 12px;font-size:clamp(2rem,4vw,3.2rem);line-height:1.05}
+    p{margin:0;color:var(--muted)}
+    .kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px}
+    .kpi .box{border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:12px}
+    .kpi strong{display:block;font-size:1.2rem}
+    .hero-card{border:1px solid var(--line);border-radius:12px;background:#fff;padding:16px}
+    .hero-card h3{margin:0 0 8px;font-size:1.04rem}
+    .hero-card ul{margin:0;padding-left:18px;color:var(--muted)}
+    .hero-actions{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+    .section{padding:18px 0 40px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .tile{border:1px solid var(--line);border-radius:10px;background:#fff;padding:14px}
+    .tile h3{margin:0 0 6px;font-size:1rem}
+    .tile p{font-size:.95rem}
+    .footer{border-top:1px solid var(--line);padding:16px 0;color:var(--muted);font-size:.9rem}
+    .footer .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.kpi,.grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:640px){.kpi,.grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="container">
-      <a class="wordmark" href="/">opus.est</a>
-      <a class="btn primary" href="/browse">Browse Roles</a>
+      <a class="brand" href="/">opus.est</a>
+      <div style="display:flex;gap:8px;">
+        <a class="btn" href="/docs">API Docs</a>
+        <a class="btn primary" href="/browse">Browse Jobs</a>
+      </div>
     </div>
   </header>
-  <main>
-    <section class="container hero">
+  <main class="container">
+    <section class="hero">
       <div>
-        <h1>Work, with precision and purpose.</h1>
-        <p>opus.est is a refined job platform for professionals who value clarity, craft, and long-term trajectory.</p>
+        <h1>Be the first to discover relevant jobs.</h1>
+        <p>Search with normalized taxonomy and clean location signals across role family, country, and location type.</p>
         <div class="hero-actions">
-          <a class="btn primary" href="/browse">Explore Opportunities</a>
-          <a class="btn" href="/docs">API Docs</a>
+          <a class="btn primary" href="/browse">Start Browsing</a>
+        </div>
+        <div class="kpi">
+          <div class="box"><strong>Fast</strong><span class="muted">Query-ready index</span></div>
+          <div class="box"><strong>Clean</strong><span class="muted">Normalized country / location type</span></div>
+          <div class="box"><strong>MVP</strong><span class="muted">Client-testable UI</span></div>
         </div>
       </div>
-      <aside class="panel">
-        <span class="label">This week</span>
-        <div class="big">Selected roles in product, data, and responsible AI.</div>
-        <p>Curated listings with normalized titles, location context, and comparable salary signal.</p>
+      <aside class="hero-card">
+        <h3>What this MVP gives you</h3>
+        <ul>
+          <li>Role family filter for high-signal matching</li>
+          <li>Country and city normalization for reliable geo search</li>
+          <li>Location type filtering: remote, hybrid, onsite</li>
+        </ul>
       </aside>
     </section>
-    <section class="trust"><div class="container">
-      <div><strong>12k+</strong><span>Professionals in network</span></div>
-      <div><strong>430</strong><span>Curated roles this month</span></div>
-      <div><strong>91%</strong><span>Profiles with verified context</span></div>
-      <div><strong>27</strong><span>Countries represented</span></div>
-    </div></section>
-    <section class="section container">
-      <div class="jobs-head"><div><h2>Featured opportunities</h2><p>Elegant, comparable, and decision-ready role snapshots.</p></div></div>
-      <div class="jobs">
-        <article class="card"><div class="chips"><span class="chip">Product</span><span class="chip">Hybrid · Berlin</span><span class="chip">€90k–120k</span></div><h3>Senior Product Strategist</h3><p>Guide cross-functional direction for a platform focused on financial resilience.</p><div class="footrow"><span>Northline</span><span>3 days ago</span></div></article>
-        <article class="card"><div class="chips"><span class="chip">Data</span><span class="chip">Remote · EU</span><span class="chip">€80k–105k</span></div><h3>Analytics Engineer</h3><p>Build reliable semantic layers connecting product judgment and operational truth.</p><div class="footrow"><span>Aster Labs</span><span>2 days ago</span></div></article>
-        <article class="card"><div class="chips"><span class="chip">Engineering</span><span class="chip">Onsite · Paris</span><span class="chip">€95k–130k</span></div><h3>Backend Engineer, Platform</h3><p>Design resilient systems and clean interfaces for mission-critical workflows.</p><div class="footrow"><span>Maison Compute</span><span>Today</span></div></article>
+    <section class="section">
+      <div class="grid">
+        <article class="tile"><h3>Role Family</h3><p>Filter jobs by consistent taxonomy instead of noisy raw titles.</p></article>
+        <article class="tile"><h3>Luogo</h3><p>Country/city parsing reduces mismatch errors and missing geography.</p></article>
+        <article class="tile"><h3>Location Type</h3><p>Remote, hybrid, onsite split makes shortlist quality much higher.</p></article>
       </div>
     </section>
-    <section class="section line-top"><div class="container value">
-      <article><h3>Curated with intent</h3><p>Listings are normalized so your energy goes to meaningful decisions, not cleanup.</p></article>
-      <article><h3>Signal over noise</h3><p>We surface context that matters: title precision, location realism, and salary quality.</p></article>
-      <article><h3>Built for trajectories</h3><p>A calmer interface for professionals optimizing for substance, growth, and fit.</p></article>
-    </div></section>
-    <section class="section container"><div class="quote"><blockquote>“For the first time in years, a platform respected my attention. Every role felt comparable and credible.”</blockquote><p style="margin-top:24px">Elena M., Staff Product Analyst</p></div></section>
-    <section class="section line-top"><div class="container"><div class="cta"><div><h2>Find work that deserves your best years.</h2><p>Discover opportunities aligned with your standards and ambitions.</p></div><a class="btn primary" href="/browse">Start browsing</a></div></div></section>
   </main>
-  <footer><div class="container"><span>© opus.est</span><span>Crafted for meaningful careers.</span></div></footer>
+  <footer class="footer"><div class="container"><span>© opus.est</span><span>MVP search experience</span></div></footer>
 </body>
 </html>"""
 
 
 def _render_browse_html(results: dict[str, Any], params: dict[str, Any], db_path: str) -> str:
-    cards: list[str] = []
-    for r in results["results"]:
+    items: list[str] = []
+    first_detail: dict[str, str] | None = None
+
+    for idx, r in enumerate(results["results"]):
         company = _e(r.get("company_name") or "Company")
         title = _e(r.get("title_clean") or r.get("title_raw") or "Role")
-        location_bits = [r.get("city"), r.get("country")]
-        location = _e(", ".join([str(x) for x in location_bits if x]))
-        if not location:
-            location = _e(r.get("location_type") or "unspecified")
+        role_family = _e(r.get("role_family") or "unspecified")
+        location_type = _e(r.get("location_type") or "unspecified")
+        city = _e(r.get("city") or "")
+        country = _e(r.get("country") or "")
+        place = ", ".join([x for x in [city, country] if x]).strip(", ")
+        if not place:
+            place = "unspecified"
         salary = ""
         if r.get("salary_min") or r.get("salary_max"):
-            salary = f"{r.get('salary_min') or ''}-{r.get('salary_max') or ''} {r.get('salary_currency') or ''}".strip("- ")
-        chips = []
-        if r.get("role_family"):
-            chips.append(f'<span class="chip">{_e(r.get("role_family"))}</span>')
-        chips.append(f'<span class="chip">{location}</span>')
-        if salary:
-            chips.append(f'<span class="chip">{_e(salary)}</span>')
-        score = f"{float(r.get('total_score') or 0.0):.2f}"
+            salary = f"{r.get('salary_min') or ''} - {r.get('salary_max') or ''} {r.get('salary_currency') or ''}".strip()
         url = _e(r.get("url") or "#")
-        cards.append(
-            f"""<article class="card">
-  <div class="chips">{''.join(chips)}</div>
-  <h3>{title}</h3>
-  <p>{company}</p>
-  <div class="footrow"><span>score {score}</span><a href="{url}" target="_blank" rel="noopener">Open role</a></div>
-</article>"""
+
+        if idx == 0:
+            first_detail = {
+                "title": title,
+                "company": company,
+                "role_family": role_family,
+                "location_type": location_type,
+                "place": _e(place),
+                "salary": _e(salary or "not specified"),
+                "url": url,
+            }
+
+        items.append(
+            (
+                f'<button class="job-item{" active" if idx == 0 else ""}" type="button" '
+                f'data-title="{title}" data-company="{company}" data-role-family="{role_family}" '
+                f'data-location-type="{location_type}" data-place="{_e(place)}" '
+                f'data-salary="{_e(salary or "not specified")}" data-url="{url}">'
+                f'<h3>{title}</h3>'
+                f'<p class="company">{company}</p>'
+                f'<p class="meta"><span>{role_family}</span> · <span>{_e(place)}</span> · <span>{location_type}</span></p>'
+                "</button>"
+            )
         )
 
-    for k in (
-        "normalized_title",
-        "role_family",
-        "country",
-        "location_type",
-        "seniority",
-        "employment_type",
-        "skills",
-        "min_salary",
-        "limit",
-    ):
+    for k in ("normalized_title", "role_family", "country", "city", "location_type", "limit"):
         if params.get(k) is None:
             params[k] = ""
 
-    cards_html = "".join(cards) or '<p class="muted">No roles matched. Try broader criteria.</p>'
+    list_html = "".join(items) or '<p class="muted">No roles matched. Try broader filters.</p>'
+    if not first_detail:
+        first_detail = {
+            "title": "No job selected",
+            "company": "",
+            "role_family": "-",
+            "location_type": "-",
+            "place": "-",
+            "salary": "-",
+            "url": "#",
+        }
+
     return f"""<!doctype html>
-<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>opus.est | Browse</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{{--canvas:#F6F4EF;--stone:#E7E2D8;--line:#D5CEC2;--graphite:#2B2A28;--ink:#171816;--muted:#7A7770;--accent:#2F5D5A}}
-*{{box-sizing:border-box}}body{{margin:0;background:var(--canvas);font-family:Manrope,system-ui,sans-serif;color:var(--graphite)}}a{{color:inherit}}
-.container{{width:min(1140px,calc(100% - 48px));margin:0 auto}}.top{{height:74px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}}
-.wordmark{{font-family:Fraunces,serif;font-size:1.5rem;text-decoration:none;color:var(--ink)}}.btn{{padding:10px 14px;border:1px solid var(--line);border-radius:8px;text-decoration:none;background:#fbfaf7}}
-.btn.primary{{background:var(--accent);border-color:var(--accent);color:#f5f5f3}}h1,h2,h3{{font-family:Fraunces,serif;color:var(--ink);line-height:1.1}}
-main{{padding:48px 0 96px}}.meta{{color:var(--muted)}}.panel{{border:1px solid var(--line);border-radius:12px;background:#fbfaf7;padding:24px;margin:24px 0 32px}}
-form{{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}}label{{font-size:.78rem;color:var(--muted);display:block;margin-bottom:4px}}
-input{{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;background:#f7f4ee;color:var(--graphite)}}
-.actions{{grid-column:1/-1;display:flex;gap:12px;align-items:center}}.cards{{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}}
-.card{{border:1px solid var(--line);border-radius:8px;background:#fbfaf7;padding:24px}}.chips{{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}}
-.chip{{border:1px solid var(--line);border-radius:6px;padding:4px 8px;font-size:.78rem;color:var(--muted);background:#f5f2ec}}
-.footrow{{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:.88rem}}
-.muted{{color:var(--muted)}}@media (max-width:1024px){{form{{grid-template-columns:repeat(3,1fr)}}.cards{{grid-template-columns:1fr 1fr}}}}@media (max-width:680px){{.container{{width:min(1140px,calc(100% - 32px))}}form,.cards{{grid-template-columns:1fr}}}}
-</style></head>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>opus.est | Browse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {{
+      --offwhite:#f3f2ee;
+      --panel:#f8f7f4;
+      --line:#d6d4cd;
+      --ink:#1f1f1d;
+      --muted:#66655f;
+      --accent:#2c2c29;
+      --focus:#0a66c2;
+    }}
+    * {{ box-sizing:border-box; }}
+    html, body {{ margin:0; padding:0; }}
+    body {{ font-family:"Source Sans 3",sans-serif; background:var(--offwhite); color:var(--ink); }}
+    .topbar {{ position:sticky; top:0; z-index:10; background:rgba(243,242,238,.95); border-bottom:1px solid var(--line); }}
+    .topbar-inner {{ max-width:1300px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; justify-content:space-between; }}
+    .brand {{ font-weight:700; letter-spacing:.02em; text-decoration:none; color:var(--ink); font-size:1.12rem; }}
+    .meta {{ color:var(--muted); font-size:.92rem; }}
+    .layout {{ max-width:1300px; margin:0 auto; padding:18px 20px 28px; display:grid; grid-template-columns:280px 1fr 390px; gap:16px; min-height:calc(100vh - 66px); }}
+    .panel {{ border:1px solid var(--line); border-radius:12px; background:var(--panel); }}
+    .filters {{ padding:14px; position:sticky; top:80px; height:fit-content; }}
+    .filters h2 {{ margin:0 0 12px; font-size:1.05rem; }}
+    .field {{ margin-bottom:11px; }}
+    .field label {{ display:block; font-size:.8rem; color:var(--muted); margin-bottom:4px; text-transform:uppercase; letter-spacing:.04em; }}
+    .field input {{ width:100%; height:40px; padding:0 10px; border:1px solid var(--line); border-radius:8px; background:#fff; color:var(--ink); }}
+    .field input:focus {{ outline:2px solid var(--focus); outline-offset:1px; border-color:var(--focus); }}
+    .actions {{ display:flex; gap:8px; margin-top:6px; }}
+    .btn {{ display:inline-flex; align-items:center; justify-content:center; height:38px; padding:0 12px; border-radius:8px; border:1px solid var(--line); text-decoration:none; color:var(--ink); background:#fff; font-weight:600; }}
+    .btn.primary {{ background:var(--accent); color:#fff; border-color:var(--accent); }}
+    .list-wrap {{ padding:12px; }}
+    .list-head {{ padding:2px 4px 12px; color:var(--muted); font-size:.94rem; border-bottom:1px solid var(--line); margin-bottom:10px; }}
+    .jobs {{ display:flex; flex-direction:column; gap:8px; max-height:calc(100vh - 145px); overflow:auto; padding-right:4px; }}
+    .job-item {{ width:100%; text-align:left; border:1px solid var(--line); border-radius:10px; background:#fff; padding:12px; cursor:pointer; }}
+    .job-item:hover {{ border-color:#bcbab1; }}
+    .job-item.active {{ border-color:#9d9a90; background:#fcfcfa; }}
+    .job-item h3 {{ margin:0 0 4px; font-size:1.04rem; line-height:1.24; color:var(--ink); }}
+    .company {{ margin:0 0 4px; color:#2f2f2b; font-weight:600; }}
+    .job-item .meta {{ margin:0; font-size:.88rem; color:var(--muted); }}
+    .detail {{ padding:16px; position:sticky; top:80px; height:fit-content; }}
+    .detail h2 {{ margin:0 0 8px; line-height:1.2; font-size:1.28rem; }}
+    .kv {{ margin:8px 0; display:grid; grid-template-columns:112px 1fr; gap:8px; font-size:.95rem; }}
+    .k {{ color:var(--muted); text-transform:uppercase; letter-spacing:.04em; font-size:.75rem; }}
+    .open-link {{ margin-top:14px; }}
+    .muted {{ color:var(--muted); }}
+    @media (max-width:1100px) {{ .layout {{ grid-template-columns:260px 1fr; }} .detail {{ grid-column:1 / -1; position:static; }} }}
+    @media (max-width:760px) {{ .layout {{ grid-template-columns:1fr; padding:12px; }} .filters {{ position:static; }} .jobs {{ max-height:none; }} .detail {{ position:static; }} }}
+  </style>
+</head>
 <body>
-<header><div class="container top"><a class="wordmark" href="/">opus.est</a><a class="btn" href="/docs">API docs</a></div></header>
-<main class="container">
-  <h1>Browse curated roles</h1>
-  <p class="meta">Total matched: <strong>{results['total_matched']}</strong> · Returned: <strong>{results['returned_count']}</strong> · DB: <code>{_e(db_path)}</code></p>
-  <section class="panel">
-    <form method="get" action="/browse">
-      <div><label>normalized_title</label><input name="normalized_title" value="{_e(params['normalized_title'])}"></div>
-      <div><label>role_family</label><input name="role_family" value="{_e(params['role_family'])}"></div>
-      <div><label>country</label><input name="country" value="{_e(params['country'])}"></div>
-      <div><label>location_type</label><input name="location_type" value="{_e(params['location_type'])}"></div>
-      <div><label>seniority</label><input name="seniority" value="{_e(params['seniority'])}"></div>
-      <div><label>employment_type</label><input name="employment_type" value="{_e(params['employment_type'])}"></div>
-      <div><label>min_salary</label><input name="min_salary" value="{_e(params['min_salary'])}"></div>
-      <div><label>skills (csv)</label><input name="skills" value="{_e(params['skills'])}"></div>
-      <div><label>limit</label><input name="limit" value="{_e(params['limit'])}"></div>
-      <div class="actions"><button class="btn primary" type="submit">Search</button><a class="btn" href="/browse">Reset</a></div>
-    </form>
-  </section>
-  <section class="cards">{cards_html}</section>
-</main>
-</body></html>"""
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/">opus.est</a>
+      <div class="meta">Matched: <strong>{results["total_matched"]}</strong> · Showing: <strong>{results["returned_count"]}</strong></div>
+    </div>
+  </header>
+  <main class="layout">
+    <aside class="panel filters">
+      <h2>Filters</h2>
+      <form method="get" action="/browse">
+        <div class="field"><label>Lavoro (title)</label><input name="normalized_title" value="{_e(params['normalized_title'])}" placeholder="es. data_analyst"></div>
+        <div class="field"><label>Role family</label><input name="role_family" value="{_e(params['role_family'])}" placeholder="es. analytics"></div>
+        <div class="field"><label>Luogo (country)</label><input name="country" value="{_e(params['country'])}" placeholder="es. SG / Singapore"></div>
+        <div class="field"><label>Citta</label><input name="city" value="{_e(params['city'])}" placeholder="es. Singapore"></div>
+        <div class="field"><label>Tipo location</label><input name="location_type" value="{_e(params['location_type'])}" placeholder="remote / hybrid / onsite"></div>
+        <div class="field"><label>Limit</label><input name="limit" value="{_e(params['limit'])}" placeholder="30"></div>
+        <div class="actions">
+          <button class="btn primary" type="submit">Apply</button>
+          <a class="btn" href="/browse">Reset</a>
+        </div>
+      </form>
+    </aside>
+
+    <section class="panel list-wrap">
+      <div class="list-head">Role family · Luogo · Tipo location</div>
+      <div class="jobs">{list_html}</div>
+    </section>
+
+    <aside class="panel detail" id="detail">
+      <h2 id="d-title">{first_detail['title']}</h2>
+      <p id="d-company" class="muted">{first_detail['company']}</p>
+      <div class="kv"><div class="k">Role Family</div><div id="d-role-family">{first_detail['role_family']}</div></div>
+      <div class="kv"><div class="k">Luogo</div><div id="d-place">{first_detail['place']}</div></div>
+      <div class="kv"><div class="k">Location Type</div><div id="d-location-type">{first_detail['location_type']}</div></div>
+      <div class="kv"><div class="k">Salary</div><div id="d-salary">{first_detail['salary']}</div></div>
+      <div class="open-link"><a id="d-url" class="btn primary" href="{first_detail['url']}" target="_blank" rel="noopener">Open Job</a></div>
+      <p class="muted" style="margin-top:12px;font-size:.82rem;">DB: <code>{_e(db_path)}</code></p>
+    </aside>
+  </main>
+  <script>
+    const items = document.querySelectorAll('.job-item');
+    const dTitle = document.getElementById('d-title');
+    const dCompany = document.getElementById('d-company');
+    const dRoleFamily = document.getElementById('d-role-family');
+    const dPlace = document.getElementById('d-place');
+    const dLocationType = document.getElementById('d-location-type');
+    const dSalary = document.getElementById('d-salary');
+    const dUrl = document.getElementById('d-url');
+    for (const item of items) {{
+      item.addEventListener('click', () => {{
+        for (const other of items) other.classList.remove('active');
+        item.classList.add('active');
+        dTitle.textContent = item.dataset.title || '';
+        dCompany.textContent = item.dataset.company || '';
+        dRoleFamily.textContent = item.dataset.roleFamily || '';
+        dPlace.textContent = item.dataset.place || '';
+        dLocationType.textContent = item.dataset.locationType || '';
+        dSalary.textContent = item.dataset.salary || '';
+        dUrl.href = item.dataset.url || '#';
+      }});
+    }}
+  </script>
+</body>
+</html>"""
 
 
 def search_jobs(
@@ -250,6 +335,7 @@ def search_jobs(
     normalized_title: str | None = None,
     role_family: str | None = None,
     country: str | None = None,
+    city: str | None = None,
     location_type: str | None = None,
     seniority: str | None = None,
     employment_type: str | None = None,
@@ -270,6 +356,9 @@ def search_jobs(
     if country:
         where.append("LOWER(country) = LOWER(?)")
         params.append(country)
+    if city:
+        where.append("LOWER(city) LIKE LOWER(?)")
+        params.append(f"%{city.strip()}%")
     if location_type:
         where.append("LOWER(location_type) = LOWER(?)")
         params.append(location_type)
@@ -314,6 +403,7 @@ def search_jobs(
                 "normalized_title": normalized_title,
                 "role_family": role_family,
                 "country": country,
+                "city": city,
                 "location_type": location_type,
                 "seniority": seniority,
                 "employment_type": employment_type,
@@ -340,6 +430,7 @@ def search(
     normalized_title: str | None = Query(default=None),
     role_family: str | None = Query(default=None),
     country: str | None = Query(default=None),
+    city: str | None = Query(default=None),
     location_type: str | None = Query(default=None),
     seniority: str | None = Query(default=None),
     employment_type: str | None = Query(default=None),
@@ -354,6 +445,7 @@ def search(
         normalized_title=normalized_title,
         role_family=role_family,
         country=country,
+        city=city,
         location_type=location_type,
         seniority=seniority,
         employment_type=employment_type,
@@ -374,6 +466,7 @@ def browse(
     normalized_title: str | None = Query(default=None),
     role_family: str | None = Query(default=None),
     country: str | None = Query(default=None),
+    city: str | None = Query(default=None),
     location_type: str | None = Query(default=None),
     seniority: str | None = Query(default=None),
     employment_type: str | None = Query(default=None),
@@ -388,6 +481,7 @@ def browse(
         normalized_title=normalized_title,
         role_family=role_family,
         country=country,
+        city=city,
         location_type=location_type,
         seniority=seniority,
         employment_type=employment_type,
@@ -400,6 +494,7 @@ def browse(
         "normalized_title": normalized_title,
         "role_family": role_family,
         "country": country,
+        "city": city,
         "location_type": location_type,
         "seniority": seniority,
         "employment_type": employment_type,

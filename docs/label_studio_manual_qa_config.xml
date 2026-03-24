@@ -1,0 +1,108 @@
+<View>
+  <Header value="Manual QA - Jobs (Location / Employment / Seniority / Salary)" />
+
+  <View style="padding: 12px; border: 1px solid #ddd; margin-bottom: 12px;">
+    <Text name="meta" value="$job_indexed_id | $title_clean" />
+    <Text name="url_text" value="url: $url" />
+  </View>
+
+  <View style="padding: 12px; border: 1px solid #ddd; margin-bottom: 12px;">
+    <Header value="Job Description" />
+    <Text name="desc" value="$description_clean" />
+  </View>
+
+  <View style="padding: 12px; border: 1px solid #ddd; margin-bottom: 12px;">
+    <Header value="Current values (gold/pred)" />
+    <Text name="curr1" value="gold_location_type=$gold_location_type | gold_location_city=$gold_location_city | gold_country=$gold_country" />
+    <Text name="curr2" value="gold_employment_type=$gold_employment_type | gold_seniority=$gold_seniority" />
+    <Text name="curr3" value="gold_salary_min=$gold_salary_min | gold_salary_max=$gold_salary_max | gold_salary_currency=$gold_salary_currency | gold_salary_period=$gold_salary_period" />
+    <Text name="pred1" value="pred_location_type=$pred_location_type | pred_city=$pred_city | pred_country=$pred_country" />
+    <Text name="pred2" value="pred_employment_type=$pred_employment_type | pred_seniority=$pred_seniority" />
+    <Text name="pred3" value="pred_salary_min=$pred_salary_min | pred_salary_max=$pred_salary_max | pred_salary_currency=$pred_salary_currency" />
+  </View>
+
+  <View style="padding: 12px; border: 1px solid #ddd; margin-bottom: 12px;">
+    <Header value="QA decision" />
+    <Choices name="qa_status" toName="desc" choice="single" showInline="true">
+      <Choice value="ok" />
+      <Choice value="fix" />
+      <Choice value="unsure" />
+    </Choices>
+  </View>
+
+  <View style="padding: 12px; border: 1px solid #ddd; margin-bottom: 12px;">
+    <Header value="Fixes (set only when needed)" />
+
+    <Header value="Location Type" />
+    <Text name="gold_location_type_now" value="gold_location_type: $gold_location_type" />
+    <Choices name="qa_fix_location_type" toName="desc" choice="single" showInline="true">
+      <Choice value="" alias="(no change)" />
+      <Choice value="remote" />
+      <Choice value="hybrid" />
+      <Choice value="onsite" />
+      <Choice value="unspecified" />
+    </Choices>
+
+    <Header value="Location City" />
+    <Text name="gold_location_city_now" value="gold_location_city: $gold_location_city" />
+    <TextArea name="qa_fix_location_city" toName="desc" rows="1" placeholder="Chicago" />
+
+    <Header value="Country" />
+    <Text name="gold_country_now" value="gold_country: $gold_country" />
+    <TextArea name="qa_fix_country" toName="desc" rows="1" placeholder="US" />
+
+    <Header value="Employment Type" />
+    <Text name="gold_employment_type_now" value="gold_employment_type: $gold_employment_type" />
+    <Choices name="qa_fix_employment_type" toName="desc" choice="single" showInline="true">
+      <Choice value="" alias="(no change)" />
+      <Choice value="full_time" />
+      <Choice value="part_time" />
+      <Choice value="contract" />
+      <Choice value="internship" />
+      <Choice value="temporary" />
+      <Choice value="unspecified" />
+    </Choices>
+
+    <Header value="Seniority" />
+    <Text name="gold_seniority_now" value="gold_seniority: $gold_seniority" />
+    <Choices name="qa_fix_seniority" toName="desc" choice="single" showInline="true">
+      <Choice value="" alias="(no change)" />
+      <Choice value="intern" />
+      <Choice value="junior" />
+      <Choice value="mid" />
+      <Choice value="senior" />
+      <Choice value="lead" />
+      <Choice value="manager" />
+      <Choice value="director" />
+      <Choice value="executive" />
+      <Choice value="unspecified" />
+    </Choices>
+
+    <Header value="Salary Min" />
+    <Text name="gold_salary_min_now" value="gold_salary_min: $gold_salary_min" />
+    <TextArea name="qa_fix_salary_min" toName="desc" rows="1" placeholder="136000" />
+
+    <Header value="Salary Max" />
+    <Text name="gold_salary_max_now" value="gold_salary_max: $gold_salary_max" />
+    <TextArea name="qa_fix_salary_max" toName="desc" rows="1" placeholder="160000" />
+
+    <Header value="Salary Currency" />
+    <Text name="gold_salary_currency_now" value="gold_salary_currency: $gold_salary_currency" />
+    <TextArea name="qa_fix_salary_currency" toName="desc" rows="1" placeholder="USD" />
+
+    <Header value="Salary Period" />
+    <Text name="gold_salary_period_now" value="gold_salary_period: $gold_salary_period" />
+    <Choices name="qa_fix_salary_period" toName="desc" choice="single" showInline="true">
+      <Choice value="" alias="(no change)" />
+      <Choice value="hourly" />
+      <Choice value="daily" />
+      <Choice value="weekly" />
+      <Choice value="monthly" />
+      <Choice value="yearly" />
+      <Choice value="unspecified" />
+    </Choices>
+
+    <Header value="Notes" />
+    <TextArea name="qa_notes" toName="desc" rows="2" placeholder="notes" />
+  </View>
+</View>
