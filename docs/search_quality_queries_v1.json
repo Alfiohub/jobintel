@@ -1,0 +1,182 @@
+[
+  {
+    "query_id": "q1_sw_us_remote_skills",
+    "description": "Software jobs US remote with python/aws preference",
+    "params": {
+      "role_family": "software_engineering",
+      "country": "US",
+      "location_type": "remote",
+      "skills": "python,aws",
+      "limit": 30
+    },
+    "expect": {
+      "role_families": [
+        "software_engineering"
+      ],
+      "countries": [
+        "US"
+      ],
+      "location_types": [
+        "remote"
+      ]
+    }
+  },
+  {
+    "query_id": "q2_data_us_remote",
+    "description": "Data analytics roles US remote",
+    "params": {
+      "role_family": "data_analytics",
+      "country": "US",
+      "location_type": "remote",
+      "skills": "sql,tableau",
+      "limit": 30
+    },
+    "expect": {
+      "role_families": [
+        "data_analytics"
+      ],
+      "countries": [
+        "US"
+      ],
+      "location_types": [
+        "remote"
+      ]
+    }
+  },
+  {
+    "query_id": "q3_customer_success_us",
+    "description": "Customer success roles in US",
+    "params": {
+      "role_family": "customer_success",
+      "country": "US",
+      "limit": 30
+    },
+    "expect": {
+      "role_families": [
+        "customer_success"
+      ],
+      "countries": [
+        "US"
+      ]
+    }
+  },
+  {
+    "query_id": "q4_product_remote",
+    "description": "Product management remote",
+    "params": {
+      "role_family": "product_management",
+      "location_type": "remote",
+      "limit": 30
+    },
+    "expect": {
+      "role_families": [
+        "product_management"
+      ],
+      "location_types": [
+        "remote"
+      ]
+    }
+  },
+  {
+    "query_id": "q5_marketing_remote",
+    "description": "Marketing remote",
+    "params": {
+      "role_family": "marketing",
+      "location_type": "remote",
+      "skills": "seo,content",
+      "limit": 30
+    },
+    "expect": {
+      "role_families": [
+        "marketing"
+      ],
+      "location_types": [
+        "remote"
+      ]
+    }
+  },
+  {
+    "query_id": "q6_finance_us",
+    "description": "Finance roles in US",
+    "params": {
+      "role_family": "finance",
+      "country": "US",
+      "limit": 30
+    },
+    "expect": {
+      "role_families": [
+        "finance"
+      ],
+      "countries": [
+        "US"
+      ]
+    }
+  },
+  {
+    "query_id": "q7_partnerships",
+    "description": "Partnerships roles",
+    "params": {
+      "role_family": "partnerships",
+      "limit": 30
+    },
+    "expect": {
+      "role_families": [
+        "partnerships"
+      ]
+    }
+  },
+  {
+    "query_id": "q8_program_management",
+    "description": "Program management roles",
+    "params": {
+      "role_family": "program_management",
+      "limit": 30
+    },
+    "expect": {
+      "role_families": [
+        "program_management"
+      ]
+    }
+  },
+  {
+    "query_id": "q9_us_remote_python_sql",
+    "description": "US remote jobs with python/sql preference (broad query)",
+    "params": {
+      "country": "US",
+      "location_type": "remote",
+      "skills": "python,sql",
+      "limit": 30
+    },
+    "expect": {
+      "role_families": [
+        "software_engineering",
+        "data_analytics",
+        "data_engineering"
+      ],
+      "countries": [
+        "US"
+      ],
+      "location_types": [
+        "remote"
+      ]
+    }
+  },
+  {
+    "query_id": "q10_gb_general",
+    "description": "UK jobs broad preference on tech/data/finance",
+    "params": {
+      "country": "GB",
+      "limit": 30
+    },
+    "expect": {
+      "role_families": [
+        "software_engineering",
+        "data_analytics",
+        "finance"
+      ],
+      "countries": [
+        "GB"
+      ]
+    }
+  }
+]

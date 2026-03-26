@@ -1,0 +1,9 @@
+{
+  "db": "data/jobintel_microsaas_taxonomy_v1_final_2k_20260326_r3.sqlite",
+  "queries_file": "docs/search_quality_queries_v1.json",
+  "queries_count": 10,
+  "top_k": 5,
+  "relevant_threshold": 0.75,
+  "overall_avg_coherence": 0.935,
+  "overall_hit_rate": 1.0
+}

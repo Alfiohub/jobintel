@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import sqlite3
 from typing import Any
 
@@ -14,6 +15,8 @@ except ModuleNotFoundError:
 
 
 app = FastAPI(title="microsaas-search-mvp")
+
+DEFAULT_DB_PATH = os.getenv("JOBINTEL_DB_PATH", "data/jobintel_microsaas.sqlite")
 
 
 def _connect(db_path: str) -> sqlite3.Connection:
@@ -438,7 +441,7 @@ def search(
     skills: str | None = Query(default=None, description="Comma-separated, e.g. python,sql,aws"),
     limit: int = Query(default=20, ge=1, le=200),
     use_ranking: bool = Query(default=True),
-    db_path: str = Query(default="data/jobintel_microsaas.sqlite"),
+    db_path: str = Query(default=DEFAULT_DB_PATH),
 ) -> dict[str, Any]:
     return search_jobs(
         db_path=db_path,
@@ -474,7 +477,7 @@ def browse(
     skills: str | None = Query(default=None),
     limit: int = Query(default=30, ge=1, le=200),
     use_ranking: bool = Query(default=True),
-    db_path: str = Query(default="data/jobintel_microsaas.sqlite"),
+    db_path: str = Query(default=DEFAULT_DB_PATH),
 ) -> HTMLResponse:
     results = search_jobs(
         db_path=db_path,

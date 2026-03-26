@@ -10,6 +10,7 @@ import time
 import uuid
 from dataclasses import dataclass
 from datetime import datetime, timezone
+from functools import lru_cache
 from html import unescape
 from pathlib import Path
 from typing import Any
@@ -55,6 +56,38 @@ class CleanRow:
     language: str
     content_hash: str
     content_fingerprint: str
+
+
+@lru_cache(maxsize=1)
+def _load_allowed_taxonomy_pairs() -> set[tuple[str, str]]:
+    path = Path("docs/taxonomy_v1_final.csv")
+    pairs: set[tuple[str, str]] = set()
+    if not path.exists():
+        return pairs
+    try:
+        import csv
+
+        with path.open("r", encoding="utf-8", newline="") as f:
+            for row in csv.DictReader(f):
+                fam = str(row.get("role_family") or "").strip().lower()
+                nt = str(row.get("normalized_title") or "").strip().lower()
+                if fam and nt:
+                    pairs.add((fam, nt))
+    except Exception:
+        return set()
+    return pairs
+
+
+def _enforce_taxonomy_v1(normalized_title: str, role_family: str, occupation_group: str) -> tuple[str, str, str]:
+    nt = str(normalized_title or "").strip().lower() or "other"
+    rf = str(role_family or "").strip().lower() or "other"
+    og = str(occupation_group or "").strip().lower() or "other"
+    allowed = _load_allowed_taxonomy_pairs()
+    if not allowed:
+        return nt, rf, og
+    if (rf, nt) in allowed:
+        return nt, rf, og
+    return "other", "other", "other"
 
 
 def now_iso() -> str:
@@ -852,6 +885,9 @@ def main() -> None:
                     normalized_title = str(cached.get("normalized_title") or "other")
                     role_family = str(cached.get("role_family") or "other")
                     occupation_group = str(cached.get("occupation_group") or "other")
+                    normalized_title, role_family, occupation_group = _enforce_taxonomy_v1(
+                        normalized_title, role_family, occupation_group
+                    )
                     tags = {
                         "normalized_title": normalized_title,
                         "taxonomy_source": cached.get("taxonomy_source"),
@@ -888,6 +924,9 @@ def main() -> None:
                     embedding_model = cached.get("embedding_model")
                 else:
                     normalized_title, role_family, occupation_group = _normalize_title(clean.title_clean)
+                    normalized_title, role_family, occupation_group = _enforce_taxonomy_v1(
+                        normalized_title, role_family, occupation_group
+                    )
                     tags = _extract_tags_mod(clean, normalized_title=normalized_title)
                     taxonomy = _map_taxonomy(normalized_title, role_family, occupation_group)
                     tags["taxonomy_source"] = taxonomy.get("taxonomy_source")

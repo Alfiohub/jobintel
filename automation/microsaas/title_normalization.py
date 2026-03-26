@@ -4,6 +4,10 @@ import re
 
 
 _WS_RE = re.compile(r"\s+")
+_TITLE_META_SUFFIX_RE = re.compile(
+    r"\b(shift|remote|hybrid|onsite|gmt|utc|ist|pst|cst|est|emea|apac|americas?)\b",
+    re.IGNORECASE,
+)
 
 TITLE_RULES: list[tuple[str, str, str, str]] = [
     (r"\binterested in joining our team\b|\bgeneral application\b", "general_application", "other", "hr"),
@@ -17,6 +21,12 @@ TITLE_RULES: list[tuple[str, str, str, str]] = [
     (r"\bqa automation tester\b|\bquality assurance\b|\bqa engineer\b", "software_engineer", "software_engineering", "engineering"),
     (r"\bcareer success coach\b", "customer_success_manager", "customer_success", "business"),
     (r"\bclient engagement partner\b", "account_manager", "sales", "business"),
+    (
+        r"\bdeveloppement des ventes\b|\bdesarrollo de ventas\b|\bsales development representative\b|\bsdr\b",
+        "business_development_representative",
+        "sales",
+        "business",
+    ),
     (r"\bdesenvolvedor\(a\)? backend\b|\bdesenvolvedor backend\b", "backend_engineer", "software_engineering", "engineering"),
     (r"\bdesenvolvedor\(a\)? llm/backend\b|\bgraph engineer\b", "ml_engineer", "machine_learning", "data"),
     (
@@ -48,6 +58,7 @@ TITLE_RULES: list[tuple[str, str, str, str]] = [
     (r"\binvestment analyst\b", "investment_analyst", "finance", "finance"),
     (r"\baccountant\b|\bcontroller\b|\bauditor\b", "accountant", "finance", "finance"),
     (r"\bcommissions analyst\b|\bpricing analyst\b", "financial_analyst", "finance", "finance"),
+    (r"\bpayroll analyst\b", "financial_analyst", "finance", "finance"),
     (r"\bstrategic finance\b|\bfinancial analyst\b|\bfinance analyst\b", "financial_analyst", "finance", "finance"),
     (r"\bcounsel\b|\battorney\b|\blegal\b", "legal_counsel", "legal", "business"),
     (r"\bcustomer success\b", "customer_success_manager", "customer_success", "business"),
@@ -92,14 +103,34 @@ TITLE_RULES: list[tuple[str, str, str, str]] = [
     (r"\btraining localization intern\b", "localization_intern", "operations", "business"),
     (r"\bseo\b", "seo_specialist", "marketing", "business"),
     (r"\bads specialist\b", "marketing_specialist", "marketing", "business"),
+    (r"\bsenior design researcher\b|\bdesign researcher\b", "product_designer", "design", "design"),
+    (r"\bjira administrator\b", "systems_administrator", "it_operations", "engineering"),
+    (r"\bsoftware architect\b", "solutions_architect", "architecture", "engineering"),
+    (r"\btax senior associate\b", "accountant", "finance", "finance"),
+    (r"\bcloud security\b", "it_support_specialist", "it_operations", "engineering"),
+    (r"\bsecurity risk management specialist\b", "operations_specialist", "operations", "business"),
+    (r"\bpublic cloud enablement professional\b", "operations_specialist", "operations", "business"),
     (r"\bmarketing\b", "marketing_specialist", "marketing", "business"),
     (r"\brecruiter\b|\btalent acquisition\b", "technical_recruiter", "recruiting", "hr"),
     (r"\boperations specialist\b|\boperations coordinator\b", "operations_specialist", "operations", "business"),
 ]
 
 
+def _clean_title_for_matching(title: str) -> str:
+    cleaned = _WS_RE.sub(" ", title).strip()
+    if not cleaned:
+        return cleaned
+    parts = re.split(r"\s+[-|]\s+", cleaned)
+    if len(parts) <= 1:
+        return cleaned
+    # Keep the core title when trailing segments are metadata (shift/timezone/geo style tags).
+    if any(_TITLE_META_SUFFIX_RE.search(p) for p in parts[1:]):
+        return parts[0].strip()
+    return cleaned
+
+
 def normalize_title(title_clean: str) -> tuple[str, str, str]:
-    t = title_clean.lower()
+    t = _clean_title_for_matching(title_clean).lower()
     t = re.sub(r"\([^\)]*\)", " ", t)
     t = re.sub(r"[^a-z0-9+/#& -]+", " ", t)
     t = _WS_RE.sub(" ", t).strip()
@@ -131,6 +162,12 @@ def normalize_title(title_clean: str) -> tuple[str, str, str]:
         return "operations_specialist", "operations", "business"
     if "manager" in t:
         # Manager redistribution policy: map to existing specific titles or fallback to other.
+        if re.search(r"\bgtm enablement manager\b|\benablement manager\b", t):
+            return "marketing_specialist", "marketing", "business"
+        if re.search(r"\bai outcomes manager\b|\bmanager\b.*\bai outcomes\b", t):
+            return "operations_specialist", "operations", "business"
+        if re.search(r"\bdelivery excellence manager\b", t):
+            return "operations_specialist", "operations", "business"
         if re.search(r"\bproduct manager\b|\bproduct owner\b", t):
             return "product_manager", "product_management", "product"
         if re.search(r"\bproject manager\b|\bprogram manager\b", t):
@@ -149,11 +186,13 @@ def normalize_title(title_clean: str) -> tuple[str, str, str]:
             return "product_designer", "design", "design"
         if re.search(r"\bcampaign manager\b|\bgrowth manager\b|\bcommunications manager\b", t):
             return "marketing_specialist", "marketing", "business"
-        if re.search(r"\bsolution services manager\b|\bmanager,\s*solution services\b|\bsolution architecture manager\b|\bsolutions architecture manager\b", t):
+        if re.search(r"\bsolution services manager\b|\bmanager\s*solution services\b|\bmanager,\s*solution services\b|\bsolution architecture manager\b|\bsolutions architecture manager\b", t):
             return "solutions_architect", "architecture", "engineering"
         if re.search(r"\bsales manager\b", t):
             return "sales_representative", "sales", "business"
-        if re.search(r"\bprofessional services manager\b|\bbusiness services team manager\b|\bdeal desk\b|\bhealth information management\b", t):
+        if re.search(r"\bprofessional services manager\b|\bbusiness services team manager\b|\bservices manager\b|\bdeal desk\b|\bhealth information management\b", t):
+            return "operations_specialist", "operations", "business"
+        if re.search(r"\bcommodity manager\b", t):
             return "operations_specialist", "operations", "business"
         if re.search(r"\bengineering\b", t):
             return "software_engineer", "software_engineering", "engineering"

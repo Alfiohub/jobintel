@@ -1,0 +1,14 @@
+services:
+  mvp-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: joballert-mvp-api
+    ports:
+      - "8000:8000"
+    environment:
+      JOBINTEL_DB_PATH: ${JOBINTEL_DB_PATH:-data/jobintel_microsaas_loccheck_2k_v6r_plus.sqlite}
+    volumes:
+      - ./data:/app/data
+      - ./docs:/app/docs:ro
+    restart: unless-stopped
