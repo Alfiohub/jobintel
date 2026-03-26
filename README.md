@@ -45,6 +45,60 @@ source .venv/bin/activate
 uv pip install -e .
 ```
 
+## Avvio Con Docker
+Prerequisiti:
+- Docker + Docker Compose
+- un DB SQLite disponibile in `data/` (default: `data/jobintel_microsaas_loccheck_2k_v6r_plus.sqlite`)
+
+Build + start:
+```bash
+docker compose up --build -d
+```
+
+Controllo stato/log:
+```bash
+docker compose ps
+docker compose logs -f mvp-api
+```
+
+Endpoint principali:
+- `http://127.0.0.1:8000/`
+- `http://127.0.0.1:8000/browse`
+- `http://127.0.0.1:8000/v1/indexed/jobs`
+
+Usare un DB diverso:
+```bash
+JOBINTEL_DB_PATH=data/jobintel_microsaas.sqlite docker compose up --build -d
+```
+
+Stop:
+```bash
+docker compose down
+```
+
+## Quick Start UI (porta 8000)
+Per lanciare il codice e vedere la UI:
+
+1. Avvia container API/UI:
+```bash
+docker compose up --build -d
+```
+
+2. Apri nel browser:
+- `http://127.0.0.1:8000/`
+- `http://127.0.0.1:8000/browse`
+
+3. (Opzionale) verifica da terminale:
+```bash
+curl -s http://127.0.0.1:8000/ | head
+curl -s http://127.0.0.1:8000/browse | head
+```
+
+4. Quando hai finito:
+```bash
+docker compose down
+```
+
 ## Comando Unico (Micro-SaaS indexing)
 Esegue pipeline batch locale end-to-end e produce:
 - `raw_jobs.jsonl`
