@@ -6,22 +6,23 @@ import re
 _WS_RE = re.compile(r"\s+")
 
 TITLE_RULES: list[tuple[str, str, str, str]] = [
-    (r"\binterested in joining our team\b|\bgeneral application\b", "general_application", "recruiting", "hr"),
+    (r"\binterested in joining our team\b|\bgeneral application\b", "general_application", "other", "hr"),
     (r"\bfield cto\b|\bchief technology officer\b|\bcto\b", "chief_technology_officer", "executive_leadership", "business"),
     (r"\bprincipal enterprise architect\b|\benterprise architect\b", "enterprise_architect", "architecture", "engineering"),
     (r"\bsolutions architect\b", "solutions_architect", "architecture", "engineering"),
     (r"\bsolution architect\b|\bobservability architect\b", "solutions_architect", "architecture", "engineering"),
+    (r"\btechnical architect\b", "solutions_architect", "architecture", "engineering"),
     (r"\bproduct owner\b", "product_manager", "product_management", "product"),
     (r"\bstrategy\s*(?:&|and)\s*planning analyst\b", "business_analyst", "business_analysis", "business"),
     (r"\bqa automation tester\b|\bquality assurance\b|\bqa engineer\b", "software_engineer", "software_engineering", "engineering"),
     (r"\bcareer success coach\b", "customer_success_manager", "customer_success", "business"),
     (r"\bclient engagement partner\b", "account_manager", "sales", "business"),
-    (r"\bdesenvolvedor\(a\)? backend\b|\bdesenvolvedor backend\b", "backend_engineer", "backend", "engineering"),
+    (r"\bdesenvolvedor\(a\)? backend\b|\bdesenvolvedor backend\b", "backend_engineer", "software_engineering", "engineering"),
     (r"\bdesenvolvedor\(a\)? llm/backend\b|\bgraph engineer\b", "ml_engineer", "machine_learning", "data"),
     (
         r"\bbanco de talentos\b|\bassociate talent program\b|\bsummer internship program\b|\bsummernaut program\b",
         "general_application",
-        "recruiting",
+        "other",
         "hr",
     ),
     (r"\baccount executive\b", "account_executive", "sales", "business"),
@@ -64,9 +65,9 @@ TITLE_RULES: list[tuple[str, str, str, str]] = [
     (r"\bmachine learning scientist\b|\bml scientist\b", "ml_scientist", "machine_learning", "data"),
     (r"\bmachine learning engineer\b|\bml engineer\b", "ml_engineer", "machine_learning", "data"),
     (r"\bai (technical )?architect\b|\bai deployment architect\b", "enterprise_architect", "architecture", "engineering"),
-    (r"\bbackend engineer\b|\bbackend developer\b", "backend_engineer", "backend", "engineering"),
-    (r"\bfrontend engineer\b|\bfrontend developer\b", "frontend_engineer", "frontend", "engineering"),
-    (r"\bfull[ -]?stack engineer\b|\bfull[ -]?stack developer\b", "fullstack_engineer", "fullstack", "engineering"),
+    (r"\bbackend engineer\b|\bbackend developer\b", "backend_engineer", "software_engineering", "engineering"),
+    (r"\bfrontend engineer\b|\bfrontend developer\b", "frontend_engineer", "software_engineering", "engineering"),
+    (r"\bfull[ -]?stack engineer\b|\bfull[ -]?stack developer\b", "fullstack_engineer", "software_engineering", "engineering"),
     (r"\bdevops\b", "devops_engineer", "devops", "engineering"),
     (r"\bsite reliability\b|\bsre\b", "site_reliability_engineer", "sre", "engineering"),
     (r"\bsoftware engineer\b|\bsoftware developer\b", "software_engineer", "software_engineering", "engineering"),
@@ -75,6 +76,7 @@ TITLE_RULES: list[tuple[str, str, str, str]] = [
     (r"\btechnology program analyst\b", "program_analyst", "program_management", "product"),
     (r"\bux designer\b|\bui designer\b|\bproduct designer\b|\bproduct design\b", "product_designer", "design", "design"),
     (r"\bcontent designer\b|\blearning designer\b", "content_designer", "design", "design"),
+    (r"\binstructional designer\b", "content_designer", "design", "design"),
     (r"\bsalesforce administrator\b|\bnetsuite administrator\b|\bsystems administrator\b", "systems_administrator", "it_operations", "engineering"),
     (r"\boffice administrator\b|\bworkplace experience specialist\b", "office_administrator", "operations", "business"),
     (r"\bnetsuite analyst\b", "business_systems_analyst", "business_analysis", "business"),
@@ -89,6 +91,7 @@ TITLE_RULES: list[tuple[str, str, str, str]] = [
     (r"\btechnical lead\b", "software_engineer", "software_engineering", "engineering"),
     (r"\btraining localization intern\b", "localization_intern", "operations", "business"),
     (r"\bseo\b", "seo_specialist", "marketing", "business"),
+    (r"\bads specialist\b", "marketing_specialist", "marketing", "business"),
     (r"\bmarketing\b", "marketing_specialist", "marketing", "business"),
     (r"\brecruiter\b|\btalent acquisition\b", "technical_recruiter", "recruiting", "hr"),
     (r"\boperations specialist\b|\boperations coordinator\b", "operations_specialist", "operations", "business"),
@@ -121,17 +124,42 @@ def normalize_title(title_clean: str) -> tuple[str, str, str]:
             return "financial_analyst", "finance", "finance"
         return "accountant", "finance", "finance"
     if re.search(r"\bseo\b|\bmarketing\b|\bcontent\b", t):
-        if re.search(r"\bmanager\b|\bdirector\b|\bhead\b", t):
-            return "marketing_manager", "marketing", "business"
         return "marketing_specialist", "marketing", "business"
     if re.search(r"\brecruiter\b|\btalent acquisition\b|\bpeople partner\b", t):
         return "technical_recruiter", "recruiting", "hr"
     if re.search(r"\boperations?\b|\bfulfillment\b", t):
-        if re.search(r"\bmanager\b|\bdirector\b|\bhead\b", t):
-            return "operations_manager", "operations", "business"
         return "operations_specialist", "operations", "business"
+    if "manager" in t:
+        # Manager redistribution policy: map to existing specific titles or fallback to other.
+        if re.search(r"\bproduct manager\b|\bproduct owner\b", t):
+            return "product_manager", "product_management", "product"
+        if re.search(r"\bproject manager\b|\bprogram manager\b", t):
+            return "technical_program_manager", "program_management", "product"
+        if re.search(r"\bsuccess manager\b", t):
+            return "customer_success_manager", "customer_success", "business"
+        if re.search(r"\bpartner manager\b|\balliance manager\b", t):
+            return "alliance_manager", "partnerships", "business"
+        if re.search(r"\baccounting manager\b|\brevenue accounting manager\b|\bmanager\b.*\baccounting\b", t):
+            return "accountant", "finance", "finance"
+        if re.search(r"\bfinance manager\b", t):
+            return "financial_analyst", "finance", "finance"
+        if re.search(r"\bhr manager\b|\bhuman resources manager\b", t):
+            return "hr_manager", "hr", "hr"
+        if re.search(r"\bdesign manager\b", t):
+            return "product_designer", "design", "design"
+        if re.search(r"\bcampaign manager\b|\bgrowth manager\b|\bcommunications manager\b", t):
+            return "marketing_specialist", "marketing", "business"
+        if re.search(r"\bsolution services manager\b|\bmanager,\s*solution services\b|\bsolution architecture manager\b|\bsolutions architecture manager\b", t):
+            return "solutions_architect", "architecture", "engineering"
+        if re.search(r"\bsales manager\b", t):
+            return "sales_representative", "sales", "business"
+        if re.search(r"\bprofessional services manager\b|\bbusiness services team manager\b|\bdeal desk\b|\bhealth information management\b", t):
+            return "operations_specialist", "operations", "business"
+        if re.search(r"\bengineering\b", t):
+            return "software_engineer", "software_engineering", "engineering"
+        if re.search(r"\boperations manager\b", t):
+            return "operations_specialist", "operations", "business"
+        return "other", "other", "other"
     if "engineer" in t or "developer" in t:
         return "software_engineer", "software_engineering", "engineering"
-    if "manager" in t:
-        return "manager", "operations", "business"
     return "other", "other", "other"
