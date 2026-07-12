@@ -1,0 +1,319 @@
+{
+  "input_path": "data/all_greenhouse_jobs_from_targets.jsonl",
+  "rows_total": 84487,
+  "invalid_rows": 0,
+  "rows_en": 81011,
+  "rows_non_en": 3118,
+  "rows_unknown": 358,
+  "pct_en": 95.89,
+  "pct_non_en": 3.69,
+  "pct_unknown": 0.42,
+  "sample_files": {
+    "en": "docs/sample_en.jsonl",
+    "non_en": "docs/sample_non_en.jsonl",
+    "unknown": "docs/sample_unknown.jsonl"
+  },
+  "top_titles_by_bucket": {
+    "en": [
+      {
+        "title": "Psychiatric Mental Health Nurse Practitioner (PMHNP)",
+        "count": 381
+      },
+      {
+        "title": "Psychiatrist (MD)",
+        "count": 324
+      },
+      {
+        "title": "Senior Software Engineer",
+        "count": 285
+      },
+      {
+        "title": "CDL Drivers",
+        "count": 279
+      },
+      {
+        "title": "Future Technicians",
+        "count": 279
+      },
+      {
+        "title": "Territory Account Managers",
+        "count": 273
+      },
+      {
+        "title": "Senior Data Engineer",
+        "count": 224
+      },
+      {
+        "title": "Sales Development Representative",
+        "count": 204
+      },
+      {
+        "title": "Account Executive",
+        "count": 202
+      },
+      {
+        "title": "Psychotherapist",
+        "count": 177
+      },
+      {
+        "title": "Enterprise Account Executive",
+        "count": 157
+      },
+      {
+        "title": "Staff Software Engineer",
+        "count": 143
+      },
+      {
+        "title": "Software Engineer",
+        "count": 131
+      },
+      {
+        "title": "Customer Success Manager",
+        "count": 127
+      },
+      {
+        "title": "Senior Performance Copywriter, Personal Finance",
+        "count": 118
+      },
+      {
+        "title": "Senior Product Manager",
+        "count": 115
+      },
+      {
+        "title": "Business Development Representative",
+        "count": 114
+      },
+      {
+        "title": "Lead Data Engineer",
+        "count": 114
+      },
+      {
+        "title": "Heavy Equipment Field Technician (Mechanic)",
+        "count": 103
+      },
+      {
+        "title": "Retail Sales Associate - Part Time",
+        "count": 102
+      }
+    ],
+    "non_en": [
+      {
+        "title": "Business Development Executive - Außendienst (w/m/d)",
+        "count": 11
+      },
+      {
+        "title": "(Senior) Consultant* - Payments",
+        "count": 7
+      },
+      {
+        "title": "Brand Ambassador (Evenementen)",
+        "count": 6
+      },
+      {
+        "title": "Consulting Manager – Strategy & Transformation",
+        "count": 6
+      },
+      {
+        "title": "Psychologe (m/w/d)",
+        "count": 6
+      },
+      {
+        "title": "Psychologische Berater:in (m/w/d)",
+        "count": 6
+      },
+      {
+        "title": "Lohn- und Gehaltsabrechner (m/w/d) - Remote",
+        "count": 5
+      },
+      {
+        "title": "Senior Account Executive - Praxissoftware (x/f/m)",
+        "count": 5
+      },
+      {
+        "title": "Brand Ambassador (Events)",
+        "count": 5
+      },
+      {
+        "title": "Account Manager DACH (all genders)",
+        "count": 5
+      },
+      {
+        "title": "(Senior) Consultant* - Digital Assets & DLT / Blockchain",
+        "count": 4
+      },
+      {
+        "title": "City Operations Manager (m/w/d)",
+        "count": 4
+      },
+      {
+        "title": "Field Operations Manager (m/w/d)",
+        "count": 4
+      },
+      {
+        "title": "Hub Manager (m/w/d)",
+        "count": 4
+      },
+      {
+        "title": "Key Account Manager - Praxissoftware (x/f/m)",
+        "count": 4
+      },
+      {
+        "title": "Brand Ambassador Wallonia",
+        "count": 4
+      },
+      {
+        "title": "Field Sales Consultant (m/f/d)",
+        "count": 4
+      },
+      {
+        "title": "Design Engineer (m/w/d)",
+        "count": 4
+      },
+      {
+        "title": "Frontend Solutions Engineer (m/w/d)",
+        "count": 4
+      },
+      {
+        "title": "Maschinen - & Anlagenführer (gn) bei ESN & More Nutrition",
+        "count": 4
+      }
+    ],
+    "unknown": [
+      {
+        "title": "Senior Android Engineer (Eats Customer)",
+        "count": 2
+      },
+      {
+        "title": "Staff Database Engineer (DBA)",
+        "count": 2
+      },
+      {
+        "title": "インサイドセールス/ Sales Development Representative",
+        "count": 1
+      },
+      {
+        "title": "Account Operations Intern - Beijing",
+        "count": 1
+      },
+      {
+        "title": "Sales Manager(IC, Hunter), Ad Cloud",
+        "count": 1
+      },
+      {
+        "title": "社内ITヘルプデスク/IT Support Specialist (Part-time, Japanese & Mandarin) – Tokyo",
+        "count": 1
+      },
+      {
+        "title": "BA / PM Reg Reporting",
+        "count": 1
+      },
+      {
+        "title": "Assistance Required",
+        "count": 1
+      },
+      {
+        "title": "[쿠팡] 이츠 광고 세일즈 전략 및 운영 팀장 (경력)",
+        "count": 1
+      },
+      {
+        "title": "[쿠팡] 세무 전문가 (부가가치세 담당)",
+        "count": 1
+      },
+      {
+        "title": "[쿠팡] 쿠렌즈 채용 – 쿠팡 이츠 상품 등록 및 검수 사무보조 (재택근무)",
+        "count": 1
+      },
+      {
+        "title": "[쿠팡] 쿠렌즈 채용 – 쿠팡 입점 판매자 보상 업무 지원 (재택근무)",
+        "count": 1
+      },
+      {
+        "title": "[쿠팡] 쿠렌즈 채용 – 쿠팡 입점판매자 및 상품 모니터링 업무 지원 (재택근무)",
+        "count": 1
+      },
+      {
+        "title": "[쿠팡] 쿠렌즈 채용 – 쿠팡 로켓그로스 판매자 판매활동 지원 (재택근무)",
+        "count": 1
+      },
+      {
+        "title": "[쿠팡] 공정거래 부문 사내변호사",
+        "count": 1
+      },
+      {
+        "title": "[쿠팡] 쿠팡이츠 영업: 성과대로 버는 무제한 성과급",
+        "count": 1
+      },
+      {
+        "title": "[쿠팡] 쿠팡이츠(일본) 카탈로그 고도화 운영관리 매니저",
+        "count": 1
+      },
+      {
+        "title": "[쿠팡] 로켓그로스 영업 및 영업관리 (홈-가구/조명)",
+        "count": 1
+      },
+      {
+        "title": "[쿠팡] 로켓그로스 세일즈 매니저 (스포츠용품 / 육아용품 / 자동차용품)",
+        "count": 1
+      },
+      {
+        "title": "[쿠팡] 글로벌위기관리센터 운영담당자 (신입)",
+        "count": 1
+      }
+    ]
+  },
+  "top_reasons_by_bucket": {
+    "en": [
+      {
+        "reason": "hint_detector_agree",
+        "count": 80709
+      },
+      {
+        "reason": "detector_primary",
+        "count": 155
+      },
+      {
+        "reason": "hint_detector_disagree_detector_override",
+        "count": 94
+      },
+      {
+        "reason": "text_stopwords_en",
+        "count": 53
+      }
+    ],
+    "non_en": [
+      {
+        "reason": "hint_detector_agree",
+        "count": 2739
+      },
+      {
+        "reason": "hint_detector_disagree_detector_override",
+        "count": 375
+      },
+      {
+        "reason": "detector_primary",
+        "count": 4
+      }
+    ],
+    "unknown": [
+      {
+        "reason": "low_signal_mixed_or_ambiguous",
+        "count": 175
+      },
+      {
+        "reason": "hint_without_text_support",
+        "count": 166
+      },
+      {
+        "reason": "hint_without_enough_text",
+        "count": 16
+      },
+      {
+        "reason": "text_too_short_or_ambiguous",
+        "count": 1
+      }
+    ]
+  },
+  "diagnostics": [
+    "No obvious global imbalance detected from bucket ratios."
+  ]
+}

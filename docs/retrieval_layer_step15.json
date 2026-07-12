@@ -1,0 +1,334 @@
+{
+  "input_path": "data/jobs/jobs_indexed_en.jsonl",
+  "supported_filters": [
+    "normalized_title",
+    "role_family",
+    "language_bucket",
+    "location_type",
+    "employment_type",
+    "has_salary",
+    "has_skills",
+    "title_is_other",
+    "skills_contains",
+    "salary_currency"
+  ],
+  "supported_sorting": [
+    "published_at_desc",
+    "updated_at_desc",
+    "url"
+  ],
+  "examples": [
+    "jobintel-next retrieval query --input data/jobs/jobs_indexed_en.jsonl --normalized-title data_engineer --has-salary true --sort-by published_at_desc --limit 20",
+    "jobintel-next retrieval query --input data/jobs/jobs_indexed_en.jsonl --role-family marketing --sort-by updated_at_desc --limit 20",
+    "jobintel-next retrieval query --input data/jobs/jobs_indexed_en.jsonl --skills-contains python --has-skills true --limit 20"
+  ],
+  "sample_query_results": [
+    {
+      "name": "data_engineer_with_salary",
+      "query": {
+        "normalized_title": "data_engineer",
+        "role_family": null,
+        "language_bucket": null,
+        "location_type": null,
+        "employment_type": null,
+        "has_salary": true,
+        "has_skills": null,
+        "title_is_other": null,
+        "skills_contains": [],
+        "salary_currency": null,
+        "sort_by": "published_at_desc",
+        "limit": 5
+      },
+      "matched_rows": 5,
+      "sample_rows": [
+        {
+          "url": "https://boards.greenhouse.io/accenturefederalservices/jobs/4607396006?gh_jid=4607396006",
+          "title_raw": "Data Engineer/Architect",
+          "normalized_title": "data_engineer",
+          "role_family": "data_engineering",
+          "language_bucket": "en",
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false,
+          "published_at": "2026-03-27T16:03:08+00:00"
+        },
+        {
+          "url": "https://boards.greenhouse.io/spacex/jobs/8391768002?gh_jid=8391768002",
+          "title_raw": "Data Engineer (Direct To Cell)",
+          "normalized_title": "data_engineer",
+          "role_family": "data_engineering",
+          "language_bucket": "en",
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false,
+          "published_at": "2026-03-27T15:37:18+00:00"
+        },
+        {
+          "url": "https://boards.greenhouse.io/spacex/jobs/8379395002?gh_jid=8379395002",
+          "title_raw": "Sr. Data Engineer (Starlink Growth)",
+          "normalized_title": "data_engineer",
+          "role_family": "data_engineering",
+          "language_bucket": "en",
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false,
+          "published_at": "2026-03-27T15:37:18+00:00"
+        },
+        {
+          "url": "https://boards.greenhouse.io/spacex/jobs/8379386002?gh_jid=8379386002",
+          "title_raw": "Sr. Data Engineer (Starlink Growth)",
+          "normalized_title": "data_engineer",
+          "role_family": "data_engineering",
+          "language_bucket": "en",
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false,
+          "published_at": "2026-03-27T15:37:18+00:00"
+        },
+        {
+          "url": "https://boards.greenhouse.io/spacex/jobs/8243150002?gh_jid=8243150002",
+          "title_raw": "Data Engineer (Starlink Growth)",
+          "normalized_title": "data_engineer",
+          "role_family": "data_engineering",
+          "language_bucket": "en",
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false,
+          "published_at": "2026-03-27T15:37:18+00:00"
+        }
+      ]
+    },
+    {
+      "name": "marketing_role_family",
+      "query": {
+        "normalized_title": null,
+        "role_family": "marketing",
+        "language_bucket": null,
+        "location_type": null,
+        "employment_type": null,
+        "has_salary": null,
+        "has_skills": null,
+        "title_is_other": null,
+        "skills_contains": [],
+        "salary_currency": null,
+        "sort_by": "updated_at_desc",
+        "limit": 5
+      },
+      "matched_rows": 5,
+      "sample_rows": [
+        {
+          "url": "https://www.talkspace.com/careers/job?gh_jid=5831759004",
+          "title_raw": "Marketing Ops Engineer Intern",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "language_bucket": "en",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false,
+          "published_at": "2026-03-18T19:56:55+00:00"
+        },
+        {
+          "url": "https://www.talkspace.com/careers/job?gh_jid=5831378004",
+          "title_raw": "Marketing Design Intern",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "language_bucket": "en",
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false,
+          "published_at": "2026-03-18T15:24:08+00:00"
+        },
+        {
+          "url": "https://www.taboola.com/careers/job/7722945?gh_jid=7722945",
+          "title_raw": "Marketing Coordinator",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "language_bucket": "en",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false,
+          "published_at": "2026-03-27T04:06:28+00:00"
+        },
+        {
+          "url": "https://www.taboola.com/careers/job/7713805?gh_jid=7713805",
+          "title_raw": "Marketing Manager - Taiwan / Hong Kong",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "language_bucket": "en",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false,
+          "published_at": "2026-03-24T17:07:40+00:00"
+        },
+        {
+          "url": "https://www.taboola.com/careers/job/7550360?gh_jid=7550360",
+          "title_raw": "Marketing Manager, China",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "language_bucket": "en",
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false,
+          "published_at": "2026-03-24T17:07:40+00:00"
+        }
+      ]
+    },
+    {
+      "name": "other_titles_with_skills",
+      "query": {
+        "normalized_title": null,
+        "role_family": null,
+        "language_bucket": null,
+        "location_type": null,
+        "employment_type": null,
+        "has_salary": null,
+        "has_skills": true,
+        "title_is_other": true,
+        "skills_contains": [],
+        "salary_currency": null,
+        "sort_by": "published_at_desc",
+        "limit": 5
+      },
+      "matched_rows": 5,
+      "sample_rows": [
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7748617",
+          "title_raw": "Bridge Operations Associate",
+          "normalized_title": "other",
+          "role_family": "other",
+          "language_bucket": "en",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true,
+          "published_at": "2026-03-27T16:10:10+00:00"
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7743311",
+          "title_raw": "Data Writer and Editor",
+          "normalized_title": "other",
+          "role_family": "other",
+          "language_bucket": "en",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true,
+          "published_at": "2026-03-27T16:10:10+00:00"
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7743307",
+          "title_raw": "Frontend Platform Engineer, JavaScript Infrastructure",
+          "normalized_title": "other",
+          "role_family": "other",
+          "language_bucket": "en",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true,
+          "published_at": "2026-03-27T16:10:10+00:00"
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7738241",
+          "title_raw": "Verifications Operations Associate",
+          "normalized_title": "other",
+          "role_family": "other",
+          "language_bucket": "en",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true,
+          "published_at": "2026-03-27T16:10:10+00:00"
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7737243",
+          "title_raw": "Engineer Manager, Billing",
+          "normalized_title": "other",
+          "role_family": "other",
+          "language_bucket": "en",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true,
+          "published_at": "2026-03-27T16:10:10+00:00"
+        }
+      ]
+    },
+    {
+      "name": "python_skill",
+      "query": {
+        "normalized_title": null,
+        "role_family": null,
+        "language_bucket": null,
+        "location_type": null,
+        "employment_type": null,
+        "has_salary": null,
+        "has_skills": null,
+        "title_is_other": null,
+        "skills_contains": [
+          "python"
+        ],
+        "salary_currency": null,
+        "sort_by": "published_at_desc",
+        "limit": 5
+      },
+      "matched_rows": 5,
+      "sample_rows": [
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7743311",
+          "title_raw": "Data Writer and Editor",
+          "normalized_title": "other",
+          "role_family": "other",
+          "language_bucket": "en",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true,
+          "published_at": "2026-03-27T16:10:10+00:00"
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7736640",
+          "title_raw": "Head of Connect & Crypto F&S",
+          "normalized_title": "other",
+          "role_family": "other",
+          "language_bucket": "en",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true,
+          "published_at": "2026-03-27T16:10:10+00:00"
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7733233",
+          "title_raw": "IT Support Engineer",
+          "normalized_title": "other",
+          "role_family": "other",
+          "language_bucket": "en",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true,
+          "published_at": "2026-03-27T16:10:10+00:00"
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7733216",
+          "title_raw": "IT Support Engineer",
+          "normalized_title": "other",
+          "role_family": "other",
+          "language_bucket": "en",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true,
+          "published_at": "2026-03-27T16:10:10+00:00"
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7729743",
+          "title_raw": "Tech Ops Associate, New Grad (Mexico)",
+          "normalized_title": "other",
+          "role_family": "other",
+          "language_bucket": "en",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true,
+          "published_at": "2026-03-27T16:10:10+00:00"
+        }
+      ]
+    }
+  ],
+  "known_limits": [
+    "In-memory JSONL scan; no DB index in v1.",
+    "Only exact-match filters (except skills_contains over normalized skill tokens).",
+    "No ranking, semantic search, or recommendation in this step."
+  ]
+}

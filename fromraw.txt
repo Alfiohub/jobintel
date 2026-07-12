@@ -1,0 +1,179 @@
+Dal raw puoi tirare fuori
+1. Identità annuncio
+source
+source_org
+external_id
+url
+internal_job_id
+requisition_id
+
+Serve per:
+
+deduplica
+tracking
+update nel tempo
+2. Titolo
+title
+raw_payload.title
+
+Serve per:
+
+title cleaning
+normalized title
+role family
+seniority
+varianti lessicali
+3. Azienda
+company_name
+raw_payload.company_name
+
+Serve per:
+
+display
+analisi azienda
+deduplica secondaria
+4. Lingua
+language
+raw_payload.language
+
+Serve per:
+
+language gating
+pipeline multilingua futura
+KPI puliti per lingua
+5. Location
+location_raw
+raw_payload.location.name
+offices[].name
+offices[].location
+
+Serve per:
+
+remote/hybrid/onsite
+city
+region
+country
+market/geo filters
+6. Date
+posted_at
+first_published
+updated_at
+
+Serve per:
+
+freshness
+annunci nuovi/vecchi
+incremental pipeline
+storico modifiche
+7. Descrizione completa
+raw_payload.content
+
+È il campo più ricco. Da lì puoi estrarre:
+
+ruolo e contesto
+mansioni
+responsabilità
+seniority implicita
+requisiti
+anni esperienza
+education
+degree required
+licenze/certificazioni
+skill
+SQL
+Python
+dbt
+Tableau
+Figma
+ecc.
+salario
+salary range
+valuta
+periodo (hour, year)
+employment type
+full-time
+contract
+internship
+part-time
+dominio
+healthcare
+retail
+logistics
+finance
+marketing
+ecc.
+8. Struttura organizzativa
+departments
+
+Serve per:
+
+segnali tassonomici
+classificazione più robusta
+analisi per funzione
+9. Compliance / policy
+data_compliance
+
+Serve meno per ranking, ma utile per:
+
+compliance review
+analytics legali
+qualità del feed
+In pratica, i blocchi veri che puoi costruire dal raw
+A. Job identity layer
+
+Chi è questo annuncio.
+
+B. Language layer
+
+In che lingua è.
+
+C. Cleaning layer
+
+Ripulire HTML, entities, whitespace, rumore.
+
+D. Title normalization layer
+
+Da titolo sporco a normalized title + family.
+
+E. Attribute extraction layer
+
+Da description a:
+
+skills
+salary
+experience
+education
+employment type
+location
+F. Search/ranking layer
+
+Usa tutto quello sopra.
+
+Le informazioni più preziose in assoluto
+
+Se devo scegliere le più utili:
+
+title
+language
+raw_payload.content
+location
+departments
+posted_at/updated_at
+
+Questi sono il cuore.
+
+Cosa vedo di importante nei tuoi raw
+
+Nel tuo esempio hai già abbastanza per fare bene:
+
+language detection seria
+cleaning serio
+extraction seria
+title classifier robusto
+
+Quindi il raw non è povero.
+Il punto è costruire bene la pipeline sopra.
+
+In una frase
+
+Dal raw puoi tirare fuori quasi tutto ciò che ti serve per il prodotto: lingua, titolo, location, requisiti, skills, salary, employment type, seniority, dominio e metadati di tracking.

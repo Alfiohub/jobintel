@@ -1,0 +1,182 @@
+[
+  {
+    "cluster_name": "other_long_tail",
+    "sample_titles": [
+      "Data Analytics Director",
+      "Telehealth Provider (MD & DO)",
+      "Director, Product Management",
+      "Senior Analyst, Strategic Finance",
+      "Senior Director, Enterprise Launch Excellence and GTM",
+      "Senior Manager, Commercial Operations",
+      "Senior Member Growth Manager",
+      "Senior Salesforce Administrator",
+      "Senior Stock Administrator",
+      "Senior Systems Automation Engineer"
+    ],
+    "total_frequency": 34883,
+    "recommended_action": "keep_other",
+    "rationale": "Lunga coda eterogenea o ambigua: mantenere other per ora."
+  },
+  {
+    "cluster_name": "skilled_trades",
+    "sample_titles": [
+      "Lead Instructor: Data Center Technician",
+      "Lead Instructor: Data Center Technician (Data Center Technician 7)",
+      "Lead Instructor: Data Center Technician (Data Center Technician 8)",
+      "Teaching Assistant: Data Center Technician (Data Center Technician 7)",
+      "Teaching Assistant: Data Center Technician (Data Center Technician 8)",
+      "Diesel Mechanic",
+      "Lube Technician",
+      "Mechanic",
+      "Utility Technician",
+      "Lab Technician"
+    ],
+    "total_frequency": 1168,
+    "recommended_action": "add_new_normalized_title",
+    "rationale": "Titoli skilled trades ripetuti e distinguibili dal titolo."
+  },
+  {
+    "cluster_name": "design_creative",
+    "sample_titles": [
+      "Brand Designer",
+      "Website Designer",
+      "Learning Designer",
+      "Staff Brand Designer",
+      "Employer Brand Manager",
+      "Senior Creative Strategist (UI Design) - Hybrid, Istanbul",
+      "Data Science Editor",
+      "Lead Service Designer - Product & Experience",
+      "Senior Service Designer - Product & Experience",
+      "Designer - Via, Remix, Citymapper"
+    ],
+    "total_frequency": 920,
+    "recommended_action": "map_to_existing",
+    "rationale": "Parte mappabile a design/content; richiede regole più specifiche."
+  },
+  {
+    "cluster_name": "healthcare_clinical",
+    "sample_titles": [
+      "Senior Director, Clinical and Translational Research",
+      "Medical data intern (x - f - m)",
+      "Medical Expert (x - f - m)",
+      "Senior Staff Research Scientist - Clinical AI Lab (x - f - m)",
+      "Clinical Solutions Clinician",
+      "Medical Coding Specialist (Temp)",
+      "Medical Director, Obstetrics",
+      "Scientist II, Clinical Bioinformatics",
+      "Sr. Manager, Clinical Operations & Strategic Alliances",
+      "Sr. Scientist, Clinical Bioinformatics"
+    ],
+    "total_frequency": 697,
+    "recommended_action": "add_new_normalized_title",
+    "rationale": "Volume ricorrente e semanticamente chiaro in area clinica."
+  },
+  {
+    "cluster_name": "compliance_risk",
+    "sample_titles": [
+      "Security Risk Management Specialist",
+      "Regulatory Affairs Analyst",
+      "ADA Tableau Expert - Treasury Visualisation & Liquidity Risk",
+      "AI Governance & Risk Expert (m - f - d) - Regulatory AI Advisory for Financial Services",
+      "Associate Partner - Executive Director- Leading Finance, Risk & Regulatory Function",
+      "BA Market Risk",
+      "Business Analyst - Product Control - Regulatory Reporting (She - He - They)",
+      "Capital Markets Regulatory Change - Consultant - Senior Consultant",
+      "Consultant - Capital Markets Credit Risk",
+      "Counterparty Credit Risk"
+    ],
+    "total_frequency": 430,
+    "recommended_action": "add_new_normalized_title",
+    "rationale": "Dominio business-specific con volume non trascurabile."
+  },
+  {
+    "cluster_name": "logistics",
+    "sample_titles": [
+      "Delivery Excellence Manager (APAC hours)",
+      "Delivery Excellence Manager - Central",
+      "Delivery Excellence Manager- Central",
+      "Delivery Excellence Manager (East Coast - EMEA hours)",
+      "Manager II, Enablement Delivery",
+      "Delivery Lead - Corporate Banking Implementation (She - He - They)",
+      "Delivery Manager - Pricing and Billing (She - He - They)",
+      "Junior Technology Delivery - Developer - Intellimatch",
+      "Lead Delivery Consultant",
+      "PMO Lead - Delivery Excellence"
+    ],
+    "total_frequency": 397,
+    "recommended_action": "add_new_normalized_title",
+    "rationale": "Cluster operativo frequente non coperto dalla taxonomy minima v1."
+  },
+  {
+    "cluster_name": "education",
+    "sample_titles": [
+      "Customer Education and Certification Lead",
+      "Lead Instructor: Cloud Support Specialist",
+      "Lead Instructor: Cloud Support Specialist(Cloud Support Specialist 8)",
+      "Lead Instructor: Computer Support Specialist",
+      "Lead Instructor: Cybersecurity (General Interest)",
+      "Lead Instructor: Data Analytics (General Interest)",
+      "Lead Instructor: GenAI",
+      "Lead Instructor: Machine Learning Data Associate",
+      "Lead Instructor: Software Development",
+      "Technical Instructor"
+    ],
+    "total_frequency": 320,
+    "recommended_action": "add_new_normalized_title",
+    "rationale": "Cluster education support frequente e con segnali chiari."
+  },
+  {
+    "cluster_name": "retail_sales",
+    "sample_titles": [
+      "Head of Industry - Retail & CPG",
+      "Business Analyst - Retail Energy",
+      "Senior Sales Director, Strategic Retail",
+      "Senior Retail Media Specialist",
+      "Commercial Strategy Lead, In-Store Media (P4103)",
+      "SAP Materials Management (MM) - Retail In-Store Merchandising and Inventory Management Consultant",
+      "SAP OTC Retail Consultant - Inventory Visibility, Store Ordering and Replenishment Analyst",
+      "SAP S - 4HANA Retail (Site Master) Consultant",
+      "Floor Lead - Livermore, CA",
+      "Retail Ambassador - SF Premium Outlets (Livermore, CA)"
+    ],
+    "total_frequency": 151,
+    "recommended_action": "add_new_normalized_title",
+    "rationale": "Cluster retail ricorrente e distinto dal sales enterprise B2B."
+  },
+  {
+    "cluster_name": "customer_service",
+    "sample_titles": [
+      "Senior Customer Support Engineer",
+      "Premier Service Advocate (Multi-Channel Support)",
+      "Supervisor, Customer Support",
+      "Analyst, Customer Support, Strategic Finance",
+      "Principal, Customer Support, Strategic Finance",
+      "Customer Service Team Manager",
+      "General Call Center Positions",
+      "Customer Support Engineer",
+      "Director of International Customer Service",
+      "AGIM - MF - Customer Service"
+    ],
+    "total_frequency": 130,
+    "recommended_action": "map_to_existing",
+    "rationale": "Cluster service spesso assorbibile in operations con regole mirate."
+  },
+  {
+    "cluster_name": "engineering_leadership",
+    "sample_titles": [
+      "Manager, Software Engineering (Checkout Experience)",
+      "Manager, Software Engineering - Mobile Platform",
+      "Manager, Software Engineering - New Products",
+      "Manager, Software Engineering (Platform Reports)",
+      "Head of Engineering, Core Product & Collaborative Work Management",
+      "Manager, Software Engineering",
+      "Head of Engineering - Risk & Financial Crime",
+      "Manager, Software Engineering - Billing",
+      "Manager, Software Engineering - Collaboration Tools",
+      "Manager, Software Engineering - Creation Engine"
+    ],
+    "total_frequency": 94,
+    "recommended_action": "add_new_normalized_title",
+    "rationale": "Leadership engineering distinta da software_engineer individual contributor."
+  }
+]

@@ -1,0 +1,66 @@
+src/jobintel_next/
+  domain/
+    models.py                  # contratti: SourceRawJob, CanonicalRawJob, CleanedJob, ...
+    enums.py
+
+  adapters/
+    greenhouse/
+      client.py                # HTTP only
+      mapper.py                # payload -> domain model
+      adapter.py               # build collector input
+
+  ingestion/
+    collectors/
+      greenhouse_collector.py
+    orchestrator.py            # fetch pipeline stage
+    dedup.py
+
+  language/
+    detector.py
+    policy.py
+
+  cleaning/
+    text_cleaner.py
+    sections.py
+
+  extraction/
+    extractor.py
+    salary.py
+    location.py
+    skills.py
+
+  titles/
+    classifier.py
+    rules.py
+    variants.py
+
+  indexing/
+    builder.py
+    writer_jsonl.py
+    writer_sqlite.py
+
+  serving/
+    api.py                     # futuro layer SaaS
+
+  config/
+    schema.py
+    loader.py
+
+  app/
+    commands/
+      ingest.py
+      process.py
+      index.py
+      serve.py
+
+automation/
+  ddg_discover.py             # tool support (fuori core)
+  commoncrawl_seed.py         # tool support (fuori core)
+
+config/
+  default.yml
+  generated/
+
+docs/
+  architecture_v1.md
+  project_structure_v1.txt

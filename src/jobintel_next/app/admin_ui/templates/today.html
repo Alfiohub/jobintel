@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Today View</h1>
+<p class="muted">Daily action queue built from rank score, follow-up status, pipeline state and attention signals.</p>
+<p class="muted"><strong>Today = immediate action.</strong> Use Review weekly for backlog maintenance and search cleanup.</p>
+<p class="muted">
+  Target profile:
+  titles={{ target_titles|join(", ") if target_titles else "-" }},
+  role_families={{ target_role_families|join(", ") if target_role_families else "-" }},
+  locations={{ target_locations|join(", ") if target_locations else "-" }}.
+</p>
+
+<div class="toolbar">
+  <a href="/admin/inbox?state=new&sort_by=rank">Open inbox triage</a>
+  <a href="/admin/shortlist">Open shortlist</a>
+  <a href="/admin/review">Open weekly review</a>
+  <a href="/admin/notifications">Open notifications</a>
+  <a href="/admin/saved-searches">Open saved searches strategy</a>
+</div>
+
+<h2>High Ranked New Jobs</h2>
+{% if not high_rank_new_jobs %}
+<p class="muted">No high-ranked new jobs right now. Use alerts or inbox filters to pull more candidates.</p>
+{% else %}
+<table>
+  <thead>
+    <tr>
+      <th>Priority</th>
+      <th>Rank</th>
+      <th>Title</th>
+      <th>Why</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in high_rank_new_jobs %}
+    <tr>
+      <td><span class="badge badge-delivery-skip">medium</span></td>
+      <td><span class="badge">{{ row.rank_score }}</span></td>
+      <td>{{ row.title_raw or "-" }}</td>
+      <td><span class="muted">{{ row.rank_reason or "-" }}</span></td>
+      <td><a href="{{ row.url }}" target="_blank" rel="noopener noreferrer">Open job</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+
+<h2>Follow-up Due / Overdue</h2>
+{% if not follow_up_due %}
+<p class="muted">No follow-up items due. Weekly review can still surface stale applied/interview items.</p>
+{% else %}
+<table>
+  <thead>
+    <tr>
+      <th>Priority</th>
+      <th>Job</th>
+      <th>Follow-up</th>
+      <th>Note</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in follow_up_due %}
+    <tr>
+      <td>
+        {% if row.follow_up_status == "overdue" %}
+          <span class="badge badge-delivery-err">high</span>
+        {% else %}
+          <span class="badge badge-delivery-skip">medium</span>
+        {% endif %}
+      </td>
+      <td>{{ row.title_raw }}</td>
+      <td>{{ row.follow_up_at }}</td>
+      <td><span class="muted">{{ row.follow_up_note or "-" }}</span></td>
+      <td><a href="/admin/shortlist?only_follow_up_due=true">Open shortlist due</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+
+<h2>Shortlist Items Needing Attention</h2>
+{% if not shortlist_attention %}
+<p class="muted">No shortlist blockers right now.</p>
+{% else %}
+<table>
+  <thead>
+    <tr>
+      <th>Priority</th>
+      <th>Job</th>
+      <th>Reason</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in shortlist_attention %}
+    <tr>
+      <td>
+        {% if row.priority == "high" %}
+          <span class="badge badge-delivery-err">high</span>
+        {% else %}
+          <span class="badge badge-delivery-skip">medium</span>
+        {% endif %}
+      </td>
+      <td>{{ row.title_raw }}</td>
+      <td>{{ row.reason }}</td>
+      <td><a href="/admin/shortlist">Open shortlist</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+
+<h2>High Priority Attention</h2>
+{% if not high_attention %}
+<p class="muted">No high-priority notifications right now. Open Notifications for full medium/low signals.</p>
+{% else %}
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Title</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for it in high_attention %}
+    <tr>
+      <td><span class="mono">{{ it.type }}</span></td>
+      <td>{{ it.title }}</td>
+      <td><a href="{{ it.href }}">Open</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+{% endblock %}

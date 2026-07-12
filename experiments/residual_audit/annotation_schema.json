@@ -1,0 +1,58 @@
+{
+  "type": "object",
+  "required": [
+    "sample_id",
+    "audit_bucket",
+    "suggested_target_label",
+    "suggested_role_family",
+    "confidence",
+    "reasoning_summary"
+  ],
+  "properties": {
+    "sample_id": {
+      "type": "string"
+    },
+    "audit_bucket": {
+      "type": "string",
+      "enum": [
+        "recoverable_now",
+        "recoverable_with_context",
+        "taxonomy_gap",
+        "keep_other_by_policy",
+        "noise_or_non_role"
+      ]
+    },
+    "suggested_target_label": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "suggested_role_family": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "confidence": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "reasoning_summary": {
+      "type": "string"
+    },
+    "evidence_terms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risk_notes": {
+      "type": "string"
+    }
+  }
+}

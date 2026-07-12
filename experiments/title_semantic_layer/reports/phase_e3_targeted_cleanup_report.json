@@ -1,0 +1,78 @@
+{
+  "baseline": {
+    "dataset": "data/jobs/jobs_titled_en_recovery_v53_safe.jsonl",
+    "rows_total": 81011,
+    "other_total": 36092,
+    "status": "ok"
+  },
+  "overlay_summary": {
+    "baseline_internal_canonical_count": 82,
+    "overlay_internal_canonical_count": 83
+  },
+  "comparisons": [
+    {
+      "title": "software development manager",
+      "before_label": "business_development_representative",
+      "before_family": "sales",
+      "before_score": 0.7279,
+      "after_label": "engineering_manager",
+      "after_family": "software_engineering",
+      "after_score": 1.0,
+      "changed": true
+    },
+    {
+      "title": "production engineer",
+      "before_label": "sales_engineer",
+      "before_family": "sales",
+      "before_score": 0.665,
+      "after_label": "manufacturing_engineer",
+      "after_family": "industrial_engineering",
+      "after_score": 1.0,
+      "changed": true
+    },
+    {
+      "title": "fpga engineer",
+      "before_label": "ml_engineer",
+      "before_family": "machine_learning",
+      "before_score": 0.7244,
+      "after_label": "electrical_engineer",
+      "after_family": "industrial_engineering",
+      "after_score": 1.0,
+      "changed": true
+    },
+    {
+      "title": "it administrator",
+      "before_label": "school_administrator",
+      "before_family": "education",
+      "before_score": 0.7658,
+      "after_label": "it_support_specialist",
+      "after_family": "it_operations",
+      "after_score": 1.0,
+      "changed": true
+    },
+    {
+      "title": "technical architect",
+      "before_label": "technical_recruiter",
+      "before_family": "recruiting",
+      "before_score": 0.6613,
+      "after_label": "solutions_architect",
+      "after_family": "architecture",
+      "after_score": 1.0,
+      "changed": true
+    },
+    {
+      "title": "data science manager",
+      "before_label": "story_editor",
+      "before_family": "content",
+      "before_score": 0.692,
+      "after_label": "data_science_manager",
+      "after_family": "data_science",
+      "after_score": 1.0,
+      "changed": true
+    }
+  ],
+  "report_paths": {
+    "baseline_bootstrap": "experiments/title_semantic_layer/reports/phase_e_bootstrap_report_baseline_no_overlay.json",
+    "overlay_bootstrap": "experiments/title_semantic_layer/reports/phase_e_bootstrap_report_overlay_e3.json"
+  }
+}

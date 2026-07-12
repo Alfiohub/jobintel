@@ -1,0 +1,304 @@
+{
+  "phase": "E.17",
+  "decision": "orchestrator_v1_ready",
+  "baseline": {
+    "dataset": "data/jobs/jobs_titled_en_recovery_v61_attack_now_batch.jsonl",
+    "rows_total": 81011,
+    "counts_by_status": {
+      "other": 35581,
+      "matched": 45430
+    },
+    "other": 35581
+  },
+  "engine_hardening": {
+    "decision": "engine_hardening_sufficient_for_orchestrator_v1",
+    "core_changes": [
+      "official_non_role_recruiting_entry",
+      "explicit_non_role_classification_status",
+      "top_non_role_titles_in_stage_and_eval_reports",
+      "indexed_compatibility_for_non_role",
+      "lane_type_and_risk_metadata",
+      "standard_concentration_metrics",
+      "experiments_package_importability"
+    ],
+    "tests": {
+      "command": "uv run pytest tests/pipelines/test_titles_stage_step12.py tests/pipelines/test_titles_eval_step13.py tests/pipelines/test_indexed_stage_step14.py tests/test_cli_titles_step12.py",
+      "result": "79 passed"
+    },
+    "updated_reports": [
+      "experiments/title_context_layer/reports/phase_e15_account_manager_scoring_v1.json",
+      "experiments/title_context_layer/reports/phase_e15_partner_lane_refinement_v1.json",
+      "experiments/title_context_layer/reports/phase_e15_partner_lane_shadow_batch_v1.json"
+    ]
+  },
+  "lanes": {
+    "non_role": {
+      "lane_type": "non_role",
+      "status": "ready_for_official_rerun",
+      "candidate_count_shadow": 563,
+      "from_other_shadow": 459,
+      "from_matched_shadow": 104,
+      "delta_other_shadow": -459
+    },
+    "attack_now": {
+      "lane_type": "attack_now",
+      "status": "active",
+      "top_candidates": [
+        {
+          "lane_type": "attack_now",
+          "target_label": "software_engineer",
+          "projected_residual_volume": 2307,
+          "count_in_sample": 26,
+          "status": "candidate",
+          "examples": [
+            "Android CI - CD Engineer",
+            "Back-End Engineer",
+            "Back-End Engineer (Python)",
+            "Backend Developer (Node.js)"
+          ]
+        },
+        {
+          "lane_type": "attack_now",
+          "target_label": "engineering_manager",
+          "projected_residual_volume": 710,
+          "count_in_sample": 8,
+          "status": "candidate",
+          "examples": [
+            "Engineering Director",
+            "Manager, Manufacturing Test Engineering (Intelligence Systems)",
+            "Manager, Software Development (GO)",
+            "Manager, Software Engineering (APEX)"
+          ]
+        },
+        {
+          "lane_type": "attack_now",
+          "target_label": "business_development_manager",
+          "projected_residual_volume": 621,
+          "count_in_sample": 7,
+          "status": "candidate",
+          "examples": [
+            "Analyst, Business Development",
+            "Business Development Executive, Gift City, India",
+            "Corporate Development Associate (M&A)",
+            "Corporate Development Manager"
+          ]
+        },
+        {
+          "lane_type": "attack_now",
+          "target_label": "sales_director",
+          "projected_residual_volume": 532,
+          "count_in_sample": 6,
+          "status": "candidate",
+          "examples": [
+            "Director, Enterprise - RCT vertical - New Logos",
+            "Director, Enterprise Sales - North America",
+            "Director, Sales",
+            "Regional Director, Enterprise"
+          ]
+        },
+        {
+          "lane_type": "attack_now",
+          "target_label": "financial_analyst",
+          "projected_residual_volume": 444,
+          "count_in_sample": 5,
+          "status": "candidate",
+          "examples": [
+            "Financial Planning & Analysis - TAO9",
+            "Financial Reconciliation Specialist",
+            "Head of Strategic Finance",
+            "Lead, Strategic Finance"
+          ]
+        },
+        {
+          "lane_type": "attack_now",
+          "target_label": "it_support_specialist",
+          "projected_residual_volume": 444,
+          "count_in_sample": 5,
+          "status": "candidate",
+          "examples": [
+            "Associate IT Specialist",
+            "Information System Specialist II",
+            "RCM Application Support Specialist",
+            "Technical Customer Engineer (Technical Support & Escalation Engineering)"
+          ]
+        },
+        {
+          "lane_type": "attack_now",
+          "target_label": "mechanical_engineer",
+          "projected_residual_volume": 444,
+          "count_in_sample": 5,
+          "status": "candidate",
+          "examples": [
+            "Fluids Engineer (Starship)",
+            "Plumbing - Fire Protection - Entry Level",
+            "Propulsion Design Engineer II, Combustion Devices",
+            "Sr. Staff Rotor Dynamics Engineer"
+          ]
+        },
+        {
+          "lane_type": "attack_now",
+          "target_label": "systems_administrator",
+          "projected_residual_volume": 444,
+          "count_in_sample": 5,
+          "status": "candidate",
+          "examples": [
+            "AWS Cloud Administrator",
+            "Business Applications Administrator",
+            "Manager, Salesforce & Systems Administrator",
+            "Senior IT Engineer"
+          ]
+        }
+      ]
+    },
+    "recoverable_with_context": {
+      "lane_type": "recoverable_with_context",
+      "status": "active",
+      "top_candidates": [
+        {
+          "lane_type": "recoverable_with_context",
+          "lane_name": "partner_lane_context_lane",
+          "target_label": "account_manager",
+          "target_family": "sales",
+          "status": "ready_for_production_candidate_review",
+          "shadow_delta_other": -27,
+          "risk": "medium-low",
+          "recommendation": "ready_to_draft_partner_lane_context_rule",
+          "concentration": {
+            "rows": 27,
+            "unique_titles": 15,
+            "unique_companies": 11,
+            "top_title": {
+              "value": "Core Partner Development Manager - UKI",
+              "count": 4,
+              "share": 0.1481
+            },
+            "top_company": {
+              "value": "hubspotjobs",
+              "count": 7,
+              "share": 0.2593
+            },
+            "top_titles": {
+              "Core Partner Development Manager - UKI": 4,
+              "Partner Growth Manager": 3,
+              "Strategic SI Partner Development Manager": 3,
+              "Senior Technology Partner Development Manager": 3,
+              "Partner Development Manager, Core": 2,
+              "Partner Development Manager": 2,
+              "Senior Partner Development Manager": 2,
+              "Partner Development Manager - Mandarin Speaker": 1
+            },
+            "top_companies": {
+              "hubspotjobs": 7,
+              "stripe": 4,
+              "fivetran": 3,
+              "klaviyo": 3,
+              "lightspeedhq": 3,
+              "affirm": 2,
+              "appsflyer": 1,
+              "bigid": 1
+            }
+          }
+        },
+        {
+          "lane_type": "recoverable_with_context",
+          "lane_name": "account_manager_context_lane",
+          "target_label": "account_manager",
+          "target_family": "sales",
+          "status": "not_ready_for_production_candidate_review_yet",
+          "shadow_delta_other": -19,
+          "risk": "medium",
+          "recommendation": "shadow_signal_real_but_needs_narrower_partner_lane",
+          "concentration": {
+            "rows": 19,
+            "unique_titles": 9,
+            "unique_companies": 8,
+            "top_title": {
+              "value": "Partner Growth Manager",
+              "count": 10,
+              "share": 0.5263
+            },
+            "top_company": {
+              "value": "connecteam",
+              "count": 8,
+              "share": 0.4211
+            },
+            "top_titles": {
+              "Partner Growth Manager": 10,
+              "Senior Partner Development Manager": 2,
+              "Partner Development Manager - Mandarin Speaker": 1,
+              "Strategic Partner Director": 1,
+              "Partner Development Manager": 1,
+              "Partner Development Manager (Banks)": 1,
+              "Partner Development Manager, Financial Partnership Capabilities": 1,
+              "Partner Development Manager, Global Networks": 1
+            },
+            "top_companies": {
+              "connecteam": 8,
+              "stripe": 3,
+              "affirm": 2,
+              "lightspeedhq": 2,
+              "appsflyer": 1,
+              "billcom": 1,
+              "iterable": 1,
+              "accelerationpartners": 1
+            }
+          }
+        }
+      ]
+    },
+    "taxonomy_gap": {
+      "lane_type": "taxonomy_gap",
+      "status": "active",
+      "top_candidates": [
+        {
+          "lane_type": "taxonomy_gap",
+          "target_label": "quantitative_researcher",
+          "target_family": "finance",
+          "status": "ready_for_future_taxonomy_patch_candidate"
+        },
+        {
+          "lane_type": "taxonomy_gap",
+          "target_label": "credit_analyst",
+          "target_family": "finance",
+          "status": "ready_for_future_taxonomy_patch_candidate"
+        },
+        {
+          "lane_type": "taxonomy_gap",
+          "target_label": "market_access_director",
+          "target_family": null,
+          "status": "deferred_pending_family_expansion"
+        }
+      ]
+    }
+  },
+  "recommended_execution_order": [
+    {
+      "step": 1,
+      "action": "official_non_role_rerun",
+      "why": "Cheap structural cleanup before any further residual ranking."
+    },
+    {
+      "step": 2,
+      "action": "partner_lane_rule_proposal",
+      "why": "Best validated recoverable_with_context lane so far."
+    },
+    {
+      "step": 3,
+      "action": "next_attack_now_batch",
+      "why": "Continue title-only recovery only on top ranked narrow clusters."
+    },
+    {
+      "step": 4,
+      "action": "taxonomy_patch_followup_rules",
+      "why": "Quantitative researcher and credit analyst now have official taxonomy support."
+    }
+  ],
+  "source_reports": {
+    "recoverability_backlog": "experiments/residual_audit/reports/recoverability_backlog_v1.json",
+    "next_batch_shortlist": "experiments/residual_audit/reports/phase_e10_next_batch_shortlist_v1.json",
+    "non_role_shadow": "experiments/residual_audit/reports/non_role_macroclass_shadow_v1.json",
+    "partner_lane_review": "experiments/title_context_layer/reports/phase_e15_partner_lane_formal_review_v1.json",
+    "account_lane_review": "experiments/title_context_layer/reports/phase_e15_account_manager_formal_review_v1.json",
+    "taxonomy_decision": "experiments/residual_audit/reports/phase_e12_taxonomy_decision_draft_v1.json"
+  }
+}

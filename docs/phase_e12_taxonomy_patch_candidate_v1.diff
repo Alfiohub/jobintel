@@ -1,0 +1,9 @@
+diff --git a/src/jobintel_next/pipelines/titles/taxonomy.py b/src/jobintel_next/pipelines/titles/taxonomy.py
+--- a/src/jobintel_next/pipelines/titles/taxonomy.py
++++ b/src/jobintel_next/pipelines/titles/taxonomy.py
+@@
+             "financial_analyst": "finance",
++            "quantitative_researcher": "finance",
++            "credit_analyst": "finance",
+             "wealth_advisor": "finance",
+             "accountant": "finance",

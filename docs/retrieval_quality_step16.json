@@ -1,0 +1,1649 @@
+{
+  "input_path": "data/jobs/jobs_indexed_en.jsonl",
+  "rows_total": 81011,
+  "queries_evaluated": [
+    {
+      "query_name": "data_engineer",
+      "filters": {
+        "normalized_title": "data_engineer",
+        "role_family": null,
+        "language_bucket": null,
+        "location_type": null,
+        "employment_type": null,
+        "has_salary": null,
+        "has_skills": null,
+        "title_is_other": null,
+        "skills_contains": [],
+        "salary_currency": null,
+        "sort_by": "published_at_desc",
+        "limit": 10
+      },
+      "results_count": 730,
+      "sample_rows": [
+        {
+          "url": "https://boards.greenhouse.io/accenturefederalservices/jobs/4607396006?gh_jid=4607396006",
+          "title_raw": "Data Engineer/Architect",
+          "normalized_title": "data_engineer",
+          "role_family": "data_engineering",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://boards.greenhouse.io/spacex/jobs/8391768002?gh_jid=8391768002",
+          "title_raw": "Data Engineer (Direct To Cell)",
+          "normalized_title": "data_engineer",
+          "role_family": "data_engineering",
+          "location_type": null,
+          "employment_type": "internship",
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://boards.greenhouse.io/spacex/jobs/8379395002?gh_jid=8379395002",
+          "title_raw": "Sr. Data Engineer (Starlink Growth)",
+          "normalized_title": "data_engineer",
+          "role_family": "data_engineering",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://boards.greenhouse.io/spacex/jobs/8379386002?gh_jid=8379386002",
+          "title_raw": "Sr. Data Engineer (Starlink Growth)",
+          "normalized_title": "data_engineer",
+          "role_family": "data_engineering",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://boards.greenhouse.io/spacex/jobs/8243150002?gh_jid=8243150002",
+          "title_raw": "Data Engineer (Starlink Growth)",
+          "normalized_title": "data_engineer",
+          "role_family": "data_engineering",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://boards.greenhouse.io/spacex/jobs/8240611002?gh_jid=8240611002",
+          "title_raw": "Data Engineer (Starlink Growth)",
+          "normalized_title": "data_engineer",
+          "role_family": "data_engineering",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://boards.greenhouse.io/spacex/jobs/8192168002?gh_jid=8192168002",
+          "title_raw": "Data Engineer, Ground Network Engineering (Gateway)",
+          "normalized_title": "data_engineer",
+          "role_family": "data_engineering",
+          "location_type": "hybrid",
+          "employment_type": null,
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/spauldingridge/jobs/5734967004",
+          "title_raw": "Data Engineer",
+          "normalized_title": "data_engineer",
+          "role_family": "data_engineering",
+          "location_type": "hybrid",
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/rockstargames/jobs/7637154003",
+          "title_raw": "Principal Data Engineer, Data Architecture",
+          "normalized_title": "data_engineer",
+          "role_family": "data_engineering",
+          "location_type": "onsite",
+          "employment_type": "full_time",
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/rockstargames/jobs/7619983003",
+          "title_raw": "Principal Data Engineer, Data Architecture",
+          "normalized_title": "data_engineer",
+          "role_family": "data_engineering",
+          "location_type": "onsite",
+          "employment_type": "full_time",
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false
+        }
+      ],
+      "quality": "strong",
+      "issues_observed": []
+    },
+    {
+      "query_name": "software_engineer",
+      "filters": {
+        "normalized_title": "software_engineer",
+        "role_family": null,
+        "language_bucket": null,
+        "location_type": null,
+        "employment_type": null,
+        "has_salary": null,
+        "has_skills": null,
+        "title_is_other": null,
+        "skills_contains": [],
+        "salary_currency": null,
+        "sort_by": "published_at_desc",
+        "limit": 10
+      },
+      "results_count": 8517,
+      "sample_rows": [
+        {
+          "url": "https://job-boards.greenhouse.io/outschool/jobs/4607423006",
+          "title_raw": "Software Engineer",
+          "normalized_title": "software_engineer",
+          "role_family": "software_engineering",
+          "location_type": "hybrid",
+          "employment_type": "full_time",
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7746721",
+          "title_raw": "Senior Staff Frontend Engineer, Merchant Experience",
+          "normalized_title": "software_engineer",
+          "role_family": "software_engineering",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7737239",
+          "title_raw": "Full Stack Engineer, Billing",
+          "normalized_title": "software_engineer",
+          "role_family": "software_engineering",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7715292",
+          "title_raw": "Full Stack Engineer, Compliance Applications",
+          "normalized_title": "software_engineer",
+          "role_family": "software_engineering",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7705412",
+          "title_raw": "Staff Software Engineer, Terminal Developer Productivity",
+          "normalized_title": "software_engineer",
+          "role_family": "software_engineering",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7671038",
+          "title_raw": "Forward Deployed Engineer, Professional Services",
+          "normalized_title": "software_engineer",
+          "role_family": "software_engineering",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7656562",
+          "title_raw": "Frontend Engineer, Privy",
+          "normalized_title": "software_engineer",
+          "role_family": "software_engineering",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7618977",
+          "title_raw": "Software Engineer, Core Technology",
+          "normalized_title": "software_engineer",
+          "role_family": "software_engineering",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7600792",
+          "title_raw": "Software Engineer, Experimental Projects",
+          "normalized_title": "software_engineer",
+          "role_family": "software_engineering",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7591894",
+          "title_raw": "Full Stack Engineer, Risk & Support",
+          "normalized_title": "software_engineer",
+          "role_family": "software_engineering",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        }
+      ],
+      "quality": "strong",
+      "issues_observed": []
+    },
+    {
+      "query_name": "marketing",
+      "filters": {
+        "normalized_title": null,
+        "role_family": "marketing",
+        "language_bucket": null,
+        "location_type": null,
+        "employment_type": null,
+        "has_salary": null,
+        "has_skills": null,
+        "title_is_other": null,
+        "skills_contains": [],
+        "salary_currency": null,
+        "sort_by": "updated_at_desc",
+        "limit": 10
+      },
+      "results_count": 2513,
+      "sample_rows": [
+        {
+          "url": "https://www.talkspace.com/careers/job?gh_jid=5831759004",
+          "title_raw": "Marketing Ops Engineer Intern",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "location_type": "remote",
+          "employment_type": "internship",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://www.talkspace.com/careers/job?gh_jid=5831378004",
+          "title_raw": "Marketing Design Intern",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "location_type": "remote",
+          "employment_type": "internship",
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://www.taboola.com/careers/job/7722945?gh_jid=7722945",
+          "title_raw": "Marketing Coordinator",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "location_type": "hybrid",
+          "employment_type": "full_time",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://www.taboola.com/careers/job/7713805?gh_jid=7713805",
+          "title_raw": "Marketing Manager - Taiwan / Hong Kong",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "location_type": "hybrid",
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://www.taboola.com/careers/job/7550360?gh_jid=7550360",
+          "title_raw": "Marketing Manager, China",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "location_type": "hybrid",
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://www.taboola.com/careers/job/7529880?gh_jid=7529880",
+          "title_raw": "Marketing Manager, Italy and Turkey",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "location_type": "hybrid",
+          "employment_type": "full_time",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://www.suki.ai/open-positions?gh_jid=7644217003",
+          "title_raw": "Product Marketing Manager (Partners)",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://www.suki.ai/open-positions?gh_jid=7629151003",
+          "title_raw": "Events Marketing Manager",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "location_type": "remote",
+          "employment_type": null,
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://www.storyblok.com/job?gh_jid=4791291101",
+          "title_raw": "Technical Product Marketing Manager - UK",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "location_type": "remote",
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://www.storyblok.com/job?gh_jid=4791261101",
+          "title_raw": "Technical Product Marketing Manager - USA",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "location_type": "remote",
+          "employment_type": null,
+          "has_salary": true,
+          "has_skills": false,
+          "title_is_other": false
+        }
+      ],
+      "quality": "usable",
+      "issues_observed": [
+        "Buona copertura, ma include varianti molto diverse (manager/coordinator/specialist)."
+      ]
+    },
+    {
+      "query_name": "account_executive",
+      "filters": {
+        "normalized_title": "account_executive",
+        "role_family": null,
+        "language_bucket": null,
+        "location_type": null,
+        "employment_type": null,
+        "has_salary": null,
+        "has_skills": null,
+        "title_is_other": null,
+        "skills_contains": [],
+        "salary_currency": null,
+        "sort_by": "published_at_desc",
+        "limit": 10
+      },
+      "results_count": 3152,
+      "sample_rows": [
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7728365",
+          "title_raw": "Account Executive, Product Sales - Capital",
+          "normalized_title": "account_executive",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7724828",
+          "title_raw": "National Account Executive, Enterprise (India)",
+          "normalized_title": "account_executive",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7693271",
+          "title_raw": "Enterprise Account Executive",
+          "normalized_title": "account_executive",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7686224",
+          "title_raw": "Account Executive - Funded Startups - French",
+          "normalized_title": "account_executive",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7675661",
+          "title_raw": "Account Executive, Product - BNPLs",
+          "normalized_title": "account_executive",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7577015",
+          "title_raw": "Account Executive, Platforms (Grower)",
+          "normalized_title": "account_executive",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7576967",
+          "title_raw": "Account Executive, Platforms (Existing Business)",
+          "normalized_title": "account_executive",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7555127",
+          "title_raw": "Account Executive, SMB - Existing Business (French-speaking)",
+          "normalized_title": "account_executive",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7553751",
+          "title_raw": "Account Executive, Existing Business, Iberia",
+          "normalized_title": "account_executive",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7546284",
+          "title_raw": "Account Executive, AI Sales",
+          "normalized_title": "account_executive",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        }
+      ],
+      "quality": "strong",
+      "issues_observed": []
+    },
+    {
+      "query_name": "account_manager",
+      "filters": {
+        "normalized_title": "account_manager",
+        "role_family": null,
+        "language_bucket": null,
+        "location_type": null,
+        "employment_type": null,
+        "has_salary": null,
+        "has_skills": null,
+        "title_is_other": null,
+        "skills_contains": [],
+        "salary_currency": null,
+        "sort_by": "published_at_desc",
+        "limit": 10
+      },
+      "results_count": 1814,
+      "sample_rows": [
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7650073",
+          "title_raw": "Technical Account Manager, Bridge",
+          "normalized_title": "account_manager",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7594376",
+          "title_raw": "Technical Account Manager, German OR Polish Speaking",
+          "normalized_title": "account_manager",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7564690",
+          "title_raw": "Technical Account Manager, Risk",
+          "normalized_title": "account_manager",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7549012",
+          "title_raw": "Technical Account Manager",
+          "normalized_title": "account_manager",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7545600",
+          "title_raw": "Account Manager - Scale, Bridge",
+          "normalized_title": "account_manager",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7528441",
+          "title_raw": "Technical Account Manager (Greater China)",
+          "normalized_title": "account_manager",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7524334",
+          "title_raw": "Business Development Manager, Agentic Commerce",
+          "normalized_title": "account_manager",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7366283",
+          "title_raw": "Technical Account Manager, Terminal",
+          "normalized_title": "account_manager",
+          "role_family": "sales",
+          "location_type": "remote",
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7204777",
+          "title_raw": "Technical Account Manager, Spanish Speaking",
+          "normalized_title": "account_manager",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7076173",
+          "title_raw": "Technical Account Manager, German Speaking",
+          "normalized_title": "account_manager",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        }
+      ],
+      "quality": "strong",
+      "issues_observed": []
+    },
+    {
+      "query_name": "remote_jobs",
+      "filters": {
+        "normalized_title": null,
+        "role_family": null,
+        "language_bucket": null,
+        "location_type": "remote",
+        "employment_type": null,
+        "has_salary": null,
+        "has_skills": null,
+        "title_is_other": null,
+        "skills_contains": [],
+        "salary_currency": null,
+        "sort_by": "published_at_desc",
+        "limit": 10
+      },
+      "results_count": 22186,
+      "sample_rows": [
+        {
+          "url": "https://job-boards.greenhouse.io/recordedfuture/jobs/8482248002",
+          "title_raw": "Senior Product Marketing Manager",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "location_type": "remote",
+          "employment_type": "full_time",
+          "has_salary": true,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7751786",
+          "title_raw": "Talent Brand Experience Manager",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": "remote",
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7743309",
+          "title_raw": "Design Recruiter (Fixed Term)",
+          "normalized_title": "technical_recruiter",
+          "role_family": "recruiting",
+          "location_type": "remote",
+          "employment_type": "temporary",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7743307",
+          "title_raw": "Frontend Platform Engineer, JavaScript Infrastructure",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": "remote",
+          "employment_type": "internship",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7737241",
+          "title_raw": "Backend / API Engineer, Billing",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": "remote",
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7733233",
+          "title_raw": "IT Support Engineer",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": "remote",
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7733216",
+          "title_raw": "IT Support Engineer",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": "remote",
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7723989",
+          "title_raw": "Internal Recruiting Coordinator",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": "remote",
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7722938",
+          "title_raw": "Credit Operations Analyst",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": "remote",
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7716032",
+          "title_raw": "Staff Engineer - Production Eng",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": "remote",
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        }
+      ],
+      "quality": "strong",
+      "issues_observed": []
+    },
+    {
+      "query_name": "jobs_with_salary",
+      "filters": {
+        "normalized_title": null,
+        "role_family": null,
+        "language_bucket": null,
+        "location_type": null,
+        "employment_type": null,
+        "has_salary": true,
+        "has_skills": null,
+        "title_is_other": null,
+        "skills_contains": [],
+        "salary_currency": null,
+        "sort_by": "published_at_desc",
+        "limit": 10
+      },
+      "results_count": 37867,
+      "sample_rows": [
+        {
+          "url": "https://job-boards.greenhouse.io/recordedfuture/jobs/8482248002",
+          "title_raw": "Senior Product Marketing Manager",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "location_type": "remote",
+          "employment_type": "full_time",
+          "has_salary": true,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/redcellpartners/jobs/5085420007",
+          "title_raw": "Staff Developer Experience Engineer",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": null,
+          "employment_type": "full_time",
+          "has_salary": true,
+          "has_skills": false,
+          "title_is_other": true
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/outschool/jobs/4607423006",
+          "title_raw": "Software Engineer",
+          "normalized_title": "software_engineer",
+          "role_family": "software_engineering",
+          "location_type": "hybrid",
+          "employment_type": "full_time",
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7653060",
+          "title_raw": "Solutions Architect, Commercial",
+          "normalized_title": "solutions_architect",
+          "role_family": "architecture",
+          "location_type": "onsite",
+          "employment_type": null,
+          "has_salary": true,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/zscaler/jobs/5058765007",
+          "title_raw": "Director, Strategic Alliances-AI Ecosystem",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": "hybrid",
+          "employment_type": "full_time",
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://www.esri.com/careers/5091856007?gh_jid=5091856007",
+          "title_raw": "Accounts Receivable and Collections Representative",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": "onsite",
+          "employment_type": null,
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://www.epirusinc.com/open-roles?gh_jid=5836504004",
+          "title_raw": "Accounting Manager",
+          "normalized_title": "accountant",
+          "role_family": "finance",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/webflow/jobs/7681033",
+          "title_raw": "Staff Developer Relations Engineer",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": "remote",
+          "employment_type": "full_time",
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://ensono.com/company/careers/jobs-board/?gh_jid=4560137005",
+          "title_raw": "Senior Data Center Operator",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": "remote",
+          "employment_type": "full_time",
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/k2spacecorporation/jobs/5141978008",
+          "title_raw": "Senior PCBA Rework Technician",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": true,
+          "has_skills": false,
+          "title_is_other": true
+        }
+      ],
+      "quality": "strong",
+      "issues_observed": []
+    },
+    {
+      "query_name": "jobs_with_python_skill",
+      "filters": {
+        "normalized_title": null,
+        "role_family": null,
+        "language_bucket": null,
+        "location_type": null,
+        "employment_type": null,
+        "has_salary": null,
+        "has_skills": null,
+        "title_is_other": null,
+        "skills_contains": [
+          "python"
+        ],
+        "salary_currency": null,
+        "sort_by": "published_at_desc",
+        "limit": 10
+      },
+      "results_count": 13660,
+      "sample_rows": [
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7743311",
+          "title_raw": "Data Writer and Editor",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7736640",
+          "title_raw": "Head of Connect & Crypto F&S",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7733233",
+          "title_raw": "IT Support Engineer",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": "remote",
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7733216",
+          "title_raw": "IT Support Engineer",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": "remote",
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7729743",
+          "title_raw": "Tech Ops Associate, New Grad (Mexico)",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": "onsite",
+          "employment_type": "full_time",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7716032",
+          "title_raw": "Staff Engineer - Production Eng",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": "remote",
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7714564",
+          "title_raw": "Staff Engineer, Infrastructure",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7703909",
+          "title_raw": "Solutions Architect, Start Ups and SMB (UKI)",
+          "normalized_title": "solutions_architect",
+          "role_family": "architecture",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7685855",
+          "title_raw": "Technical Program Manager, Risk",
+          "normalized_title": "technical_program_manager",
+          "role_family": "program_management",
+          "location_type": "remote",
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7678655",
+          "title_raw": "Technical Program Manager, Risk",
+          "normalized_title": "technical_program_manager",
+          "role_family": "program_management",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        }
+      ],
+      "quality": "noisy",
+      "issues_observed": [
+        "Skill extraction può includere ruoli non tecnici o other con mention generiche."
+      ]
+    },
+    {
+      "query_name": "normalized_not_other",
+      "filters": {
+        "normalized_title": null,
+        "role_family": null,
+        "language_bucket": null,
+        "location_type": null,
+        "employment_type": null,
+        "has_salary": null,
+        "has_skills": null,
+        "title_is_other": false,
+        "skills_contains": [],
+        "salary_currency": null,
+        "sort_by": "published_at_desc",
+        "limit": 10
+      },
+      "results_count": 34198,
+      "sample_rows": [
+        {
+          "url": "https://job-boards.greenhouse.io/recordedfuture/jobs/8482248002",
+          "title_raw": "Senior Product Marketing Manager",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "location_type": "remote",
+          "employment_type": "full_time",
+          "has_salary": true,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/outschool/jobs/4607423006",
+          "title_raw": "Software Engineer",
+          "normalized_title": "software_engineer",
+          "role_family": "software_engineering",
+          "location_type": "hybrid",
+          "employment_type": "full_time",
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7749540",
+          "title_raw": "Technical Program Manager, Extensibility Programs",
+          "normalized_title": "technical_program_manager",
+          "role_family": "program_management",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7747640",
+          "title_raw": "Forward Deployed AI Accelerator, Marketing",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7747638",
+          "title_raw": "Forward Deployed AI Accelerator, Marketing",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7747636",
+          "title_raw": "Forward Deployed AI Accelerator, Marketing",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7746721",
+          "title_raw": "Senior Staff Frontend Engineer, Merchant Experience",
+          "normalized_title": "software_engineer",
+          "role_family": "software_engineering",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7743309",
+          "title_raw": "Design Recruiter (Fixed Term)",
+          "normalized_title": "technical_recruiter",
+          "role_family": "recruiting",
+          "location_type": "remote",
+          "employment_type": "temporary",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7741833",
+          "title_raw": "Contracting Operations Specialist",
+          "normalized_title": "operations_specialist",
+          "role_family": "operations",
+          "location_type": null,
+          "employment_type": "contract",
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7737239",
+          "title_raw": "Full Stack Engineer, Billing",
+          "normalized_title": "software_engineer",
+          "role_family": "software_engineering",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        }
+      ],
+      "quality": "usable",
+      "issues_observed": [
+        "Ampia copertura ma mescola famiglie diverse; richiede filtri aggiuntivi di prodotto."
+      ]
+    },
+    {
+      "query_name": "other_with_skills",
+      "filters": {
+        "normalized_title": "other",
+        "role_family": null,
+        "language_bucket": null,
+        "location_type": null,
+        "employment_type": null,
+        "has_salary": null,
+        "has_skills": true,
+        "title_is_other": null,
+        "skills_contains": [],
+        "salary_currency": null,
+        "sort_by": "published_at_desc",
+        "limit": 10
+      },
+      "results_count": 21265,
+      "sample_rows": [
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7748617",
+          "title_raw": "Bridge Operations Associate",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": "onsite",
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7743311",
+          "title_raw": "Data Writer and Editor",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7743307",
+          "title_raw": "Frontend Platform Engineer, JavaScript Infrastructure",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": "remote",
+          "employment_type": "internship",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7738241",
+          "title_raw": "Verifications Operations Associate",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": "onsite",
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7737243",
+          "title_raw": "Engineer Manager, Billing",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": null,
+          "employment_type": "full_time",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7737241",
+          "title_raw": "Backend / API Engineer, Billing",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": "remote",
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7737237",
+          "title_raw": "Backend / API Engineer, Billing",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7736640",
+          "title_raw": "Head of Connect & Crypto F&S",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7736171",
+          "title_raw": "SDK Engineer (React/React Native), Privy",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7735676",
+          "title_raw": "Sales Manager - SMB",
+          "normalized_title": "other",
+          "role_family": "other",
+          "location_type": null,
+          "employment_type": "contract",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": true
+        }
+      ],
+      "quality": "noisy",
+      "issues_observed": [
+        "Query utile per discovery ma alta eterogeneità semantica."
+      ]
+    },
+    {
+      "query_name": "healthcare_clinical",
+      "filters": {
+        "normalized_title": null,
+        "role_family": "healthcare_clinical",
+        "language_bucket": null,
+        "location_type": null,
+        "employment_type": null,
+        "has_salary": null,
+        "has_skills": null,
+        "title_is_other": null,
+        "skills_contains": [],
+        "salary_currency": null,
+        "sort_by": "published_at_desc",
+        "limit": 10
+      },
+      "results_count": 2104,
+      "sample_rows": [
+        {
+          "url": "https://www.datavant.com/about/careers/open-roles/job?gh_jid=5153785008",
+          "title_raw": "Health Information Specialist I",
+          "normalized_title": "health_information_specialist",
+          "role_family": "healthcare_clinical",
+          "location_type": "onsite",
+          "employment_type": "full_time",
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/dianahealth94/jobs/4424228008",
+          "title_raw": "Women's Health Nurse Practitioner (Full-Time)",
+          "normalized_title": "nurse_practitioner",
+          "role_family": "healthcare_clinical",
+          "location_type": null,
+          "employment_type": "full_time",
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://www.datavant.com/about/careers/open-roles/job?gh_jid=5158721008",
+          "title_raw": "Health Information Specialist I",
+          "normalized_title": "health_information_specialist",
+          "role_family": "healthcare_clinical",
+          "location_type": "onsite",
+          "employment_type": "full_time",
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/dianahealth94/jobs/4885719008",
+          "title_raw": "Women's Health Nurse Practitioner (Full-Time)",
+          "normalized_title": "nurse_practitioner",
+          "role_family": "healthcare_clinical",
+          "location_type": null,
+          "employment_type": "full_time",
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/dianahealth94/jobs/4885674008",
+          "title_raw": "Women's Health Nurse Practitioner (Full-Time)",
+          "normalized_title": "nurse_practitioner",
+          "role_family": "healthcare_clinical",
+          "location_type": null,
+          "employment_type": "full_time",
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/dianahealth94/jobs/4885663008",
+          "title_raw": "Women's Health Nurse Practitioner (Full-Time)",
+          "normalized_title": "nurse_practitioner",
+          "role_family": "healthcare_clinical",
+          "location_type": null,
+          "employment_type": "full_time",
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/dianahealth94/jobs/5152060008",
+          "title_raw": "WHNP - Women's Health Nurse Practitioner (Full-Time)",
+          "normalized_title": "nurse_practitioner",
+          "role_family": "healthcare_clinical",
+          "location_type": null,
+          "employment_type": "full_time",
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://www.datavant.com/about/careers/open-roles/job?gh_jid=5160856008",
+          "title_raw": "Health Information Specialist I",
+          "normalized_title": "health_information_specialist",
+          "role_family": "healthcare_clinical",
+          "location_type": "onsite",
+          "employment_type": "full_time",
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://boards.greenhouse.io/spacex/jobs/8365449002?gh_jid=8365449002",
+          "title_raw": "Sr. DSP Engineer (Starshield)",
+          "normalized_title": "behavioral_support_specialist",
+          "role_family": "healthcare_clinical",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false
+        },
+        {
+          "url": "https://boards.greenhouse.io/spacex/jobs/8321911002?gh_jid=8321911002",
+          "title_raw": "DSP Engineer (Starshield)",
+          "normalized_title": "behavioral_support_specialist",
+          "role_family": "healthcare_clinical",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": true,
+          "has_skills": false,
+          "title_is_other": false
+        }
+      ],
+      "quality": "usable",
+      "issues_observed": [
+        "Buona precisione su label coperte, ma cluster clinico residuale resta in other."
+      ]
+    },
+    {
+      "query_name": "skilled_trades",
+      "filters": {
+        "normalized_title": null,
+        "role_family": "skilled_trades",
+        "language_bucket": null,
+        "location_type": null,
+        "employment_type": null,
+        "has_salary": null,
+        "has_skills": null,
+        "title_is_other": null,
+        "skills_contains": [],
+        "salary_currency": null,
+        "sort_by": "published_at_desc",
+        "limit": 10
+      },
+      "results_count": 713,
+      "sample_rows": [
+        {
+          "url": "https://job-boards.greenhouse.io/apexcompanies/jobs/5162470008",
+          "title_raw": "Landscape Technician (Stormwater)",
+          "normalized_title": "technician",
+          "role_family": "skilled_trades",
+          "location_type": null,
+          "employment_type": "full_time",
+          "has_salary": true,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/apexcompanies/jobs/5162449008",
+          "title_raw": "Landscape Technician (Stormwater)",
+          "normalized_title": "technician",
+          "role_family": "skilled_trades",
+          "location_type": null,
+          "employment_type": "full_time",
+          "has_salary": true,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://www.equipmentshare.com/careers/openings/?gh_jid=7759762",
+          "title_raw": "Heavy Equipment Shop Technician (Mechanic)",
+          "normalized_title": "mechanic",
+          "role_family": "skilled_trades",
+          "location_type": null,
+          "employment_type": "full_time",
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://www.equipmentshare.com/careers/openings/?gh_jid=7673762",
+          "title_raw": "Heavy Equipment Field Technician (Mechanic)",
+          "normalized_title": "field_technician",
+          "role_family": "skilled_trades",
+          "location_type": null,
+          "employment_type": "full_time",
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://www.carvana.com/careers/apply?gh_jid=7761311",
+          "title_raw": "Car Detailer",
+          "normalized_title": "car_detailer",
+          "role_family": "skilled_trades",
+          "location_type": null,
+          "employment_type": "part_time",
+          "has_salary": true,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://www.equipmentshare.com/careers/openings/?gh_jid=7759852",
+          "title_raw": "Heavy Equipment Shop Technician (Mechanic)",
+          "normalized_title": "mechanic",
+          "role_family": "skilled_trades",
+          "location_type": null,
+          "employment_type": "full_time",
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://www.equipmentshare.com/careers/openings/?gh_jid=7759784",
+          "title_raw": "Heavy Equipment Shop Technician (Mechanic)",
+          "normalized_title": "mechanic",
+          "role_family": "skilled_trades",
+          "location_type": null,
+          "employment_type": "full_time",
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://www.equipmentshare.com/careers/openings/?gh_jid=7759765",
+          "title_raw": "Heavy Equipment Field Technician (Mechanic)",
+          "normalized_title": "field_technician",
+          "role_family": "skilled_trades",
+          "location_type": null,
+          "employment_type": "full_time",
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://www.equipmentshare.com/careers/openings/?gh_jid=7759759",
+          "title_raw": "Heavy Equipment Field Technician (Mechanic)",
+          "normalized_title": "field_technician",
+          "role_family": "skilled_trades",
+          "location_type": null,
+          "employment_type": "full_time",
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        },
+        {
+          "url": "https://www.equipmentshare.com/careers/openings/?gh_jid=7758441",
+          "title_raw": "Heavy Equipment Field Technician (Mechanic)",
+          "normalized_title": "field_technician",
+          "role_family": "skilled_trades",
+          "location_type": "onsite",
+          "employment_type": "full_time",
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false
+        }
+      ],
+      "quality": "usable",
+      "issues_observed": [
+        "Pack utile ma ancora incompleto su varianti domain-specific."
+      ]
+    }
+  ],
+  "summary": {
+    "strong_queries": [
+      "data_engineer",
+      "software_engineer",
+      "account_executive",
+      "account_manager",
+      "remote_jobs",
+      "jobs_with_salary"
+    ],
+    "usable_queries": [
+      "marketing",
+      "normalized_not_other",
+      "healthcare_clinical",
+      "skilled_trades"
+    ],
+    "noisy_queries": [
+      "jobs_with_python_skill",
+      "other_with_skills"
+    ],
+    "weak_queries": []
+  },
+  "field_assessment": {
+    "most_useful_today": [
+      "normalized_title",
+      "role_family",
+      "location_type",
+      "has_salary",
+      "title_is_other"
+    ],
+    "weaker_fields_today": [
+      "skills (precision variabile)",
+      "employment_type (coverage parziale)",
+      "published_at/updated_at (qualità dipende dalla source)"
+    ]
+  },
+  "highest_roi_improvements": [
+    "Migliorare precisione skills extraction (ridurre falsi positivi su query skill-based).",
+    "Aumentare coverage title su cluster ad alto volume residuale per ridurre other con skill utili.",
+    "Aggiungere facet/filter combinati predefiniti di prodotto (title+family+location+salary)."
+  ],
+  "not_recommended_yet": [
+    "Semantic search prima di stabilizzare ulteriormente quality dei segnali strutturati.",
+    "Ranking avanzato senza ground-truth click/relevance.",
+    "Espansione taxonomy massiva non cluster-driven."
+  ]
+}

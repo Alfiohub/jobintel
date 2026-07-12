@@ -1,0 +1,16 @@
+{
+  "phase": "E.15.3",
+  "lane": "account_manager",
+  "baseline_dataset": "data/jobs/jobs_titled_en_recovery_v61_attack_now_batch.jsonl",
+  "baseline_other": 35581,
+  "joined_rows": 65,
+  "promotable_count": 19,
+  "review_only_count": 40,
+  "excluded_count": 6,
+  "shadow_matches_added": 19,
+  "shadow_other_after": 35562,
+  "shadow_delta_other": -19,
+  "decision": "not_ready_for_production_candidate_review_yet",
+  "recommendation": "shadow_signal_real_but_needs_narrower_partner_lane",
+  "next_step": "E.15.4 — Narrow Partner Growth / Partner Development Shadow Refinement"
+}

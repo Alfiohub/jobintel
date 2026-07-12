@@ -1,0 +1,21 @@
+{
+  "phase": "E.12.2",
+  "residual_base": "data/jobs/jobs_titled_en_recovery_v58_recoverability_batch.jsonl",
+  "residual_size": 35732,
+  "validated_candidates": [
+    {
+      "normalized_title": "quantitative_researcher",
+      "role_family": "finance",
+      "measured_residual_candidate_count": 92,
+      "decision": "validated_as_real_taxonomy_candidate",
+      "notes": "high residual mass; some cross-domain contamination requires later exclusion tests"
+    },
+    {
+      "normalized_title": "credit_analyst",
+      "role_family": "finance",
+      "measured_residual_candidate_count": 28,
+      "decision": "validated_as_real_taxonomy_candidate",
+      "notes": "lower residual mass but stronger title-surface precision; leave trader variants out of future rules"
+    }
+  ]
+}

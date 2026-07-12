@@ -1,0 +1,136 @@
+{
+  "input_sample": "experiments/residual_audit/reports/residual_audit_sample_v2_clean.jsonl",
+  "batch_size": 25,
+  "total_rows": 400,
+  "total_batches": 16,
+  "batches": [
+    {
+      "batch_id": "batch_01",
+      "batch_file": "experiments/residual_audit/reports/chatgpt_batches_v2_clean/batch_01.jsonl",
+      "start_index": 1,
+      "end_index": 25,
+      "row_count": 25,
+      "expected_annotation_output": "experiments/residual_audit/reports/annotations/batch_01_annotations.jsonl"
+    },
+    {
+      "batch_id": "batch_02",
+      "batch_file": "experiments/residual_audit/reports/chatgpt_batches_v2_clean/batch_02.jsonl",
+      "start_index": 26,
+      "end_index": 50,
+      "row_count": 25,
+      "expected_annotation_output": "experiments/residual_audit/reports/annotations/batch_02_annotations.jsonl"
+    },
+    {
+      "batch_id": "batch_03",
+      "batch_file": "experiments/residual_audit/reports/chatgpt_batches_v2_clean/batch_03.jsonl",
+      "start_index": 51,
+      "end_index": 75,
+      "row_count": 25,
+      "expected_annotation_output": "experiments/residual_audit/reports/annotations/batch_03_annotations.jsonl"
+    },
+    {
+      "batch_id": "batch_04",
+      "batch_file": "experiments/residual_audit/reports/chatgpt_batches_v2_clean/batch_04.jsonl",
+      "start_index": 76,
+      "end_index": 100,
+      "row_count": 25,
+      "expected_annotation_output": "experiments/residual_audit/reports/annotations/batch_04_annotations.jsonl"
+    },
+    {
+      "batch_id": "batch_05",
+      "batch_file": "experiments/residual_audit/reports/chatgpt_batches_v2_clean/batch_05.jsonl",
+      "start_index": 101,
+      "end_index": 125,
+      "row_count": 25,
+      "expected_annotation_output": "experiments/residual_audit/reports/annotations/batch_05_annotations.jsonl"
+    },
+    {
+      "batch_id": "batch_06",
+      "batch_file": "experiments/residual_audit/reports/chatgpt_batches_v2_clean/batch_06.jsonl",
+      "start_index": 126,
+      "end_index": 150,
+      "row_count": 25,
+      "expected_annotation_output": "experiments/residual_audit/reports/annotations/batch_06_annotations.jsonl"
+    },
+    {
+      "batch_id": "batch_07",
+      "batch_file": "experiments/residual_audit/reports/chatgpt_batches_v2_clean/batch_07.jsonl",
+      "start_index": 151,
+      "end_index": 175,
+      "row_count": 25,
+      "expected_annotation_output": "experiments/residual_audit/reports/annotations/batch_07_annotations.jsonl"
+    },
+    {
+      "batch_id": "batch_08",
+      "batch_file": "experiments/residual_audit/reports/chatgpt_batches_v2_clean/batch_08.jsonl",
+      "start_index": 176,
+      "end_index": 200,
+      "row_count": 25,
+      "expected_annotation_output": "experiments/residual_audit/reports/annotations/batch_08_annotations.jsonl"
+    },
+    {
+      "batch_id": "batch_09",
+      "batch_file": "experiments/residual_audit/reports/chatgpt_batches_v2_clean/batch_09.jsonl",
+      "start_index": 201,
+      "end_index": 225,
+      "row_count": 25,
+      "expected_annotation_output": "experiments/residual_audit/reports/annotations/batch_09_annotations.jsonl"
+    },
+    {
+      "batch_id": "batch_10",
+      "batch_file": "experiments/residual_audit/reports/chatgpt_batches_v2_clean/batch_10.jsonl",
+      "start_index": 226,
+      "end_index": 250,
+      "row_count": 25,
+      "expected_annotation_output": "experiments/residual_audit/reports/annotations/batch_10_annotations.jsonl"
+    },
+    {
+      "batch_id": "batch_11",
+      "batch_file": "experiments/residual_audit/reports/chatgpt_batches_v2_clean/batch_11.jsonl",
+      "start_index": 251,
+      "end_index": 275,
+      "row_count": 25,
+      "expected_annotation_output": "experiments/residual_audit/reports/annotations/batch_11_annotations.jsonl"
+    },
+    {
+      "batch_id": "batch_12",
+      "batch_file": "experiments/residual_audit/reports/chatgpt_batches_v2_clean/batch_12.jsonl",
+      "start_index": 276,
+      "end_index": 300,
+      "row_count": 25,
+      "expected_annotation_output": "experiments/residual_audit/reports/annotations/batch_12_annotations.jsonl"
+    },
+    {
+      "batch_id": "batch_13",
+      "batch_file": "experiments/residual_audit/reports/chatgpt_batches_v2_clean/batch_13.jsonl",
+      "start_index": 301,
+      "end_index": 325,
+      "row_count": 25,
+      "expected_annotation_output": "experiments/residual_audit/reports/annotations/batch_13_annotations.jsonl"
+    },
+    {
+      "batch_id": "batch_14",
+      "batch_file": "experiments/residual_audit/reports/chatgpt_batches_v2_clean/batch_14.jsonl",
+      "start_index": 326,
+      "end_index": 350,
+      "row_count": 25,
+      "expected_annotation_output": "experiments/residual_audit/reports/annotations/batch_14_annotations.jsonl"
+    },
+    {
+      "batch_id": "batch_15",
+      "batch_file": "experiments/residual_audit/reports/chatgpt_batches_v2_clean/batch_15.jsonl",
+      "start_index": 351,
+      "end_index": 375,
+      "row_count": 25,
+      "expected_annotation_output": "experiments/residual_audit/reports/annotations/batch_15_annotations.jsonl"
+    },
+    {
+      "batch_id": "batch_16",
+      "batch_file": "experiments/residual_audit/reports/chatgpt_batches_v2_clean/batch_16.jsonl",
+      "start_index": 376,
+      "end_index": 400,
+      "row_count": 25,
+      "expected_annotation_output": "experiments/residual_audit/reports/annotations/batch_16_annotations.jsonl"
+    }
+  ]
+}

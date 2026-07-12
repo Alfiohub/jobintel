@@ -1,0 +1,25 @@
+{
+  "phase": "E.12.3",
+  "decision": "taxonomy_decision_state_established",
+  "approved_candidates": [
+    {
+      "normalized_title": "quantitative_researcher",
+      "role_family": "finance",
+      "decision": "approve_candidate_label",
+      "status": "ready_for_future_taxonomy_patch_candidate"
+    },
+    {
+      "normalized_title": "credit_analyst",
+      "role_family": "finance",
+      "decision": "approve_candidate_label",
+      "status": "ready_for_future_taxonomy_patch_candidate"
+    }
+  ],
+  "deferred": [
+    {
+      "normalized_title": "market_access_director",
+      "decision": "defer",
+      "status": "deferred_pending_family_expansion"
+    }
+  ]
+}

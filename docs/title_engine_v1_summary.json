@@ -1,0 +1,51 @@
+{
+  "version": "v1_final_baseline",
+  "source_reports": {
+    "title_eval": "docs/title_eval_step13.json",
+    "other_clusters": "docs/title_other_clusters_step13.json"
+  },
+  "coverage": {
+    "rows_total": 81011,
+    "matched": 34198,
+    "other": 46813,
+    "matched_pct": 42.21,
+    "other_pct": 57.79
+  },
+  "residual_clusters": [
+    {"cluster_name": "other_long_tail", "total_frequency": 39916, "recommended_action": "keep_other"},
+    {"cluster_name": "skilled_trades", "total_frequency": 2065, "recommended_action": "add_new_normalized_title"},
+    {"cluster_name": "design_creative", "total_frequency": 1381, "recommended_action": "map_to_existing"},
+    {"cluster_name": "healthcare_clinical", "total_frequency": 1010, "recommended_action": "add_new_normalized_title"},
+    {"cluster_name": "compliance_risk", "total_frequency": 649, "recommended_action": "add_new_normalized_title"},
+    {"cluster_name": "logistics", "total_frequency": 513, "recommended_action": "add_new_normalized_title"},
+    {"cluster_name": "education", "total_frequency": 470, "recommended_action": "add_new_normalized_title"},
+    {"cluster_name": "retail_sales", "total_frequency": 397, "recommended_action": "add_new_normalized_title"},
+    {"cluster_name": "customer_service", "total_frequency": 318, "recommended_action": "map_to_existing"},
+    {"cluster_name": "engineering_leadership", "total_frequency": 94, "recommended_action": "add_new_normalized_title"}
+  ],
+  "governance": {
+    "new_label_gate": [
+      "frequenza sufficiente",
+      "distinguibilita dal titolo",
+      "utilita prodotto",
+      "non gia coperta da label esistente"
+    ],
+    "policy": "preferire other a mapping aggressivo"
+  },
+  "future_domain_packs": [
+    "skilled_trades",
+    "healthcare_clinical",
+    "design_creative",
+    "compliance_risk",
+    "logistics",
+    "education",
+    "retail_sales",
+    "customer_service",
+    "engineering_leadership"
+  ],
+  "notes": [
+    "taxonomy interna come source-of-truth primaria",
+    "ESCO/O*NET/ISCO non usati come base operativa primaria",
+    "espansioni future solo cluster-based e incrementalmente validate"
+  ]
+}

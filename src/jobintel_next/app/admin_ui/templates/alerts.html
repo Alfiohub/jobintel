@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Alerts</h1>
+<p>Runs count: <strong>{{ summary.runs_count }}</strong></p>
+<p>Latest run: <strong>{{ summary.latest_run_id or "-" }}</strong></p>
+<p>Latest total new matches: <strong>{{ summary.latest_run_total_new_matches or 0 }}</strong></p>
+<p>Recent OK/Error runs: <strong>{{ summary.recent_ok_runs_count }}/{{ summary.recent_error_runs_count }}</strong></p>
+
+<h2>Run All</h2>
+<form method="post" action="/admin/alerts/run-all">
+  <p><label><input type="checkbox" name="send_email"> Send email</label></p>
+  <p><input type="text" name="email_to" placeholder="alerts@example.com" value="{{ default_alert_email }}"></p>
+  <p class="muted">If email field is empty and send is enabled, default alert email is used: <span class="mono">{{ default_alert_email or "-" }}</span></p>
+  <p><button type="submit">Run all enabled searches</button></p>
+</form>
+
+<h2>Recent Runs</h2>
+{% if not runs %}
+<div class="empty-state">
+  <p><strong>No alert runs yet.</strong> Run alerts to generate your first run artifact and digest metadata.</p>
+  <div class="toolbar">
+    {% if not has_saved_searches %}
+      <a href="/admin/saved-searches/new">Create your first saved search</a>
+    {% endif %}
+    <a href="/admin/saved-searches">Review saved searches</a>
+    <a href="/admin/account">Set a default alert email</a>
+  </div>
+</div>
+{% endif %}
+<table>
+  <thead>
+    <tr>
+      <th>Run ID</th>
+      <th>Timestamp</th>
+      <th>New Matches</th>
+      <th>OK</th>
+      <th>Errors</th>
+      <th>Digest</th>
+      <th>Digest To</th>
+      <th>Digest Counts</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for r in runs %}
+    <tr>
+      <td><a href="/admin/alerts/{{ r.run_id }}">{{ r.run_id }}</a></td>
+      <td>{{ r.run_timestamp }}</td>
+      <td>{{ r.total_new_matches }}</td>
+      <td>{{ r.processed_ok }}</td>
+      <td>{{ r.processed_error }}</td>
+      <td>
+        {% if r.digest_delivery %}
+          {% if r.digest_delivery.email_sent %}
+            <span class="badge badge-delivery-ok">sent</span>
+          {% elif r.digest_delivery.email_error %}
+            <span class="badge badge-delivery-err">error</span>
+          {% else %}
+            <span class="badge badge-delivery-skip">skipped</span>
+          {% endif %}
+        {% else %}
+          <span class="muted">-</span>
+        {% endif %}
+      </td>
+      <td><span class="mono">{{ r.digest_delivery.to_email if r.digest_delivery else "-" }}</span></td>
+      <td>
+        {% if r.digest_delivery %}
+          a={{ r.digest_delivery.attempted_count or 0 }},
+          s={{ r.digest_delivery.sent_count or 0 }},
+          k={{ r.digest_delivery.skipped_count or 0 }},
+          e={{ r.digest_delivery.error_count or 0 }}
+        {% else %}
+          -
+        {% endif %}
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

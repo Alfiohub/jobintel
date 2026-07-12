@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Login</h1>
+<p class="muted">Local session login for admin UI.</p>
+<p class="muted">If login fails, verify email/password or create a user with <code>jobintel-next auth create-user</code>.</p>
+<form method="post" action="/login">
+  <input type="hidden" name="next" value="{{ next_url }}">
+  <p>
+    <label>Email</label><br>
+    <input type="text" name="email" value="{{ bootstrap_email }}" required>
+  </p>
+  <p>
+    <label>Password</label><br>
+    <input type="password" name="password" value="" required>
+  </p>
+  <p><button type="submit">Login</button></p>
+</form>
+<p class="muted">Default local password can be configured via <code>JOBINTEL_BOOTSTRAP_PASSWORD</code>.</p>
+{% endblock %}

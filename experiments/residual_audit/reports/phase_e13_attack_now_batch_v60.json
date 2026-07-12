@@ -1,0 +1,22 @@
+{
+  "phase": "E.13",
+  "batch": "v60_attack_now_batch",
+  "input_dataset": "data/jobs/jobs_titled_en_recovery_v58_recoverability_batch.jsonl",
+  "output_dataset": "data/jobs/jobs_titled_en_recovery_v60_attack_now_batch.jsonl",
+  "eval_report": "docs/title_recovery_pass_v60_attack_now_batch/title_eval_step13.md",
+  "baseline_other": 35732,
+  "output_other": 35620,
+  "delta_other": -112,
+  "tests": {
+    "command": "uv run pytest tests/pipelines/test_titles_stage_step12.py tests/pipelines/test_titles_eval_step13.py tests/test_cli_titles_step12.py",
+    "result": "75 passed"
+  },
+  "rule_deltas": {
+    "finance_fpna_core_v60": 49,
+    "finance_strategic_finance_core_v60": 20,
+    "industrial_physical_design_engineer_v60": 15,
+    "industrial_thermal_engineer_v60": 13,
+    "finance_credit_analyst_core_v60": 8,
+    "industrial_fluids_engineer_v60": 7
+  }
+}

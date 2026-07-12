@@ -1,0 +1,16 @@
+{
+  "phase": "E.15.5",
+  "lane": "partner_lane",
+  "baseline_dataset": "data/jobs/jobs_titled_en_recovery_v61_attack_now_batch.jsonl",
+  "baseline_other": 35581,
+  "partner_lane_promotable_count": 27,
+  "partner_lane_review_only_count": 3,
+  "partner_lane_excluded_count": 35,
+  "shadow_matches_added": 27,
+  "shadow_other_after": 35554,
+  "shadow_delta_other": -27,
+  "decision": "ready_for_production_candidate_review",
+  "risk": "medium-low",
+  "recommendation": "ready_to_draft_partner_lane_context_rule",
+  "next_step": "E.15.6 — Partner Lane Production-Candidate Rule Proposal"
+}

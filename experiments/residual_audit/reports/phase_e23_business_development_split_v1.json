@@ -1,0 +1,44 @@
+{
+  "phase": "E.23",
+  "decision": "business_development_cluster_requires_split",
+  "source_dataset": "data/jobs/jobs_titled_en_recovery_v67_open_set_router.jsonl",
+  "filtered_queue": {
+    "route_status": "manual_review",
+    "route_lane": "attack_now",
+    "suggested_target_label": "business_development_manager",
+    "count": 397
+  },
+  "sub_lanes": [
+    {
+      "name": "business_development_leadership",
+      "count": 144,
+      "decision": "review_first_then_possible_attack_now"
+    },
+    {
+      "name": "corporate_development",
+      "count": 83,
+      "decision": "separate_lane_not_same_as_business_development"
+    },
+    {
+      "name": "business_development_generic",
+      "count": 70,
+      "decision": "too_broad_keep_split"
+    },
+    {
+      "name": "business_development_individual_contributor",
+      "count": 59,
+      "decision": "best_first_candidate_inside_bd_cluster"
+    },
+    {
+      "name": "technical_or_partnership_bd",
+      "count": 21,
+      "decision": "recoverable_with_context_not_attack_now"
+    },
+    {
+      "name": "intern_low_signal",
+      "count": 20,
+      "decision": "deprioritize"
+    }
+  ],
+  "recommendation": "E.23.1 — Business Development IC Lane Review"
+}

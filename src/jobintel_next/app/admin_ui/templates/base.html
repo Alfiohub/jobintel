@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JobIntel Admin</title>
+  <style>
+    body { font-family: sans-serif; margin: 24px; color: #1f2937; background: #fafafa; }
+    nav { margin-bottom: 16px; }
+    nav a {
+      margin-right: 8px;
+      text-decoration: none;
+      color: #0f172a;
+      border: 1px solid #cbd5e1;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #fff;
+      display: inline-block;
+    }
+    nav a:hover { background: #f1f5f9; }
+    table { border-collapse: collapse; width: 100%; margin-top: 12px; }
+    th, td { border: 1px solid #cbd5e1; padding: 8px; text-align: left; vertical-align: top; background: #fff; }
+    .ok { color: #0a7a33; }
+    .err { color: #9a1b1b; }
+    .row-actions form { display: inline; margin-right: 6px; }
+    input[type="text"], textarea, select { width: 100%; max-width: 680px; }
+    textarea { min-height: 80px; }
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 999px;
+      padding: 2px 8px;
+      border: 1px solid transparent;
+      line-height: 1.4;
+      white-space: nowrap;
+    }
+    .badge-state-new { background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; }
+    .badge-state-seen { background: #f3f4f6; color: #374151; border-color: #d1d5db; }
+    .badge-state-saved { background: #ecfdf5; color: #047857; border-color: #a7f3d0; }
+    .badge-state-dismissed { background: #fef2f2; color: #b91c1c; border-color: #fecaca; }
+    .badge-loc-remote { background: #f0f9ff; color: #0369a1; border-color: #bae6fd; }
+    .badge-loc-hybrid { background: #fff7ed; color: #c2410c; border-color: #fed7aa; }
+    .badge-loc-onsite { background: #f5f3ff; color: #6d28d9; border-color: #ddd6fe; }
+    .badge-salary-yes { background: #fffbeb; color: #a16207; border-color: #fde68a; }
+    .badge-salary-no { background: #f9fafb; color: #6b7280; border-color: #e5e7eb; }
+    .badge-due-now { background: #ecfdf5; color: #047857; border-color: #a7f3d0; }
+    .badge-due-later { background: #f3f4f6; color: #374151; border-color: #d1d5db; }
+    .badge-delivery-ok { background: #ecfdf5; color: #047857; border-color: #a7f3d0; }
+    .badge-delivery-skip { background: #fff7ed; color: #c2410c; border-color: #fed7aa; }
+    .badge-delivery-err { background: #fef2f2; color: #b91c1c; border-color: #fecaca; }
+    .kpi-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin: 10px 0 16px; }
+    .kpi { background: #fff; border: 1px solid #dbe2ea; border-radius: 10px; padding: 10px; }
+    .kpi .k { font-size: 12px; color: #64748b; }
+    .kpi .v { font-size: 20px; font-weight: 700; }
+    .panel { background: #fff; border: 1px solid #dbe2ea; border-radius: 10px; padding: 12px; margin: 10px 0 14px; }
+    .empty-state { background: #fff; border: 1px dashed #94a3b8; border-radius: 10px; padding: 12px; margin: 10px 0 14px; }
+    .checklist { margin: 0; padding-left: 18px; }
+    .checklist li { margin-bottom: 8px; }
+    .checklist a { margin-left: 8px; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 14px; }
+    .toolbar a { text-decoration: none; border: 1px solid #d1d5db; background: #fff; padding: 6px 10px; border-radius: 8px; color: #111827; }
+    .toolbar a.active { background: #111827; color: #fff; border-color: #111827; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; }
+    .muted { color: #6b7280; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/admin">Overview</a>
+    <a href="/admin/today">Today</a>
+    <a href="/admin/review">Review</a>
+    <a href="/admin/inbox">Inbox</a>
+    <a href="/admin/shortlist">Shortlist</a>
+    <a href="/admin/templates">Templates</a>
+    <a href="/admin/notifications">Notifications</a>
+    <a href="/admin/saved-searches">Saved Searches</a>
+    <a href="/admin/saved-searches/new">New Saved Search</a>
+    <a href="/admin/alerts">Alerts</a>
+    <a href="/admin/account">Account</a>
+    <a href="/docs">API Docs</a>
+    {% if request.session.get("user_id") %}
+      <span class="badge">User: {{ request.session.get("user_email") or request.session.get("user_id") }}</span>
+      <form method="post" action="/logout" style="display:inline;">
+        <button type="submit">Logout</button>
+      </form>
+    {% else %}
+      <a href="/login">Login</a>
+    {% endif %}
+  </nav>
+  {% if message %}
+    <p class="ok">{{ message }}</p>
+  {% endif %}
+  {% if error %}
+    <p class="err">{{ error }}</p>
+  {% endif %}
+  {% block content %}{% endblock %}
+</body>
+</html>

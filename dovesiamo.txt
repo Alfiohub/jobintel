@@ -1,0 +1,374 @@
+Sì. Per arrivarci in modo serio serve trattarlo come un sistema, non come una serie infinita di fix sui titoli.
+
+## 1. Definire il contratto del sistema
+Prima di tutto devi fissare cosa produce la pipeline.
+
+**Output minimo**
+- `raw_title`
+- `clean_title`
+- `normalized_title`
+- `role_family`
+- `match_status` (`matched` / `other`)
+- `match_method` (`rule`, `semantic_review`, `manual`, ecc.)
+- `confidence`
+- `rule_id` o `decision_trace`
+
+**Metodo**
+- definire uno schema stabile
+- non cambiare significato dei campi a metà progetto
+- tracciare sempre “perché” un titolo è stato classificato
+
+Questo è fondamentale per debugging, audit e downstream.
+
+---
+
+## 2. Stabilire una taxonomy governabile
+La taxonomy è il cuore. Se è confusa, tutto il resto si rompe.
+
+**Cosa fare**
+- mantenere canonical titles interni pochi, chiari e non ridondanti
+- associare ogni label a una sola `role_family`
+- evitare doppioni semantici
+- evitare label troppo strette o brand-specific
+- separare:
+  - label vere
+  - alias/sinonimi
+  - esempi di raw title
+
+**Metodo**
+- taxonomy review periodica
+- regole di naming coerenti
+- decisioni esplicite:
+  - `map_to_existing`
+  - `new_label_worth_adding`
+  - `keep_other_by_policy`
+
+**Domanda chiave per ogni label nuova**
+- questa label serve davvero ai downstream?
+- è stabile nel tempo?
+- ha volume sufficiente?
+- è distinguibile solo dal titolo?
+
+---
+
+## 3. Costruire un motore rule-based forte come base
+Il rule-based deve restare il primo livello ufficiale.
+
+**Perché**
+- è leggibile
+- è testabile
+- è controllabile
+- è ottimo sui cluster chiari
+
+**Metodo**
+- regole strette
+- contesto forte obbligatorio
+- guardrail espliciti
+- test positivi e negativi per ogni nuova regola
+- niente regex larghe su token generici
+
+**Pattern operativo**
+- analisi residuo
+- cluster selezionato
+- proposta mapping
+- patch minima
+- test
+- eval
+- report
+
+Questo è il motore di produzione.
+
+---
+
+## 4. Gestire `other` come backlog strutturato
+`other` non è spazzatura. È la coda di lavoro del sistema.
+
+**Cosa fare**
+- versionare ogni pass
+- misurare sempre:
+  - total rows
+  - other before/after
+  - delta
+  - top residuals
+  - cluster residui
+- non lavorare mai “a sensazione”
+
+**Metodo**
+- frequency analysis
+- normalized residual strings
+- token / bigram / trigram analysis
+- fuzzy clustering
+- sample review
+
+Obiettivo: capire se il residuo contiene cluster veri o solo long tail ambiguo.
+
+---
+
+## 5. Usare un semantic layer come reviewer, non come sostituto
+Qui è la lezione principale emersa dal progetto.
+
+**Il semantic layer deve fare**
+- discovery
+- retrieval di candidati
+- ranking
+- reviewer support
+- evidence aggregation da ESCO/O*NET
+
+**Non deve fare direttamente**
+- auto-mapping in produzione
+- override opachi delle regole ufficiali
+
+**Metodo**
+- corpus interno dei canonical titles
+- corpus ESCO
+- corpus O*NET
+- retrieval lessicale + semantic-lite/embeddings
+- ranking trasparente con score
+- reviewer output con:
+  - candidate interno
+  - candidate ESCO
+  - candidate O*NET
+  - rischio
+  - recommended action
+
+Questo riduce il lavoro manuale e migliora la priorità dei prossimi batch.
+
+---
+
+## 6. Separare 4 tipi di problemi
+Non tutti i residual sono uguali. Devi classificarli.
+
+### Tipo A: `safe_rule_candidate`
+Titoli chiari, pattern forti, basso rischio.
+
+**Metodo**
+- promuovere in batch piccoli
+- patchare nel classifier ufficiale
+
+### Tipo B: `needs_tighter_rule`
+Cluster reale, ma serve una regola più precisa.
+
+**Metodo**
+- aggiungere esclusioni
+- limitare il contesto
+- test negativi forti
+
+### Tipo C: `taxonomy_gap`
+Il titolo è reale, ma manca un target interno pulito.
+
+**Metodo**
+- review tassonomica
+- possibile nuova label
+- oppure cleanup/merge delle label esistenti
+
+### Tipo D: `needs_context_not_title_only`
+Il titolo da solo non basta.
+
+**Metodo**
+- non forzare mapping
+- usare altri segnali:
+  - description
+  - department
+  - company context
+  - seniority
+  - neighboring terms
+
+Questo evita di sprecare tempo su problemi che non si risolvono con una regex.
+
+---
+
+## 7. Introdurre un layer di contesto
+A un certo punto il titolo da solo non basta più.
+
+**Segnali utili**
+- job description
+- top keywords
+- department/team
+- skills
+- company industry
+- function inferred from posting text
+
+**Metodo**
+- title-first pipeline
+- se `other` o bassa confidenza:
+  - context enricher
+  - context features
+  - semantic reviewer con titolo + contesto
+- mai usare il contesto per allargare tutto indiscriminatamente
+
+Questo è il passaggio da title normalization a role inference leggera.
+
+---
+
+## 8. Definire metriche vere, non solo `other`
+`other` è utile, ma non basta.
+
+**Metriche da tracciare**
+- `other rate`
+- precision su sample manuale
+- overmatch rate
+- regressioni per family
+- volume per normalized title
+- nuove label introdotte
+- percentuale di match per metodo (`rule`, `manual`, `reviewed`)
+- stabilità nel tempo
+
+**Metodo**
+- audit manuale periodico sui nuovi match
+- benchmark fisso
+- confronto per versione
+- stop automatico se peggiora la precisione
+
+---
+
+## 9. Governare le nuove label
+Le nuove label sono costose. Se ne aggiungi troppe, la taxonomy collassa.
+
+**Regola**
+Aggiungi una nuova label solo se:
+- il cluster è ricorrente
+- semanticamente coerente
+- utile ai downstream
+- non mappabile bene a una label esistente
+- sostenibile da mantenere
+
+**Metodo**
+- RFC leggera o proposal document
+- motivazione
+- esempi
+- family target
+- rischio di overlap
+- expected volume
+
+Esattamente come stai facendo con `data_science_manager`.
+
+---
+
+## 10. Lavorare per batch, non per singolo titolo
+Il processo corretto è batch-based.
+
+**Loop ideale**
+1. baseline
+2. residual analysis
+3. semantic review
+4. taxonomy review se serve
+5. shortlist cluster
+6. safe adoption batch
+7. test
+8. eval
+9. audit
+10. stop/continue
+
+**Metodo**
+- massimo 3-5 cluster a batch
+- solo cluster ad alta chiarezza
+- report finale breve e comparabile
+
+Questo mantiene controllo e velocità.
+
+---
+
+## 11. Definire i criteri di stop
+Un sistema maturo sa anche quando fermarsi.
+
+**Fermarsi quando**
+- il delta `other` per batch scende troppo
+- restano quasi solo cluster ambigui
+- il rischio overmatch cresce
+- servirebbe contesto, non più regole
+- aggiungere nuove label dà più debito che valore
+
+**A quel punto**
+- o accetti il residuo
+- o passi a un hybrid title+context design
+- o introduci un semantic layer più forte ma sempre governato
+
+---
+
+## 12. Architettura finale consigliata
+La forma migliore del sistema, alla fine, è questa:
+
+### Layer 1: Normalization base
+- cleaning
+- canonicalizzazione stringhe
+- seniority stripping
+- location stripping
+- title normalization preliminare
+
+### Layer 2: Official rule engine
+- mapping deterministico
+- alta precisione
+- explainable
+- testato
+
+### Layer 3: Semantic reviewer
+- candidate retrieval
+- ranking
+- ESCO/O*NET support
+- cluster discovery
+- proposal generation
+
+### Layer 4: Taxonomy governance
+- review nuove label
+- merge/cleanup
+- decision policy
+
+### Layer 5: Context assist
+- usato solo sui casi dove il titolo non basta
+
+### Layer 6: Evaluation and audit
+- benchmark
+- sampling
+- quality gates
+- release notes
+
+---
+
+## 13. Roadmap pratica
+Se dovessi trasformarlo in piano operativo:
+
+### Fase 1
+Stabilizzare taxonomy e regole ad alta precisione.
+
+### Fase 2
+Ridurre `other` con safe batches sui cluster puliti.
+
+### Fase 3
+Costruire shadow discovery con ESCO/O*NET.
+
+### Fase 4
+Promuovere solo i findings sicuri della shadow.
+
+### Fase 5
+Aprire semantic layer come reviewer.
+
+### Fase 6
+Fare taxonomy cleanup mirato.
+
+### Fase 7
+Aggiungere hybrid context per i cluster irrisolvibili col solo titolo.
+
+### Fase 8
+Definire maturity model e stop conditions.
+
+---
+
+## 14. Il metodo giusto, in una frase
+Il metodo corretto è:
+
+**rule-based in produzione, semantic layer per discovery e ranking, taxonomy governata con disciplina, contesto solo dove il titolo non basta.**
+
+Questa è la strada per avere una pipeline:
+- precisa
+- coerente
+- utile
+- mantenibile
+
+Se vuoi, il prossimo step posso scriverti una **roadmap operativa completa in tabella**, con:
+- fase
+- obiettivo
+- input
+- output
+- metriche
+- criterio di stop  
+così diventa il piano master del progetto.

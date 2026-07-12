@@ -1,0 +1,26 @@
+{
+  "phase": "E.18",
+  "decision": "official_non_role_promotion_validated",
+  "baseline": {
+    "dataset": "data/jobs/jobs_titled_en_recovery_v61_attack_now_batch.jsonl",
+    "rows_total": 81011,
+    "matched": 45430,
+    "other": 35581
+  },
+  "official_rerun": {
+    "dataset": "data/jobs/jobs_titled_en_recovery_v64_non_role_official.jsonl",
+    "matched": 45399,
+    "other": 35273,
+    "non_role": 339
+  },
+  "delta_vs_v61": {
+    "matched": -31,
+    "other": -308,
+    "non_role": 339
+  },
+  "shadow_reference": {
+    "shadow_non_role_total": 563,
+    "official_title_only_non_role_total": 339
+  },
+  "next_step": "E.15.6 — Partner Lane Production-Candidate Rule Proposal"
+}

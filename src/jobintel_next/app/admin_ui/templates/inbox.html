@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Job Inbox</h1>
+<div class="kpi-grid">
+  <div class="kpi"><div class="k">Filtered</div><div class="v">{{ total_count }}</div></div>
+  <div class="kpi"><div class="k">New</div><div class="v">{{ state_counts.new }}</div></div>
+  <div class="kpi"><div class="k">Seen</div><div class="v">{{ state_counts.seen }}</div></div>
+  <div class="kpi"><div class="k">Saved</div><div class="v">{{ state_counts.saved }}</div></div>
+  <div class="kpi"><div class="k">Dismissed</div><div class="v">{{ state_counts.dismissed }}</div></div>
+</div>
+
+<div class="toolbar">
+  <a href="/admin/shortlist">Open shortlist workspace</a>
+  <a class="{% if state_filter == 'new' %}active{% endif %}" href="/admin/inbox?state=new&sort_by={{ sort_by }}&include_dismissed={% if include_dismissed %}true{% else %}false{% endif %}">New</a>
+  <a class="{% if state_filter == 'saved' %}active{% endif %}" href="/admin/inbox?state=saved&sort_by={{ sort_by }}&include_dismissed={% if include_dismissed %}true{% else %}false{% endif %}">Saved</a>
+  <a class="{% if state_filter == 'seen' %}active{% endif %}" href="/admin/inbox?state=seen&sort_by={{ sort_by }}&include_dismissed={% if include_dismissed %}true{% else %}false{% endif %}">Seen</a>
+  <a class="{% if state_filter == 'dismissed' %}active{% endif %}" href="/admin/inbox?state=dismissed&sort_by={{ sort_by }}&include_dismissed=true">Dismissed</a>
+  <a class="{% if state_filter == 'all' %}active{% endif %}" href="/admin/inbox?state=all&sort_by={{ sort_by }}&include_dismissed={% if include_dismissed %}true{% else %}false{% endif %}">All</a>
+</div>
+
+<h2>Filters</h2>
+<form method="get" action="/admin/inbox">
+  <p>
+    <label>State
+      <select name="state">
+        <option value="new" {% if state_filter == "new" %}selected{% endif %}>new</option>
+        <option value="saved" {% if state_filter == "saved" %}selected{% endif %}>saved</option>
+        <option value="seen" {% if state_filter == "seen" %}selected{% endif %}>seen</option>
+        <option value="dismissed" {% if state_filter == "dismissed" %}selected{% endif %}>dismissed</option>
+        <option value="all" {% if state_filter == "all" %}selected{% endif %}>all</option>
+      </select>
+    </label>
+  </p>
+  <p>
+    <label>Sort
+      <select name="sort_by">
+        <option value="rank" {% if sort_by == "rank" %}selected{% endif %}>rank</option>
+        <option value="newest" {% if sort_by == "newest" %}selected{% endif %}>newest</option>
+      </select>
+    </label>
+  </p>
+  <p>
+    <label><input type="checkbox" name="include_dismissed" value="true" {% if include_dismissed %}checked{% endif %}> Include dismissed</label>
+  </p>
+  <p>
+    <label><input type="checkbox" name="only_remote" value="true" {% if only_remote %}checked{% endif %}> Only remote</label>
+    <label><input type="checkbox" name="only_salary" value="true" {% if only_salary %}checked{% endif %}> Only salary</label>
+    <label><input type="checkbox" name="exclude_other" value="true" {% if exclude_other %}checked{% endif %}> Exclude other titles</label>
+    <label><input type="checkbox" name="high_rank_only" value="true" {% if high_rank_only %}checked{% endif %}> Only high rank</label>
+  </p>
+  <p>
+    <label>Role family <input type="text" name="role_family" value="{{ role_family }}"></label>
+  </p>
+  <p>
+    <label>Normalized title <input type="text" name="normalized_title" value="{{ normalized_title }}"></label>
+  </p>
+  <p>
+    <label>Limit <input type="text" name="limit" value="{{ limit }}"></label>
+    <label>Offset <input type="text" name="offset" value="{{ offset }}"></label>
+  </p>
+  <p><button type="submit">Apply filters</button></p>
+</form>
+
+<h2>Jobs</h2>
+{% if total_count == 0 %}
+<div class="empty-state">
+  {% if not has_saved_searches %}
+    <p><strong>Inbox is empty.</strong> You do not have saved searches yet.</p>
+    <div class="toolbar">
+      <a href="/admin/saved-searches/new">Create your first saved search</a>
+      <a href="/admin/saved-searches">Open saved searches</a>
+    </div>
+  {% elif not has_alert_runs %}
+    <p><strong>Inbox is waiting for alert runs.</strong> Run alerts once to populate workflow history.</p>
+    <div class="toolbar">
+      <a href="/admin/alerts">Run alerts</a>
+      <a href="/admin/saved-searches">Review saved searches</a>
+    </div>
+  {% else %}
+    <p><strong>No jobs match current inbox filters.</strong> Try another state/filter or include dismissed jobs.</p>
+    <div class="toolbar">
+      <a href="/admin/inbox?state=new&include_dismissed=true">Show new jobs</a>
+      <a href="/admin/inbox?state=all&include_dismissed=true">Show all states</a>
+      <a href="/admin/alerts">Open alerts history</a>
+    </div>
+  {% endif %}
+</div>
+{% endif %}
+<table>
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Title</th>
+      <th>URL</th>
+      <th>Signals</th>
+      <th>Why ranked</th>
+      <th>State</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in rows %}
+    <tr>
+      <td><span class="badge">{{ row.rank_score }}</span></td>
+      <td>
+        <strong>{{ row.title_raw or "-" }}</strong><br>
+        <span class="muted mono">{{ row.normalized_title or "-" }}</span>
+      </td>
+      <td><a class="mono" href="{{ row.url }}" target="_blank" rel="noopener noreferrer">{{ row.url }}</a></td>
+      <td>
+        <span class="badge">{{ row.role_family or "other" }}</span>
+        {% if row.location_type == "remote" %}
+          <span class="badge badge-loc-remote">remote</span>
+        {% elif row.location_type == "hybrid" %}
+          <span class="badge badge-loc-hybrid">hybrid</span>
+        {% elif row.location_type == "onsite" %}
+          <span class="badge badge-loc-onsite">onsite</span>
+        {% endif %}
+        {% if row.has_salary %}
+          <span class="badge badge-salary-yes">salary</span>
+        {% else %}
+          <span class="badge badge-salary-no">no salary</span>
+        {% endif %}
+      </td>
+      <td><span class="muted">{{ row.rank_reason or "-" }}</span></td>
+      <td>
+        <span class="badge badge-state-{{ row.job_state }}">{{ row.job_state }}</span>
+      </td>
+      <td class="row-actions">
+        <form method="post" action="/admin/jobs/state">
+          <input type="hidden" name="job_url" value="{{ row.url }}">
+          <input type="hidden" name="state" value="seen">
+          <input type="hidden" name="next" value="{{ next_url }}">
+          <button type="submit">Seen</button>
+        </form>
+        <form method="post" action="/admin/jobs/state">
+          <input type="hidden" name="job_url" value="{{ row.url }}">
+          <input type="hidden" name="state" value="saved">
+          <input type="hidden" name="next" value="{{ next_url }}">
+          <button type="submit">Save</button>
+        </form>
+        <form method="post" action="/admin/jobs/state">
+          <input type="hidden" name="job_url" value="{{ row.url }}">
+          <input type="hidden" name="state" value="dismissed">
+          <input type="hidden" name="next" value="{{ next_url }}">
+          <button type="submit">Dismiss</button>
+        </form>
+        <form method="post" action="/admin/jobs/state/clear">
+          <input type="hidden" name="job_url" value="{{ row.url }}">
+          <input type="hidden" name="next" value="{{ next_url }}">
+          <button type="submit">Reset</button>
+        </form>
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

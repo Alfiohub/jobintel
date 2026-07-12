@@ -1,0 +1,76 @@
+{
+  "input_paths": {
+    "canonical": "/tmp/pytest-of-afio/pytest-24/test_run_indexed_stage_treats_0/canonical.jsonl",
+    "language": "/tmp/pytest-of-afio/pytest-24/test_run_indexed_stage_treats_0/language.jsonl",
+    "cleaned": "/tmp/pytest-of-afio/pytest-24/test_run_indexed_stage_treats_0/cleaned.jsonl",
+    "extracted": "/tmp/pytest-of-afio/pytest-24/test_run_indexed_stage_treats_0/extracted.jsonl",
+    "titled": "/tmp/pytest-of-afio/pytest-24/test_run_indexed_stage_treats_0/titled.jsonl"
+  },
+  "output_path": "/tmp/pytest-of-afio/pytest-24/test_run_indexed_stage_treats_0/jobs_indexed_en.jsonl",
+  "rows_total": 1,
+  "invalid_rows_by_input": {
+    "canonical": 0,
+    "language": 0,
+    "cleaned": 0,
+    "extracted": 0,
+    "titled": 0
+  },
+  "missing_components": 0,
+  "language_bucket_counts": {
+    "en": 1
+  },
+  "field_fill_rates": {
+    "normalized_title": {
+      "count": 1,
+      "pct": 100.0
+    },
+    "role_family": {
+      "count": 1,
+      "pct": 100.0
+    },
+    "title_clean": {
+      "count": 1,
+      "pct": 100.0
+    },
+    "title_is_other": {
+      "count": 1,
+      "pct": 100.0
+    }
+  },
+  "completeness_flags": {
+    "has_salary": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "has_skills": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "has_location": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "title_is_other": {
+      "count": 1,
+      "pct": 100.0
+    }
+  },
+  "sample_indexed_rows": [
+    {
+      "url": "https://example.com/non-role",
+      "title_raw": "General Application",
+      "normalized_title": "non_role_recruiting_entry",
+      "role_family": "non_role",
+      "language_bucket": "en",
+      "has_salary": false,
+      "has_skills": false,
+      "has_location": false,
+      "title_is_other": true
+    }
+  ],
+  "known_limits": [
+    "No ranking or semantic retrieval in this step.",
+    "Composition requires URL-level alignment across upstream artifacts.",
+    "Quality flags are lightweight and deterministic by design."
+  ]
+}

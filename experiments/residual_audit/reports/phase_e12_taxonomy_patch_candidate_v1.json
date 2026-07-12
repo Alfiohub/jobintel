@@ -1,0 +1,12 @@
+{
+  "phase": "E.12.4",
+  "decision": "ready_for_isolated_taxonomy_patch_review",
+  "patch_target": "src/jobintel_next/pipelines/titles/taxonomy.py",
+  "proposed_insertions": [
+    {"normalized_title": "quantitative_researcher", "role_family": "finance"},
+    {"normalized_title": "credit_analyst", "role_family": "finance"}
+  ],
+  "excluded": [
+    {"normalized_title": "market_access_director", "reason": "deferred_pending_family_expansion"}
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "phase": "E.23.2",
+  "decision": "business_development_executive_batch_validated",
+  "baseline": {
+    "dataset": "data/jobs/jobs_titled_en_recovery_v66_partner_lane_candidate.jsonl",
+    "other": 35255,
+    "matched": 45417
+  },
+  "updated": {
+    "dataset": "data/jobs/jobs_titled_en_recovery_v68_bd_executive_batch.jsonl",
+    "other": 35236,
+    "matched": 45436
+  },
+  "delta": {
+    "other": -19,
+    "matched": 19
+  },
+  "rule": {
+    "rule_id": "sales_business_development_executive_v68",
+    "target_label": "account_executive",
+    "target_family": "sales",
+    "hits": 19
+  },
+  "recommendation": "keep_rule_and_return_to_prioritized_queues"
+}

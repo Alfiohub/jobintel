@@ -1,0 +1,269 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Saved Searches</h1>
+<p><a href="/admin/saved-searches/new">Create new saved search</a></p>
+<div class="panel">
+  <p><strong>Search operations model:</strong> strategy + hygiene + lifecycle.</p>
+  <p class="muted">
+    Daily: execute in Today/Notifications.
+    Weekly: maintain Saved Searches (coverage, portfolio, hygiene, archive).
+  </p>
+  <div class="toolbar">
+    <a href="/admin/today">Go to Today</a>
+    <a href="/admin/review">Go to Review</a>
+    <a href="/admin/notifications">Go to Notifications</a>
+  </div>
+</div>
+<div class="toolbar">
+  <a href="/admin/saved-searches?lifecycle=all" class="{% if lifecycle_filter == 'all' %}active{% endif %}">all</a>
+  <a href="/admin/saved-searches?lifecycle=active" class="{% if lifecycle_filter == 'active' %}active{% endif %}">active</a>
+  <a href="/admin/saved-searches?lifecycle=disabled" class="{% if lifecycle_filter == 'disabled' %}active{% endif %}">disabled</a>
+  <a href="/admin/saved-searches?lifecycle=archived" class="{% if lifecycle_filter == 'archived' %}active{% endif %}">archived</a>
+</div>
+<div class="panel" id="target-coverage">
+  <h3>Target Coverage</h3>
+  {% if coverage.empty_profile %}
+    <p class="muted">Target profile is empty. Set titles/role families/locations in Account to enable coverage analysis.</p>
+    <div class="toolbar">
+      <a href="/admin/account">Set target profile</a>
+    </div>
+  {% else %}
+    <div class="kpi-grid">
+      <div class="kpi"><div class="k">Targets</div><div class="v">{{ coverage.total_targets }}</div></div>
+      <div class="kpi"><div class="k">Covered</div><div class="v">{{ coverage.covered_count }}</div></div>
+      <div class="kpi"><div class="k">Partial</div><div class="v">{{ coverage.partial_count }}</div></div>
+      <div class="kpi"><div class="k">Missing</div><div class="v">{{ coverage.missing_count }}</div></div>
+      <div class="kpi"><div class="k">Coverage %</div><div class="v">{{ coverage.coverage_pct }}%</div></div>
+    </div>
+    {% if coverage.missing_count > 0 %}
+      <p><strong>Coverage gaps needing action</strong></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Target</th>
+            <th>Status</th>
+            <th>Why</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in coverage.role_items + coverage.title_items + coverage.location_items %}
+            {% if item.status != "covered" %}
+              <tr>
+                <td>{{ item.kind }}</td>
+                <td>{{ item.target }}</td>
+                <td>
+                  {% if item.status == "missing" %}
+                    <span class="badge badge-state-dismissed">missing</span>
+                  {% else %}
+                    <span class="badge badge-due-later">partial</span>
+                  {% endif %}
+                </td>
+                <td class="muted">{{ item.reason }}</td>
+                <td><a href="{{ item.href }}">Create search for missing target</a></td>
+              </tr>
+            {% endif %}
+          {% endfor %}
+        </tbody>
+      </table>
+    {% endif %}
+    <div class="toolbar">
+      <a href="/admin/saved-searches/new?use_target_profile=true">Create target-aligned search</a>
+      <a href="/admin/account">Edit target profile</a>
+    </div>
+  {% endif %}
+</div>
+<div class="panel" id="portfolio-strategy">
+  <h3>Search Portfolio / Strategy</h3>
+  <div class="kpi-grid">
+    <div class="kpi"><div class="k">Enabled</div><div class="v">{{ portfolio.enabled_count }}</div></div>
+    <div class="kpi"><div class="k">Broad discovery</div><div class="v">{{ portfolio.category_counts.broad_discovery }}</div></div>
+    <div class="kpi"><div class="k">Target-aligned</div><div class="v">{{ portfolio.category_counts.target_aligned }}</div></div>
+    <div class="kpi"><div class="k">Location-focused</div><div class="v">{{ portfolio.category_counts.location_focused }}</div></div>
+    <div class="kpi"><div class="k">Manual/pack review</div><div class="v">{{ portfolio.category_counts.manual_pack_review }}</div></div>
+  </div>
+  <p class="muted">Low-yield enabled searches: {{ portfolio.low_yield_count }}</p>
+  {% if portfolio.insights %}
+    <p><strong>Portfolio insights</strong></p>
+    <ul class="checklist">
+      {% for insight in portfolio.insights %}
+        <li>
+          <span class="badge {% if insight.level == 'high' %}badge-state-dismissed{% elif insight.level == 'medium' %}badge-due-later{% else %}badge-state-saved{% endif %}">{{ insight.level }}</span>
+          {{ insight.text }}
+          <a href="{{ insight.href }}">Open</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>
+<div class="panel" id="search-hygiene">
+  <h3>Search Hygiene</h3>
+  <div class="kpi-grid">
+    <div class="kpi"><div class="k">Duplicates</div><div class="v">{{ hygiene.category_counts.duplicate }}</div></div>
+    <div class="kpi"><div class="k">Overlaps</div><div class="v">{{ hygiene.category_counts.overlap }}</div></div>
+    <div class="kpi"><div class="k">Noisy</div><div class="v">{{ hygiene.category_counts.noisy }}</div></div>
+    <div class="kpi"><div class="k">Stale</div><div class="v">{{ hygiene.category_counts.stale }}</div></div>
+    <div class="kpi"><div class="k">Low-yield</div><div class="v">{{ hygiene.category_counts.low_yield }}</div></div>
+    <div class="kpi"><div class="k">Candidate disable/review</div><div class="v">{{ hygiene.candidate_disable_count }}</div></div>
+  </div>
+  {% if hygiene["items"] %}
+    <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Severity</th>
+          <th>Search</th>
+          <th>Reason</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for item in hygiene["items"] %}
+        <tr>
+          <td>{{ item.category }}</td>
+          <td>
+            {% if item.severity == "high" %}
+              <span class="badge badge-state-dismissed">high</span>
+            {% elif item.severity == "medium" %}
+              <span class="badge badge-due-later">medium</span>
+            {% else %}
+              <span class="badge badge-state-saved">low</span>
+            {% endif %}
+          </td>
+          <td>{{ item.search_name }}</td>
+          <td>
+            {{ item.reason }}
+            {% if item.related_ids %}
+              <div class="muted mono">related: {{ item.related_ids|join(", ") }}</div>
+            {% endif %}
+          </td>
+          <td class="row-actions">
+            <form method="get" action="/admin/saved-searches/{{ item.search_id }}"><button type="submit">Open</button></form>
+            <form method="get" action="/admin/saved-searches/{{ item.search_id }}/edit"><button type="submit">Edit</button></form>
+            {% if item.is_enabled %}
+              <form method="post" action="/admin/saved-searches/{{ item.search_id }}/disable"><button type="submit">Disable</button></form>
+            {% endif %}
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p class="muted">No hygiene issues detected on enabled saved searches.</p>
+  {% endif %}
+</div>
+{% if not has_saved_searches %}
+<div class="empty-state">
+  <p><strong>No saved searches yet.</strong> Create one search to start receiving new matches and alerts.</p>
+  <div class="toolbar">
+    <a href="/admin/saved-searches/new">Create your first saved search</a>
+    <a href="/admin/alerts">Run alerts after creating it</a>
+    <a href="/admin/account">Set a default alert email</a>
+  </div>
+</div>
+{% endif %}
+{% if lifecycle_filter == "archived" %}
+<p class="muted">Archive view: historical searches kept for reference, excluded from run-due, coverage, portfolio and hygiene.</p>
+{% endif %}
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Frequency</th>
+      <th>Lifecycle</th>
+      <th>Due</th>
+      <th>Enabled</th>
+      <th>Last Run</th>
+      <th>Current</th>
+      <th>Latest New</th>
+      <th>Saved Marks</th>
+      <th>Dismissed Marks</th>
+      <th>Saved %</th>
+      <th>Dismiss %</th>
+      <th>Quality</th>
+      <th>Strategy</th>
+      <th>Target Alignment</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for s in saved_searches %}
+    {% set insight = insights_map.get(s.search_id, {}) %}
+    {% set alignment = alignment_map.get(s.search_id, {}) %}
+    {% set strategy = strategy_map.get(s.search_id, {}) %}
+    <tr>
+      <td><a href="/admin/saved-searches/{{ s.search_id }}">{{ s.name }}</a></td>
+      <td>{{ s.query_type }}</td>
+      <td>{{ s.frequency }}</td>
+      <td>
+        {% if s.lifecycle == "active" %}
+          <span class="badge badge-state-saved">active</span>
+        {% elif s.lifecycle == "disabled" %}
+          <span class="badge badge-due-later">disabled</span>
+        {% else %}
+          <span class="badge">archived</span>
+        {% endif %}
+      </td>
+      <td>
+        {% if due_map.get(s.search_id) %}
+          <span class="badge badge-due-now">due now</span>
+        {% else %}
+          <span class="badge badge-due-later">not due</span>
+        {% endif %}
+      </td>
+      <td>{{ s.is_enabled }}</td>
+      <td>{{ s.last_run_at or "-" }}</td>
+      <td>{{ insight.get("current_count", "-") }}</td>
+      <td>{{ insight.get("latest_new_count", "-") }}</td>
+      <td>{{ insight.get("saved_marked_count", 0) }}</td>
+      <td>{{ insight.get("dismissed_marked_count", 0) }}</td>
+      <td>{{ ((insight.get("saved_rate", 0.0) * 100) | round(1)) }}%</td>
+      <td>{{ ((insight.get("dismiss_rate", 0.0) * 100) | round(1)) }}%</td>
+      <td>
+        {% if insight.get("quality_flags") %}
+          {% for flag in insight.get("quality_flags") %}
+            <span class="badge">{{ flag }}</span>
+          {% endfor %}
+        {% else %}
+          <span class="muted">ok</span>
+        {% endif %}
+      </td>
+      <td>
+        <span class="badge">{{ strategy.get("label", "-") }}</span>
+        <div class="muted">{{ strategy.get("reason", "") }}</div>
+      </td>
+      <td>
+        {% if alignment.get("status") == "aligned" %}
+          <span class="badge badge-state-saved">{{ alignment.get("label") }}</span>
+        {% elif alignment.get("status") == "missing" %}
+          <span class="badge badge-state-dismissed">{{ alignment.get("label") }}</span>
+        {% elif alignment.get("status") == "partial" %}
+          <span class="badge badge-due-later">{{ alignment.get("label") }}</span>
+        {% else %}
+          <span class="badge">{{ alignment.get("label", "n/a") }}</span>
+        {% endif %}
+        <div class="muted">{{ alignment.get("reason", "") }}</div>
+      </td>
+      <td class="row-actions">
+        {% if s.lifecycle == "archived" %}
+        <form method="post" action="/admin/saved-searches/{{ s.search_id }}/restore"><button type="submit">Restore</button></form>
+        {% else %}
+          {% if s.is_enabled %}
+          <form method="post" action="/admin/saved-searches/{{ s.search_id }}/disable"><button type="submit">Disable</button></form>
+          {% else %}
+          <form method="post" action="/admin/saved-searches/{{ s.search_id }}/enable"><button type="submit">Enable</button></form>
+          {% endif %}
+          <form method="post" action="/admin/saved-searches/{{ s.search_id }}/archive"><button type="submit">Archive</button></form>
+        {% endif %}
+        <form method="get" action="/admin/saved-searches/{{ s.search_id }}"><button type="submit">Open</button></form>
+        <form method="get" action="/admin/saved-searches/{{ s.search_id }}/edit"><button type="submit">Edit</button></form>
+        <form method="post" action="/admin/saved-searches/{{ s.search_id }}/run"><button type="submit">Run</button></form>
+        <form method="post" action="/admin/saved-searches/{{ s.search_id }}/delete"><button type="submit">Delete</button></form>
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

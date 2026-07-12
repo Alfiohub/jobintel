@@ -1,0 +1,10 @@
+{
+  "occupations": 3043,
+  "lookup_rows": 32918,
+  "aliases_processed": 32918,
+  "files": {
+    "occupations_en": "ESCOfiles/ESCO dataset - v1.2.1 - classification - en - csv/occupations_en.csv",
+    "broaderRelationsOccPillar_en": "ESCOfiles/ESCO dataset - v1.2.1 - classification - en - csv/broaderRelationsOccPillar_en.csv",
+    "ISCOGroups_en": "ESCOfiles/ESCO dataset - v1.2.1 - classification - en - csv/ISCOGroups_en.csv"
+  }
+}

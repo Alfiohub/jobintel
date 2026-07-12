@@ -1,0 +1,103 @@
+{
+  "customer_success_manager": {
+    "promotable_count": 40,
+    "review_only_count": 72,
+    "excluded_count": 6,
+    "top_promotable_titles": {
+      "Onboarding Specialist": 13,
+      "Client Retention Specialist (Remote)": 5,
+      "SaaS Onboarding Specialist": 2,
+      "Customer Onboarding Specialist": 2,
+      "Manager, Customer Adoption & Success (EMEA)": 2,
+      "Counterparty Onboarding Specialist": 1,
+      "Data Onboarding Specialist": 1,
+      "Customer Onboarding Specialist - French Market": 1,
+      "Bilingual Client Retention Specialist": 1,
+      "Client Retention Specialist": 1,
+      "Technical Onboarding Specialist [Contract]": 1,
+      "Client Onboarding Specialist": 1
+    },
+    "top_review_titles": {
+      "Engagement Manager II": 10,
+      "Engagement Manager": 8,
+      "Engagement Manager, Prepared by Axon": 3,
+      "Senior Product Engagement Manager, Clarity": 3,
+      "Senior Engagement Manager": 3,
+      "Salesforce Engagement Manager": 2,
+      "Senior Enterprise Engagement Manager": 2,
+      "Engagement Manager, Analytical Consulting": 2,
+      "Engagement Manager, Public Sector": 2,
+      "Engagement Manager - EMEA": 1,
+      "Engagement Manager, META": 1,
+      "Technical Onboarding & Engagement Manager": 1
+    },
+    "decision": "ready_for_shadow_scoring_on_promotable_subset"
+  },
+  "project_manager": {
+    "services_delivery_count": 18,
+    "engineering_delivery_count": 79,
+    "review_only_count": 0,
+    "top_services_titles": {
+      "Cloud Professional Services Manager": 1,
+      "Delivery Excellence Manager (APAC hours)": 1,
+      "Delivery Excellence Manager - Central": 1,
+      "Delivery Excellence Manager- Central": 1,
+      "Delivery Excellence Manager (East Coast - EMEA hours)": 1,
+      "Senior Consultant - Transformation & Operations (T&O) Portfolio Management": 1,
+      "Sr. Director, Portfolio Management (Remote)": 1,
+      "Finance Expert - Portfolio Management": 1,
+      "Professional Services Manager, ALPR": 1,
+      "Professional Services Manager, DACH": 1,
+      "Professional Services Manager, Dedrone": 1,
+      "Professional Services Manager, Fleet": 1
+    },
+    "top_engineering_titles": {
+      "Project Engineer": 6,
+      "Senior Project Engineer": 4,
+      "Civil Project Engineer- Drinking Water": 4,
+      "Senior Transportation Project Engineer": 4,
+      "Civil Project Engineer": 4,
+      "Senior Project Engineer- Drinking Water": 3,
+      "Project Engineer - Land Development": 3,
+      "Project Engineer - Site Design - Municipal": 2,
+      "Project Engineer - Water - Wastewater": 2,
+      "Environmental Project Engineer": 2,
+      "Civil Project Engineer - Land Development": 2,
+      "Senior Project Engineer, Manufacturing Development": 1
+    },
+    "decision": "split_before_any_context_gate"
+  },
+  "account_manager": {
+    "partner_count": 49,
+    "client_count": 16,
+    "review_only_count": 0,
+    "top_partner_titles": {
+      "Partner Growth Manager": 11,
+      "Strategic SI Partner Development Manager": 11,
+      "Core Partner Development Manager - UKI": 4,
+      "Partner Development Manager": 3,
+      "Senior Technology Partner Development Manager": 3,
+      "Partner Development Manager, Core": 2,
+      "Senior Partner Development Manager": 2,
+      "Global Partner Experience Lead": 1,
+      "Partner Development Manager - Mandarin Speaker": 1,
+      "Regional Partner Director - Northeast": 1,
+      "Strategic Partner Director": 1,
+      "Partner Director, IBM - APAC": 1
+    },
+    "top_client_titles": {
+      "Regional Client Partnership Specialist, Educational Services": 6,
+      "Charter Partnerships Manager": 1,
+      "Provider Engagement Specialist (Contractor), Alabama": 1,
+      "Provider Engagement Specialist (Contractor), Mississippi": 1,
+      "Provider Engagement Specialist (Contractor), Tennessee": 1,
+      "Provider Engagement Specialist III": 1,
+      "Manager, Client Strategy": 1,
+      "Senior Manager, Client Strategy": 1,
+      "AVP, Client Strategist, Global Fine Arts": 1,
+      "Client Strategist": 1,
+      "Senior Enterprise Client Strategist": 1
+    },
+    "decision": "reviewer_first_keep_context"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "occupations_rows": 3043,
+  "broader_rows": 3648,
+  "isco_rows": 619,
+  "occupation_skill_rows": 126051,
+  "files": {
+    "occupations_en": "/home/afio/Documenti/Code/Python_code/Jinaj/joballert2/ESCOfiles/ESCO dataset - v1.2.1 - classification - en - csv/occupations_en.csv",
+    "broaderRelationsOccPillar_en": "/home/afio/Documenti/Code/Python_code/Jinaj/joballert2/ESCOfiles/ESCO dataset - v1.2.1 - classification - en - csv/broaderRelationsOccPillar_en.csv",
+    "ISCOGroups_en": "/home/afio/Documenti/Code/Python_code/Jinaj/joballert2/ESCOfiles/ESCO dataset - v1.2.1 - classification - en - csv/ISCOGroups_en.csv",
+    "occupationSkillRelations_en": "/home/afio/Documenti/Code/Python_code/Jinaj/joballert2/ESCOfiles/ESCO dataset - v1.2.1 - classification - en - csv/occupationSkillRelations_en.csv"
+  }
+}

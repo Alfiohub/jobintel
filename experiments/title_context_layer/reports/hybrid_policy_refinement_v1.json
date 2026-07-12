@@ -1,0 +1,121 @@
+{
+  "priority_titles": [
+    "Onboarding Specialist",
+    "Partner Manager",
+    "Producer"
+  ],
+  "clusters": [
+    {
+      "title_clean": "Onboarding Specialist",
+      "volume": 13,
+      "dominant_family": "customer_success",
+      "dominant_count": 12,
+      "dominant_share": 0.9231,
+      "high_conf_examples_for_safe_family": 10,
+      "conflicting_examples": 1,
+      "decision": "ready_for_tight_rule",
+      "recommended_target_label": "customer_success_manager",
+      "recommended_target_family": "customer_success",
+      "promotion_type": "tight_rule_candidate",
+      "examples": [
+        {
+          "url": "https://job-boards.greenhouse.io/adyen/jobs/7422228",
+          "company_name": "adyen",
+          "top_context_family": "customer_success",
+          "top_context_score": 3,
+          "context_confidence": "medium"
+        },
+        {
+          "url": "https://job-boards.eu.greenhouse.io/cision/jobs/4745539101",
+          "company_name": "cision",
+          "top_context_family": "customer_success",
+          "top_context_score": 5,
+          "context_confidence": "high"
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/focusfinancialpartners/jobs/5704625004",
+          "company_name": "focusfinancialpartners",
+          "top_context_family": "people_operations",
+          "top_context_score": 3,
+          "context_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "title_clean": "Partner Manager",
+      "volume": 9,
+      "dominant_family": "sales",
+      "dominant_count": 9,
+      "dominant_share": 1.0,
+      "high_conf_examples_for_safe_family": 1,
+      "conflicting_examples": 0,
+      "decision": "review_only_keep_context",
+      "recommended_target_label": "account_manager",
+      "recommended_target_family": "sales",
+      "promotion_type": "tight_rule_candidate",
+      "examples": [
+        {
+          "url": "https://job-boards.greenhouse.io/beyondtrust/jobs/7397198",
+          "company_name": "beyondtrust",
+          "top_context_family": "sales",
+          "top_context_score": 3,
+          "context_confidence": "medium"
+        },
+        {
+          "url": "https://jobs.elastic.co/jobs?gh_jid=7343843&gh_jid=7343843",
+          "company_name": "elastic",
+          "top_context_family": "sales",
+          "top_context_score": 5,
+          "context_confidence": "high"
+        },
+        {
+          "url": "https://www.esri.com/careers/5036435007?gh_jid=5036435007",
+          "company_name": "esri",
+          "top_context_family": "sales",
+          "top_context_score": 3,
+          "context_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "title_clean": "Producer",
+      "volume": 27,
+      "dominant_family": "content",
+      "dominant_count": 26,
+      "dominant_share": 0.963,
+      "high_conf_examples_for_safe_family": 13,
+      "conflicting_examples": 1,
+      "decision": "ready_for_tight_rule",
+      "recommended_target_label": "content_producer",
+      "recommended_target_family": "content",
+      "promotion_type": "tight_rule_candidate",
+      "examples": [
+        {
+          "url": "https://job-boards.greenhouse.io/2k/jobs/7564923003",
+          "company_name": "2k",
+          "top_context_family": "software_engineering",
+          "top_context_score": 5,
+          "context_confidence": "high"
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/dept/jobs/7740135",
+          "company_name": "dept",
+          "top_context_family": "content",
+          "top_context_score": 3,
+          "context_confidence": "medium"
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/eucalyptus/jobs/4651418005",
+          "company_name": "eucalyptus",
+          "top_context_family": "content",
+          "top_context_score": 2,
+          "context_confidence": "medium"
+        }
+      ]
+    }
+  ],
+  "final_recommendation": {
+    "decision": "ready_for_context_gated_rule_design",
+    "reason": "At least two priority ambiguous titles have dominant context families strong enough to justify drafting future gated production rules."
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "baseline": {
+    "dataset": "data/jobs/jobs_titled_en_recovery_v55_semantic_batch.jsonl",
+    "rows_total": 81011,
+    "other_baseline": 35952
+  },
+  "proposals": [
+    {
+      "title_clean": "Onboarding Specialist",
+      "recommended_target_label": "customer_success_manager",
+      "recommended_target_family": "customer_success",
+      "dominant_family_share": 0.9231,
+      "high_conf_examples": 10,
+      "conflicting_examples": 1,
+      "required_context_signals": [
+        "customer",
+        "client",
+        "merchant",
+        "implementation",
+        "onboarding"
+      ],
+      "exclusion_signals": [
+        "employee",
+        "new hire",
+        "hr",
+        "hris",
+        "employee lifecycle",
+        "kyc",
+        "aml",
+        "verification",
+        "due diligence"
+      ],
+      "risk": "medium-low",
+      "decision": "ready_for_context_gated_rule_draft"
+    },
+    {
+      "title_clean": "Producer",
+      "recommended_target_label": "content_producer",
+      "recommended_target_family": "content",
+      "dominant_family_share": 0.963,
+      "high_conf_examples": 13,
+      "conflicting_examples": 1,
+      "required_context_signals": [
+        "content",
+        "news",
+        "broadcast",
+        "creative",
+        "video",
+        "campaign"
+      ],
+      "exclusion_signals": [
+        "game",
+        "jira",
+        "scrum",
+        "engineers",
+        "technical"
+      ],
+      "risk": "medium",
+      "decision": "ready_for_context_gated_rule_draft"
+    }
+  ],
+  "deferred": [
+    {
+      "title_clean": "Partner Manager",
+      "reason": "dominant family is sales but high-confidence evidence is still too thin for production draft"
+    }
+  ],
+  "final_recommendation": {
+    "decision": "ready_to_draft_context_gated_rules_for_review",
+    "reason": "Two ambiguous title families now have enough context dominance and conflict control to justify shadow drafting of production-candidate gated rules."
+  }
+}

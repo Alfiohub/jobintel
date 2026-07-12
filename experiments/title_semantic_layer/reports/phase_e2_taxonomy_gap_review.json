@@ -1,0 +1,1233 @@
+{
+  "baseline": {
+    "repo": "joballert2",
+    "dataset": "data/jobs/jobs_titled_en_recovery_v53_safe.jsonl",
+    "rows_total": 81011,
+    "other_baseline": 36092,
+    "status": "ok"
+  },
+  "taxonomy_gap_inventory": [
+    {
+      "cluster_name": "engineer",
+      "representative_titles": [
+        {
+          "title": "Principal Engineer",
+          "count": 16
+        },
+        {
+          "title": "Senior Engineer",
+          "count": 10
+        },
+        {
+          "title": "Staff Engineer",
+          "count": 7
+        },
+        {
+          "title": "Senior Staff Engineer",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 39,
+      "current_internal_candidate": {
+        "label": "ml_engineer",
+        "role_family": "machine_learning",
+        "score": 0.828
+      },
+      "top_esco_candidate": {
+        "label": "ship assistant engineer",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Logistics Engineers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8854,
+      "issue_type": "too_generic",
+      "short_explanation": "Naked `engineer` is historically high-risk and not suitable for safe promotion.",
+      "recommended_decision": "keep_other_by_policy",
+      "proposed_target_label": null,
+      "proposed_role_family": null,
+      "decision_confidence": "high"
+    },
+    {
+      "cluster_name": "production_engineer",
+      "representative_titles": [
+        {
+          "title": "Production Engineer",
+          "count": 10
+        },
+        {
+          "title": "Senior Product Engineer",
+          "count": 9
+        },
+        {
+          "title": "Product Engineer",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 27,
+      "current_internal_candidate": {
+        "label": "manufacturing_engineer",
+        "role_family": "industrial_engineering",
+        "score": 0.9054
+      },
+      "top_esco_candidate": {
+        "label": "maintenance and repair engineer",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Industrial Engineers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "issue_type": "internal_candidate_incoherent",
+      "short_explanation": "Current internal suggestion (`sales_engineer`) is off-domain; industrial/manufacturing family is closer.",
+      "recommended_decision": "map_to_existing_label",
+      "proposed_target_label": "manufacturing_engineer",
+      "proposed_role_family": "industrial_engineering",
+      "decision_confidence": "medium",
+      "expected_value": "high",
+      "risk": "low",
+      "why_now": "High-volume cluster with wrong current internal target; fixing taxonomy decision improves future semantic routing."
+    },
+    {
+      "cluster_name": "designer",
+      "representative_titles": [
+        {
+          "title": "Designer",
+          "count": 11
+        },
+        {
+          "title": "Senior Designer",
+          "count": 8
+        },
+        {
+          "title": "Designer II",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 25,
+      "current_internal_candidate": {
+        "label": "product_designer",
+        "role_family": "design",
+        "score": 0.828
+      },
+      "top_esco_candidate": {
+        "label": "art director",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Video Game Designers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9154,
+      "issue_type": "too_generic",
+      "short_explanation": "Naked `designer` remains too broad (product, visual, motion, industrial, etc.).",
+      "recommended_decision": "keep_other_by_policy",
+      "proposed_target_label": null,
+      "proposed_role_family": null,
+      "decision_confidence": "high"
+    },
+    {
+      "cluster_name": "data_science_manager",
+      "representative_titles": [
+        {
+          "title": "Data Science Manager",
+          "count": 16
+        }
+      ],
+      "estimated_volume": 16,
+      "current_internal_candidate": {
+        "label": "data_science_manager",
+        "role_family": "data_science",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "database administrator",
+        "score": 0.7065
+      },
+      "top_onet_candidate": {
+        "label": "Managers, All Other",
+        "score": 0.7273
+      },
+      "support_strength": "weak",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8226,
+      "issue_type": "missing_managerial_label",
+      "short_explanation": "Internal candidate (`story_editor`) is clearly wrong; recurring managerial DS titles indicate taxonomy gap.",
+      "recommended_decision": "new_label_worth_adding",
+      "proposed_target_label": "data_science_manager",
+      "proposed_role_family": "data_science",
+      "decision_confidence": "medium",
+      "expected_value": "medium",
+      "risk": "medium",
+      "why_now": "Material ambiguity currently blocks safe promotion and keeps semantic reviewer conservative."
+    },
+    {
+      "cluster_name": "onboarding_specialist",
+      "representative_titles": [
+        {
+          "title": "Onboarding Specialist",
+          "count": 13
+        }
+      ],
+      "estimated_volume": 13,
+      "current_internal_candidate": {
+        "label": "marketing_specialist",
+        "role_family": "marketing",
+        "score": 0.7081
+      },
+      "top_esco_candidate": {
+        "label": "debarker operator",
+        "score": 0.7598
+      },
+      "top_onet_candidate": {
+        "label": "Medical Records Specialists",
+        "score": 0.8025
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.781,
+      "issue_type": "cross_domain_title",
+      "short_explanation": "Onboarding spans customer success, compliance, operations, and HR; title-only mapping is unstable.",
+      "recommended_decision": "needs_context_not_title_only",
+      "proposed_target_label": null,
+      "proposed_role_family": null,
+      "decision_confidence": "medium",
+      "expected_value": "medium",
+      "risk": "medium",
+      "why_now": "Material ambiguity currently blocks safe promotion and keeps semantic reviewer conservative."
+    },
+    {
+      "cluster_name": "procurement_manager",
+      "representative_titles": [
+        {
+          "title": "Procurement Manager",
+          "count": 13
+        }
+      ],
+      "estimated_volume": 13,
+      "current_internal_candidate": {
+        "label": "product_manager",
+        "role_family": "product_management",
+        "score": 0.6401
+      },
+      "top_esco_candidate": {
+        "label": "energy manager",
+        "score": 0.8429
+      },
+      "top_onet_candidate": {
+        "label": "Purchasing Managers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8467,
+      "issue_type": "taxonomy_granularity_gap",
+      "short_explanation": "Recurring procurement management titles are real but currently forced into unrelated labels.",
+      "recommended_decision": "taxonomy_merge_or_cleanup_needed",
+      "proposed_target_label": "procurement_manager",
+      "proposed_role_family": "logistics",
+      "decision_confidence": "medium",
+      "expected_value": "high",
+      "risk": "medium",
+      "why_now": "High-volume cluster with wrong current internal target; fixing taxonomy decision improves future semantic routing."
+    },
+    {
+      "cluster_name": "fpga_engineer",
+      "representative_titles": [
+        {
+          "title": "FPGA Engineer",
+          "count": 11
+        }
+      ],
+      "estimated_volume": 11,
+      "current_internal_candidate": {
+        "label": "electrical_engineer",
+        "role_family": "industrial_engineering",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "quality engineer",
+        "score": 0.8172
+      },
+      "top_onet_candidate": {
+        "label": "Petroleum Engineers",
+        "score": 0.7631
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9456,
+      "issue_type": "internal_candidate_incoherent",
+      "short_explanation": "FPGA role is hardware/electrical oriented; current `ml_engineer` suggestion is weak.",
+      "recommended_decision": "map_to_existing_label",
+      "proposed_target_label": "electrical_engineer",
+      "proposed_role_family": "industrial_engineering",
+      "decision_confidence": "medium",
+      "expected_value": "high",
+      "risk": "low",
+      "why_now": "High-volume cluster with wrong current internal target; fixing taxonomy decision improves future semantic routing."
+    },
+    {
+      "cluster_name": "software_development_manager",
+      "representative_titles": [
+        {
+          "title": "Software Development Manager",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 10,
+      "current_internal_candidate": {
+        "label": "engineering_manager",
+        "role_family": "software_engineering",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "mine development engineer",
+        "score": 0.8004
+      },
+      "top_onet_candidate": {
+        "label": "Information Technology Project Managers",
+        "score": 0.8747
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "issue_type": "existing_label_not_retrieved",
+      "short_explanation": "Canonical `engineering_manager` already exists and is semantically aligned.",
+      "recommended_decision": "map_to_existing_label",
+      "proposed_target_label": "engineering_manager",
+      "proposed_role_family": "software_engineering",
+      "decision_confidence": "high",
+      "expected_value": "high",
+      "risk": "low",
+      "why_now": "High-volume cluster with wrong current internal target; fixing taxonomy decision improves future semantic routing."
+    },
+    {
+      "cluster_name": "sales_representative",
+      "representative_titles": [
+        {
+          "title": "Sales Representative",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 10,
+      "current_internal_candidate": {
+        "label": "business_development_representative",
+        "role_family": "sales",
+        "score": 0.768
+      },
+      "top_esco_candidate": {
+        "label": "commercial sales representative",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Retail Salespersons",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "issue_type": "core_sales_label_missing",
+      "short_explanation": "High-frequency generic sales title lacks a clean canonical destination without forcing BDR/AE.",
+      "recommended_decision": "taxonomy_merge_or_cleanup_needed",
+      "proposed_target_label": "sales_representative",
+      "proposed_role_family": "sales",
+      "decision_confidence": "medium",
+      "expected_value": "high",
+      "risk": "medium",
+      "why_now": "High-volume cluster with wrong current internal target; fixing taxonomy decision improves future semantic routing."
+    },
+    {
+      "cluster_name": "operations_analyst",
+      "representative_titles": [
+        {
+          "title": "Operations Analyst",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 10,
+      "current_internal_candidate": {
+        "label": "data_analyst",
+        "role_family": "data_analytics",
+        "score": 0.8173
+      },
+      "top_esco_candidate": {
+        "label": "investment analyst",
+        "score": 0.7681
+      },
+      "top_onet_candidate": {
+        "label": "Management Analysts",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9273,
+      "issue_type": "analytics_vs_operations_overlap",
+      "short_explanation": "Can map to data analytics, finance ops, biz ops depending on context not present in title.",
+      "recommended_decision": "needs_context_not_title_only",
+      "proposed_target_label": null,
+      "proposed_role_family": null,
+      "decision_confidence": "medium"
+    },
+    {
+      "cluster_name": "technical_architect",
+      "representative_titles": [
+        {
+          "title": "Technical Architect",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 8,
+      "current_internal_candidate": {
+        "label": "solutions_architect",
+        "role_family": "architecture",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "naval architect",
+        "score": 0.7291
+      },
+      "top_onet_candidate": {
+        "label": "Computer Systems Engineers/Architects",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "issue_type": "existing_label_not_retrieved",
+      "short_explanation": "Current internal suggestion is misaligned (`technical_recruiter`); architecture label exists.",
+      "recommended_decision": "map_to_existing_label",
+      "proposed_target_label": "solutions_architect",
+      "proposed_role_family": "architecture",
+      "decision_confidence": "medium",
+      "expected_value": "low",
+      "risk": "low",
+      "why_now": "Material ambiguity currently blocks safe promotion and keeps semantic reviewer conservative."
+    },
+    {
+      "cluster_name": "it_administrator",
+      "representative_titles": [
+        {
+          "title": "IT Administrator",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "current_internal_candidate": {
+        "label": "it_support_specialist",
+        "role_family": "it_operations",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "art administrator",
+        "score": 0.9025
+      },
+      "top_onet_candidate": {
+        "label": "Administrative Services Managers",
+        "score": 0.891
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "issue_type": "existing_label_not_retrieved",
+      "short_explanation": "Current `school_administrator` retrieval is noisy; IT admin maps better to IT operations.",
+      "recommended_decision": "map_to_existing_label",
+      "proposed_target_label": "it_support_specialist",
+      "proposed_role_family": "it_operations",
+      "decision_confidence": "medium",
+      "expected_value": "low",
+      "risk": "low",
+      "why_now": "Material ambiguity currently blocks safe promotion and keeps semantic reviewer conservative."
+    }
+  ],
+  "taxonomy_decision_table": [
+    {
+      "cluster_name": "engineer",
+      "representative_titles": [
+        {
+          "title": "Principal Engineer",
+          "count": 16
+        },
+        {
+          "title": "Senior Engineer",
+          "count": 10
+        },
+        {
+          "title": "Staff Engineer",
+          "count": 7
+        },
+        {
+          "title": "Senior Staff Engineer",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 39,
+      "current_internal_candidate": {
+        "label": "ml_engineer",
+        "role_family": "machine_learning",
+        "score": 0.828
+      },
+      "top_esco_candidate": {
+        "label": "ship assistant engineer",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Logistics Engineers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8854,
+      "issue_type": "too_generic",
+      "short_explanation": "Naked `engineer` is historically high-risk and not suitable for safe promotion.",
+      "recommended_decision": "keep_other_by_policy",
+      "proposed_target_label": null,
+      "proposed_role_family": null,
+      "decision_confidence": "high"
+    },
+    {
+      "cluster_name": "production_engineer",
+      "representative_titles": [
+        {
+          "title": "Production Engineer",
+          "count": 10
+        },
+        {
+          "title": "Senior Product Engineer",
+          "count": 9
+        },
+        {
+          "title": "Product Engineer",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 27,
+      "current_internal_candidate": {
+        "label": "manufacturing_engineer",
+        "role_family": "industrial_engineering",
+        "score": 0.9054
+      },
+      "top_esco_candidate": {
+        "label": "maintenance and repair engineer",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Industrial Engineers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "issue_type": "internal_candidate_incoherent",
+      "short_explanation": "Current internal suggestion (`sales_engineer`) is off-domain; industrial/manufacturing family is closer.",
+      "recommended_decision": "map_to_existing_label",
+      "proposed_target_label": "manufacturing_engineer",
+      "proposed_role_family": "industrial_engineering",
+      "decision_confidence": "medium",
+      "expected_value": "high",
+      "risk": "low",
+      "why_now": "High-volume cluster with wrong current internal target; fixing taxonomy decision improves future semantic routing."
+    },
+    {
+      "cluster_name": "designer",
+      "representative_titles": [
+        {
+          "title": "Designer",
+          "count": 11
+        },
+        {
+          "title": "Senior Designer",
+          "count": 8
+        },
+        {
+          "title": "Designer II",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 25,
+      "current_internal_candidate": {
+        "label": "product_designer",
+        "role_family": "design",
+        "score": 0.828
+      },
+      "top_esco_candidate": {
+        "label": "art director",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Video Game Designers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9154,
+      "issue_type": "too_generic",
+      "short_explanation": "Naked `designer` remains too broad (product, visual, motion, industrial, etc.).",
+      "recommended_decision": "keep_other_by_policy",
+      "proposed_target_label": null,
+      "proposed_role_family": null,
+      "decision_confidence": "high"
+    },
+    {
+      "cluster_name": "data_science_manager",
+      "representative_titles": [
+        {
+          "title": "Data Science Manager",
+          "count": 16
+        }
+      ],
+      "estimated_volume": 16,
+      "current_internal_candidate": {
+        "label": "data_science_manager",
+        "role_family": "data_science",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "database administrator",
+        "score": 0.7065
+      },
+      "top_onet_candidate": {
+        "label": "Managers, All Other",
+        "score": 0.7273
+      },
+      "support_strength": "weak",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8226,
+      "issue_type": "missing_managerial_label",
+      "short_explanation": "Internal candidate (`story_editor`) is clearly wrong; recurring managerial DS titles indicate taxonomy gap.",
+      "recommended_decision": "new_label_worth_adding",
+      "proposed_target_label": "data_science_manager",
+      "proposed_role_family": "data_science",
+      "decision_confidence": "medium",
+      "expected_value": "medium",
+      "risk": "medium",
+      "why_now": "Material ambiguity currently blocks safe promotion and keeps semantic reviewer conservative."
+    },
+    {
+      "cluster_name": "onboarding_specialist",
+      "representative_titles": [
+        {
+          "title": "Onboarding Specialist",
+          "count": 13
+        }
+      ],
+      "estimated_volume": 13,
+      "current_internal_candidate": {
+        "label": "marketing_specialist",
+        "role_family": "marketing",
+        "score": 0.7081
+      },
+      "top_esco_candidate": {
+        "label": "debarker operator",
+        "score": 0.7598
+      },
+      "top_onet_candidate": {
+        "label": "Medical Records Specialists",
+        "score": 0.8025
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.781,
+      "issue_type": "cross_domain_title",
+      "short_explanation": "Onboarding spans customer success, compliance, operations, and HR; title-only mapping is unstable.",
+      "recommended_decision": "needs_context_not_title_only",
+      "proposed_target_label": null,
+      "proposed_role_family": null,
+      "decision_confidence": "medium",
+      "expected_value": "medium",
+      "risk": "medium",
+      "why_now": "Material ambiguity currently blocks safe promotion and keeps semantic reviewer conservative."
+    },
+    {
+      "cluster_name": "procurement_manager",
+      "representative_titles": [
+        {
+          "title": "Procurement Manager",
+          "count": 13
+        }
+      ],
+      "estimated_volume": 13,
+      "current_internal_candidate": {
+        "label": "product_manager",
+        "role_family": "product_management",
+        "score": 0.6401
+      },
+      "top_esco_candidate": {
+        "label": "energy manager",
+        "score": 0.8429
+      },
+      "top_onet_candidate": {
+        "label": "Purchasing Managers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8467,
+      "issue_type": "taxonomy_granularity_gap",
+      "short_explanation": "Recurring procurement management titles are real but currently forced into unrelated labels.",
+      "recommended_decision": "taxonomy_merge_or_cleanup_needed",
+      "proposed_target_label": "procurement_manager",
+      "proposed_role_family": "logistics",
+      "decision_confidence": "medium",
+      "expected_value": "high",
+      "risk": "medium",
+      "why_now": "High-volume cluster with wrong current internal target; fixing taxonomy decision improves future semantic routing."
+    },
+    {
+      "cluster_name": "fpga_engineer",
+      "representative_titles": [
+        {
+          "title": "FPGA Engineer",
+          "count": 11
+        }
+      ],
+      "estimated_volume": 11,
+      "current_internal_candidate": {
+        "label": "electrical_engineer",
+        "role_family": "industrial_engineering",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "quality engineer",
+        "score": 0.8172
+      },
+      "top_onet_candidate": {
+        "label": "Petroleum Engineers",
+        "score": 0.7631
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9456,
+      "issue_type": "internal_candidate_incoherent",
+      "short_explanation": "FPGA role is hardware/electrical oriented; current `ml_engineer` suggestion is weak.",
+      "recommended_decision": "map_to_existing_label",
+      "proposed_target_label": "electrical_engineer",
+      "proposed_role_family": "industrial_engineering",
+      "decision_confidence": "medium",
+      "expected_value": "high",
+      "risk": "low",
+      "why_now": "High-volume cluster with wrong current internal target; fixing taxonomy decision improves future semantic routing."
+    },
+    {
+      "cluster_name": "software_development_manager",
+      "representative_titles": [
+        {
+          "title": "Software Development Manager",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 10,
+      "current_internal_candidate": {
+        "label": "engineering_manager",
+        "role_family": "software_engineering",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "mine development engineer",
+        "score": 0.8004
+      },
+      "top_onet_candidate": {
+        "label": "Information Technology Project Managers",
+        "score": 0.8747
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "issue_type": "existing_label_not_retrieved",
+      "short_explanation": "Canonical `engineering_manager` already exists and is semantically aligned.",
+      "recommended_decision": "map_to_existing_label",
+      "proposed_target_label": "engineering_manager",
+      "proposed_role_family": "software_engineering",
+      "decision_confidence": "high",
+      "expected_value": "high",
+      "risk": "low",
+      "why_now": "High-volume cluster with wrong current internal target; fixing taxonomy decision improves future semantic routing."
+    },
+    {
+      "cluster_name": "sales_representative",
+      "representative_titles": [
+        {
+          "title": "Sales Representative",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 10,
+      "current_internal_candidate": {
+        "label": "business_development_representative",
+        "role_family": "sales",
+        "score": 0.768
+      },
+      "top_esco_candidate": {
+        "label": "commercial sales representative",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Retail Salespersons",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "issue_type": "core_sales_label_missing",
+      "short_explanation": "High-frequency generic sales title lacks a clean canonical destination without forcing BDR/AE.",
+      "recommended_decision": "taxonomy_merge_or_cleanup_needed",
+      "proposed_target_label": "sales_representative",
+      "proposed_role_family": "sales",
+      "decision_confidence": "medium",
+      "expected_value": "high",
+      "risk": "medium",
+      "why_now": "High-volume cluster with wrong current internal target; fixing taxonomy decision improves future semantic routing."
+    },
+    {
+      "cluster_name": "operations_analyst",
+      "representative_titles": [
+        {
+          "title": "Operations Analyst",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 10,
+      "current_internal_candidate": {
+        "label": "data_analyst",
+        "role_family": "data_analytics",
+        "score": 0.8173
+      },
+      "top_esco_candidate": {
+        "label": "investment analyst",
+        "score": 0.7681
+      },
+      "top_onet_candidate": {
+        "label": "Management Analysts",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9273,
+      "issue_type": "analytics_vs_operations_overlap",
+      "short_explanation": "Can map to data analytics, finance ops, biz ops depending on context not present in title.",
+      "recommended_decision": "needs_context_not_title_only",
+      "proposed_target_label": null,
+      "proposed_role_family": null,
+      "decision_confidence": "medium"
+    },
+    {
+      "cluster_name": "technical_architect",
+      "representative_titles": [
+        {
+          "title": "Technical Architect",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 8,
+      "current_internal_candidate": {
+        "label": "solutions_architect",
+        "role_family": "architecture",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "naval architect",
+        "score": 0.7291
+      },
+      "top_onet_candidate": {
+        "label": "Computer Systems Engineers/Architects",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "issue_type": "existing_label_not_retrieved",
+      "short_explanation": "Current internal suggestion is misaligned (`technical_recruiter`); architecture label exists.",
+      "recommended_decision": "map_to_existing_label",
+      "proposed_target_label": "solutions_architect",
+      "proposed_role_family": "architecture",
+      "decision_confidence": "medium",
+      "expected_value": "low",
+      "risk": "low",
+      "why_now": "Material ambiguity currently blocks safe promotion and keeps semantic reviewer conservative."
+    },
+    {
+      "cluster_name": "it_administrator",
+      "representative_titles": [
+        {
+          "title": "IT Administrator",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "current_internal_candidate": {
+        "label": "it_support_specialist",
+        "role_family": "it_operations",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "art administrator",
+        "score": 0.9025
+      },
+      "top_onet_candidate": {
+        "label": "Administrative Services Managers",
+        "score": 0.891
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "issue_type": "existing_label_not_retrieved",
+      "short_explanation": "Current `school_administrator` retrieval is noisy; IT admin maps better to IT operations.",
+      "recommended_decision": "map_to_existing_label",
+      "proposed_target_label": "it_support_specialist",
+      "proposed_role_family": "it_operations",
+      "decision_confidence": "medium",
+      "expected_value": "low",
+      "risk": "low",
+      "why_now": "Material ambiguity currently blocks safe promotion and keeps semantic reviewer conservative."
+    }
+  ],
+  "priority_shortlist": [
+    {
+      "cluster_name": "software_development_manager",
+      "representative_titles": [
+        {
+          "title": "Software Development Manager",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 10,
+      "current_internal_candidate": {
+        "label": "engineering_manager",
+        "role_family": "software_engineering",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "mine development engineer",
+        "score": 0.8004
+      },
+      "top_onet_candidate": {
+        "label": "Information Technology Project Managers",
+        "score": 0.8747
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "issue_type": "existing_label_not_retrieved",
+      "short_explanation": "Canonical `engineering_manager` already exists and is semantically aligned.",
+      "recommended_decision": "map_to_existing_label",
+      "proposed_target_label": "engineering_manager",
+      "proposed_role_family": "software_engineering",
+      "decision_confidence": "high",
+      "expected_value": "high",
+      "risk": "low",
+      "why_now": "High-volume cluster with wrong current internal target; fixing taxonomy decision improves future semantic routing."
+    },
+    {
+      "cluster_name": "production_engineer",
+      "representative_titles": [
+        {
+          "title": "Production Engineer",
+          "count": 10
+        },
+        {
+          "title": "Senior Product Engineer",
+          "count": 9
+        },
+        {
+          "title": "Product Engineer",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 27,
+      "current_internal_candidate": {
+        "label": "manufacturing_engineer",
+        "role_family": "industrial_engineering",
+        "score": 0.9054
+      },
+      "top_esco_candidate": {
+        "label": "maintenance and repair engineer",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Industrial Engineers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "issue_type": "internal_candidate_incoherent",
+      "short_explanation": "Current internal suggestion (`sales_engineer`) is off-domain; industrial/manufacturing family is closer.",
+      "recommended_decision": "map_to_existing_label",
+      "proposed_target_label": "manufacturing_engineer",
+      "proposed_role_family": "industrial_engineering",
+      "decision_confidence": "medium",
+      "expected_value": "high",
+      "risk": "low",
+      "why_now": "High-volume cluster with wrong current internal target; fixing taxonomy decision improves future semantic routing."
+    },
+    {
+      "cluster_name": "fpga_engineer",
+      "representative_titles": [
+        {
+          "title": "FPGA Engineer",
+          "count": 11
+        }
+      ],
+      "estimated_volume": 11,
+      "current_internal_candidate": {
+        "label": "electrical_engineer",
+        "role_family": "industrial_engineering",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "quality engineer",
+        "score": 0.8172
+      },
+      "top_onet_candidate": {
+        "label": "Petroleum Engineers",
+        "score": 0.7631
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9456,
+      "issue_type": "internal_candidate_incoherent",
+      "short_explanation": "FPGA role is hardware/electrical oriented; current `ml_engineer` suggestion is weak.",
+      "recommended_decision": "map_to_existing_label",
+      "proposed_target_label": "electrical_engineer",
+      "proposed_role_family": "industrial_engineering",
+      "decision_confidence": "medium",
+      "expected_value": "high",
+      "risk": "low",
+      "why_now": "High-volume cluster with wrong current internal target; fixing taxonomy decision improves future semantic routing."
+    },
+    {
+      "cluster_name": "it_administrator",
+      "representative_titles": [
+        {
+          "title": "IT Administrator",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "current_internal_candidate": {
+        "label": "it_support_specialist",
+        "role_family": "it_operations",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "art administrator",
+        "score": 0.9025
+      },
+      "top_onet_candidate": {
+        "label": "Administrative Services Managers",
+        "score": 0.891
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "issue_type": "existing_label_not_retrieved",
+      "short_explanation": "Current `school_administrator` retrieval is noisy; IT admin maps better to IT operations.",
+      "recommended_decision": "map_to_existing_label",
+      "proposed_target_label": "it_support_specialist",
+      "proposed_role_family": "it_operations",
+      "decision_confidence": "medium",
+      "expected_value": "low",
+      "risk": "low",
+      "why_now": "Material ambiguity currently blocks safe promotion and keeps semantic reviewer conservative."
+    },
+    {
+      "cluster_name": "technical_architect",
+      "representative_titles": [
+        {
+          "title": "Technical Architect",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 8,
+      "current_internal_candidate": {
+        "label": "solutions_architect",
+        "role_family": "architecture",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "naval architect",
+        "score": 0.7291
+      },
+      "top_onet_candidate": {
+        "label": "Computer Systems Engineers/Architects",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "issue_type": "existing_label_not_retrieved",
+      "short_explanation": "Current internal suggestion is misaligned (`technical_recruiter`); architecture label exists.",
+      "recommended_decision": "map_to_existing_label",
+      "proposed_target_label": "solutions_architect",
+      "proposed_role_family": "architecture",
+      "decision_confidence": "medium",
+      "expected_value": "low",
+      "risk": "low",
+      "why_now": "Material ambiguity currently blocks safe promotion and keeps semantic reviewer conservative."
+    },
+    {
+      "cluster_name": "data_science_manager",
+      "representative_titles": [
+        {
+          "title": "Data Science Manager",
+          "count": 16
+        }
+      ],
+      "estimated_volume": 16,
+      "current_internal_candidate": {
+        "label": "data_science_manager",
+        "role_family": "data_science",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "database administrator",
+        "score": 0.7065
+      },
+      "top_onet_candidate": {
+        "label": "Managers, All Other",
+        "score": 0.7273
+      },
+      "support_strength": "weak",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8226,
+      "issue_type": "missing_managerial_label",
+      "short_explanation": "Internal candidate (`story_editor`) is clearly wrong; recurring managerial DS titles indicate taxonomy gap.",
+      "recommended_decision": "new_label_worth_adding",
+      "proposed_target_label": "data_science_manager",
+      "proposed_role_family": "data_science",
+      "decision_confidence": "medium",
+      "expected_value": "medium",
+      "risk": "medium",
+      "why_now": "Material ambiguity currently blocks safe promotion and keeps semantic reviewer conservative."
+    },
+    {
+      "cluster_name": "sales_representative",
+      "representative_titles": [
+        {
+          "title": "Sales Representative",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 10,
+      "current_internal_candidate": {
+        "label": "business_development_representative",
+        "role_family": "sales",
+        "score": 0.768
+      },
+      "top_esco_candidate": {
+        "label": "commercial sales representative",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Retail Salespersons",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "issue_type": "core_sales_label_missing",
+      "short_explanation": "High-frequency generic sales title lacks a clean canonical destination without forcing BDR/AE.",
+      "recommended_decision": "taxonomy_merge_or_cleanup_needed",
+      "proposed_target_label": "sales_representative",
+      "proposed_role_family": "sales",
+      "decision_confidence": "medium",
+      "expected_value": "high",
+      "risk": "medium",
+      "why_now": "High-volume cluster with wrong current internal target; fixing taxonomy decision improves future semantic routing."
+    },
+    {
+      "cluster_name": "procurement_manager",
+      "representative_titles": [
+        {
+          "title": "Procurement Manager",
+          "count": 13
+        }
+      ],
+      "estimated_volume": 13,
+      "current_internal_candidate": {
+        "label": "product_manager",
+        "role_family": "product_management",
+        "score": 0.6401
+      },
+      "top_esco_candidate": {
+        "label": "energy manager",
+        "score": 0.8429
+      },
+      "top_onet_candidate": {
+        "label": "Purchasing Managers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8467,
+      "issue_type": "taxonomy_granularity_gap",
+      "short_explanation": "Recurring procurement management titles are real but currently forced into unrelated labels.",
+      "recommended_decision": "taxonomy_merge_or_cleanup_needed",
+      "proposed_target_label": "procurement_manager",
+      "proposed_role_family": "logistics",
+      "decision_confidence": "medium",
+      "expected_value": "high",
+      "risk": "medium",
+      "why_now": "High-volume cluster with wrong current internal target; fixing taxonomy decision improves future semantic routing."
+    },
+    {
+      "cluster_name": "onboarding_specialist",
+      "representative_titles": [
+        {
+          "title": "Onboarding Specialist",
+          "count": 13
+        }
+      ],
+      "estimated_volume": 13,
+      "current_internal_candidate": {
+        "label": "marketing_specialist",
+        "role_family": "marketing",
+        "score": 0.7081
+      },
+      "top_esco_candidate": {
+        "label": "debarker operator",
+        "score": 0.7598
+      },
+      "top_onet_candidate": {
+        "label": "Medical Records Specialists",
+        "score": 0.8025
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.781,
+      "issue_type": "cross_domain_title",
+      "short_explanation": "Onboarding spans customer success, compliance, operations, and HR; title-only mapping is unstable.",
+      "recommended_decision": "needs_context_not_title_only",
+      "proposed_target_label": null,
+      "proposed_role_family": null,
+      "decision_confidence": "medium",
+      "expected_value": "medium",
+      "risk": "medium",
+      "why_now": "Material ambiguity currently blocks safe promotion and keeps semantic reviewer conservative."
+    }
+  ],
+  "taxonomy_review_summary": {
+    "true_taxonomy_gaps": 3,
+    "title_only_ambiguity": 2,
+    "keep_other_by_policy": 2,
+    "resolvable_with_existing_labels": 5,
+    "decision_counts": {
+      "map_to_existing_label": 5,
+      "new_label_worth_adding": 1,
+      "keep_other_by_policy": 2,
+      "needs_context_not_title_only": 2,
+      "taxonomy_merge_or_cleanup_needed": 2
+    }
+  },
+  "final_recommendation": {
+    "decision": "keep_taxonomy_stable_and_accept_residual",
+    "reason": "Gaps are mostly ambiguous or low-value; taxonomy expansion would add noise."
+  }
+}

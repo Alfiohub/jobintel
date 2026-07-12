@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Saved Search: {{ saved_search.name }}</h1>
+<p class="mono">ID: {{ saved_search.search_id }}</p>
+<div class="kpi-grid">
+  <div class="kpi"><div class="k">Current count</div><div class="v">{{ current_count }}</div></div>
+  <div class="kpi"><div class="k">New count</div><div class="v">{{ new_count if new_count is not none else "-" }}</div></div>
+  <div class="kpi"><div class="k">Saved marked</div><div class="v">{{ insight.saved_marked_count }}</div></div>
+  <div class="kpi"><div class="k">Dismissed marked</div><div class="v">{{ insight.dismissed_marked_count }}</div></div>
+  <div class="kpi"><div class="k">Enabled</div><div class="v">{% if saved_search.is_enabled %}yes{% else %}no{% endif %}</div></div>
+  <div class="kpi"><div class="k">Lifecycle</div><div class="v">{{ saved_search.lifecycle or "active" }}</div></div>
+  <div class="kpi"><div class="k">Due status</div><div class="v">{% if is_due %}due{% else %}not due{% endif %}</div></div>
+  <div class="kpi"><div class="k">Last run</div><div class="v mono">{{ saved_search.last_run_at or "-" }}</div></div>
+</div>
+<p>
+  <span class="badge">{{ saved_search.query_type }}</span>
+  <span class="badge">freq: {{ saved_search.frequency or "daily" }}</span>
+  {% if is_due %}
+    <span class="badge badge-due-now">due now</span>
+  {% else %}
+    <span class="badge badge-due-later">not due</span>
+  {% endif %}
+  {% if saved_search.is_enabled %}
+    <span class="badge badge-state-saved">enabled</span>
+  {% else %}
+    <span class="badge badge-state-dismissed">disabled</span>
+  {% endif %}
+  <span class="badge">lifecycle: {{ saved_search.lifecycle or "active" }}</span>
+  {% if saved_search.pack_name %}
+    <span class="badge">pack: {{ saved_search.pack_name }}</span>
+  {% endif %}
+</p>
+<p class="muted">Created: {{ saved_search.created_at }} | Updated: {{ saved_search.updated_at }}</p>
+<p>
+  <strong>Quality snapshot:</strong>
+  saved rate={{ ((insight.saved_rate or 0.0) * 100) | round(1) }}%,
+  dismiss rate={{ ((insight.dismiss_rate or 0.0) * 100) | round(1) }}%
+  {% if insight.is_partial_sample %}
+    <span class="muted">(sampled on {{ insight.scanned_count }} of {{ insight.current_count }} matches)</span>
+  {% endif %}
+</p>
+{% if insight.quality_flags %}
+<p>
+  {% for flag in insight.quality_flags %}
+    <span class="badge">{{ flag }}</span>
+  {% endfor %}
+</p>
+{% endif %}
+{% if latest_outcome %}
+<p>
+  <strong>Latest run outcome:</strong>
+  <span class="mono">run={{ latest_outcome.run_id }}</span>,
+  status={{ latest_outcome.status }},
+  new={{ latest_outcome.new_matches_count }},
+  current={{ latest_outcome.total_current_matches }},
+  at={{ latest_outcome.run_timestamp }}
+</p>
+{% endif %}
+
+{% if saved_search.filters_json %}
+<h2>Filters JSON</h2>
+<pre>{{ saved_search.filters_json }}</pre>
+{% endif %}
+
+<div class="toolbar">
+  {% if saved_search.lifecycle == "archived" %}
+    <form method="post" action="/admin/saved-searches/{{ saved_search.search_id }}/restore"><button type="submit">Restore</button></form>
+  {% else %}
+    {% if saved_search.is_enabled %}
+      <form method="post" action="/admin/saved-searches/{{ saved_search.search_id }}/disable"><button type="submit">Disable</button></form>
+    {% else %}
+      <form method="post" action="/admin/saved-searches/{{ saved_search.search_id }}/enable"><button type="submit">Enable</button></form>
+    {% endif %}
+    <form method="post" action="/admin/saved-searches/{{ saved_search.search_id }}/archive"><button type="submit">Archive</button></form>
+  {% endif %}
+  <a class="{% if mode == 'current' %}active{% endif %}" href="/admin/saved-searches/{{ saved_search.search_id }}?mode=current&sort_by={{ sort_by }}&limit={{ limit }}&offset={{ offset }}&scan_limit={{ scan_limit }}">Current results</a>
+  <a class="{% if mode == 'new' %}active{% endif %}" href="/admin/saved-searches/{{ saved_search.search_id }}?mode=new&sort_by={{ sort_by }}&limit={{ limit }}&offset={{ offset }}&scan_limit={{ scan_limit }}">New matches only</a>
+  <a href="/admin/saved-searches/{{ saved_search.search_id }}/edit">Edit</a>
+  <a href="/admin/saved-searches">Back to list</a>
+  <a href="/admin/inbox">Open inbox</a>
+  <a href="/admin/shortlist">Open shortlist</a>
+</div>
+
+<h2>Result Mode Options</h2>
+<form method="get" action="/admin/saved-searches/{{ saved_search.search_id }}">
+  <p>
+    <label>Mode
+      <select name="mode">
+        <option value="current" {% if mode == "current" %}selected{% endif %}>current results</option>
+        <option value="new" {% if mode == "new" %}selected{% endif %}>new matches only</option>
+      </select>
+    </label>
+  </p>
+  <p>
+    <label>Sort
+      <select name="sort_by">
+        <option value="rank" {% if sort_by == "rank" %}selected{% endif %}>rank</option>
+        <option value="newest" {% if sort_by == "newest" %}selected{% endif %}>newest</option>
+      </select>
+    </label>
+  </p>
+  <p>
+    <label><input type="checkbox" name="only_remote" value="true" {% if only_remote %}checked{% endif %}> Only remote</label>
+    <label><input type="checkbox" name="only_salary" value="true" {% if only_salary %}checked{% endif %}> Only salary</label>
+    <label><input type="checkbox" name="exclude_other" value="true" {% if exclude_other %}checked{% endif %}> Exclude other titles</label>
+    <label><input type="checkbox" name="high_rank_only" value="true" {% if high_rank_only %}checked{% endif %}> Only high rank</label>
+  </p>
+  <p>
+    <label>Limit <input type="text" name="limit" value="{{ limit }}"></label>
+    <label>Offset <input type="text" name="offset" value="{{ offset }}"></label>
+    <label>Scan limit (new mode) <input type="text" name="scan_limit" value="{{ scan_limit }}"></label>
+  </p>
+  <p><button type="submit">Refresh</button></p>
+</form>
+
+<h2>Results</h2>
+<p>Returned rows: <strong>{{ returned_count }}</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Title</th>
+      <th>URL</th>
+      <th>Signals</th>
+      <th>Why ranked</th>
+      <th>State</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in rows %}
+    <tr>
+      <td><span class="badge">{{ row.rank_score }}</span></td>
+      <td>
+        <strong>{{ row.title_raw or "-" }}</strong><br>
+        <span class="muted mono">{{ row.normalized_title or "-" }}</span>
+      </td>
+      <td><a class="mono" href="{{ row.url }}" target="_blank" rel="noopener noreferrer">{{ row.url }}</a></td>
+      <td>
+        <span class="badge">{{ row.role_family or "other" }}</span>
+        {% if row.location_type == "remote" %}
+          <span class="badge badge-loc-remote">remote</span>
+        {% elif row.location_type == "hybrid" %}
+          <span class="badge badge-loc-hybrid">hybrid</span>
+        {% elif row.location_type == "onsite" %}
+          <span class="badge badge-loc-onsite">onsite</span>
+        {% endif %}
+        {% if row.has_salary %}
+          <span class="badge badge-salary-yes">salary</span>
+        {% else %}
+          <span class="badge badge-salary-no">no salary</span>
+        {% endif %}
+      </td>
+      <td><span class="muted">{{ row.rank_reason or "-" }}</span></td>
+      <td><span class="badge badge-state-{{ row.job_state }}">{{ row.job_state }}</span></td>
+      <td class="row-actions">
+        <form method="post" action="/admin/jobs/state">
+          <input type="hidden" name="job_url" value="{{ row.url }}">
+          <input type="hidden" name="state" value="seen">
+          <input type="hidden" name="next" value="{{ next_url }}">
+          <button type="submit">Seen</button>
+        </form>
+        <form method="post" action="/admin/jobs/state">
+          <input type="hidden" name="job_url" value="{{ row.url }}">
+          <input type="hidden" name="state" value="saved">
+          <input type="hidden" name="next" value="{{ next_url }}">
+          <button type="submit">Save</button>
+        </form>
+        <form method="post" action="/admin/jobs/state">
+          <input type="hidden" name="job_url" value="{{ row.url }}">
+          <input type="hidden" name="state" value="dismissed">
+          <input type="hidden" name="next" value="{{ next_url }}">
+          <button type="submit">Dismiss</button>
+        </form>
+        <form method="post" action="/admin/jobs/state/clear">
+          <input type="hidden" name="job_url" value="{{ row.url }}">
+          <input type="hidden" name="next" value="{{ next_url }}">
+          <button type="submit">Reset</button>
+        </form>
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

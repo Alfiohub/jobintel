@@ -1,0 +1,134 @@
+{
+  "input_path": "data/jobs/jobs_cleaned_en.jsonl",
+  "output_path": "data/jobs/jobs_extracted_en.jsonl",
+  "rows_total": 81011,
+  "invalid_rows": 0,
+  "filled_stats": {
+    "seniority": {
+      "count": 64542,
+      "pct": 79.67
+    },
+    "employment_type": {
+      "count": 29319,
+      "pct": 36.19
+    },
+    "location_type": {
+      "count": 49816,
+      "pct": 61.49
+    },
+    "salary": {
+      "count": 37867,
+      "pct": 46.74
+    },
+    "salary_currency": {
+      "count": 37867,
+      "pct": 46.74
+    },
+    "salary_period": {
+      "count": 10581,
+      "pct": 13.06
+    },
+    "skills": {
+      "count": 32894,
+      "pct": 40.6
+    }
+  },
+  "sample_extracted_rows": [
+    {
+      "url": "https://job-boards.greenhouse.io/found/jobs/4652575005",
+      "seniority": "director",
+      "employment_type": null,
+      "location_type": "remote",
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "skills": [
+        "python",
+        "sql",
+        "dbt",
+        "tableau"
+      ],
+      "tags": {
+        "has_salary": false,
+        "skills_count": 4,
+        "seniority_source": "title",
+        "location_type_source": "location"
+      }
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/found/jobs/4665181005",
+      "seniority": "manager",
+      "employment_type": null,
+      "location_type": "remote",
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "skills": [],
+      "tags": {
+        "has_salary": false,
+        "skills_count": 0,
+        "seniority_source": "title",
+        "location_type_source": "location"
+      }
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/found/jobs/4668478005",
+      "seniority": "manager",
+      "employment_type": "contract",
+      "location_type": "hybrid",
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "skills": [],
+      "tags": {
+        "has_salary": false,
+        "skills_count": 0,
+        "seniority_source": "title",
+        "employment_source": "description",
+        "location_type_source": "description"
+      }
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/found/jobs/4668477005",
+      "seniority": "manager",
+      "employment_type": null,
+      "location_type": "remote",
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": null,
+      "salary_period": null,
+      "skills": [],
+      "tags": {
+        "has_salary": false,
+        "skills_count": 0,
+        "seniority_source": "title",
+        "location_type_source": "location"
+      }
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/found/jobs/4501664005",
+      "seniority": null,
+      "employment_type": "contract",
+      "location_type": "remote",
+      "salary_min": 140,
+      "salary_max": 180,
+      "salary_currency": "USD",
+      "salary_period": "hour",
+      "skills": [],
+      "tags": {
+        "has_salary": true,
+        "skills_count": 0,
+        "employment_source": "description",
+        "location_type_source": "location"
+      }
+    }
+  ],
+  "known_limits": [
+    "Regex/rules approach only; no heavy NLP.",
+    "Salary extraction supports common base patterns only.",
+    "Skills list is intentionally small in this stage."
+  ]
+}

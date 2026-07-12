@@ -1,0 +1,377 @@
+{
+  "summary": {
+    "joined_rows": 83,
+    "target_titles": [
+      "Designer",
+      "Implementation Engineer",
+      "Onboarding Specialist",
+      "Operations Analyst",
+      "Partner Manager",
+      "Producer"
+    ]
+  },
+  "clusters": [
+    {
+      "title_clean": "Designer",
+      "volume": 11,
+      "dominant_context_family": "design",
+      "dominant_count": 11,
+      "recommended_action": "needs_tighter_rule",
+      "examples": [
+        {
+          "url": "https://job-boards.greenhouse.io/billiontoone/jobs/4589731005",
+          "company_name": "billiontoone",
+          "top_context_family": "design",
+          "top_context_score": 6,
+          "context_confidence": "high",
+          "departments_raw": [
+            {
+              "id": 4136592005,
+              "name": "Design",
+              "child_ids": [],
+              "parent_id": null
+            }
+          ],
+          "skills": []
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/hovercraft/jobs/4091424009",
+          "company_name": "hovercraft",
+          "top_context_family": "design",
+          "top_context_score": 4,
+          "context_confidence": "high",
+          "departments_raw": [
+            {
+              "id": 4019965009,
+              "name": "Creative",
+              "child_ids": [],
+              "parent_id": null
+            }
+          ],
+          "skills": []
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/landor/jobs/7676342",
+          "company_name": "landor",
+          "top_context_family": "design",
+          "top_context_score": 4,
+          "context_confidence": "high",
+          "departments_raw": [
+            {
+              "id": 12243,
+              "name": "Creative",
+              "child_ids": [],
+              "parent_id": 52947
+            }
+          ],
+          "skills": []
+        }
+      ],
+      "rationale": "context repeatedly points to `design`"
+    },
+    {
+      "title_clean": "Implementation Engineer",
+      "volume": 13,
+      "dominant_context_family": "customer_success",
+      "dominant_count": 9,
+      "recommended_action": "needs_context_not_title_only",
+      "examples": [
+        {
+          "url": "https://job-boards.greenhouse.io/adyen/jobs/7105787",
+          "company_name": "adyen",
+          "top_context_family": "customer_success",
+          "top_context_score": 4,
+          "context_confidence": "high",
+          "departments_raw": [
+            {
+              "id": 88854,
+              "name": "Professional Services",
+              "child_ids": [],
+              "parent_id": 78315
+            }
+          ],
+          "skills": []
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/adyen/jobs/7270730",
+          "company_name": "adyen",
+          "top_context_family": "customer_success",
+          "top_context_score": 4,
+          "context_confidence": "high",
+          "departments_raw": [
+            {
+              "id": 88854,
+              "name": "Professional Services",
+              "child_ids": [],
+              "parent_id": 78315
+            }
+          ],
+          "skills": [
+            "javascript"
+          ]
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/adyen/jobs/7641067",
+          "company_name": "adyen",
+          "top_context_family": "customer_success",
+          "top_context_score": 4,
+          "context_confidence": "high",
+          "departments_raw": [
+            {
+              "id": 88854,
+              "name": "Professional Services",
+              "child_ids": [],
+              "parent_id": 78315
+            }
+          ],
+          "skills": []
+        }
+      ],
+      "rationale": "context repeatedly points to `customer_success`"
+    },
+    {
+      "title_clean": "Onboarding Specialist",
+      "volume": 13,
+      "dominant_context_family": "customer_success",
+      "dominant_count": 12,
+      "recommended_action": "needs_tighter_rule",
+      "examples": [
+        {
+          "url": "https://job-boards.greenhouse.io/adyen/jobs/7422228",
+          "company_name": "adyen",
+          "top_context_family": "customer_success",
+          "top_context_score": 3,
+          "context_confidence": "medium",
+          "departments_raw": [
+            {
+              "id": 30437,
+              "name": "Merchant Operations",
+              "child_ids": [],
+              "parent_id": 78317
+            }
+          ],
+          "skills": []
+        },
+        {
+          "url": "https://job-boards.eu.greenhouse.io/cision/jobs/4745539101",
+          "company_name": "cision",
+          "top_context_family": "customer_success",
+          "top_context_score": 5,
+          "context_confidence": "high",
+          "departments_raw": [
+            {
+              "id": 4034888101,
+              "name": "610 - CX Comms Cloud",
+              "child_ids": [],
+              "parent_id": 4034882101
+            }
+          ],
+          "skills": []
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/focusfinancialpartners/jobs/5704625004",
+          "company_name": "focusfinancialpartners",
+          "top_context_family": "people_operations",
+          "top_context_score": 3,
+          "context_confidence": "medium",
+          "departments_raw": [
+            {
+              "id": 4037547004,
+              "name": "Operations & Analytics",
+              "child_ids": [],
+              "parent_id": null
+            }
+          ],
+          "skills": []
+        }
+      ],
+      "rationale": "context repeatedly points to `customer_success`"
+    },
+    {
+      "title_clean": "Operations Analyst",
+      "volume": 10,
+      "dominant_context_family": "operations",
+      "dominant_count": 5,
+      "recommended_action": "needs_context_not_title_only",
+      "examples": [
+        {
+          "url": "https://job-boards.greenhouse.io/correlationone/jobs/5821153004",
+          "company_name": "correlationone",
+          "top_context_family": "operations",
+          "top_context_score": 5,
+          "context_confidence": "high",
+          "departments_raw": [
+            {
+              "id": 4014847004,
+              "name": "Business Operations",
+              "child_ids": [],
+              "parent_id": null
+            }
+          ],
+          "skills": [
+            "excel"
+          ]
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/correlationone/jobs/5821155004",
+          "company_name": "correlationone",
+          "top_context_family": "operations",
+          "top_context_score": 5,
+          "context_confidence": "high",
+          "departments_raw": [
+            {
+              "id": 4014847004,
+              "name": "Business Operations",
+              "child_ids": [],
+              "parent_id": null
+            }
+          ],
+          "skills": [
+            "excel"
+          ]
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/correlationone/jobs/5823584004",
+          "company_name": "correlationone",
+          "top_context_family": "operations",
+          "top_context_score": 5,
+          "context_confidence": "high",
+          "departments_raw": [
+            {
+              "id": 4014847004,
+              "name": "Business Operations",
+              "child_ids": [],
+              "parent_id": null
+            }
+          ],
+          "skills": [
+            "excel"
+          ]
+        }
+      ],
+      "rationale": "context repeatedly points to `operations`"
+    },
+    {
+      "title_clean": "Partner Manager",
+      "volume": 9,
+      "dominant_context_family": "sales",
+      "dominant_count": 9,
+      "recommended_action": "needs_tighter_rule",
+      "examples": [
+        {
+          "url": "https://job-boards.greenhouse.io/beyondtrust/jobs/7397198",
+          "company_name": "beyondtrust",
+          "top_context_family": "sales",
+          "top_context_score": 3,
+          "context_confidence": "medium",
+          "departments_raw": [
+            {
+              "id": 207080,
+              "name": "Sales ",
+              "child_ids": [],
+              "parent_id": 42159
+            }
+          ],
+          "skills": [
+            "salesforce"
+          ]
+        },
+        {
+          "url": "https://jobs.elastic.co/jobs?gh_jid=7343843&gh_jid=7343843",
+          "company_name": "elastic",
+          "top_context_family": "sales",
+          "top_context_score": 5,
+          "context_confidence": "high",
+          "departments_raw": [
+            {
+              "id": 74360,
+              "name": "Partners - APJ",
+              "child_ids": [],
+              "parent_id": 29941
+            }
+          ],
+          "skills": []
+        },
+        {
+          "url": "https://www.esri.com/careers/5036435007?gh_jid=5036435007",
+          "company_name": "esri",
+          "top_context_family": "sales",
+          "top_context_score": 3,
+          "context_confidence": "medium",
+          "departments_raw": [
+            {
+              "id": 4014025007,
+              "name": "6526 - Partner Network",
+              "child_ids": [],
+              "parent_id": 4013879007
+            }
+          ],
+          "skills": []
+        }
+      ],
+      "rationale": "context repeatedly points to `sales`"
+    },
+    {
+      "title_clean": "Producer",
+      "volume": 27,
+      "dominant_context_family": "content",
+      "dominant_count": 26,
+      "recommended_action": "needs_tighter_rule",
+      "examples": [
+        {
+          "url": "https://job-boards.greenhouse.io/2k/jobs/7564923003",
+          "company_name": "2k",
+          "top_context_family": "software_engineering",
+          "top_context_score": 5,
+          "context_confidence": "high",
+          "departments_raw": [
+            {
+              "id": 4058315003,
+              "name": "Producing/Management - 2K Sports Lab",
+              "child_ids": [],
+              "parent_id": 4058308003
+            }
+          ],
+          "skills": []
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/dept/jobs/7740135",
+          "company_name": "dept",
+          "top_context_family": "content",
+          "top_context_score": 3,
+          "context_confidence": "medium",
+          "departments_raw": [
+            {
+              "id": 149557,
+              "name": "Clients",
+              "child_ids": [],
+              "parent_id": null
+            }
+          ],
+          "skills": []
+        },
+        {
+          "url": "https://job-boards.greenhouse.io/eucalyptus/jobs/4651418005",
+          "company_name": "eucalyptus",
+          "top_context_family": "content",
+          "top_context_score": 2,
+          "context_confidence": "medium",
+          "departments_raw": [
+            {
+              "id": 4139459005,
+              "name": "Juniper UK",
+              "child_ids": [],
+              "parent_id": 4138901005
+            }
+          ],
+          "skills": []
+        }
+      ],
+      "rationale": "context repeatedly points to `content`"
+    }
+  ],
+  "final_recommendation": {
+    "decision": "ready_for_hybrid_pilot",
+    "reason": "At least two ambiguous title families now show repeated context patterns that could support a future gated rule."
+  }
+}

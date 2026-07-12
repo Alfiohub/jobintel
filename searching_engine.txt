@@ -1,0 +1,581 @@
+Sì. Questa è l’idea giusta.
+
+Obiettivo unico
+
+Portare other a zero o quasi-zero utile, senza fare danni sulla precisione.
+
+Agenda / piano di attacco
+Fase 0 — regole del gioco
+una sola priorità: title coverage
+niente nuove feature
+ogni pass deve avere:
+patch
+test
+eval
+delta
+verifica qualità
+Fase 1 — baseline ferma
+
+Congeliamo:
+
+numero other
+top residual other
+label attuali
+cluster attuali
+
+Questa è la base da cui misuriamo tutto.
+
+Fase 2 — attacco per cluster
+
+Ordine fisso:
+
+cluster ad alto volume e alta chiarezza
+cluster medi ma facili
+cluster ambigui
+long tail finale
+
+Mai titolo singolo a caso.
+
+Fase 3 — ciclo operativo
+
+Per ogni pass:
+
+A. analisi
+top other
+cluster
+rischi di overmatch
+B. decisione
+label esistente?
+label nuova?
+lasciamo other?
+C. esecuzione
+update rules.py
+update taxonomy.py
+test positivi
+test negativi
+D. misura
+eval
+delta other
+sample review
+E. verifica
+
+Io controllo:
+
+qualità match
+overmatch
+prossimo cluster
+
+Poi si riparte.
+
+Fase 4 — guardrail
+
+Regole dure:
+
+niente regole troppo larghe
+niente label inventate inutili
+meglio cluster puliti che delta finto
+se una regola sporca, si corregge subito
+Fase 5 — target numerici
+
+Milestone:
+
+46.8k → 35k
+35k → 25k
+25k → 15k
+15k → 8k
+8k → quasi-zero tecnico
+Tecnologie / metodo
+Motore finale
+rules + taxonomy
+Supporto
+cluster dei residual
+dizionari esterni come supporto
+similarity/semantic offline solo per suggerire, non per decidere
+Non faremo ora
+ML online
+LLM classifier nel runtime
+semantic search
+altre feature prodotto
+Ruoli
+Io
+analizzo
+scelgo strategia del pass
+ti scrivo prompt Codex
+verifico output
+decido il passo successivo
+Codex
+applica patch
+esegue test
+rigenera eval
+produce report
+Tu
+lanci
+incolli output
+teniamo il ritmo
+Formula del loop
+sempre così
+io analizzo
+io do prompt
+Codex patcha
+tu mi mandi risultato
+io verifico
+repeat
+Ordine dei prossimi cluster
+
+Io partirei così:
+
+industrial / skilled trades / engineering non software
+healthcare support
+education / childcare
+retail / store ops
+leadership / manager generici
+long tail ambigua
+Definizione di vittoria
+
+Non “zero cosmetico”.
+
+Vittoria =
+
+other quasi sparito
+titoli principali coperti
+precisione ancora buona
+search finalmente affidabile
+Decisione finale
+
+Sì, facciamo così.
+Da ora:
+
+solo title coverage recovery
+un pass alla volta
+massima disciplina
+
+Mandami solo:
+
+conferma
+e ti preparo subito il prompt Codex del prossimo pass, già focalizzato sul cluster giusto.
+ok andiamo sul tecnico voglio comprendere i metodi con cui arriviamo allo scopo
+
+Perfetto. Andiamo sul tecnico.
+
+Scopo
+
+Dato un job title sporco da ATS, vogliamo arrivare a:
+
+normalized_title
+role_family
+
+e lasciare other solo quando è davvero inevitabile.
+
+Metodo tecnico generale
+1. input reale
+
+Hai stringhe tipo:
+
+Senior Systems Engineer
+Manager, Sales Development
+Lead Preschool Teacher
+Hair Color Bar Assistant, Licensed Cosmetologist
+
+Questi titoli sono:
+
+sporchi
+incoerenti
+pieni di varianti
+spesso ambigui
+
+Quindi il problema è un problema di:
+
+normalizzazione + classificazione controllata
+Pipeline tecnica corretta
+A. normalizzazione testo
+
+Prima di classificare:
+
+lowercase
+trim
+spazi multipli
+punteggiatura rumorosa
+separatori (-, _, /, ,)
+location noise se presente
+varianti lessicali semplici
+
+Scopo:
+portare i titoli in una forma più confrontabile.
+
+B. taxonomy interna
+
+Una mappa del tipo:
+
+software_engineer -> software_engineering
+sales_manager -> sales
+medical_assistant -> healthcare_clinical
+
+Questa è la tua source of truth.
+
+Scopo:
+
+poche label chiare
+stabili
+utili al prodotto
+C. rules engine
+
+Il vero classificatore finale.
+
+Regole tipo:
+
+regex/pattern espliciti
+priorità ordinate
+output deterministico
+
+Esempio logico:
+
+se vedo territory sales manager -> sales_manager
+se vedo women's health nurse practitioner -> nurse_practitioner
+
+Scopo:
+
+controllare bene precisione
+sapere sempre perché un titolo è stato classificato così
+D. fallback other
+
+Se nessuna regola affidabile matcha:
+
+normalized_title = other
+role_family = other
+
+Questo è il serbatoio residuo da svuotare pass dopo pass.
+
+Come si riduce other davvero
+Metodo 1 — frequency-first
+
+Prendi i titoli other più frequenti.
+
+Perché:
+
+se un titolo compare 200 volte, vale più di 200 titoli unici che compaiono 1 volta
+
+Quindi:
+
+ordini per frequenza
+attacchi i più voluminosi
+Metodo 2 — cluster-first
+
+Non lavori titolo per titolo.
+Lavori per famiglie semantiche.
+
+Esempio:
+
+electrical engineer
+senior electrical engineer
+mechanical engineer
+production technician
+
+fanno intuire un cluster:
+
+industrial / engineering / manufacturing
+
+Questo ti fa scrivere regole più coerenti e meno casuali.
+
+Metodo 3 — conservative expansion
+
+Ogni volta chiedi:
+
+posso mappare a label esistente?
+serve davvero una label nuova?
+rischio overmatch?
+
+Ordine corretto:
+
+riuso label esistente
+nuova label solo se cluster grosso e chiaro
+other se ambiguo
+Gli strumenti tecnici veri
+1. regex rules
+
+Base del motore.
+
+Buone per:
+
+pattern forti
+titoli standard
+cluster chiari
+
+Rischio:
+
+se scritte larghe, sporcano tutto
+2. priority ordering
+
+Le regole devono avere ordine.
+
+Perché:
+
+sales manager non deve essere mangiato da una regola più generica
+technical account manager non va trattato come semplice account_manager se hai una regola più precisa
+
+Quindi ogni rule ha:
+
+pattern
+output
+priorità
+3. taxonomy validation
+
+Ogni regola deve produrre una label valida nella taxonomy.
+
+Serve per evitare:
+
+typo
+label incoerenti
+deriva del sistema
+4. test positivi
+
+Verificano che:
+
+i titoli attesi matchino la label giusta
+
+Esempio:
+
+Senior Product Analyst -> data_analyst
+5. test negativi
+
+Sono fondamentali.
+
+Verificano che:
+
+la regola non catturi roba che non deve
+
+Esempio:
+
+inside sales representative non deve diventare sales_manager
+
+Questi test sono il tuo freno contro l’overmatch.
+
+6. eval batch
+
+Dopo ogni patch:
+
+riesegui tutto il dataset
+misuri:
+other prima/dopo
+top matched
+top residual other
+cluster residuali
+
+Questa è la misura del progresso.
+
+Tecniche di supporto senza reinventare la ruota
+1. dizionari esterni
+
+ESCO / O*NET / altri elenchi job title
+
+Utili per:
+
+sinonimi
+varianti
+idee per cluster
+candidate labels
+
+Non utili come classificatore finale diretto.
+
+2. fuzzy matching
+
+Tipo RapidFuzz.
+
+Utile per:
+
+trovare titoli simili
+clusterizzare varianti
+suggerire pattern
+
+Non come decisione finale online.
+
+3. embeddings / semantic clustering offline
+
+Utile solo per:
+
+esplorare il long tail
+trovare famiglie nascoste
+suggerire cluster
+
+Non per sostituire il rules engine ora.
+
+4. LLM offline come analista
+
+Utile per:
+
+proporre cluster
+suggerire mapping
+trovare rischi
+
+Non come classificatore di produzione.
+
+Strategia tecnica corretta
+Layer 1 — classificatore vero
+normalize
+rules
+taxonomy
+fallback other
+Layer 2 — strumenti di supporto
+top other analysis
+clustering
+fuzzy similarity
+dizionari esterni
+LLM brainstorming opzionale
+Layer 3 — controllo qualità
+positive tests
+negative tests
+eval
+sample review
+Cosa NON fare
+1. mappare tutto con regole larghe
+
+Abbassi other, ma distruggi qualità.
+
+2. creare 100 label inutili
+
+Zero other finto, taxonomy ingestibile.
+
+3. lavorare titolo singolo per titolo singolo
+
+Troppo lento, troppo rumoroso.
+
+4. buttarti su ML troppo presto
+
+Prima chiudi bene i cluster grandi e chiari.
+
+Strategia di attacco concreta
+Pass tipo
+step 1
+
+estrai top other
+
+step 2
+
+raggruppi in cluster
+
+step 3
+
+per ogni cluster decidi:
+
+label esistente
+label nuova
+lasciare other
+step 4
+
+patch:
+
+rules
+taxonomy
+tests
+step 5
+
+run eval
+
+step 6
+
+sample review:
+
+nuovi match
+residual other
+borderline
+step 7
+
+cleanup overmatch, poi prossimo pass
+
+Regola d’oro
+
+Il tuo motore finale deve restare:
+
+leggibile
+controllabile
+deterministico
+testabile
+
+Quindi:
+
+non reinventi la ruota
+
+ma nemmeno deleghi il volante a una ruota esterna.
+
+In una frase
+
+Tecnicamente arriviamo allo scopo così:
+
+rules engine deterministico come motore finale, alimentato da taxonomy interna e migliorato iterativamente con clustering, dizionari esterni, test ed eval sui top residual other.
+
+Nel prossimo messaggio ti posso fare la versione ancora più pratica:
+
+“playbook operativo di un singolo recovery pass”
+
+
+Playbook operativo di un recovery pass
+1. input
+top other per frequenza
+cluster residuali
+report eval attuale
+2. selezione cluster
+
+Scegli solo cluster:
+
+voluminosi
+semanticamente chiari
+ad alto ROI
+3. decisione per cluster
+
+Per ogni cluster:
+
+mappa a label esistente
+oppure crea label nuova
+oppure lascia other
+4. patch
+
+Modifica solo:
+
+rules.py
+taxonomy.py
+test rilevanti
+5. test
+
+Sempre:
+
+positivi
+negativi
+anti-overmatch
+6. eval
+
+Riesegui:
+
+title stage
+title eval
+cluster residuali
+7. review
+
+Mi mandi:
+
+delta other
+20 nuovi match
+20 residual other
+10 borderline
+blocchi nuovi rules/taxonomy
+8. cleanup
+
+Io ti dico:
+
+ok
+restringi
+rollback parziale
+prossimo cluster
+Regola fissa
+
+Mai fare un pass “grosso e cieco”.
+Ogni pass deve essere:
+
+misurato
+verificabile
+correggibile
+Loop
+io analizzo
+ti scrivo prompt Codex
+tu lanci
+mi mandi output
+io verifico
+repeat

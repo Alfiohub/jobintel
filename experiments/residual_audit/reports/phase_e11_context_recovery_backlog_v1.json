@@ -1,0 +1,423 @@
+{
+  "customer_success_manager": {
+    "sample_count": 6,
+    "projected_residual_count": 532,
+    "priority": "high",
+    "decision": "promising_context_gate_candidate",
+    "pilot_titles": [
+      "Onboarding Specialist",
+      "Client Retention Specialist",
+      "Customer Adoption & Success"
+    ],
+    "positive_signals": [
+      "customer success",
+      "customer adoption",
+      "client retention",
+      "onboarding",
+      "customer services"
+    ],
+    "negative_signals": [
+      "hr",
+      "employee lifecycle",
+      "kyc",
+      "aml",
+      "compliance"
+    ],
+    "top_evidence_terms": [
+      "client retention",
+      "customer success",
+      "retaining clients",
+      "inbound phone calls",
+      "cx",
+      "customer success & services",
+      "enablement",
+      "customers",
+      "trusted partner",
+      "successful adoption",
+      "customer stakeholders",
+      "customer services"
+    ],
+    "sample_examples": [
+      {
+        "sample_id": "residual_audit_v1_0001",
+        "title_clean": "Client Retention Specialist (Remote)",
+        "company_name": "beyondfinance",
+        "departments": [
+          "Client Success Specialist"
+        ],
+        "skills": [],
+        "reasoning_summary": "The title is customer-facing but the retention emphasis becomes clear only from the debt-program and customer-success context.",
+        "evidence_terms": [
+          "client retention",
+          "customer success",
+          "retaining clients",
+          "inbound phone calls"
+        ]
+      },
+      {
+        "sample_id": "residual_audit_v1_0029",
+        "title_clean": "Service Enablement Manager, CX",
+        "company_name": "nice",
+        "departments": [
+          "GCO - Customer Success & Services"
+        ],
+        "skills": [
+          "power_bi",
+          "excel",
+          "salesforce"
+        ],
+        "reasoning_summary": "Enablement Manager is broad, but the CX and customer-success/services context points to customer enablement rather than generic operations.",
+        "evidence_terms": [
+          "CX",
+          "Customer Success & Services",
+          "enablement",
+          "customers"
+        ]
+      },
+      {
+        "sample_id": "residual_audit_v1_0064",
+        "title_clean": "Senior AI Engagement Manager, Maritime Industrial Base",
+        "company_name": "c3iot",
+        "departments": [
+          "Customer Services"
+        ],
+        "skills": [
+          "machine_learning"
+        ],
+        "reasoning_summary": "Trusted customer partner and AI adoption leadership in operational environments indicate a post-sale customer success/engagement role.",
+        "evidence_terms": [
+          "trusted partner",
+          "successful adoption",
+          "customer stakeholders",
+          "Customer Services"
+        ]
+      },
+      {
+        "sample_id": "residual_audit_v1_0242",
+        "title_clean": "Manager, Customer Adoption & Success (EMEA)",
+        "company_name": "lightspeedhq",
+        "departments": [
+          "Launch Services"
+        ],
+        "skills": [],
+        "reasoning_summary": "Customer adoption and success leadership focused on value realization and adoption function fits customer success.",
+        "evidence_terms": [
+          "Customer Adoption & Success",
+          "Adoption function",
+          "customer value"
+        ]
+      },
+      {
+        "sample_id": "residual_audit_v1_0271",
+        "title_clean": "Onboarding Specialist",
+        "company_name": "glossgenius",
+        "departments": [
+          "Sales"
+        ],
+        "skills": [
+          "salesforce",
+          "machine_learning"
+        ],
+        "reasoning_summary": "This onboarding specialist supports high-revenue prospective customers transitioning onto the platform and sits adjacent to sales, which is a customer onboarding/adoption context.",
+        "evidence_terms": [
+          "Onboarding Specialist",
+          "transition onto our platform",
+          "adjacent to Sales"
+        ]
+      },
+      {
+        "sample_id": "residual_audit_v1_0280",
+        "title_clean": "Operations Associate, GTM Onboarding Specialist",
+        "company_name": "stripe",
+        "departments": [
+          "4712 SDC - Accelerate"
+        ],
+        "skills": [],
+        "reasoning_summary": "Despite mixed title wording, the work is technical guidance during onboarding and ensuring successful user onboarding.",
+        "evidence_terms": [
+          "GTM Onboarding Specialist",
+          "technical guidance",
+          "onboarding journey",
+          "positive and successful onboarding experience"
+        ]
+      }
+    ]
+  },
+  "account_manager": {
+    "sample_count": 10,
+    "projected_residual_count": 887,
+    "priority": "high",
+    "decision": "reviewer_first_then_context_gate",
+    "pilot_titles": [
+      "Partner Development Manager",
+      "Partner Growth Manager",
+      "Client Strategist",
+      "Client Strategy"
+    ],
+    "positive_signals": [
+      "sales",
+      "business development",
+      "partner success",
+      "client strategy",
+      "growth plans"
+    ],
+    "negative_signals": [
+      "people operations",
+      "internal enablement only",
+      "marketing-only"
+    ],
+    "top_evidence_terms": [
+      "sales",
+      "partner development manager",
+      "customer relationships",
+      "growth",
+      "sales channels",
+      "global partner ecosystem",
+      "partner enablement",
+      "partner experience",
+      "provider engagement",
+      "building relationships",
+      "primary care physician offices",
+      "sales & customer success"
+    ],
+    "sample_examples": [
+      {
+        "sample_id": "residual_audit_v1_0026",
+        "title_clean": "Partner Development Manager",
+        "company_name": "iterable",
+        "departments": [
+          "Sales"
+        ],
+        "skills": [
+          "salesforce"
+        ],
+        "reasoning_summary": "The title suggests channel/partner sales work, but the exact sales family becomes clear only from the sales and partner-growth context.",
+        "evidence_terms": [
+          "Partner Development Manager",
+          "Sales",
+          "customer relationships",
+          "growth"
+        ]
+      },
+      {
+        "sample_id": "residual_audit_v1_0031",
+        "title_clean": "Global Partner Experience Lead",
+        "company_name": "appian",
+        "departments": [
+          "Sales - Sales Channels"
+        ],
+        "skills": [],
+        "reasoning_summary": "Partner experience is broad, but the sales-channel and global partner ecosystem context narrows it toward partner/channel sales management.",
+        "evidence_terms": [
+          "Sales Channels",
+          "global partner ecosystem",
+          "Partner Enablement",
+          "partner experience"
+        ]
+      },
+      {
+        "sample_id": "residual_audit_v1_0101",
+        "title_clean": "Provider Engagement Specialist (Contractor), Tennessee",
+        "company_name": "cloverhealth",
+        "departments": [
+          "Sales & Customer Success"
+        ],
+        "skills": [],
+        "reasoning_summary": "Field-based provider relationship building and meeting coordination point to external account/provider engagement rather than generic operations.",
+        "evidence_terms": [
+          "Provider Engagement",
+          "building relationships",
+          "Primary Care Physician offices",
+          "Sales & Customer Success"
+        ]
+      },
+      {
+        "sample_id": "residual_audit_v1_0145",
+        "title_clean": "Senior Enterprise Client Strategist",
+        "company_name": "accrue",
+        "departments": [
+          "Sales"
+        ],
+        "skills": [
+          "excel"
+        ],
+        "reasoning_summary": "Executive-level partner relationships and multi-quarter growth plans indicate strategic client/account management.",
+        "evidence_terms": [
+          "Client Strategist",
+          "enterprise partners",
+          "strategic advisor",
+          "growth plans"
+        ]
+      },
+      {
+        "sample_id": "residual_audit_v1_0154",
+        "title_clean": "Manager, Client Strategy",
+        "company_name": "shopmy",
+        "departments": [
+          "Client Strategy"
+        ],
+        "skills": [
+          "salesforce"
+        ],
+        "reasoning_summary": "Success-team ownership of brand portfolios and strategic client management aligns with account/client management.",
+        "evidence_terms": [
+          "Client Strategy",
+          "Success team",
+          "portfolio of brands"
+        ]
+      },
+      {
+        "sample_id": "residual_audit_v1_0245",
+        "title_clean": "Growth Manager",
+        "company_name": "airship",
+        "departments": [
+          "Revenue"
+        ],
+        "skills": [],
+        "reasoning_summary": "Commercial strategy, pricing, renewals, and expansion for enterprise accounts align with strategic account management.",
+        "evidence_terms": [
+          "Growth Manager",
+          "Enterprise accounts",
+          "pricing",
+          "renewal and expansion"
+        ]
+      }
+    ]
+  },
+  "project_manager": {
+    "sample_count": 9,
+    "projected_residual_count": 799,
+    "priority": "high",
+    "decision": "reviewer_first_then_context_gate",
+    "pilot_titles": [
+      "Engagement Manager",
+      "Professional Services Manager",
+      "Delivery Excellence Manager"
+    ],
+    "positive_signals": [
+      "professional services",
+      "implementation",
+      "delivery",
+      "project management",
+      "resource tracking"
+    ],
+    "negative_signals": [
+      "pure account ownership",
+      "pure operations management",
+      "domain-expert IC engineering"
+    ],
+    "top_evidence_terms": [
+      "engagement manager",
+      "procurement",
+      "project engineer",
+      "project schedules",
+      "construction activities",
+      "professional services projects",
+      "implemented seamlessly",
+      "client satisfaction",
+      "delivery excellence manager",
+      "successful implementations",
+      "customer engagements",
+      "customer outcomes"
+    ],
+    "sample_examples": [
+      {
+        "sample_id": "residual_audit_v1_0025",
+        "title_clean": "Fuel Fabrication Project Engineer",
+        "company_name": "oklo",
+        "departments": [
+          "Engineering"
+        ],
+        "skills": [],
+        "reasoning_summary": "This is a project-engineer role with strong schedule, coordination, procurement, and cross-functional execution signals, but the engineering domain remains specialized.",
+        "evidence_terms": [
+          "Project Engineer",
+          "project schedules",
+          "procurement",
+          "construction activities"
+        ]
+      },
+      {
+        "sample_id": "residual_audit_v1_0092",
+        "title_clean": "Engagement Manager, EMEA",
+        "company_name": "ripple",
+        "departments": [
+          "Service & Delivery"
+        ],
+        "skills": [],
+        "reasoning_summary": "Client-facing implementation and delivery ownership for treasury solutions fits a project or engagement management role.",
+        "evidence_terms": [
+          "Engagement Manager",
+          "professional services projects",
+          "implemented seamlessly",
+          "client satisfaction"
+        ]
+      },
+      {
+        "sample_id": "residual_audit_v1_0120",
+        "title_clean": "Delivery Excellence Manager- Central",
+        "company_name": "gleanwork",
+        "departments": [
+          "Customer Outcomes"
+        ],
+        "skills": [],
+        "reasoning_summary": "Implementation orchestration and long-term customer engagements point to delivery/project management.",
+        "evidence_terms": [
+          "Delivery Excellence Manager",
+          "successful implementations",
+          "customer engagements",
+          "Customer Outcomes"
+        ]
+      },
+      {
+        "sample_id": "residual_audit_v1_0125",
+        "title_clean": "Professional Services Manager II, Enterprise (Seattle Hiring Event)",
+        "company_name": "axon",
+        "departments": [
+          "Axon EVG_Sales"
+        ],
+        "skills": [],
+        "reasoning_summary": "Professional services delivery, resource tracking, and implementation work indicate project/delivery management in a services context.",
+        "evidence_terms": [
+          "Professional Services Manager",
+          "project management",
+          "resource tracking",
+          "implementing"
+        ]
+      },
+      {
+        "sample_id": "residual_audit_v1_0169",
+        "title_clean": "Engagement Manager II",
+        "company_name": "braze",
+        "departments": [
+          "Customer Experience"
+        ],
+        "skills": [],
+        "reasoning_summary": "Machine learning engagement work blends delivery, leadership, and customer-facing deployment of AI solutions.",
+        "evidence_terms": [
+          "Engagement Manager",
+          "deploying AI decisioning solutions",
+          "Customer Experience"
+        ]
+      },
+      {
+        "sample_id": "residual_audit_v1_0188",
+        "title_clean": "Staff Engineering Program Support",
+        "company_name": "graphcore",
+        "departments": [
+          "Systems Engineering"
+        ],
+        "skills": [
+          "excel"
+        ],
+        "reasoning_summary": "Procurement coordination, milestone tracking, and program status reporting indicate program support/project coordination.",
+        "evidence_terms": [
+          "Engineering Program Support",
+          "procurement",
+          "track milestones",
+          "program status"
+        ]
+      }
+    ]
+  }
+}

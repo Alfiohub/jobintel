@@ -1,0 +1,3306 @@
+{
+  "cluster_count": 127,
+  "clusters": [
+    {
+      "cluster_name": "operations_specialist_keep_other_for_now",
+      "target_label": "operations_specialist",
+      "target_family": "operations",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 157,
+      "representative_titles": [
+        {
+          "title": "Cultivation Associate",
+          "count": 18
+        },
+        {
+          "title": "Intelligence Operations Integrator",
+          "count": 16
+        },
+        {
+          "title": "Implementation Engineer",
+          "count": 13
+        },
+        {
+          "title": "Global Operations Associate",
+          "count": 10
+        },
+        {
+          "title": "Production Coordinator",
+          "count": 9
+        },
+        {
+          "title": "Government Travel Consultant",
+          "count": 9
+        },
+        {
+          "title": "Regional Manager - Tooling Solutions",
+          "count": 9
+        },
+        {
+          "title": "Senior Consultant",
+          "count": 8
+        }
+      ],
+      "risk_levels": {
+        "medium": 17,
+        "high": 1
+      },
+      "external_support": {
+        "medium": 8,
+        "weak": 3,
+        "strong": 7
+      }
+    },
+    {
+      "cluster_name": "financial_analyst_keep_other_for_now",
+      "target_label": "financial_analyst",
+      "target_family": "finance",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 148,
+      "representative_titles": [
+        {
+          "title": "General Manager",
+          "count": 40
+        },
+        {
+          "title": "FP&A Manager",
+          "count": 11
+        },
+        {
+          "title": "Partner Growth Manager",
+          "count": 11
+        },
+        {
+          "title": "Partner Manager",
+          "count": 9
+        },
+        {
+          "title": "SEO Manager, Healthcare",
+          "count": 9
+        },
+        {
+          "title": "Finance Associate",
+          "count": 8
+        },
+        {
+          "title": "Regional Manager",
+          "count": 8
+        },
+        {
+          "title": "Senior Revenue Manager",
+          "count": 8
+        }
+      ],
+      "risk_levels": {
+        "high": 3,
+        "medium": 12
+      },
+      "external_support": {
+        "strong": 6,
+        "weak": 3,
+        "none": 1,
+        "medium": 5
+      }
+    },
+    {
+      "cluster_name": "data_analyst_keep_other_for_now",
+      "target_label": "data_analyst",
+      "target_family": "data_analytics",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 96,
+      "representative_titles": [
+        {
+          "title": "Business Analyst",
+          "count": 20
+        },
+        {
+          "title": "Senior Business Analyst",
+          "count": 12
+        },
+        {
+          "title": "Deal Desk Analyst",
+          "count": 11
+        },
+        {
+          "title": "Analyst, Customer & Product Support",
+          "count": 8
+        },
+        {
+          "title": "Growth Analyst",
+          "count": 7
+        },
+        {
+          "title": "Commercial Operations Analyst- Quoting",
+          "count": 7
+        },
+        {
+          "title": "Security Analyst",
+          "count": 7
+        },
+        {
+          "title": "Content Analyst",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "high": 2,
+        "medium": 9
+      },
+      "external_support": {
+        "strong": 4,
+        "weak": 3,
+        "medium": 1,
+        "none": 3
+      }
+    },
+    {
+      "cluster_name": "sales_manager_keep_other_for_now",
+      "target_label": "sales_manager",
+      "target_family": "sales",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 87,
+      "representative_titles": [
+        {
+          "title": "Senior Market Strategy and Partnerships Manager",
+          "count": 36
+        },
+        {
+          "title": "Betting Hero Sales Ambassador",
+          "count": 10
+        },
+        {
+          "title": "Quality Inspector",
+          "count": 9
+        },
+        {
+          "title": "Brand Partnerships Manager",
+          "count": 8
+        },
+        {
+          "title": "Head of Sales",
+          "count": 6
+        },
+        {
+          "title": "Manager, Commercial Sales",
+          "count": 6
+        },
+        {
+          "title": "Director of Enablement, Enterprise Sales",
+          "count": 6
+        },
+        {
+          "title": "Director of Product, Core Platform & Mobile",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 8
+      },
+      "external_support": {
+        "none": 3,
+        "weak": 3,
+        "strong": 2
+      }
+    },
+    {
+      "cluster_name": "engineering_manager_needs_tighter_rule",
+      "target_label": "engineering_manager",
+      "target_family": "software_engineering",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 83,
+      "representative_titles": [
+        {
+          "title": "Manager, Software Engineering",
+          "count": 18
+        },
+        {
+          "title": "Software Development Manager",
+          "count": 10
+        },
+        {
+          "title": "Senior Manager, Engineering",
+          "count": 10
+        },
+        {
+          "title": "Engineering Director",
+          "count": 9
+        },
+        {
+          "title": "Senior Manager, Software Engineering",
+          "count": 8
+        },
+        {
+          "title": "Manager, Engineering",
+          "count": 8
+        },
+        {
+          "title": "Software Engineering Intern",
+          "count": 7
+        },
+        {
+          "title": "Manager, Field Engineering",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "low": 8,
+        "medium": 1
+      },
+      "external_support": {
+        "medium": 4,
+        "strong": 5
+      }
+    },
+    {
+      "cluster_name": "ml_engineer_keep_other_for_now",
+      "target_label": "ml_engineer",
+      "target_family": "machine_learning",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 77,
+      "representative_titles": [
+        {
+          "title": "Machine Learning Researcher",
+          "count": 13
+        },
+        {
+          "title": "AI Automation Engineer",
+          "count": 8
+        },
+        {
+          "title": "Research Engineer",
+          "count": 8
+        },
+        {
+          "title": "Robotics Engineer",
+          "count": 6
+        },
+        {
+          "title": "Performance Engineer",
+          "count": 6
+        },
+        {
+          "title": "QA Automation Engineer",
+          "count": 6
+        },
+        {
+          "title": "Test Automation Engineer",
+          "count": 6
+        },
+        {
+          "title": "Cybersecurity Engineer",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 11
+      },
+      "external_support": {
+        "medium": 2,
+        "strong": 9
+      }
+    },
+    {
+      "cluster_name": "solutions_architect_keep_other_for_now",
+      "target_label": "solutions_architect",
+      "target_family": "architecture",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 69,
+      "representative_titles": [
+        {
+          "title": "Security Architect",
+          "count": 9
+        },
+        {
+          "title": "Paid Search Sr. Strategist",
+          "count": 9
+        },
+        {
+          "title": "Residential Rehabilitation Educator, $20.00",
+          "count": 9
+        },
+        {
+          "title": "Technical Consultant",
+          "count": 8
+        },
+        {
+          "title": "Software Architect",
+          "count": 7
+        },
+        {
+          "title": "Lead Technical Animator",
+          "count": 7
+        },
+        {
+          "title": "Paid Social Strategist",
+          "count": 7
+        },
+        {
+          "title": "Deployment Strategist",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "medium": 9
+      },
+      "external_support": {
+        "strong": 5,
+        "none": 1,
+        "medium": 1,
+        "weak": 2
+      }
+    },
+    {
+      "cluster_name": "marketing_specialist_keep_other_for_now",
+      "target_label": "marketing_specialist",
+      "target_family": "marketing",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 62,
+      "representative_titles": [
+        {
+          "title": "Sonder Responder",
+          "count": 19
+        },
+        {
+          "title": "Manager, Paid Social",
+          "count": 15
+        },
+        {
+          "title": "Manager, Paid Search",
+          "count": 8
+        },
+        {
+          "title": "Cyber Security Entrepreneur in Residence",
+          "count": 8
+        },
+        {
+          "title": "Market Associate",
+          "count": 6
+        },
+        {
+          "title": "Costumed Mascot Performer for Meet & Greet",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 6
+      },
+      "external_support": {
+        "medium": 2,
+        "weak": 1,
+        "strong": 1,
+        "none": 2
+      }
+    },
+    {
+      "cluster_name": "medical_assistant_keep_other_for_now",
+      "target_label": "medical_assistant",
+      "target_family": "healthcare_clinical",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 60,
+      "representative_titles": [
+        {
+          "title": "Hair Color Bar Assistant, Licensed Cosmetologist",
+          "count": 32
+        },
+        {
+          "title": "Obstetrician/Gynecologist (Full-Time)",
+          "count": 9
+        },
+        {
+          "title": "Parts Assistant",
+          "count": 7
+        },
+        {
+          "title": "Associate, Medical Economics",
+          "count": 6
+        },
+        {
+          "title": "Full Time Pharmacist",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 5
+      },
+      "external_support": {
+        "weak": 2,
+        "medium": 2,
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "ml_engineer_needs_tighter_rule",
+      "target_label": "ml_engineer",
+      "target_family": "machine_learning",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 60,
+      "representative_titles": [
+        {
+          "title": "Principal Engineer",
+          "count": 16
+        },
+        {
+          "title": "Senior Engineer",
+          "count": 10
+        },
+        {
+          "title": "Senior ML-Engineer",
+          "count": 8
+        },
+        {
+          "title": "Staff Engineer",
+          "count": 7
+        },
+        {
+          "title": "GenAI Engineer",
+          "count": 7
+        },
+        {
+          "title": "Senior Staff Engineer",
+          "count": 6
+        },
+        {
+          "title": "IT Engineer",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "low": 6,
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 5,
+        "medium": 2
+      }
+    },
+    {
+      "cluster_name": "business_development_representative_keep_other_for_now",
+      "target_label": "business_development_representative",
+      "target_family": "sales",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 60,
+      "representative_titles": [
+        {
+          "title": "Senior Java Developer",
+          "count": 10
+        },
+        {
+          "title": "Senior Salesforce Developer",
+          "count": 8
+        },
+        {
+          "title": "Backend Developer (Node.js)",
+          "count": 8
+        },
+        {
+          "title": "Business Operations Associate",
+          "count": 7
+        },
+        {
+          "title": "Zuora Developer",
+          "count": 7
+        },
+        {
+          "title": "Senior Frontend Developer",
+          "count": 7
+        },
+        {
+          "title": "Quantitative Developer",
+          "count": 7
+        },
+        {
+          "title": "Android Developer",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 8
+      },
+      "external_support": {
+        "strong": 2,
+        "medium": 5,
+        "weak": 1
+      }
+    },
+    {
+      "cluster_name": "operations_specialist_semantic_layer_candidate",
+      "target_label": "operations_specialist",
+      "target_family": "operations",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 56,
+      "representative_titles": [
+        {
+          "title": "Operations Associate",
+          "count": 10
+        },
+        {
+          "title": "Office Coordinator",
+          "count": 8
+        },
+        {
+          "title": "Operations Supervisor",
+          "count": 8
+        },
+        {
+          "title": "Operations Associate Specialist - Freelance Project",
+          "count": 6
+        },
+        {
+          "title": "Project Coordinator",
+          "count": 6
+        },
+        {
+          "title": "Specialist II, Facilities, Property Operations",
+          "count": 6
+        },
+        {
+          "title": "Front Desk Coordinator",
+          "count": 6
+        },
+        {
+          "title": "Investor Relations Manager",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "low": 1,
+        "medium": 7
+      },
+      "external_support": {
+        "medium": 2,
+        "strong": 5,
+        "weak": 1
+      }
+    },
+    {
+      "cluster_name": "customer_service_specialist_keep_other_for_now",
+      "target_label": "customer_service_specialist",
+      "target_family": "operations",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 52,
+      "representative_titles": [
+        {
+          "title": "Client Partner",
+          "count": 13
+        },
+        {
+          "title": "Bilingual Case Manager (Remote Flexible, Spanish Speaking)",
+          "count": 10
+        },
+        {
+          "title": "Back of House Supervisor",
+          "count": 8
+        },
+        {
+          "title": "Front of House Supervisor",
+          "count": 8
+        },
+        {
+          "title": "ABA Supervisor",
+          "count": 7
+        },
+        {
+          "title": "Regional Client Partnership Specialist, Educational Services",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "high": 2,
+        "medium": 4
+      },
+      "external_support": {
+        "weak": 1,
+        "none": 2,
+        "medium": 1,
+        "strong": 2
+      }
+    },
+    {
+      "cluster_name": "warehouse_associate_keep_other_for_now",
+      "target_label": "warehouse_associate",
+      "target_family": "logistics",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 52,
+      "representative_titles": [
+        {
+          "title": "Payroll Specialist",
+          "count": 12
+        },
+        {
+          "title": "GTM Planning Lead",
+          "count": 11
+        },
+        {
+          "title": "Data Entry Specialist",
+          "count": 10
+        },
+        {
+          "title": "Personal Care Specialist (Full Time)",
+          "count": 7
+        },
+        {
+          "title": "Inside Sales Specialist - Industrial Supplies",
+          "count": 6
+        },
+        {
+          "title": "Social Media Strategist",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "high": 1,
+        "medium": 5
+      },
+      "external_support": {
+        "strong": 3,
+        "none": 1,
+        "weak": 2
+      }
+    },
+    {
+      "cluster_name": "engineering_manager_keep_other_for_now",
+      "target_label": "engineering_manager",
+      "target_family": "software_engineering",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 50,
+      "representative_titles": [
+        {
+          "title": "Leader in Training",
+          "count": 17
+        },
+        {
+          "title": "Strategic SI Partner Development Manager",
+          "count": 11
+        },
+        {
+          "title": "Chief of Staff to the Managing Director of AI",
+          "count": 10
+        },
+        {
+          "title": "Vice President, Engineering",
+          "count": 6
+        },
+        {
+          "title": "Pricing & Packaging Manager",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 4,
+        "high": 1
+      },
+      "external_support": {
+        "none": 2,
+        "medium": 3
+      }
+    },
+    {
+      "cluster_name": "compliance_manager_keep_other_for_now",
+      "target_label": "compliance_manager",
+      "target_family": "compliance_risk",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 47,
+      "representative_titles": [
+        {
+          "title": "Chief of Staff",
+          "count": 14
+        },
+        {
+          "title": "Mortgage Loan Officer",
+          "count": 11
+        },
+        {
+          "title": "Manager, Commerce",
+          "count": 9
+        },
+        {
+          "title": "Kitchen Manager, DashMart",
+          "count": 7
+        },
+        {
+          "title": "Escrow Officer w/ Book",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 5
+      },
+      "external_support": {
+        "strong": 3,
+        "medium": 2
+      }
+    },
+    {
+      "cluster_name": "ux_researcher_keep_other_for_now",
+      "target_label": "ux_researcher",
+      "target_family": "design",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 46,
+      "representative_titles": [
+        {
+          "title": "Quantitative Researcher",
+          "count": 24
+        },
+        {
+          "title": "Cubist Quantitative Researcher",
+          "count": 8
+        },
+        {
+          "title": "Amazon & Retail Media Strategist - Search (PPC)",
+          "count": 8
+        },
+        {
+          "title": "Market Microstructure Researcher",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "high": 2,
+        "medium": 2
+      },
+      "external_support": {
+        "strong": 2,
+        "none": 1,
+        "weak": 1
+      }
+    },
+    {
+      "cluster_name": "sales_manager_semantic_layer_candidate",
+      "target_label": "sales_manager",
+      "target_family": "sales",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 45,
+      "representative_titles": [
+        {
+          "title": "Sales Enablement Manager",
+          "count": 13
+        },
+        {
+          "title": "Director of Tooling",
+          "count": 9
+        },
+        {
+          "title": "Director, Enterprise Sales",
+          "count": 9
+        },
+        {
+          "title": "Director of Success",
+          "count": 8
+        },
+        {
+          "title": "Director, Platform Sales",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 3,
+        "low": 2
+      },
+      "external_support": {
+        "weak": 4,
+        "medium": 1
+      }
+    },
+    {
+      "cluster_name": "account_manager_keep_other_for_now",
+      "target_label": "account_manager",
+      "target_family": "sales",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 43,
+      "representative_titles": [
+        {
+          "title": "Clinical Trial Manager",
+          "count": 11
+        },
+        {
+          "title": "Engagement Manager II",
+          "count": 10
+        },
+        {
+          "title": "Engagement Manager",
+          "count": 8
+        },
+        {
+          "title": "Growth Manager",
+          "count": 7
+        },
+        {
+          "title": "Regulatory Manager / Senior Regulatory Manager - Clinical Trials",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "medium": 5
+      },
+      "external_support": {
+        "strong": 1,
+        "medium": 2,
+        "weak": 2
+      }
+    },
+    {
+      "cluster_name": "store_associate_keep_other_for_now",
+      "target_label": "store_associate",
+      "target_family": "sales",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 39,
+      "representative_titles": [
+        {
+          "title": "Personal Care Specialist (Part Time)",
+          "count": 26
+        },
+        {
+          "title": "Lead Piercer (Part-Time)",
+          "count": 7
+        },
+        {
+          "title": "Part-Time Ambassador",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 3
+      },
+      "external_support": {
+        "weak": 2,
+        "none": 1
+      }
+    },
+    {
+      "cluster_name": "assistant_teacher_keep_other_for_now",
+      "target_label": "assistant_teacher",
+      "target_family": "education",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 38,
+      "representative_titles": [
+        {
+          "title": "Sr. Instructor",
+          "count": 8
+        },
+        {
+          "title": "Assistant Site Manager",
+          "count": 8
+        },
+        {
+          "title": "*AMT Instructor*",
+          "count": 8
+        },
+        {
+          "title": "Assistant General Manager",
+          "count": 8
+        },
+        {
+          "title": "4-year University Degree Required - Children's English Teacher in Japan",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 4,
+        "high": 1
+      },
+      "external_support": {
+        "strong": 2,
+        "medium": 2,
+        "none": 1
+      }
+    },
+    {
+      "cluster_name": "sales_engineer_keep_other_for_now",
+      "target_label": "sales_engineer",
+      "target_family": "sales",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 37,
+      "representative_titles": [
+        {
+          "title": "Robotics Field Service Engineer",
+          "count": 8
+        },
+        {
+          "title": "Senior Security Operations Engineer",
+          "count": 8
+        },
+        {
+          "title": "Developer Relations Engineer",
+          "count": 7
+        },
+        {
+          "title": "Security Operations Engineer",
+          "count": 7
+        },
+        {
+          "title": "Trading Desk Operations Engineer",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "medium": 5
+      },
+      "external_support": {
+        "medium": 4,
+        "weak": 1
+      }
+    },
+    {
+      "cluster_name": "content_producer_keep_other_for_now",
+      "target_label": "content_producer",
+      "target_family": "content",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 35,
+      "representative_titles": [
+        {
+          "title": "Producer",
+          "count": 27
+        },
+        {
+          "title": "Quantitative Trader",
+          "count": 8
+        }
+      ],
+      "risk_levels": {
+        "high": 1,
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 2
+      }
+    },
+    {
+      "cluster_name": "manufacturing_engineer_semantic_layer_candidate",
+      "target_label": "manufacturing_engineer",
+      "target_family": "industrial_engineering",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 34,
+      "representative_titles": [
+        {
+          "title": "Production Lead",
+          "count": 12
+        },
+        {
+          "title": "Production Associate",
+          "count": 8
+        },
+        {
+          "title": "Integration Engineer",
+          "count": 8
+        },
+        {
+          "title": "Production Planner",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 4
+      },
+      "external_support": {
+        "strong": 4
+      }
+    },
+    {
+      "cluster_name": "account_manager_needs_tighter_rule",
+      "target_label": "account_manager",
+      "target_family": "sales",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 34,
+      "representative_titles": [
+        {
+          "title": "Territory Manager",
+          "count": 11
+        },
+        {
+          "title": "Manager, Business Development",
+          "count": 10
+        },
+        {
+          "title": "Senior Manager, Technical Accounting",
+          "count": 7
+        },
+        {
+          "title": "Manager, Account Management",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 1,
+        "low": 3
+      },
+      "external_support": {
+        "strong": 2,
+        "weak": 1,
+        "medium": 1
+      }
+    },
+    {
+      "cluster_name": "manufacturing_engineer_needs_tighter_rule",
+      "target_label": "manufacturing_engineer",
+      "target_family": "industrial_engineering",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 34,
+      "representative_titles": [
+        {
+          "title": "Production Engineer",
+          "count": 10
+        },
+        {
+          "title": "Senior Product Engineer",
+          "count": 9
+        },
+        {
+          "title": "Product Engineer",
+          "count": 8
+        },
+        {
+          "title": "Senior Manufacturing Test Engineer",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "low": 4
+      },
+      "external_support": {
+        "strong": 4
+      }
+    },
+    {
+      "cluster_name": "technician_keep_other_for_now",
+      "target_label": "technician",
+      "target_family": "skilled_trades",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 33,
+      "representative_titles": [
+        {
+          "title": "Aircraft Maintenance Instructor",
+          "count": 8
+        },
+        {
+          "title": "Production Supervisor",
+          "count": 7
+        },
+        {
+          "title": "Aircraft Maintenance Instructor in Philadelphia, PA",
+          "count": 6
+        },
+        {
+          "title": "Aircraft Maintenance Instructor in Manassas, VA",
+          "count": 6
+        },
+        {
+          "title": "Aircraft Maintenance Instructor in Hasbrouck Heights, NJ",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 5
+      },
+      "external_support": {
+        "strong": 2,
+        "weak": 3
+      }
+    },
+    {
+      "cluster_name": "mechanic_keep_other_for_now",
+      "target_label": "mechanic",
+      "target_family": "skilled_trades",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 32,
+      "representative_titles": [
+        {
+          "title": "A&P Mechanic Instructor",
+          "count": 11
+        },
+        {
+          "title": "Experienced Auto Painter - $6,000 Bonus",
+          "count": 8
+        },
+        {
+          "title": "Aircraft Mechanic - Instructor",
+          "count": 7
+        },
+        {
+          "title": "Aircraft Mechanic Instructor",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 4
+      },
+      "external_support": {
+        "weak": 1,
+        "none": 1,
+        "medium": 2
+      }
+    },
+    {
+      "cluster_name": "ai_trainer_generalist_noise_or_non_role",
+      "target_label": "ai_trainer_generalist",
+      "target_family": "operations",
+      "suggested_action": "noise_or_non_role",
+      "estimated_volume": 31,
+      "representative_titles": [
+        {
+          "title": "General Application",
+          "count": 31
+        }
+      ],
+      "risk_levels": {
+        "high": 1
+      },
+      "external_support": {
+        "weak": 1
+      }
+    },
+    {
+      "cluster_name": "journalist_keep_other_for_now",
+      "target_label": "journalist",
+      "target_family": "content",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 31,
+      "representative_titles": [
+        {
+          "title": "Shift Lead, Licensed Cosmetologist",
+          "count": 12
+        },
+        {
+          "title": "Colorist, Licensed Cosmetologist",
+          "count": 10
+        },
+        {
+          "title": "Meteorologist",
+          "count": 9
+        }
+      ],
+      "risk_levels": {
+        "medium": 3
+      },
+      "external_support": {
+        "strong": 3
+      }
+    },
+    {
+      "cluster_name": "it_support_specialist_needs_tighter_rule",
+      "target_label": "it_support_specialist",
+      "target_family": "it_operations",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 31,
+      "representative_titles": [
+        {
+          "title": "Product Support Specialist",
+          "count": 11
+        },
+        {
+          "title": "IT Administrator",
+          "count": 7
+        },
+        {
+          "title": "Customer Support Engineer",
+          "count": 7
+        },
+        {
+          "title": "IT Specialist",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "low": 3,
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 4
+      }
+    },
+    {
+      "cluster_name": "product_designer_needs_tighter_rule",
+      "target_label": "product_designer",
+      "target_family": "design",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 31,
+      "representative_titles": [
+        {
+          "title": "Designer",
+          "count": 11
+        },
+        {
+          "title": "Senior Designer",
+          "count": 8
+        },
+        {
+          "title": "Designer II",
+          "count": 6
+        },
+        {
+          "title": "Product Design Intern",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "low": 4
+      },
+      "external_support": {
+        "strong": 3,
+        "medium": 1
+      }
+    },
+    {
+      "cluster_name": "logistics_manager_keep_other_for_now",
+      "target_label": "logistics_manager",
+      "target_family": "logistics",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 31,
+      "representative_titles": [
+        {
+          "title": "Contracts Manager",
+          "count": 11
+        },
+        {
+          "title": "General Manager, Licensed Cosmetologist",
+          "count": 11
+        },
+        {
+          "title": "Facilities Manager",
+          "count": 9
+        }
+      ],
+      "risk_levels": {
+        "medium": 2,
+        "high": 1
+      },
+      "external_support": {
+        "strong": 2,
+        "weak": 1
+      }
+    },
+    {
+      "cluster_name": "ml_engineer_taxonomy_gap",
+      "target_label": "ml_engineer",
+      "target_family": "machine_learning",
+      "suggested_action": "taxonomy_gap",
+      "estimated_volume": 31,
+      "representative_titles": [
+        {
+          "title": "Test Engineer",
+          "count": 9
+        },
+        {
+          "title": "Field Engineer",
+          "count": 8
+        },
+        {
+          "title": "Design Engineer",
+          "count": 8
+        },
+        {
+          "title": "Senior Thermal Engineer",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 4
+      },
+      "external_support": {
+        "strong": 4
+      }
+    },
+    {
+      "cluster_name": "data_analyst_semantic_layer_candidate",
+      "target_label": "data_analyst",
+      "target_family": "data_analytics",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 30,
+      "representative_titles": [
+        {
+          "title": "FP&A Analyst",
+          "count": 8
+        },
+        {
+          "title": "Senior FP&A Analyst",
+          "count": 8
+        },
+        {
+          "title": "Product Analytics Team Lead, New Products",
+          "count": 8
+        },
+        {
+          "title": "Product Operations Analyst - Product Analytics",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 4
+      },
+      "external_support": {
+        "strong": 2,
+        "none": 1,
+        "weak": 1
+      }
+    },
+    {
+      "cluster_name": "certified_nursing_assistant_keep_other_for_now",
+      "target_label": "certified_nursing_assistant",
+      "target_family": "healthcare_clinical",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 28,
+      "representative_titles": [
+        {
+          "title": "Certified Nurse Midwife (CNM) (PRN)",
+          "count": 8
+        },
+        {
+          "title": "CT Technologist - Certified",
+          "count": 7
+        },
+        {
+          "title": "Certified Prosthetist Orthotist",
+          "count": 7
+        },
+        {
+          "title": "Certified Nurse Midwife (CNM) (Full-Time)",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 4
+      },
+      "external_support": {
+        "strong": 3,
+        "medium": 1
+      }
+    },
+    {
+      "cluster_name": "delivery_driver_keep_other_for_now",
+      "target_label": "delivery_driver",
+      "target_family": "logistics",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 27,
+      "representative_titles": [
+        {
+          "title": "Social Enterprise and Program Delivery-Evergreen",
+          "count": 27
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "none": 1
+      }
+    },
+    {
+      "cluster_name": "data_scientist_keep_other_for_now",
+      "target_label": "data_scientist",
+      "target_family": "data_science",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 26,
+      "representative_titles": [
+        {
+          "title": "Research Scientist",
+          "count": 7
+        },
+        {
+          "title": "Dental Hygienist",
+          "count": 7
+        },
+        {
+          "title": "Senior Research Scientist",
+          "count": 6
+        },
+        {
+          "title": "Environmental Scientist 1",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 4
+      },
+      "external_support": {
+        "strong": 4
+      }
+    },
+    {
+      "cluster_name": "software_engineer_needs_tighter_rule",
+      "target_label": "software_engineer",
+      "target_family": "software_engineering",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 25,
+      "representative_titles": [
+        {
+          "title": "Senior Firmware Engineer",
+          "count": 15
+        },
+        {
+          "title": "Firmware Engineer",
+          "count": 10
+        }
+      ],
+      "risk_levels": {
+        "medium": 2
+      },
+      "external_support": {
+        "strong": 2
+      }
+    },
+    {
+      "cluster_name": "school_administrator_keep_other_for_now",
+      "target_label": "school_administrator",
+      "target_family": "education",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 24,
+      "representative_titles": [
+        {
+          "title": "Office Manager",
+          "count": 13
+        },
+        {
+          "title": "Regional Director, Enterprise",
+          "count": 11
+        }
+      ],
+      "risk_levels": {
+        "high": 1,
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1,
+        "medium": 1
+      }
+    },
+    {
+      "cluster_name": "technical_recruiter_keep_other_for_now",
+      "target_label": "technical_recruiter",
+      "target_family": "recruiting",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 24,
+      "representative_titles": [
+        {
+          "title": "Talent Sourcer",
+          "count": 9
+        },
+        {
+          "title": "Security Associate",
+          "count": 9
+        },
+        {
+          "title": "Senior Technical Sourcer",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 3
+      },
+      "external_support": {
+        "weak": 2,
+        "medium": 1
+      }
+    },
+    {
+      "cluster_name": "occupational_therapist_keep_other_for_now",
+      "target_label": "occupational_therapist",
+      "target_family": "healthcare_clinical",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 24,
+      "representative_titles": [
+        {
+          "title": "Physical Therapist",
+          "count": 8
+        },
+        {
+          "title": "Traveling Orthotist",
+          "count": 8
+        },
+        {
+          "title": "Traveling Certified Prosthetist Orthotist",
+          "count": 8
+        }
+      ],
+      "risk_levels": {
+        "medium": 3
+      },
+      "external_support": {
+        "strong": 1,
+        "weak": 1,
+        "medium": 1
+      }
+    },
+    {
+      "cluster_name": "solutions_architect_needs_tighter_rule",
+      "target_label": "solutions_architect",
+      "target_family": "architecture",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 23,
+      "representative_titles": [
+        {
+          "title": "Senior Technical Enablement Architect",
+          "count": 15
+        },
+        {
+          "title": "Technical Architect",
+          "count": 8
+        }
+      ],
+      "risk_levels": {
+        "low": 2
+      },
+      "external_support": {
+        "medium": 1,
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "product_manager_semantic_layer_candidate",
+      "target_label": "product_manager",
+      "target_family": "product_management",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 23,
+      "representative_titles": [
+        {
+          "title": "Procurement Manager",
+          "count": 13
+        },
+        {
+          "title": "Director, Product Management",
+          "count": 10
+        }
+      ],
+      "risk_levels": {
+        "medium": 2
+      },
+      "external_support": {
+        "strong": 2
+      }
+    },
+    {
+      "cluster_name": "marketing_specialist_semantic_layer_candidate",
+      "target_label": "marketing_specialist",
+      "target_family": "marketing",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 22,
+      "representative_titles": [
+        {
+          "title": "Onboarding Specialist",
+          "count": 13
+        },
+        {
+          "title": "Safety Specialist",
+          "count": 9
+        }
+      ],
+      "risk_levels": {
+        "medium": 2
+      },
+      "external_support": {
+        "medium": 1,
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "people_business_partner_keep_other_for_now",
+      "target_label": "people_business_partner",
+      "target_family": "people_operations",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 21,
+      "representative_titles": [
+        {
+          "title": "Head of Partnerships",
+          "count": 8
+        },
+        {
+          "title": "Growth and Partnerships Associate",
+          "count": 7
+        },
+        {
+          "title": "Director, Enterprise Business Operations",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 3
+      },
+      "external_support": {
+        "none": 3
+      }
+    },
+    {
+      "cluster_name": "account_executive_keep_other_for_now",
+      "target_label": "account_executive",
+      "target_family": "sales",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 21,
+      "representative_titles": [
+        {
+          "title": "Principal Instructor - ArcGIS Enterprise",
+          "count": 8
+        },
+        {
+          "title": "Associate",
+          "count": 7
+        },
+        {
+          "title": "Strategic Finance Associate",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 3
+      },
+      "external_support": {
+        "none": 3
+      }
+    },
+    {
+      "cluster_name": "product_manager_keep_other_for_now",
+      "target_label": "product_manager",
+      "target_family": "product_management",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 20,
+      "representative_titles": [
+        {
+          "title": "Restaurant Manager",
+          "count": 14
+        },
+        {
+          "title": "People Product Technical Lead - Workday",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "high": 1,
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1,
+        "none": 1
+      }
+    },
+    {
+      "cluster_name": "supply_chain_specialist_keep_other_for_now",
+      "target_label": "supply_chain_specialist",
+      "target_family": "logistics",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 20,
+      "representative_titles": [
+        {
+          "title": "Auto Painter",
+          "count": 10
+        },
+        {
+          "title": "Survey Crew Chief",
+          "count": 10
+        }
+      ],
+      "risk_levels": {
+        "medium": 2
+      },
+      "external_support": {
+        "medium": 1,
+        "weak": 1
+      }
+    },
+    {
+      "cluster_name": "hr_generalist_keep_other_for_now",
+      "target_label": "hr_generalist",
+      "target_family": "people_operations",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 19,
+      "representative_titles": [
+        {
+          "title": "Restaurant General Manager",
+          "count": 19
+        }
+      ],
+      "risk_levels": {
+        "high": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "sales_manager_needs_tighter_rule",
+      "target_label": "sales_manager",
+      "target_family": "sales",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 19,
+      "representative_titles": [
+        {
+          "title": "Sales Director",
+          "count": 11
+        },
+        {
+          "title": "Director, Sales",
+          "count": 8
+        }
+      ],
+      "risk_levels": {
+        "low": 2
+      },
+      "external_support": {
+        "strong": 2
+      }
+    },
+    {
+      "cluster_name": "licensed_practical_nurse_noise_or_non_role",
+      "target_label": "licensed_practical_nurse",
+      "target_family": "healthcare_clinical",
+      "suggested_action": "noise_or_non_role",
+      "estimated_volume": 19,
+      "representative_titles": [
+        {
+          "title": "Don’t see what you’re looking for?",
+          "count": 11
+        },
+        {
+          "title": "Don't see what you're looking for?",
+          "count": 8
+        }
+      ],
+      "risk_levels": {
+        "high": 2
+      },
+      "external_support": {
+        "none": 2
+      }
+    },
+    {
+      "cluster_name": "operations_specialist_needs_tighter_rule",
+      "target_label": "operations_specialist",
+      "target_family": "operations",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 19,
+      "representative_titles": [
+        {
+          "title": "Collections Specialist",
+          "count": 7
+        },
+        {
+          "title": "Manager, Operations",
+          "count": 6
+        },
+        {
+          "title": "Future Rental Coordinators",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 1,
+        "low": 2
+      },
+      "external_support": {
+        "strong": 2,
+        "medium": 1
+      }
+    },
+    {
+      "cluster_name": "customer_success_manager_keep_other_for_now",
+      "target_label": "customer_success_manager",
+      "target_family": "customer_success",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 19,
+      "representative_titles": [
+        {
+          "title": "Customer Experience Manager",
+          "count": 7
+        },
+        {
+          "title": "Client Success Engineer - Implementation",
+          "count": 6
+        },
+        {
+          "title": "Senior Manager, Content Strategy",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 3
+      },
+      "external_support": {
+        "strong": 1,
+        "none": 1,
+        "medium": 1
+      }
+    },
+    {
+      "cluster_name": "physician_keep_other_for_now",
+      "target_label": "physician",
+      "target_family": "healthcare_clinical",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 18,
+      "representative_titles": [
+        {
+          "title": "Ambulatory Care Pharmacist",
+          "count": 11
+        },
+        {
+          "title": "Remote Primary Care Coordinator",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "medium": 2
+      },
+      "external_support": {
+        "none": 1,
+        "weak": 1
+      }
+    },
+    {
+      "cluster_name": "it_support_specialist_safe_rule_candidate",
+      "target_label": "it_support_specialist",
+      "target_family": "it_operations",
+      "suggested_action": "safe_rule_candidate",
+      "estimated_volume": 18,
+      "representative_titles": [
+        {
+          "title": "Senior Salesforce Administrator",
+          "count": 10
+        },
+        {
+          "title": "Salesforce Administrator",
+          "count": 8
+        }
+      ],
+      "risk_levels": {
+        "low": 2
+      },
+      "external_support": {
+        "medium": 2
+      }
+    },
+    {
+      "cluster_name": "financial_analyst_semantic_layer_candidate",
+      "target_label": "financial_analyst",
+      "target_family": "finance",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 18,
+      "representative_titles": [
+        {
+          "title": "Analyst, Financial Modeling",
+          "count": 6
+        },
+        {
+          "title": "CRM Manager",
+          "count": 6
+        },
+        {
+          "title": "Studio Manager",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 3
+      },
+      "external_support": {
+        "weak": 1,
+        "strong": 2
+      }
+    },
+    {
+      "cluster_name": "electrical_engineer_needs_tighter_rule",
+      "target_label": "electrical_engineer",
+      "target_family": "industrial_engineering",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 17,
+      "representative_titles": [
+        {
+          "title": "FPGA Engineer",
+          "count": 11
+        },
+        {
+          "title": "Electrical Test Engineer",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "low": 2
+      },
+      "external_support": {
+        "medium": 1,
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "it_support_specialist_keep_other_for_now",
+      "target_label": "it_support_specialist",
+      "target_family": "it_operations",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 17,
+      "representative_titles": [
+        {
+          "title": "Paid Advertising Strategist",
+          "count": 11
+        },
+        {
+          "title": "Database Administrator - Data Architecture focus",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 2
+      },
+      "external_support": {
+        "strong": 1,
+        "weak": 1
+      }
+    },
+    {
+      "cluster_name": "data_analyst_needs_tighter_rule",
+      "target_label": "data_analyst",
+      "target_family": "data_analytics",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 17,
+      "representative_titles": [
+        {
+          "title": "Operations Analyst",
+          "count": 10
+        },
+        {
+          "title": "Revenue Operations Associate",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "low": 2
+      },
+      "external_support": {
+        "strong": 1,
+        "weak": 1
+      }
+    },
+    {
+      "cluster_name": "technical_recruiter_noise_or_non_role",
+      "target_label": "technical_recruiter",
+      "target_family": "recruiting",
+      "suggested_action": "noise_or_non_role",
+      "estimated_volume": 17,
+      "representative_titles": [
+        {
+          "title": "Join Our Talent Community",
+          "count": 10
+        },
+        {
+          "title": "Join our Talent Community",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "high": 2
+      },
+      "external_support": {
+        "none": 2
+      }
+    },
+    {
+      "cluster_name": "logistics_coordinator_keep_other_for_now",
+      "target_label": "logistics_coordinator",
+      "target_family": "logistics",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 17,
+      "representative_titles": [
+        {
+          "title": "Radiologic Technologist I",
+          "count": 9
+        },
+        {
+          "title": "Bookkeeper",
+          "count": 8
+        }
+      ],
+      "risk_levels": {
+        "medium": 2
+      },
+      "external_support": {
+        "strong": 2
+      }
+    },
+    {
+      "cluster_name": "data_science_manager_needs_tighter_rule",
+      "target_label": "data_science_manager",
+      "target_family": "data_science",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 16,
+      "representative_titles": [
+        {
+          "title": "Data Science Manager",
+          "count": 16
+        }
+      ],
+      "risk_levels": {
+        "low": 1
+      },
+      "external_support": {
+        "weak": 1
+      }
+    },
+    {
+      "cluster_name": "business_development_representative_needs_tighter_rule",
+      "target_label": "business_development_representative",
+      "target_family": "sales",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 16,
+      "representative_titles": [
+        {
+          "title": "Business Development Associate",
+          "count": 10
+        },
+        {
+          "title": "Business Development Executive",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "low": 2
+      },
+      "external_support": {
+        "strong": 2
+      }
+    },
+    {
+      "cluster_name": "ml_engineer_semantic_layer_candidate",
+      "target_label": "ml_engineer",
+      "target_family": "machine_learning",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 16,
+      "representative_titles": [
+        {
+          "title": "Senior Machine Learning Scientist",
+          "count": 10
+        },
+        {
+          "title": "Senior Industrial Engineer",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 2
+      },
+      "external_support": {
+        "strong": 2
+      }
+    },
+    {
+      "cluster_name": "data_engineer_keep_other_for_now",
+      "target_label": "data_engineer",
+      "target_family": "data_engineering",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 15,
+      "representative_titles": [
+        {
+          "title": "Principal Engineer - Data Infrastructure",
+          "count": 9
+        },
+        {
+          "title": "Senior Threat and Attack Research Engineer",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 2
+      },
+      "external_support": {
+        "medium": 1,
+        "weak": 1
+      }
+    },
+    {
+      "cluster_name": "systems_engineer_keep_other_for_now",
+      "target_label": "systems_engineer",
+      "target_family": "it_operations",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 14,
+      "representative_titles": [
+        {
+          "title": "Business Systems Analyst",
+          "count": 8
+        },
+        {
+          "title": "Information Engineer II, Enterprise Systems Technology",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 2
+      },
+      "external_support": {
+        "strong": 1,
+        "medium": 1
+      }
+    },
+    {
+      "cluster_name": "technician_semantic_layer_candidate",
+      "target_label": "technician",
+      "target_family": "skilled_trades",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 14,
+      "representative_titles": [
+        {
+          "title": "Landscape Foreman (Stormwater)",
+          "count": 7
+        },
+        {
+          "title": "Data Center Technician",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "low": 1,
+        "medium": 1
+      },
+      "external_support": {
+        "medium": 1,
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "account_manager_semantic_layer_candidate",
+      "target_label": "account_manager",
+      "target_family": "sales",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 14,
+      "representative_titles": [
+        {
+          "title": "Corporate Development Manager",
+          "count": 7
+        },
+        {
+          "title": "Business Development Director, Content Ops",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "medium": 2
+      },
+      "external_support": {
+        "medium": 1,
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "behavioral_support_specialist_keep_other_for_now",
+      "target_label": "behavioral_support_specialist",
+      "target_family": "healthcare_clinical",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 14,
+      "representative_titles": [
+        {
+          "title": "Procurement Specialist",
+          "count": 7
+        },
+        {
+          "title": "Obstetrician/Gynecologist (PRN)",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "medium": 2
+      },
+      "external_support": {
+        "strong": 1,
+        "medium": 1
+      }
+    },
+    {
+      "cluster_name": "people_business_partner_semantic_layer_candidate",
+      "target_label": "people_business_partner",
+      "target_family": "people_operations",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 13,
+      "representative_titles": [
+        {
+          "title": "People Partner",
+          "count": 7
+        },
+        {
+          "title": "Senior People Partner",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 2
+      },
+      "external_support": {
+        "none": 2
+      }
+    },
+    {
+      "cluster_name": "technical_program_manager_keep_other_for_now",
+      "target_label": "technical_program_manager",
+      "target_family": "program_management",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 13,
+      "representative_titles": [
+        {
+          "title": "Partner Enablement Manager",
+          "count": 7
+        },
+        {
+          "title": "Regional Manager, Affordable Housing",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "high": 1,
+        "medium": 1
+      },
+      "external_support": {
+        "weak": 1,
+        "none": 1
+      }
+    },
+    {
+      "cluster_name": "site_reliability_engineer_keep_other_for_now",
+      "target_label": "site_reliability_engineer",
+      "target_family": "sre",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 13,
+      "representative_titles": [
+        {
+          "title": "Project Civil Engineer - Site Design",
+          "count": 7
+        },
+        {
+          "title": "Community Engagement Liaison",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 2
+      },
+      "external_support": {
+        "medium": 2
+      }
+    },
+    {
+      "cluster_name": "ai_trainer_generalist_keep_other_for_now",
+      "target_label": "ai_trainer_generalist",
+      "target_family": "operations",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 13,
+      "representative_titles": [
+        {
+          "title": "AI Trainer – Visual & Graphic Design Expert",
+          "count": 7
+        },
+        {
+          "title": "AI Trainer - Advanced Dutch Fluency",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 2
+      },
+      "external_support": {
+        "weak": 1,
+        "none": 1
+      }
+    },
+    {
+      "cluster_name": "hr_generalist_noise_or_non_role",
+      "target_label": "hr_generalist",
+      "target_family": "people_operations",
+      "suggested_action": "noise_or_non_role",
+      "estimated_volume": 12,
+      "representative_titles": [
+        {
+          "title": "General Interest",
+          "count": 12
+        }
+      ],
+      "risk_levels": {
+        "high": 1
+      },
+      "external_support": {
+        "medium": 1
+      }
+    },
+    {
+      "cluster_name": "business_development_representative_semantic_layer_candidate",
+      "target_label": "business_development_representative",
+      "target_family": "sales",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 12,
+      "representative_titles": [
+        {
+          "title": "Director, Sales Development",
+          "count": 6
+        },
+        {
+          "title": "Jr. Roofing Sales Representative",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "low": 1,
+        "medium": 1
+      },
+      "external_support": {
+        "medium": 2
+      }
+    },
+    {
+      "cluster_name": "psychotherapist_needs_tighter_rule",
+      "target_label": "psychotherapist",
+      "target_family": "healthcare_clinical",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 10,
+      "representative_titles": [
+        {
+          "title": "Child and Adolescent Therapist - LSW - Contract/1099",
+          "count": 10
+        }
+      ],
+      "risk_levels": {
+        "low": 1
+      },
+      "external_support": {
+        "medium": 1
+      }
+    },
+    {
+      "cluster_name": "journalist_needs_tighter_rule",
+      "target_label": "journalist",
+      "target_family": "content",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 10,
+      "representative_titles": [
+        {
+          "title": "Photojournalist",
+          "count": 10
+        }
+      ],
+      "risk_levels": {
+        "low": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "business_development_representative_taxonomy_gap",
+      "target_label": "business_development_representative",
+      "target_family": "sales",
+      "suggested_action": "taxonomy_gap",
+      "estimated_volume": 10,
+      "representative_titles": [
+        {
+          "title": "Sales Representative",
+          "count": 10
+        }
+      ],
+      "risk_levels": {
+        "low": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "project_manager_semantic_layer_candidate",
+      "target_label": "project_manager",
+      "target_family": "program_management",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 10,
+      "representative_titles": [
+        {
+          "title": "Manager, Programmatic",
+          "count": 10
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "medium": 1
+      }
+    },
+    {
+      "cluster_name": "wealth_advisor_keep_other_for_now",
+      "target_label": "wealth_advisor",
+      "target_family": "finance",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 10,
+      "representative_titles": [
+        {
+          "title": "Community Health Worker",
+          "count": 10
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "site_reliability_engineer_needs_tighter_rule",
+      "target_label": "site_reliability_engineer",
+      "target_family": "sre",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 9,
+      "representative_titles": [
+        {
+          "title": "Senior Database Reliability Engineer",
+          "count": 9
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "medium": 1
+      }
+    },
+    {
+      "cluster_name": "content_producer_needs_tighter_rule",
+      "target_label": "content_producer",
+      "target_family": "content",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 9,
+      "representative_titles": [
+        {
+          "title": "Product Lead",
+          "count": 9
+        }
+      ],
+      "risk_levels": {
+        "low": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "product_designer_taxonomy_gap",
+      "target_label": "product_designer",
+      "target_family": "design",
+      "suggested_action": "taxonomy_gap",
+      "estimated_volume": 9,
+      "representative_titles": [
+        {
+          "title": "Director of Product Design",
+          "count": 9
+        }
+      ],
+      "risk_levels": {
+        "low": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "logistics_manager_semantic_layer_candidate",
+      "target_label": "logistics_manager",
+      "target_family": "logistics",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 9,
+      "representative_titles": [
+        {
+          "title": "Technical Delivery Manager",
+          "count": 9
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "medium": 1
+      }
+    },
+    {
+      "cluster_name": "art_director_keep_other_for_now",
+      "target_label": "art_director",
+      "target_family": "design",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 9,
+      "representative_titles": [
+        {
+          "title": "Program Director",
+          "count": 9
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "creative_director_keep_other_for_now",
+      "target_label": "creative_director",
+      "target_family": "design",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 9,
+      "representative_titles": [
+        {
+          "title": "Creative Strategist",
+          "count": 9
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "medium": 1
+      }
+    },
+    {
+      "cluster_name": "teacher_keep_other_for_now",
+      "target_label": "teacher",
+      "target_family": "education",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 9,
+      "representative_titles": [
+        {
+          "title": "Team Lead",
+          "count": 9
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "weak": 1
+      }
+    },
+    {
+      "cluster_name": "account_manager_taxonomy_gap",
+      "target_label": "account_manager",
+      "target_family": "sales",
+      "suggested_action": "taxonomy_gap",
+      "estimated_volume": 8,
+      "representative_titles": [
+        {
+          "title": "Director, Business Development",
+          "count": 8
+        }
+      ],
+      "risk_levels": {
+        "low": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "it_support_specialist_taxonomy_gap",
+      "target_label": "it_support_specialist",
+      "target_family": "it_operations",
+      "suggested_action": "taxonomy_gap",
+      "estimated_volume": 8,
+      "representative_titles": [
+        {
+          "title": "Technical Support Team Lead",
+          "count": 8
+        }
+      ],
+      "risk_levels": {
+        "low": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "customer_success_manager_semantic_layer_candidate",
+      "target_label": "customer_success_manager",
+      "target_family": "customer_success",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 8,
+      "representative_titles": [
+        {
+          "title": "Partner Success Manager",
+          "count": 8
+        }
+      ],
+      "risk_levels": {
+        "high": 1
+      },
+      "external_support": {
+        "weak": 1
+      }
+    },
+    {
+      "cluster_name": "occupational_therapist_semantic_layer_candidate",
+      "target_label": "occupational_therapist",
+      "target_family": "healthcare_clinical",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 8,
+      "representative_titles": [
+        {
+          "title": "Traveling Physical Therapist",
+          "count": 8
+        }
+      ],
+      "risk_levels": {
+        "low": 1
+      },
+      "external_support": {
+        "medium": 1
+      }
+    },
+    {
+      "cluster_name": "sales_engineer_taxonomy_gap",
+      "target_label": "sales_engineer",
+      "target_family": "sales",
+      "suggested_action": "taxonomy_gap",
+      "estimated_volume": 8,
+      "representative_titles": [
+        {
+          "title": "IT Operations Engineer",
+          "count": 8
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "devops_engineer_keep_other_for_now",
+      "target_label": "devops_engineer",
+      "target_family": "devops",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 8,
+      "representative_titles": [
+        {
+          "title": "Civil Engineer – Land Development",
+          "count": 8
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "field_technician_keep_other_for_now",
+      "target_label": "field_technician",
+      "target_family": "skilled_trades",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 8,
+      "representative_titles": [
+        {
+          "title": "Buyer",
+          "count": 8
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "product_manager_needs_tighter_rule",
+      "target_label": "product_manager",
+      "target_family": "product_management",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 7,
+      "representative_titles": [
+        {
+          "title": "Production Manager",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "low": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "technician_needs_tighter_rule",
+      "target_label": "technician",
+      "target_family": "skilled_trades",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 7,
+      "representative_titles": [
+        {
+          "title": "Lab Technician",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "low": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "data_engineer_needs_tighter_rule",
+      "target_label": "data_engineer",
+      "target_family": "data_engineering",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 7,
+      "representative_titles": [
+        {
+          "title": "Senior Database Engineer",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "sales_engineer_needs_tighter_rule",
+      "target_label": "sales_engineer",
+      "target_family": "sales",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 7,
+      "representative_titles": [
+        {
+          "title": "Senior Salesforce Engineer",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "medium": 1
+      }
+    },
+    {
+      "cluster_name": "customer_success_manager_taxonomy_gap",
+      "target_label": "customer_success_manager",
+      "target_family": "customer_success",
+      "suggested_action": "taxonomy_gap",
+      "estimated_volume": 7,
+      "representative_titles": [
+        {
+          "title": "Senior Client Manager",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "behavioral_support_specialist_taxonomy_gap",
+      "target_label": "behavioral_support_specialist",
+      "target_family": "healthcare_clinical",
+      "suggested_action": "taxonomy_gap",
+      "estimated_volume": 7,
+      "representative_titles": [
+        {
+          "title": "Implementation Specialist",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "art_director_semantic_layer_candidate",
+      "target_label": "art_director",
+      "target_family": "design",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 7,
+      "representative_titles": [
+        {
+          "title": "Assistant Director",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "solutions_architect_semantic_layer_candidate",
+      "target_label": "solutions_architect",
+      "target_family": "architecture",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 7,
+      "representative_titles": [
+        {
+          "title": "Architect",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "customer_service_specialist_semantic_layer_candidate",
+      "target_label": "customer_service_specialist",
+      "target_family": "operations",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 7,
+      "representative_titles": [
+        {
+          "title": "Service Associate",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "ai_trainer_specialist_semantic_layer_candidate",
+      "target_label": "ai_trainer_specialist",
+      "target_family": "operations",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 7,
+      "representative_titles": [
+        {
+          "title": "Plan Documents Specialist - Freelance Project",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "none": 1
+      }
+    },
+    {
+      "cluster_name": "accountant_keep_other_for_now",
+      "target_label": "accountant",
+      "target_family": "finance",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 7,
+      "representative_titles": [
+        {
+          "title": "Manager, Consulting",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "weak": 1
+      }
+    },
+    {
+      "cluster_name": "analytics_engineer_keep_other_for_now",
+      "target_label": "analytics_engineer",
+      "target_family": "data_analytics",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 7,
+      "representative_titles": [
+        {
+          "title": "Manager, Growth Analytics",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "medium": 1
+      }
+    },
+    {
+      "cluster_name": "software_engineer_keep_other_for_now",
+      "target_label": "software_engineer",
+      "target_family": "software_engineering",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 7,
+      "representative_titles": [
+        {
+          "title": "Staff Windows Low Level C++ Engineer - Endpoint security",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "none": 1
+      }
+    },
+    {
+      "cluster_name": "manufacturing_engineer_keep_other_for_now",
+      "target_label": "manufacturing_engineer",
+      "target_family": "industrial_engineering",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 7,
+      "representative_titles": [
+        {
+          "title": "CNC Machinist",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "psychotherapist_keep_other_for_now",
+      "target_label": "psychotherapist",
+      "target_family": "healthcare_clinical",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 7,
+      "representative_titles": [
+        {
+          "title": "Orthotist",
+          "count": 7
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "paralegal_needs_tighter_rule",
+      "target_label": "paralegal",
+      "target_family": "legal",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 6,
+      "representative_titles": [
+        {
+          "title": "Paralegal",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "low": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "mechanic_needs_tighter_rule",
+      "target_label": "mechanic",
+      "target_family": "skilled_trades",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 6,
+      "representative_titles": [
+        {
+          "title": "Mechanical III",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "low": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "supply_chain_specialist_needs_tighter_rule",
+      "target_label": "supply_chain_specialist",
+      "target_family": "logistics",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 6,
+      "representative_titles": [
+        {
+          "title": "Staff Global Supply Manager",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "low": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "financial_analyst_needs_tighter_rule",
+      "target_label": "financial_analyst",
+      "target_family": "finance",
+      "suggested_action": "needs_tighter_rule",
+      "estimated_volume": 6,
+      "representative_titles": [
+        {
+          "title": "Accounts Receivable Specialist",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "low": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "technician_taxonomy_gap",
+      "target_label": "technician",
+      "target_family": "skilled_trades",
+      "suggested_action": "taxonomy_gap",
+      "estimated_volume": 6,
+      "representative_titles": [
+        {
+          "title": "Technical Lead",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "low": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "data_engineer_semantic_layer_candidate",
+      "target_label": "data_engineer",
+      "target_family": "data_engineering",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 6,
+      "representative_titles": [
+        {
+          "title": "Data Center Engineer",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "medium": 1
+      }
+    },
+    {
+      "cluster_name": "data_analyst_taxonomy_gap",
+      "target_label": "data_analyst",
+      "target_family": "data_analytics",
+      "suggested_action": "taxonomy_gap",
+      "estimated_volume": 6,
+      "representative_titles": [
+        {
+          "title": "Senior Security Operations Analyst",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "medical_assistant_taxonomy_gap",
+      "target_label": "medical_assistant",
+      "target_family": "healthcare_clinical",
+      "suggested_action": "taxonomy_gap",
+      "estimated_volume": 6,
+      "representative_titles": [
+        {
+          "title": "Dental Assistant",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "low": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "it_support_specialist_semantic_layer_candidate",
+      "target_label": "it_support_specialist",
+      "target_family": "it_operations",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 6,
+      "representative_titles": [
+        {
+          "title": "Project Engineer",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "logistics_coordinator_semantic_layer_candidate",
+      "target_label": "logistics_coordinator",
+      "target_family": "logistics",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 6,
+      "representative_titles": [
+        {
+          "title": "Facilities Coordinator",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "sales_engineer_semantic_layer_candidate",
+      "target_label": "sales_engineer",
+      "target_family": "sales",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 6,
+      "representative_titles": [
+        {
+          "title": "Cloud Operations Engineer",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "warehouse_associate_semantic_layer_candidate",
+      "target_label": "warehouse_associate",
+      "target_family": "logistics",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 6,
+      "representative_titles": [
+        {
+          "title": "Social Media Specialist",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "school_administrator_semantic_layer_candidate",
+      "target_label": "school_administrator",
+      "target_family": "education",
+      "suggested_action": "semantic_layer_candidate",
+      "estimated_volume": 6,
+      "representative_titles": [
+        {
+          "title": "Medical Director",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "paralegal_keep_other_for_now",
+      "target_label": "paralegal",
+      "target_family": "legal",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 6,
+      "representative_titles": [
+        {
+          "title": "Litigation Paralegal",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "strong": 1
+      }
+    },
+    {
+      "cluster_name": "ai_trainer_specialist_keep_other_for_now",
+      "target_label": "ai_trainer_specialist",
+      "target_family": "operations",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 6,
+      "representative_titles": [
+        {
+          "title": "Retirement Plan Administration Specialist - Freelance Project",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "weak": 1
+      }
+    },
+    {
+      "cluster_name": "data_science_manager_keep_other_for_now",
+      "target_label": "data_science_manager",
+      "target_family": "data_science",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 6,
+      "representative_titles": [
+        {
+          "title": "Partner Manager DACH",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "high": 1
+      },
+      "external_support": {
+        "none": 1
+      }
+    },
+    {
+      "cluster_name": "electrical_engineer_keep_other_for_now",
+      "target_label": "electrical_engineer",
+      "target_family": "industrial_engineering",
+      "suggested_action": "keep_other_for_now",
+      "estimated_volume": 6,
+      "representative_titles": [
+        {
+          "title": "Robotics AI Campus Lead",
+          "count": 6
+        }
+      ],
+      "risk_levels": {
+        "medium": 1
+      },
+      "external_support": {
+        "none": 1
+      }
+    }
+  ]
+}

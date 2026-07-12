@@ -1,0 +1,23 @@
+{
+  "embedding_method": "hashed_char_trigram_cosine",
+  "fallback_reason": "sentence-transformers not configured in this environment; using deterministic local semantic-lite vectors",
+  "corpora_sizes": {
+    "internal_canonical": 83,
+    "esco_index_rows": 3043,
+    "onet_index_rows": 1016
+  },
+  "vector_probe": {
+    "customer onboarding specialist": {
+      "non_zero_dims": 28
+    },
+    "mortgage loan officer": {
+      "non_zero_dims": 19
+    },
+    "senior salesforce administrator": {
+      "non_zero_dims": 21
+    },
+    "community health worker": {
+      "non_zero_dims": 20
+    }
+  }
+}

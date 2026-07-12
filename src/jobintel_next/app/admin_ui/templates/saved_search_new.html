@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>New Saved Search</h1>
+<div class="panel">
+  <h3>Target-aligned helpers</h3>
+  <p class="muted">
+    Titles={{ target_profile.target_titles|join(", ") if target_profile.target_titles else "-" }},
+    role_families={{ target_profile.target_role_families|join(", ") if target_profile.target_role_families else "-" }},
+    locations={{ target_profile.preferred_location_types|join(", ") if target_profile.preferred_location_types else "-" }}
+  </p>
+  {% if target_profile.keywords_note %}
+    <p class="muted">keywords hint: {{ target_profile.keywords_note }}</p>
+  {% endif %}
+  <div class="toolbar">
+    <a href="/admin/saved-searches/new?use_target_profile=true" {% if use_target_profile %}class="active"{% endif %}>Use target profile</a>
+    <a href="/admin/account">Edit target profile</a>
+  </div>
+  {% if suggestions %}
+    <p><strong>Quick suggestions</strong></p>
+    <ul class="checklist">
+      {% for s in suggestions %}
+        <li>
+          <a href="{{ s.href }}">{{ s.name }}</a>
+          <span class="muted">- {{ s.reason }}</span>
+          <div class="mono">{{ s.filters_json }}</div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="muted">No target profile suggestions yet. Set target titles/role families in Account.</p>
+  {% endif %}
+</div>
+<form method="post" action="/admin/saved-searches/new">
+  <p>
+    <label>Name</label><br>
+    <input type="text" name="name" value="{{ name }}" required>
+  </p>
+  <p>
+    <label>Query Type</label><br>
+    <select name="query_type">
+      <option value="filters" {% if query_type == "filters" %}selected{% endif %}>filters</option>
+      <option value="pack" {% if query_type == "pack" %}selected{% endif %}>pack</option>
+    </select>
+  </p>
+  <p>
+    <label>Filters JSON (for `filters`)</label><br>
+    <textarea name="filters_json">{{ filters_json }}</textarea>
+  </p>
+  <p>
+    <label>Pack Name (for `pack`)</label><br>
+    <input type="text" name="pack_name" value="{{ pack_name }}">
+  </p>
+  <p>
+    <label>Frequency</label><br>
+    <select name="frequency">
+      <option value="manual" {% if frequency == "manual" %}selected{% endif %}>manual</option>
+      <option value="daily" {% if frequency == "daily" %}selected{% endif %}>daily</option>
+      <option value="twice_daily" {% if frequency == "twice_daily" %}selected{% endif %}>twice_daily</option>
+    </select>
+  </p>
+  <p>
+    <label><input type="checkbox" name="is_enabled" {% if is_enabled == "true" %}checked{% endif %}> Enabled</label>
+  </p>
+  <p><button type="submit">Create</button></p>
+</form>
+{% endblock %}

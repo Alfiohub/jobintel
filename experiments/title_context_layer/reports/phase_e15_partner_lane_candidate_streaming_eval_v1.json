@@ -1,0 +1,169 @@
+{
+  "baseline_other_v64": 35273,
+  "candidate_matches": 18,
+  "projected_other_after": 35255,
+  "projected_delta_other": -18,
+  "sample_matches": [
+    {
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7589306003",
+      "title_clean": "Partner Growth Manager",
+      "normalized_title": "account_manager",
+      "role_family": "sales",
+      "evidence_hits": [
+        "sales",
+        "revenue",
+        "go-to-market",
+        "merchant acquisition",
+        "partner relationships",
+        "strategic partnerships",
+        "growth outcomes"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7589308003",
+      "title_clean": "Partner Growth Manager",
+      "normalized_title": "account_manager",
+      "role_family": "sales",
+      "evidence_hits": [
+        "sales",
+        "revenue",
+        "go-to-market",
+        "merchant acquisition",
+        "partner relationships",
+        "strategic partnerships",
+        "growth outcomes"
+      ]
+    },
+    {
+      "url": "https://careers.appsflyer.com/jobs/position/8349704002?gh_jid=8349704002",
+      "title_clean": "Partner Development Manager - Mandarin Speaker",
+      "normalized_title": "account_manager",
+      "role_family": "sales",
+      "evidence_hits": [
+        "partner development",
+        "business growth",
+        "partner relationships"
+      ]
+    },
+    {
+      "url": "https://bigid.com/company/careers/job-details/8440277002?gh_jid=8440277002",
+      "title_clean": "Regional Partner Director - Northeast",
+      "normalized_title": "account_manager",
+      "role_family": "sales",
+      "evidence_hits": [
+        "alliances",
+        "pipeline",
+        "revenue",
+        "go-to-market",
+        "co-sell",
+        "partner relationships"
+      ]
+    },
+    {
+      "url": "https://www.bill.com/job?5705206004&gh_jid=5705206004",
+      "title_clean": "Strategic Partner Director",
+      "normalized_title": "account_manager",
+      "role_family": "sales",
+      "evidence_hits": [
+        "partnerships",
+        "revenue",
+        "go-to-market",
+        "strategic partnerships"
+      ]
+    },
+    {
+      "url": "https://www.cockroachlabs.com/careers/job/?gh_jid=7622194",
+      "title_clean": "Partner Director, IBM - APAC",
+      "normalized_title": "account_manager",
+      "role_family": "sales",
+      "evidence_hits": [
+        "sales",
+        "pipeline",
+        "revenue",
+        "strategic partnerships"
+      ]
+    },
+    {
+      "url": "https://www.hubspot.com/careers/jobs/7721764?gh_jid=7721764",
+      "title_clean": "Core Partner Development Manager - UKI",
+      "normalized_title": "account_manager",
+      "role_family": "sales",
+      "evidence_hits": [
+        "sales",
+        "pipeline",
+        "revenue",
+        "go-to-market",
+        "joint business plan",
+        "partner relationships"
+      ]
+    },
+    {
+      "url": "https://www.hubspot.com/careers/jobs/7721773?gh_jid=7721773",
+      "title_clean": "Core Partner Development Manager - UKI",
+      "normalized_title": "account_manager",
+      "role_family": "sales",
+      "evidence_hits": [
+        "sales",
+        "pipeline",
+        "revenue",
+        "go-to-market",
+        "joint business plan",
+        "partner relationships"
+      ]
+    },
+    {
+      "url": "https://www.hubspot.com/careers/jobs/7694606?gh_jid=7694606",
+      "title_clean": "Core Partner Development Manager - UKI",
+      "normalized_title": "account_manager",
+      "role_family": "sales",
+      "evidence_hits": [
+        "sales",
+        "pipeline",
+        "revenue",
+        "go-to-market",
+        "joint business plan",
+        "partner relationships"
+      ]
+    },
+    {
+      "url": "https://www.hubspot.com/careers/jobs/7721770?gh_jid=7721770",
+      "title_clean": "Core Partner Development Manager - UKI",
+      "normalized_title": "account_manager",
+      "role_family": "sales",
+      "evidence_hits": [
+        "sales",
+        "pipeline",
+        "revenue",
+        "go-to-market",
+        "joint business plan",
+        "partner relationships"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/iterable/jobs/7586242",
+      "title_clean": "Partner Development Manager",
+      "normalized_title": "account_manager",
+      "role_family": "sales",
+      "evidence_hits": [
+        "sales",
+        "pipeline",
+        "revenue",
+        "co-sell",
+        "joint business plan"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/lightspeedhq/jobs/7672284",
+      "title_clean": "Partner Growth Manager",
+      "normalized_title": "account_manager",
+      "role_family": "sales",
+      "evidence_hits": [
+        "partner growth",
+        "pipeline",
+        "revenue",
+        "go to market",
+        "strategic partnerships"
+      ]
+    }
+  ]
+}

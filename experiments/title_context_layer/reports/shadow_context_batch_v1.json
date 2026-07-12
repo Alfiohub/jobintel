@@ -1,0 +1,313 @@
+{
+  "baseline": {
+    "dataset": "data/jobs/jobs_titled_en_recovery_v55_semantic_batch.jsonl",
+    "other_before": 35952
+  },
+  "shadow_result": {
+    "output_dataset": "data/jobs/jobs_titled_en_recovery_v56_context_shadow.jsonl",
+    "matches_added": 26,
+    "other_after": 35926,
+    "delta_other": -26,
+    "rule_hits": {
+      "ctx_producer_content_v1": 26
+    }
+  },
+  "sample_matches": [
+    {
+      "url": "https://job-boards.greenhouse.io/dept/jobs/7740135",
+      "title_clean": "Producer",
+      "normalized_title": "content_producer",
+      "role_family": "content",
+      "matched_rule_id": "ctx_producer_content_v1",
+      "evidence_hits": [
+        "content",
+        "creative",
+        "campaign"
+      ],
+      "exclusion_hits": []
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/eucalyptus/jobs/4651418005",
+      "title_clean": "Producer",
+      "normalized_title": "content_producer",
+      "role_family": "content",
+      "matched_rule_id": "ctx_producer_content_v1",
+      "evidence_hits": [
+        "content",
+        "creative"
+      ],
+      "exclusion_hits": []
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5077292007?gh_jid=5077292007",
+      "title_clean": "Producer",
+      "normalized_title": "content_producer",
+      "role_family": "content",
+      "matched_rule_id": "ctx_producer_content_v1",
+      "evidence_hits": [
+        "content",
+        "news",
+        "broadcast"
+      ],
+      "exclusion_hits": []
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5076663007?gh_jid=5076663007",
+      "title_clean": "Producer",
+      "normalized_title": "content_producer",
+      "role_family": "content",
+      "matched_rule_id": "ctx_producer_content_v1",
+      "evidence_hits": [
+        "content",
+        "news",
+        "broadcast"
+      ],
+      "exclusion_hits": []
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/4952294007?gh_jid=4952294007",
+      "title_clean": "Producer",
+      "normalized_title": "content_producer",
+      "role_family": "content",
+      "matched_rule_id": "ctx_producer_content_v1",
+      "evidence_hits": [
+        "content",
+        "news",
+        "broadcast",
+        "creative",
+        "video"
+      ],
+      "exclusion_hits": []
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5073493007?gh_jid=5073493007",
+      "title_clean": "Producer",
+      "normalized_title": "content_producer",
+      "role_family": "content",
+      "matched_rule_id": "ctx_producer_content_v1",
+      "evidence_hits": [
+        "content",
+        "news",
+        "broadcast"
+      ],
+      "exclusion_hits": []
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5041200007?gh_jid=5041200007",
+      "title_clean": "Producer",
+      "normalized_title": "content_producer",
+      "role_family": "content",
+      "matched_rule_id": "ctx_producer_content_v1",
+      "evidence_hits": [
+        "content",
+        "news",
+        "broadcast",
+        "creative",
+        "video"
+      ],
+      "exclusion_hits": []
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5075152007?gh_jid=5075152007",
+      "title_clean": "Producer",
+      "normalized_title": "content_producer",
+      "role_family": "content",
+      "matched_rule_id": "ctx_producer_content_v1",
+      "evidence_hits": [
+        "content",
+        "news",
+        "broadcast",
+        "creative",
+        "video"
+      ],
+      "exclusion_hits": []
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/4977245007?gh_jid=4977245007",
+      "title_clean": "Producer",
+      "normalized_title": "content_producer",
+      "role_family": "content",
+      "matched_rule_id": "ctx_producer_content_v1",
+      "evidence_hits": [
+        "content",
+        "news",
+        "broadcast"
+      ],
+      "exclusion_hits": []
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5062888007?gh_jid=5062888007",
+      "title_clean": "Producer",
+      "normalized_title": "content_producer",
+      "role_family": "content",
+      "matched_rule_id": "ctx_producer_content_v1",
+      "evidence_hits": [
+        "content",
+        "news",
+        "broadcast"
+      ],
+      "exclusion_hits": []
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/4793889007?gh_jid=4793889007",
+      "title_clean": "Producer",
+      "normalized_title": "content_producer",
+      "role_family": "content",
+      "matched_rule_id": "ctx_producer_content_v1",
+      "evidence_hits": [
+        "content",
+        "news",
+        "broadcast",
+        "creative",
+        "video"
+      ],
+      "exclusion_hits": []
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5062803007?gh_jid=5062803007",
+      "title_clean": "Producer",
+      "normalized_title": "content_producer",
+      "role_family": "content",
+      "matched_rule_id": "ctx_producer_content_v1",
+      "evidence_hits": [
+        "content",
+        "news",
+        "broadcast"
+      ],
+      "exclusion_hits": []
+    }
+  ],
+  "excluded_examples": [
+    {
+      "url": "https://job-boards.greenhouse.io/2k/jobs/7564923003",
+      "title_clean": "Producer",
+      "evidence_hits": [
+        "creative"
+      ],
+      "exclusion_hits": [
+        "game",
+        "jira",
+        "scrum",
+        "engineers"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/adyen/jobs/7422228",
+      "title_clean": "Onboarding Specialist",
+      "evidence_hits": [
+        "customer",
+        "merchant",
+        "onboarding"
+      ],
+      "exclusion_hits": [
+        "kyc"
+      ]
+    },
+    {
+      "url": "https://job-boards.eu.greenhouse.io/cision/jobs/4745539101",
+      "title_clean": "Onboarding Specialist",
+      "evidence_hits": [
+        "customer",
+        "client",
+        "implementation",
+        "onboarding"
+      ],
+      "exclusion_hits": [
+        "employee"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/focusfinancialpartners/jobs/5704625004",
+      "title_clean": "Onboarding Specialist",
+      "evidence_hits": [
+        "client",
+        "onboarding"
+      ],
+      "exclusion_hits": [
+        "employee"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/glossgenius/jobs/7581091003",
+      "title_clean": "Onboarding Specialist",
+      "evidence_hits": [
+        "customer",
+        "implementation",
+        "onboarding"
+      ],
+      "exclusion_hits": [
+        "employee",
+        "aml"
+      ]
+    },
+    {
+      "url": "https://www.rxvantage.com/company/careers/jobs?gh_jid=5832005004",
+      "title_clean": "Onboarding Specialist",
+      "evidence_hits": [
+        "customer",
+        "client",
+        "implementation",
+        "onboarding"
+      ],
+      "exclusion_hits": [
+        "employee"
+      ]
+    },
+    {
+      "url": "https://www.rxvantage.com/company/careers/jobs?gh_jid=5832012004",
+      "title_clean": "Onboarding Specialist",
+      "evidence_hits": [
+        "customer",
+        "client",
+        "implementation",
+        "onboarding"
+      ],
+      "exclusion_hits": [
+        "employee"
+      ]
+    },
+    {
+      "url": "https://www.rxvantage.com/company/careers/jobs?gh_jid=5832010004",
+      "title_clean": "Onboarding Specialist",
+      "evidence_hits": [
+        "customer",
+        "client",
+        "implementation",
+        "onboarding"
+      ],
+      "exclusion_hits": [
+        "employee"
+      ]
+    },
+    {
+      "url": "https://www.rxvantage.com/company/careers/jobs?gh_jid=5832009004",
+      "title_clean": "Onboarding Specialist",
+      "evidence_hits": [
+        "customer",
+        "client",
+        "implementation",
+        "onboarding"
+      ],
+      "exclusion_hits": [
+        "employee"
+      ]
+    },
+    {
+      "url": "https://www.rxvantage.com/company/careers/jobs?gh_jid=5830997004",
+      "title_clean": "Onboarding Specialist",
+      "evidence_hits": [
+        "customer",
+        "client",
+        "implementation",
+        "onboarding"
+      ],
+      "exclusion_hits": [
+        "employee"
+      ]
+    }
+  ],
+  "final_recommendation": {
+    "decision": "shadow_context_rules_need_more_tuning",
+    "reason": "Signal exists but current gated rules need more tuning before formal review."
+  }
+}

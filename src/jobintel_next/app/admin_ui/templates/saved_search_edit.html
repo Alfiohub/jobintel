@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Edit Saved Search</h1>
+<form method="post" action="/admin/saved-searches/{{ saved_search.search_id }}/edit">
+  <p>
+    <label>Name</label><br>
+    <input type="text" name="name" value="{{ saved_search.name }}" required>
+  </p>
+  <p>
+    <label>Query Type</label><br>
+    <select name="query_type">
+      <option value="filters" {% if saved_search.query_type == "filters" %}selected{% endif %}>filters</option>
+      <option value="pack" {% if saved_search.query_type == "pack" %}selected{% endif %}>pack</option>
+    </select>
+  </p>
+  <p>
+    <label>Filters JSON (for `filters`)</label><br>
+    <textarea name="filters_json">{{ saved_search.filters_json or "" }}</textarea>
+  </p>
+  <p>
+    <label>Pack Name (for `pack`)</label><br>
+    <input type="text" name="pack_name" value="{{ saved_search.pack_name or '' }}">
+  </p>
+  <p>
+    <label>Frequency</label><br>
+    <select name="frequency">
+      <option value="manual" {% if saved_search.frequency == "manual" %}selected{% endif %}>manual</option>
+      <option value="daily" {% if saved_search.frequency == "daily" %}selected{% endif %}>daily</option>
+      <option value="twice_daily" {% if saved_search.frequency == "twice_daily" %}selected{% endif %}>twice_daily</option>
+    </select>
+  </p>
+  <p>
+    <label><input type="checkbox" name="is_enabled" {% if saved_search.is_enabled %}checked{% endif %}> Enabled</label>
+  </p>
+  <p>
+    <button type="submit">Save</button>
+  </p>
+</form>
+<form method="post" action="/admin/saved-searches/{{ saved_search.search_id }}/delete">
+  <button type="submit">Delete Saved Search</button>
+</form>
+{% endblock %}

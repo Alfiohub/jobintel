@@ -1,0 +1,670 @@
+{
+  "phase": "E.21",
+  "decision": "open_set_residual_router_v1_ready",
+  "input_dataset": "data/jobs/jobs_titled_en_recovery_v66_partner_lane_candidate.jsonl",
+  "output_dataset": "data/jobs/jobs_titled_en_recovery_v67_open_set_router.jsonl",
+  "rows_total": 81011,
+  "counts_by_route_status": {
+    "manual_review": 35150,
+    "matched_role": 45417,
+    "non_role": 339,
+    "taxonomy_gap": 105
+  },
+  "counts_by_route_lane": {
+    "long_tail": 34053,
+    "matched": 45417,
+    "attack_now": 836,
+    "recoverable_with_context": 261,
+    "non_role": 339,
+    "taxonomy_gap": 105
+  },
+  "top_suggested_targets": [
+    {
+      "target_label": "software_engineer",
+      "count": 10458
+    },
+    {
+      "target_label": "account_executive",
+      "count": 3609
+    },
+    {
+      "target_label": "marketing_specialist",
+      "count": 2539
+    },
+    {
+      "target_label": "account_manager",
+      "count": 2106
+    },
+    {
+      "target_label": "product_manager",
+      "count": 1819
+    },
+    {
+      "target_label": "operations_specialist",
+      "count": 1395
+    },
+    {
+      "target_label": "project_manager",
+      "count": 1283
+    },
+    {
+      "target_label": "sales_engineer",
+      "count": 1087
+    },
+    {
+      "target_label": "engineering_manager",
+      "count": 1043
+    },
+    {
+      "target_label": "business_development_representative",
+      "count": 933
+    },
+    {
+      "target_label": "product_designer",
+      "count": 825
+    },
+    {
+      "target_label": "customer_success_manager",
+      "count": 803
+    },
+    {
+      "target_label": "sales_manager",
+      "count": 798
+    },
+    {
+      "target_label": "nurse_practitioner",
+      "count": 782
+    },
+    {
+      "target_label": "ml_engineer",
+      "count": 770
+    },
+    {
+      "target_label": "legal_counsel",
+      "count": 769
+    },
+    {
+      "target_label": "solutions_architect",
+      "count": 755
+    },
+    {
+      "target_label": "technician",
+      "count": 747
+    },
+    {
+      "target_label": "data_engineer",
+      "count": 730
+    },
+    {
+      "target_label": "compliance_specialist",
+      "count": 610
+    }
+  ],
+  "top_manual_review_titles": [
+    {
+      "title_clean": "General Manager",
+      "count": 40
+    },
+    {
+      "title_clean": "Senior Market Strategy and Partnerships Manager",
+      "count": 36
+    },
+    {
+      "title_clean": "Hair Color Bar Assistant, Licensed Cosmetologist",
+      "count": 32
+    },
+    {
+      "title_clean": "Producer",
+      "count": 27
+    },
+    {
+      "title_clean": "Social Enterprise and Program Delivery-Evergreen",
+      "count": 27
+    },
+    {
+      "title_clean": "Personal Care Specialist (Part Time)",
+      "count": 26
+    },
+    {
+      "title_clean": "Business Analyst",
+      "count": 20
+    },
+    {
+      "title_clean": "Sonder Responder",
+      "count": 19
+    },
+    {
+      "title_clean": "Restaurant General Manager",
+      "count": 19
+    },
+    {
+      "title_clean": "Cultivation Associate",
+      "count": 18
+    },
+    {
+      "title_clean": "Leader in Training",
+      "count": 17
+    },
+    {
+      "title_clean": "Data Science Manager",
+      "count": 16
+    },
+    {
+      "title_clean": "Principal Engineer",
+      "count": 16
+    },
+    {
+      "title_clean": "Intelligence Operations Integrator",
+      "count": 16
+    },
+    {
+      "title_clean": "Senior Firmware Engineer",
+      "count": 15
+    },
+    {
+      "title_clean": "Manager, Paid Social",
+      "count": 15
+    },
+    {
+      "title_clean": "Senior Technical Enablement Architect",
+      "count": 15
+    },
+    {
+      "title_clean": "Chief of Staff",
+      "count": 14
+    },
+    {
+      "title_clean": "Restaurant Manager",
+      "count": 14
+    },
+    {
+      "title_clean": "Sales Enablement Manager",
+      "count": 13
+    }
+  ],
+  "top_taxonomy_gap_titles": [
+    {
+      "title_clean": "Quantitative Researcher",
+      "count": 24
+    },
+    {
+      "title_clean": "Cubist Quantitative Researcher",
+      "count": 8
+    },
+    {
+      "title_clean": "Quantitative Researcher - Machine Learning",
+      "count": 3
+    },
+    {
+      "title_clean": "Cubist Quantitative Researcher Intern",
+      "count": 2
+    },
+    {
+      "title_clean": "Quantitative Researcher - Macro",
+      "count": 2
+    },
+    {
+      "title_clean": "Crypto - Quantitative Researcher",
+      "count": 2
+    },
+    {
+      "title_clean": "Finance Expert - Credit Analyst",
+      "count": 1
+    },
+    {
+      "title_clean": "Junior Quantitative Researcher",
+      "count": 1
+    },
+    {
+      "title_clean": "Quantitative Researcher Intern (Equity Strategy Factors)",
+      "count": 1
+    },
+    {
+      "title_clean": "Quantitative Researcher Intern (Machine Learning)",
+      "count": 1
+    },
+    {
+      "title_clean": "Quantitative Research Associate, Educational Measurement",
+      "count": 1
+    },
+    {
+      "title_clean": "Quantitative Research Associate, Employment & Economic Opportunity",
+      "count": 1
+    },
+    {
+      "title_clean": "Quantitative Researcher, Healthcare Innovations",
+      "count": 1
+    },
+    {
+      "title_clean": "Quantitative Researcher, PhD",
+      "count": 1
+    },
+    {
+      "title_clean": "Quant Researcher",
+      "count": 1
+    },
+    {
+      "title_clean": "Equity Quantitative Research Associate",
+      "count": 1
+    },
+    {
+      "title_clean": "Control Desk & Credit Analyst (Analista de Mesa de Controle e Crédito) - São Paulo (Hybrid)",
+      "count": 1
+    },
+    {
+      "title_clean": "Experienced - Lateral - Quantitative Researcher",
+      "count": 1
+    },
+    {
+      "title_clean": "Summer Intern 2026 - Quantitative Researcher",
+      "count": 1
+    },
+    {
+      "title_clean": "Senior Credit Analyst, Capital Portfolio Analytics",
+      "count": 1
+    }
+  ],
+  "sample_by_lane": {
+    "long_tail": [
+      {
+        "title_clean": "Data Analytics Director",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "long_tail",
+        "suggested_target_label": null,
+        "route_reason": "residual_long_tail_unresolved"
+      },
+      {
+        "title_clean": "Telehealth Provider (MD & DO)",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "long_tail",
+        "suggested_target_label": null,
+        "route_reason": "residual_long_tail_unresolved"
+      },
+      {
+        "title_clean": "Director, Product Management",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "long_tail",
+        "suggested_target_label": null,
+        "route_reason": "residual_long_tail_unresolved"
+      },
+      {
+        "title_clean": "Senior Director, Clinical and Translational Research",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "long_tail",
+        "suggested_target_label": null,
+        "route_reason": "residual_long_tail_unresolved"
+      },
+      {
+        "title_clean": "Senior Director, Enterprise Launch Excellence and GTM",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "long_tail",
+        "suggested_target_label": null,
+        "route_reason": "residual_long_tail_unresolved"
+      },
+      {
+        "title_clean": "Senior Manager, Commercial Operations",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "long_tail",
+        "suggested_target_label": null,
+        "route_reason": "residual_long_tail_unresolved"
+      },
+      {
+        "title_clean": "Senior Member Growth Manager",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "long_tail",
+        "suggested_target_label": null,
+        "route_reason": "residual_long_tail_unresolved"
+      },
+      {
+        "title_clean": "Senior Stock Administrator",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "long_tail",
+        "suggested_target_label": null,
+        "route_reason": "residual_long_tail_unresolved"
+      }
+    ],
+    "matched": [
+      {
+        "title_clean": "Growth Marketing Manager",
+        "normalized_title": "marketing_specialist",
+        "route_status": "matched_role",
+        "route_lane": "matched",
+        "suggested_target_label": "marketing_specialist",
+        "route_reason": "already_classified_matched_role"
+      },
+      {
+        "title_clean": "Marketing Creative Operations & Design Manager",
+        "normalized_title": "marketing_specialist",
+        "route_status": "matched_role",
+        "route_lane": "matched",
+        "suggested_target_label": "marketing_specialist",
+        "route_reason": "already_classified_matched_role"
+      },
+      {
+        "title_clean": "Social Media Manager",
+        "normalized_title": "marketing_specialist",
+        "route_status": "matched_role",
+        "route_lane": "matched",
+        "suggested_target_label": "marketing_specialist",
+        "route_reason": "already_classified_matched_role"
+      },
+      {
+        "title_clean": "Account Executive, Consultant Relations",
+        "normalized_title": "account_executive",
+        "route_status": "matched_role",
+        "route_lane": "matched",
+        "suggested_target_label": "account_executive",
+        "route_reason": "already_classified_matched_role"
+      },
+      {
+        "title_clean": "Accounting Manager, Corporate Accounting",
+        "normalized_title": "accountant",
+        "route_status": "matched_role",
+        "route_lane": "matched",
+        "suggested_target_label": "accountant",
+        "route_reason": "already_classified_matched_role"
+      },
+      {
+        "title_clean": "Director, Growth Marketing",
+        "normalized_title": "marketing_specialist",
+        "route_status": "matched_role",
+        "route_lane": "matched",
+        "suggested_target_label": "marketing_specialist",
+        "route_reason": "already_classified_matched_role"
+      },
+      {
+        "title_clean": "Director of Engineering, Member Experience - Core User Experience (B2C)",
+        "normalized_title": "engineering_manager",
+        "route_status": "matched_role",
+        "route_lane": "matched",
+        "suggested_target_label": "engineering_manager",
+        "route_reason": "already_classified_matched_role"
+      },
+      {
+        "title_clean": "Enterprise Customer Success Manager",
+        "normalized_title": "customer_success_manager",
+        "route_status": "matched_role",
+        "route_lane": "matched",
+        "suggested_target_label": "customer_success_manager",
+        "route_reason": "already_classified_matched_role"
+      }
+    ],
+    "attack_now": [
+      {
+        "title_clean": "Senior Analyst, Strategic Finance",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "attack_now",
+        "suggested_target_label": "financial_analyst",
+        "route_reason": "matches_high_roi_title_only_candidate"
+      },
+      {
+        "title_clean": "Cloud Alliances Business Development Lead",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "attack_now",
+        "suggested_target_label": "business_development_manager",
+        "route_reason": "matches_high_roi_title_only_candidate"
+      },
+      {
+        "title_clean": "Engineering Director - Business Data",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "attack_now",
+        "suggested_target_label": "engineering_manager",
+        "route_reason": "matches_high_roi_title_only_candidate"
+      },
+      {
+        "title_clean": "Engineering Director - Commercial Systems",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "attack_now",
+        "suggested_target_label": "engineering_manager",
+        "route_reason": "matches_high_roi_title_only_candidate"
+      },
+      {
+        "title_clean": "Engineering Director, Devices Software Engineering",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "attack_now",
+        "suggested_target_label": "engineering_manager",
+        "route_reason": "matches_high_roi_title_only_candidate"
+      },
+      {
+        "title_clean": "Partner Sales Director - Global System Integrator (GSI)",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "attack_now",
+        "suggested_target_label": "sales_director",
+        "route_reason": "matches_high_roi_title_only_candidate"
+      },
+      {
+        "title_clean": "Partner Sales Director - IHV Alliances",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "attack_now",
+        "suggested_target_label": "sales_director",
+        "route_reason": "matches_high_roi_title_only_candidate"
+      },
+      {
+        "title_clean": "Software Engineering Director",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "attack_now",
+        "suggested_target_label": "engineering_manager",
+        "route_reason": "matches_high_roi_title_only_candidate"
+      }
+    ],
+    "recoverable_with_context": [
+      {
+        "title_clean": "Sr. Implementation Specialist (Remote Elegible - Costa Rica)",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "recoverable_with_context",
+        "suggested_target_label": "project_manager",
+        "route_reason": "matches_context_resolution_lane"
+      },
+      {
+        "title_clean": "2026 Opportunities - Account Manager, EMEA",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "recoverable_with_context",
+        "suggested_target_label": "account_manager",
+        "route_reason": "matches_context_resolution_lane"
+      },
+      {
+        "title_clean": "Engagement Manager II",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "recoverable_with_context",
+        "suggested_target_label": "account_manager",
+        "route_reason": "matches_context_resolution_lane"
+      },
+      {
+        "title_clean": "Engagement Manager II",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "recoverable_with_context",
+        "suggested_target_label": "account_manager",
+        "route_reason": "matches_context_resolution_lane"
+      },
+      {
+        "title_clean": "Engagement Manager II",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "recoverable_with_context",
+        "suggested_target_label": "account_manager",
+        "route_reason": "matches_context_resolution_lane"
+      },
+      {
+        "title_clean": "Engagement Manager II",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "recoverable_with_context",
+        "suggested_target_label": "account_manager",
+        "route_reason": "matches_context_resolution_lane"
+      },
+      {
+        "title_clean": "Engagement Manager II",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "recoverable_with_context",
+        "suggested_target_label": "account_manager",
+        "route_reason": "matches_context_resolution_lane"
+      },
+      {
+        "title_clean": "Engagement Manager II",
+        "normalized_title": "other",
+        "route_status": "manual_review",
+        "route_lane": "recoverable_with_context",
+        "suggested_target_label": "account_manager",
+        "route_reason": "matches_context_resolution_lane"
+      }
+    ],
+    "non_role": [
+      {
+        "title_clean": "Expression of Interest: Machine Learning Engineer",
+        "normalized_title": "non_role_recruiting_entry",
+        "route_status": "non_role",
+        "route_lane": "non_role",
+        "suggested_target_label": "non_role_recruiting_entry",
+        "route_reason": "already_classified_non_role"
+      },
+      {
+        "title_clean": "Expression of Interest: Senior Growth Manager (Ad Sales)",
+        "normalized_title": "non_role_recruiting_entry",
+        "route_status": "non_role",
+        "route_lane": "non_role",
+        "suggested_target_label": "non_role_recruiting_entry",
+        "route_reason": "already_classified_non_role"
+      },
+      {
+        "title_clean": "General Interest - Future Consideration",
+        "normalized_title": "non_role_recruiting_entry",
+        "route_status": "non_role",
+        "route_lane": "non_role",
+        "suggested_target_label": "non_role_recruiting_entry",
+        "route_reason": "already_classified_non_role"
+      },
+      {
+        "title_clean": "Associate, Axios Live - Talent Pool",
+        "normalized_title": "non_role_recruiting_entry",
+        "route_status": "non_role",
+        "route_lane": "non_role",
+        "suggested_target_label": "non_role_recruiting_entry",
+        "route_reason": "already_classified_non_role"
+      },
+      {
+        "title_clean": "Associate, Business Development - Talent Pool",
+        "normalized_title": "non_role_recruiting_entry",
+        "route_status": "non_role",
+        "route_lane": "non_role",
+        "suggested_target_label": "non_role_recruiting_entry",
+        "route_reason": "already_classified_non_role"
+      },
+      {
+        "title_clean": "AI Mentor Talent Pool - Contractor Roles",
+        "normalized_title": "non_role_recruiting_entry",
+        "route_status": "non_role",
+        "route_lane": "non_role",
+        "suggested_target_label": "non_role_recruiting_entry",
+        "route_reason": "already_classified_non_role"
+      },
+      {
+        "title_clean": "Apply for future opportunities",
+        "normalized_title": "non_role_recruiting_entry",
+        "route_status": "non_role",
+        "route_lane": "non_role",
+        "suggested_target_label": "non_role_recruiting_entry",
+        "route_reason": "already_classified_non_role"
+      },
+      {
+        "title_clean": "AI Talent Pool",
+        "normalized_title": "non_role_recruiting_entry",
+        "route_status": "non_role",
+        "route_lane": "non_role",
+        "suggested_target_label": "non_role_recruiting_entry",
+        "route_reason": "already_classified_non_role"
+      }
+    ],
+    "taxonomy_gap": [
+      {
+        "title_clean": "Finance Expert - Credit Analyst",
+        "normalized_title": "other",
+        "route_status": "taxonomy_gap",
+        "route_lane": "taxonomy_gap",
+        "suggested_target_label": "credit_analyst",
+        "route_reason": "matches_known_taxonomy_gap_candidate"
+      },
+      {
+        "title_clean": "Quantitative Researcher",
+        "normalized_title": "other",
+        "route_status": "taxonomy_gap",
+        "route_lane": "taxonomy_gap",
+        "suggested_target_label": "quantitative_researcher",
+        "route_reason": "matches_known_taxonomy_gap_candidate"
+      },
+      {
+        "title_clean": "Quantitative Researcher",
+        "normalized_title": "other",
+        "route_status": "taxonomy_gap",
+        "route_lane": "taxonomy_gap",
+        "suggested_target_label": "quantitative_researcher",
+        "route_reason": "matches_known_taxonomy_gap_candidate"
+      },
+      {
+        "title_clean": "Quantitative Researcher - Machine Learning",
+        "normalized_title": "other",
+        "route_status": "taxonomy_gap",
+        "route_lane": "taxonomy_gap",
+        "suggested_target_label": "quantitative_researcher",
+        "route_reason": "matches_known_taxonomy_gap_candidate"
+      },
+      {
+        "title_clean": "Junior Quantitative Researcher",
+        "normalized_title": "other",
+        "route_status": "taxonomy_gap",
+        "route_lane": "taxonomy_gap",
+        "suggested_target_label": "quantitative_researcher",
+        "route_reason": "matches_known_taxonomy_gap_candidate"
+      },
+      {
+        "title_clean": "Quantitative Researcher Intern (Equity Strategy Factors)",
+        "normalized_title": "other",
+        "route_status": "taxonomy_gap",
+        "route_lane": "taxonomy_gap",
+        "suggested_target_label": "quantitative_researcher",
+        "route_reason": "matches_known_taxonomy_gap_candidate"
+      },
+      {
+        "title_clean": "Quantitative Researcher Intern (Machine Learning)",
+        "normalized_title": "other",
+        "route_status": "taxonomy_gap",
+        "route_lane": "taxonomy_gap",
+        "suggested_target_label": "quantitative_researcher",
+        "route_reason": "matches_known_taxonomy_gap_candidate"
+      },
+      {
+        "title_clean": "Quantitative Research Associate, Educational Measurement",
+        "normalized_title": "other",
+        "route_status": "taxonomy_gap",
+        "route_lane": "taxonomy_gap",
+        "suggested_target_label": "quantitative_researcher",
+        "route_reason": "matches_known_taxonomy_gap_candidate"
+      }
+    ]
+  },
+  "recommendation": {
+    "first": "attack_now_manual_review_queue",
+    "second": "recoverable_with_context_manual_review_queue",
+    "third": "taxonomy_gap_queue"
+  }
+}

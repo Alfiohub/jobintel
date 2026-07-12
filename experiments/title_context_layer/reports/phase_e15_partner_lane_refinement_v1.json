@@ -1,0 +1,72 @@
+{
+  "lane_metadata": {
+    "lane_name": "partner_lane_context_lane",
+    "lane_type": "recoverable_with_context",
+    "target_label": "account_manager",
+    "target_family": "sales",
+    "promotable_count": 27,
+    "review_only_count": 3,
+    "excluded_count": 35,
+    "concentration": {
+      "rows": 27,
+      "unique_titles": 15,
+      "unique_companies": 11,
+      "top_title": {
+        "value": "Core Partner Development Manager - UKI",
+        "count": 4,
+        "share": 0.1481
+      },
+      "top_company": {
+        "value": "hubspotjobs",
+        "count": 7,
+        "share": 0.2593
+      },
+      "top_titles": {
+        "Core Partner Development Manager - UKI": 4,
+        "Partner Growth Manager": 3,
+        "Strategic SI Partner Development Manager": 3,
+        "Senior Technology Partner Development Manager": 3,
+        "Partner Development Manager, Core": 2,
+        "Partner Development Manager": 2,
+        "Senior Partner Development Manager": 2,
+        "Partner Development Manager - Mandarin Speaker": 1
+      },
+      "top_companies": {
+        "hubspotjobs": 7,
+        "stripe": 4,
+        "fivetran": 3,
+        "klaviyo": 3,
+        "lightspeedhq": 3,
+        "affirm": 2,
+        "appsflyer": 1,
+        "bigid": 1
+      }
+    },
+    "risk_level": "medium-low"
+  },
+  "source_promotable_count": 19,
+  "source_review_only_count": 40,
+  "partner_lane_promotable_count": 27,
+  "partner_lane_review_only_count": 3,
+  "partner_lane_excluded_count": 35,
+  "top_promotable_titles": {
+    "Core Partner Development Manager - UKI": 4,
+    "Partner Growth Manager": 3,
+    "Senior Technology Partner Development Manager": 3,
+    "Strategic SI Partner Development Manager": 3,
+    "Partner Development Manager": 2,
+    "Partner Development Manager, Core": 2,
+    "Senior Partner Development Manager": 2,
+    "Growth Partner Development Manager": 1,
+    "Partner Development Manager - Mandarin Speaker": 1,
+    "Partner Development Manager, Financial Partnership Capabilities": 1,
+    "Partner Development Manager, Global Networks": 1,
+    "Partner Development Manager, Strategic Partnerships": 1
+  },
+  "top_review_titles": {
+    "Affiliate Partner Growth Manager (Fluent in Mandarin)": 1,
+    "Partner Development Manager (Banks)": 1,
+    "RippleX Partner Director": 1
+  },
+  "decision": "ready_for_partner_shadow_batch_v2"
+}

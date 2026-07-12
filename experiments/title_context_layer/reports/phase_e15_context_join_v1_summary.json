@@ -1,0 +1,41 @@
+{
+  "titled_path": "data/jobs/jobs_titled_en_recovery_v61_attack_now_batch.jsonl",
+  "extracted_path": "data/jobs/jobs_extracted_en.jsonl",
+  "joined_rows": 280,
+  "counts_by_cluster": {
+    "customer_success_manager": 118,
+    "account_manager": 65,
+    "project_manager": 97
+  },
+  "counts_by_pattern": {
+    "customer_success_manager": {
+      "onboarding_specialist": 31,
+      "retention_specialist": 7,
+      "customer_adoption_success": 2,
+      "service_enablement_cx": 1,
+      "gtm_onboarding_specialist": 0,
+      "customer_engagement_manager": 77
+    },
+    "account_manager": {
+      "partner_development_manager": 31,
+      "partner_growth_manager": 12,
+      "partner_experience_lead": 1,
+      "client_strategist": 3,
+      "client_strategy_manager": 2,
+      "client_partnership_specialist": 6,
+      "provider_engagement_specialist": 4,
+      "partner_director": 5,
+      "charter_partnerships_manager": 1
+    },
+    "project_manager": {
+      "engagement_manager": 0,
+      "delivery_excellence_manager": 4,
+      "professional_services_manager": 10,
+      "engineering_program_support": 1,
+      "portfolio_management": 4,
+      "project_engineer": 76,
+      "data_center_development": 2
+    }
+  },
+  "customer_success_rows": 118
+}

@@ -1,0 +1,38 @@
+{
+  "phase": "E.23.1",
+  "decision": "ic_subset_requires_one_more_split",
+  "source_dataset": "data/jobs/jobs_titled_en_recovery_v67_open_set_router.jsonl",
+  "subset": {
+    "count": 76,
+    "unique_titles": 51,
+    "unique_companies": 35
+  },
+  "sub_buckets": [
+    {
+      "name": "executive",
+      "count": 19,
+      "decision": "best_first_attack_now_candidate"
+    },
+    {
+      "name": "associate",
+      "count": 18,
+      "decision": "possible_followup_attack_now"
+    },
+    {
+      "name": "lead",
+      "count": 17,
+      "decision": "not_title_only_clean"
+    },
+    {
+      "name": "associate_director",
+      "count": 13,
+      "decision": "leadership_lane_not_ic"
+    },
+    {
+      "name": "analyst",
+      "count": 9,
+      "decision": "small_but_clean_followup"
+    }
+  ],
+  "recommendation": "E.23.2 — Business Development Executive Candidate Patch"
+}

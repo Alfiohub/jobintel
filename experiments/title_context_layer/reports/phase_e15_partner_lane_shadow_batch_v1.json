@@ -1,0 +1,134 @@
+{
+  "lane_metadata": {
+    "lane_name": "partner_lane_context_lane",
+    "lane_type": "recoverable_with_context",
+    "target_label": "account_manager",
+    "target_family": "sales",
+    "concentration": {
+      "rows": 27,
+      "unique_titles": 15,
+      "unique_companies": 11,
+      "top_title": {
+        "value": "Core Partner Development Manager - UKI",
+        "count": 4,
+        "share": 0.1481
+      },
+      "top_company": {
+        "value": "hubspotjobs",
+        "count": 7,
+        "share": 0.2593
+      },
+      "top_titles": {
+        "Core Partner Development Manager - UKI": 4,
+        "Partner Growth Manager": 3,
+        "Strategic SI Partner Development Manager": 3,
+        "Senior Technology Partner Development Manager": 3,
+        "Partner Development Manager, Core": 2,
+        "Partner Development Manager": 2,
+        "Senior Partner Development Manager": 2,
+        "Partner Development Manager - Mandarin Speaker": 1
+      },
+      "top_companies": {
+        "hubspotjobs": 7,
+        "stripe": 4,
+        "fivetran": 3,
+        "klaviyo": 3,
+        "lightspeedhq": 3,
+        "affirm": 2,
+        "appsflyer": 1,
+        "bigid": 1
+      }
+    }
+  },
+  "baseline": {
+    "dataset": "data/jobs/jobs_titled_en_recovery_v61_attack_now_batch.jsonl",
+    "other_before": 35581
+  },
+  "shadow_result": {
+    "output_dataset": "data/jobs/jobs_titled_en_recovery_v63_partner_lane_shadow.jsonl",
+    "matches_added": 27,
+    "other_after": 35554,
+    "delta_other": -27,
+    "rule_hits": {
+      "ctx_partner_lane_v2": 27
+    }
+  },
+  "sample_matches": [
+    {
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7589306003",
+      "title_clean": "Partner Growth Manager",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7589308003",
+      "title_clean": "Partner Growth Manager",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://careers.appsflyer.com/jobs/position/8349704002?gh_jid=8349704002",
+      "title_clean": "Partner Development Manager - Mandarin Speaker",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://bigid.com/company/careers/job-details/8440277002?gh_jid=8440277002",
+      "title_clean": "Regional Partner Director - Northeast",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://www.bill.com/job?5705206004&gh_jid=5705206004",
+      "title_clean": "Strategic Partner Director",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://www.cockroachlabs.com/careers/job/?gh_jid=7622194",
+      "title_clean": "Partner Director, IBM - APAC",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://www.fivetran.com/careers/job?gh_jid=7654642003",
+      "title_clean": "Strategic SI Partner Development Manager",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://www.fivetran.com/careers/job?gh_jid=7653220003",
+      "title_clean": "Strategic SI Partner Development Manager",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://www.fivetran.com/careers/job?gh_jid=7653223003",
+      "title_clean": "Strategic SI Partner Development Manager",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://www.hubspot.com/careers/jobs/7721764?gh_jid=7721764",
+      "title_clean": "Core Partner Development Manager - UKI",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://www.hubspot.com/careers/jobs/7721773?gh_jid=7721773",
+      "title_clean": "Core Partner Development Manager - UKI",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://www.hubspot.com/careers/jobs/7694606?gh_jid=7694606",
+      "title_clean": "Core Partner Development Manager - UKI",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    }
+  ],
+  "final_recommendation": {
+    "decision": "partner_lane_shadow_viable_for_review",
+    "reason": "The narrowed partner-only subset produces enough shadow matches to justify production-candidate review."
+  }
+}

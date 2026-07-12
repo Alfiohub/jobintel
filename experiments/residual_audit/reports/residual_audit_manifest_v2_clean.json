@@ -1,0 +1,9 @@
+{
+  "input_dataset": "data/jobs/jobs_titled_en_recovery_v57_non_role_shadow.jsonl",
+  "input_other_rows": 35493,
+  "sample_size": 400,
+  "random_seed": 42,
+  "output_jsonl": "experiments/residual_audit/reports/residual_audit_sample_v2_clean.jsonl",
+  "annotation_schema": "experiments/residual_audit/annotation_schema.json",
+  "annotation_prompt": "experiments/residual_audit/chatgpt_annotation_prompt.md"
+}

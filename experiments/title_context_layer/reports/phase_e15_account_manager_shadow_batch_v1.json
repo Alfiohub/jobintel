@@ -1,0 +1,93 @@
+{
+  "baseline": {
+    "dataset": "data/jobs/jobs_titled_en_recovery_v61_attack_now_batch.jsonl",
+    "other_before": 35581
+  },
+  "shadow_result": {
+    "output_dataset": "data/jobs/jobs_titled_en_recovery_v62_account_manager_shadow.jsonl",
+    "matches_added": 19,
+    "other_after": 35562,
+    "delta_other": -19,
+    "rule_hits": {
+      "ctx_account_manager_lane_v1": 19
+    }
+  },
+  "sample_matches": [
+    {
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7589306003",
+      "title_clean": "Partner Growth Manager",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7589308003",
+      "title_clean": "Partner Growth Manager",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://careers.appsflyer.com/jobs/position/8349704002?gh_jid=8349704002",
+      "title_clean": "Partner Development Manager - Mandarin Speaker",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://www.bill.com/job?5705206004&gh_jid=5705206004",
+      "title_clean": "Strategic Partner Director",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://connecteam.com/careers/5784181004?gh_jid=5784181004",
+      "title_clean": "Partner Growth Manager",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://connecteam.com/careers/5784175004?gh_jid=5784175004",
+      "title_clean": "Partner Growth Manager",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://connecteam.com/careers/5784180004?gh_jid=5784180004",
+      "title_clean": "Partner Growth Manager",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://connecteam.com/careers/5784182004?gh_jid=5784182004",
+      "title_clean": "Partner Growth Manager",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://connecteam.com/careers/5784166004?gh_jid=5784166004",
+      "title_clean": "Partner Growth Manager",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://connecteam.com/careers/5784170004?gh_jid=5784170004",
+      "title_clean": "Partner Growth Manager",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://connecteam.com/careers/5784171004?gh_jid=5784171004",
+      "title_clean": "Partner Growth Manager",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    },
+    {
+      "url": "https://connecteam.com/careers/5784174004?gh_jid=5784174004",
+      "title_clean": "Partner Growth Manager",
+      "normalized_title": "account_manager",
+      "role_family": "sales"
+    }
+  ],
+  "final_recommendation": {
+    "decision": "account_manager_shadow_lane_viable",
+    "reason": "The partner/client-strategy subset produces enough shadow matches to justify formal review for a production-candidate context gate."
+  }
+}

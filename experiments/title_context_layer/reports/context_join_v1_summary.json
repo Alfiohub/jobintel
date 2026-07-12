@@ -1,0 +1,21 @@
+{
+  "titled_path": "data/jobs/jobs_titled_en_recovery_v55_semantic_batch.jsonl",
+  "extracted_path": "data/jobs/jobs_extracted_en.jsonl",
+  "target_titles": [
+    "Designer",
+    "Implementation Engineer",
+    "Onboarding Specialist",
+    "Operations Analyst",
+    "Partner Manager",
+    "Producer"
+  ],
+  "joined_rows": 83,
+  "counts_by_title": {
+    "Onboarding Specialist": 13,
+    "Designer": 11,
+    "Implementation Engineer": 13,
+    "Partner Manager": 9,
+    "Producer": 27,
+    "Operations Analyst": 10
+  }
+}

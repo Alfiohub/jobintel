@@ -1,0 +1,425 @@
+{
+  "input_path": "data/jobs/jobs_indexed_en.jsonl",
+  "supported_operations": [
+    "list_jobs(filters..., limit, offset)",
+    "count_jobs(filters...)",
+    "run_pack(pack_name, limit, offset)",
+    "count_pack(pack_name)"
+  ],
+  "supported_filters": [
+    "normalized_title",
+    "role_family",
+    "language_bucket",
+    "location_type",
+    "employment_type",
+    "has_salary",
+    "has_skills",
+    "title_is_other",
+    "skills_contains",
+    "salary_currency"
+  ],
+  "pagination": {
+    "params": [
+      "limit",
+      "offset"
+    ],
+    "default_limit": 20,
+    "default_offset": 0,
+    "behavior": "offset applied before limit on sorted matches"
+  },
+  "available_query_packs": [
+    "account_executive_jobs",
+    "healthcare_clinical_jobs",
+    "high_confidence_tech_jobs",
+    "marketing_jobs_with_salary",
+    "other_with_strong_signals",
+    "python_tech_jobs",
+    "remote_data_jobs",
+    "skilled_trades_jobs"
+  ],
+  "examples": [
+    "jobintel-next serve query --input data/jobs/jobs_indexed_en.jsonl --normalized-title account_executive --limit 20 --offset 0",
+    "jobintel-next serve count --input data/jobs/jobs_indexed_en.jsonl --role-family marketing --has-salary true",
+    "jobintel-next serve pack --input data/jobs/jobs_indexed_en.jsonl --pack high_confidence_tech_jobs --limit 20 --offset 0",
+    "jobintel-next serve pack-count --input data/jobs/jobs_indexed_en.jsonl --pack python_tech_jobs"
+  ],
+  "sample_results": [
+    {
+      "name": "list_account_executive",
+      "type": "list_jobs",
+      "query": {
+        "normalized_title": "account_executive",
+        "role_family": null,
+        "language_bucket": null,
+        "location_type": null,
+        "employment_type": null,
+        "has_salary": null,
+        "has_skills": null,
+        "title_is_other": null,
+        "skills_contains": [],
+        "salary_currency": null,
+        "sort_by": "published_at_desc",
+        "limit": null
+      },
+      "total_count": 3152,
+      "returned_count": 5,
+      "count_api": 3152,
+      "sample_rows": [
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7728365",
+          "title_raw": "Account Executive, Product Sales - Capital",
+          "normalized_title": "account_executive",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false,
+          "skills": [],
+          "published_at": "2026-03-27T16:10:10+00:00"
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7724828",
+          "title_raw": "National Account Executive, Enterprise (India)",
+          "normalized_title": "account_executive",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false,
+          "skills": [],
+          "published_at": "2026-03-27T16:10:10+00:00"
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7693271",
+          "title_raw": "Enterprise Account Executive",
+          "normalized_title": "account_executive",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false,
+          "skills": [],
+          "published_at": "2026-03-27T16:10:10+00:00"
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7686224",
+          "title_raw": "Account Executive - Funded Startups - French",
+          "normalized_title": "account_executive",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false,
+          "skills": [],
+          "published_at": "2026-03-27T16:10:10+00:00"
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7675661",
+          "title_raw": "Account Executive, Product - BNPLs",
+          "normalized_title": "account_executive",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": false,
+          "title_is_other": false,
+          "skills": [],
+          "published_at": "2026-03-27T16:10:10+00:00"
+        }
+      ]
+    },
+    {
+      "name": "list_marketing_with_salary_offset_5",
+      "type": "list_jobs",
+      "query": {
+        "normalized_title": null,
+        "role_family": "marketing",
+        "language_bucket": null,
+        "location_type": null,
+        "employment_type": null,
+        "has_salary": true,
+        "has_skills": null,
+        "title_is_other": null,
+        "skills_contains": [],
+        "salary_currency": null,
+        "sort_by": "updated_at_desc",
+        "limit": null
+      },
+      "total_count": 1584,
+      "returned_count": 5,
+      "count_api": 1584,
+      "sample_rows": [
+        {
+          "url": "https://www.sphereentertainmentco.com/job/5082454007?gh_jid=5082454007",
+          "title_raw": "Director, B2B Marketing & Events",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "location_type": "onsite",
+          "employment_type": null,
+          "has_salary": true,
+          "has_skills": false,
+          "title_is_other": false,
+          "skills": [],
+          "published_at": "2026-03-27T10:26:13+00:00"
+        },
+        {
+          "url": "https://www.sphereentertainmentco.com/job/5005813007?gh_jid=5005813007",
+          "title_raw": "Lifecycle Marketing Manager",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "location_type": "onsite",
+          "employment_type": null,
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false,
+          "skills": [
+            "sql",
+            "salesforce"
+          ],
+          "published_at": "2026-03-27T10:26:11+00:00"
+        },
+        {
+          "url": "https://www.sentinelone.com/jobs/7552112003?gh_jid=7552112003",
+          "title_raw": "Senior Service Provider Partner Marketing Manager",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "location_type": "remote",
+          "employment_type": null,
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false,
+          "skills": [
+            "salesforce"
+          ],
+          "published_at": "2026-03-24T20:46:13+00:00"
+        },
+        {
+          "url": "https://www.seekout.com/company/careers/roles?gh_jid=7672729003",
+          "title_raw": "Senior Product Marketing Manager",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "location_type": "onsite",
+          "employment_type": null,
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false,
+          "skills": [
+            "machine_learning"
+          ],
+          "published_at": "2026-03-20T15:38:39+00:00"
+        },
+        {
+          "url": "https://www.samsara.com/company/careers/roles/7743897?gh_jid=7743897",
+          "title_raw": "Director, ABM & Field Marketing",
+          "normalized_title": "marketing_specialist",
+          "role_family": "marketing",
+          "location_type": "hybrid",
+          "employment_type": "full_time",
+          "has_salary": true,
+          "has_skills": false,
+          "title_is_other": false,
+          "skills": [],
+          "published_at": "2026-03-26T22:54:05+00:00"
+        }
+      ]
+    },
+    {
+      "name": "pack_high_confidence_tech_jobs",
+      "type": "run_pack",
+      "pack_name": "high_confidence_tech_jobs",
+      "total_count": 8677,
+      "returned_count": 5,
+      "count_api": 8677,
+      "sample_rows": [
+        {
+          "url": "https://job-boards.greenhouse.io/outschool/jobs/4607423006",
+          "title_raw": "Software Engineer",
+          "normalized_title": "software_engineer",
+          "role_family": "software_engineering",
+          "location_type": "hybrid",
+          "employment_type": "full_time",
+          "has_salary": true,
+          "has_skills": true,
+          "title_is_other": false,
+          "skills": [
+            "sql",
+            "typescript",
+            "react",
+            "node",
+            "aws"
+          ],
+          "published_at": "2026-03-27T16:10:42+00:00"
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7746721",
+          "title_raw": "Senior Staff Frontend Engineer, Merchant Experience",
+          "normalized_title": "software_engineer",
+          "role_family": "software_engineering",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false,
+          "skills": [
+            "react"
+          ],
+          "published_at": "2026-03-27T16:10:10+00:00"
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7705412",
+          "title_raw": "Staff Software Engineer, Terminal Developer Productivity",
+          "normalized_title": "software_engineer",
+          "role_family": "software_engineering",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false,
+          "skills": [
+            "java"
+          ],
+          "published_at": "2026-03-27T16:10:10+00:00"
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7671038",
+          "title_raw": "Forward Deployed Engineer, Professional Services",
+          "normalized_title": "software_engineer",
+          "role_family": "software_engineering",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false,
+          "skills": [
+            "java",
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "published_at": "2026-03-27T16:10:10+00:00"
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7656562",
+          "title_raw": "Frontend Engineer, Privy",
+          "normalized_title": "software_engineer",
+          "role_family": "software_engineering",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false,
+          "skills": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "published_at": "2026-03-27T16:10:10+00:00"
+        }
+      ]
+    },
+    {
+      "name": "pack_python_tech_jobs_offset_5",
+      "type": "run_pack",
+      "pack_name": "python_tech_jobs",
+      "total_count": 6049,
+      "returned_count": 5,
+      "count_api": 6049,
+      "sample_rows": [
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7610132",
+          "title_raw": "Data Analyst",
+          "normalized_title": "data_analyst",
+          "role_family": "data_analytics",
+          "location_type": null,
+          "employment_type": "full_time",
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false,
+          "skills": [
+            "python",
+            "sql"
+          ],
+          "published_at": "2026-03-27T16:10:10+00:00"
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7600792",
+          "title_raw": "Software Engineer, Experimental Projects",
+          "normalized_title": "software_engineer",
+          "role_family": "software_engineering",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false,
+          "skills": [
+            "python",
+            "java",
+            "javascript",
+            "typescript",
+            "excel"
+          ],
+          "published_at": "2026-03-27T16:10:10+00:00"
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7594376",
+          "title_raw": "Technical Account Manager, German OR Polish Speaking",
+          "normalized_title": "account_manager",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false,
+          "skills": [
+            "python",
+            "sql"
+          ],
+          "published_at": "2026-03-27T16:10:10+00:00"
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7564690",
+          "title_raw": "Technical Account Manager, Risk",
+          "normalized_title": "account_manager",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false,
+          "skills": [
+            "python",
+            "sql",
+            "tableau",
+            "power_bi"
+          ],
+          "published_at": "2026-03-27T16:10:10+00:00"
+        },
+        {
+          "url": "https://stripe.com/jobs/search?gh_jid=7549012",
+          "title_raw": "Technical Account Manager",
+          "normalized_title": "account_manager",
+          "role_family": "sales",
+          "location_type": null,
+          "employment_type": null,
+          "has_salary": false,
+          "has_skills": true,
+          "title_is_other": false,
+          "skills": [
+            "python",
+            "sql"
+          ],
+          "published_at": "2026-03-27T16:10:10+00:00"
+        }
+      ]
+    }
+  ],
+  "known_limits": [
+    "Local JSONL scan in memory; no DB index in step19.",
+    "No ranking, semantic search, or recommendation.",
+    "Quality depends on upstream structured signals."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "occupation_rows": 1016,
+  "alternate_rows": 57543,
+  "related_rows": 18460,
+  "index_rows": 1016,
+  "files": {
+    "Occupation Data": "/home/afio/Documenti/Code/Python_code/Jinaj/joballert2/ONETfiles/db_30_2_excel/Occupation Data.xlsx",
+    "Alternate Titles": "/home/afio/Documenti/Code/Python_code/Jinaj/joballert2/ONETfiles/db_30_2_excel/Alternate Titles.xlsx",
+    "Related Occupations": "/home/afio/Documenti/Code/Python_code/Jinaj/joballert2/ONETfiles/db_30_2_excel/Related Occupations.xlsx"
+  }
+}

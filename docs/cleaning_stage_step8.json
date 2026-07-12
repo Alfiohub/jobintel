@@ -1,0 +1,60 @@
+{
+  "input_path": "data/jobs/jobs_en_filtered.jsonl",
+  "output_path": "data/jobs/jobs_cleaned_en.jsonl",
+  "rows_total": 81011,
+  "invalid_rows": 0,
+  "sample_cleaned_rows": [
+    {
+      "url": "https://job-boards.greenhouse.io/found/jobs/4652575005",
+      "title_clean": "Data Analytics Director",
+      "location_clean": "Remote",
+      "requirements_clean": "What you have: Minimum of a Bachelor's degree, preferably in Statistics, Mathematics, Economics, Computer Science or another related field 8+ years of analytics experience with proven experience in a fast-paced environment Strong working kn",
+      "responsibilities_clean": "The opportunity: The Director of Data Analytics is a strategic leader responsible for owning the roadmap for data analytics across all of Found. As the end-to-end owner, you will build on the foundation we have established in analytics by c",
+      "content_hash": "c3e42e5611fcc6c53b920caa113a25ed616d764554fd247e02a7050989f3280e"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/found/jobs/4665181005",
+      "title_clean": "Growth Marketing Manager",
+      "location_clean": "Remote",
+      "requirements_clean": "Required Experience & Skills 4+ years of experience in growth or performance marketing roles with direct ownership of CAC, conversion, or revenue targets. Hands-on experience with major paid channels (Meta, Google, TikTok) Experience workin",
+      "responsibilities_clean": "Set and execute paid media strategies aligned to growth and unit-economics targets. Analyze attribution, conversion, and cohort data to identify incremental growth opportunities. Partner with creative, product, and agency teams to develop h",
+      "content_hash": "7ff55bd39896138e7dc407397e2437c11bd5b2f802e54324f9f91a540874db10"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/found/jobs/4668478005",
+      "title_clean": "Marketing Creative Operations & Design Manager",
+      "location_clean": "Remote",
+      "requirements_clean": "What You'll Do Creative Operations & Project Management Own the end-to-end creative intake and prioritization process across all marketing requests Build and maintain trafficking workflows to coordinate deliverables across agencies and free",
+      "responsibilities_clean": "Creative Operations & Project Management Own the end-to-end creative intake and prioritization process across all marketing requests Build and maintain trafficking workflows to coordinate deliverables across agencies and freelancers Establi",
+      "content_hash": "dfa9fe9d61cd5bcabd89ddf46ea1f3178b8f172ab3808e70448e3ec0b93bf17f"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/found/jobs/4668477005",
+      "title_clean": "Social Media Manager",
+      "location_clean": "Remote",
+      "requirements_clean": "Escalation & Cross-Functional Insight Sharing Support escalation protocols for issues requiring support, clinical, or PR response Regularly share community insights with Product, Clinical, and Marketing teams to inform roadmap and messaging",
+      "responsibilities_clean": "Social Community Monitoring & Engagement Lead the creation and execution of social content strategies that drive engagement, advocacy, and growth across Instagram, TikTok, Reddit, and other priority channels. Collaborate with marketing and ",
+      "content_hash": "a94e808f62dc8829adde1013970dc66db57d9b86594ee3f45f367c4427000243"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/found/jobs/4501664005",
+      "title_clean": "Telehealth Provider (MD & DO)",
+      "location_clean": "Remote",
+      "requirements_clean": "MD or DO degree Board certified in at least one of the following: internal medicine, emergency medicine, family medicine Licensed in multiple states, including some combination of: NJ, IN, CA, PA, NC, GA, TN, SC, MD, CT, MA, HI, SD or MT. C",
+      "responsibilities_clean": "As a provider at one of the largest obesity medicine practices in the US, you will be expanding access to high-quality, cost-efficient weight management care for patients nationwide. You will get to be an early part of Found’s newest offeri",
+      "content_hash": "09fcb696c0b175b55e91c7f2c966e4a8a2e579f6175746a84ec100a2f47d65b1"
+    }
+  ],
+  "rules_used": [
+    "title_clean: trim whitespace + normalize separators",
+    "description_clean: html unescape + strip html tags + whitespace normalization",
+    "location_clean: trim/normalize whitespace",
+    "requirements/responsibilities: simple heading/sentence heuristics",
+    "content_hash: stable sha256 over cleaned text fields"
+  ],
+  "known_limits": [
+    "No semantic normalization in cleaning stage",
+    "Section extraction is heuristic and may miss implicit sections",
+    "description_clean is linearized text (structure reduced)"
+  ]
+}

@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Reusable Application Templates</h1>
+<p class="muted">Create reusable resume/cover-letter labels and reuse them in shortlist details.</p>
+
+<h2>Create Template</h2>
+<form method="post" action="/admin/templates/new">
+  <p>
+    <label>Kind
+      <select name="kind">
+        {% for k in template_kinds %}
+          <option value="{{ k }}">{{ k }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  </p>
+  <p>
+    <label>Label <input type="text" name="label" placeholder="e.g. CV backend v2"></label>
+  </p>
+  <p>
+    <label>Description <input type="text" name="description" placeholder="optional short note"></label>
+  </p>
+  <p>
+    <label><input type="checkbox" name="is_active" value="true" checked> Active</label>
+  </p>
+  <p><button type="submit">Create template</button></p>
+</form>
+
+<h2>Templates</h2>
+{% if not templates %}
+<p class="muted">No templates yet. Create one to enable guided selection in shortlist.</p>
+{% else %}
+<table>
+  <thead>
+    <tr>
+      <th>Kind</th>
+      <th>Label</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for t in templates %}
+    <tr>
+      <td><span class="badge">{{ t.kind }}</span></td>
+      <td>{{ t.label }}</td>
+      <td><span class="muted">{{ t.description or "-" }}</span></td>
+      <td>
+        {% if t.is_active %}
+          <span class="badge badge-state-saved">active</span>
+        {% else %}
+          <span class="badge badge-state-dismissed">inactive</span>
+        {% endif %}
+      </td>
+      <td class="row-actions">
+        {% if t.is_active %}
+          <form method="post" action="/admin/templates/{{ t.template_id }}/disable">
+            <button type="submit">Disable</button>
+          </form>
+        {% else %}
+          <form method="post" action="/admin/templates/{{ t.template_id }}/enable">
+            <button type="submit">Enable</button>
+          </form>
+        {% endif %}
+        <form method="post" action="/admin/templates/{{ t.template_id }}/delete">
+          <button type="submit">Delete</button>
+        </form>
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+
+<div class="toolbar">
+  <a href="/admin/shortlist">Open shortlist</a>
+</div>
+{% endblock %}

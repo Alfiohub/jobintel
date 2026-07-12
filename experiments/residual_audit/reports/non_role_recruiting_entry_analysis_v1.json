@@ -1,0 +1,894 @@
+{
+  "input_dataset": "data/jobs/jobs_titled_en_recovery_v55_semantic_batch.jsonl",
+  "rows_total": 81011,
+  "candidate_count": 563,
+  "candidate_share": 0.0069,
+  "status_counts": {
+    "other": 459,
+    "matched": 104
+  },
+  "top_pattern_hits": [
+    {
+      "pattern": "description:keep your information on file",
+      "count": 118,
+      "examples": [
+        "Interested in joining our team?",
+        "Interested in joining our team?",
+        "Future Sales Openings: Account Executive, US |Remote|",
+        "Account Executive - DACH (Future Talent Opportunity)",
+        "Account Executive - DACH (Future Talent Opportunity)"
+      ]
+    },
+    {
+      "pattern": "title:talent community",
+      "count": 95,
+      "examples": [
+        "Join our Talent Community!",
+        "Join our Talent Community - Analytics Services Team",
+        "Join the 8am Talent Community!",
+        "Talent Community",
+        "Technology Jobs Talent Community"
+      ]
+    },
+    {
+      "pattern": "description:join our talent community",
+      "count": 70,
+      "examples": [
+        "Join the 8am Talent Community!",
+        "Technology Jobs Talent Community",
+        "Join AlphaSense Helsinki Talent Community!",
+        "Join AlphaSense India Talent Community",
+        "Join AlphaSense India Talent Community"
+      ]
+    },
+    {
+      "pattern": "description:send us your resume",
+      "count": 67,
+      "examples": [
+        "Interested in joining our team?",
+        "Interested in joining our team?",
+        "General Interest in 86 Repairs",
+        "General Application",
+        "Open Application"
+      ]
+    },
+    {
+      "pattern": "title:future opportunities",
+      "count": 64,
+      "examples": [
+        "Apply for future opportunities",
+        "Doula (Future Opportunities)",
+        "Future Opportunities: Cybersecurity",
+        "Future Opportunities: Data Analytics and AI",
+        "Future Opportunities: General"
+      ]
+    },
+    {
+      "pattern": "description:future openings",
+      "count": 61,
+      "examples": [
+        "Associate, Business Development - Talent Pool",
+        "Your Dream Job",
+        "General Interest",
+        "Don't see your dream job posted?",
+        "Join our Provider Network (Licensed Therapists)"
+      ]
+    },
+    {
+      "pattern": "title:general application",
+      "count": 60,
+      "examples": [
+        "General Application",
+        "General Application - We're Always Hiring!",
+        "General Application",
+        "General Applications",
+        "General Application"
+      ]
+    },
+    {
+      "pattern": "title:talent pool",
+      "count": 43,
+      "examples": [
+        "Associate, Axios Live - Talent Pool",
+        "Associate, Business Development - Talent Pool",
+        "AI Mentor Talent Pool – Contractor Roles",
+        "AI Talent Pool",
+        "Don't see the right job listed? Submit your application here to join our general talent pool."
+      ]
+    },
+    {
+      "pattern": "description:don't see an opportunity",
+      "count": 32,
+      "examples": [
+        "Interested in joining our team?",
+        "Interested in joining our team?",
+        "Join the 8am Talent Community!",
+        "Join our Talent Community",
+        "Join Cedar's Talent Community!"
+      ]
+    },
+    {
+      "pattern": "title:future opportunity",
+      "count": 31,
+      "examples": [
+        "ISP/OSP Task Order Project Manager (Future Opportunity)",
+        "JSP ETM (Future Opportunity) - COOP & Cyber Continuity Analysts",
+        "JSP ETM (Future Opportunity) - Fiber Infrastructure & Structured Cabling",
+        "JSP ETM (Future Opportunity) - Inside/Outside Plant Support",
+        "JSP ETM (Future Opportunity) - MAC Operations"
+      ]
+    },
+    {
+      "pattern": "title:general interest",
+      "count": 29,
+      "examples": [
+        "Lead Instructor: Cybersecurity (General Interest)",
+        "Lead Instructor: Data Analytics (General Interest)",
+        "General Interest - Future Consideration",
+        "General Interest in 86 Repairs",
+        "General Interest"
+      ]
+    },
+    {
+      "pattern": "title:expression of interest",
+      "count": 22,
+      "examples": [
+        "Expression of Interest: Machine Learning Engineer",
+        "Expression of Interest: Senior Growth Manager (Ad Sales)",
+        "[Expression of Interest] Research Manager, Interpretability",
+        "[Expression of Interest] Research Scientist / Engineer, Honesty",
+        "[Expression of Interest] Join our FT Japan Talent Pool"
+      ]
+    },
+    {
+      "pattern": "title:open application",
+      "count": 20,
+      "examples": [
+        "Open Application",
+        "Open Application",
+        "Open Application",
+        "Open Application",
+        "Open Application"
+      ]
+    },
+    {
+      "pattern": "title:don't see what you're looking for",
+      "count": 18,
+      "examples": [
+        "Don't See What You're Looking For?",
+        "Don't See What You're Looking For?",
+        "Don't see what you're looking for?",
+        "Don't see what you're looking for? (Go to Market)",
+        "Don't see what you're looking for? (Technology)"
+      ]
+    },
+    {
+      "pattern": "description:drop your resume",
+      "count": 14,
+      "examples": [
+        "Get on our Radar!",
+        "Connect with Us",
+        "Content and Communications Lead",
+        "Data Analyst",
+        "Product Manager"
+      ]
+    },
+    {
+      "pattern": "title:future consideration",
+      "count": 12,
+      "examples": [
+        "General Interest - Future Consideration",
+        "Submit Your Application for Future Consideration",
+        "Submit Your Application for Future Consideration",
+        "Submit Your Application for Future Consideration",
+        "Submit Your Application for Future Consideration"
+      ]
+    },
+    {
+      "pattern": "title:don’t see what you’re looking for",
+      "count": 11,
+      "examples": [
+        "Don’t see what you’re looking for?",
+        "Don’t see what you’re looking for?",
+        "Don’t see what you’re looking for?",
+        "Don’t see what you’re looking for?",
+        "Don’t see what you’re looking for?"
+      ]
+    },
+    {
+      "pattern": "description:don't see a position",
+      "count": 9,
+      "examples": [
+        "Join our Talent Community!",
+        "Join our Talent Community",
+        "Don't See a Fit? Join Our Talent Community",
+        "Don’t see the perfect fit?",
+        "General Application"
+      ]
+    },
+    {
+      "pattern": "title:apply here",
+      "count": 8,
+      "examples": [
+        "Talent Network - Didn't See the Role You Were Looking for? Apply Here!",
+        "Don't See a Role that Fits? Apply Here.",
+        "Don't see a role that fits? Apply here!",
+        "Didn't find the perfect match on our career page? APPLY HERE",
+        "Intrigued? Apply here to get into our system!"
+      ]
+    },
+    {
+      "pattern": "title:general applications",
+      "count": 6,
+      "examples": [
+        "General Applications",
+        "General Applications - R&D",
+        "GTM - General Applications",
+        "Join us at Able - General Applications",
+        "General Applications"
+      ]
+    }
+  ],
+  "sample_candidates": [
+    {
+      "url": "https://job-boards.greenhouse.io/gomotive/jobs/5476318002",
+      "company_name": "gomotive",
+      "title_raw": "Interested in joining our team?",
+      "title_clean": "Interested in joining our team?",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "description:send us your resume",
+        "description:keep your information on file",
+        "description:don't see an opportunity"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/gomotive/jobs/5466892002",
+      "company_name": "gomotive",
+      "title_raw": "Interested in joining our team?",
+      "title_clean": "Interested in joining our team?",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "description:send us your resume",
+        "description:keep your information on file",
+        "description:don't see an opportunity"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/grafanalabs/jobs/5823504004",
+      "company_name": "grafanalabs",
+      "title_raw": "Future Sales Openings: Account Executive, US |Remote|",
+      "title_clean": "Future Sales Openings: Account Executive, US - Remote",
+      "classification_status": "matched",
+      "normalized_title": "account_executive",
+      "role_family": "sales",
+      "matched_rule_id": "sales_account_exec",
+      "pattern_hits": [
+        "description:keep your information on file"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/correlationone/jobs/5462269004",
+      "company_name": "correlationone",
+      "title_raw": "Lead Instructor: Cybersecurity (General Interest)",
+      "title_clean": "Lead Instructor: Cybersecurity (General Interest)",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:general interest"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/correlationone/jobs/5462211004",
+      "company_name": "correlationone",
+      "title_raw": "Lead Instructor: Data Analytics (General Interest)",
+      "title_clean": "Lead Instructor: Data Analytics (General Interest)",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:general interest"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/moloco/jobs/7655058003",
+      "company_name": "moloco",
+      "title_raw": "Expression of Interest: Machine Learning Engineer",
+      "title_clean": "Expression of Interest: Machine Learning Engineer",
+      "classification_status": "matched",
+      "normalized_title": "ml_engineer",
+      "role_family": "machine_learning",
+      "matched_rule_id": "eng_ml",
+      "pattern_hits": [
+        "title:expression of interest"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/moloco/jobs/5687340003",
+      "company_name": "moloco",
+      "title_raw": "Expression of Interest: Senior Growth Manager (Ad Sales)",
+      "title_clean": "Expression of Interest: Senior Growth Manager (Ad Sales)",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:expression of interest"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/remotecom/jobs/6301556003",
+      "company_name": "remotecom",
+      "title_raw": "Account Executive - DACH (Future Talent Opportunity)",
+      "title_clean": "Account Executive - DACH (Future Talent Opportunity)",
+      "classification_status": "matched",
+      "normalized_title": "account_executive",
+      "role_family": "sales",
+      "matched_rule_id": "sales_account_exec",
+      "pattern_hits": [
+        "description:keep your information on file"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/remotecom/jobs/7509488003",
+      "company_name": "remotecom",
+      "title_raw": "Account Executive - DACH (Future Talent Opportunity)",
+      "title_clean": "Account Executive - DACH (Future Talent Opportunity)",
+      "classification_status": "matched",
+      "normalized_title": "account_executive",
+      "role_family": "sales",
+      "matched_rule_id": "sales_account_exec",
+      "pattern_hits": [
+        "description:keep your information on file"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/remotecom/jobs/7509492003",
+      "company_name": "remotecom",
+      "title_raw": "Account Executive - DACH (Future Talent Opportunity)",
+      "title_clean": "Account Executive - DACH (Future Talent Opportunity)",
+      "classification_status": "matched",
+      "normalized_title": "account_executive",
+      "role_family": "sales",
+      "matched_rule_id": "sales_account_exec",
+      "pattern_hits": [
+        "description:keep your information on file"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/remotecom/jobs/7509493003",
+      "company_name": "remotecom",
+      "title_raw": "Account Executive - DACH (Future Talent Opportunity)",
+      "title_clean": "Account Executive - DACH (Future Talent Opportunity)",
+      "classification_status": "matched",
+      "normalized_title": "account_executive",
+      "role_family": "sales",
+      "matched_rule_id": "sales_account_exec",
+      "pattern_hits": [
+        "description:keep your information on file"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/xapo61/jobs/4292186003",
+      "company_name": "xapo61",
+      "title_raw": "General Interest - Future Consideration",
+      "title_clean": "General Interest - Future Consideration",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:general interest",
+        "title:future consideration"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/axios/jobs/7586473",
+      "company_name": "axios",
+      "title_raw": "Associate, Axios Live - Talent Pool",
+      "title_clean": "Associate, Axios Live - Talent Pool",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:talent pool"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/axios/jobs/7488242",
+      "company_name": "axios",
+      "title_raw": "Associate, Business Development - Talent Pool",
+      "title_clean": "Associate, Business Development - Talent Pool",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:talent pool",
+        "description:future openings"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/udacity/jobs/7442778002",
+      "company_name": "udacity",
+      "title_raw": "AI Mentor Talent Pool – Contractor Roles",
+      "title_clean": "AI Mentor Talent Pool - Contractor Roles",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:talent pool"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/flywheeldigital/jobs/4012728008",
+      "company_name": "flywheeldigital",
+      "title_raw": "Apply for future opportunities",
+      "title_clean": "Apply for future opportunities",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:future opportunities",
+        "description:keep your information on file"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/doctolib/jobs/5861501003",
+      "company_name": "doctolib",
+      "title_raw": "AI Talent Pool",
+      "title_clean": "AI Talent Pool",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:talent pool"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/pomelocare/jobs/4246020004",
+      "company_name": "pomelocare",
+      "title_raw": "Don't see the right job listed? Submit your application here to join our general talent pool.",
+      "title_clean": "Don't see the right job listed? Submit your application here to join our general talent pool.",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:talent pool"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/pomelocare/jobs/5412164004",
+      "company_name": "pomelocare",
+      "title_raw": "Doula (Future Opportunities)",
+      "title_clean": "Doula (Future Opportunities)",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:future opportunities"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/4980436008",
+      "company_name": "anthropic",
+      "title_raw": "[Expression of Interest] Research Manager, Interpretability",
+      "title_clean": "[Expression of Interest] Research Manager, Interpretability",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:expression of interest"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/4532887008",
+      "company_name": "anthropic",
+      "title_raw": "[Expression of Interest] Research Scientist / Engineer, Honesty",
+      "title_clean": "[Expression of Interest] Research Scientist - Engineer, Honesty",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:expression of interest"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/distantjob/jobs/4404040002",
+      "company_name": "distantjob",
+      "title_raw": "General Application",
+      "title_clean": "General Application",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": "exact_general_application",
+      "pattern_hits": [
+        "title:general application"
+      ]
+    },
+    {
+      "url": "https://boards.greenhouse.io/shopmonkey/jobs/5338128003?gh_jid=5338128003",
+      "company_name": "shopmonkey",
+      "title_raw": "Your Dream Job",
+      "title_clean": "Your Dream Job",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "description:future openings"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/86repairs/jobs/4435748004",
+      "company_name": "86repairs",
+      "title_raw": "General Interest in 86 Repairs",
+      "title_clean": "General Interest in 86 Repairs",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:general interest",
+        "description:send us your resume"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/9thwayinsignia/jobs/4521579008",
+      "company_name": "9thwayinsignia",
+      "title_raw": "Future Opportunities: Cybersecurity",
+      "title_clean": "Future Opportunities: Cybersecurity",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:future opportunities"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/9thwayinsignia/jobs/4521584008",
+      "company_name": "9thwayinsignia",
+      "title_raw": "Future Opportunities: Data Analytics and AI",
+      "title_clean": "Future Opportunities: Data Analytics and AI",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:future opportunities"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/9thwayinsignia/jobs/4406865008",
+      "company_name": "9thwayinsignia",
+      "title_raw": "Future Opportunities: General",
+      "title_clean": "Future Opportunities: General",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:future opportunities"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/9thwayinsignia/jobs/4521587008",
+      "company_name": "9thwayinsignia",
+      "title_raw": "Future Opportunities: Program/Project Management",
+      "title_clean": "Future Opportunities: Program - Project Management",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:future opportunities"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/9thwayinsignia/jobs/4521589008",
+      "company_name": "9thwayinsignia",
+      "title_raw": "Future Opportunities: Software Development",
+      "title_clean": "Future Opportunities: Software Development",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:future opportunities"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/adswerveinc/jobs/4025828007",
+      "company_name": "adswerveinc",
+      "title_raw": "Join our Talent Community!",
+      "title_clean": "Join our Talent Community!",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:talent community"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/adswerveinc/jobs/4025965007",
+      "company_name": "adswerveinc",
+      "title_raw": "Join our Talent Community - Analytics Services Team",
+      "title_clean": "Join our Talent Community - Analytics Services Team",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:talent community"
+      ]
+    },
+    {
+      "url": "https://www.8am.com/openings/?gh_jid=4000172006",
+      "company_name": "affinipay1",
+      "title_raw": "Join the 8am Talent Community!",
+      "title_clean": "Join the 8am Talent Community!",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:talent community",
+        "description:don't see an opportunity",
+        "description:join our talent community"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/agecareers/jobs/4623400008",
+      "company_name": "agecareers",
+      "title_raw": "General Application - We're Always Hiring!",
+      "title_clean": "General Application - We're Always Hiring!",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": "exact_general_application",
+      "pattern_hits": [
+        "title:general application"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/agecareers/jobs/5019533008",
+      "company_name": "agecareers",
+      "title_raw": "ISP/OSP Task Order Project Manager (Future Opportunity)",
+      "title_clean": "ISP - OSP Task Order Project Manager (Future Opportunity)",
+      "classification_status": "matched",
+      "normalized_title": "project_manager",
+      "role_family": "program_management",
+      "matched_rule_id": "program_project_manager",
+      "pattern_hits": [
+        "title:future opportunity"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/agecareers/jobs/4877955008",
+      "company_name": "agecareers",
+      "title_raw": "JSP ETM (Future Opportunity) - COOP & Cyber Continuity Analysts",
+      "title_clean": "JSP ETM (Future Opportunity) - COOP & Cyber Continuity Analysts",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:future opportunity"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/agecareers/jobs/4877863008",
+      "company_name": "agecareers",
+      "title_raw": "JSP ETM (Future Opportunity) - Fiber Infrastructure & Structured Cabling",
+      "title_clean": "JSP ETM (Future Opportunity) - Fiber Infrastructure & Structured Cabling",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:future opportunity"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/agecareers/jobs/4878438008",
+      "company_name": "agecareers",
+      "title_raw": "JSP ETM (Future Opportunity) - Inside/Outside Plant Support",
+      "title_clean": "JSP ETM (Future Opportunity) - Inside - Outside Plant Support",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:future opportunity"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/agecareers/jobs/4878334008",
+      "company_name": "agecareers",
+      "title_raw": "JSP ETM (Future Opportunity) - MAC Operations",
+      "title_clean": "JSP ETM (Future Opportunity) - MAC Operations",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:future opportunity"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/agecareers/jobs/4878357008",
+      "company_name": "agecareers",
+      "title_raw": "JSP ETM (Future Opportunity) - MAC Technicians (Moves/Adds/Changes)",
+      "title_clean": "JSP ETM (Future Opportunity) - MAC Technicians (Moves - Adds - Changes)",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:future opportunity"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/agecareers/jobs/4877765008",
+      "company_name": "agecareers",
+      "title_raw": "JSP ETM (Future Opportunity) - Network Engineering & Rapid Response",
+      "title_clean": "JSP ETM (Future Opportunity) - Network Engineering & Rapid Response",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:future opportunity"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/agecareers/jobs/4877519008",
+      "company_name": "agecareers",
+      "title_raw": "JSP ETM (Future Opportunity) - Program & Infrastructure Management",
+      "title_clean": "JSP ETM (Future Opportunity) - Program & Infrastructure Management",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:future opportunity"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/agecareers/jobs/4878537008",
+      "company_name": "agecareers",
+      "title_raw": "JSP ETM (Future Opportunity) - Project & Program Coordination",
+      "title_clean": "JSP ETM (Future Opportunity) - Project & Program Coordination",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:future opportunity"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/agecareers/jobs/4878224008",
+      "company_name": "agecareers",
+      "title_raw": "JSP ETM (Future Opportunity) - Voice Network Operations",
+      "title_clean": "JSP ETM (Future Opportunity) - Voice Network Operations",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:future opportunity"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/agecareers/jobs/4954274008",
+      "company_name": "agecareers",
+      "title_raw": "Program Manager (Future Opportunity)",
+      "title_clean": "Program Manager (Future Opportunity)",
+      "classification_status": "matched",
+      "normalized_title": "project_manager",
+      "role_family": "program_management",
+      "matched_rule_id": "program_project_manager",
+      "pattern_hits": [
+        "title:future opportunity"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/agecareers/jobs/4954264008",
+      "company_name": "agecareers",
+      "title_raw": "Senior Delivery Manager (Future Opportunity)",
+      "title_clean": "Senior Delivery Manager (Future Opportunity)",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:future opportunity"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/agecareers/jobs/4684115008",
+      "company_name": "agecareers",
+      "title_raw": "Senior Registered Communications Distribution Designer (RCDD) (Future Opportunity)",
+      "title_clean": "Senior Registered Communications Distribution Designer (RCDD) (Future Opportunity)",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:future opportunity"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/agecareers/jobs/4954245008",
+      "company_name": "agecareers",
+      "title_raw": "SharePoint Analyst Lead (Future Opportunity)",
+      "title_clean": "SharePoint Analyst Lead (Future Opportunity)",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:future opportunity"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/agecareers/jobs/4954256008",
+      "company_name": "agecareers",
+      "title_raw": "Sr. SharePoint Architect (Future Opportunity)",
+      "title_clean": "Sr. SharePoint Architect (Future Opportunity)",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:future opportunity"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/akidolabs/jobs/4613625006",
+      "company_name": "akidolabs",
+      "title_raw": "General Interest",
+      "title_clean": "General Interest",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:general interest"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/allwebleads/jobs/6341378002",
+      "company_name": "allwebleads",
+      "title_raw": "Talent Community",
+      "title_clean": "Talent Community",
+      "classification_status": "other",
+      "normalized_title": "other",
+      "role_family": "other",
+      "matched_rule_id": null,
+      "pattern_hits": [
+        "title:talent community"
+      ]
+    }
+  ]
+}

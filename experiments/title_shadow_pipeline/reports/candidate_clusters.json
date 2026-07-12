@@ -1,0 +1,2040 @@
+{
+  "candidates": [
+    {
+      "cluster_name": "support_engineer_it_core",
+      "estimated_volume": 187,
+      "representative_titles": [
+        {
+          "title": "Support Engineer",
+          "count": 11
+        },
+        {
+          "title": "Senior Support Engineer",
+          "count": 9
+        },
+        {
+          "title": "Customer Support Engineer",
+          "count": 7
+        },
+        {
+          "title": "Production Support Engineer",
+          "count": 5
+        },
+        {
+          "title": "Senior Hardware Support Engineer",
+          "count": 5
+        },
+        {
+          "title": "Application Support Engineer",
+          "count": 4
+        },
+        {
+          "title": "L3 Support Engineer",
+          "count": 4
+        },
+        {
+          "title": "Cloud Support Engineer",
+          "count": 3
+        },
+        {
+          "title": "Product Support Engineer",
+          "count": 3
+        },
+        {
+          "title": "Technical Customer Support Engineer - EMEA",
+          "count": 3
+        },
+        {
+          "title": "Support Engineer (Tier 1)",
+          "count": 3
+        },
+        {
+          "title": "Senior Software Support Engineer",
+          "count": 2
+        }
+      ],
+      "suggested_action": "map_to_existing",
+      "target_label": "it_support_specialist",
+      "target_family": "it_operations",
+      "overmatch_risk": "medium",
+      "roi": "high",
+      "support_from_esco": "medium",
+      "support_from_onet": "strong",
+      "combined_support": "strong",
+      "lexical_pattern": "\\b(?:support engineer|application support engineer|cloud support engineer|software support engineer|systems support engineer|production support engineer|infrastructure support engineer|enterprise support engineer|database support engineer|platform support engineer|data center support engineer|tech support engineer|l2 support engineer|l3 support engineer|tier\\s*[123]\\s*support engineer)\\b",
+      "priority_score": 140.25
+    },
+    {
+      "cluster_name": "paralegal_specialty_cluster",
+      "estimated_volume": 49,
+      "representative_titles": [
+        {
+          "title": "Corporate Paralegal",
+          "count": 9
+        },
+        {
+          "title": "Paralegal",
+          "count": 6
+        },
+        {
+          "title": "Litigation Paralegal",
+          "count": 6
+        },
+        {
+          "title": "Paralegal II, Corporate",
+          "count": 6
+        },
+        {
+          "title": "Senior Corporate Paralegal",
+          "count": 4
+        },
+        {
+          "title": "Paralegal - Litigation",
+          "count": 1
+        },
+        {
+          "title": "Paralegal, Immigrants' Rights Project",
+          "count": 1
+        },
+        {
+          "title": "Sr. Paralegal, Real Estate",
+          "count": 1
+        },
+        {
+          "title": "Commercial Paralegal",
+          "count": 1
+        },
+        {
+          "title": "Corporate Paralegal Chicago",
+          "count": 1
+        },
+        {
+          "title": "Trade Compliance Paralegal",
+          "count": 1
+        },
+        {
+          "title": "Senior Paralegal, CloudKitchens - London",
+          "count": 1
+        }
+      ],
+      "suggested_action": "add_new_normalized_title",
+      "target_label": "paralegal",
+      "target_family": "legal",
+      "overmatch_risk": "medium",
+      "roi": "medium",
+      "support_from_esco": "weak",
+      "support_from_onet": "strong",
+      "combined_support": "strong",
+      "lexical_pattern": "\\bparalegal\\b",
+      "priority_score": 25.72
+    },
+    {
+      "cluster_name": "occupational_therapist_core",
+      "estimated_volume": 52,
+      "representative_titles": [
+        {
+          "title": "Occupational Therapist",
+          "count": 14
+        },
+        {
+          "title": "Contracted In-Home Occupational Therapist",
+          "count": 12
+        },
+        {
+          "title": "Pediatric Occupational Therapist",
+          "count": 8
+        },
+        {
+          "title": "Traveling Occupational Therapist",
+          "count": 8
+        },
+        {
+          "title": "Regional Traveling Occupational Therapist",
+          "count": 2
+        },
+        {
+          "title": "Occupational Therapist I - PRN - AAMC",
+          "count": 2
+        },
+        {
+          "title": "Full Time Occupational Therapist",
+          "count": 1
+        },
+        {
+          "title": "In Center, Full Time Occupational Therapist",
+          "count": 1
+        },
+        {
+          "title": "Part-Time Occupational Therapist",
+          "count": 1
+        },
+        {
+          "title": "Pediatric Occupational Therapist - FT",
+          "count": 1
+        },
+        {
+          "title": "Occupational Therapist - Contract - 1099",
+          "count": 1
+        },
+        {
+          "title": "Occupational Therapist (Part-Time)",
+          "count": 1
+        }
+      ],
+      "suggested_action": "add_new_normalized_title",
+      "target_label": "occupational_therapist",
+      "target_family": "healthcare_clinical",
+      "overmatch_risk": "low",
+      "roi": "medium",
+      "support_from_esco": "weak",
+      "support_from_onet": "weak",
+      "combined_support": "weak",
+      "lexical_pattern": "\\boccupational therapist\\b",
+      "priority_score": 23.66
+    },
+    {
+      "cluster_name": "business_analyst_cluster",
+      "estimated_volume": 195,
+      "representative_titles": [
+        {
+          "title": "Business Analyst",
+          "count": 20
+        },
+        {
+          "title": "Senior Business Analyst",
+          "count": 12
+        },
+        {
+          "title": "Technical Business Analyst",
+          "count": 4
+        },
+        {
+          "title": "Business Analyst - Retail Energy",
+          "count": 3
+        },
+        {
+          "title": "ServiceNow Business Analyst",
+          "count": 3
+        },
+        {
+          "title": "Senior Business Analyst, Workforce Strategy",
+          "count": 3
+        },
+        {
+          "title": "Business Analyst (Starlink Growth)",
+          "count": 3
+        },
+        {
+          "title": "Sr. Business Analyst (Starlink Growth)",
+          "count": 3
+        },
+        {
+          "title": "Senior Business Analyst (SAP)",
+          "count": 2
+        },
+        {
+          "title": "Senior Business Analyst (Retail Finance)",
+          "count": 2
+        },
+        {
+          "title": "Sr. Business Analyst - Finance Support",
+          "count": 2
+        },
+        {
+          "title": "IT Business Analyst",
+          "count": 2
+        }
+      ],
+      "suggested_action": "keep_other_for_now",
+      "target_label": "",
+      "target_family": "",
+      "overmatch_risk": "high",
+      "roi": "low",
+      "support_from_esco": "medium",
+      "support_from_onet": "medium",
+      "combined_support": "medium",
+      "lexical_pattern": "\\bbusiness analyst\\b",
+      "priority_score": 23.2
+    },
+    {
+      "cluster_name": "devsecops_engineer_cluster",
+      "estimated_volume": 37,
+      "representative_titles": [
+        {
+          "title": "DevSecOps Engineer",
+          "count": 14
+        },
+        {
+          "title": "Senior DevSecOps Engineer",
+          "count": 3
+        },
+        {
+          "title": "Sr. DevSecOps Engineer- Reliability & Security (Remote from Bulgaria)",
+          "count": 1
+        },
+        {
+          "title": "Chief DevSecOps Engineer",
+          "count": 1
+        },
+        {
+          "title": "Sr. DevSecOps Engineer",
+          "count": 1
+        },
+        {
+          "title": "DevSecOps Engineer (Software Engineering Focus)",
+          "count": 1
+        },
+        {
+          "title": "Staff DevSecOps Engineer",
+          "count": 1
+        },
+        {
+          "title": "DevSecOps Engineer III",
+          "count": 1
+        },
+        {
+          "title": "DevSecOps Engineer II",
+          "count": 1
+        },
+        {
+          "title": "DevSecOps Engineer (6297)",
+          "count": 1
+        },
+        {
+          "title": "DevSecOps Engineer (6406)",
+          "count": 1
+        },
+        {
+          "title": "Sr. DevSecOps Engineer I (6394)",
+          "count": 1
+        }
+      ],
+      "suggested_action": "map_to_existing",
+      "target_label": "devops_engineer",
+      "target_family": "devops",
+      "overmatch_risk": "low",
+      "roi": "medium",
+      "support_from_esco": "medium",
+      "support_from_onet": "weak",
+      "combined_support": "medium",
+      "lexical_pattern": "\\bdevsecops engineer\\b",
+      "priority_score": 22.01
+    },
+    {
+      "cluster_name": "chief_of_staff_cluster",
+      "estimated_volume": 77,
+      "representative_titles": [
+        {
+          "title": "Chief of Staff",
+          "count": 14
+        },
+        {
+          "title": "Chief of Staff to the Managing Director of AI",
+          "count": 10
+        },
+        {
+          "title": "Chief of Staff to the Chief Customer Officer",
+          "count": 4
+        },
+        {
+          "title": "Chief of Staff, Tactical Recon & Strike",
+          "count": 3
+        },
+        {
+          "title": "Chief of Staff to the CEO",
+          "count": 2
+        },
+        {
+          "title": "Chief of Staff to the President",
+          "count": 2
+        },
+        {
+          "title": "Chief of Staff to the CRO",
+          "count": 1
+        },
+        {
+          "title": "Chief of Staff to the Managing Director Germany (x - f - m)",
+          "count": 1
+        },
+        {
+          "title": "Chief of Staff - R&D",
+          "count": 1
+        },
+        {
+          "title": "Chief of Staff, Air Dominance & Strike",
+          "count": 1
+        },
+        {
+          "title": "Chief of Staff, Design",
+          "count": 1
+        },
+        {
+          "title": "Chief of Staff, Tactical Recon and Strike (Skillbridge)",
+          "count": 1
+        }
+      ],
+      "suggested_action": "add_new_normalized_title",
+      "target_label": "chief_of_staff",
+      "target_family": "operations",
+      "overmatch_risk": "medium",
+      "roi": "medium",
+      "support_from_esco": "none",
+      "support_from_onet": "none",
+      "combined_support": "none",
+      "lexical_pattern": "\\bchief of staff\\b",
+      "priority_score": 20.21
+    },
+    {
+      "cluster_name": "data_architect_cluster",
+      "estimated_volume": 36,
+      "representative_titles": [
+        {
+          "title": "Data Architect",
+          "count": 12
+        },
+        {
+          "title": "Senior Data Architect",
+          "count": 7
+        },
+        {
+          "title": "Senior Data Architect - Wealth & Asset Management.",
+          "count": 2
+        },
+        {
+          "title": "Staff Data Architect",
+          "count": 2
+        },
+        {
+          "title": "Director, Data Architect",
+          "count": 2
+        },
+        {
+          "title": "GCP Data Architect",
+          "count": 1
+        },
+        {
+          "title": "Senior Data Architect (She - He - They)",
+          "count": 1
+        },
+        {
+          "title": "Cleared Data Architect",
+          "count": 1
+        },
+        {
+          "title": "Principal Data Architect",
+          "count": 1
+        },
+        {
+          "title": "Clinical Informatics Data Architect",
+          "count": 1
+        },
+        {
+          "title": "Data Architect (Remote)",
+          "count": 1
+        },
+        {
+          "title": "Senior Data Architect (Pre-Sales)",
+          "count": 1
+        }
+      ],
+      "suggested_action": "map_to_existing",
+      "target_label": "solutions_architect",
+      "target_family": "architecture",
+      "overmatch_risk": "medium",
+      "roi": "medium",
+      "support_from_esco": "medium",
+      "support_from_onet": "medium",
+      "combined_support": "medium",
+      "lexical_pattern": "\\bdata architect\\b",
+      "priority_score": 16.06
+    },
+    {
+      "cluster_name": "hr_generalist_cluster",
+      "estimated_volume": 38,
+      "representative_titles": [
+        {
+          "title": "HR Generalist",
+          "count": 13
+        },
+        {
+          "title": "Human Resources Generalist",
+          "count": 5
+        },
+        {
+          "title": "Senior HR Generalist",
+          "count": 3
+        },
+        {
+          "title": "Graduate HR Generalist - AMER",
+          "count": 1
+        },
+        {
+          "title": "Graduate HR Generalist - APAC",
+          "count": 1
+        },
+        {
+          "title": "Lead HR Generalist - Americas",
+          "count": 1
+        },
+        {
+          "title": "Senior HR Generalist - EMEA",
+          "count": 1
+        },
+        {
+          "title": "People Operations - HR Generalist",
+          "count": 1
+        },
+        {
+          "title": "HR Generalist Iberia (Temp)",
+          "count": 1
+        },
+        {
+          "title": "Sr. HR Generalist",
+          "count": 1
+        },
+        {
+          "title": "HR Generalist - 18-week Fix Term Contract",
+          "count": 1
+        },
+        {
+          "title": "People Operations Partner - HR Generalist",
+          "count": 1
+        }
+      ],
+      "suggested_action": "add_new_normalized_title",
+      "target_label": "hr_generalist",
+      "target_family": "people_operations",
+      "overmatch_risk": "low",
+      "roi": "medium",
+      "support_from_esco": "none",
+      "support_from_onet": "none",
+      "combined_support": "none",
+      "lexical_pattern": "\\bhr generalist\\b|\\bhuman resources generalist\\b",
+      "priority_score": 13.3
+    },
+    {
+      "cluster_name": "client_success_manager_cluster",
+      "estimated_volume": 36,
+      "representative_titles": [
+        {
+          "title": "Client Success Manager",
+          "count": 13
+        },
+        {
+          "title": "Senior Client Success Manager - Strategic Accounts",
+          "count": 4
+        },
+        {
+          "title": "Senior Client Success Manager",
+          "count": 2
+        },
+        {
+          "title": "Enterprise Client Success Manager (Chicago)",
+          "count": 1
+        },
+        {
+          "title": "Enterprise Client Success Manager (New York)",
+          "count": 1
+        },
+        {
+          "title": "Senior Client Success Manager- Activation (P3225)",
+          "count": 1
+        },
+        {
+          "title": "Senior Client Success Manager- Activation (P4547)",
+          "count": 1
+        },
+        {
+          "title": "Sr. Client Success Manager",
+          "count": 1
+        },
+        {
+          "title": "Sr. Client Success Manager - Enterprise",
+          "count": 1
+        },
+        {
+          "title": "Client Success Manager, Array+",
+          "count": 1
+        },
+        {
+          "title": "Client Success Manager - Payer - Remote",
+          "count": 1
+        },
+        {
+          "title": "Client Success Manager, Central",
+          "count": 1
+        }
+      ],
+      "suggested_action": "map_to_existing",
+      "target_label": "customer_success_manager",
+      "target_family": "customer_success",
+      "overmatch_risk": "medium",
+      "roi": "medium",
+      "support_from_esco": "weak",
+      "support_from_onet": "weak",
+      "combined_support": "weak",
+      "lexical_pattern": "\\bclient success manager\\b",
+      "priority_score": 12.29
+    },
+    {
+      "cluster_name": "respiratory_therapist_core",
+      "estimated_volume": 20,
+      "representative_titles": [
+        {
+          "title": "Respiratory Therapist - Registered",
+          "count": 13
+        },
+        {
+          "title": "Respiratory Therapist - Registered - Float Pool",
+          "count": 3
+        },
+        {
+          "title": "Respiratory Therapist - Registered FT, M-F 7p-7:30a rotating weekend",
+          "count": 2
+        },
+        {
+          "title": "Respiratory Therapist - Registered Full-time Day 7a-7:30p, rotating weekends",
+          "count": 1
+        },
+        {
+          "title": "Respiratory Therapist (Therapy Adherence)",
+          "count": 1
+        }
+      ],
+      "suggested_action": "add_new_normalized_title",
+      "target_label": "respiratory_therapist",
+      "target_family": "healthcare_clinical",
+      "overmatch_risk": "low",
+      "roi": "medium",
+      "support_from_esco": "none",
+      "support_from_onet": "weak",
+      "combined_support": "weak",
+      "lexical_pattern": "\\brespiratory therapist\\b",
+      "priority_score": 9.1
+    },
+    {
+      "cluster_name": "implementation_engineer_cluster",
+      "estimated_volume": 31,
+      "representative_titles": [
+        {
+          "title": "Implementation Engineer",
+          "count": 13
+        },
+        {
+          "title": "Senior Implementation Engineer",
+          "count": 5
+        },
+        {
+          "title": "Sr. Technical Implementation Engineer, Prepared by Axon",
+          "count": 5
+        },
+        {
+          "title": "Identity and Access Management Implementation Engineer",
+          "count": 1
+        },
+        {
+          "title": "Identity Governance and Administration (IGA) Implementation Engineer",
+          "count": 1
+        },
+        {
+          "title": "Solutions - Implementation Engineer - FED",
+          "count": 1
+        },
+        {
+          "title": "Lead Network Implementation Engineer (Remote)",
+          "count": 1
+        },
+        {
+          "title": "Senior Implementation Engineer I",
+          "count": 1
+        },
+        {
+          "title": "Senior Implementation Engineer, CX",
+          "count": 1
+        },
+        {
+          "title": "Brazil Implementation Engineer, Digital Diagnostics",
+          "count": 1
+        },
+        {
+          "title": "Implementation Engineer, Digital Diagnostics (DDx), Europe",
+          "count": 1
+        }
+      ],
+      "suggested_action": "keep_other_for_now",
+      "target_label": "",
+      "target_family": "",
+      "overmatch_risk": "high",
+      "roi": "medium",
+      "support_from_esco": "none",
+      "support_from_onet": "weak",
+      "combined_support": "weak",
+      "lexical_pattern": "\\bimplementation engineer\\b",
+      "priority_score": 4.94
+    },
+    {
+      "cluster_name": "client_partner_cluster",
+      "estimated_volume": 70,
+      "representative_titles": [
+        {
+          "title": "Client Partner",
+          "count": 13
+        },
+        {
+          "title": "Senior Director - Director, Client Partner",
+          "count": 5
+        },
+        {
+          "title": "Senior Client Partner, Large Customer Sales (Tech)",
+          "count": 4
+        },
+        {
+          "title": "Senior Client Partner, App Dev Enterprise",
+          "count": 2
+        },
+        {
+          "title": "Senior Client Partner, Large Customer Sales (Pharma)",
+          "count": 2
+        },
+        {
+          "title": "Senior Client Partner",
+          "count": 2
+        },
+        {
+          "title": "Client Partner - Ecommerce & Digital Native",
+          "count": 1
+        },
+        {
+          "title": "Acquisition Client Partner, Mid-Market (Southern Europe)",
+          "count": 1
+        },
+        {
+          "title": "Client Partner, Acquisitions DACH",
+          "count": 1
+        },
+        {
+          "title": "Client Partner, Mid-Market (Shopping Goods Acquisitions)",
+          "count": 1
+        },
+        {
+          "title": "Senior Client Partner, Large Customer Sales (Canada)",
+          "count": 1
+        },
+        {
+          "title": "Senior Client Partner, Large Customer Sales (Media & Entertainment)",
+          "count": 1
+        }
+      ],
+      "suggested_action": "keep_other_for_now",
+      "target_label": "",
+      "target_family": "",
+      "overmatch_risk": "high",
+      "roi": "low",
+      "support_from_esco": "none",
+      "support_from_onet": "none",
+      "combined_support": "none",
+      "lexical_pattern": "\\bclient partner\\b",
+      "priority_score": 4.9
+    },
+    {
+      "cluster_name": "producer_naked_cluster",
+      "estimated_volume": 28,
+      "representative_titles": [
+        {
+          "title": "Producer",
+          "count": 27
+        },
+        {
+          "title": "PRODUCER",
+          "count": 1
+        }
+      ],
+      "suggested_action": "keep_other_for_now",
+      "target_label": "",
+      "target_family": "",
+      "overmatch_risk": "high",
+      "roi": "low",
+      "support_from_esco": "strong",
+      "support_from_onet": "strong",
+      "combined_support": "strong",
+      "lexical_pattern": "^producer$",
+      "priority_score": 3.92
+    },
+    {
+      "cluster_name": "procurement_manager_cluster",
+      "estimated_volume": 29,
+      "representative_titles": [
+        {
+          "title": "Procurement Manager",
+          "count": 13
+        },
+        {
+          "title": "Procurement Manager (Data Centers)",
+          "count": 2
+        },
+        {
+          "title": "Procurement Manager Operations",
+          "count": 2
+        },
+        {
+          "title": "Junior Procurement Manager",
+          "count": 1
+        },
+        {
+          "title": "Procurement Manager, Analytics",
+          "count": 1
+        },
+        {
+          "title": "Senior Procurement Manager",
+          "count": 1
+        },
+        {
+          "title": "Sr. Procurement Manager - Temporary",
+          "count": 1
+        },
+        {
+          "title": "OFCI Equipment Procurement Manager",
+          "count": 1
+        },
+        {
+          "title": "Strategic Sourcing & Procurement Manager",
+          "count": 1
+        },
+        {
+          "title": "Global Procurement Manager",
+          "count": 1
+        },
+        {
+          "title": "Lead - Principal Procurement Manager",
+          "count": 1
+        },
+        {
+          "title": "Data Center and Telecom Procurement Manager",
+          "count": 1
+        }
+      ],
+      "suggested_action": "keep_other_for_now",
+      "target_label": "",
+      "target_family": "",
+      "overmatch_risk": "high",
+      "roi": "low",
+      "support_from_esco": "weak",
+      "support_from_onet": "medium",
+      "combined_support": "medium",
+      "lexical_pattern": "\\bprocurement manager\\b",
+      "priority_score": 3.45
+    },
+    {
+      "cluster_name": "office_manager_cluster",
+      "estimated_volume": 24,
+      "representative_titles": [
+        {
+          "title": "Office Manager",
+          "count": 13
+        },
+        {
+          "title": "Office Manager (Tel Aviv, Israel)",
+          "count": 1
+        },
+        {
+          "title": "Operations - Office Manager",
+          "count": 1
+        },
+        {
+          "title": "Office Manager - ADESA",
+          "count": 1
+        },
+        {
+          "title": "Office Manager (Front Desk & Operations)",
+          "count": 1
+        },
+        {
+          "title": "Operations and Office Manager at Rutgers Hillel",
+          "count": 1
+        },
+        {
+          "title": "Office Manager Lead (m - f - x)",
+          "count": 1
+        },
+        {
+          "title": "Office Manager & HR Admin",
+          "count": 1
+        },
+        {
+          "title": "HR Admin & Office Manager",
+          "count": 1
+        },
+        {
+          "title": "Office Manager, Workplace Experience",
+          "count": 1
+        },
+        {
+          "title": "Office Manager (Contract)",
+          "count": 1
+        },
+        {
+          "title": "Office Manager (26-27)",
+          "count": 1
+        }
+      ],
+      "suggested_action": "keep_other_for_now",
+      "target_label": "",
+      "target_family": "",
+      "overmatch_risk": "high",
+      "roi": "low",
+      "support_from_esco": "medium",
+      "support_from_onet": "weak",
+      "combined_support": "medium",
+      "lexical_pattern": "\\boffice manager\\b",
+      "priority_score": 2.86
+    },
+    {
+      "cluster_name": "onboarding_specialist_cluster",
+      "estimated_volume": 31,
+      "representative_titles": [
+        {
+          "title": "Onboarding Specialist",
+          "count": 13
+        },
+        {
+          "title": "SaaS Onboarding Specialist",
+          "count": 2
+        },
+        {
+          "title": "Customer Onboarding Specialist",
+          "count": 2
+        },
+        {
+          "title": "Counterparty Onboarding Specialist",
+          "count": 1
+        },
+        {
+          "title": "Data Onboarding Specialist",
+          "count": 1
+        },
+        {
+          "title": "Customer Onboarding Specialist - French Market",
+          "count": 1
+        },
+        {
+          "title": "Brandwatch, Sr Onboarding Specialist, Melbourne",
+          "count": 1
+        },
+        {
+          "title": "Technical Onboarding Specialist [Contract]",
+          "count": 1
+        },
+        {
+          "title": "Client Onboarding Specialist",
+          "count": 1
+        },
+        {
+          "title": "Onboarding Specialist III",
+          "count": 1
+        },
+        {
+          "title": "AI Onboarding Specialist",
+          "count": 1
+        },
+        {
+          "title": "AI Onboarding Specialist - Automotive",
+          "count": 1
+        }
+      ],
+      "suggested_action": "keep_other_for_now",
+      "target_label": "",
+      "target_family": "",
+      "overmatch_risk": "high",
+      "roi": "low",
+      "support_from_esco": "weak",
+      "support_from_onet": "weak",
+      "combined_support": "weak",
+      "lexical_pattern": "\\bonboarding specialist\\b",
+      "priority_score": 2.82
+    }
+  ],
+  "top_15": [
+    {
+      "cluster_name": "support_engineer_it_core",
+      "estimated_volume": 187,
+      "representative_titles": [
+        {
+          "title": "Support Engineer",
+          "count": 11
+        },
+        {
+          "title": "Senior Support Engineer",
+          "count": 9
+        },
+        {
+          "title": "Customer Support Engineer",
+          "count": 7
+        },
+        {
+          "title": "Production Support Engineer",
+          "count": 5
+        },
+        {
+          "title": "Senior Hardware Support Engineer",
+          "count": 5
+        },
+        {
+          "title": "Application Support Engineer",
+          "count": 4
+        },
+        {
+          "title": "L3 Support Engineer",
+          "count": 4
+        },
+        {
+          "title": "Cloud Support Engineer",
+          "count": 3
+        },
+        {
+          "title": "Product Support Engineer",
+          "count": 3
+        },
+        {
+          "title": "Technical Customer Support Engineer - EMEA",
+          "count": 3
+        },
+        {
+          "title": "Support Engineer (Tier 1)",
+          "count": 3
+        },
+        {
+          "title": "Senior Software Support Engineer",
+          "count": 2
+        }
+      ],
+      "suggested_action": "map_to_existing",
+      "target_label": "it_support_specialist",
+      "target_family": "it_operations",
+      "overmatch_risk": "medium",
+      "roi": "high",
+      "support_from_esco": "medium",
+      "support_from_onet": "strong",
+      "combined_support": "strong",
+      "lexical_pattern": "\\b(?:support engineer|application support engineer|cloud support engineer|software support engineer|systems support engineer|production support engineer|infrastructure support engineer|enterprise support engineer|database support engineer|platform support engineer|data center support engineer|tech support engineer|l2 support engineer|l3 support engineer|tier\\s*[123]\\s*support engineer)\\b",
+      "priority_score": 140.25
+    },
+    {
+      "cluster_name": "paralegal_specialty_cluster",
+      "estimated_volume": 49,
+      "representative_titles": [
+        {
+          "title": "Corporate Paralegal",
+          "count": 9
+        },
+        {
+          "title": "Paralegal",
+          "count": 6
+        },
+        {
+          "title": "Litigation Paralegal",
+          "count": 6
+        },
+        {
+          "title": "Paralegal II, Corporate",
+          "count": 6
+        },
+        {
+          "title": "Senior Corporate Paralegal",
+          "count": 4
+        },
+        {
+          "title": "Paralegal - Litigation",
+          "count": 1
+        },
+        {
+          "title": "Paralegal, Immigrants' Rights Project",
+          "count": 1
+        },
+        {
+          "title": "Sr. Paralegal, Real Estate",
+          "count": 1
+        },
+        {
+          "title": "Commercial Paralegal",
+          "count": 1
+        },
+        {
+          "title": "Corporate Paralegal Chicago",
+          "count": 1
+        },
+        {
+          "title": "Trade Compliance Paralegal",
+          "count": 1
+        },
+        {
+          "title": "Senior Paralegal, CloudKitchens - London",
+          "count": 1
+        }
+      ],
+      "suggested_action": "add_new_normalized_title",
+      "target_label": "paralegal",
+      "target_family": "legal",
+      "overmatch_risk": "medium",
+      "roi": "medium",
+      "support_from_esco": "weak",
+      "support_from_onet": "strong",
+      "combined_support": "strong",
+      "lexical_pattern": "\\bparalegal\\b",
+      "priority_score": 25.72
+    },
+    {
+      "cluster_name": "occupational_therapist_core",
+      "estimated_volume": 52,
+      "representative_titles": [
+        {
+          "title": "Occupational Therapist",
+          "count": 14
+        },
+        {
+          "title": "Contracted In-Home Occupational Therapist",
+          "count": 12
+        },
+        {
+          "title": "Pediatric Occupational Therapist",
+          "count": 8
+        },
+        {
+          "title": "Traveling Occupational Therapist",
+          "count": 8
+        },
+        {
+          "title": "Regional Traveling Occupational Therapist",
+          "count": 2
+        },
+        {
+          "title": "Occupational Therapist I - PRN - AAMC",
+          "count": 2
+        },
+        {
+          "title": "Full Time Occupational Therapist",
+          "count": 1
+        },
+        {
+          "title": "In Center, Full Time Occupational Therapist",
+          "count": 1
+        },
+        {
+          "title": "Part-Time Occupational Therapist",
+          "count": 1
+        },
+        {
+          "title": "Pediatric Occupational Therapist - FT",
+          "count": 1
+        },
+        {
+          "title": "Occupational Therapist - Contract - 1099",
+          "count": 1
+        },
+        {
+          "title": "Occupational Therapist (Part-Time)",
+          "count": 1
+        }
+      ],
+      "suggested_action": "add_new_normalized_title",
+      "target_label": "occupational_therapist",
+      "target_family": "healthcare_clinical",
+      "overmatch_risk": "low",
+      "roi": "medium",
+      "support_from_esco": "weak",
+      "support_from_onet": "weak",
+      "combined_support": "weak",
+      "lexical_pattern": "\\boccupational therapist\\b",
+      "priority_score": 23.66
+    },
+    {
+      "cluster_name": "business_analyst_cluster",
+      "estimated_volume": 195,
+      "representative_titles": [
+        {
+          "title": "Business Analyst",
+          "count": 20
+        },
+        {
+          "title": "Senior Business Analyst",
+          "count": 12
+        },
+        {
+          "title": "Technical Business Analyst",
+          "count": 4
+        },
+        {
+          "title": "Business Analyst - Retail Energy",
+          "count": 3
+        },
+        {
+          "title": "ServiceNow Business Analyst",
+          "count": 3
+        },
+        {
+          "title": "Senior Business Analyst, Workforce Strategy",
+          "count": 3
+        },
+        {
+          "title": "Business Analyst (Starlink Growth)",
+          "count": 3
+        },
+        {
+          "title": "Sr. Business Analyst (Starlink Growth)",
+          "count": 3
+        },
+        {
+          "title": "Senior Business Analyst (SAP)",
+          "count": 2
+        },
+        {
+          "title": "Senior Business Analyst (Retail Finance)",
+          "count": 2
+        },
+        {
+          "title": "Sr. Business Analyst - Finance Support",
+          "count": 2
+        },
+        {
+          "title": "IT Business Analyst",
+          "count": 2
+        }
+      ],
+      "suggested_action": "keep_other_for_now",
+      "target_label": "",
+      "target_family": "",
+      "overmatch_risk": "high",
+      "roi": "low",
+      "support_from_esco": "medium",
+      "support_from_onet": "medium",
+      "combined_support": "medium",
+      "lexical_pattern": "\\bbusiness analyst\\b",
+      "priority_score": 23.2
+    },
+    {
+      "cluster_name": "devsecops_engineer_cluster",
+      "estimated_volume": 37,
+      "representative_titles": [
+        {
+          "title": "DevSecOps Engineer",
+          "count": 14
+        },
+        {
+          "title": "Senior DevSecOps Engineer",
+          "count": 3
+        },
+        {
+          "title": "Sr. DevSecOps Engineer- Reliability & Security (Remote from Bulgaria)",
+          "count": 1
+        },
+        {
+          "title": "Chief DevSecOps Engineer",
+          "count": 1
+        },
+        {
+          "title": "Sr. DevSecOps Engineer",
+          "count": 1
+        },
+        {
+          "title": "DevSecOps Engineer (Software Engineering Focus)",
+          "count": 1
+        },
+        {
+          "title": "Staff DevSecOps Engineer",
+          "count": 1
+        },
+        {
+          "title": "DevSecOps Engineer III",
+          "count": 1
+        },
+        {
+          "title": "DevSecOps Engineer II",
+          "count": 1
+        },
+        {
+          "title": "DevSecOps Engineer (6297)",
+          "count": 1
+        },
+        {
+          "title": "DevSecOps Engineer (6406)",
+          "count": 1
+        },
+        {
+          "title": "Sr. DevSecOps Engineer I (6394)",
+          "count": 1
+        }
+      ],
+      "suggested_action": "map_to_existing",
+      "target_label": "devops_engineer",
+      "target_family": "devops",
+      "overmatch_risk": "low",
+      "roi": "medium",
+      "support_from_esco": "medium",
+      "support_from_onet": "weak",
+      "combined_support": "medium",
+      "lexical_pattern": "\\bdevsecops engineer\\b",
+      "priority_score": 22.01
+    },
+    {
+      "cluster_name": "chief_of_staff_cluster",
+      "estimated_volume": 77,
+      "representative_titles": [
+        {
+          "title": "Chief of Staff",
+          "count": 14
+        },
+        {
+          "title": "Chief of Staff to the Managing Director of AI",
+          "count": 10
+        },
+        {
+          "title": "Chief of Staff to the Chief Customer Officer",
+          "count": 4
+        },
+        {
+          "title": "Chief of Staff, Tactical Recon & Strike",
+          "count": 3
+        },
+        {
+          "title": "Chief of Staff to the CEO",
+          "count": 2
+        },
+        {
+          "title": "Chief of Staff to the President",
+          "count": 2
+        },
+        {
+          "title": "Chief of Staff to the CRO",
+          "count": 1
+        },
+        {
+          "title": "Chief of Staff to the Managing Director Germany (x - f - m)",
+          "count": 1
+        },
+        {
+          "title": "Chief of Staff - R&D",
+          "count": 1
+        },
+        {
+          "title": "Chief of Staff, Air Dominance & Strike",
+          "count": 1
+        },
+        {
+          "title": "Chief of Staff, Design",
+          "count": 1
+        },
+        {
+          "title": "Chief of Staff, Tactical Recon and Strike (Skillbridge)",
+          "count": 1
+        }
+      ],
+      "suggested_action": "add_new_normalized_title",
+      "target_label": "chief_of_staff",
+      "target_family": "operations",
+      "overmatch_risk": "medium",
+      "roi": "medium",
+      "support_from_esco": "none",
+      "support_from_onet": "none",
+      "combined_support": "none",
+      "lexical_pattern": "\\bchief of staff\\b",
+      "priority_score": 20.21
+    },
+    {
+      "cluster_name": "data_architect_cluster",
+      "estimated_volume": 36,
+      "representative_titles": [
+        {
+          "title": "Data Architect",
+          "count": 12
+        },
+        {
+          "title": "Senior Data Architect",
+          "count": 7
+        },
+        {
+          "title": "Senior Data Architect - Wealth & Asset Management.",
+          "count": 2
+        },
+        {
+          "title": "Staff Data Architect",
+          "count": 2
+        },
+        {
+          "title": "Director, Data Architect",
+          "count": 2
+        },
+        {
+          "title": "GCP Data Architect",
+          "count": 1
+        },
+        {
+          "title": "Senior Data Architect (She - He - They)",
+          "count": 1
+        },
+        {
+          "title": "Cleared Data Architect",
+          "count": 1
+        },
+        {
+          "title": "Principal Data Architect",
+          "count": 1
+        },
+        {
+          "title": "Clinical Informatics Data Architect",
+          "count": 1
+        },
+        {
+          "title": "Data Architect (Remote)",
+          "count": 1
+        },
+        {
+          "title": "Senior Data Architect (Pre-Sales)",
+          "count": 1
+        }
+      ],
+      "suggested_action": "map_to_existing",
+      "target_label": "solutions_architect",
+      "target_family": "architecture",
+      "overmatch_risk": "medium",
+      "roi": "medium",
+      "support_from_esco": "medium",
+      "support_from_onet": "medium",
+      "combined_support": "medium",
+      "lexical_pattern": "\\bdata architect\\b",
+      "priority_score": 16.06
+    },
+    {
+      "cluster_name": "hr_generalist_cluster",
+      "estimated_volume": 38,
+      "representative_titles": [
+        {
+          "title": "HR Generalist",
+          "count": 13
+        },
+        {
+          "title": "Human Resources Generalist",
+          "count": 5
+        },
+        {
+          "title": "Senior HR Generalist",
+          "count": 3
+        },
+        {
+          "title": "Graduate HR Generalist - AMER",
+          "count": 1
+        },
+        {
+          "title": "Graduate HR Generalist - APAC",
+          "count": 1
+        },
+        {
+          "title": "Lead HR Generalist - Americas",
+          "count": 1
+        },
+        {
+          "title": "Senior HR Generalist - EMEA",
+          "count": 1
+        },
+        {
+          "title": "People Operations - HR Generalist",
+          "count": 1
+        },
+        {
+          "title": "HR Generalist Iberia (Temp)",
+          "count": 1
+        },
+        {
+          "title": "Sr. HR Generalist",
+          "count": 1
+        },
+        {
+          "title": "HR Generalist - 18-week Fix Term Contract",
+          "count": 1
+        },
+        {
+          "title": "People Operations Partner - HR Generalist",
+          "count": 1
+        }
+      ],
+      "suggested_action": "add_new_normalized_title",
+      "target_label": "hr_generalist",
+      "target_family": "people_operations",
+      "overmatch_risk": "low",
+      "roi": "medium",
+      "support_from_esco": "none",
+      "support_from_onet": "none",
+      "combined_support": "none",
+      "lexical_pattern": "\\bhr generalist\\b|\\bhuman resources generalist\\b",
+      "priority_score": 13.3
+    },
+    {
+      "cluster_name": "client_success_manager_cluster",
+      "estimated_volume": 36,
+      "representative_titles": [
+        {
+          "title": "Client Success Manager",
+          "count": 13
+        },
+        {
+          "title": "Senior Client Success Manager - Strategic Accounts",
+          "count": 4
+        },
+        {
+          "title": "Senior Client Success Manager",
+          "count": 2
+        },
+        {
+          "title": "Enterprise Client Success Manager (Chicago)",
+          "count": 1
+        },
+        {
+          "title": "Enterprise Client Success Manager (New York)",
+          "count": 1
+        },
+        {
+          "title": "Senior Client Success Manager- Activation (P3225)",
+          "count": 1
+        },
+        {
+          "title": "Senior Client Success Manager- Activation (P4547)",
+          "count": 1
+        },
+        {
+          "title": "Sr. Client Success Manager",
+          "count": 1
+        },
+        {
+          "title": "Sr. Client Success Manager - Enterprise",
+          "count": 1
+        },
+        {
+          "title": "Client Success Manager, Array+",
+          "count": 1
+        },
+        {
+          "title": "Client Success Manager - Payer - Remote",
+          "count": 1
+        },
+        {
+          "title": "Client Success Manager, Central",
+          "count": 1
+        }
+      ],
+      "suggested_action": "map_to_existing",
+      "target_label": "customer_success_manager",
+      "target_family": "customer_success",
+      "overmatch_risk": "medium",
+      "roi": "medium",
+      "support_from_esco": "weak",
+      "support_from_onet": "weak",
+      "combined_support": "weak",
+      "lexical_pattern": "\\bclient success manager\\b",
+      "priority_score": 12.29
+    },
+    {
+      "cluster_name": "respiratory_therapist_core",
+      "estimated_volume": 20,
+      "representative_titles": [
+        {
+          "title": "Respiratory Therapist - Registered",
+          "count": 13
+        },
+        {
+          "title": "Respiratory Therapist - Registered - Float Pool",
+          "count": 3
+        },
+        {
+          "title": "Respiratory Therapist - Registered FT, M-F 7p-7:30a rotating weekend",
+          "count": 2
+        },
+        {
+          "title": "Respiratory Therapist - Registered Full-time Day 7a-7:30p, rotating weekends",
+          "count": 1
+        },
+        {
+          "title": "Respiratory Therapist (Therapy Adherence)",
+          "count": 1
+        }
+      ],
+      "suggested_action": "add_new_normalized_title",
+      "target_label": "respiratory_therapist",
+      "target_family": "healthcare_clinical",
+      "overmatch_risk": "low",
+      "roi": "medium",
+      "support_from_esco": "none",
+      "support_from_onet": "weak",
+      "combined_support": "weak",
+      "lexical_pattern": "\\brespiratory therapist\\b",
+      "priority_score": 9.1
+    },
+    {
+      "cluster_name": "implementation_engineer_cluster",
+      "estimated_volume": 31,
+      "representative_titles": [
+        {
+          "title": "Implementation Engineer",
+          "count": 13
+        },
+        {
+          "title": "Senior Implementation Engineer",
+          "count": 5
+        },
+        {
+          "title": "Sr. Technical Implementation Engineer, Prepared by Axon",
+          "count": 5
+        },
+        {
+          "title": "Identity and Access Management Implementation Engineer",
+          "count": 1
+        },
+        {
+          "title": "Identity Governance and Administration (IGA) Implementation Engineer",
+          "count": 1
+        },
+        {
+          "title": "Solutions - Implementation Engineer - FED",
+          "count": 1
+        },
+        {
+          "title": "Lead Network Implementation Engineer (Remote)",
+          "count": 1
+        },
+        {
+          "title": "Senior Implementation Engineer I",
+          "count": 1
+        },
+        {
+          "title": "Senior Implementation Engineer, CX",
+          "count": 1
+        },
+        {
+          "title": "Brazil Implementation Engineer, Digital Diagnostics",
+          "count": 1
+        },
+        {
+          "title": "Implementation Engineer, Digital Diagnostics (DDx), Europe",
+          "count": 1
+        }
+      ],
+      "suggested_action": "keep_other_for_now",
+      "target_label": "",
+      "target_family": "",
+      "overmatch_risk": "high",
+      "roi": "medium",
+      "support_from_esco": "none",
+      "support_from_onet": "weak",
+      "combined_support": "weak",
+      "lexical_pattern": "\\bimplementation engineer\\b",
+      "priority_score": 4.94
+    },
+    {
+      "cluster_name": "client_partner_cluster",
+      "estimated_volume": 70,
+      "representative_titles": [
+        {
+          "title": "Client Partner",
+          "count": 13
+        },
+        {
+          "title": "Senior Director - Director, Client Partner",
+          "count": 5
+        },
+        {
+          "title": "Senior Client Partner, Large Customer Sales (Tech)",
+          "count": 4
+        },
+        {
+          "title": "Senior Client Partner, App Dev Enterprise",
+          "count": 2
+        },
+        {
+          "title": "Senior Client Partner, Large Customer Sales (Pharma)",
+          "count": 2
+        },
+        {
+          "title": "Senior Client Partner",
+          "count": 2
+        },
+        {
+          "title": "Client Partner - Ecommerce & Digital Native",
+          "count": 1
+        },
+        {
+          "title": "Acquisition Client Partner, Mid-Market (Southern Europe)",
+          "count": 1
+        },
+        {
+          "title": "Client Partner, Acquisitions DACH",
+          "count": 1
+        },
+        {
+          "title": "Client Partner, Mid-Market (Shopping Goods Acquisitions)",
+          "count": 1
+        },
+        {
+          "title": "Senior Client Partner, Large Customer Sales (Canada)",
+          "count": 1
+        },
+        {
+          "title": "Senior Client Partner, Large Customer Sales (Media & Entertainment)",
+          "count": 1
+        }
+      ],
+      "suggested_action": "keep_other_for_now",
+      "target_label": "",
+      "target_family": "",
+      "overmatch_risk": "high",
+      "roi": "low",
+      "support_from_esco": "none",
+      "support_from_onet": "none",
+      "combined_support": "none",
+      "lexical_pattern": "\\bclient partner\\b",
+      "priority_score": 4.9
+    },
+    {
+      "cluster_name": "producer_naked_cluster",
+      "estimated_volume": 28,
+      "representative_titles": [
+        {
+          "title": "Producer",
+          "count": 27
+        },
+        {
+          "title": "PRODUCER",
+          "count": 1
+        }
+      ],
+      "suggested_action": "keep_other_for_now",
+      "target_label": "",
+      "target_family": "",
+      "overmatch_risk": "high",
+      "roi": "low",
+      "support_from_esco": "strong",
+      "support_from_onet": "strong",
+      "combined_support": "strong",
+      "lexical_pattern": "^producer$",
+      "priority_score": 3.92
+    },
+    {
+      "cluster_name": "procurement_manager_cluster",
+      "estimated_volume": 29,
+      "representative_titles": [
+        {
+          "title": "Procurement Manager",
+          "count": 13
+        },
+        {
+          "title": "Procurement Manager (Data Centers)",
+          "count": 2
+        },
+        {
+          "title": "Procurement Manager Operations",
+          "count": 2
+        },
+        {
+          "title": "Junior Procurement Manager",
+          "count": 1
+        },
+        {
+          "title": "Procurement Manager, Analytics",
+          "count": 1
+        },
+        {
+          "title": "Senior Procurement Manager",
+          "count": 1
+        },
+        {
+          "title": "Sr. Procurement Manager - Temporary",
+          "count": 1
+        },
+        {
+          "title": "OFCI Equipment Procurement Manager",
+          "count": 1
+        },
+        {
+          "title": "Strategic Sourcing & Procurement Manager",
+          "count": 1
+        },
+        {
+          "title": "Global Procurement Manager",
+          "count": 1
+        },
+        {
+          "title": "Lead - Principal Procurement Manager",
+          "count": 1
+        },
+        {
+          "title": "Data Center and Telecom Procurement Manager",
+          "count": 1
+        }
+      ],
+      "suggested_action": "keep_other_for_now",
+      "target_label": "",
+      "target_family": "",
+      "overmatch_risk": "high",
+      "roi": "low",
+      "support_from_esco": "weak",
+      "support_from_onet": "medium",
+      "combined_support": "medium",
+      "lexical_pattern": "\\bprocurement manager\\b",
+      "priority_score": 3.45
+    },
+    {
+      "cluster_name": "office_manager_cluster",
+      "estimated_volume": 24,
+      "representative_titles": [
+        {
+          "title": "Office Manager",
+          "count": 13
+        },
+        {
+          "title": "Office Manager (Tel Aviv, Israel)",
+          "count": 1
+        },
+        {
+          "title": "Operations - Office Manager",
+          "count": 1
+        },
+        {
+          "title": "Office Manager - ADESA",
+          "count": 1
+        },
+        {
+          "title": "Office Manager (Front Desk & Operations)",
+          "count": 1
+        },
+        {
+          "title": "Operations and Office Manager at Rutgers Hillel",
+          "count": 1
+        },
+        {
+          "title": "Office Manager Lead (m - f - x)",
+          "count": 1
+        },
+        {
+          "title": "Office Manager & HR Admin",
+          "count": 1
+        },
+        {
+          "title": "HR Admin & Office Manager",
+          "count": 1
+        },
+        {
+          "title": "Office Manager, Workplace Experience",
+          "count": 1
+        },
+        {
+          "title": "Office Manager (Contract)",
+          "count": 1
+        },
+        {
+          "title": "Office Manager (26-27)",
+          "count": 1
+        }
+      ],
+      "suggested_action": "keep_other_for_now",
+      "target_label": "",
+      "target_family": "",
+      "overmatch_risk": "high",
+      "roi": "low",
+      "support_from_esco": "medium",
+      "support_from_onet": "weak",
+      "combined_support": "medium",
+      "lexical_pattern": "\\boffice manager\\b",
+      "priority_score": 2.86
+    }
+  ],
+  "selected_for_shadow_batch": [
+    {
+      "cluster_name": "support_engineer_it_core",
+      "estimated_volume": 187,
+      "representative_titles": [
+        {
+          "title": "Support Engineer",
+          "count": 11
+        },
+        {
+          "title": "Senior Support Engineer",
+          "count": 9
+        },
+        {
+          "title": "Customer Support Engineer",
+          "count": 7
+        },
+        {
+          "title": "Production Support Engineer",
+          "count": 5
+        },
+        {
+          "title": "Senior Hardware Support Engineer",
+          "count": 5
+        },
+        {
+          "title": "Application Support Engineer",
+          "count": 4
+        },
+        {
+          "title": "L3 Support Engineer",
+          "count": 4
+        },
+        {
+          "title": "Cloud Support Engineer",
+          "count": 3
+        },
+        {
+          "title": "Product Support Engineer",
+          "count": 3
+        },
+        {
+          "title": "Technical Customer Support Engineer - EMEA",
+          "count": 3
+        },
+        {
+          "title": "Support Engineer (Tier 1)",
+          "count": 3
+        },
+        {
+          "title": "Senior Software Support Engineer",
+          "count": 2
+        }
+      ],
+      "suggested_action": "map_to_existing",
+      "target_label": "it_support_specialist",
+      "target_family": "it_operations",
+      "overmatch_risk": "medium",
+      "roi": "high",
+      "support_from_esco": "medium",
+      "support_from_onet": "strong",
+      "combined_support": "strong",
+      "lexical_pattern": "\\b(?:support engineer|application support engineer|cloud support engineer|software support engineer|systems support engineer|production support engineer|infrastructure support engineer|enterprise support engineer|database support engineer|platform support engineer|data center support engineer|tech support engineer|l2 support engineer|l3 support engineer|tier\\s*[123]\\s*support engineer)\\b",
+      "priority_score": 140.25
+    },
+    {
+      "cluster_name": "paralegal_specialty_cluster",
+      "estimated_volume": 49,
+      "representative_titles": [
+        {
+          "title": "Corporate Paralegal",
+          "count": 9
+        },
+        {
+          "title": "Paralegal",
+          "count": 6
+        },
+        {
+          "title": "Litigation Paralegal",
+          "count": 6
+        },
+        {
+          "title": "Paralegal II, Corporate",
+          "count": 6
+        },
+        {
+          "title": "Senior Corporate Paralegal",
+          "count": 4
+        },
+        {
+          "title": "Paralegal - Litigation",
+          "count": 1
+        },
+        {
+          "title": "Paralegal, Immigrants' Rights Project",
+          "count": 1
+        },
+        {
+          "title": "Sr. Paralegal, Real Estate",
+          "count": 1
+        },
+        {
+          "title": "Commercial Paralegal",
+          "count": 1
+        },
+        {
+          "title": "Corporate Paralegal Chicago",
+          "count": 1
+        },
+        {
+          "title": "Trade Compliance Paralegal",
+          "count": 1
+        },
+        {
+          "title": "Senior Paralegal, CloudKitchens - London",
+          "count": 1
+        }
+      ],
+      "suggested_action": "add_new_normalized_title",
+      "target_label": "paralegal",
+      "target_family": "legal",
+      "overmatch_risk": "medium",
+      "roi": "medium",
+      "support_from_esco": "weak",
+      "support_from_onet": "strong",
+      "combined_support": "strong",
+      "lexical_pattern": "\\bparalegal\\b",
+      "priority_score": 25.72
+    },
+    {
+      "cluster_name": "occupational_therapist_core",
+      "estimated_volume": 52,
+      "representative_titles": [
+        {
+          "title": "Occupational Therapist",
+          "count": 14
+        },
+        {
+          "title": "Contracted In-Home Occupational Therapist",
+          "count": 12
+        },
+        {
+          "title": "Pediatric Occupational Therapist",
+          "count": 8
+        },
+        {
+          "title": "Traveling Occupational Therapist",
+          "count": 8
+        },
+        {
+          "title": "Regional Traveling Occupational Therapist",
+          "count": 2
+        },
+        {
+          "title": "Occupational Therapist I - PRN - AAMC",
+          "count": 2
+        },
+        {
+          "title": "Full Time Occupational Therapist",
+          "count": 1
+        },
+        {
+          "title": "In Center, Full Time Occupational Therapist",
+          "count": 1
+        },
+        {
+          "title": "Part-Time Occupational Therapist",
+          "count": 1
+        },
+        {
+          "title": "Pediatric Occupational Therapist - FT",
+          "count": 1
+        },
+        {
+          "title": "Occupational Therapist - Contract - 1099",
+          "count": 1
+        },
+        {
+          "title": "Occupational Therapist (Part-Time)",
+          "count": 1
+        }
+      ],
+      "suggested_action": "add_new_normalized_title",
+      "target_label": "occupational_therapist",
+      "target_family": "healthcare_clinical",
+      "overmatch_risk": "low",
+      "roi": "medium",
+      "support_from_esco": "weak",
+      "support_from_onet": "weak",
+      "combined_support": "weak",
+      "lexical_pattern": "\\boccupational therapist\\b",
+      "priority_score": 23.66
+    }
+  ]
+}

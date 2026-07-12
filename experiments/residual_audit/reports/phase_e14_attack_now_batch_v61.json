@@ -1,0 +1,18 @@
+{
+  "phase": "E.14",
+  "batch": "v61_attack_now_batch",
+  "input_dataset": "data/jobs/jobs_titled_en_recovery_v60_attack_now_batch.jsonl",
+  "output_dataset": "data/jobs/jobs_titled_en_recovery_v61_attack_now_batch.jsonl",
+  "eval_report": "docs/title_recovery_pass_v61_attack_now_batch/title_eval_step13.md",
+  "baseline_other": 35620,
+  "output_other": 35581,
+  "delta_other": -39,
+  "tests": {
+    "command": "uv run pytest tests/pipelines/test_titles_stage_step12.py tests/pipelines/test_titles_eval_step13.py tests/test_cli_titles_step12.py",
+    "result": "76 passed"
+  },
+  "rule_deltas": {
+    "content_technical_writer": 21,
+    "finance_quantitative_researcher_core_v61": 18
+  }
+}

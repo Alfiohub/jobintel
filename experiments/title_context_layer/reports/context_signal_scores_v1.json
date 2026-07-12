@@ -1,0 +1,2104 @@
+{
+  "rows_scored": 83,
+  "rows": [
+    {
+      "url": "https://job-boards.greenhouse.io/correlationone/jobs/5821153004",
+      "title_clean": "Operations Analyst",
+      "company_name": "correlationone",
+      "departments_raw": [
+        {
+          "id": 4014847004,
+          "name": "Business Operations",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [
+        "excel"
+      ],
+      "seniority": "manager",
+      "employment_type": "full_time",
+      "family_scores": {
+        "operations": 5,
+        "data_analytics": 4,
+        "compliance_risk": 0
+      },
+      "top_context_family": "operations",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/correlationone/jobs/5821155004",
+      "title_clean": "Operations Analyst",
+      "company_name": "correlationone",
+      "departments_raw": [
+        {
+          "id": 4014847004,
+          "name": "Business Operations",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [
+        "excel"
+      ],
+      "seniority": "manager",
+      "employment_type": "full_time",
+      "family_scores": {
+        "operations": 5,
+        "data_analytics": 4,
+        "compliance_risk": 0
+      },
+      "top_context_family": "operations",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/correlationone/jobs/5823584004",
+      "title_clean": "Operations Analyst",
+      "company_name": "correlationone",
+      "departments_raw": [
+        {
+          "id": 4014847004,
+          "name": "Business Operations",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [
+        "excel"
+      ],
+      "seniority": "manager",
+      "employment_type": "full_time",
+      "family_scores": {
+        "operations": 5,
+        "data_analytics": 4,
+        "compliance_risk": 0
+      },
+      "top_context_family": "operations",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/correlationone/jobs/5823581004",
+      "title_clean": "Operations Analyst",
+      "company_name": "correlationone",
+      "departments_raw": [
+        {
+          "id": 4014847004,
+          "name": "Business Operations",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [
+        "excel"
+      ],
+      "seniority": "manager",
+      "employment_type": "full_time",
+      "family_scores": {
+        "operations": 5,
+        "data_analytics": 4,
+        "compliance_risk": 0
+      },
+      "top_context_family": "operations",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/2k/jobs/7564923003",
+      "title_clean": "Producer",
+      "company_name": "2k",
+      "departments_raw": [
+        {
+          "id": 4058315003,
+          "name": "Producing/Management - 2K Sports Lab",
+          "child_ids": [],
+          "parent_id": 4058308003
+        }
+      ],
+      "skills": [],
+      "seniority": "lead",
+      "employment_type": "full_time",
+      "family_scores": {
+        "content": 1,
+        "software_engineering": 5,
+        "operations": 3
+      },
+      "top_context_family": "software_engineering",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/adyen/jobs/7105787",
+      "title_clean": "Implementation Engineer",
+      "company_name": "adyen",
+      "departments_raw": [
+        {
+          "id": 88854,
+          "name": "Professional Services",
+          "child_ids": [],
+          "parent_id": 78315
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "software_engineering": 3,
+        "customer_success": 4,
+        "sales": 4
+      },
+      "top_context_family": "customer_success",
+      "top_context_score": 4,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/adyen/jobs/7270730",
+      "title_clean": "Implementation Engineer",
+      "company_name": "adyen",
+      "departments_raw": [
+        {
+          "id": 88854,
+          "name": "Professional Services",
+          "child_ids": [],
+          "parent_id": 78315
+        }
+      ],
+      "skills": [
+        "javascript"
+      ],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "software_engineering": 3,
+        "customer_success": 4,
+        "sales": 3
+      },
+      "top_context_family": "customer_success",
+      "top_context_score": 4,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/adyen/jobs/7641067",
+      "title_clean": "Implementation Engineer",
+      "company_name": "adyen",
+      "departments_raw": [
+        {
+          "id": 88854,
+          "name": "Professional Services",
+          "child_ids": [],
+          "parent_id": 78315
+        }
+      ],
+      "skills": [],
+      "seniority": "manager",
+      "employment_type": null,
+      "family_scores": {
+        "software_engineering": 2,
+        "customer_success": 4,
+        "sales": 3
+      },
+      "top_context_family": "customer_success",
+      "top_context_score": 4,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/adyen/jobs/7532705",
+      "title_clean": "Implementation Engineer",
+      "company_name": "adyen",
+      "departments_raw": [
+        {
+          "id": 88854,
+          "name": "Professional Services",
+          "child_ids": [],
+          "parent_id": 78315
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "software_engineering": 3,
+        "customer_success": 4,
+        "sales": 4
+      },
+      "top_context_family": "customer_success",
+      "top_context_score": 4,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/adyen/jobs/7562927",
+      "title_clean": "Implementation Engineer",
+      "company_name": "adyen",
+      "departments_raw": [
+        {
+          "id": 88854,
+          "name": "Professional Services",
+          "child_ids": [],
+          "parent_id": 78315
+        }
+      ],
+      "skills": [
+        "sql",
+        "java",
+        "javascript"
+      ],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "software_engineering": 3,
+        "customer_success": 4,
+        "sales": 3
+      },
+      "top_context_family": "customer_success",
+      "top_context_score": 4,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/adyen/jobs/7594290",
+      "title_clean": "Implementation Engineer",
+      "company_name": "adyen",
+      "departments_raw": [
+        {
+          "id": 88854,
+          "name": "Professional Services",
+          "child_ids": [],
+          "parent_id": 78315
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "software_engineering": 2,
+        "customer_success": 5,
+        "sales": 3
+      },
+      "top_context_family": "customer_success",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/adyen/jobs/7422228",
+      "title_clean": "Onboarding Specialist",
+      "company_name": "adyen",
+      "departments_raw": [
+        {
+          "id": 30437,
+          "name": "Merchant Operations",
+          "child_ids": [],
+          "parent_id": 78317
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "customer_success": 3,
+        "people_operations": 1,
+        "compliance_risk": 2
+      },
+      "top_context_family": "customer_success",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/twosixtechnologies/jobs/5829773004",
+      "title_clean": "Operations Analyst",
+      "company_name": "twosixtechnologies",
+      "departments_raw": [
+        {
+          "id": 4111868004,
+          "name": "DA IO - DoD",
+          "child_ids": [],
+          "parent_id": 4111862004
+        }
+      ],
+      "skills": [],
+      "seniority": "senior",
+      "employment_type": "contract",
+      "family_scores": {
+        "operations": 1,
+        "data_analytics": 0,
+        "compliance_risk": 0
+      },
+      "top_context_family": "operations",
+      "top_context_score": 1,
+      "context_confidence": "low"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/beyondtrust/jobs/7397198",
+      "title_clean": "Partner Manager",
+      "company_name": "beyondtrust",
+      "departments_raw": [
+        {
+          "id": 207080,
+          "name": "Sales ",
+          "child_ids": [],
+          "parent_id": 42159
+        }
+      ],
+      "skills": [
+        "salesforce"
+      ],
+      "seniority": "manager",
+      "employment_type": null,
+      "family_scores": {
+        "sales": 3,
+        "people_operations": 1,
+        "operations": 3
+      },
+      "top_context_family": "sales",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/billiontoone/jobs/4589731005",
+      "title_clean": "Designer",
+      "company_name": "billiontoone",
+      "departments_raw": [
+        {
+          "id": 4136592005,
+          "name": "Design",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": "senior",
+      "employment_type": "contract",
+      "family_scores": {
+        "design": 6,
+        "marketing": 5,
+        "product_management": 3
+      },
+      "top_context_family": "design",
+      "top_context_score": 6,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/blackduck/jobs/5076183008",
+      "title_clean": "Implementation Engineer",
+      "company_name": "blackduck",
+      "departments_raw": [
+        {
+          "id": 4048563008,
+          "name": "4140 - Customer Success (GQP)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [
+        "python",
+        "java"
+      ],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "software_engineering": 1,
+        "customer_success": 4,
+        "sales": 1
+      },
+      "top_context_family": "customer_success",
+      "top_context_score": 4,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://www.carvana.com/careers/apply?gh_jid=6595291",
+      "title_clean": "Operations Analyst",
+      "company_name": "carvana",
+      "departments_raw": [
+        {
+          "id": 13495,
+          "name": "Strategy and Analytics",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [
+        "python",
+        "sql",
+        "tableau"
+      ],
+      "seniority": "lead",
+      "employment_type": "full_time",
+      "family_scores": {
+        "operations": 1,
+        "data_analytics": 3,
+        "compliance_risk": 0
+      },
+      "top_context_family": "data_analytics",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://job-boards.eu.greenhouse.io/cision/jobs/4745539101",
+      "title_clean": "Onboarding Specialist",
+      "company_name": "cision",
+      "departments_raw": [
+        {
+          "id": 4034888101,
+          "name": "610 - CX Comms Cloud",
+          "child_ids": [],
+          "parent_id": 4034882101
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "customer_success": 5,
+        "people_operations": 2,
+        "compliance_risk": 0
+      },
+      "top_context_family": "customer_success",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/dept/jobs/7740135",
+      "title_clean": "Producer",
+      "company_name": "dept",
+      "departments_raw": [
+        {
+          "id": 149557,
+          "name": "Clients",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": "lead",
+      "employment_type": "contract",
+      "family_scores": {
+        "content": 3,
+        "software_engineering": 0,
+        "operations": 2
+      },
+      "top_context_family": "content",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://jobs.elastic.co/jobs?gh_jid=7343843&gh_jid=7343843",
+      "title_clean": "Partner Manager",
+      "company_name": "elastic",
+      "departments_raw": [
+        {
+          "id": 74360,
+          "name": "Partners - APJ",
+          "child_ids": [],
+          "parent_id": 29941
+        }
+      ],
+      "skills": [],
+      "seniority": "manager",
+      "employment_type": null,
+      "family_scores": {
+        "sales": 5,
+        "people_operations": 1,
+        "operations": 2
+      },
+      "top_context_family": "sales",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://www.esri.com/careers/5036435007?gh_jid=5036435007",
+      "title_clean": "Partner Manager",
+      "company_name": "esri",
+      "departments_raw": [
+        {
+          "id": 4014025007,
+          "name": "6526 - Partner Network",
+          "child_ids": [],
+          "parent_id": 4013879007
+        }
+      ],
+      "skills": [],
+      "seniority": "manager",
+      "employment_type": null,
+      "family_scores": {
+        "sales": 3,
+        "people_operations": 1,
+        "operations": 2
+      },
+      "top_context_family": "sales",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://www.esri.com/careers/5036466007?gh_jid=5036466007",
+      "title_clean": "Partner Manager",
+      "company_name": "esri",
+      "departments_raw": [
+        {
+          "id": 4014025007,
+          "name": "6526 - Partner Network",
+          "child_ids": [],
+          "parent_id": 4013879007
+        }
+      ],
+      "skills": [],
+      "seniority": "manager",
+      "employment_type": null,
+      "family_scores": {
+        "sales": 3,
+        "people_operations": 1,
+        "operations": 2
+      },
+      "top_context_family": "sales",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/eucalyptus/jobs/4651418005",
+      "title_clean": "Producer",
+      "company_name": "eucalyptus",
+      "departments_raw": [
+        {
+          "id": 4139459005,
+          "name": "Juniper UK",
+          "child_ids": [],
+          "parent_id": 4138901005
+        }
+      ],
+      "skills": [],
+      "seniority": "head",
+      "employment_type": null,
+      "family_scores": {
+        "content": 2,
+        "software_engineering": 0,
+        "operations": 1
+      },
+      "top_context_family": "content",
+      "top_context_score": 2,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/4722511101",
+      "title_clean": "Partner Manager",
+      "company_name": "feverup",
+      "departments_raw": [
+        {
+          "id": 4031434101,
+          "name": "North America Hub",
+          "child_ids": [],
+          "parent_id": 4011747101
+        }
+      ],
+      "skills": [],
+      "seniority": "manager",
+      "employment_type": "full_time",
+      "family_scores": {
+        "sales": 1,
+        "people_operations": 1,
+        "operations": 0
+      },
+      "top_context_family": "sales",
+      "top_context_score": 1,
+      "context_confidence": "low"
+    },
+    {
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/4578643101",
+      "title_clean": "Partner Manager",
+      "company_name": "feverup",
+      "departments_raw": [
+        {
+          "id": 4031434101,
+          "name": "North America Hub",
+          "child_ids": [],
+          "parent_id": 4011747101
+        }
+      ],
+      "skills": [],
+      "seniority": "manager",
+      "employment_type": "full_time",
+      "family_scores": {
+        "sales": 1,
+        "people_operations": 1,
+        "operations": 0
+      },
+      "top_context_family": "sales",
+      "top_context_score": 1,
+      "context_confidence": "low"
+    },
+    {
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/4778793101",
+      "title_clean": "Partner Manager",
+      "company_name": "feverup",
+      "departments_raw": [
+        {
+          "id": 4031431101,
+          "name": "Europe Hub",
+          "child_ids": [],
+          "parent_id": 4011747101
+        }
+      ],
+      "skills": [],
+      "seniority": "manager",
+      "employment_type": "full_time",
+      "family_scores": {
+        "sales": 1,
+        "people_operations": 1,
+        "operations": 0
+      },
+      "top_context_family": "sales",
+      "top_context_score": 1,
+      "context_confidence": "low"
+    },
+    {
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/4562402101",
+      "title_clean": "Partner Manager",
+      "company_name": "feverup",
+      "departments_raw": [
+        {
+          "id": 4011747101,
+          "name": "Partner Management",
+          "child_ids": [
+            4031434101,
+            4031431101,
+            4031432101,
+            4031199101,
+            4031430101
+          ],
+          "parent_id": 4011648101
+        }
+      ],
+      "skills": [],
+      "seniority": "manager",
+      "employment_type": "full_time",
+      "family_scores": {
+        "sales": 1,
+        "people_operations": 1,
+        "operations": 0
+      },
+      "top_context_family": "sales",
+      "top_context_score": 1,
+      "context_confidence": "low"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/focusfinancialpartners/jobs/5704625004",
+      "title_clean": "Onboarding Specialist",
+      "company_name": "focusfinancialpartners",
+      "departments_raw": [
+        {
+          "id": 4037547004,
+          "name": "Operations & Analytics",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "customer_success": 2,
+        "people_operations": 3,
+        "compliance_risk": 1
+      },
+      "top_context_family": "people_operations",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/glossgenius/jobs/7581091003",
+      "title_clean": "Onboarding Specialist",
+      "company_name": "glossgenius",
+      "departments_raw": [
+        {
+          "id": 4045746003,
+          "name": "Sales",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [
+        "salesforce",
+        "machine_learning"
+      ],
+      "seniority": "director",
+      "employment_type": null,
+      "family_scores": {
+        "customer_success": 4,
+        "people_operations": 3,
+        "compliance_risk": 1
+      },
+      "top_context_family": "customer_success",
+      "top_context_score": 4,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/gusto/jobs/7659617",
+      "title_clean": "Partner Manager",
+      "company_name": "gusto",
+      "departments_raw": [
+        {
+          "id": 1144,
+          "name": "Sales",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [
+        "tableau",
+        "salesforce"
+      ],
+      "seniority": "manager",
+      "employment_type": "contract",
+      "family_scores": {
+        "sales": 3,
+        "people_operations": 1,
+        "operations": 2
+      },
+      "top_context_family": "sales",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://www.harness.io/company/jobs/apply?gh_jid=5062241007&gh_jid=5062241007",
+      "title_clean": "Implementation Engineer",
+      "company_name": "harnessinc",
+      "departments_raw": [
+        {
+          "id": 4041706007,
+          "name": "Implementation Engineering",
+          "child_ids": [],
+          "parent_id": 4049677007
+        }
+      ],
+      "skills": [
+        "python",
+        "aws",
+        "gcp",
+        "azure",
+        "kubernetes"
+      ],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "software_engineering": 3,
+        "customer_success": 3,
+        "sales": 1
+      },
+      "top_context_family": "software_engineering",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://www.harness.io/company/jobs/apply?gh_jid=5044677007&gh_jid=5044677007",
+      "title_clean": "Implementation Engineer",
+      "company_name": "harnessinc",
+      "departments_raw": [
+        {
+          "id": 4041706007,
+          "name": "Implementation Engineering",
+          "child_ids": [],
+          "parent_id": 4049677007
+        }
+      ],
+      "skills": [
+        "python",
+        "aws",
+        "gcp",
+        "azure",
+        "kubernetes"
+      ],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "software_engineering": 3,
+        "customer_success": 3,
+        "sales": 1
+      },
+      "top_context_family": "software_engineering",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/hovercraft/jobs/4091424009",
+      "title_clean": "Designer",
+      "company_name": "hovercraft",
+      "departments_raw": [
+        {
+          "id": 4019965009,
+          "name": "Creative",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "design": 4,
+        "marketing": 1,
+        "product_management": 0
+      },
+      "top_context_family": "design",
+      "top_context_score": 4,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/landor/jobs/7676342",
+      "title_clean": "Designer",
+      "company_name": "landor",
+      "departments_raw": [
+        {
+          "id": 12243,
+          "name": "Creative",
+          "child_ids": [],
+          "parent_id": 52947
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "design": 4,
+        "marketing": 0,
+        "product_management": 1
+      },
+      "top_context_family": "design",
+      "top_context_score": 4,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/landor/jobs/7748831",
+      "title_clean": "Designer",
+      "company_name": "landor",
+      "departments_raw": [
+        {
+          "id": 12243,
+          "name": "Creative",
+          "child_ids": [],
+          "parent_id": 52947
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "design": 6,
+        "marketing": 0,
+        "product_management": 1
+      },
+      "top_context_family": "design",
+      "top_context_score": 6,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/landor/jobs/7735078",
+      "title_clean": "Designer",
+      "company_name": "landor",
+      "departments_raw": [
+        {
+          "id": 12243,
+          "name": "Creative",
+          "child_ids": [],
+          "parent_id": 52947
+        }
+      ],
+      "skills": [],
+      "seniority": "senior",
+      "employment_type": null,
+      "family_scores": {
+        "design": 3,
+        "marketing": 0,
+        "product_management": 1
+      },
+      "top_context_family": "design",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/landor/jobs/7629741",
+      "title_clean": "Designer",
+      "company_name": "landor",
+      "departments_raw": [
+        {
+          "id": 12243,
+          "name": "Creative",
+          "child_ids": [],
+          "parent_id": 52947
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "design": 4,
+        "marketing": 0,
+        "product_management": 1
+      },
+      "top_context_family": "design",
+      "top_context_score": 4,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://boards.eu.greenhouse.io/nice/jobs/4766381101?gh_jid=4766381101",
+      "title_clean": "Implementation Engineer",
+      "company_name": "nice",
+      "departments_raw": [
+        {
+          "id": 4012330101,
+          "name": "GCO - Customer Success & Services",
+          "child_ids": [],
+          "parent_id": 4012244101
+        }
+      ],
+      "skills": [
+        "javascript",
+        "salesforce"
+      ],
+      "seniority": "manager",
+      "employment_type": "contract",
+      "family_scores": {
+        "software_engineering": 2,
+        "customer_success": 3,
+        "sales": 1
+      },
+      "top_context_family": "customer_success",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/okx/jobs/7667377003",
+      "title_clean": "Operations Analyst",
+      "company_name": "okx",
+      "departments_raw": [
+        {
+          "id": 4070472003,
+          "name": "Strategic Markets",
+          "child_ids": [],
+          "parent_id": 4054870003
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "operations": 1,
+        "data_analytics": 2,
+        "compliance_risk": 0
+      },
+      "top_context_family": "data_analytics",
+      "top_context_score": 2,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/oliver/jobs/7413562",
+      "title_clean": "Designer",
+      "company_name": "oliver",
+      "departments_raw": [
+        {
+          "id": 27481,
+          "name": "Creative",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "design": 3,
+        "marketing": 3,
+        "product_management": 1
+      },
+      "top_context_family": "design",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/oliver/jobs/7457499",
+      "title_clean": "Designer",
+      "company_name": "oliver",
+      "departments_raw": [
+        {
+          "id": 27481,
+          "name": "Creative",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "design": 3,
+        "marketing": 3,
+        "product_management": 1
+      },
+      "top_context_family": "design",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/oliver/jobs/7641517",
+      "title_clean": "Designer",
+      "company_name": "oliver",
+      "departments_raw": [
+        {
+          "id": 27481,
+          "name": "Creative",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "design": 7,
+        "marketing": 0,
+        "product_management": 1
+      },
+      "top_context_family": "design",
+      "top_context_score": 7,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/rapidsos/jobs/5087717007",
+      "title_clean": "Implementation Engineer",
+      "company_name": "rapidsos",
+      "departments_raw": [
+        {
+          "id": 4011753007,
+          "name": "Implementation",
+          "child_ids": [],
+          "parent_id": 4040225007
+        }
+      ],
+      "skills": [
+        "python"
+      ],
+      "seniority": "manager",
+      "employment_type": "full_time",
+      "family_scores": {
+        "software_engineering": 2,
+        "customer_success": 4,
+        "sales": 2
+      },
+      "top_context_family": "customer_success",
+      "top_context_score": 4,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/rapp/jobs/7633636",
+      "title_clean": "Designer",
+      "company_name": "rapp",
+      "departments_raw": [
+        {
+          "id": 56421,
+          "name": "Creative - Design",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": "senior",
+      "employment_type": null,
+      "family_scores": {
+        "design": 5,
+        "marketing": 1,
+        "product_management": 0
+      },
+      "top_context_family": "design",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://www.rxvantage.com/company/careers/jobs?gh_jid=5832005004",
+      "title_clean": "Onboarding Specialist",
+      "company_name": "rxvantage",
+      "departments_raw": [
+        {
+          "id": 4015198004,
+          "name": "Practice Sales",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [
+        "salesforce"
+      ],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "customer_success": 4,
+        "people_operations": 3,
+        "compliance_risk": 0
+      },
+      "top_context_family": "customer_success",
+      "top_context_score": 4,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://www.rxvantage.com/company/careers/jobs?gh_jid=5832012004",
+      "title_clean": "Onboarding Specialist",
+      "company_name": "rxvantage",
+      "departments_raw": [
+        {
+          "id": 4015198004,
+          "name": "Practice Sales",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [
+        "salesforce"
+      ],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "customer_success": 4,
+        "people_operations": 3,
+        "compliance_risk": 0
+      },
+      "top_context_family": "customer_success",
+      "top_context_score": 4,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://www.rxvantage.com/company/careers/jobs?gh_jid=5832010004",
+      "title_clean": "Onboarding Specialist",
+      "company_name": "rxvantage",
+      "departments_raw": [
+        {
+          "id": 4015198004,
+          "name": "Practice Sales",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [
+        "salesforce"
+      ],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "customer_success": 4,
+        "people_operations": 3,
+        "compliance_risk": 0
+      },
+      "top_context_family": "customer_success",
+      "top_context_score": 4,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://www.rxvantage.com/company/careers/jobs?gh_jid=5832009004",
+      "title_clean": "Onboarding Specialist",
+      "company_name": "rxvantage",
+      "departments_raw": [
+        {
+          "id": 4015198004,
+          "name": "Practice Sales",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [
+        "salesforce"
+      ],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "customer_success": 4,
+        "people_operations": 3,
+        "compliance_risk": 0
+      },
+      "top_context_family": "customer_success",
+      "top_context_score": 4,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://www.rxvantage.com/company/careers/jobs?gh_jid=5830997004",
+      "title_clean": "Onboarding Specialist",
+      "company_name": "rxvantage",
+      "departments_raw": [
+        {
+          "id": 4015198004,
+          "name": "Practice Sales",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [
+        "salesforce"
+      ],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "customer_success": 4,
+        "people_operations": 3,
+        "compliance_risk": 0
+      },
+      "top_context_family": "customer_success",
+      "top_context_score": 4,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://www.rxvantage.com/company/careers/jobs?gh_jid=5832006004",
+      "title_clean": "Onboarding Specialist",
+      "company_name": "rxvantage",
+      "departments_raw": [
+        {
+          "id": 4015198004,
+          "name": "Practice Sales",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [
+        "salesforce"
+      ],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "customer_success": 4,
+        "people_operations": 3,
+        "compliance_risk": 0
+      },
+      "top_context_family": "customer_success",
+      "top_context_score": 4,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://www.rxvantage.com/company/careers/jobs?gh_jid=5832007004",
+      "title_clean": "Onboarding Specialist",
+      "company_name": "rxvantage",
+      "departments_raw": [
+        {
+          "id": 4015198004,
+          "name": "Practice Sales",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [
+        "salesforce"
+      ],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "customer_success": 4,
+        "people_operations": 3,
+        "compliance_risk": 0
+      },
+      "top_context_family": "customer_success",
+      "top_context_score": 4,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://www.rxvantage.com/company/careers/jobs?gh_jid=5832004004",
+      "title_clean": "Onboarding Specialist",
+      "company_name": "rxvantage",
+      "departments_raw": [
+        {
+          "id": 4015198004,
+          "name": "Practice Sales",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [
+        "salesforce"
+      ],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "customer_success": 4,
+        "people_operations": 3,
+        "compliance_risk": 0
+      },
+      "top_context_family": "customer_success",
+      "top_context_score": 4,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/tailscale/jobs/4663656005",
+      "title_clean": "Implementation Engineer",
+      "company_name": "tailscale",
+      "departments_raw": [
+        {
+          "id": 4134423005,
+          "name": "Customer Success",
+          "child_ids": [],
+          "parent_id": 4039044005
+        }
+      ],
+      "skills": [
+        "kubernetes"
+      ],
+      "seniority": "lead",
+      "employment_type": null,
+      "family_scores": {
+        "software_engineering": 4,
+        "customer_success": 3,
+        "sales": 1
+      },
+      "top_context_family": "software_engineering",
+      "top_context_score": 4,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/tailscale/jobs/4663655005",
+      "title_clean": "Implementation Engineer",
+      "company_name": "tailscale",
+      "departments_raw": [
+        {
+          "id": 4134423005,
+          "name": "Customer Success",
+          "child_ids": [],
+          "parent_id": 4039044005
+        }
+      ],
+      "skills": [
+        "kubernetes"
+      ],
+      "seniority": "lead",
+      "employment_type": null,
+      "family_scores": {
+        "software_engineering": 4,
+        "customer_success": 3,
+        "sales": 1
+      },
+      "top_context_family": "software_engineering",
+      "top_context_score": 4,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5077292007?gh_jid=5077292007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": "lead",
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 3,
+        "software_engineering": 1,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5076663007?gh_jid=5076663007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": "lead",
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 3,
+        "software_engineering": 1,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/4952294007?gh_jid=4952294007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 5,
+        "software_engineering": 0,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5073493007?gh_jid=5073493007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": "lead",
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 3,
+        "software_engineering": 1,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5041200007?gh_jid=5041200007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 5,
+        "software_engineering": 0,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5075152007?gh_jid=5075152007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 5,
+        "software_engineering": 0,
+        "operations": 1
+      },
+      "top_context_family": "content",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/4977245007?gh_jid=4977245007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": "lead",
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 3,
+        "software_engineering": 1,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5062888007?gh_jid=5062888007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": "lead",
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 3,
+        "software_engineering": 1,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/4793889007?gh_jid=4793889007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 5,
+        "software_engineering": 0,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5062803007?gh_jid=5062803007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": "lead",
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 3,
+        "software_engineering": 1,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/4992002007?gh_jid=4992002007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": "lead",
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 3,
+        "software_engineering": 1,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/4987595007?gh_jid=4987595007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": "lead",
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 3,
+        "software_engineering": 1,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5047024007?gh_jid=5047024007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 5,
+        "software_engineering": 0,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5063009007?gh_jid=5063009007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 5,
+        "software_engineering": 0,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/4987966007?gh_jid=4987966007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 5,
+        "software_engineering": 0,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5053811007?gh_jid=5053811007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 5,
+        "software_engineering": 0,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5063860007?gh_jid=5063860007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": "lead",
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 3,
+        "software_engineering": 1,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5024957007?gh_jid=5024957007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 5,
+        "software_engineering": 0,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5053867007?gh_jid=5053867007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": "staff",
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 3,
+        "software_engineering": 1,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/4804806007?gh_jid=4804806007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 5,
+        "software_engineering": 0,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5057009007?gh_jid=5057009007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 5,
+        "software_engineering": 0,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5042990007?gh_jid=5042990007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": "lead",
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 3,
+        "software_engineering": 1,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/5024291007?gh_jid=5024291007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 5,
+        "software_engineering": 0,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://boards.greenhouse.io/tegnainc/jobs/4807926007?gh_jid=4807926007",
+      "title_clean": "Producer",
+      "company_name": "tegnainc",
+      "departments_raw": [
+        {
+          "id": 4028357007,
+          "name": "Stations (News)",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": "part_time",
+      "family_scores": {
+        "content": 5,
+        "software_engineering": 0,
+        "operations": 0
+      },
+      "top_context_family": "content",
+      "top_context_score": 5,
+      "context_confidence": "high"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/abinbev/jobs/8446393002",
+      "title_clean": "Operations Analyst",
+      "company_name": "abinbev",
+      "departments_raw": [
+        {
+          "id": 4046931002,
+          "name": "BEES Marketplace",
+          "child_ids": [],
+          "parent_id": 4046902002
+        }
+      ],
+      "skills": [
+        "sql",
+        "excel"
+      ],
+      "seniority": null,
+      "employment_type": null,
+      "family_scores": {
+        "operations": 1,
+        "data_analytics": 2,
+        "compliance_risk": 0
+      },
+      "top_context_family": "data_analytics",
+      "top_context_score": 2,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/bellcabinetry/jobs/4780725008",
+      "title_clean": "Designer",
+      "company_name": "bellcabinetry",
+      "departments_raw": [
+        {
+          "id": 4046302008,
+          "name": "Bell Cabinetry",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": "associate",
+      "employment_type": "full_time",
+      "family_scores": {
+        "design": 3,
+        "marketing": 0,
+        "product_management": 0
+      },
+      "top_context_family": "design",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/bloomerang/jobs/4638745005",
+      "title_clean": "Onboarding Specialist",
+      "company_name": "bloomerang",
+      "departments_raw": [
+        {
+          "id": 4037211005,
+          "name": "Getting Started",
+          "child_ids": [],
+          "parent_id": null
+        }
+      ],
+      "skills": [],
+      "seniority": null,
+      "employment_type": "full_time",
+      "family_scores": {
+        "customer_success": 2,
+        "people_operations": 2,
+        "compliance_risk": 0
+      },
+      "top_context_family": "customer_success",
+      "top_context_score": 2,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/caylent/jobs/5808435004",
+      "title_clean": "Operations Analyst",
+      "company_name": "caylent",
+      "departments_raw": [
+        {
+          "id": 4076849004,
+          "name": "Service Delivery Operations",
+          "child_ids": [],
+          "parent_id": 4026321004
+        }
+      ],
+      "skills": [
+        "power_bi",
+        "excel",
+        "salesforce"
+      ],
+      "seniority": "staff",
+      "employment_type": null,
+      "family_scores": {
+        "operations": 1,
+        "data_analytics": 3,
+        "compliance_risk": 2
+      },
+      "top_context_family": "data_analytics",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/caylent/jobs/5808436004",
+      "title_clean": "Operations Analyst",
+      "company_name": "caylent",
+      "departments_raw": [
+        {
+          "id": 4076849004,
+          "name": "Service Delivery Operations",
+          "child_ids": [],
+          "parent_id": 4026321004
+        }
+      ],
+      "skills": [
+        "power_bi",
+        "excel",
+        "salesforce"
+      ],
+      "seniority": "staff",
+      "employment_type": null,
+      "family_scores": {
+        "operations": 1,
+        "data_analytics": 3,
+        "compliance_risk": 2
+      },
+      "top_context_family": "data_analytics",
+      "top_context_score": 3,
+      "context_confidence": "medium"
+    }
+  ],
+  "aggregate_top_family_counts": {
+    "Operations Analyst": {
+      "operations": 5,
+      "data_analytics": 5
+    },
+    "Producer": {
+      "software_engineering": 1,
+      "content": 26
+    },
+    "Implementation Engineer": {
+      "customer_success": 9,
+      "software_engineering": 4
+    },
+    "Onboarding Specialist": {
+      "customer_success": 12,
+      "people_operations": 1
+    },
+    "Partner Manager": {
+      "sales": 9
+    },
+    "Designer": {
+      "design": 11
+    }
+  }
+}

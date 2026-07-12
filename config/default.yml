@@ -1,0 +1,8 @@
+sources:
+  greenhouse:
+    enabled: true
+    boards: []
+    content: true
+    timeout_s: 20
+    retries: 3
+    max_concurrency: 12

@@ -1,0 +1,97 @@
+{
+  "phase": "E.10",
+  "recommended_production_batch": [
+    {
+      "target_label": "software_engineer",
+      "sample_count": 26,
+      "projected_residual_volume": 2307,
+      "expected_value": "high",
+      "risk": "high",
+      "rationale": "Many explicit backend/frontend/microservices/developer titles with low ambiguity."
+    },
+    {
+      "target_label": "engineering_manager",
+      "sample_count": 8,
+      "projected_residual_volume": 710,
+      "expected_value": "high",
+      "risk": "medium",
+      "rationale": "Repeated direct software-development / software-engineering manager titles."
+    },
+    {
+      "target_label": "it_support_specialist",
+      "sample_count": 5,
+      "projected_residual_volume": 444,
+      "expected_value": "medium",
+      "risk": "medium",
+      "rationale": "Support/application support/platform support titles are recurring and operationally clear."
+    },
+    {
+      "target_label": "systems_administrator",
+      "sample_count": 5,
+      "projected_residual_volume": 444,
+      "expected_value": "medium",
+      "risk": "medium",
+      "rationale": "Cloud/admin/business-app admin titles are recurring and title-semantically aligned."
+    },
+    {
+      "target_label": "sales_director",
+      "sample_count": 6,
+      "projected_residual_volume": 532,
+      "expected_value": "medium",
+      "risk": "medium",
+      "rationale": "Multiple direct sales-director / regional enterprise sales titles with clear sales scope."
+    }
+  ],
+  "recommended_context_pilot": [
+    {
+      "target_label": "customer_success_manager",
+      "sample_count": 6,
+      "projected_residual_volume": 532,
+      "expected_value": "high",
+      "risk": "medium",
+      "rationale": "Onboarding/adoption/retention titles recur and need context to disambiguate."
+    },
+    {
+      "target_label": "account_manager",
+      "sample_count": 10,
+      "projected_residual_volume": 887,
+      "expected_value": "high",
+      "risk": "medium",
+      "rationale": "Partnership/client strategy/growth titles cluster here but often need context."
+    },
+    {
+      "target_label": "project_manager",
+      "sample_count": 9,
+      "projected_residual_volume": 799,
+      "expected_value": "high",
+      "risk": "medium",
+      "rationale": "Delivery/engagement/professional services titles cluster here with context dependence."
+    }
+  ],
+  "recommended_taxonomy_review": [
+    {
+      "candidate_label": "quantitative_researcher",
+      "sample_count": 4,
+      "projected_residual_volume": 355,
+      "priority": "high",
+      "risk": "high",
+      "rationale": "Repeated quant/trading research specialist titles."
+    },
+    {
+      "candidate_label": "credit_analyst",
+      "sample_count": 3,
+      "projected_residual_volume": 266,
+      "priority": "medium",
+      "risk": "high",
+      "rationale": "Corporate credit / CMBS / portfolio finance specialist cluster is coherent."
+    },
+    {
+      "candidate_label": "market_access_director",
+      "sample_count": 2,
+      "projected_residual_volume": 177,
+      "priority": "medium",
+      "risk": "medium",
+      "rationale": "Life sciences market-access roles recur and are semantically coherent."
+    }
+  ]
+}

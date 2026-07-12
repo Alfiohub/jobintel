@@ -1,0 +1,59 @@
+{
+  "phase": "E.15.6",
+  "decision": "ready_to_draft_partner_lane_context_patch_candidate",
+  "baseline": {
+    "dataset": "data/jobs/jobs_titled_en_recovery_v64_non_role_official.jsonl",
+    "rows_total": 81011,
+    "other": 35273,
+    "non_role": 339
+  },
+  "target": {
+    "normalized_title": "account_manager",
+    "role_family": "sales"
+  },
+  "validated_lane": {
+    "promotable": 27,
+    "review_only": 3,
+    "excluded": 35,
+    "shadow_delta_other": -27,
+    "risk": "medium-low"
+  },
+  "title_gate": [
+    "Partner Growth Manager",
+    "Partner Development Manager",
+    "Senior Partner Development Manager",
+    "Core Partner Development Manager",
+    "Strategic SI Partner Development Manager",
+    "Senior Technology Partner Development Manager",
+    "Partner Director",
+    "Strategic Partner Director",
+    "Regional Partner Director"
+  ],
+  "required_context_signals": [
+    "pipeline",
+    "bookings",
+    "revenue",
+    "go-to-market",
+    "portfolio growth",
+    "merchant acquisition",
+    "co-sell",
+    "joint business plan",
+    "partner relationships",
+    "strategic partnerships"
+  ],
+  "supportive_department_signals": [
+    "sales",
+    "partner development",
+    "alliances",
+    "partnerships"
+  ],
+  "blocked_signals": [
+    "client strategy",
+    "provider",
+    "patient",
+    "clinical",
+    "education",
+    "district"
+  ],
+  "next_step": "implement_shadow_patch_candidate_against_v64"
+}

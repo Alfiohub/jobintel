@@ -1,0 +1,28 @@
+{
+  "input_cleaned_path": "/tmp/pytest-of-afio/pytest-24/test_run_title_stage_keeps_blo0/jobs_cleaned_en.jsonl",
+  "input_extracted_path": "/tmp/pytest-of-afio/pytest-24/test_run_title_stage_keeps_blo0/jobs_extracted_en.jsonl",
+  "output_path": "/tmp/pytest-of-afio/pytest-24/test_run_title_stage_keeps_blo0/jobs_titled_en.jsonl",
+  "rows_total": 1,
+  "invalid_rows": 0,
+  "counts_by_normalized_title": {
+    "other": 1
+  },
+  "counts_by_role_family": {
+    "other": 1
+  },
+  "counts_by_status": {
+    "other": 1
+  },
+  "top_other_titles": [
+    {
+      "title_clean": "Partner Director",
+      "count": 1
+    }
+  ],
+  "top_non_role_titles": [],
+  "known_limits": [
+    "Minimal taxonomy/rule set by design in step12.",
+    "Classifier is title-centric; extracted context is optional and lightweight.",
+    "Policy is conservative: ambiguous titles go to other."
+  ]
+}

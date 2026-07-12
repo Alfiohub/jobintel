@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Daily / Weekly Review</h1>
+<p class="muted">Maintenance view for stale opportunities, blocked pipeline items and saved searches needing cleanup.</p>
+<p class="muted"><strong>Weekly maintenance focus.</strong> Today handles immediate execution; this page is for periodic cleanup and backlog hygiene.</p>
+
+<div class="toolbar">
+  <a href="/admin/today">Open Today view</a>
+  <a href="/admin/shortlist">Open shortlist</a>
+  <a href="/admin/notifications">Open notifications</a>
+  <a href="/admin/saved-searches?lifecycle=active">Open active saved searches</a>
+  <a href="/admin/saved-searches?lifecycle=archived">Review archived searches</a>
+</div>
+
+<h2>Saved Jobs Stale</h2>
+{% if not stale_saved_jobs %}
+<p class="muted">No stale saved jobs right now.</p>
+{% else %}
+<table>
+  <thead>
+    <tr>
+      <th>Priority</th>
+      <th>Job</th>
+      <th>Why in review</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in stale_saved_jobs %}
+    <tr>
+      <td><span class="badge badge-delivery-skip">{{ row.priority }}</span></td>
+      <td><a href="{{ row.url }}" target="_blank" rel="noopener noreferrer">{{ row.title_raw }}</a></td>
+      <td>{{ row.reason }}</td>
+      <td><a href="{{ row.href }}">Open</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+
+<h2>Applied Jobs Without Recent Update</h2>
+{% if not stale_applied_jobs %}
+<p class="muted">No applied jobs currently blocked.</p>
+{% else %}
+<table>
+  <thead>
+    <tr>
+      <th>Priority</th>
+      <th>Job</th>
+      <th>Why in review</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in stale_applied_jobs %}
+    <tr>
+      <td>
+        {% if row.priority == "high" %}
+          <span class="badge badge-delivery-err">high</span>
+        {% else %}
+          <span class="badge badge-delivery-skip">medium</span>
+        {% endif %}
+      </td>
+      <td><a href="{{ row.url }}" target="_blank" rel="noopener noreferrer">{{ row.title_raw }}</a></td>
+      <td>{{ row.reason }}</td>
+      <td><a href="{{ row.href }}">Open</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+
+<h2>Interview Items Missing Notes/Date</h2>
+{% if not interview_missing_items %}
+<p class="muted">No interview items missing context.</p>
+{% else %}
+<table>
+  <thead>
+    <tr>
+      <th>Priority</th>
+      <th>Job</th>
+      <th>Why in review</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in interview_missing_items %}
+    <tr>
+      <td><span class="badge badge-delivery-err">high</span></td>
+      <td><a href="{{ row.url }}" target="_blank" rel="noopener noreferrer">{{ row.title_raw }}</a></td>
+      <td>{{ row.reason }}</td>
+      <td><a href="{{ row.href }}">Open</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+
+<h2>Saved Searches with No Recent New Matches</h2>
+{% if not searches_no_recent_new %}
+<p class="muted">No saved searches currently stale on new matches.</p>
+{% else %}
+<table>
+  <thead>
+    <tr>
+      <th>Priority</th>
+      <th>Saved search</th>
+      <th>Why in review</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in searches_no_recent_new %}
+    <tr>
+      <td><span class="badge badge-delivery-skip">medium</span></td>
+      <td>{{ row.name }}</td>
+      <td>{{ row.reason }}</td>
+      <td><a href="{{ row.href }}">Open</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+
+<h2>High Dismiss-Rate Searches Needing Cleanup</h2>
+{% if not searches_high_dismiss %}
+<p class="muted">No saved searches flagged for high dismiss rate.</p>
+{% else %}
+<table>
+  <thead>
+    <tr>
+      <th>Priority</th>
+      <th>Saved search</th>
+      <th>Why in review</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in searches_high_dismiss %}
+    <tr>
+      <td><span class="badge">low</span></td>
+      <td>{{ row.name }}</td>
+      <td>{{ row.reason }}</td>
+      <td><a href="{{ row.href }}">Open</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+{% endblock %}

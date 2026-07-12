@@ -1,0 +1,68 @@
+{
+  "input_path": "data/all_greenhouse_jobs_from_targets.jsonl",
+  "rows_total": 84487,
+  "invalid_rows": 0,
+  "rows_en": 81011,
+  "rows_non_en": 3118,
+  "rows_unknown": 358,
+  "pct_en": 95.89,
+  "pct_non_en": 3.69,
+  "pct_unknown": 0.42,
+  "top_reasons_by_bucket": {
+    "en": [
+      {
+        "reason": "hint_detector_agree",
+        "count": 80709
+      },
+      {
+        "reason": "detector_primary",
+        "count": 155
+      },
+      {
+        "reason": "hint_detector_disagree_detector_override",
+        "count": 94
+      },
+      {
+        "reason": "text_stopwords_en",
+        "count": 53
+      }
+    ],
+    "non_en": [
+      {
+        "reason": "hint_detector_agree",
+        "count": 2739
+      },
+      {
+        "reason": "hint_detector_disagree_detector_override",
+        "count": 375
+      },
+      {
+        "reason": "detector_primary",
+        "count": 4
+      }
+    ],
+    "unknown": [
+      {
+        "reason": "low_signal_mixed_or_ambiguous",
+        "count": 175
+      },
+      {
+        "reason": "hint_without_text_support",
+        "count": 166
+      },
+      {
+        "reason": "hint_without_enough_text",
+        "count": 16
+      },
+      {
+        "reason": "text_too_short_or_ambiguous",
+        "count": 1
+      }
+    ]
+  },
+  "output_files": {
+    "en": "data/jobs/jobs_en_filtered.jsonl",
+    "non_en": "data/jobs/jobs_non_en.jsonl",
+    "unknown": "data/jobs/jobs_unknown_language.jsonl"
+  }
+}

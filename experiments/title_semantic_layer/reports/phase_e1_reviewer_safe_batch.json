@@ -1,0 +1,3918 @@
+{
+  "baseline": {
+    "repo": "joballert2",
+    "dataset": "data/jobs/jobs_titled_en_recovery_v53_safe.jsonl",
+    "rows_total": 81011,
+    "other_baseline": 36092,
+    "status": "ok"
+  },
+  "semantic_reviewer_summary": {
+    "clusters_reviewed": 113,
+    "clusters_convergence_high": 80,
+    "clusters_with_conflict": 15,
+    "clusters_keep_other": 14
+  },
+  "reviewer_table": [
+    {
+      "cluster_name": "engineer",
+      "representative_titles": [
+        {
+          "title": "Principal Engineer",
+          "count": 16
+        },
+        {
+          "title": "Senior Engineer",
+          "count": 10
+        },
+        {
+          "title": "Staff Engineer",
+          "count": 7
+        },
+        {
+          "title": "Senior Staff Engineer",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 39,
+      "top_internal_candidate": {
+        "label": "ml_engineer",
+        "role_family": "machine_learning",
+        "score": 0.828
+      },
+      "top_esco_candidate": {
+        "label": "ship assistant engineer",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Logistics Engineers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8854,
+      "overmatch_risk": "high",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "production_engineer",
+      "representative_titles": [
+        {
+          "title": "Production Engineer",
+          "count": 10
+        },
+        {
+          "title": "Senior Product Engineer",
+          "count": 9
+        },
+        {
+          "title": "Product Engineer",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 27,
+      "top_internal_candidate": {
+        "label": "manufacturing_engineer",
+        "role_family": "industrial_engineering",
+        "score": 0.9054
+      },
+      "top_esco_candidate": {
+        "label": "maintenance and repair engineer",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Industrial Engineers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "manager_software_engineering",
+      "representative_titles": [
+        {
+          "title": "Manager, Software Engineering",
+          "count": 18
+        },
+        {
+          "title": "Senior Manager, Software Engineering",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 26,
+      "top_internal_candidate": {
+        "label": "engineering_manager",
+        "role_family": "software_engineering",
+        "score": 0.9365
+      },
+      "top_esco_candidate": {
+        "label": "software developer",
+        "score": 0.7578
+      },
+      "top_onet_candidate": {
+        "label": "Software Developers",
+        "score": 0.7578
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8961,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "designer",
+      "representative_titles": [
+        {
+          "title": "Designer",
+          "count": 11
+        },
+        {
+          "title": "Senior Designer",
+          "count": 8
+        },
+        {
+          "title": "Designer II",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 25,
+      "top_internal_candidate": {
+        "label": "product_designer",
+        "role_family": "design",
+        "score": 0.828
+      },
+      "top_esco_candidate": {
+        "label": "art director",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Video Game Designers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9154,
+      "overmatch_risk": "high",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "firmware_engineer",
+      "representative_titles": [
+        {
+          "title": "Senior Firmware Engineer",
+          "count": 15
+        },
+        {
+          "title": "Firmware Engineer",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 25,
+      "top_internal_candidate": {
+        "label": "software_engineer",
+        "role_family": "software_engineering",
+        "score": 0.7739
+      },
+      "top_esco_candidate": {
+        "label": "fire protection technician",
+        "score": 0.8182
+      },
+      "top_onet_candidate": {
+        "label": "Blockchain Engineers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9147,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "production",
+      "representative_titles": [
+        {
+          "title": "Production Lead",
+          "count": 12
+        },
+        {
+          "title": "Production Associate",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 20,
+      "top_internal_candidate": {
+        "label": "manufacturing_engineer",
+        "role_family": "industrial_engineering",
+        "score": 0.7118
+      },
+      "top_esco_candidate": {
+        "label": "set buyer",
+        "score": 0.7619
+      },
+      "top_onet_candidate": {
+        "label": "Production, Planning, and Expediting Clerks",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.7979,
+      "overmatch_risk": "high",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "sales_director",
+      "representative_titles": [
+        {
+          "title": "Sales Director",
+          "count": 11
+        },
+        {
+          "title": "Director, Sales",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 19,
+      "top_internal_candidate": {
+        "label": "sales_manager",
+        "role_family": "sales",
+        "score": 0.8099
+      },
+      "top_esco_candidate": {
+        "label": "sales manager",
+        "score": 0.9421
+      },
+      "top_onet_candidate": {
+        "label": "Sales Managers",
+        "score": 0.9421
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9994,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "manager_engineering",
+      "representative_titles": [
+        {
+          "title": "Senior Manager, Engineering",
+          "count": 10
+        },
+        {
+          "title": "Manager, Engineering",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 18,
+      "top_internal_candidate": {
+        "label": "engineering_manager",
+        "role_family": "software_engineering",
+        "score": 0.909
+      },
+      "top_esco_candidate": {
+        "label": "foundry manager",
+        "score": 0.909
+      },
+      "top_onet_candidate": {
+        "label": "Architectural and Engineering Managers",
+        "score": 0.8281
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9708,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "data_science_manager",
+      "representative_titles": [
+        {
+          "title": "Data Science Manager",
+          "count": 16
+        }
+      ],
+      "estimated_volume": 16,
+      "top_internal_candidate": {
+        "label": "data_science_manager",
+        "role_family": "data_science",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "database administrator",
+        "score": 0.7065
+      },
+      "top_onet_candidate": {
+        "label": "Managers, All Other",
+        "score": 0.7273
+      },
+      "support_strength": "weak",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8226,
+      "overmatch_risk": "low",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "fp_a_analyst",
+      "representative_titles": [
+        {
+          "title": "FP&A Analyst",
+          "count": 8
+        },
+        {
+          "title": "Senior FP&A Analyst",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 16,
+      "top_internal_candidate": {
+        "label": "data_analyst",
+        "role_family": "data_analytics",
+        "score": 0.685
+      },
+      "top_esco_candidate": {
+        "label": "mergers and acquisitions analyst",
+        "score": 0.8551
+      },
+      "top_onet_candidate": {
+        "label": "Cost Estimators",
+        "score": 0.7205
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8113,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "technical_enablement_architect",
+      "representative_titles": [
+        {
+          "title": "Senior Technical Enablement Architect",
+          "count": 15
+        }
+      ],
+      "estimated_volume": 15,
+      "top_internal_candidate": {
+        "label": "solutions_architect",
+        "role_family": "architecture",
+        "score": 0.7636
+      },
+      "top_esco_candidate": {
+        "label": "naval architect",
+        "score": 0.5585
+      },
+      "top_onet_candidate": {
+        "label": "Computer Systems Engineers/Architects",
+        "score": 0.7636
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.7575,
+      "overmatch_risk": "low",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "research_scientist",
+      "representative_titles": [
+        {
+          "title": "Research Scientist",
+          "count": 7
+        },
+        {
+          "title": "Senior Research Scientist",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 13,
+      "top_internal_candidate": {
+        "label": "data_scientist",
+        "role_family": "data_science",
+        "score": 0.6462
+      },
+      "top_esco_candidate": {
+        "label": "bioinformatics scientist",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Computer and Information Research Scientists",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9354,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "procurement_manager",
+      "representative_titles": [
+        {
+          "title": "Procurement Manager",
+          "count": 13
+        }
+      ],
+      "estimated_volume": 13,
+      "top_internal_candidate": {
+        "label": "product_manager",
+        "role_family": "product_management",
+        "score": 0.6401
+      },
+      "top_esco_candidate": {
+        "label": "energy manager",
+        "score": 0.8429
+      },
+      "top_onet_candidate": {
+        "label": "Purchasing Managers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8467,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "onboarding_specialist",
+      "representative_titles": [
+        {
+          "title": "Onboarding Specialist",
+          "count": 13
+        }
+      ],
+      "estimated_volume": 13,
+      "top_internal_candidate": {
+        "label": "marketing_specialist",
+        "role_family": "marketing",
+        "score": 0.7081
+      },
+      "top_esco_candidate": {
+        "label": "debarker operator",
+        "score": 0.7598
+      },
+      "top_onet_candidate": {
+        "label": "Medical Records Specialists",
+        "score": 0.8025
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.781,
+      "overmatch_risk": "medium",
+      "verdict": "needs_taxonomy_decision",
+      "recommended_action": "taxonomy_gap_do_not_promote_yet"
+    },
+    {
+      "cluster_name": "sales_enablement_manager",
+      "representative_titles": [
+        {
+          "title": "Sales Enablement Manager",
+          "count": 13
+        }
+      ],
+      "estimated_volume": 13,
+      "top_internal_candidate": {
+        "label": "sales_manager",
+        "role_family": "sales",
+        "score": 0.6698
+      },
+      "top_esco_candidate": {
+        "label": "sales account manager",
+        "score": 0.7097
+      },
+      "top_onet_candidate": {
+        "label": "First-Line Supervisors of Retail Sales Workers",
+        "score": 0.7
+      },
+      "support_strength": "weak",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.6356,
+      "overmatch_risk": "medium",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "people_partner",
+      "representative_titles": [
+        {
+          "title": "People Partner",
+          "count": 7
+        },
+        {
+          "title": "Senior People Partner",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 13,
+      "top_internal_candidate": {
+        "label": "people_business_partner",
+        "role_family": "people_operations",
+        "score": 0.739
+      },
+      "top_esco_candidate": {
+        "label": "talent acquisition manager",
+        "score": 0.4556
+      },
+      "top_onet_candidate": {
+        "label": "Patient Representatives",
+        "score": 0.614
+      },
+      "support_strength": "none",
+      "semantic_confidence": "low",
+      "semantic_confidence_score": 0.5971,
+      "overmatch_risk": "medium",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "territory_manager",
+      "representative_titles": [
+        {
+          "title": "Territory Manager",
+          "count": 11
+        }
+      ],
+      "estimated_volume": 11,
+      "top_internal_candidate": {
+        "label": "account_manager",
+        "role_family": "sales",
+        "score": 0.7788
+      },
+      "top_esco_candidate": {
+        "label": "commercial sales representative",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Sales Managers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9583,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "fpga_engineer",
+      "representative_titles": [
+        {
+          "title": "FPGA Engineer",
+          "count": 11
+        }
+      ],
+      "estimated_volume": 11,
+      "top_internal_candidate": {
+        "label": "electrical_engineer",
+        "role_family": "industrial_engineering",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "quality engineer",
+        "score": 0.8172
+      },
+      "top_onet_candidate": {
+        "label": "Petroleum Engineers",
+        "score": 0.7631
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9456,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "product_support_specialist",
+      "representative_titles": [
+        {
+          "title": "Product Support Specialist",
+          "count": 11
+        }
+      ],
+      "estimated_volume": 11,
+      "top_internal_candidate": {
+        "label": "it_support_specialist",
+        "role_family": "it_operations",
+        "score": 0.8537
+      },
+      "top_esco_candidate": {
+        "label": "textile product developer",
+        "score": 0.7205
+      },
+      "top_onet_candidate": {
+        "label": "Computer User Support Specialists",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9366,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "software_development_manager",
+      "representative_titles": [
+        {
+          "title": "Software Development Manager",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 10,
+      "top_internal_candidate": {
+        "label": "engineering_manager",
+        "role_family": "software_engineering",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "mine development engineer",
+        "score": 0.8004
+      },
+      "top_onet_candidate": {
+        "label": "Information Technology Project Managers",
+        "score": 0.8747
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "manager_business_development",
+      "representative_titles": [
+        {
+          "title": "Manager, Business Development",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 10,
+      "top_internal_candidate": {
+        "label": "account_manager",
+        "role_family": "sales",
+        "score": 0.9365
+      },
+      "top_esco_candidate": {
+        "label": "sales account manager",
+        "score": 0.9365
+      },
+      "top_onet_candidate": {
+        "label": "Marketing Managers",
+        "score": 0.9365
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "business_development",
+      "representative_titles": [
+        {
+          "title": "Business Development Associate",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 10,
+      "top_internal_candidate": {
+        "label": "business_development_representative",
+        "role_family": "sales",
+        "score": 0.8564
+      },
+      "top_esco_candidate": {
+        "label": "business coach",
+        "score": 0.8676
+      },
+      "top_onet_candidate": {
+        "label": "Market Research Analysts and Marketing Specialists",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "photojournalist",
+      "representative_titles": [
+        {
+          "title": "Photojournalist",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 10,
+      "top_internal_candidate": {
+        "label": "journalist",
+        "role_family": "content",
+        "score": 0.7915
+      },
+      "top_esco_candidate": {
+        "label": "photojournalist",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Photographers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "sales_representative",
+      "representative_titles": [
+        {
+          "title": "Sales Representative",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 10,
+      "top_internal_candidate": {
+        "label": "business_development_representative",
+        "role_family": "sales",
+        "score": 0.768
+      },
+      "top_esco_candidate": {
+        "label": "commercial sales representative",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Retail Salespersons",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "operations_analyst",
+      "representative_titles": [
+        {
+          "title": "Operations Analyst",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 10,
+      "top_internal_candidate": {
+        "label": "data_analyst",
+        "role_family": "data_analytics",
+        "score": 0.8173
+      },
+      "top_esco_candidate": {
+        "label": "investment analyst",
+        "score": 0.7681
+      },
+      "top_onet_candidate": {
+        "label": "Management Analysts",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9273,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "director_product_management",
+      "representative_titles": [
+        {
+          "title": "Director, Product Management",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 10,
+      "top_internal_candidate": {
+        "label": "product_manager",
+        "role_family": "product_management",
+        "score": 0.6661
+      },
+      "top_esco_candidate": {
+        "label": "corporate risk manager",
+        "score": 0.7224
+      },
+      "top_onet_candidate": {
+        "label": "Marketing Managers",
+        "score": 0.934
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.869,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "machine_learning_scientist",
+      "representative_titles": [
+        {
+          "title": "Senior Machine Learning Scientist",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 10,
+      "top_internal_candidate": {
+        "label": "ml_engineer",
+        "role_family": "machine_learning",
+        "score": 0.6491
+      },
+      "top_esco_candidate": {
+        "label": "artificial intelligence engineer",
+        "score": 0.6491
+      },
+      "top_onet_candidate": {
+        "label": "Computer and Information Research Scientists",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8081,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "child_and_adolescent_therapist_lsw_contract_1099",
+      "representative_titles": [
+        {
+          "title": "Child and Adolescent Therapist - LSW - Contract/1099",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 10,
+      "top_internal_candidate": {
+        "label": "psychotherapist",
+        "role_family": "healthcare_clinical",
+        "score": 0.8766
+      },
+      "top_esco_candidate": {
+        "label": "animal therapist",
+        "score": 0.4523
+      },
+      "top_onet_candidate": {
+        "label": "Clinical and Counseling Psychologists",
+        "score": 0.781
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.7996,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "manager_programmatic",
+      "representative_titles": [
+        {
+          "title": "Manager, Programmatic",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 10,
+      "top_internal_candidate": {
+        "label": "project_manager",
+        "role_family": "program_management",
+        "score": 0.7453
+      },
+      "top_esco_candidate": {
+        "label": "programme manager",
+        "score": 0.7574
+      },
+      "top_onet_candidate": {
+        "label": "General and Operations Managers",
+        "score": 0.7453
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.788,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "operations",
+      "representative_titles": [
+        {
+          "title": "Operations Associate",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 10,
+      "top_internal_candidate": {
+        "label": "operations_specialist",
+        "role_family": "operations",
+        "score": 0.7103
+      },
+      "top_esco_candidate": {
+        "label": "laser beam welder",
+        "score": 0.7619
+      },
+      "top_onet_candidate": {
+        "label": "First-Line Supervisors of Firefighting and Prevention Workers",
+        "score": 0.7619
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.7035,
+      "overmatch_risk": "high",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "engineering_director",
+      "representative_titles": [
+        {
+          "title": "Engineering Director",
+          "count": 9
+        }
+      ],
+      "estimated_volume": 9,
+      "top_internal_candidate": {
+        "label": "engineering_manager",
+        "role_family": "software_engineering",
+        "score": 0.8429
+      },
+      "top_esco_candidate": {
+        "label": "enameller",
+        "score": 0.7679
+      },
+      "top_onet_candidate": {
+        "label": "Architectural and Engineering Managers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9914,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "product",
+      "representative_titles": [
+        {
+          "title": "Product Lead",
+          "count": 9
+        }
+      ],
+      "estimated_volume": 9,
+      "top_internal_candidate": {
+        "label": "content_producer",
+        "role_family": "content",
+        "score": 0.7617
+      },
+      "top_esco_candidate": {
+        "label": "product assembly inspector",
+        "score": 0.9221
+      },
+      "top_onet_candidate": {
+        "label": "Stockers and Order Fillers",
+        "score": 0.8257
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9422,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "test_engineer",
+      "representative_titles": [
+        {
+          "title": "Test Engineer",
+          "count": 9
+        }
+      ],
+      "estimated_volume": 9,
+      "top_internal_candidate": {
+        "label": "ml_engineer",
+        "role_family": "machine_learning",
+        "score": 0.7244
+      },
+      "top_esco_candidate": {
+        "label": "test engineer",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Software Quality Assurance Analysts and Testers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9284,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "director_of_product_design",
+      "representative_titles": [
+        {
+          "title": "Director of Product Design",
+          "count": 9
+        }
+      ],
+      "estimated_volume": 9,
+      "top_internal_candidate": {
+        "label": "product_designer",
+        "role_family": "design",
+        "score": 0.7029
+      },
+      "top_esco_candidate": {
+        "label": "chief product officer",
+        "score": 0.7392
+      },
+      "top_onet_candidate": {
+        "label": "Art Directors",
+        "score": 0.8634
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8772,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "safety_specialist",
+      "representative_titles": [
+        {
+          "title": "Safety Specialist",
+          "count": 9
+        }
+      ],
+      "estimated_volume": 9,
+      "top_internal_candidate": {
+        "label": "marketing_specialist",
+        "role_family": "marketing",
+        "score": 0.6418
+      },
+      "top_esco_candidate": {
+        "label": "food safety specialist",
+        "score": 0.8686
+      },
+      "top_onet_candidate": {
+        "label": "Occupational Health and Safety Specialists",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8534,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "database_reliability_engineer",
+      "representative_titles": [
+        {
+          "title": "Senior Database Reliability Engineer",
+          "count": 9
+        }
+      ],
+      "estimated_volume": 9,
+      "top_internal_candidate": {
+        "label": "site_reliability_engineer",
+        "role_family": "sre",
+        "score": 0.7747
+      },
+      "top_esco_candidate": {
+        "label": "dependability engineer",
+        "score": 0.8164
+      },
+      "top_onet_candidate": {
+        "label": "Logistics Engineers",
+        "score": 0.8164
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8335,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "technical_delivery_manager",
+      "representative_titles": [
+        {
+          "title": "Technical Delivery Manager",
+          "count": 9
+        }
+      ],
+      "estimated_volume": 9,
+      "top_internal_candidate": {
+        "label": "logistics_manager",
+        "role_family": "logistics",
+        "score": 0.6573
+      },
+      "top_esco_candidate": {
+        "label": "technical director",
+        "score": 0.7616
+      },
+      "top_onet_candidate": {
+        "label": "Transportation, Storage, and Distribution Managers",
+        "score": 0.7629
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.7445,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "director_of_tooling",
+      "representative_titles": [
+        {
+          "title": "Director of Tooling",
+          "count": 9
+        }
+      ],
+      "estimated_volume": 9,
+      "top_internal_candidate": {
+        "label": "sales_manager",
+        "role_family": "sales",
+        "score": 0.6694
+      },
+      "top_esco_candidate": {
+        "label": "airport director",
+        "score": 0.7511
+      },
+      "top_onet_candidate": {
+        "label": "Gambling Managers",
+        "score": 0.6005
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.7123,
+      "overmatch_risk": "low",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "director_enterprise_sales",
+      "representative_titles": [
+        {
+          "title": "Director, Enterprise Sales",
+          "count": 9
+        }
+      ],
+      "estimated_volume": 9,
+      "top_internal_candidate": {
+        "label": "sales_manager",
+        "role_family": "sales",
+        "score": 0.6471
+      },
+      "top_esco_candidate": {
+        "label": "sales manager",
+        "score": 0.621
+      },
+      "top_onet_candidate": {
+        "label": "Sales Engineers",
+        "score": 0.7187
+      },
+      "support_strength": "weak",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.6573,
+      "overmatch_risk": "low",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "technical_architect",
+      "representative_titles": [
+        {
+          "title": "Technical Architect",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 8,
+      "top_internal_candidate": {
+        "label": "solutions_architect",
+        "role_family": "architecture",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "naval architect",
+        "score": 0.7291
+      },
+      "top_onet_candidate": {
+        "label": "Computer Systems Engineers/Architects",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "ml_engineer",
+      "representative_titles": [
+        {
+          "title": "Senior ML-Engineer",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 8,
+      "top_internal_candidate": {
+        "label": "ml_engineer",
+        "role_family": "machine_learning",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "ship assistant engineer",
+        "score": 0.828
+      },
+      "top_onet_candidate": {
+        "label": "Logistics Engineers",
+        "score": 0.828
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9626,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "director_business_development",
+      "representative_titles": [
+        {
+          "title": "Director, Business Development",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 8,
+      "top_internal_candidate": {
+        "label": "account_manager",
+        "role_family": "sales",
+        "score": 0.7368
+      },
+      "top_esco_candidate": {
+        "label": "commercial director",
+        "score": 0.9389
+      },
+      "top_onet_candidate": {
+        "label": "Marketing Managers",
+        "score": 0.9389
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9577,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "operations_supervisor",
+      "representative_titles": [
+        {
+          "title": "Operations Supervisor",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 8,
+      "top_internal_candidate": {
+        "label": "operations_specialist",
+        "role_family": "operations",
+        "score": 0.6457
+      },
+      "top_esco_candidate": {
+        "label": "oil refinery control room operator",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "General and Operations Managers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9351,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "field_engineer",
+      "representative_titles": [
+        {
+          "title": "Field Engineer",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 8,
+      "top_internal_candidate": {
+        "label": "ml_engineer",
+        "role_family": "machine_learning",
+        "score": 0.7305
+      },
+      "top_esco_candidate": {
+        "label": "military engineer",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Telecommunications Engineering Specialists",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9318,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "design_engineer",
+      "representative_titles": [
+        {
+          "title": "Design Engineer",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 8,
+      "top_internal_candidate": {
+        "label": "ml_engineer",
+        "role_family": "machine_learning",
+        "score": 0.7021
+      },
+      "top_esco_candidate": {
+        "label": "installation engineer",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Aerospace Engineers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9162,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "integration_engineer",
+      "representative_titles": [
+        {
+          "title": "Integration Engineer",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 8,
+      "top_internal_candidate": {
+        "label": "manufacturing_engineer",
+        "role_family": "industrial_engineering",
+        "score": 0.68
+      },
+      "top_esco_candidate": {
+        "label": "integration engineer",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Blockchain Engineers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.904,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "office_coordinator",
+      "representative_titles": [
+        {
+          "title": "Office Coordinator",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 8,
+      "top_internal_candidate": {
+        "label": "operations_specialist",
+        "role_family": "operations",
+        "score": 0.6687
+      },
+      "top_esco_candidate": {
+        "label": "office manager",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "First-Line Supervisors of Office and Administrative Support Workers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8978,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "technical_support_team",
+      "representative_titles": [
+        {
+          "title": "Technical Support Team Lead",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 8,
+      "top_internal_candidate": {
+        "label": "it_support_specialist",
+        "role_family": "it_operations",
+        "score": 0.7204
+      },
+      "top_esco_candidate": {
+        "label": "engineering assistant",
+        "score": 0.8686
+      },
+      "top_onet_candidate": {
+        "label": "Computer Network Support Specialists",
+        "score": 0.7597
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8926,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "it_operations_engineer",
+      "representative_titles": [
+        {
+          "title": "IT Operations Engineer",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 8,
+      "top_internal_candidate": {
+        "label": "sales_engineer",
+        "role_family": "sales",
+        "score": 0.7065
+      },
+      "top_esco_candidate": {
+        "label": "quarry manager",
+        "score": 0.8081
+      },
+      "top_onet_candidate": {
+        "label": "Industrial Engineers",
+        "score": 0.9241
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8583,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "traveling_physical_therapist",
+      "representative_titles": [
+        {
+          "title": "Traveling Physical Therapist",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 8,
+      "top_internal_candidate": {
+        "label": "occupational_therapist",
+        "role_family": "healthcare_clinical",
+        "score": 0.7459
+      },
+      "top_esco_candidate": {
+        "label": "physiotherapist",
+        "score": 0.7939
+      },
+      "top_onet_candidate": {
+        "label": "Physical Therapists",
+        "score": 0.7732
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8528,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "director_of_success",
+      "representative_titles": [
+        {
+          "title": "Director of Success",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 8,
+      "top_internal_candidate": {
+        "label": "sales_manager",
+        "role_family": "sales",
+        "score": 0.7539
+      },
+      "top_esco_candidate": {
+        "label": "botanist",
+        "score": 0.7348
+      },
+      "top_onet_candidate": {
+        "label": "Education Administrators, All Other",
+        "score": 0.6375
+      },
+      "support_strength": "weak",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.7234,
+      "overmatch_risk": "low",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "robotics_field_service_engineer",
+      "representative_titles": [
+        {
+          "title": "Robotics Field Service Engineer",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 8,
+      "top_internal_candidate": {
+        "label": "sales_engineer",
+        "role_family": "sales",
+        "score": 0.6512
+      },
+      "top_esco_candidate": {
+        "label": "robotics engineer",
+        "score": 0.6879
+      },
+      "top_onet_candidate": {
+        "label": "Aerospace Engineers",
+        "score": 0.8303
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.6898,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "partner_success_manager",
+      "representative_titles": [
+        {
+          "title": "Partner Success Manager",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 8,
+      "top_internal_candidate": {
+        "label": "customer_success_manager",
+        "role_family": "customer_success",
+        "score": 0.6976
+      },
+      "top_esco_candidate": {
+        "label": "foundry manager",
+        "score": 0.6497
+      },
+      "top_onet_candidate": {
+        "label": "Rehabilitation Counselors",
+        "score": 0.7402
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.6864,
+      "overmatch_risk": "high",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "product_analytics_team_new_products",
+      "representative_titles": [
+        {
+          "title": "Product Analytics Team Lead, New Products",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 8,
+      "top_internal_candidate": {
+        "label": "data_analyst",
+        "role_family": "data_analytics",
+        "score": 0.6422
+      },
+      "top_esco_candidate": {
+        "label": "plastic products assembler",
+        "score": 0.6035
+      },
+      "top_onet_candidate": {
+        "label": "Food Preparation Workers",
+        "score": 0.6263
+      },
+      "support_strength": "none",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.6299,
+      "overmatch_risk": "low",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "it_administrator",
+      "representative_titles": [
+        {
+          "title": "IT Administrator",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "it_support_specialist",
+        "role_family": "it_operations",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "art administrator",
+        "score": 0.9025
+      },
+      "top_onet_candidate": {
+        "label": "Administrative Services Managers",
+        "score": 0.891
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "lab_technician",
+      "representative_titles": [
+        {
+          "title": "Lab Technician",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "technician",
+        "role_family": "skilled_trades",
+        "score": 0.8241
+      },
+      "top_esco_candidate": {
+        "label": "bacteriology technician",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Medical Appliance Technicians",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "production_manager",
+      "representative_titles": [
+        {
+          "title": "Production Manager",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "product_manager",
+        "role_family": "product_management",
+        "score": 0.8286
+      },
+      "top_esco_candidate": {
+        "label": "oil and gas production manager",
+        "score": 0.8969
+      },
+      "top_onet_candidate": {
+        "label": "Industrial Production Managers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9625,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "manufacturing_test_engineer",
+      "representative_titles": [
+        {
+          "title": "Senior Manufacturing Test Engineer",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "manufacturing_engineer",
+        "role_family": "industrial_engineering",
+        "score": 0.878
+      },
+      "top_esco_candidate": {
+        "label": "maintenance and repair engineer",
+        "score": 0.878
+      },
+      "top_onet_candidate": {
+        "label": "Manufacturing Engineers",
+        "score": 0.878
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.958,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "assistant_director",
+      "representative_titles": [
+        {
+          "title": "Assistant Director",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "art_director",
+        "role_family": "design",
+        "score": 0.6779
+      },
+      "top_esco_candidate": {
+        "label": "assistant video and motion picture director",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Executive Secretaries and Executive Administrative Assistants",
+        "score": 0.8476
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9186,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "database_engineer",
+      "representative_titles": [
+        {
+          "title": "Senior Database Engineer",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "data_engineer",
+        "role_family": "data_engineering",
+        "score": 0.7754
+      },
+      "top_esco_candidate": {
+        "label": "database designer",
+        "score": 0.797
+      },
+      "top_onet_candidate": {
+        "label": "Database Administrators",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9108,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "customer_support_engineer",
+      "representative_titles": [
+        {
+          "title": "Customer Support Engineer",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "it_support_specialist",
+        "role_family": "it_operations",
+        "score": 0.7803
+      },
+      "top_esco_candidate": {
+        "label": "customer contact centre information clerk",
+        "score": 0.7341
+      },
+      "top_onet_candidate": {
+        "label": "Computer Network Support Specialists",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8993,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "collections_specialist",
+      "representative_titles": [
+        {
+          "title": "Collections Specialist",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "operations_specialist",
+        "role_family": "operations",
+        "score": 0.7717
+      },
+      "top_esco_candidate": {
+        "label": "desktop publisher",
+        "score": 0.7357
+      },
+      "top_onet_candidate": {
+        "label": "Tax Examiners and Collectors, and Revenue Agents",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.895,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "client_manager",
+      "representative_titles": [
+        {
+          "title": "Senior Client Manager",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "customer_success_manager",
+        "role_family": "customer_success",
+        "score": 0.7405
+      },
+      "top_esco_candidate": {
+        "label": "client relations manager",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Meeting, Convention, and Event Planners",
+        "score": 0.7975
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8917,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "software_engineering_intern",
+      "representative_titles": [
+        {
+          "title": "Software Engineering Intern",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "engineering_manager",
+        "role_family": "software_engineering",
+        "score": 0.8026
+      },
+      "top_esco_candidate": {
+        "label": "software developer",
+        "score": 0.7738
+      },
+      "top_onet_candidate": {
+        "label": "Software Developers",
+        "score": 0.7738
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8796,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "service",
+      "representative_titles": [
+        {
+          "title": "Service Associate",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "customer_service_specialist",
+        "role_family": "operations",
+        "score": 0.655
+      },
+      "top_esco_candidate": {
+        "label": "ATM repair technician",
+        "score": 0.7205
+      },
+      "top_onet_candidate": {
+        "label": "Brokerage Clerks",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8774,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "implementation_specialist",
+      "representative_titles": [
+        {
+          "title": "Implementation Specialist",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "behavioral_support_specialist",
+        "role_family": "healthcare_clinical",
+        "score": 0.7066
+      },
+      "top_esco_candidate": {
+        "label": "technical communicator",
+        "score": 0.8075
+      },
+      "top_onet_candidate": {
+        "label": "Software Developers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8753,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "business_development_director_content_ops",
+      "representative_titles": [
+        {
+          "title": "Business Development Director, Content Ops",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "account_manager",
+        "role_family": "sales",
+        "score": 0.6454
+      },
+      "top_esco_candidate": {
+        "label": "commercial director",
+        "score": 0.841
+      },
+      "top_onet_candidate": {
+        "label": "Marketing Managers",
+        "score": 0.841
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8634,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "architect",
+      "representative_titles": [
+        {
+          "title": "Architect",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "solutions_architect",
+        "role_family": "architecture",
+        "score": 0.6708
+      },
+      "top_esco_candidate": {
+        "label": "architect",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Architects, Except Landscape and Naval",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8289,
+      "overmatch_risk": "high",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "manager_technical_accounting",
+      "representative_titles": [
+        {
+          "title": "Senior Manager, Technical Accounting",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "account_manager",
+        "role_family": "sales",
+        "score": 0.8744
+      },
+      "top_esco_candidate": {
+        "label": "accounting manager",
+        "score": 0.7297
+      },
+      "top_onet_candidate": {
+        "label": "Financial Managers",
+        "score": 0.7297
+      },
+      "support_strength": "weak",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8093,
+      "overmatch_risk": "low",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "salesforce_engineer",
+      "representative_titles": [
+        {
+          "title": "Senior Salesforce Engineer",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "sales_engineer",
+        "role_family": "sales",
+        "score": 0.7669
+      },
+      "top_esco_candidate": {
+        "label": "sales engineer",
+        "score": 0.7669
+      },
+      "top_onet_candidate": {
+        "label": "Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",
+        "score": 0.7669
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8069,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "manager_field_engineering",
+      "representative_titles": [
+        {
+          "title": "Manager, Field Engineering",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "engineering_manager",
+        "role_family": "software_engineering",
+        "score": 0.778
+      },
+      "top_esco_candidate": {
+        "label": "foundry manager",
+        "score": 0.778
+      },
+      "top_onet_candidate": {
+        "label": "Telecommunications Engineering Specialists",
+        "score": 0.7204
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.805,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "genai_engineer",
+      "representative_titles": [
+        {
+          "title": "GenAI Engineer",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "ml_engineer",
+        "role_family": "machine_learning",
+        "score": 0.7643
+      },
+      "top_esco_candidate": {
+        "label": "animal artificial insemination technician",
+        "score": 0.7643
+      },
+      "top_onet_candidate": {
+        "label": "Petroleum Engineers",
+        "score": 0.7322
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.7971,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "corporate_development_manager",
+      "representative_titles": [
+        {
+          "title": "Corporate Development Manager",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "account_manager",
+        "role_family": "sales",
+        "score": 0.7121
+      },
+      "top_esco_candidate": {
+        "label": "corporate training manager",
+        "score": 0.8089
+      },
+      "top_onet_candidate": {
+        "label": "Computer and Information Systems Managers",
+        "score": 0.8021
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.7941,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "revenue_operations",
+      "representative_titles": [
+        {
+          "title": "Revenue Operations Associate",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "data_analyst",
+        "role_family": "data_analytics",
+        "score": 0.8173
+      },
+      "top_esco_candidate": {
+        "label": "laser beam welder",
+        "score": 0.5954
+      },
+      "top_onet_candidate": {
+        "label": "Military Officer Special and Tactical Operations Leaders, All Other",
+        "score": 0.6851
+      },
+      "support_strength": "weak",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.7376,
+      "overmatch_risk": "low",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "landscape_foreman_stormwater",
+      "representative_titles": [
+        {
+          "title": "Landscape Foreman (Stormwater)",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "technician",
+        "role_family": "skilled_trades",
+        "score": 0.6857
+      },
+      "top_esco_candidate": {
+        "label": "groundsman/groundswoman",
+        "score": 0.517
+      },
+      "top_onet_candidate": {
+        "label": "First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers",
+        "score": 0.7578
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.704,
+      "overmatch_risk": "low",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "plan_documents_specialist_freelance_project",
+      "representative_titles": [
+        {
+          "title": "Plan Documents Specialist - Freelance Project",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "ai_trainer_specialist",
+        "role_family": "operations",
+        "score": 0.6414
+      },
+      "top_esco_candidate": {
+        "label": "document management officer",
+        "score": 0.5528
+      },
+      "top_onet_candidate": {
+        "label": "Document Management Specialists",
+        "score": 0.603
+      },
+      "support_strength": "none",
+      "semantic_confidence": "low",
+      "semantic_confidence_score": 0.5628,
+      "overmatch_risk": "medium",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "paralegal",
+      "representative_titles": [
+        {
+          "title": "Paralegal",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "paralegal",
+        "role_family": "legal",
+        "score": 1.0
+      },
+      "top_esco_candidate": {
+        "label": "court jury coordinator",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Paralegals and Legal Assistants",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 1.0,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "electrical_test_engineer",
+      "representative_titles": [
+        {
+          "title": "Electrical Test Engineer",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "electrical_engineer",
+        "role_family": "industrial_engineering",
+        "score": 0.8606
+      },
+      "top_esco_candidate": {
+        "label": "electrical equipment inspector",
+        "score": 0.903
+      },
+      "top_onet_candidate": {
+        "label": "Electrical Engineers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9815,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "mechanical",
+      "representative_titles": [
+        {
+          "title": "Mechanical III",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "mechanic",
+        "role_family": "skilled_trades",
+        "score": 0.8763
+      },
+      "top_esco_candidate": {
+        "label": "optical technician",
+        "score": 0.7619
+      },
+      "top_onet_candidate": {
+        "label": "Computer, Automated Teller, and Office Machine Repairers",
+        "score": 0.8763
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9806,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "manager_operations",
+      "representative_titles": [
+        {
+          "title": "Manager, Operations",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "operations_specialist",
+        "role_family": "operations",
+        "score": 0.8969
+      },
+      "top_esco_candidate": {
+        "label": "metal production manager",
+        "score": 0.8969
+      },
+      "top_onet_candidate": {
+        "label": "General and Operations Managers",
+        "score": 0.8969
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9769,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "dental_assistant",
+      "representative_titles": [
+        {
+          "title": "Dental Assistant",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "medical_assistant",
+        "role_family": "healthcare_clinical",
+        "score": 0.7341
+      },
+      "top_esco_candidate": {
+        "label": "dental chairside assistant",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Dental Assistants",
+        "score": 0.9677
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9765,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "business_development_executive",
+      "representative_titles": [
+        {
+          "title": "Business Development Executive",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "business_development_representative",
+        "role_family": "sales",
+        "score": 0.7604
+      },
+      "top_esco_candidate": {
+        "label": "business developer",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Chief Executives",
+        "score": 0.8655
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.968,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "director_software_engineering",
+      "representative_titles": [
+        {
+          "title": "Director, Software Engineering",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "engineering_manager",
+        "role_family": "software_engineering",
+        "score": 0.7907
+      },
+      "top_esco_candidate": {
+        "label": "software developer",
+        "score": 0.7426
+      },
+      "top_onet_candidate": {
+        "label": "Computer and Information Systems Managers",
+        "score": 0.9389
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9432,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "technical",
+      "representative_titles": [
+        {
+          "title": "Technical Lead",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "technician",
+        "role_family": "skilled_trades",
+        "score": 0.7464
+      },
+      "top_esco_candidate": {
+        "label": "engineering assistant",
+        "score": 0.7722
+      },
+      "top_onet_candidate": {
+        "label": "Nanotechnology Engineering Technologists and Technicians",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9393,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "production_planner",
+      "representative_titles": [
+        {
+          "title": "Production Planner",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "manufacturing_engineer",
+        "role_family": "industrial_engineering",
+        "score": 0.6803
+      },
+      "top_esco_candidate": {
+        "label": "gas scheduling representative",
+        "score": 0.8969
+      },
+      "top_onet_candidate": {
+        "label": "Logisticians",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.931,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "it_engineer",
+      "representative_titles": [
+        {
+          "title": "IT Engineer",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "ml_engineer",
+        "role_family": "machine_learning",
+        "score": 0.796
+      },
+      "top_esco_candidate": {
+        "label": "ICT technician",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Logistics Engineers",
+        "score": 0.828
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9291,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "security_operations_analyst",
+      "representative_titles": [
+        {
+          "title": "Senior Security Operations Analyst",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "data_analyst",
+        "role_family": "data_analytics",
+        "score": 0.7383
+      },
+      "top_esco_candidate": {
+        "label": "cyber incident responder",
+        "score": 0.9355
+      },
+      "top_onet_candidate": {
+        "label": "Information Security Analysts",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9216,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "global_supply_manager",
+      "representative_titles": [
+        {
+          "title": "Staff Global Supply Manager",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "supply_chain_specialist",
+        "role_family": "logistics",
+        "score": 0.848
+      },
+      "top_esco_candidate": {
+        "label": "purchasing manager",
+        "score": 0.7971
+      },
+      "top_onet_candidate": {
+        "label": "Supply Chain Managers",
+        "score": 0.848
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9165,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "project_coordinator",
+      "representative_titles": [
+        {
+          "title": "Project Coordinator",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "operations_specialist",
+        "role_family": "operations",
+        "score": 0.6984
+      },
+      "top_esco_candidate": {
+        "label": "project manager",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Construction Managers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9141,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "director_sales_development",
+      "representative_titles": [
+        {
+          "title": "Director, Sales Development",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "business_development_representative",
+        "role_family": "sales",
+        "score": 0.7509
+      },
+      "top_esco_candidate": {
+        "label": "games development manager",
+        "score": 0.8508
+      },
+      "top_onet_candidate": {
+        "label": "Public Relations Managers",
+        "score": 0.7882
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9118,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "future_rental_coordinators",
+      "representative_titles": [
+        {
+          "title": "Future Rental Coordinators",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "operations_specialist",
+        "role_family": "operations",
+        "score": 0.8173
+      },
+      "top_esco_candidate": {
+        "label": "rental manager",
+        "score": 0.8173
+      },
+      "top_onet_candidate": {
+        "label": "Property, Real Estate, and Community Association Managers",
+        "score": 0.8173
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9073,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "it_specialist",
+      "representative_titles": [
+        {
+          "title": "IT Specialist",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "it_support_specialist",
+        "role_family": "it_operations",
+        "score": 0.7784
+      },
+      "top_esco_candidate": {
+        "label": "blockchain developer",
+        "score": 0.8787
+      },
+      "top_onet_candidate": {
+        "label": "Animal Caretakers",
+        "score": 0.8787
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9035,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "medical_director",
+      "representative_titles": [
+        {
+          "title": "Medical Director",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "school_administrator",
+        "role_family": "education",
+        "score": 0.6455
+      },
+      "top_esco_candidate": {
+        "label": "musical conductor",
+        "score": 0.8259
+      },
+      "top_onet_candidate": {
+        "label": "Medical and Health Services Managers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8959,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "thermal_engineer",
+      "representative_titles": [
+        {
+          "title": "Senior Thermal Engineer",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "ml_engineer",
+        "role_family": "machine_learning",
+        "score": 0.7586
+      },
+      "top_esco_candidate": {
+        "label": "thermal engineer",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Stationary Engineers and Boiler Operators",
+        "score": 0.7674
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8949,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "industrial_engineer",
+      "representative_titles": [
+        {
+          "title": "Senior Industrial Engineer",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "ml_engineer",
+        "role_family": "machine_learning",
+        "score": 0.6557
+      },
+      "top_esco_candidate": {
+        "label": "industrial engineer",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Industrial Engineers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8906,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "social_media_specialist",
+      "representative_titles": [
+        {
+          "title": "Social Media Specialist",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "warehouse_associate",
+        "role_family": "logistics",
+        "score": 0.6546
+      },
+      "top_esco_candidate": {
+        "label": "online community manager",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Market Research Analysts and Marketing Specialists",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.89,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "facilities_coordinator",
+      "representative_titles": [
+        {
+          "title": "Facilities Coordinator",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "logistics_coordinator",
+        "role_family": "logistics",
+        "score": 0.651
+      },
+      "top_esco_candidate": {
+        "label": "facilities manager",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Facilities Managers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8881,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "product_design_intern",
+      "representative_titles": [
+        {
+          "title": "Product Design Intern",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "product_designer",
+        "role_family": "design",
+        "score": 0.7939
+      },
+      "top_esco_candidate": {
+        "label": "product development manager",
+        "score": 0.7939
+      },
+      "top_onet_candidate": {
+        "label": "Web and Digital Interface Designers",
+        "score": 0.7939
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8839,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "project_engineer",
+      "representative_titles": [
+        {
+          "title": "Project Engineer",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "manufacturing_engineer",
+        "role_family": "industrial_engineering",
+        "score": 0.6635
+      },
+      "top_esco_candidate": {
+        "label": "mine planning engineer",
+        "score": 0.8703
+      },
+      "top_onet_candidate": {
+        "label": "Agricultural Engineers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8657,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "crm_manager",
+      "representative_titles": [
+        {
+          "title": "CRM Manager",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "financial_analyst",
+        "role_family": "finance",
+        "score": 0.653
+      },
+      "top_esco_candidate": {
+        "label": "client relations manager",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Farmers, Ranchers, and Other Agricultural Managers",
+        "score": 0.8551
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8565,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "studio_manager",
+      "representative_titles": [
+        {
+          "title": "Studio Manager",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "financial_analyst",
+        "role_family": "finance",
+        "score": 0.6415
+      },
+      "top_esco_candidate": {
+        "label": "art administrator",
+        "score": 0.8701
+      },
+      "top_onet_candidate": {
+        "label": "Fitness and Wellness Coordinators",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8536,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "accounts_receivable_specialist",
+      "representative_titles": [
+        {
+          "title": "Accounts Receivable Specialist",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "financial_analyst",
+        "role_family": "finance",
+        "score": 0.7947
+      },
+      "top_esco_candidate": {
+        "label": "billing clerk",
+        "score": 0.6821
+      },
+      "top_onet_candidate": {
+        "label": "Bookkeeping, Accounting, and Auditing Clerks",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8456,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "investor_relations_manager",
+      "representative_titles": [
+        {
+          "title": "Investor Relations Manager",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "operations_specialist",
+        "role_family": "operations",
+        "score": 0.6436
+      },
+      "top_esco_candidate": {
+        "label": "investor relations manager",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Fundraising Managers",
+        "score": 0.8267
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.845,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "manager_account_management",
+      "representative_titles": [
+        {
+          "title": "Manager, Account Management",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "account_manager",
+        "role_family": "sales",
+        "score": 0.7877
+      },
+      "top_esco_candidate": {
+        "label": "sales account manager",
+        "score": 0.7877
+      },
+      "top_onet_candidate": {
+        "label": "Data Warehousing Specialists",
+        "score": 0.8223
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8355,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "roofing_sales_representative",
+      "representative_titles": [
+        {
+          "title": "Jr. Roofing Sales Representative",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "business_development_representative",
+        "role_family": "sales",
+        "score": 0.6565
+      },
+      "top_esco_candidate": {
+        "label": "commercial sales representative",
+        "score": 0.8398
+      },
+      "top_onet_candidate": {
+        "label": "Retail Salespersons",
+        "score": 0.8398
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.829,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    },
+    {
+      "cluster_name": "cloud_operations_engineer",
+      "representative_titles": [
+        {
+          "title": "Cloud Operations Engineer",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "sales_engineer",
+        "role_family": "sales",
+        "score": 0.658
+      },
+      "top_esco_candidate": {
+        "label": "quarry manager",
+        "score": 0.7567
+      },
+      "top_onet_candidate": {
+        "label": "Industrial Engineers",
+        "score": 0.8615
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.806,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "data_center_engineer",
+      "representative_titles": [
+        {
+          "title": "Data Center Engineer",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "data_engineer",
+        "role_family": "data_engineering",
+        "score": 0.7454
+      },
+      "top_esco_candidate": {
+        "label": "data engineer",
+        "score": 0.7454
+      },
+      "top_onet_candidate": {
+        "label": "Database Administrators",
+        "score": 0.7454
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.7854,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "front_desk_coordinator",
+      "representative_titles": [
+        {
+          "title": "Front Desk Coordinator",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "operations_specialist",
+        "role_family": "operations",
+        "score": 0.645
+      },
+      "top_esco_candidate": {
+        "label": "event assistant",
+        "score": 0.6955
+      },
+      "top_onet_candidate": {
+        "label": "Hotel, Motel, and Resort Desk Clerks",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.7662,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "analyst_financial_modeling",
+      "representative_titles": [
+        {
+          "title": "Analyst, Financial Modeling",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "financial_analyst",
+        "role_family": "finance",
+        "score": 0.7327
+      },
+      "top_esco_candidate": {
+        "label": "financial analyst",
+        "score": 0.7327
+      },
+      "top_onet_candidate": {
+        "label": "Financial and Investment Analysts",
+        "score": 0.7327
+      },
+      "support_strength": "weak",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.7327,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "director_platform_sales",
+      "representative_titles": [
+        {
+          "title": "Director, Platform Sales",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "sales_manager",
+        "role_family": "sales",
+        "score": 0.7009
+      },
+      "top_esco_candidate": {
+        "label": "construction scaffolder",
+        "score": 0.699
+      },
+      "top_onet_candidate": {
+        "label": "Sales Managers",
+        "score": 0.6524
+      },
+      "support_strength": "weak",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.6896,
+      "overmatch_risk": "low",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "specialist_facilities_property_operations",
+      "representative_titles": [
+        {
+          "title": "Specialist II, Facilities, Property Operations",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "operations_specialist",
+        "role_family": "operations",
+        "score": 0.6434
+      },
+      "top_esco_candidate": {
+        "label": "rail operations manager",
+        "score": 0.6241
+      },
+      "top_onet_candidate": {
+        "label": "Facilities Managers",
+        "score": 0.7588
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.655,
+      "overmatch_risk": "medium",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "operations_specialist_freelance_project",
+      "representative_titles": [
+        {
+          "title": "Operations Associate Specialist - Freelance Project",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "operations_specialist",
+        "role_family": "operations",
+        "score": 0.7091
+      },
+      "top_esco_candidate": {
+        "label": "rail operations manager",
+        "score": 0.635
+      },
+      "top_onet_candidate": {
+        "label": "Industrial Engineering Technologists and Technicians",
+        "score": 0.7091
+      },
+      "support_strength": "weak",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.6424,
+      "overmatch_risk": "medium",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "product_operations_analyst_product_analytics",
+      "representative_titles": [
+        {
+          "title": "Product Operations Analyst - Product Analytics",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "data_analyst",
+        "role_family": "data_analytics",
+        "score": 0.6744
+      },
+      "top_esco_candidate": {
+        "label": "fish production operator",
+        "score": 0.6159
+      },
+      "top_onet_candidate": {
+        "label": "Operations Research Analysts",
+        "score": 0.707
+      },
+      "support_strength": "weak",
+      "semantic_confidence": "low",
+      "semantic_confidence_score": 0.6186,
+      "overmatch_risk": "medium",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    }
+  ],
+  "candidate_safe_batch_shortlist": [
+    {
+      "cluster_name": "firmware_engineer",
+      "representative_titles": [
+        {
+          "title": "Senior Firmware Engineer",
+          "count": 15
+        },
+        {
+          "title": "Firmware Engineer",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 25,
+      "top_internal_candidate": {
+        "label": "software_engineer",
+        "role_family": "software_engineering",
+        "score": 0.7739
+      },
+      "top_esco_candidate": {
+        "label": "fire protection technician",
+        "score": 0.8182
+      },
+      "top_onet_candidate": {
+        "label": "Blockchain Engineers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9147,
+      "overmatch_risk": "medium",
+      "verdict": "promote_with_tighter_rule",
+      "recommended_action": "tight_rule_candidate"
+    },
+    {
+      "cluster_name": "onboarding_specialist",
+      "representative_titles": [
+        {
+          "title": "Onboarding Specialist",
+          "count": 13
+        }
+      ],
+      "estimated_volume": 13,
+      "top_internal_candidate": {
+        "label": "marketing_specialist",
+        "role_family": "marketing",
+        "score": 0.7081
+      },
+      "top_esco_candidate": {
+        "label": "debarker operator",
+        "score": 0.7598
+      },
+      "top_onet_candidate": {
+        "label": "Medical Records Specialists",
+        "score": 0.8025
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.781,
+      "overmatch_risk": "medium",
+      "verdict": "needs_taxonomy_decision",
+      "recommended_action": "taxonomy_gap_do_not_promote_yet"
+    },
+    {
+      "cluster_name": "product_support_specialist",
+      "representative_titles": [
+        {
+          "title": "Product Support Specialist",
+          "count": 11
+        }
+      ],
+      "estimated_volume": 11,
+      "top_internal_candidate": {
+        "label": "it_support_specialist",
+        "role_family": "it_operations",
+        "score": 0.8537
+      },
+      "top_esco_candidate": {
+        "label": "textile product developer",
+        "score": 0.7205
+      },
+      "top_onet_candidate": {
+        "label": "Computer User Support Specialists",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9366,
+      "overmatch_risk": "low",
+      "verdict": "promote_safe",
+      "recommended_action": "safe_rule_candidate"
+    }
+  ],
+  "taxonomy_gap_list": [
+    {
+      "cluster_name": "onboarding_specialist",
+      "representative_titles": [
+        {
+          "title": "Onboarding Specialist",
+          "count": 13
+        }
+      ],
+      "estimated_volume": 13,
+      "top_internal_candidate": {
+        "label": "marketing_specialist",
+        "role_family": "marketing",
+        "score": 0.7081
+      },
+      "top_esco_candidate": {
+        "label": "debarker operator",
+        "score": 0.7598
+      },
+      "top_onet_candidate": {
+        "label": "Medical Records Specialists",
+        "score": 0.8025
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.781,
+      "overmatch_risk": "medium",
+      "verdict": "needs_taxonomy_decision",
+      "recommended_action": "taxonomy_gap_do_not_promote_yet"
+    }
+  ],
+  "failure_modes": [
+    {
+      "cluster_name": "engineer",
+      "representative_titles": [
+        {
+          "title": "Principal Engineer",
+          "count": 16
+        },
+        {
+          "title": "Senior Engineer",
+          "count": 10
+        },
+        {
+          "title": "Staff Engineer",
+          "count": 7
+        },
+        {
+          "title": "Senior Staff Engineer",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 39,
+      "top_internal_candidate": {
+        "label": "ml_engineer",
+        "role_family": "machine_learning",
+        "score": 0.828
+      },
+      "top_esco_candidate": {
+        "label": "ship assistant engineer",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Logistics Engineers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8854,
+      "overmatch_risk": "high",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "designer",
+      "representative_titles": [
+        {
+          "title": "Designer",
+          "count": 11
+        },
+        {
+          "title": "Senior Designer",
+          "count": 8
+        },
+        {
+          "title": "Designer II",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 25,
+      "top_internal_candidate": {
+        "label": "product_designer",
+        "role_family": "design",
+        "score": 0.828
+      },
+      "top_esco_candidate": {
+        "label": "art director",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Video Game Designers",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.9154,
+      "overmatch_risk": "high",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "production",
+      "representative_titles": [
+        {
+          "title": "Production Lead",
+          "count": 12
+        },
+        {
+          "title": "Production Associate",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 20,
+      "top_internal_candidate": {
+        "label": "manufacturing_engineer",
+        "role_family": "industrial_engineering",
+        "score": 0.7118
+      },
+      "top_esco_candidate": {
+        "label": "set buyer",
+        "score": 0.7619
+      },
+      "top_onet_candidate": {
+        "label": "Production, Planning, and Expediting Clerks",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.7979,
+      "overmatch_risk": "high",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "sales_enablement_manager",
+      "representative_titles": [
+        {
+          "title": "Sales Enablement Manager",
+          "count": 13
+        }
+      ],
+      "estimated_volume": 13,
+      "top_internal_candidate": {
+        "label": "sales_manager",
+        "role_family": "sales",
+        "score": 0.6698
+      },
+      "top_esco_candidate": {
+        "label": "sales account manager",
+        "score": 0.7097
+      },
+      "top_onet_candidate": {
+        "label": "First-Line Supervisors of Retail Sales Workers",
+        "score": 0.7
+      },
+      "support_strength": "weak",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.6356,
+      "overmatch_risk": "medium",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "people_partner",
+      "representative_titles": [
+        {
+          "title": "People Partner",
+          "count": 7
+        },
+        {
+          "title": "Senior People Partner",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 13,
+      "top_internal_candidate": {
+        "label": "people_business_partner",
+        "role_family": "people_operations",
+        "score": 0.739
+      },
+      "top_esco_candidate": {
+        "label": "talent acquisition manager",
+        "score": 0.4556
+      },
+      "top_onet_candidate": {
+        "label": "Patient Representatives",
+        "score": 0.614
+      },
+      "support_strength": "none",
+      "semantic_confidence": "low",
+      "semantic_confidence_score": 0.5971,
+      "overmatch_risk": "medium",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "operations",
+      "representative_titles": [
+        {
+          "title": "Operations Associate",
+          "count": 10
+        }
+      ],
+      "estimated_volume": 10,
+      "top_internal_candidate": {
+        "label": "operations_specialist",
+        "role_family": "operations",
+        "score": 0.7103
+      },
+      "top_esco_candidate": {
+        "label": "laser beam welder",
+        "score": 0.7619
+      },
+      "top_onet_candidate": {
+        "label": "First-Line Supervisors of Firefighting and Prevention Workers",
+        "score": 0.7619
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.7035,
+      "overmatch_risk": "high",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "director_enterprise_sales",
+      "representative_titles": [
+        {
+          "title": "Director, Enterprise Sales",
+          "count": 9
+        }
+      ],
+      "estimated_volume": 9,
+      "top_internal_candidate": {
+        "label": "sales_manager",
+        "role_family": "sales",
+        "score": 0.6471
+      },
+      "top_esco_candidate": {
+        "label": "sales manager",
+        "score": 0.621
+      },
+      "top_onet_candidate": {
+        "label": "Sales Engineers",
+        "score": 0.7187
+      },
+      "support_strength": "weak",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.6573,
+      "overmatch_risk": "low",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "partner_success_manager",
+      "representative_titles": [
+        {
+          "title": "Partner Success Manager",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 8,
+      "top_internal_candidate": {
+        "label": "customer_success_manager",
+        "role_family": "customer_success",
+        "score": 0.6976
+      },
+      "top_esco_candidate": {
+        "label": "foundry manager",
+        "score": 0.6497
+      },
+      "top_onet_candidate": {
+        "label": "Rehabilitation Counselors",
+        "score": 0.7402
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.6864,
+      "overmatch_risk": "high",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "product_analytics_team_new_products",
+      "representative_titles": [
+        {
+          "title": "Product Analytics Team Lead, New Products",
+          "count": 8
+        }
+      ],
+      "estimated_volume": 8,
+      "top_internal_candidate": {
+        "label": "data_analyst",
+        "role_family": "data_analytics",
+        "score": 0.6422
+      },
+      "top_esco_candidate": {
+        "label": "plastic products assembler",
+        "score": 0.6035
+      },
+      "top_onet_candidate": {
+        "label": "Food Preparation Workers",
+        "score": 0.6263
+      },
+      "support_strength": "none",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.6299,
+      "overmatch_risk": "low",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "architect",
+      "representative_titles": [
+        {
+          "title": "Architect",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "solutions_architect",
+        "role_family": "architecture",
+        "score": 0.6708
+      },
+      "top_esco_candidate": {
+        "label": "architect",
+        "score": 1.0
+      },
+      "top_onet_candidate": {
+        "label": "Architects, Except Landscape and Naval",
+        "score": 1.0
+      },
+      "support_strength": "strong",
+      "semantic_confidence": "high",
+      "semantic_confidence_score": 0.8289,
+      "overmatch_risk": "high",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "plan_documents_specialist_freelance_project",
+      "representative_titles": [
+        {
+          "title": "Plan Documents Specialist - Freelance Project",
+          "count": 7
+        }
+      ],
+      "estimated_volume": 7,
+      "top_internal_candidate": {
+        "label": "ai_trainer_specialist",
+        "role_family": "operations",
+        "score": 0.6414
+      },
+      "top_esco_candidate": {
+        "label": "document management officer",
+        "score": 0.5528
+      },
+      "top_onet_candidate": {
+        "label": "Document Management Specialists",
+        "score": 0.603
+      },
+      "support_strength": "none",
+      "semantic_confidence": "low",
+      "semantic_confidence_score": 0.5628,
+      "overmatch_risk": "medium",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "specialist_facilities_property_operations",
+      "representative_titles": [
+        {
+          "title": "Specialist II, Facilities, Property Operations",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "operations_specialist",
+        "role_family": "operations",
+        "score": 0.6434
+      },
+      "top_esco_candidate": {
+        "label": "rail operations manager",
+        "score": 0.6241
+      },
+      "top_onet_candidate": {
+        "label": "Facilities Managers",
+        "score": 0.7588
+      },
+      "support_strength": "medium",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.655,
+      "overmatch_risk": "medium",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "operations_specialist_freelance_project",
+      "representative_titles": [
+        {
+          "title": "Operations Associate Specialist - Freelance Project",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "operations_specialist",
+        "role_family": "operations",
+        "score": 0.7091
+      },
+      "top_esco_candidate": {
+        "label": "rail operations manager",
+        "score": 0.635
+      },
+      "top_onet_candidate": {
+        "label": "Industrial Engineering Technologists and Technicians",
+        "score": 0.7091
+      },
+      "support_strength": "weak",
+      "semantic_confidence": "medium",
+      "semantic_confidence_score": 0.6424,
+      "overmatch_risk": "medium",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    },
+    {
+      "cluster_name": "product_operations_analyst_product_analytics",
+      "representative_titles": [
+        {
+          "title": "Product Operations Analyst - Product Analytics",
+          "count": 6
+        }
+      ],
+      "estimated_volume": 6,
+      "top_internal_candidate": {
+        "label": "data_analyst",
+        "role_family": "data_analytics",
+        "score": 0.6744
+      },
+      "top_esco_candidate": {
+        "label": "fish production operator",
+        "score": 0.6159
+      },
+      "top_onet_candidate": {
+        "label": "Operations Research Analysts",
+        "score": 0.707
+      },
+      "support_strength": "weak",
+      "semantic_confidence": "low",
+      "semantic_confidence_score": 0.6186,
+      "overmatch_risk": "medium",
+      "verdict": "keep_other_for_now",
+      "recommended_action": "keep_other_for_now"
+    }
+  ],
+  "final_recommendation": {
+    "decision": "semantic_layer_not_yet_actionable",
+    "reason": "Signal is still mixed and not enough high-confidence clusters pass conservative guardrails."
+  }
+}

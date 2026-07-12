@@ -1,0 +1,504 @@
+{
+  "input_path": "data/jobs/jobs_titled_en_recovery_v7.jsonl",
+  "rows_total": 81011,
+  "invalid_rows": 0,
+  "counts_by_normalized_title": {
+    "other": 41628,
+    "marketing_specialist": 2481,
+    "account_executive": 3201,
+    "accountant": 590,
+    "engineering_manager": 892,
+    "customer_success_manager": 737,
+    "project_manager": 1161,
+    "legal_counsel": 773,
+    "data_analyst": 428,
+    "software_engineer": 9348,
+    "product_designer": 529,
+    "business_development_representative": 945,
+    "data_scientist": 545,
+    "analytics_engineer": 134,
+    "account_manager": 1980,
+    "product_manager": 1820,
+    "sales_manager": 693,
+    "sales_engineer": 1067,
+    "financial_analyst": 316,
+    "data_engineer": 730,
+    "technical_program_manager": 343,
+    "operations_specialist": 1396,
+    "it_support_specialist": 151,
+    "solutions_architect": 664,
+    "executive_assistant": 126,
+    "site_reliability_engineer": 324,
+    "people_business_partner": 170,
+    "ml_engineer": 773,
+    "technical_recruiter": 491,
+    "compliance_manager": 229,
+    "behavioral_support_specialist": 251,
+    "devops_engineer": 326,
+    "compliance_specialist": 410,
+    "driver": 390,
+    "technician": 561,
+    "mechanical_engineer": 273,
+    "nurse_practitioner": 782,
+    "medical_assistant": 76,
+    "electrical_engineer": 198,
+    "store_associate": 495,
+    "assistant_teacher": 89,
+    "substitute_teacher": 105,
+    "physician": 286,
+    "psychotherapist": 312,
+    "psychiatrist": 370,
+    "manufacturing_engineer": 167,
+    "registered_nurse": 147,
+    "licensed_practical_nurse": 67,
+    "mechanic": 286,
+    "car_detailer": 142,
+    "delivery_driver": 198,
+    "customer_service_specialist": 75,
+    "health_information_specialist": 84,
+    "field_technician": 106,
+    "wealth_advisor": 63,
+    "teacher": 87
+  },
+  "counts_by_role_family": {
+    "other": 41628,
+    "marketing": 2481,
+    "sales": 8381,
+    "finance": 969,
+    "software_engineering": 10240,
+    "customer_success": 737,
+    "program_management": 1504,
+    "legal": 773,
+    "data_analytics": 562,
+    "design": 529,
+    "data_science": 545,
+    "product_management": 1820,
+    "data_engineering": 730,
+    "operations": 1471,
+    "it_operations": 151,
+    "architecture": 664,
+    "administrative_support": 126,
+    "sre": 324,
+    "people_operations": 170,
+    "machine_learning": 773,
+    "recruiting": 491,
+    "compliance_risk": 639,
+    "healthcare_clinical": 2375,
+    "devops": 326,
+    "logistics": 588,
+    "skilled_trades": 1095,
+    "industrial_engineering": 638,
+    "education": 281
+  },
+  "counts_by_status": {
+    "other": 41628,
+    "matched": 39383
+  },
+  "top_other_titles": [
+    {
+      "title_clean": "General Manager",
+      "count": 40
+    },
+    {
+      "title_clean": "Senior Market Strategy and Partnerships Manager",
+      "count": 36
+    },
+    {
+      "title_clean": "Hair Color Bar Assistant, Licensed Cosmetologist",
+      "count": 32
+    },
+    {
+      "title_clean": "General Application",
+      "count": 31
+    },
+    {
+      "title_clean": "Producer",
+      "count": 27
+    },
+    {
+      "title_clean": "Social Enterprise and Program Delivery-Evergreen",
+      "count": 27
+    },
+    {
+      "title_clean": "Stylist (Retail) (Part-time)",
+      "count": 27
+    },
+    {
+      "title_clean": "Personal Care Specialist (Part Time)",
+      "count": 26
+    },
+    {
+      "title_clean": "Senior Systems Engineer",
+      "count": 25
+    },
+    {
+      "title_clean": "Floor Lead (Retail) (Part-time)",
+      "count": 25
+    },
+    {
+      "title_clean": "Quantitative Researcher",
+      "count": 24
+    },
+    {
+      "title_clean": "Senior Network Engineer",
+      "count": 23
+    },
+    {
+      "title_clean": "Network Engineer",
+      "count": 22
+    },
+    {
+      "title_clean": "Business Analyst",
+      "count": 20
+    },
+    {
+      "title_clean": "Board Certified Behavior Analyst",
+      "count": 20
+    },
+    {
+      "title_clean": "Field Technician (Mechanic) (Pump, Power & HVAC)",
+      "count": 20
+    },
+    {
+      "title_clean": "Solution Specialist",
+      "count": 20
+    },
+    {
+      "title_clean": "Sonder Responder",
+      "count": 19
+    },
+    {
+      "title_clean": "Restaurant General Manager",
+      "count": 19
+    },
+    {
+      "title_clean": "Story Desk Editor",
+      "count": 19
+    },
+    {
+      "title_clean": "Manager, Software Engineering",
+      "count": 18
+    },
+    {
+      "title_clean": "Systems Engineer",
+      "count": 18
+    },
+    {
+      "title_clean": "Cultivation Associate",
+      "count": 18
+    },
+    {
+      "title_clean": "K-5th Grade Teacher - SY 26-27",
+      "count": 17
+    },
+    {
+      "title_clean": "Technical Writer",
+      "count": 17
+    },
+    {
+      "title_clean": "Leader in Training",
+      "count": 17
+    },
+    {
+      "title_clean": "Outside Sales Representative - Roofing",
+      "count": 17
+    },
+    {
+      "title_clean": "Technical Support Specialist",
+      "count": 16
+    },
+    {
+      "title_clean": "Data Science Manager",
+      "count": 16
+    },
+    {
+      "title_clean": "Principal Engineer",
+      "count": 16
+    },
+    {
+      "title_clean": "Auto Body Repair Technician",
+      "count": 16
+    },
+    {
+      "title_clean": "Bilingual Member Services Representative (Remote, Spanish Speaking)",
+      "count": 16
+    },
+    {
+      "title_clean": "Intelligence Operations Integrator",
+      "count": 16
+    },
+    {
+      "title_clean": "Senior Firmware Engineer",
+      "count": 15
+    },
+    {
+      "title_clean": "Manager, Paid Social",
+      "count": 15
+    },
+    {
+      "title_clean": "Commercial HVAC Service Technician",
+      "count": 15
+    },
+    {
+      "title_clean": "Senior Technical Enablement Architect",
+      "count": 15
+    },
+    {
+      "title_clean": "Specialty Pharmacy Technician",
+      "count": 15
+    },
+    {
+      "title_clean": "Instructional Aide",
+      "count": 14
+    },
+    {
+      "title_clean": "DevSecOps Engineer",
+      "count": 14
+    },
+    {
+      "title_clean": "Occupational Therapist",
+      "count": 14
+    },
+    {
+      "title_clean": "Chief of Staff",
+      "count": 14
+    },
+    {
+      "title_clean": "Automotive Wheel Repair Technician",
+      "count": 14
+    },
+    {
+      "title_clean": "Restaurant Manager",
+      "count": 14
+    },
+    {
+      "title_clean": "IT Support Engineer",
+      "count": 13
+    },
+    {
+      "title_clean": "HR Generalist",
+      "count": 13
+    },
+    {
+      "title_clean": "Sales Enablement Manager",
+      "count": 13
+    },
+    {
+      "title_clean": "Office Manager",
+      "count": 13
+    },
+    {
+      "title_clean": "Media Manager",
+      "count": 13
+    },
+    {
+      "title_clean": "Android Engineer",
+      "count": 13
+    }
+  ],
+  "top_matched_titles": [
+    {
+      "title_clean": "Psychiatric Mental Health Nurse Practitioner (PMHNP)",
+      "count": 381
+    },
+    {
+      "title_clean": "Psychiatrist (MD)",
+      "count": 324
+    },
+    {
+      "title_clean": "Senior Software Engineer",
+      "count": 285
+    },
+    {
+      "title_clean": "CDL Drivers",
+      "count": 279
+    },
+    {
+      "title_clean": "Future Technicians",
+      "count": 279
+    },
+    {
+      "title_clean": "Territory Account Managers",
+      "count": 273
+    },
+    {
+      "title_clean": "Senior Data Engineer",
+      "count": 224
+    },
+    {
+      "title_clean": "Sales Development Representative",
+      "count": 204
+    },
+    {
+      "title_clean": "Account Executive",
+      "count": 202
+    },
+    {
+      "title_clean": "Psychotherapist",
+      "count": 177
+    },
+    {
+      "title_clean": "Enterprise Account Executive",
+      "count": 157
+    },
+    {
+      "title_clean": "Staff Software Engineer",
+      "count": 143
+    },
+    {
+      "title_clean": "Software Engineer",
+      "count": 131
+    },
+    {
+      "title_clean": "Customer Success Manager",
+      "count": 127
+    },
+    {
+      "title_clean": "Senior Performance Copywriter, Personal Finance",
+      "count": 118
+    },
+    {
+      "title_clean": "Senior Product Manager",
+      "count": 115
+    },
+    {
+      "title_clean": "Business Development Representative",
+      "count": 114
+    },
+    {
+      "title_clean": "Lead Data Engineer",
+      "count": 114
+    },
+    {
+      "title_clean": "Heavy Equipment Field Technician (Mechanic)",
+      "count": 103
+    },
+    {
+      "title_clean": "Retail Sales Associate - Part Time",
+      "count": 102
+    },
+    {
+      "title_clean": "Senior Product Designer",
+      "count": 101
+    },
+    {
+      "title_clean": "Territory Account Manager",
+      "count": 98
+    },
+    {
+      "title_clean": "Data Engineer",
+      "count": 91
+    },
+    {
+      "title_clean": "Account Manager",
+      "count": 87
+    },
+    {
+      "title_clean": "Heavy Equipment Shop Technician (Mechanic)",
+      "count": 85
+    },
+    {
+      "title_clean": "Product Manager",
+      "count": 82
+    },
+    {
+      "title_clean": "Engineering Manager",
+      "count": 77
+    },
+    {
+      "title_clean": "Assistant Teacher",
+      "count": 73
+    },
+    {
+      "title_clean": "Customer Service Delivery Advocate",
+      "count": 73
+    },
+    {
+      "title_clean": "Substitute Teacher",
+      "count": 72
+    },
+    {
+      "title_clean": "Senior DevOps Engineer",
+      "count": 70
+    },
+    {
+      "title_clean": "Customer Delivery Driver",
+      "count": 70
+    },
+    {
+      "title_clean": "Compliance Manager",
+      "count": 65
+    },
+    {
+      "title_clean": "Senior Data Scientist",
+      "count": 63
+    },
+    {
+      "title_clean": "Senior Backend Engineer",
+      "count": 63
+    },
+    {
+      "title_clean": "Compliance Specialist",
+      "count": 63
+    },
+    {
+      "title_clean": "Project Manager",
+      "count": 62
+    },
+    {
+      "title_clean": "Sales Manager_Chinese Vertical",
+      "count": 62
+    },
+    {
+      "title_clean": "Senior Machine Learning Engineer",
+      "count": 61
+    },
+    {
+      "title_clean": "Senior Accountant",
+      "count": 61
+    },
+    {
+      "title_clean": "Psychotherapists",
+      "count": 61
+    },
+    {
+      "title_clean": "Legal Process Server",
+      "count": 60
+    },
+    {
+      "title_clean": "Car Detailer",
+      "count": 60
+    },
+    {
+      "title_clean": "Affiliate Compliance Manager",
+      "count": 60
+    },
+    {
+      "title_clean": "Affiliate Compliance Specialist",
+      "count": 60
+    },
+    {
+      "title_clean": "Compliance Analyst, FinTech",
+      "count": 60
+    },
+    {
+      "title_clean": "Compliance Associate, FinTech",
+      "count": 60
+    },
+    {
+      "title_clean": "Compliance Manager, FinTech",
+      "count": 60
+    },
+    {
+      "title_clean": "Lead Video Ad Copywriter",
+      "count": 60
+    },
+    {
+      "title_clean": "Lead Video Copywriter",
+      "count": 60
+    }
+  ],
+  "sample_matched_rows_file": "docs/title_recovery_pass_v7/sample_title_matched_step13.jsonl",
+  "sample_other_rows_file": "docs/title_recovery_pass_v7/sample_title_other_step13.jsonl",
+  "other_clusters_file": "docs/title_recovery_pass_v7/title_other_clusters_step13.json"
+}

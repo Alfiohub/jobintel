@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Notifications / Needs Attention</h1>
+<p class="muted"><strong>Signals view.</strong> Use this page for attention signals; execute in Today, maintain in Review.</p>
+<div class="toolbar">
+  <a href="/admin/today">Open Today view</a>
+  <a href="/admin/review">Open Review view</a>
+  <a href="/admin/saved-searches">Open Saved Searches</a>
+</div>
+{% if not items %}
+<p class="muted">No attention items right now. Continue daily execution in Today and run weekly cleanup in Review.</p>
+{% else %}
+<table>
+  <thead>
+    <tr>
+      <th>Priority</th>
+      <th>Type</th>
+      <th>Title</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for it in items %}
+    <tr>
+      <td>
+        {% if it.priority == "high" %}
+          <span class="badge badge-delivery-err">high</span>
+        {% elif it.priority == "medium" %}
+          <span class="badge badge-delivery-skip">medium</span>
+        {% else %}
+          <span class="badge">low</span>
+        {% endif %}
+      </td>
+      <td><span class="mono">{{ it.type }}</span></td>
+      <td>{{ it.title }}</td>
+      <td><a href="{{ it.href }}">Open</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+{% endblock %}

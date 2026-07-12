@@ -1,0 +1,93 @@
+{
+  "baseline": {
+    "dataset": "data/jobs/jobs_titled_en_recovery_v58_recoverability_batch.jsonl",
+    "other_before": 35732
+  },
+  "shadow_result": {
+    "output_dataset": "data/jobs/jobs_titled_en_recovery_v59_customer_success_shadow.jsonl",
+    "matches_added": 12,
+    "other_after": 35720,
+    "delta_other": -12,
+    "rule_hits": {
+      "ctx_customer_success_lane_v1": 12
+    }
+  },
+  "sample_matches": [
+    {
+      "url": "https://job-boards.eu.greenhouse.io/amenitiz/jobs/4765645101",
+      "title_clean": "Customer Onboarding Specialist - French Market",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://job-boards.eu.greenhouse.io/cision/jobs/4745539101",
+      "title_clean": "Onboarding Specialist",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://www.clever.com/about/careers?gh_jid=7600446",
+      "title_clean": "Technical Onboarding Specialist [Contract]",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/glossgenius/jobs/7581091003",
+      "title_clean": "Onboarding Specialist",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://www.housecallpro.com/careers/open-positions/?gh_jid=4286314004",
+      "title_clean": "SaaS Onboarding Specialist",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://www.hubspot.com/careers/jobs/7589346?gh_jid=7589346",
+      "title_clean": "Customer Onboarding Specialist",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/lightspeedhq/jobs/7620025",
+      "title_clean": "Manager, Customer Adoption & Success (EMEA)",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/lightspeedhq/jobs/7757924",
+      "title_clean": "Manager, Customer Adoption & Success (EMEA)",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/m3/jobs/7592709003",
+      "title_clean": "Onboarding Specialist III",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://boards.eu.greenhouse.io/nice/jobs/4795139101?gh_jid=4795139101",
+      "title_clean": "Service Enablement Manager, CX",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/podium81/jobs/7597038",
+      "title_clean": "AI Onboarding Specialist",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/podium81/jobs/7557676",
+      "title_clean": "AI Onboarding Specialist - Automotive",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    }
+  ],
+  "final_recommendation": {
+    "decision": "customer_success_shadow_lane_needs_more_work",
+    "reason": "Signal exists, but the narrowed customer-success subset is still too small for the next production-candidate review."
+  }
+}

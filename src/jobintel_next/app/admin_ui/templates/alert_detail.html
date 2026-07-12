@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Alert Run {{ run.run_id }}</h1>
+<div class="kpi-grid">
+  <div class="kpi"><div class="k">Run timestamp</div><div class="v mono">{{ run.run_timestamp }}</div></div>
+  <div class="kpi"><div class="k">Total new matches</div><div class="v">{{ run.total_new_matches }}</div></div>
+  <div class="kpi"><div class="k">Processed OK</div><div class="v">{{ run.processed_ok }}</div></div>
+  <div class="kpi"><div class="k">Processed Error</div><div class="v">{{ run.processed_error }}</div></div>
+</div>
+{% if run.email_delivery %}
+<p>
+  <strong>Email delivery:</strong>
+  attempted={{ run.email_delivery.attempted_count or 0 }},
+  sent={{ run.email_delivery.sent_count or 0 }},
+  skipped={{ run.email_delivery.skipped_count or 0 }},
+  errors={{ run.email_delivery.error_count or 0 }}
+  {% if run.email_delivery.delivery_timestamp %}<br><span class="mono">delivery_timestamp={{ run.email_delivery.delivery_timestamp }}</span>{% endif %}
+  {% if run.email_delivery.attempted_at %}<br><span class="mono">attempted_at={{ run.email_delivery.attempted_at }}</span>{% endif %}
+  {% if run.email_delivery.to_email %}<br><span class="mono">to={{ run.email_delivery.to_email }}</span>{% endif %}
+</p>
+{% endif %}
+{% if run.digest_delivery %}
+<p>
+  <strong>Digest delivery:</strong>
+  {% if run.digest_delivery.email_sent %}
+    <span class="badge badge-delivery-ok">sent</span>
+  {% elif run.digest_delivery.email_error %}
+    <span class="badge badge-delivery-err">error</span>
+  {% else %}
+    <span class="badge badge-delivery-skip">skipped</span>
+  {% endif %}
+  attempted={{ run.digest_delivery.attempted_count or 0 }},
+  sent={{ run.digest_delivery.sent_count or 0 }},
+  skipped={{ run.digest_delivery.skipped_count or 0 }},
+  errors={{ run.digest_delivery.error_count or 0 }}
+  {% if run.digest_delivery.delivery_timestamp %}<br><span class="mono">delivery_timestamp={{ run.digest_delivery.delivery_timestamp }}</span>{% endif %}
+  {% if run.digest_delivery.attempted_at %}<br><span class="mono">attempted_at={{ run.digest_delivery.attempted_at }}</span>{% endif %}
+  {% if run.digest_delivery.to_email %}<br><span class="mono">to={{ run.digest_delivery.to_email }}</span>{% endif %}
+</p>
+<p class="muted mono">
+  Manual resend:
+  uv run jobintel-next alerts resend-digest --run-json {{ run.json_report_path }}{% if run.digest_delivery.to_email %} --to {{ run.digest_delivery.to_email }}{% endif %}
+</p>
+{% endif %}
+<div class="toolbar">
+  <a href="/admin/alerts">Back to alerts</a>
+  <a href="/admin/inbox">Open inbox</a>
+  <a href="/admin/saved-searches">Saved searches</a>
+</div>
+
+<h2>Saved Search Results</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Frequency</th>
+      <th>Status</th>
+      <th>Total Current</th>
+      <th>New</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for r in run.results %}
+    <tr>
+      <td>{{ r.name }}</td>
+      <td>{{ r.query_type }}</td>
+      <td>{{ r.frequency or "-" }}</td>
+      <td>{{ r.status }}</td>
+      <td>{{ r.total_current_matches }}</td>
+      <td>{{ r.new_matches_count }}</td>
+    </tr>
+    {% if r.sample_new_matches %}
+    <tr>
+      <td colspan="6">
+        <strong>Sample new matches</strong> <span class="badge">{{ r.new_matches_count }} new</span>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>URL</th>
+              <th>Signals</th>
+              <th>Current State</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in r.sample_new_matches %}
+            {% set job_url = row.url %}
+            <tr>
+              <td>
+                <strong>{{ row.title_raw or "-" }}</strong><br>
+                <span class="muted mono">{{ row.normalized_title or "-" }}</span>
+              </td>
+              <td>
+                {% if job_url %}
+                  <a class="mono" href="{{ job_url }}" target="_blank" rel="noopener noreferrer">{{ job_url }}</a>
+                {% else %}
+                  -
+                {% endif %}
+              </td>
+              <td>
+                <span class="badge">{{ row.role_family or "other" }}</span>
+                {% if row.location_type == "remote" %}
+                  <span class="badge badge-loc-remote">remote</span>
+                {% elif row.location_type == "hybrid" %}
+                  <span class="badge badge-loc-hybrid">hybrid</span>
+                {% elif row.location_type == "onsite" %}
+                  <span class="badge badge-loc-onsite">onsite</span>
+                {% endif %}
+                {% if row.has_salary %}
+                  <span class="badge badge-salary-yes">salary</span>
+                {% else %}
+                  <span class="badge badge-salary-no">no salary</span>
+                {% endif %}
+              </td>
+              <td><span class="badge badge-state-{{ states_by_url.get(job_url, 'new') }}">{{ states_by_url.get(job_url, "new") }}</span></td>
+              <td class="row-actions">
+                {% if job_url %}
+                <form method="post" action="/admin/jobs/state">
+                  <input type="hidden" name="job_url" value="{{ job_url }}">
+                  <input type="hidden" name="state" value="seen">
+                  <input type="hidden" name="next" value="/admin/alerts/{{ run.run_id }}">
+                  <button type="submit">Seen</button>
+                </form>
+                <form method="post" action="/admin/jobs/state">
+                  <input type="hidden" name="job_url" value="{{ job_url }}">
+                  <input type="hidden" name="state" value="saved">
+                  <input type="hidden" name="next" value="/admin/alerts/{{ run.run_id }}">
+                  <button type="submit">Save</button>
+                </form>
+                <form method="post" action="/admin/jobs/state">
+                  <input type="hidden" name="job_url" value="{{ job_url }}">
+                  <input type="hidden" name="state" value="dismissed">
+                  <input type="hidden" name="next" value="/admin/alerts/{{ run.run_id }}">
+                  <button type="submit">Dismiss</button>
+                </form>
+                <form method="post" action="/admin/jobs/state/clear">
+                  <input type="hidden" name="job_url" value="{{ job_url }}">
+                  <input type="hidden" name="next" value="/admin/alerts/{{ run.run_id }}">
+                  <button type="submit">Reset</button>
+                </form>
+                {% else %}
+                -
+                {% endif %}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    {% endif %}
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

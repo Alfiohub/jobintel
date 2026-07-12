@@ -1,0 +1,12 @@
+{
+  "input_sample": "experiments/residual_audit/reports/residual_audit_sample_v1.jsonl",
+  "annotations_output": "experiments/residual_audit/reports/residual_audit_annotations_draft_v1.jsonl",
+  "sample_size": 400,
+  "bucket_counts": {
+    "keep_other_by_policy": 365,
+    "recoverable_now": 11,
+    "recoverable_with_context": 21,
+    "noise_or_non_role": 2,
+    "taxonomy_gap": 1
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "phase": "E.19",
+  "decision": "accepted_as_precision_first_production_candidate",
+  "baseline": {
+    "dataset": "data/jobs/jobs_titled_en_recovery_v64_non_role_official.jsonl",
+    "other": 35273,
+    "matched": 45399,
+    "non_role": 339
+  },
+  "candidate": {
+    "dataset": "data/jobs/jobs_titled_en_recovery_v66_partner_lane_candidate.jsonl",
+    "other": 35255,
+    "matched": 45417,
+    "non_role": 339,
+    "rule_id": "ctx_partner_lane_v1",
+    "rule_matches": 18,
+    "target_label": "account_manager",
+    "target_family": "sales"
+  },
+  "delta": {
+    "other": -18,
+    "matched": 18,
+    "non_role": 0
+  },
+  "shadow_reference": {
+    "v64_shadow_delta_other": -27,
+    "v66_official_delta_other": -18
+  },
+  "next_step": "return_to_orchestrator_from_v66"
+}

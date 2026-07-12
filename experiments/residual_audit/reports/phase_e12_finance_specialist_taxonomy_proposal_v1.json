@@ -1,0 +1,27 @@
+{
+  "phase": "E.12.1",
+  "decision": "ready_for_taxonomy_decision_review",
+  "in_scope": [
+    {
+      "normalized_title": "quantitative_researcher",
+      "role_family": "finance",
+      "decision": "plausible_new_label",
+      "status": "candidate",
+      "notes": "coherent quant-finance research role; do not force into financial_analyst or data_scientist"
+    },
+    {
+      "normalized_title": "credit_analyst",
+      "role_family": "finance",
+      "decision": "plausible_new_label",
+      "status": "candidate",
+      "notes": "coherent credit/ratings/structured-finance role; needs more residual validation before rule work"
+    }
+  ],
+  "deferred": [
+    {
+      "normalized_title": "market_access_director",
+      "decision": "defer_pending_family_decision",
+      "notes": "requires broader family expansion beyond current taxonomy"
+    }
+  ]
+}

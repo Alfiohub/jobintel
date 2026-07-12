@@ -1,0 +1,285 @@
+{
+  "baseline": {
+    "dataset": "data/jobs/jobs_titled_en_recovery_v55_semantic_batch.jsonl",
+    "rows_total": 81011,
+    "other_before": 35952
+  },
+  "shadow_result": {
+    "output_dataset": "data/jobs/jobs_titled_en_recovery_v57_non_role_shadow.jsonl",
+    "non_role_total": 563,
+    "from_other": 459,
+    "from_matched": 104,
+    "other_after_occupational": 35493,
+    "delta_other": -459
+  },
+  "top_pattern_hits": [
+    {
+      "pattern": "description:keep your information on file",
+      "count": 118
+    },
+    {
+      "pattern": "title:talent community",
+      "count": 95
+    },
+    {
+      "pattern": "description:join our talent community",
+      "count": 70
+    },
+    {
+      "pattern": "description:send us your resume",
+      "count": 67
+    },
+    {
+      "pattern": "title:future opportunities",
+      "count": 64
+    },
+    {
+      "pattern": "description:future openings",
+      "count": 61
+    },
+    {
+      "pattern": "title:general application",
+      "count": 60
+    },
+    {
+      "pattern": "title:talent pool",
+      "count": 43
+    },
+    {
+      "pattern": "description:don't see an opportunity",
+      "count": 32
+    },
+    {
+      "pattern": "title:future opportunity",
+      "count": 31
+    },
+    {
+      "pattern": "title:general interest",
+      "count": 29
+    },
+    {
+      "pattern": "title:expression of interest",
+      "count": 22
+    },
+    {
+      "pattern": "title:open application",
+      "count": 20
+    },
+    {
+      "pattern": "title:don't see what you're looking for",
+      "count": 18
+    },
+    {
+      "pattern": "description:drop your resume",
+      "count": 14
+    }
+  ],
+  "sample_other_to_non_role": [
+    {
+      "title_clean": "Interested in joining our team?",
+      "company_name": "gomotive",
+      "pattern_hits": [
+        "description:send us your resume",
+        "description:keep your information on file",
+        "description:don't see an opportunity"
+      ]
+    },
+    {
+      "title_clean": "Interested in joining our team?",
+      "company_name": "gomotive",
+      "pattern_hits": [
+        "description:send us your resume",
+        "description:keep your information on file",
+        "description:don't see an opportunity"
+      ]
+    },
+    {
+      "title_clean": "Lead Instructor: Cybersecurity (General Interest)",
+      "company_name": "correlationone",
+      "pattern_hits": [
+        "title:general interest"
+      ]
+    },
+    {
+      "title_clean": "Lead Instructor: Data Analytics (General Interest)",
+      "company_name": "correlationone",
+      "pattern_hits": [
+        "title:general interest"
+      ]
+    },
+    {
+      "title_clean": "Expression of Interest: Senior Growth Manager (Ad Sales)",
+      "company_name": "moloco",
+      "pattern_hits": [
+        "title:expression of interest"
+      ]
+    },
+    {
+      "title_clean": "General Interest - Future Consideration",
+      "company_name": "xapo61",
+      "pattern_hits": [
+        "title:general interest",
+        "title:future consideration"
+      ]
+    },
+    {
+      "title_clean": "Associate, Axios Live - Talent Pool",
+      "company_name": "axios",
+      "pattern_hits": [
+        "title:talent pool"
+      ]
+    },
+    {
+      "title_clean": "Associate, Business Development - Talent Pool",
+      "company_name": "axios",
+      "pattern_hits": [
+        "title:talent pool",
+        "description:future openings"
+      ]
+    },
+    {
+      "title_clean": "AI Mentor Talent Pool - Contractor Roles",
+      "company_name": "udacity",
+      "pattern_hits": [
+        "title:talent pool"
+      ]
+    },
+    {
+      "title_clean": "Apply for future opportunities",
+      "company_name": "flywheeldigital",
+      "pattern_hits": [
+        "title:future opportunities",
+        "description:keep your information on file"
+      ]
+    },
+    {
+      "title_clean": "AI Talent Pool",
+      "company_name": "doctolib",
+      "pattern_hits": [
+        "title:talent pool"
+      ]
+    },
+    {
+      "title_clean": "Don't see the right job listed? Submit your application here to join our general talent pool.",
+      "company_name": "pomelocare",
+      "pattern_hits": [
+        "title:talent pool"
+      ]
+    }
+  ],
+  "sample_matched_to_non_role": [
+    {
+      "title_clean": "Future Sales Openings: Account Executive, US - Remote",
+      "normalized_title": "account_executive",
+      "role_family": "sales",
+      "matched_rule_id": "sales_account_exec",
+      "pattern_hits": [
+        "description:keep your information on file"
+      ]
+    },
+    {
+      "title_clean": "Expression of Interest: Machine Learning Engineer",
+      "normalized_title": "ml_engineer",
+      "role_family": "machine_learning",
+      "matched_rule_id": "eng_ml",
+      "pattern_hits": [
+        "title:expression of interest"
+      ]
+    },
+    {
+      "title_clean": "Account Executive - DACH (Future Talent Opportunity)",
+      "normalized_title": "account_executive",
+      "role_family": "sales",
+      "matched_rule_id": "sales_account_exec",
+      "pattern_hits": [
+        "description:keep your information on file"
+      ]
+    },
+    {
+      "title_clean": "Account Executive - DACH (Future Talent Opportunity)",
+      "normalized_title": "account_executive",
+      "role_family": "sales",
+      "matched_rule_id": "sales_account_exec",
+      "pattern_hits": [
+        "description:keep your information on file"
+      ]
+    },
+    {
+      "title_clean": "Account Executive - DACH (Future Talent Opportunity)",
+      "normalized_title": "account_executive",
+      "role_family": "sales",
+      "matched_rule_id": "sales_account_exec",
+      "pattern_hits": [
+        "description:keep your information on file"
+      ]
+    },
+    {
+      "title_clean": "Account Executive - DACH (Future Talent Opportunity)",
+      "normalized_title": "account_executive",
+      "role_family": "sales",
+      "matched_rule_id": "sales_account_exec",
+      "pattern_hits": [
+        "description:keep your information on file"
+      ]
+    },
+    {
+      "title_clean": "ISP - OSP Task Order Project Manager (Future Opportunity)",
+      "normalized_title": "project_manager",
+      "role_family": "program_management",
+      "matched_rule_id": "program_project_manager",
+      "pattern_hits": [
+        "title:future opportunity"
+      ]
+    },
+    {
+      "title_clean": "Program Manager (Future Opportunity)",
+      "normalized_title": "project_manager",
+      "role_family": "program_management",
+      "matched_rule_id": "program_project_manager",
+      "pattern_hits": [
+        "title:future opportunity"
+      ]
+    },
+    {
+      "title_clean": "Talent Pool Account Executive - Italian Market",
+      "normalized_title": "account_executive",
+      "role_family": "sales",
+      "matched_rule_id": "sales_account_exec",
+      "pattern_hits": [
+        "title:talent pool"
+      ]
+    },
+    {
+      "title_clean": "Talent Pool Account Executive - Portuguese Market",
+      "normalized_title": "account_executive",
+      "role_family": "sales",
+      "matched_rule_id": "sales_account_exec",
+      "pattern_hits": [
+        "title:talent pool"
+      ]
+    },
+    {
+      "title_clean": "Talent Pool Account Executive - Spanish Market",
+      "normalized_title": "account_executive",
+      "role_family": "sales",
+      "matched_rule_id": "sales_account_exec",
+      "pattern_hits": [
+        "title:talent pool",
+        "description:keep your information on file"
+      ]
+    },
+    {
+      "title_clean": "Account Director, Campaigns",
+      "normalized_title": "account_manager",
+      "role_family": "sales",
+      "matched_rule_id": "sales_account_director",
+      "pattern_hits": [
+        "description:keep your information on file"
+      ]
+    }
+  ],
+  "recommendation": {
+    "decision": "shadow_non_role_macroclass_viable",
+    "reason": "The dataset contains a measurable recruiting-placeholder slice that should be separated from occupational coding before future residual analysis."
+  }
+}

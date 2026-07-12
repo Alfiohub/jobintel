@@ -1,0 +1,7 @@
+sources:
+  greenhouse:
+    enabled: true
+    boards: [found]
+    content: true
+    timeout_s: 20
+    retries: 2

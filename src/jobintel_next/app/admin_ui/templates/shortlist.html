@@ -1,0 +1,270 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Saved Jobs Shortlist</h1>
+<p class="muted">
+  Target profile:
+  titles={{ target_titles|join(", ") if target_titles else "-" }},
+  role_families={{ target_role_families|join(", ") if target_role_families else "-" }},
+  locations={{ target_locations|join(", ") if target_locations else "-" }},
+  salary_target={{ salary_target_note or "-" }}.
+</p>
+<div class="kpi-grid">
+  <div class="kpi"><div class="k">Saved jobs (filtered)</div><div class="v">{{ total_count }}</div></div>
+  <div class="kpi"><div class="k">Applied</div><div class="v">{{ pipeline_counts.applied }}</div></div>
+  <div class="kpi"><div class="k">Interview</div><div class="v">{{ pipeline_counts.interview }}</div></div>
+  <div class="kpi"><div class="k">Rejected</div><div class="v">{{ pipeline_counts.rejected }}</div></div>
+</div>
+
+<h2>Outcome Summary</h2>
+<div class="kpi-grid">
+  <div class="kpi"><div class="k">Open opportunities</div><div class="v">{{ closed_loop.open_pipeline_count }}</div></div>
+  <div class="kpi"><div class="k">Saved → Applied</div><div class="v">{{ closed_loop_labels.saved_to_applied }}</div></div>
+  <div class="kpi"><div class="k">Applied → Interview</div><div class="v">{{ closed_loop_labels.applied_to_interview }}</div></div>
+  <div class="kpi"><div class="k">Interview → Rejected</div><div class="v">{{ closed_loop_labels.interview_to_rejected }}</div></div>
+</div>
+{% if closed_loop_insights %}
+<p class="muted">
+  {% for line in closed_loop_insights %}
+    {{ line }}{% if not loop.last %} {% endif %}
+  {% endfor %}
+</p>
+{% endif %}
+
+<div class="toolbar">
+  <a href="/admin/inbox?state=saved">Open saved in inbox</a>
+  <a href="/admin/exports/shortlist.csv{% if request.url.query %}?{{ request.url.query }}{% endif %}">Export CSV</a>
+  <a href="/admin/saved-searches">Saved searches</a>
+  <a href="/admin/alerts">Alerts</a>
+</div>
+
+<h2>Filters</h2>
+<form method="get" action="/admin/shortlist">
+  <p>
+    <label>Sort
+      <select name="sort_by">
+        <option value="rank" {% if sort_by == "rank" %}selected{% endif %}>rank</option>
+        <option value="newest" {% if sort_by == "newest" %}selected{% endif %}>newest</option>
+        <option value="salary" {% if sort_by == "salary" %}selected{% endif %}>salary</option>
+      </select>
+    </label>
+  </p>
+  <p>
+    <label>Pipeline state
+      <select name="pipeline_state">
+        <option value="" {% if not pipeline_state %}selected{% endif %}>all</option>
+        <option value="saved" {% if pipeline_state == "saved" %}selected{% endif %}>saved</option>
+        <option value="applied" {% if pipeline_state == "applied" %}selected{% endif %}>applied</option>
+        <option value="interview" {% if pipeline_state == "interview" %}selected{% endif %}>interview</option>
+        <option value="rejected" {% if pipeline_state == "rejected" %}selected{% endif %}>rejected</option>
+      </select>
+    </label>
+  </p>
+  <p>
+    <label><input type="checkbox" name="only_remote" value="true" {% if only_remote %}checked{% endif %}> Only remote</label>
+    <label><input type="checkbox" name="only_salary" value="true" {% if only_salary %}checked{% endif %}> Only salary</label>
+    <label><input type="checkbox" name="exclude_other" value="true" {% if exclude_other %}checked{% endif %}> Exclude other titles</label>
+    <label><input type="checkbox" name="only_follow_up_set" value="true" {% if only_follow_up_set %}checked{% endif %}> Only follow-up set</label>
+    <label><input type="checkbox" name="only_follow_up_due" value="true" {% if only_follow_up_due %}checked{% endif %}> Only follow-up due</label>
+  </p>
+  <p>
+    <label>Role family <input type="text" name="role_family" value="{{ role_family }}"></label>
+  </p>
+  <p>
+    <label>Limit <input type="text" name="limit" value="{{ limit }}"></label>
+    <label>Offset <input type="text" name="offset" value="{{ offset }}"></label>
+  </p>
+  <p><button type="submit">Apply filters</button></p>
+</form>
+
+{% if total_count == 0 %}
+<div class="empty-state">
+  <p><strong>No saved jobs yet.</strong> Save jobs from Inbox or Saved Search pages to build your shortlist.</p>
+  <div class="toolbar">
+    <a href="/admin/inbox?state=new">Go to inbox</a>
+    <a href="/admin/saved-searches">Open saved searches</a>
+  </div>
+</div>
+{% endif %}
+
+<table>
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Title</th>
+      <th>Company</th>
+      <th>URL</th>
+      <th>Signals</th>
+      <th>Why ranked</th>
+      <th>State</th>
+      <th>Pipeline</th>
+      <th>Notes / Timeline</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in rows %}
+    <tr>
+      <td><span class="badge">{{ row.rank_score }}</span></td>
+      <td>
+        <strong>{{ row.title_raw or "-" }}</strong><br>
+        <span class="muted mono">{{ row.normalized_title or "-" }}</span>
+      </td>
+      <td>{{ row.company_name or row.source_org or "-" }}</td>
+      <td><a class="mono" href="{{ row.url }}" target="_blank" rel="noopener noreferrer">{{ row.url }}</a></td>
+      <td>
+        <span class="badge">{{ row.role_family or "other" }}</span>
+        {% if row.location_type == "remote" %}
+          <span class="badge badge-loc-remote">remote</span>
+        {% elif row.location_type == "hybrid" %}
+          <span class="badge badge-loc-hybrid">hybrid</span>
+        {% elif row.location_type == "onsite" %}
+          <span class="badge badge-loc-onsite">onsite</span>
+        {% endif %}
+        {% if row.has_salary %}
+          <span class="badge badge-salary-yes">salary</span>
+        {% else %}
+          <span class="badge badge-salary-no">no salary</span>
+        {% endif %}
+      </td>
+      <td><span class="muted">{{ row.rank_reason or "-" }}</span></td>
+      <td><span class="badge badge-state-{{ row.job_state }}">{{ row.job_state }}</span></td>
+      <td><span class="badge">{{ row.application_state or "saved" }}</span></td>
+      <td>
+        {% if row.applied_at %}
+          <div><span class="badge">applied: {{ row.applied_at }}</span></div>
+        {% endif %}
+        {% if row.interview_at %}
+          <div><span class="badge">interview: {{ row.interview_at }}</span></div>
+        {% endif %}
+        {% if row.application_notes %}
+          <div class="muted">{{ row.application_notes }}</div>
+        {% else %}
+          <div class="muted">no notes</div>
+        {% endif %}
+        {% if row.follow_up_at %}
+          <div>
+            <span class="badge">follow-up: {{ row.follow_up_at }}</span>
+            {% if row.follow_up_status == "overdue" %}
+              <span class="badge badge-delivery-err">overdue</span>
+            {% elif row.follow_up_status == "due" %}
+              <span class="badge badge-delivery-skip">due soon</span>
+            {% else %}
+              <span class="badge">scheduled</span>
+            {% endif %}
+          </div>
+          {% if row.follow_up_note %}
+            <div class="muted">{{ row.follow_up_note }}</div>
+          {% endif %}
+        {% endif %}
+        {% if row.application_channel %}
+          <div><span class="badge">channel: {{ row.application_channel }}</span></div>
+        {% endif %}
+        {% if row.contact_name or row.contact_email %}
+          <div class="muted">
+            contact:
+            {{ row.contact_name or "-" }}
+            {% if row.contact_email %}({{ row.contact_email }}){% endif %}
+          </div>
+        {% endif %}
+        {% if row.external_application_url %}
+          <div><a class="mono" href="{{ row.external_application_url }}" target="_blank" rel="noopener noreferrer">external application link</a></div>
+        {% endif %}
+        {% if row.compensation_note %}
+          <div class="muted">{{ row.compensation_note }}</div>
+        {% endif %}
+        {% if row.resume_label %}
+          <div><span class="badge">resume: {{ row.resume_label }}</span></div>
+        {% endif %}
+        {% if row.cover_letter_label %}
+          <div><span class="badge">cover letter: {{ row.cover_letter_label }}</span></div>
+        {% endif %}
+        {% if row.submission_note %}
+          <div class="muted">{{ row.submission_note }}</div>
+        {% endif %}
+      </td>
+      <td class="row-actions">
+        <form method="post" action="/admin/shortlist/pipeline">
+          <input type="hidden" name="job_url" value="{{ row.url }}">
+          <input type="hidden" name="state" value="applied">
+          <input type="hidden" name="next" value="{{ next_url }}">
+          <button type="submit">Applied</button>
+        </form>
+        <form method="post" action="/admin/shortlist/pipeline">
+          <input type="hidden" name="job_url" value="{{ row.url }}">
+          <input type="hidden" name="state" value="interview">
+          <input type="hidden" name="next" value="{{ next_url }}">
+          <button type="submit">Interview</button>
+        </form>
+        <form method="post" action="/admin/shortlist/pipeline">
+          <input type="hidden" name="job_url" value="{{ row.url }}">
+          <input type="hidden" name="state" value="rejected">
+          <input type="hidden" name="next" value="{{ next_url }}">
+          <button type="submit">Rejected</button>
+        </form>
+        <form method="post" action="/admin/shortlist/pipeline/clear">
+          <input type="hidden" name="job_url" value="{{ row.url }}">
+          <input type="hidden" name="next" value="{{ next_url }}">
+          <button type="submit">Reset Pipeline</button>
+        </form>
+        <form method="post" action="/admin/jobs/state">
+          <input type="hidden" name="job_url" value="{{ row.url }}">
+          <input type="hidden" name="state" value="seen">
+          <input type="hidden" name="next" value="{{ next_url }}">
+          <button type="submit">Seen</button>
+        </form>
+        <form method="post" action="/admin/jobs/state">
+          <input type="hidden" name="job_url" value="{{ row.url }}">
+          <input type="hidden" name="state" value="dismissed">
+          <input type="hidden" name="next" value="{{ next_url }}">
+          <button type="submit">Dismiss</button>
+        </form>
+        <form method="post" action="/admin/jobs/state/clear">
+          <input type="hidden" name="job_url" value="{{ row.url }}">
+          <input type="hidden" name="next" value="{{ next_url }}">
+          <button type="submit">Reset</button>
+        </form>
+        <form method="post" action="/admin/shortlist/details">
+          <input type="hidden" name="job_url" value="{{ row.url }}">
+          <input type="hidden" name="next" value="{{ next_url }}">
+          <textarea name="notes" rows="2" placeholder="notes">{{ row.application_notes }}</textarea>
+          <input type="text" name="applied_at" value="{{ row.applied_at }}" placeholder="applied_at (YYYY-MM-DD)">
+          <input type="text" name="interview_at" value="{{ row.interview_at }}" placeholder="interview_at (YYYY-MM-DD)">
+          <input type="text" name="follow_up_at" value="{{ row.follow_up_at }}" placeholder="follow_up_at (YYYY-MM-DD)">
+          <input type="text" name="follow_up_note" value="{{ row.follow_up_note }}" placeholder="follow_up_note">
+          <input type="text" name="application_channel" value="{{ row.application_channel }}" placeholder="application_channel (company_site/linkedin/referral/other)">
+          <input type="text" name="contact_name" value="{{ row.contact_name }}" placeholder="contact_name">
+          <input type="text" name="contact_email" value="{{ row.contact_email }}" placeholder="contact_email">
+          <input type="text" name="external_application_url" value="{{ row.external_application_url }}" placeholder="external_application_url">
+          <input type="text" name="compensation_note" value="{{ row.compensation_note }}" placeholder="compensation_note">
+          <label>Resume template
+            <select name="resume_template_label">
+              <option value="">-- select resume template --</option>
+              {% for t in resume_templates %}
+                <option value="{{ t }}" {% if row.resume_label == t %}selected{% endif %}>{{ t }}</option>
+              {% endfor %}
+            </select>
+          </label>
+          <input type="text" name="resume_label" value="{{ row.resume_label }}" placeholder="resume_label (e.g. CV backend v2)">
+          <label>Cover letter template
+            <select name="cover_letter_template_label">
+              <option value="">-- select cover letter template --</option>
+              {% for t in cover_letter_templates %}
+                <option value="{{ t }}" {% if row.cover_letter_label == t %}selected{% endif %}>{{ t }}</option>
+              {% endfor %}
+            </select>
+          </label>
+          <input type="text" name="cover_letter_label" value="{{ row.cover_letter_label }}" placeholder="cover_letter_label (e.g. CL generic data role)">
+          <input type="text" name="submission_note" value="{{ row.submission_note }}" placeholder="submission_note">
+          <button type="submit">Save details</button>
+        </form>
+        <form method="post" action="/admin/shortlist/details/clear">
+          <input type="hidden" name="job_url" value="{{ row.url }}">
+          <input type="hidden" name="next" value="{{ next_url }}">
+          <button type="submit">Clear details</button>
+        </form>
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

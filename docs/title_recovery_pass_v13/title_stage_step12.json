@@ -1,0 +1,191 @@
+{
+  "input_cleaned_path": "data/jobs/jobs_indexed_en.jsonl",
+  "input_extracted_path": null,
+  "output_path": "data/jobs/jobs_titled_en_recovery_v13.jsonl",
+  "rows_total": 81011,
+  "invalid_rows": 0,
+  "counts_by_normalized_title": {
+    "other": 40951,
+    "marketing_specialist": 2481,
+    "account_executive": 3201,
+    "accountant": 590,
+    "engineering_manager": 892,
+    "customer_success_manager": 737,
+    "project_manager": 1161,
+    "legal_counsel": 773,
+    "data_analyst": 428,
+    "software_engineer": 9348,
+    "product_designer": 529,
+    "business_development_representative": 945,
+    "data_scientist": 545,
+    "analytics_engineer": 134,
+    "account_manager": 1980,
+    "product_manager": 1820,
+    "sales_manager": 693,
+    "sales_engineer": 1087,
+    "financial_analyst": 316,
+    "data_engineer": 730,
+    "technical_program_manager": 343,
+    "technical_writer": 46,
+    "it_support_specialist": 171,
+    "operations_specialist": 1396,
+    "solutions_architect": 664,
+    "executive_assistant": 126,
+    "site_reliability_engineer": 324,
+    "people_business_partner": 170,
+    "ml_engineer": 773,
+    "technical_recruiter": 491,
+    "compliance_manager": 229,
+    "behavioral_support_specialist": 307,
+    "devops_engineer": 326,
+    "compliance_specialist": 410,
+    "network_engineer": 68,
+    "driver": 390,
+    "technician": 645,
+    "mechanical_engineer": 273,
+    "systems_engineer": 68,
+    "nurse_practitioner": 782,
+    "medical_assistant": 76,
+    "electrical_engineer": 198,
+    "store_associate": 560,
+    "assistant_teacher": 89,
+    "substitute_teacher": 105,
+    "physician": 286,
+    "psychotherapist": 312,
+    "psychiatrist": 370,
+    "manufacturing_engineer": 167,
+    "registered_nurse": 147,
+    "licensed_practical_nurse": 67,
+    "mechanic": 472,
+    "car_detailer": 142,
+    "delivery_driver": 198,
+    "customer_service_specialist": 75,
+    "field_technician": 151,
+    "health_information_specialist": 84,
+    "wealth_advisor": 63,
+    "teacher": 87,
+    "story_editor": 19
+  },
+  "counts_by_role_family": {
+    "other": 40951,
+    "marketing": 2481,
+    "sales": 8466,
+    "finance": 969,
+    "software_engineering": 10240,
+    "customer_success": 737,
+    "program_management": 1504,
+    "legal": 773,
+    "data_analytics": 562,
+    "design": 529,
+    "data_science": 545,
+    "product_management": 1820,
+    "data_engineering": 730,
+    "content": 65,
+    "it_operations": 307,
+    "operations": 1471,
+    "architecture": 664,
+    "administrative_support": 126,
+    "sre": 324,
+    "people_operations": 170,
+    "machine_learning": 773,
+    "recruiting": 491,
+    "compliance_risk": 639,
+    "healthcare_clinical": 2431,
+    "devops": 326,
+    "logistics": 588,
+    "skilled_trades": 1410,
+    "industrial_engineering": 638,
+    "education": 281
+  },
+  "counts_by_status": {
+    "other": 40951,
+    "matched": 40060
+  },
+  "top_other_titles": [
+    {
+      "title_clean": "General Manager",
+      "count": 40
+    },
+    {
+      "title_clean": "Senior Market Strategy and Partnerships Manager",
+      "count": 36
+    },
+    {
+      "title_clean": "Hair Color Bar Assistant, Licensed Cosmetologist",
+      "count": 32
+    },
+    {
+      "title_clean": "General Application",
+      "count": 31
+    },
+    {
+      "title_clean": "Producer",
+      "count": 27
+    },
+    {
+      "title_clean": "Social Enterprise and Program Delivery-Evergreen",
+      "count": 27
+    },
+    {
+      "title_clean": "Personal Care Specialist (Part Time)",
+      "count": 26
+    },
+    {
+      "title_clean": "Quantitative Researcher",
+      "count": 24
+    },
+    {
+      "title_clean": "Business Analyst",
+      "count": 20
+    },
+    {
+      "title_clean": "Sonder Responder",
+      "count": 19
+    },
+    {
+      "title_clean": "Restaurant General Manager",
+      "count": 19
+    },
+    {
+      "title_clean": "Manager, Software Engineering",
+      "count": 18
+    },
+    {
+      "title_clean": "Cultivation Associate",
+      "count": 18
+    },
+    {
+      "title_clean": "K-5th Grade Teacher - SY 26-27",
+      "count": 17
+    },
+    {
+      "title_clean": "Leader in Training",
+      "count": 17
+    },
+    {
+      "title_clean": "Outside Sales Representative - Roofing",
+      "count": 17
+    },
+    {
+      "title_clean": "Data Science Manager",
+      "count": 16
+    },
+    {
+      "title_clean": "Principal Engineer",
+      "count": 16
+    },
+    {
+      "title_clean": "Bilingual Member Services Representative (Remote, Spanish Speaking)",
+      "count": 16
+    },
+    {
+      "title_clean": "Intelligence Operations Integrator",
+      "count": 16
+    }
+  ],
+  "known_limits": [
+    "Minimal taxonomy/rule set by design in step12.",
+    "Classifier is title-centric; extracted context is optional and lightweight.",
+    "Policy is conservative: ambiguous titles go to other."
+  ]
+}

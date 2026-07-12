@@ -1,0 +1,760 @@
+{
+  "phase": "E.22",
+  "decision": "manual_review_prioritizer_v1_ready",
+  "input_dataset": "data/jobs/jobs_titled_en_recovery_v67_open_set_router.jsonl",
+  "manual_review_total": 35150,
+  "queues": {
+    "attack_now": [
+      {
+        "lane": "attack_now",
+        "suggested_target_label": "business_development_manager",
+        "count": 397,
+        "unique_titles": 278,
+        "unique_companies": 180,
+        "priority_score": 4.57,
+        "top_titles": {
+          "Business Development Associate": 10,
+          "Manager, Business Development": 10,
+          "Director, Business Development": 8,
+          "Business Development Director, Content Ops": 7,
+          "Corporate Development Manager": 7,
+          "Business Development Executive": 6,
+          "Senior Analyst, Strategy & Corporate Development": 5,
+          "Director, Business Development (Healthcare - GPO)": 5
+        },
+        "top_companies": {
+          "andurilindustries": 50,
+          "metropolis": 17,
+          "applovin": 13,
+          "axon": 12,
+          "thetradedesk": 11,
+          "flywheeldigital": 7,
+          "chaosindustries": 6,
+          "rocketlab": 6
+        },
+        "route_reasons": {
+          "matches_high_roi_title_only_candidate": 397
+        },
+        "examples": [
+          {
+            "title_clean": "Cloud Alliances Business Development Lead",
+            "company_name": "canonical",
+            "url": "https://job-boards.greenhouse.io/canonical/jobs/4934551"
+          },
+          {
+            "title_clean": "Senior Manager M&A Integration",
+            "company_name": "celonis",
+            "url": "https://job-boards.greenhouse.io/celonis/jobs/7657925003?gh_jid=7657925003"
+          },
+          {
+            "title_clean": "Business Development Intern, Experiences, Paris",
+            "company_name": "airbnb",
+            "url": "https://careers.airbnb.com/positions/7662483?gh_jid=7662483"
+          },
+          {
+            "title_clean": "Strategic Partnerships & Business Development Lead",
+            "company_name": "airbnb",
+            "url": "https://careers.airbnb.com/positions/7585583?gh_jid=7585583"
+          },
+          {
+            "title_clean": "Sr. Manager, Business Development",
+            "company_name": "6sense",
+            "url": "https://boards.greenhouse.io/6sense/jobs/7656167?gh_jid=7656167"
+          },
+          {
+            "title_clean": "Sales Operations Lead, Business Development & Solutions",
+            "company_name": "braze",
+            "url": "https://boards.greenhouse.io/braze/jobs/7574802?gh_jid=7574802"
+          }
+        ]
+      },
+      {
+        "lane": "attack_now",
+        "suggested_target_label": "financial_analyst",
+        "count": 159,
+        "unique_titles": 122,
+        "unique_companies": 118,
+        "priority_score": 2.19,
+        "top_titles": {
+          "Senior Manager, FP&A": 7,
+          "Strategic Finance Associate": 6,
+          "Senior Manager, Strategic Finance": 5,
+          "Senior Financial Planning Analyst": 3,
+          "FP&A Manager, GTM Finance": 3,
+          "Senior Solution Consultant Specialist - Financial Planning and Consolidations": 3,
+          "Director of Financial Planning & Analysis": 3,
+          "Finance Planning and Analysis (FP&A) Specialist": 3
+        },
+        "top_companies": {
+          "anaplan": 9,
+          "coupang": 4,
+          "andurilindustries": 3,
+          "payoneer": 3,
+          "precisionmedicinegroup": 3,
+          "surveymonkey": 3,
+          "airbnb": 2,
+          "gitlab": 2
+        },
+        "route_reasons": {
+          "matches_high_roi_title_only_candidate": 159
+        },
+        "examples": [
+          {
+            "title_clean": "Senior Analyst, Strategic Finance",
+            "company_name": "omadahealth",
+            "url": "https://job-boards.greenhouse.io/omadahealth/jobs/7473994"
+          },
+          {
+            "title_clean": "Strategic Finance & Analytics Manager - USA - Remote",
+            "company_name": "grafanalabs",
+            "url": "https://job-boards.greenhouse.io/grafanalabs/jobs/5811992004"
+          },
+          {
+            "title_clean": "Analyst, Customer Support, Strategic Finance",
+            "company_name": "airbnb",
+            "url": "https://careers.airbnb.com/positions/7759713?gh_jid=7759713"
+          },
+          {
+            "title_clean": "Principal, Customer Support, Strategic Finance",
+            "company_name": "airbnb",
+            "url": "https://careers.airbnb.com/positions/7759059?gh_jid=7759059"
+          },
+          {
+            "title_clean": "FP&A Analyst II, Growth",
+            "company_name": "braze",
+            "url": "https://boards.greenhouse.io/braze/jobs/7699975?gh_jid=7699975"
+          },
+          {
+            "title_clean": "Senior Manager, Strategic Finance",
+            "company_name": "moloco",
+            "url": "https://job-boards.greenhouse.io/moloco/jobs/7582899003"
+          }
+        ]
+      },
+      {
+        "lane": "attack_now",
+        "suggested_target_label": "sales_director",
+        "count": 145,
+        "unique_titles": 117,
+        "unique_companies": 72,
+        "priority_score": 2.05,
+        "top_titles": {
+          "Director, Sales Development": 6,
+          "Director, Sales Operations": 5,
+          "Director, Sales Commissions": 4,
+          "Senior Sales Director, Strategic Retail": 4,
+          "Enterprise Sales Director": 4,
+          "Senior Director, Sales": 4,
+          "Sr. Director, Sales Operations": 3,
+          "Sr. Director, Enterprise Sales": 2
+        },
+        "top_companies": {
+          "five9": 11,
+          "samsara": 8,
+          "catonetworks": 8,
+          "dbtlabsinc": 7,
+          "cresta": 6,
+          "databricks": 5,
+          "braze": 4,
+          "brave": 4
+        },
+        "route_reasons": {
+          "matches_high_roi_title_only_candidate": 145
+        },
+        "examples": [
+          {
+            "title_clean": "Partner Sales Director - Global System Integrator (GSI)",
+            "company_name": "canonical",
+            "url": "https://job-boards.greenhouse.io/canonical/jobs/3572118"
+          },
+          {
+            "title_clean": "Partner Sales Director - IHV Alliances",
+            "company_name": "canonical",
+            "url": "https://job-boards.greenhouse.io/canonical/jobs/4126502"
+          },
+          {
+            "title_clean": "Sr. Director, Enterprise Sales",
+            "company_name": "webflow",
+            "url": "https://job-boards.greenhouse.io/webflow/jobs/7697689"
+          },
+          {
+            "title_clean": "Partner Sales Director - US Public Sector",
+            "company_name": "celonis",
+            "url": "https://job-boards.greenhouse.io/celonis/jobs/7627021003?gh_jid=7627021003"
+          },
+          {
+            "title_clean": "Director, Sales Commissions",
+            "company_name": "samsara",
+            "url": "https://www.samsara.com/company/careers/roles/7291576?gh_jid=7291576"
+          },
+          {
+            "title_clean": "Director, Sales Commissions",
+            "company_name": "samsara",
+            "url": "https://www.samsara.com/company/careers/roles/7412435?gh_jid=7412435"
+          }
+        ]
+      },
+      {
+        "lane": "attack_now",
+        "suggested_target_label": "software_engineer",
+        "count": 75,
+        "unique_titles": 47,
+        "unique_companies": 28,
+        "priority_score": 1.35,
+        "top_titles": {
+          "Backend Developer (Node.js)": 8,
+          "Back-End Engineer": 4,
+          "Metaquotes Backend Developer": 4,
+          "Senior Backend Developer": 4,
+          "Senior Front-End Engineer": 3,
+          "Backend Developer (Java)": 2,
+          "Principal Backend Developer (Java)": 2,
+          "Senior Java Backend Developer": 2
+        },
+        "top_companies": {
+          "coupang": 18,
+          "capco": 9,
+          "fundraiseup": 8,
+          "axicorpfinancialservicesptyltd": 4,
+          "galaxydigitalservices": 3,
+          "payoneer": 3,
+          "blockchain": 2,
+          "jetbrains": 2
+        },
+        "route_reasons": {
+          "matches_high_roi_title_only_candidate": 75
+        },
+        "examples": [
+          {
+            "title_clean": "Back-End Engineer",
+            "company_name": "inthepocket",
+            "url": "https://job-boards.greenhouse.io/inthepocket/jobs/7606351"
+          },
+          {
+            "title_clean": "Backend Developer (Java)",
+            "company_name": "capco",
+            "url": "https://job-boards.greenhouse.io/capco/jobs/7681740"
+          },
+          {
+            "title_clean": "Backend Developer (Java)",
+            "company_name": "capco",
+            "url": "https://job-boards.greenhouse.io/capco/jobs/7681741"
+          },
+          {
+            "title_clean": "Backend Developer - Python",
+            "company_name": "capco",
+            "url": "https://job-boards.greenhouse.io/capco/jobs/7681727"
+          },
+          {
+            "title_clean": "Copy of Senior Java Backend Developer",
+            "company_name": "capco",
+            "url": "https://job-boards.greenhouse.io/capco/jobs/7433554"
+          },
+          {
+            "title_clean": "Java Backend Developer",
+            "company_name": "capco",
+            "url": "https://job-boards.greenhouse.io/capco/jobs/7725383"
+          }
+        ]
+      },
+      {
+        "lane": "attack_now",
+        "suggested_target_label": "engineering_manager",
+        "count": 31,
+        "unique_titles": 30,
+        "unique_companies": 16,
+        "priority_score": 0.91,
+        "top_titles": {
+          "Head of Engineering Productivity & Experience": 2,
+          "Engineering Director - Business Data": 1,
+          "Engineering Director - Commercial Systems": 1,
+          "Engineering Director, Devices Software Engineering": 1,
+          "Software Engineering Director": 1,
+          "Engineering Director, Systems": 1,
+          "Head of Engineering, Core Product & Collaborative Work Management": 1,
+          "Engineering Director, Cloudflare One": 1
+        },
+        "top_companies": {
+          "okx": 8,
+          "canonical": 4,
+          "adyen": 3,
+          "alphasense": 2,
+          "onrunning": 2,
+          "asteralabs": 2,
+          "truebill": 1,
+          "asana": 1
+        },
+        "route_reasons": {
+          "matches_high_roi_title_only_candidate": 31
+        },
+        "examples": [
+          {
+            "title_clean": "Engineering Director - Business Data",
+            "company_name": "canonical",
+            "url": "https://job-boards.greenhouse.io/canonical/jobs/7646448"
+          },
+          {
+            "title_clean": "Engineering Director - Commercial Systems",
+            "company_name": "canonical",
+            "url": "https://job-boards.greenhouse.io/canonical/jobs/7646454"
+          },
+          {
+            "title_clean": "Engineering Director, Devices Software Engineering",
+            "company_name": "canonical",
+            "url": "https://job-boards.greenhouse.io/canonical/jobs/7074861"
+          },
+          {
+            "title_clean": "Software Engineering Director",
+            "company_name": "canonical",
+            "url": "https://job-boards.greenhouse.io/canonical/jobs/5211861"
+          },
+          {
+            "title_clean": "Engineering Director, Systems",
+            "company_name": "truebill",
+            "url": "https://job-boards.greenhouse.io/truebill/jobs/7676412003"
+          },
+          {
+            "title_clean": "Head of Engineering, Core Product & Collaborative Work Management",
+            "company_name": "asana",
+            "url": "https://www.asana.com/jobs/apply/7718738?gh_jid=7718738"
+          }
+        ]
+      },
+      {
+        "lane": "attack_now",
+        "suggested_target_label": "mechanical_engineer",
+        "count": 14,
+        "unique_titles": 14,
+        "unique_companies": 7,
+        "priority_score": 0.65,
+        "top_titles": {
+          "Senior Thermal Engineer, Space": 1,
+          "Staff Thermal Engineer, Space": 1,
+          "Thermal Engineer, Space": 1,
+          "Sr. Staff Rotor Dynamics Engineer": 1,
+          "Thermal Engineer, Electric Propulsion": 1,
+          "Thermal Engineer, Analysis": 1,
+          "Propulsion Design Engineer (m - f - d)": 1,
+          "Turbomachinery Engineer - Rotor Dynamics, Bearing Systems & Tribology (m - f - d)": 1
+        },
+        "top_companies": {
+          "spacex": 4,
+          "andurilindustries": 3,
+          "archer56": 2,
+          "isaraerospace": 2,
+          "harbingermotors": 1,
+          "relativity": 1,
+          "rocketlab": 1
+        },
+        "route_reasons": {
+          "matches_high_roi_title_only_candidate": 14
+        },
+        "examples": [
+          {
+            "title_clean": "Senior Thermal Engineer, Space",
+            "company_name": "andurilindustries",
+            "url": "https://boards.greenhouse.io/andurilindustries/jobs/4990302007?gh_jid=4990302007"
+          },
+          {
+            "title_clean": "Staff Thermal Engineer, Space",
+            "company_name": "andurilindustries",
+            "url": "https://boards.greenhouse.io/andurilindustries/jobs/4990304007?gh_jid=4990304007"
+          },
+          {
+            "title_clean": "Thermal Engineer, Space",
+            "company_name": "andurilindustries",
+            "url": "https://boards.greenhouse.io/andurilindustries/jobs/4905442007?gh_jid=4905442007"
+          },
+          {
+            "title_clean": "Sr. Staff Rotor Dynamics Engineer",
+            "company_name": "archer56",
+            "url": "https://job-boards.greenhouse.io/archer56/jobs/7652656003"
+          },
+          {
+            "title_clean": "Thermal Engineer, Electric Propulsion",
+            "company_name": "archer56",
+            "url": "https://job-boards.greenhouse.io/archer56/jobs/7590280003"
+          },
+          {
+            "title_clean": "Thermal Engineer, Analysis",
+            "company_name": "harbingermotors",
+            "url": "https://job-boards.greenhouse.io/harbingermotors/jobs/4635154007"
+          }
+        ]
+      },
+      {
+        "lane": "attack_now",
+        "suggested_target_label": "it_support_specialist",
+        "count": 10,
+        "unique_titles": 5,
+        "unique_companies": 10,
+        "priority_score": 0.55,
+        "top_titles": {
+          "IT Specialist": 6,
+          "Cloud Administrator": 1,
+          "Senior Network & Cloud Administrator": 1,
+          "Senior IT Specialist": 1,
+          "Senior Cloud Administrator": 1
+        },
+        "top_companies": {
+          "66degrees": 1,
+          "abbyy": 1,
+          "buildops": 1,
+          "chainguard": 1,
+          "m9solutions": 1,
+          "optoinvest": 1,
+          "qualtrics": 1,
+          "tegnainc": 1
+        },
+        "route_reasons": {
+          "matches_high_roi_title_only_candidate": 10
+        },
+        "examples": [
+          {
+            "title_clean": "Cloud Administrator",
+            "company_name": "66degrees",
+            "url": "https://job-boards.greenhouse.io/66degrees/jobs/5835540004"
+          },
+          {
+            "title_clean": "Senior Network & Cloud Administrator",
+            "company_name": "abbyy",
+            "url": "https://job-boards.eu.greenhouse.io/abbyy/jobs/4777630101"
+          },
+          {
+            "title_clean": "Senior IT Specialist",
+            "company_name": "buildops",
+            "url": "https://buildops.com/careers/job-application?gh_jid=5814804004"
+          },
+          {
+            "title_clean": "IT Specialist",
+            "company_name": "chainguard",
+            "url": "https://job-boards.greenhouse.io/chainguard/jobs/4639052006"
+          },
+          {
+            "title_clean": "IT Specialist",
+            "company_name": "m9solutions",
+            "url": "https://job-boards.greenhouse.io/m9solutions/jobs/4931826007"
+          },
+          {
+            "title_clean": "IT Specialist",
+            "company_name": "optoinvest",
+            "url": "https://job-boards.greenhouse.io/optoinvest/jobs/7526624003"
+          }
+        ]
+      },
+      {
+        "lane": "attack_now",
+        "suggested_target_label": "systems_administrator",
+        "count": 5,
+        "unique_titles": 5,
+        "unique_companies": 5,
+        "priority_score": 0.35,
+        "top_titles": {
+          "Senior Salesforce Developer - Administrator": 1,
+          "Salesforce Support Operations Administrator II": 1,
+          "Manager, Salesforce & Systems Administrator": 1,
+          "Salesforce Architect and Administrator": 1,
+          "Salesforce Administrator Intern": 1
+        },
+        "top_companies": {
+          "harborglobal": 1,
+          "kapitus": 1,
+          "oneimaging": 1,
+          "stripe": 1,
+          "auctane": 1
+        },
+        "route_reasons": {
+          "matches_high_roi_title_only_candidate": 5
+        },
+        "examples": [
+          {
+            "title_clean": "Senior Salesforce Developer - Administrator",
+            "company_name": "harborglobal",
+            "url": "https://job-boards.greenhouse.io/harborglobal/jobs/5084325007"
+          },
+          {
+            "title_clean": "Salesforce Support Operations Administrator II",
+            "company_name": "kapitus",
+            "url": "https://job-boards.greenhouse.io/kapitus/jobs/4170002009"
+          },
+          {
+            "title_clean": "Manager, Salesforce & Systems Administrator",
+            "company_name": "oneimaging",
+            "url": "https://job-boards.greenhouse.io/oneimaging/jobs/4018392009"
+          },
+          {
+            "title_clean": "Salesforce Architect and Administrator",
+            "company_name": "stripe",
+            "url": "https://stripe.com/jobs/search?gh_jid=7688908"
+          },
+          {
+            "title_clean": "Salesforce Administrator Intern",
+            "company_name": "auctane",
+            "url": "https://job-boards.greenhouse.io/auctane/jobs/7634215003"
+          }
+        ]
+      }
+    ],
+    "recoverable_with_context": [
+      {
+        "lane": "recoverable_with_context",
+        "suggested_target_label": "project_manager",
+        "count": 122,
+        "unique_titles": 84,
+        "unique_companies": 50,
+        "priority_score": 1.456,
+        "top_titles": {
+          "Implementation Specialist": 7,
+          "Project Engineer": 6,
+          "Self Service Implementation Specialist - Freelance Project": 5,
+          "Senior Project Engineer": 4,
+          "Civil Project Engineer- Drinking Water": 4,
+          "Senior Transportation Project Engineer": 4,
+          "Civil Project Engineer": 4,
+          "Senior Project Engineer- Drinking Water": 3
+        },
+        "top_companies": {
+          "atwellgroup": 19,
+          "apexcompanies": 14,
+          "olsson": 12,
+          "spacex": 5,
+          "agency": 5,
+          "karbon": 4,
+          "remotecom": 3,
+          "andurilindustries": 3
+        },
+        "route_reasons": {
+          "matches_context_resolution_lane": 122
+        },
+        "examples": [
+          {
+            "title_clean": "Sr. Implementation Specialist (Remote Elegible - Costa Rica)",
+            "company_name": "smartsheet",
+            "url": "https://job-boards.greenhouse.io/smartsheet/jobs/7688900"
+          },
+          {
+            "title_clean": "Global Payroll Implementation Specialist EMEA - LATAM",
+            "company_name": "remotecom",
+            "url": "https://job-boards.greenhouse.io/remotecom/jobs/7664353003"
+          },
+          {
+            "title_clean": "Senior Workday Implementation Specialist",
+            "company_name": "remotecom",
+            "url": "https://job-boards.greenhouse.io/remotecom/jobs/7548213003"
+          },
+          {
+            "title_clean": "Senior Workday Implementation Specialist",
+            "company_name": "remotecom",
+            "url": "https://job-boards.greenhouse.io/remotecom/jobs/7635556003"
+          },
+          {
+            "title_clean": "Implementation Specialist I",
+            "company_name": "affirm",
+            "url": "https://job-boards.greenhouse.io/affirm/jobs/7666196003"
+          },
+          {
+            "title_clean": "Implementation Specialist I",
+            "company_name": "affirm",
+            "url": "https://job-boards.greenhouse.io/affirm/jobs/7666194003"
+          }
+        ]
+      },
+      {
+        "lane": "recoverable_with_context",
+        "suggested_target_label": "account_manager",
+        "count": 108,
+        "unique_titles": 61,
+        "unique_companies": 46,
+        "priority_score": 1.344,
+        "top_titles": {
+          "Strategic SI Partner Development Manager": 11,
+          "Engagement Manager II": 10,
+          "Partner Growth Manager": 8,
+          "Engagement Manager": 8,
+          "Engagement Manager, Prepared by Axon": 3,
+          "Senior Product Engagement Manager, Clarity": 3,
+          "Senior Engagement Manager": 3,
+          "Senior Technology Partner Development Manager": 3
+        },
+        "top_companies": {
+          "fivetran": 11,
+          "braze": 10,
+          "connecteam": 8,
+          "databricks": 7,
+          "dataiku": 4,
+          "hillel": 4,
+          "purestorage": 4,
+          "scaleai": 4
+        },
+        "route_reasons": {
+          "matches_context_resolution_lane": 108
+        },
+        "examples": [
+          {
+            "title_clean": "2026 Opportunities - Account Manager, EMEA",
+            "company_name": "customerio",
+            "url": "https://job-boards.greenhouse.io/customerio/jobs/7600074"
+          },
+          {
+            "title_clean": "Engagement Manager II",
+            "company_name": "braze",
+            "url": "https://boards.greenhouse.io/braze/jobs/7391822?gh_jid=7391822"
+          },
+          {
+            "title_clean": "Engagement Manager II",
+            "company_name": "braze",
+            "url": "https://boards.greenhouse.io/braze/jobs/7700979?gh_jid=7700979"
+          },
+          {
+            "title_clean": "Engagement Manager II",
+            "company_name": "braze",
+            "url": "https://boards.greenhouse.io/braze/jobs/7733231?gh_jid=7733231"
+          },
+          {
+            "title_clean": "Engagement Manager II",
+            "company_name": "braze",
+            "url": "https://boards.greenhouse.io/braze/jobs/7392203?gh_jid=7392203"
+          },
+          {
+            "title_clean": "Engagement Manager II",
+            "company_name": "braze",
+            "url": "https://boards.greenhouse.io/braze/jobs/7392214?gh_jid=7392214"
+          }
+        ]
+      },
+      {
+        "lane": "recoverable_with_context",
+        "suggested_target_label": "customer_success_manager",
+        "count": 31,
+        "unique_titles": 17,
+        "unique_companies": 18,
+        "priority_score": 0.728,
+        "top_titles": {
+          "Onboarding Specialist": 13,
+          "SaaS Onboarding Specialist": 2,
+          "Customer Onboarding Specialist": 2,
+          "Counterparty Onboarding Specialist": 1,
+          "Data Onboarding Specialist": 1,
+          "Customer Onboarding Specialist - French Market": 1,
+          "Brandwatch, Sr Onboarding Specialist, Melbourne": 1,
+          "Technical Onboarding Specialist [Contract]": 1
+        },
+        "top_companies": {
+          "rxvantage": 8,
+          "podium81": 4,
+          "cision": 2,
+          "housecall": 2,
+          "stripe": 2,
+          "drweng": 1,
+          "adyen": 1,
+          "addepar1": 1
+        },
+        "route_reasons": {
+          "matches_context_resolution_lane": 31
+        },
+        "examples": [
+          {
+            "title_clean": "Counterparty Onboarding Specialist",
+            "company_name": "drweng",
+            "url": "https://job-boards.greenhouse.io/drweng/jobs/7743573"
+          },
+          {
+            "title_clean": "Onboarding Specialist",
+            "company_name": "adyen",
+            "url": "https://job-boards.greenhouse.io/adyen/jobs/7422228"
+          },
+          {
+            "title_clean": "Data Onboarding Specialist",
+            "company_name": "addepar1",
+            "url": "https://job-boards.greenhouse.io/addepar1/jobs/8353530002"
+          },
+          {
+            "title_clean": "Customer Onboarding Specialist - French Market",
+            "company_name": "amenitiz",
+            "url": "https://job-boards.eu.greenhouse.io/amenitiz/jobs/4765645101"
+          },
+          {
+            "title_clean": "Brandwatch, Sr Onboarding Specialist, Melbourne",
+            "company_name": "cision",
+            "url": "https://job-boards.eu.greenhouse.io/cision/jobs/4780801101"
+          },
+          {
+            "title_clean": "Onboarding Specialist",
+            "company_name": "cision",
+            "url": "https://job-boards.eu.greenhouse.io/cision/jobs/4745539101"
+          }
+        ]
+      }
+    ],
+    "long_tail": [
+      {
+        "lane": "long_tail",
+        "suggested_target_label": null,
+        "count": 34053,
+        "unique_titles": 26878,
+        "unique_companies": 1614,
+        "priority_score": 1.12,
+        "top_titles": {
+          "General Manager": 40,
+          "Senior Market Strategy and Partnerships Manager": 36,
+          "Hair Color Bar Assistant, Licensed Cosmetologist": 32,
+          "Producer": 27,
+          "Social Enterprise and Program Delivery-Evergreen": 27,
+          "Personal Care Specialist (Part Time)": 26,
+          "Business Analyst": 20,
+          "Sonder Responder": 19
+        },
+        "top_companies": {
+          "spacex": 1080,
+          "andurilindustries": 935,
+          "carvana": 516,
+          "feverup": 375,
+          "aloyoga": 353,
+          "accenturefederalservices": 332,
+          "doordashusa": 311,
+          "luminishealth": 310
+        },
+        "route_reasons": {
+          "residual_long_tail_unresolved": 34053
+        },
+        "examples": [
+          {
+            "title_clean": "Data Analytics Director",
+            "company_name": "found",
+            "url": "https://job-boards.greenhouse.io/found/jobs/4652575005"
+          },
+          {
+            "title_clean": "Telehealth Provider (MD & DO)",
+            "company_name": "found",
+            "url": "https://job-boards.greenhouse.io/found/jobs/4501664005"
+          },
+          {
+            "title_clean": "Director, Product Management",
+            "company_name": "omadahealth",
+            "url": "https://job-boards.greenhouse.io/omadahealth/jobs/7402427"
+          },
+          {
+            "title_clean": "Senior Director, Clinical and Translational Research",
+            "company_name": "omadahealth",
+            "url": "https://job-boards.greenhouse.io/omadahealth/jobs/7743211"
+          },
+          {
+            "title_clean": "Senior Director, Enterprise Launch Excellence and GTM",
+            "company_name": "omadahealth",
+            "url": "https://job-boards.greenhouse.io/omadahealth/jobs/7722234"
+          },
+          {
+            "title_clean": "Senior Manager, Commercial Operations",
+            "company_name": "omadahealth",
+            "url": "https://job-boards.greenhouse.io/omadahealth/jobs/7551558"
+          }
+        ]
+      }
+    ]
+  },
+  "recommendation": {
+    "first_attack_now_target": "business_development_manager",
+    "first_context_target": "project_manager",
+    "long_tail_policy": "do_not_work_cluster_by_cluster_without_semantic_clustering"
+  }
+}

@@ -1,0 +1,4284 @@
+{
+  "source_dataset": "/home/afio/Documenti/Code/Python_code/Jinaj/joballert2/data/jobs/jobs_titled_en_recovery_v53_safe.jsonl",
+  "canonical_count": 82,
+  "role_family_count": 29,
+  "canonical_entries": [
+    {
+      "normalized_title": "account_executive",
+      "role_family": "sales",
+      "aliases": [
+        "account executive",
+        "enterprise account executive",
+        "multi media account executive",
+        "strategic account executive"
+      ],
+      "rule_ids": [
+        "sales_account_exec",
+        "sales_inside_sales_representative",
+        "sales_insurance_agent_geo_core_safe_v4",
+        "sales_insurance_producer_geo_edge_v43",
+        "sales_outside_sales_representative_safe_v6",
+        "sales_real_estate_agent_core_safe_v6"
+      ],
+      "rule_patterns_preview": [
+        "\\binside sales representative\\b|\\benterprise inside sales representative\\b|\\binside sales representative(?:\\s+\\w+)?\\b",
+        "^(?:copy of\\s+)?insurance producer\\b(?:\\s*[-,].*)?$",
+        "^(?:licensed\\s+)?insurance agent\\b(?:\\s*[-,].*)?$",
+        "\\boutside sales representative\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Account Executive",
+          "count": 202
+        },
+        {
+          "title": "Enterprise Account Executive",
+          "count": 157
+        },
+        {
+          "title": "Multi-Media Account Executive",
+          "count": 57
+        },
+        {
+          "title": "Strategic Account Executive",
+          "count": 56
+        },
+        {
+          "title": "Senior Account Executive",
+          "count": 55
+        },
+        {
+          "title": "Commercial Account Executive",
+          "count": 47
+        },
+        {
+          "title": "Oncology Account Executive",
+          "count": 37
+        },
+        {
+          "title": "Account Executive, Enterprise",
+          "count": 35
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "account_manager",
+      "role_family": "sales",
+      "aliases": [
+        "account manager",
+        "business development manager",
+        "technical account manager",
+        "territory account manager",
+        "territory account managers"
+      ],
+      "rule_ids": [
+        "sales_account_director",
+        "sales_account_manager",
+        "sales_business_development_manager",
+        "sales_regional_manager"
+      ],
+      "rule_patterns_preview": [
+        "\\bregional sales manager\\b",
+        "\\bbusiness development manager\\b",
+        "\\baccount director\\b",
+        "\\baccount manager\\b|\\bterritory account manager\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Territory Account Managers",
+          "count": 273
+        },
+        {
+          "title": "Territory Account Manager",
+          "count": 98
+        },
+        {
+          "title": "Account Manager",
+          "count": 87
+        },
+        {
+          "title": "Technical Account Manager",
+          "count": 47
+        },
+        {
+          "title": "Business Development Manager",
+          "count": 32
+        },
+        {
+          "title": "Enterprise Account Manager",
+          "count": 31
+        },
+        {
+          "title": "Regional Sales Manager",
+          "count": 28
+        },
+        {
+          "title": "Strategic Account Manager",
+          "count": 22
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "accountant",
+      "role_family": "finance",
+      "aliases": [
+        "accountant",
+        "accounting manager",
+        "revenue accountant"
+      ],
+      "rule_ids": [
+        "finance_accountant",
+        "finance_accounting_manager"
+      ],
+      "rule_patterns_preview": [
+        "\\baccounting manager\\b",
+        "\\baccountant\\b|\\bcontroller\\b|\\bauditor\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Senior Accountant",
+          "count": 61
+        },
+        {
+          "title": "Accounting Manager",
+          "count": 35
+        },
+        {
+          "title": "Staff Accountant",
+          "count": 24
+        },
+        {
+          "title": "Accountant",
+          "count": 23
+        },
+        {
+          "title": "Senior Revenue Accountant",
+          "count": 20
+        },
+        {
+          "title": "Controller",
+          "count": 14
+        },
+        {
+          "title": "IT / GRC External Auditor SOC 2 - LATAM",
+          "count": 11
+        },
+        {
+          "title": "Senior Accounting Manager",
+          "count": 10
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "ai_trainer_generalist",
+      "role_family": "operations",
+      "aliases": [
+        "ai trainer generalist",
+        "american sign language asl freelance ai trainer project",
+        "armenian language expert freelance ai trainer project",
+        "japanese translator freelance ai trainer project",
+        "social media annotation freelance ai trainer project",
+        "voice actor freelance ai trainer project"
+      ],
+      "rule_ids": [
+        "ops_ai_trainer_non_specialist_family_v41"
+      ],
+      "rule_patterns_preview": [
+        "^(?=.*\\bfreelance ai trainer project\\b)(?!.*\\bspecialist\\b).+$"
+      ],
+      "sample_titles": [
+        {
+          "title": "Social Media Annotation - Freelance AI Trainer Project",
+          "count": 6
+        },
+        {
+          "title": "Voice Actor - Freelance AI Trainer Project",
+          "count": 5
+        },
+        {
+          "title": "American Sign Language (ASL) - Freelance AI Trainer Project",
+          "count": 3
+        },
+        {
+          "title": "Japanese Translator - Freelance AI Trainer Project",
+          "count": 3
+        },
+        {
+          "title": "Armenian Language Expert - Freelance AI Trainer Project",
+          "count": 2
+        },
+        {
+          "title": "British Sign Language (BSL) - Freelance AI Trainer Project",
+          "count": 2
+        },
+        {
+          "title": "German Voice Actor - Freelance AI Trainer Project",
+          "count": 2
+        },
+        {
+          "title": "Hindi Voice Actor - Freelance AI Trainer Project",
+          "count": 2
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "ai_trainer_specialist",
+      "role_family": "operations",
+      "aliases": [
+        "ai trainer specialist",
+        "garment manufacturing qc specialist freelance ai trainer project",
+        "geospatial reasoning specialist freelance ai trainer project",
+        "german language specialist freelance ai trainer project",
+        "italian language specialist freelance ai trainer project",
+        "pavement condition index pci survey annotation specialist freelance ai trainer project"
+      ],
+      "rule_ids": [
+        "ops_ai_trainer_specialist_family_v40"
+      ],
+      "rule_patterns_preview": [
+        "\\bfreelance ai trainer project\\b.*\\bspecialist\\b|\\bspecialist\\b.*\\bfreelance ai trainer project\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Garment Manufacturing QC Specialist - Freelance AI Trainer Project",
+          "count": 12
+        },
+        {
+          "title": "Geospatial Reasoning Specialist (Senior) - Freelance AI Trainer Project",
+          "count": 11
+        },
+        {
+          "title": "German Language Specialist - Freelance AI Trainer Project",
+          "count": 9
+        },
+        {
+          "title": "Pavement Condition Index (PCI) Survey & Annotation Specialist – Freelance AI Trainer Project",
+          "count": 8
+        },
+        {
+          "title": "Italian Language Specialist - Freelance AI Trainer Project",
+          "count": 7
+        },
+        {
+          "title": "Kotlin Coding Specialist - Freelance AI Trainer Project",
+          "count": 7
+        },
+        {
+          "title": "Finnish Language Specialist - Freelance AI Trainer Project",
+          "count": 6
+        },
+        {
+          "title": "French Language Specialist - Freelance AI Trainer Project",
+          "count": 6
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "analytics_engineer",
+      "role_family": "data_analytics",
+      "aliases": [
+        "analytics engineer",
+        "analytics engineer people analytics"
+      ],
+      "rule_ids": [
+        "data_analytics_engineer"
+      ],
+      "rule_patterns_preview": [
+        "\\banalytics engineer\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Analytics Engineer",
+          "count": 29
+        },
+        {
+          "title": "Senior Analytics Engineer",
+          "count": 24
+        },
+        {
+          "title": "Staff Analytics Engineer",
+          "count": 12
+        },
+        {
+          "title": "Analytics Engineer, People Analytics",
+          "count": 7
+        },
+        {
+          "title": "Sr. Analytics Engineer",
+          "count": 4
+        },
+        {
+          "title": "Senior Analytics Engineer (Tableau,SQL)",
+          "count": 4
+        },
+        {
+          "title": "Senior Data Analytics Engineer",
+          "count": 3
+        },
+        {
+          "title": "Agentic Analytics Engineer",
+          "count": 3
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "art_director",
+      "role_family": "design",
+      "aliases": [
+        "art director",
+        "art director bilingual",
+        "art director content",
+        "digital art director"
+      ],
+      "rule_ids": [
+        "design_art_director_core"
+      ],
+      "rule_patterns_preview": [
+        "\\b(?:senior|digital|associate)?\\s*art director\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Art Director",
+          "count": 10
+        },
+        {
+          "title": "Senior Art Director",
+          "count": 4
+        },
+        {
+          "title": "Digital Art Director",
+          "count": 2
+        },
+        {
+          "title": "Sr. Art Director - Bilingual",
+          "count": 1
+        },
+        {
+          "title": "Art Director, Content",
+          "count": 1
+        },
+        {
+          "title": "Marketing Internship - Graphic Designer / Art Director",
+          "count": 1
+        },
+        {
+          "title": "Principal, Art Director",
+          "count": 1
+        },
+        {
+          "title": "Senior, Art Director",
+          "count": 1
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "assistant_teacher",
+      "role_family": "education",
+      "aliases": [
+        "afternoon assistant teacher",
+        "assistant spanish teacher",
+        "assistant teacher",
+        "infant assistant teacher",
+        "instructional aide"
+      ],
+      "rule_ids": [
+        "education_assistant_spanish_teacher_edge",
+        "education_assistant_teacher",
+        "education_childcare_assistant",
+        "education_instructional_aide_paraprofessional"
+      ],
+      "rule_patterns_preview": [
+        "\\b(?:preschool|infant|toddler|early childhood)\\s+(?:assistant teacher|teaching assistant|aide)\\b|\\bassistant\\s+(?:preschool|infant|toddler)\\s+teacher\\b",
+        "\\bassistant teacher\\b",
+        "\\b(?:1\\s*1\\s+)?instructional aide\\b|\\bteacher aide\\b|\\b(?:classroom|school)\\s+aide\\b|\\bparaprofessional\\b",
+        "^assistant spanish teacher$"
+      ],
+      "sample_titles": [
+        {
+          "title": "Assistant Teacher",
+          "count": 73
+        },
+        {
+          "title": "Instructional Aide",
+          "count": 14
+        },
+        {
+          "title": "Infant Assistant Teacher",
+          "count": 5
+        },
+        {
+          "title": "Afternoon Assistant Teacher",
+          "count": 4
+        },
+        {
+          "title": "Assistant Spanish Teacher",
+          "count": 3
+        },
+        {
+          "title": "1:1 Instructional Aide",
+          "count": 2
+        },
+        {
+          "title": "Preschool Assistant Teacher",
+          "count": 2
+        },
+        {
+          "title": "Spanish Assistant Teacher",
+          "count": 2
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "behavioral_support_specialist",
+      "role_family": "healthcare_clinical",
+      "aliases": [
+        "behavior technician",
+        "behavioral interventionist",
+        "behavioral support specialist",
+        "direct support professional dsp",
+        "intervention specialist",
+        "registered behavior technician"
+      ],
+      "rule_ids": [
+        "health_behavior_analyst",
+        "health_behavioral_interventionist",
+        "health_behavioral_support",
+        "health_board_certified_behavior_analyst"
+      ],
+      "rule_patterns_preview": [
+        "\\bregistered behavior technician\\b|\\bbehavior technician\\b|\\bintervention specialist\\b|\\bdirect support professional\\b|\\bdsp\\b",
+        "\\bbehavioral interventionists?\\b",
+        "\\bboard certified behavior analyst\\b|\\bbcba\\b",
+        "\\bbehavior analyst\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Intervention Specialist",
+          "count": 36
+        },
+        {
+          "title": "Behavior Technician",
+          "count": 35
+        },
+        {
+          "title": "Registered Behavior Technician",
+          "count": 35
+        },
+        {
+          "title": "Direct Support Professional (DSP)",
+          "count": 28
+        },
+        {
+          "title": "Behavioral Interventionist",
+          "count": 23
+        },
+        {
+          "title": "Board Certified Behavior Analyst",
+          "count": 20
+        },
+        {
+          "title": "Intervention Specialist - SY 26-27",
+          "count": 13
+        },
+        {
+          "title": "Hybrid BCBA",
+          "count": 10
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "business_development_representative",
+      "role_family": "sales",
+      "aliases": [
+        "bilingual business development representative mandarin",
+        "business developer",
+        "business development representative",
+        "manager sales development",
+        "sales development representative"
+      ],
+      "rule_ids": [
+        "sales_bdr",
+        "sales_dev_and_bizdev_cluster"
+      ],
+      "rule_patterns_preview": [
+        "\\bmanager(?:,|\\s)\\s*sales development\\b|\\bsales development manager\\b|\\bbusiness developer\\b",
+        "\\bbusiness development representative\\b|\\baccount development representative\\b|\\bbdr\\b|\\bsdr\\b|\\bsales development representative\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Sales Development Representative",
+          "count": 204
+        },
+        {
+          "title": "Business Development Representative",
+          "count": 114
+        },
+        {
+          "title": "Manager, Sales Development",
+          "count": 26
+        },
+        {
+          "title": "Bilingual Business Development Representative (Mandarin)",
+          "count": 16
+        },
+        {
+          "title": "Business Developer",
+          "count": 14
+        },
+        {
+          "title": "Enterprise Sales Development Representative",
+          "count": 12
+        },
+        {
+          "title": "Sales Development Manager",
+          "count": 10
+        },
+        {
+          "title": "Account Development Representative",
+          "count": 9
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "car_detailer",
+      "role_family": "skilled_trades",
+      "aliases": [
+        "automotive detailer lot attendant",
+        "automotive detailer lot attendant 2nd shift",
+        "car detailer",
+        "entry level automotive detailer lot attendant",
+        "entry level automotive detailer lot attendant post production"
+      ],
+      "rule_ids": [
+        "trades_car_detailer"
+      ],
+      "rule_patterns_preview": [
+        "\\bcar detailer\\b|\\bautomotive detailer\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Car Detailer",
+          "count": 60
+        },
+        {
+          "title": "Entry-Level Automotive Detailer / Lot Attendant",
+          "count": 29
+        },
+        {
+          "title": "Entry-Level Automotive Detailer / Lot Attendant Post Production",
+          "count": 24
+        },
+        {
+          "title": "Automotive Detailer / Lot Attendant",
+          "count": 5
+        },
+        {
+          "title": "Automotive Detailer / Lot Attendant - 2nd Shift",
+          "count": 3
+        },
+        {
+          "title": "Automotive Detailer / Lot Attendant  - Entry Level",
+          "count": 3
+        },
+        {
+          "title": "Automotive Detailer / Lot Attendant Post Production",
+          "count": 3
+        },
+        {
+          "title": "Entry-Level Automotive Detailer / Lot Attendant (2nd shift)",
+          "count": 3
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "certified_nursing_assistant",
+      "role_family": "healthcare_clinical",
+      "aliases": [
+        "certified nursing assistant",
+        "certified nursing assistant cna full time 8 hour day shift",
+        "certified nursing assistant cna full time 8 hour evening shift",
+        "certified nursing assistant cna full time 8 hour night shift",
+        "certified nursing assistant cna part time 8 hour evening shift",
+        "float pool certified nursing assistant cna"
+      ],
+      "rule_ids": [
+        "health_certified_nursing_assistant"
+      ],
+      "rule_patterns_preview": [
+        "\\bcertified nursing assistant\\b|\\bcna\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Float Pool Certified Nursing Assistant (CNA)",
+          "count": 12
+        },
+        {
+          "title": "Certified Nursing Assistant (CNA) Full-Time 8-Hour Evening Shift",
+          "count": 7
+        },
+        {
+          "title": "Certified Nursing Assistant (CNA) Part-Time 8-Hour Evening Shift",
+          "count": 7
+        },
+        {
+          "title": "Certified Nursing Assistant (CNA) Full-Time 8-Hour Night Shift",
+          "count": 6
+        },
+        {
+          "title": "Certified Nursing Assistant (CNA) Full-Time 8-Hour Day Shift",
+          "count": 3
+        },
+        {
+          "title": "Utilization Management CNA",
+          "count": 2
+        },
+        {
+          "title": "Certified Nursing Assistant (CNA) Full-Time Evening Shift",
+          "count": 2
+        },
+        {
+          "title": "Certified Nursing Assistant (CNA) Part-Time Evening Shift",
+          "count": 2
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "compliance_manager",
+      "role_family": "compliance_risk",
+      "aliases": [
+        "affiliate compliance manager",
+        "compliance manager",
+        "compliance manager fintech",
+        "compliance officer"
+      ],
+      "rule_ids": [
+        "compliance_governance_controls_manager_edge_v36",
+        "compliance_grc_manager_director_edge_v38",
+        "compliance_internal_audit_explicit",
+        "compliance_internal_audit_manager_edge_v29",
+        "compliance_manager",
+        "compliance_product_compliance_managerial_explicit",
+        "compliance_regulatory_affairs_manager_edge_v29",
+        "compliance_risk_manager_director_explicit"
+      ],
+      "rule_patterns_preview": [
+        "\\baffiliate compliance manager\\b|\\bcompliance manager\\b",
+        "\\binternal audit (?:analyst|senior|manager)\\b|\\b(?:director,?\\s*internal audit|head of internal audit|head of internal audit & sox)\\b",
+        "\\bcompliance officer\\b|\\bcompliance (?:lead|director)\\b|\\bhead of compliance(?:,\\s*\\w+)?\\b|\\b(?:operational|enterprise|financial|credit)?\\s*risk manager\\b|\\bsenior director risk management\\b|\\bsenior risk manager\\b|\\bmanager,\\s*financial risk\\b|\\bsenior technology and security risk manager\\b",
+        "\\bmanager\\s+global product compliance\\b|\\bsenior director\\s+product compliance\\b|\\bhead of product compliance\\b|\\bsenior director\\s+global compliance\\b|\\bdirector\\s+corporate and regulatory compliance\\b|\\bdirector\\s+compliance\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Compliance Manager",
+          "count": 65
+        },
+        {
+          "title": "Affiliate Compliance Manager",
+          "count": 60
+        },
+        {
+          "title": "Compliance Manager, FinTech",
+          "count": 60
+        },
+        {
+          "title": "Compliance Officer",
+          "count": 6
+        },
+        {
+          "title": "Senior Compliance Manager",
+          "count": 5
+        },
+        {
+          "title": "Manager, Global Product Compliance",
+          "count": 5
+        },
+        {
+          "title": "Internal Audit Manager",
+          "count": 5
+        },
+        {
+          "title": "Director, Corporate and Regulatory Compliance",
+          "count": 4
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "compliance_specialist",
+      "role_family": "compliance_risk",
+      "aliases": [
+        "affiliate compliance specialist",
+        "compliance analyst fintech",
+        "compliance fintech",
+        "compliance specialist",
+        "compliance specialist fintech"
+      ],
+      "rule_ids": [
+        "compliance_aml_kyc_fraud_investigator_explicit",
+        "compliance_governance_controls_specialist_edge_v36",
+        "compliance_grc_core_explicit",
+        "compliance_grc_specialist_analyst_consultant_edge_v38",
+        "compliance_onboarding_explicit_edge_v29",
+        "compliance_onboarding_risk_context_edge_v33",
+        "compliance_payroll_risk_compliance_explicit",
+        "compliance_product_compliance_specialist_explicit",
+        "compliance_regulatory_affairs_specialist_edge_v29",
+        "compliance_regulatory_operations_edge_v33",
+        "compliance_risk_analyst_specialist_explicit",
+        "compliance_specialist"
+      ],
+      "rule_patterns_preview": [
+        "\\baffiliate compliance specialist\\b|\\bcompliance specialist\\b|\\bcompliance analyst\\b|\\bcompliance associate\\b",
+        "\\bthird party risk analyst\\b|\\brisk analyst(?:\\s*i+)?\\b|\\bfraud analyst\\b|\\baml analyst\\b|\\b(?:junior\\s+)?kyc(?:\\s+onboarding)? analyst\\b|\\bregulatory response analyst\\b|\\bcredit risk analyst\\b|\\bfraud monitoring analyst\\b|\\baccount risk specialist\\b|\\bgrowth risk specialist\\b|\\bict risk analyst\\b|\\bgrc analyst\\b",
+        "\\b(?:senior\\s+)?(?:bsa\\s*-\\s*)?aml investigator\\b|\\bfraud investigator\\b|\\bfraud investigations manager\\b|\\bkyc representative\\b|\\bcompliance kyc specialist\\b",
+        "\\bpayroll\\b.*\\b(?:risk|compliance)\\b|\\b(?:risk|compliance)\\b.*\\bpayroll\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Compliance Specialist",
+          "count": 63
+        },
+        {
+          "title": "Affiliate Compliance Specialist",
+          "count": 60
+        },
+        {
+          "title": "Compliance Analyst, FinTech",
+          "count": 60
+        },
+        {
+          "title": "Compliance Associate, FinTech",
+          "count": 60
+        },
+        {
+          "title": "Compliance Specialist, FinTech",
+          "count": 59
+        },
+        {
+          "title": "Compliance Analyst",
+          "count": 16
+        },
+        {
+          "title": "Payroll Incident & Risk Lead",
+          "count": 12
+        },
+        {
+          "title": "Associate, Risk/Compliance",
+          "count": 12
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "content_producer",
+      "role_family": "content",
+      "aliases": [
+        "content producer",
+        "creative producer",
+        "editing ai content producer",
+        "executive producer",
+        "news producer",
+        "producer"
+      ],
+      "rule_ids": [
+        "content_producer_context_core",
+        "content_producer_contextual_edge_v42",
+        "content_producer_creative_event_core",
+        "content_producer_senior_exec_core"
+      ],
+      "rule_patterns_preview": [
+        "\\b(?:video|content|digital|social|newscast|news|story|web|anime|gaming|localization|sports|comm)\\b.*\\bproducer\\b|\\bproducer\\b.*\\b(?:video|content|digital|social|newscast|news|story|web|anime|gaming|localization|sports|comm)\\b",
+        "\\b(?:creative|event|live experience|live event)\\b.*\\bproducer\\b|\\bproducer\\b.*\\b(?:creative|event|live experience|live event)\\b",
+        "^(?:executive producer|senior producer(?:\\s*-\\s*.*)?)$",
+        "^(?=.*\\bproducer\\b)(?=.*\\b(morning|evening|show|newscast|streaming|commercial|videographer|video|host|casting|conference|shoot|editor|game|live operations|features|central desk)\\b)(?!.*\\binsurance\\b)(?!.*\\bp&c\\b)(?!.*\\bsales\\b).+$"
+      ],
+      "sample_titles": [
+        {
+          "title": "Executive Producer",
+          "count": 6
+        },
+        {
+          "title": "Editing AI Content Producer",
+          "count": 6
+        },
+        {
+          "title": "News Producer",
+          "count": 5
+        },
+        {
+          "title": "Senior Producer",
+          "count": 4
+        },
+        {
+          "title": "Creative Producer",
+          "count": 4
+        },
+        {
+          "title": "Associate Event Producer",
+          "count": 3
+        },
+        {
+          "title": "Video Producer, B2B Marketing",
+          "count": 2
+        },
+        {
+          "title": "Web Producer",
+          "count": 2
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "creative_director",
+      "role_family": "design",
+      "aliases": [
+        "creative director",
+        "creative director copy",
+        "creative director ltx",
+        "creative director marketing",
+        "executive creative director"
+      ],
+      "rule_ids": [
+        "design_creative_director_core"
+      ],
+      "rule_patterns_preview": [
+        "\\b(?:executive\\s+)?creative director(?:,\\s*art)?\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Creative Director",
+          "count": 11
+        },
+        {
+          "title": "Creative Director, LTX",
+          "count": 3
+        },
+        {
+          "title": "Executive Creative Director",
+          "count": 3
+        },
+        {
+          "title": "Creative Director, Marketing",
+          "count": 2
+        },
+        {
+          "title": "Associate Creative Director, Copy",
+          "count": 2
+        },
+        {
+          "title": "Creative Director, Art",
+          "count": 2
+        },
+        {
+          "title": "Creative Director, Copy",
+          "count": 1
+        },
+        {
+          "title": "Creative Director, International",
+          "count": 1
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "customer_service_specialist",
+      "role_family": "operations",
+      "aliases": [
+        "bilingual member services representative remote spanish speaking",
+        "client service",
+        "customer service advisor",
+        "customer service delivery advocate",
+        "customer service specialist",
+        "customer support agent freelance project"
+      ],
+      "rule_ids": [
+        "customer_care_advisor_executive_edge_v39",
+        "customer_client_service_associate_edge_v37",
+        "customer_client_support_specialist_edge_v37",
+        "customer_member_services_coordinator_edge_v37",
+        "customer_member_services_representative",
+        "customer_service_advocate",
+        "customer_service_frontline_representative",
+        "customer_support_frontline_representative"
+      ],
+      "rule_patterns_preview": [
+        "\\bcustomer service delivery advocate\\b",
+        "\\bmember services? (?:representative|advocate)\\b",
+        "\\bcustomer service (?:advisor|associate|specialist|executive)\\b|\\bcustomer service,\\s*associate\\b|\\bclient service representative\\b|\\bcall center (?:representative|agent)\\b",
+        "\\bcustomer support (?:agent|associate|advocate)\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Customer Service Delivery Advocate",
+          "count": 73
+        },
+        {
+          "title": "Bilingual Member Services Representative (Remote, Spanish Speaking)",
+          "count": 16
+        },
+        {
+          "title": "Client Service Associate",
+          "count": 8
+        },
+        {
+          "title": "Customer Service Advisor",
+          "count": 5
+        },
+        {
+          "title": "Customer Support Agent - Freelance Project",
+          "count": 5
+        },
+        {
+          "title": "Client Service Representative",
+          "count": 4
+        },
+        {
+          "title": "Customer Service Specialist",
+          "count": 4
+        },
+        {
+          "title": "Member Services Coordinator",
+          "count": 4
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success",
+      "aliases": [
+        "client success manager",
+        "customer success manager",
+        "enterprise customer success manager",
+        "technical customer success manager"
+      ],
+      "rule_ids": [
+        "csm",
+        "csm_client_success_manager_core_safe_v3"
+      ],
+      "rule_patterns_preview": [
+        "\\b(?:senior|sr\\.?|staff|principal|lead|enterprise)?\\s*client success manager\\b",
+        "\\bcustomer success manager\\b|\\bcustomer success\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Customer Success Manager",
+          "count": 127
+        },
+        {
+          "title": "Enterprise Customer Success Manager",
+          "count": 35
+        },
+        {
+          "title": "Senior Customer Success Manager",
+          "count": 29
+        },
+        {
+          "title": "Client Success Manager",
+          "count": 13
+        },
+        {
+          "title": "Technical Customer Success Manager",
+          "count": 12
+        },
+        {
+          "title": "Strategic Customer Success Manager",
+          "count": 11
+        },
+        {
+          "title": "Customer Success Engineer",
+          "count": 11
+        },
+        {
+          "title": "Customer Success Associate",
+          "count": 10
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "data_analyst",
+      "role_family": "data_analytics",
+      "aliases": [
+        "data analyst",
+        "product analyst",
+        "revenue operations analyst"
+      ],
+      "rule_ids": [
+        "data_analyst",
+        "data_quant_and_analyst_variants",
+        "data_sales_operations_analyst_safe_v7"
+      ],
+      "rule_patterns_preview": [
+        "\\bproduct analyst\\b|\\brevenue operations analyst\\b",
+        "\\bdata analyst\\b|\\bbusiness intelligence analyst\\b|\\bbi analyst\\b",
+        "\\b(?:senior|sr\\.?|principal|enterprise|apj|junior)?\\s*sales operations analyst\\b|\\bsales operations analyst\\b.*\\b(?:renewals|insurance|amazon|latam)\\b|\\bsenior sales operation specialist\\s*\\(sales operations analyst\\)"
+      ],
+      "sample_titles": [
+        {
+          "title": "Data Analyst",
+          "count": 33
+        },
+        {
+          "title": "Senior Data Analyst",
+          "count": 31
+        },
+        {
+          "title": "Senior Product Analyst",
+          "count": 20
+        },
+        {
+          "title": "Revenue Operations Analyst",
+          "count": 16
+        },
+        {
+          "title": "Product Analyst",
+          "count": 15
+        },
+        {
+          "title": "Sales Operations Analyst",
+          "count": 11
+        },
+        {
+          "title": "Business Intelligence Analyst",
+          "count": 10
+        },
+        {
+          "title": "Senior Business Intelligence Analyst",
+          "count": 9
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "data_engineer",
+      "role_family": "data_engineering",
+      "aliases": [
+        "data engineer"
+      ],
+      "rule_ids": [
+        "eng_data_engineer"
+      ],
+      "rule_patterns_preview": [
+        "\\bdata engineer\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Senior Data Engineer",
+          "count": 224
+        },
+        {
+          "title": "Lead Data Engineer",
+          "count": 114
+        },
+        {
+          "title": "Data Engineer",
+          "count": 91
+        },
+        {
+          "title": "Staff Data Engineer",
+          "count": 14
+        },
+        {
+          "title": "Sr. Data Engineer",
+          "count": 10
+        },
+        {
+          "title": "Data Engineer for Banking",
+          "count": 4
+        },
+        {
+          "title": "Data Engineer II",
+          "count": 4
+        },
+        {
+          "title": "Senior Staff Data Engineer",
+          "count": 4
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "data_scientist",
+      "role_family": "data_science",
+      "aliases": [
+        "data scientist"
+      ],
+      "rule_ids": [
+        "eng_data_scientist"
+      ],
+      "rule_patterns_preview": [
+        "\\bdata scientist\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Senior Data Scientist",
+          "count": 63
+        },
+        {
+          "title": "Data Scientist",
+          "count": 50
+        },
+        {
+          "title": "Staff Data Scientist",
+          "count": 13
+        },
+        {
+          "title": "Data Scientist II",
+          "count": 10
+        },
+        {
+          "title": "Lead Data Scientist",
+          "count": 9
+        },
+        {
+          "title": "Forward-Deployed Data Scientist",
+          "count": 8
+        },
+        {
+          "title": "Senior Forward-Deployed Data Scientist",
+          "count": 7
+        },
+        {
+          "title": "Principal Data Scientist",
+          "count": 5
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "delivery_driver",
+      "role_family": "logistics",
+      "aliases": [
+        "customer delivery driver",
+        "customer service delivery driver",
+        "delivery driver",
+        "delivery driver part time",
+        "vehicle delivery driver"
+      ],
+      "rule_ids": [
+        "logistics_delivery_driver"
+      ],
+      "rule_patterns_preview": [
+        "\\bcustomer delivery driver\\b|\\bdelivery drivers?\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Customer Delivery Driver",
+          "count": 70
+        },
+        {
+          "title": "Vehicle Delivery Driver",
+          "count": 17
+        },
+        {
+          "title": "Customer Service Delivery Driver",
+          "count": 15
+        },
+        {
+          "title": "Delivery Driver",
+          "count": 15
+        },
+        {
+          "title": "Delivery Driver (Part Time)",
+          "count": 12
+        },
+        {
+          "title": "Non-CDL Delivery Driver",
+          "count": 10
+        },
+        {
+          "title": "Customer Service Vehicle Delivery Driver",
+          "count": 6
+        },
+        {
+          "title": "Delivery Driver (Full Time)",
+          "count": 5
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "devops_engineer",
+      "role_family": "devops",
+      "aliases": [
+        "devops engineer",
+        "devops engineer latam",
+        "devsecops engineer"
+      ],
+      "rule_ids": [
+        "eng_devops",
+        "eng_devsecops_engineer_core_safe_v3"
+      ],
+      "rule_patterns_preview": [
+        "\\bdevops engineer\\b|\\bdevops\\b",
+        "^(?:senior|sr\\.?|staff|principal|lead|chief)?\\s*devsecops engineer(?:\\s*(?:i|ii|iii|iv|v))?(?:\\s*[-,:].*)?$"
+      ],
+      "sample_titles": [
+        {
+          "title": "Senior DevOps Engineer",
+          "count": 70
+        },
+        {
+          "title": "DevOps Engineer",
+          "count": 37
+        },
+        {
+          "title": "DevSecOps Engineer",
+          "count": 14
+        },
+        {
+          "title": "Staff DevOps Engineer",
+          "count": 7
+        },
+        {
+          "title": "DevOps Engineer II (LATAM)",
+          "count": 7
+        },
+        {
+          "title": "Devops Engineer",
+          "count": 5
+        },
+        {
+          "title": "Cloud DevOps Engineer",
+          "count": 4
+        },
+        {
+          "title": "Principal DevOps Engineer",
+          "count": 4
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "driver",
+      "role_family": "logistics",
+      "aliases": [
+        "cdl a local truck driver",
+        "cdl driver",
+        "cdl drivers",
+        "driver",
+        "future cdl driver",
+        "heavy equipment cdl driver"
+      ],
+      "rule_ids": [
+        "logistics_cdl_driver"
+      ],
+      "rule_patterns_preview": [
+        "\\bcdl\\b.*\\bdrivers?\\b|\\bdrivers?\\b.*\\bcdl\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "CDL Drivers",
+          "count": 279
+        },
+        {
+          "title": "Heavy Equipment CDL Driver",
+          "count": 55
+        },
+        {
+          "title": "CDL A Local Truck Driver",
+          "count": 28
+        },
+        {
+          "title": "CDL Driver",
+          "count": 7
+        },
+        {
+          "title": "Future CDL Driver",
+          "count": 3
+        },
+        {
+          "title": "Future CDL Driver (Pump & Power)",
+          "count": 3
+        },
+        {
+          "title": "Future CDL Drivers",
+          "count": 3
+        },
+        {
+          "title": "CDL Driver - Roll off Containers",
+          "count": 2
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "electrical_engineer",
+      "role_family": "industrial_engineering",
+      "aliases": [
+        "electrical engineer",
+        "electrical engineer ai drones robotics company",
+        "electrical engineer tempest"
+      ],
+      "rule_ids": [
+        "industrial_electrical_engineer"
+      ],
+      "rule_patterns_preview": [
+        "\\b(?:senior|staff|principal|sr\\.?)?\\s*electrical engineer\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Senior Electrical Engineer",
+          "count": 28
+        },
+        {
+          "title": "Electrical Engineer",
+          "count": 24
+        },
+        {
+          "title": "Staff Electrical Engineer",
+          "count": 8
+        },
+        {
+          "title": "Senior Electrical Engineer (TEMPEST)",
+          "count": 3
+        },
+        {
+          "title": "Senior Electrical Engineer, AI, Drones & Robotics Company!",
+          "count": 2
+        },
+        {
+          "title": "Senior Electrical Engineer, Maneuver Dominance",
+          "count": 2
+        },
+        {
+          "title": "Senior Electrical Engineer, Manufacturing Test",
+          "count": 2
+        },
+        {
+          "title": "Sr. Electrical Engineer",
+          "count": 2
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "engineering_manager",
+      "role_family": "software_engineering",
+      "aliases": [
+        "director of engineering",
+        "engineering manager",
+        "engineering team leader",
+        "software engineering manager"
+      ],
+      "rule_ids": [
+        "eng_leadership_titles",
+        "eng_manager"
+      ],
+      "rule_patterns_preview": [
+        "\\bengineering manager\\b|\\bmanager,\\s*software engineering\\b|\\bsoftware engineering manager\\b",
+        "\\bdirector of engineering\\b|\\bengineering team leader\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Engineering Manager",
+          "count": 77
+        },
+        {
+          "title": "Engineering Team Leader",
+          "count": 20
+        },
+        {
+          "title": "Senior Engineering Manager",
+          "count": 17
+        },
+        {
+          "title": "Software Engineering Manager",
+          "count": 17
+        },
+        {
+          "title": "Director of Engineering",
+          "count": 16
+        },
+        {
+          "title": "Engineering Manager, Platform",
+          "count": 9
+        },
+        {
+          "title": "Engineering Team Leader, DX Platform",
+          "count": 8
+        },
+        {
+          "title": "Data Engineering Manager",
+          "count": 5
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "executive_assistant",
+      "role_family": "administrative_support",
+      "aliases": [
+        "executive assistant",
+        "executive assistant corporate administrator",
+        "executive assistant to the ceo"
+      ],
+      "rule_ids": [
+        "admin_executive_assistant"
+      ],
+      "rule_patterns_preview": [
+        "\\bexecutive assistant\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Executive Assistant",
+          "count": 57
+        },
+        {
+          "title": "Senior Executive Assistant",
+          "count": 11
+        },
+        {
+          "title": "Executive Assistant to the CEO",
+          "count": 5
+        },
+        {
+          "title": "Sr. Executive Assistant",
+          "count": 5
+        },
+        {
+          "title": "Executive Assistant / Corporate Administrator",
+          "count": 1
+        },
+        {
+          "title": "Executive Assistant to the CCO (Hybrid)",
+          "count": 1
+        },
+        {
+          "title": "Executive Assistant, Creative & Player Services",
+          "count": 1
+        },
+        {
+          "title": "Executive Assistant, ANZ",
+          "count": 1
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "field_technician",
+      "role_family": "skilled_trades",
+      "aliases": [
+        "field technician",
+        "field technician mechanic pump power hvac",
+        "heavy equipment field technician mechanic",
+        "install plumber relocation offerred",
+        "plumber",
+        "plumber relocation sign on offered"
+      ],
+      "rule_ids": [
+        "trades_field_technician",
+        "trades_plumber_explicit",
+        "trades_plumbing_install_service_edge_v28",
+        "trades_pump_power_hvac_field_technician",
+        "trades_pump_power_hvac_shop_technician"
+      ],
+      "rule_patterns_preview": [
+        "\\bheavy equipment field technician\\b|\\bfield technicians?\\b.*\\bmechanic\\b",
+        "\\bfield technician\\b.*\\bmechanic\\b.*\\b(pump|power|hvac)\\b|\\bfield technician\\b.*\\b(pump|power|hvac)\\b.*\\bmechanic\\b",
+        "\\bshop technician\\b.*\\bmechanic\\b.*\\b(pump|power|hvac)\\b|\\bshop technician\\b.*\\b(pump|power|hvac)\\b.*\\bmechanic\\b",
+        "\\b(?:lead\\s+)?(?:install\\s+)?plumber\\b|\\bjourneyman plumber\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Heavy Equipment Field Technician (Mechanic)",
+          "count": 103
+        },
+        {
+          "title": "Field Technician (Mechanic) (Pump, Power & HVAC)",
+          "count": 20
+        },
+        {
+          "title": "Lead Plumber (Relocation & Sign On Offered!!!)",
+          "count": 5
+        },
+        {
+          "title": "Plumber",
+          "count": 5
+        },
+        {
+          "title": "Lead Install Plumber (Relocation Offerred!!!)",
+          "count": 4
+        },
+        {
+          "title": "Field Technician (Mechanic)",
+          "count": 3
+        },
+        {
+          "title": "Heavy Equipment Field Technician (Mechanic)(Pump, Power & HVAC)",
+          "count": 2
+        },
+        {
+          "title": "Journeyman Plumber",
+          "count": 1
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "financial_analyst",
+      "role_family": "finance",
+      "aliases": [
+        "accounts payable specialist",
+        "finance manager",
+        "financial analyst",
+        "tax manager"
+      ],
+      "rule_ids": [
+        "finance_analyst",
+        "finance_cluster",
+        "finance_director_fpna_safe_v7"
+      ],
+      "rule_patterns_preview": [
+        "^director,?\\s*f\\s*p\\s*&\\s*a$|^senior director,?\\s*f\\s*p\\s*&\\s*a(?:\\s*-\\s*.*)?$",
+        "\\bfinance manager\\b|\\btax manager\\b|\\bsenior actuarial analyst\\b|\\baccounts payable specialist\\b",
+        "\\bfinancial analyst\\b|\\bfinance analyst\\b|\\btreasury analyst\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Senior Financial Analyst",
+          "count": 24
+        },
+        {
+          "title": "Financial Analyst",
+          "count": 18
+        },
+        {
+          "title": "Accounts Payable Specialist",
+          "count": 17
+        },
+        {
+          "title": "Tax Manager",
+          "count": 17
+        },
+        {
+          "title": "Finance Manager",
+          "count": 15
+        },
+        {
+          "title": "Director, FP&A",
+          "count": 13
+        },
+        {
+          "title": "Senior Actuarial Analyst",
+          "count": 13
+        },
+        {
+          "title": "Strategic Finance Manager",
+          "count": 10
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "flight_attendant",
+      "role_family": "operations",
+      "aliases": [
+        "breeze airways flight attendant full time",
+        "breeze airways flight attendant part time",
+        "flight attendant"
+      ],
+      "rule_ids": [
+        "ops_flight_attendant_breeze_safe_v7"
+      ],
+      "rule_patterns_preview": [
+        "^breeze airways flight attendant\\s*-\\s*(?:part|full)\\s*time$"
+      ],
+      "sample_titles": [
+        {
+          "title": "Breeze Airways Flight Attendant - Part Time",
+          "count": 12
+        },
+        {
+          "title": "Breeze Airways Flight Attendant - Full Time",
+          "count": 2
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "health_information_specialist",
+      "role_family": "healthcare_clinical",
+      "aliases": [
+        "area health information specialist",
+        "health information specialist"
+      ],
+      "rule_ids": [
+        "health_information_specialist"
+      ],
+      "rule_patterns_preview": [
+        "\\bhealth information specialist\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Health Information Specialist I",
+          "count": 42
+        },
+        {
+          "title": "Area Health Information Specialist I",
+          "count": 9
+        },
+        {
+          "title": "Health Information Specialist II",
+          "count": 6
+        },
+        {
+          "title": "Lead Area Health Information Specialist",
+          "count": 2
+        },
+        {
+          "title": "Lead, Area Health Information Specialist",
+          "count": 2
+        },
+        {
+          "title": "Area Health Information Specialist - Hybrid - Bangor, ME",
+          "count": 1
+        },
+        {
+          "title": "Area Health Information Specialist II",
+          "count": 1
+        },
+        {
+          "title": "Area Health Information Specialist II - Brooklyn, NY - Onsite",
+          "count": 1
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "hr_generalist",
+      "role_family": "people_operations",
+      "aliases": [
+        "graduate hr generalist amer",
+        "graduate hr generalist apac",
+        "hr generalist",
+        "human resources generalist"
+      ],
+      "rule_ids": [
+        "people_hr_generalist_core_safe_v4"
+      ],
+      "rule_patterns_preview": [
+        "\\b(?:graduate|senior|sr\\.?|lead|principal)?\\s*(?:human resources|hr)\\s+generalist\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "HR Generalist",
+          "count": 13
+        },
+        {
+          "title": "Human Resources Generalist",
+          "count": 5
+        },
+        {
+          "title": "Senior HR Generalist",
+          "count": 3
+        },
+        {
+          "title": "Graduate HR Generalist - AMER",
+          "count": 1
+        },
+        {
+          "title": "Graduate HR Generalist - APAC",
+          "count": 1
+        },
+        {
+          "title": "Lead HR Generalist - Americas",
+          "count": 1
+        },
+        {
+          "title": "Senior HR Generalist - EMEA",
+          "count": 1
+        },
+        {
+          "title": "People Operations - HR Generalist",
+          "count": 1
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "it_support_specialist",
+      "role_family": "it_operations",
+      "aliases": [
+        "it support engineer",
+        "it support specialist",
+        "support engineer",
+        "technical support engineer",
+        "technical support specialist"
+      ],
+      "rule_ids": [
+        "it_support_engineer",
+        "it_support_engineer_core_safe_v2",
+        "it_support_engineer_it_context_v35",
+        "it_support_specialist_core",
+        "it_support_specialist_it_context_v35",
+        "it_systems_administrator_core_v45"
+      ],
+      "rule_patterns_preview": [
+        "^(?:senior|staff|principal|lead|sr\\.?)?\\s*technical support specialist(?:\\s*(?:i|ii|iii|iv|v))?$",
+        "^(?!.*\\bmanager\\b)(?:senior|sr\\.?|lead|principal|staff|junior|jr\\.?|associate|it|linux|cloud|enterprise|business|financial|clinical)?\\s*.*\\bsystems?\\s+administrator(?:\\b|[^a-z].*)$",
+        "^(?!.*\\b(?:manager|director|head|chief)\\b)(?!.*\\b(?:customer|client|product|hardware|federal|designated|premium|spark|portworx|commodities|macro|trading|autonomy|curriculum)\\b)(?:support engineer|senior support engineer|sr\\.?\\s*support engineer|lead support engineer|staff support engineer|associate support engineer|l2 support engineer|l3 support engineer|senior l2 support engineer|senior l3 support engineer|tier\\s*[123]\\s*support engineer|support engineer\\s*\\(tier\\s*[123]\\)|support engineer,\\s*tier\\s*[123]|application support engineer|cloud support engineer|software support engineer|systems?\\s+support engineer|production support engineer|infrastructure support engineer|enterprise support engineer|database support engineer|platform support engineer|data center support engineer|tech support engineer|operations support engineer)(?:\\s*(?:i|ii|iii|iv|v))?(?:\\s*[-,:].*)?$",
+        "\\btechnical support engineer\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Technical Support Engineer",
+          "count": 52
+        },
+        {
+          "title": "Technical Support Specialist",
+          "count": 16
+        },
+        {
+          "title": "IT Support Engineer",
+          "count": 13
+        },
+        {
+          "title": "IT Support Specialist",
+          "count": 12
+        },
+        {
+          "title": "Support Engineer",
+          "count": 11
+        },
+        {
+          "title": "Senior Support Engineer",
+          "count": 9
+        },
+        {
+          "title": "ERP Technical Support Engineer Infor CSI (SyteLine)",
+          "count": 8
+        },
+        {
+          "title": "Senior Technical Support Engineer",
+          "count": 6
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "journalist",
+      "role_family": "content",
+      "aliases": [
+        "anchor multiskilled journalist",
+        "journalist",
+        "ktvb multiskilled journalist",
+        "meteorologist multiskilled journalist",
+        "multi skilled journalist",
+        "multiskilled journalist"
+      ],
+      "rule_ids": [
+        "content_multiskilled_journalist"
+      ],
+      "rule_patterns_preview": [
+        "\\bmulti-?skilled journalist\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Multiskilled Journalist",
+          "count": 13
+        },
+        {
+          "title": "Multi-Skilled Journalist",
+          "count": 3
+        },
+        {
+          "title": "Anchor/Multiskilled Journalist",
+          "count": 1
+        },
+        {
+          "title": "KTVB Multiskilled Journalist",
+          "count": 1
+        },
+        {
+          "title": "Meteorologist/ Multiskilled Journalist",
+          "count": 1
+        },
+        {
+          "title": "Multi-skilled Journalist",
+          "count": 1
+        },
+        {
+          "title": "Multiskilled Journalist (MSJ)",
+          "count": 1
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "legal_counsel",
+      "role_family": "legal",
+      "aliases": [
+        "attorney early career",
+        "commercial counsel",
+        "corporate counsel",
+        "legal counsel",
+        "legal process server"
+      ],
+      "rule_ids": [
+        "legal_counsel"
+      ],
+      "rule_patterns_preview": [
+        "\\bcounsel\\b|\\battorney\\b|\\blegal\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Legal Process Server",
+          "count": 60
+        },
+        {
+          "title": "Legal Counsel",
+          "count": 28
+        },
+        {
+          "title": "Attorney - Early Career",
+          "count": 18
+        },
+        {
+          "title": "Commercial Counsel",
+          "count": 15
+        },
+        {
+          "title": "Corporate Counsel",
+          "count": 13
+        },
+        {
+          "title": "Senior Counsel",
+          "count": 10
+        },
+        {
+          "title": "Senior Legal Counsel",
+          "count": 10
+        },
+        {
+          "title": "Senior Corporate Counsel",
+          "count": 8
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "licensed_practical_nurse",
+      "role_family": "healthcare_clinical",
+      "aliases": [
+        "licensed practical nurse",
+        "licensed practical nurse ca license required",
+        "licensed practical nurse lpn",
+        "licensed practical nurse lpn full time 8 hour evening shift",
+        "licensed vocational nurse lvn"
+      ],
+      "rule_ids": [
+        "health_licensed_practical_nurse",
+        "health_licensed_vocational_nurse"
+      ],
+      "rule_patterns_preview": [
+        "\\blicensed practical nurse\\b|\\blpn\\b|\\blvn\\b",
+        "\\blicensed vocational nurse\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Licensed Practical Nurse (LPN)",
+          "count": 23
+        },
+        {
+          "title": "Licensed Practical Nurse (CA license required)",
+          "count": 8
+        },
+        {
+          "title": "Licensed Vocational Nurse (LVN)",
+          "count": 8
+        },
+        {
+          "title": "Licensed Practical Nurse",
+          "count": 5
+        },
+        {
+          "title": "Licensed Practical Nurse (LPN) Full-Time 8-Hour Evening Shift",
+          "count": 3
+        },
+        {
+          "title": "Licensed Practical Nurse (LPN) Full-Time 12-Hour Night Shift",
+          "count": 2
+        },
+        {
+          "title": "Licensed Practical Nurse (LPN) Full-Time 8-Hour Night Shift",
+          "count": 2
+        },
+        {
+          "title": "Licensed Practical Nurse (LPN) Rehab Nurse Full-Time 12-Hour Night Shift",
+          "count": 2
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "logistics_coordinator",
+      "role_family": "logistics",
+      "aliases": [
+        "dispatcher",
+        "fleet operator",
+        "logistics",
+        "logistics coordinator",
+        "logistics specialist"
+      ],
+      "rule_ids": [
+        "logistics_core_coordinator_specialist",
+        "logistics_fulfillment_ops_edge"
+      ],
+      "rule_patterns_preview": [
+        "^(?:senior|lead|staff|sr\\.?)?\\s*logistics (?:coordinator|specialist|associate)$|\\bdispatcher\\b|\\btransportation administrator\\b",
+        "^fulfillment associate$|^retail delivery associate$|^customer vehicle delivery team$|^specialty pharmacy\\s*-\\s*delivery clerk$|^data center logistics specialist$|^fleet operator$|^autonomous fleet specialist$"
+      ],
+      "sample_titles": [
+        {
+          "title": "Logistics Associate",
+          "count": 13
+        },
+        {
+          "title": "Logistics Coordinator",
+          "count": 10
+        },
+        {
+          "title": "Dispatcher",
+          "count": 5
+        },
+        {
+          "title": "Logistics Specialist",
+          "count": 4
+        },
+        {
+          "title": "Fleet Operator",
+          "count": 3
+        },
+        {
+          "title": "Customer Vehicle Delivery Team",
+          "count": 2
+        },
+        {
+          "title": "Retail Delivery Associate",
+          "count": 2
+        },
+        {
+          "title": "Transportation Administrator",
+          "count": 2
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "logistics_manager",
+      "role_family": "logistics",
+      "aliases": [
+        "delivery excellence manager east",
+        "director delivery",
+        "logistics manager",
+        "manager delivery excellence",
+        "manager delivery services"
+      ],
+      "rule_ids": [
+        "logistics_delivery_business_edge",
+        "logistics_fulfillment_management_edge",
+        "logistics_manager_explicit"
+      ],
+      "rule_patterns_preview": [
+        "^logistics manager$|^global logistics manager$|^senior director, global warehousing & material movement$|^warehouse & fleet manager(?:\\s+\\(.*\\))?$|^manager, delivery services$|^director, delivery$",
+        "^manager\\s+delivery services$|^director\\s+delivery$|^manager\\s+delivery excellence$|^delivery excellence manager-?\\s*east$",
+        "^area manager\\s+fulfillment operations$"
+      ],
+      "sample_titles": [
+        {
+          "title": "Logistics Manager",
+          "count": 6
+        },
+        {
+          "title": "Manager, Delivery Excellence",
+          "count": 3
+        },
+        {
+          "title": "Delivery Excellence Manager- East",
+          "count": 2
+        },
+        {
+          "title": "Director, Delivery",
+          "count": 2
+        },
+        {
+          "title": "Manager, Delivery Services",
+          "count": 2
+        },
+        {
+          "title": "Warehouse & Fleet Manager",
+          "count": 2
+        },
+        {
+          "title": "Warehouse & Fleet Manager (Relocation & Sign-On Offered!!!)",
+          "count": 2
+        },
+        {
+          "title": "Area Manager, Fulfillment Operations",
+          "count": 2
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "manufacturing_engineer",
+      "role_family": "industrial_engineering",
+      "aliases": [
+        "manufacturing engineer",
+        "manufacturing engineer digital tools",
+        "manufacturing engineer machining"
+      ],
+      "rule_ids": [
+        "industrial_manufacturing_engineer"
+      ],
+      "rule_patterns_preview": [
+        "\\b(?:senior|staff|principal|sr\\.?)?\\s*manufacturing engineer\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Manufacturing Engineer",
+          "count": 18
+        },
+        {
+          "title": "Senior Manufacturing Engineer",
+          "count": 7
+        },
+        {
+          "title": "Manufacturing Engineer, Digital Tools",
+          "count": 3
+        },
+        {
+          "title": "Sr. Manufacturing Engineer",
+          "count": 3
+        },
+        {
+          "title": "Senior Manufacturing Engineer, Machining",
+          "count": 2
+        },
+        {
+          "title": "Senior Advanced Manufacturing Engineer",
+          "count": 2
+        },
+        {
+          "title": "Senior NPI Manufacturing Engineer",
+          "count": 2
+        },
+        {
+          "title": "Staff Manufacturing Engineer",
+          "count": 2
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "marketing_specialist",
+      "role_family": "marketing",
+      "aliases": [
+        "direct response copywriter personal finance",
+        "manager google paid media",
+        "marketing specialist",
+        "performance copywriter personal finance",
+        "video ad copywriter",
+        "video copywriter"
+      ],
+      "rule_ids": [
+        "marketing_cluster",
+        "marketing_copywriter_paid_media",
+        "marketing_media_planning_edge_v32",
+        "marketing_specialist"
+      ],
+      "rule_patterns_preview": [
+        "^media manager(?:\\s*\\(traditional media\\)|\\s*-\\s*social)?$|^senior media manager(?:\\s*,\\s*\\(healthcare\\))?$|^media planner(?:\\s*-\\s*(?:manager|senior specialist|specialist))?(?:\\s*,\\s*programmatic)?(?:\\s+for traditional media)?(?:\\s+offline)?(?:\\s+\\(london based\\))?$|^senior media planner(?:\\s*-\\s*search)?$|^assistant media planner$|^integrated media planner$|^traditional media planner$|^offline media manager$|^senior offline media manager$|^media associate$|^programmatic media (?:manager|strategist|supervisor)$",
+        "\\bcopywriter\\b|\\bcopywriting\\b|\\bad copywriting\\b|\\bpaid media\\b",
+        "\\bmanager,\\s*paid social\\b|\\bpaid social manager\\b|\\bsenior brand designer\\b",
+        "\\bmarketing\\b|\\bgrowth marketing\\b|\\bsocial media manager\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Senior Performance Copywriter, Personal Finance",
+          "count": 118
+        },
+        {
+          "title": "Lead Video Ad Copywriter",
+          "count": 60
+        },
+        {
+          "title": "Lead Video Copywriter",
+          "count": 60
+        },
+        {
+          "title": "Senior Direct Response Copywriter, Personal Finance",
+          "count": 60
+        },
+        {
+          "title": "Senior Manager, Google Paid Media",
+          "count": 60
+        },
+        {
+          "title": "Senior Manager, Video Ad Copywriting",
+          "count": 60
+        },
+        {
+          "title": "Senior Manager, Video Copywriting",
+          "count": 60
+        },
+        {
+          "title": "Senior Personal Finance Copywriter, Performance",
+          "count": 60
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "mechanic",
+      "role_family": "skilled_trades",
+      "aliases": [
+        "auto body repair technician",
+        "automotive wheel repair technician",
+        "brake and tire auto technician",
+        "entry level auto technician",
+        "heavy equipment shop technician mechanic",
+        "mechanic"
+      ],
+      "rule_ids": [
+        "trades_auto_body_collision_technician",
+        "trades_auto_repair_detail_precision_v27",
+        "trades_auto_technician_mechanic",
+        "trades_automotive_state_inspector_edge_v31",
+        "trades_diesel_technician_explicit",
+        "trades_shop_mechanic"
+      ],
+      "rule_patterns_preview": [
+        "\\bheavy equipment shop technician\\b|\\bshop technicians?\\b.*\\bmechanic\\b",
+        "\\bentry-level auto technician\\b|\\bmid-level auto technician\\b|\\bsenior auto technician\\b|\\bmaster auto technician\\b|\\blead auto technician\\b|\\bbrake and tire auto technician\\b|\\bauto technician\\b|\\bauto mechanic\\b|\\bautomotive mechanic\\b",
+        "\\b(?:entry[- ]level|mid[- ]level|experienced|senior|master|lead)?\\s*auto body (?:repair technician|repair tech|technician)\\b|\\bpaintless dent repair technician\\b|\\bauto body prepper\\b|\\bautomotive (?:wheel|rim) repair technician\\b",
+        "\\b(?:experienced\\s+)?diesel technician\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Heavy Equipment Shop Technician (Mechanic)",
+          "count": 85
+        },
+        {
+          "title": "Entry-Level Auto Technician",
+          "count": 23
+        },
+        {
+          "title": "Brake and Tire Auto Technician",
+          "count": 19
+        },
+        {
+          "title": "Auto Body Repair Technician",
+          "count": 16
+        },
+        {
+          "title": "Automotive Wheel Repair Technician",
+          "count": 14
+        },
+        {
+          "title": "Entry-level Auto Body Repair Technician",
+          "count": 11
+        },
+        {
+          "title": "Experienced Auto Body Repair Technician - $4,000 Bonus",
+          "count": 7
+        },
+        {
+          "title": "Experienced Paintless Dent Repair Technician - $6,000 Bonus",
+          "count": 7
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "mechanical_engineer",
+      "role_family": "industrial_engineering",
+      "aliases": [
+        "mechanical engineer"
+      ],
+      "rule_ids": [
+        "industrial_mechanical_engineer"
+      ],
+      "rule_patterns_preview": [
+        "\\b(?:senior|staff|principal|sr\\.?|project|launch)?\\s*mechanical engineer(?:\\s*(?:i|ii|iii|iv|v))?\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Senior Mechanical Engineer",
+          "count": 26
+        },
+        {
+          "title": "Mechanical Engineer",
+          "count": 21
+        },
+        {
+          "title": "Mechanical Engineer II",
+          "count": 5
+        },
+        {
+          "title": "Principal Mechanical Engineer",
+          "count": 4
+        },
+        {
+          "title": "Sr. Mechanical Engineer",
+          "count": 3
+        },
+        {
+          "title": "Staff Mechanical Engineer",
+          "count": 3
+        },
+        {
+          "title": "Project Mechanical Engineer IV",
+          "count": 3
+        },
+        {
+          "title": "Data Center Mechanical Engineer",
+          "count": 2
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "medical_assistant",
+      "role_family": "healthcare_clinical",
+      "aliases": [
+        "clinic medical assistant",
+        "medical assistant",
+        "medical assistant cardiology specialists",
+        "medical assistant full time",
+        "orthopedic medical assistant capital ortho lanham med"
+      ],
+      "rule_ids": [
+        "health_medical_assistant"
+      ],
+      "rule_patterns_preview": [
+        "\\bmedical assistant\\b(?!\\s+instructor\\b)"
+      ],
+      "sample_titles": [
+        {
+          "title": "Medical Assistant",
+          "count": 22
+        },
+        {
+          "title": "Medical Assistant (Full-time)",
+          "count": 4
+        },
+        {
+          "title": "Medical Assistant-Cardiology Specialists",
+          "count": 2
+        },
+        {
+          "title": "Orthopedic Medical Assistant-Capital Ortho Lanham Med",
+          "count": 2
+        },
+        {
+          "title": "Clinic Medical Assistant",
+          "count": 2
+        },
+        {
+          "title": "Medical Assistant/Front Desk Coordinator",
+          "count": 2
+        },
+        {
+          "title": "Field Medical Assistant - Kern County",
+          "count": 1
+        },
+        {
+          "title": "Field Medical Assistant - South LA",
+          "count": 1
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "ml_engineer",
+      "role_family": "machine_learning",
+      "aliases": [
+        "ai engineer",
+        "machine learning engineer",
+        "ml engineer"
+      ],
+      "rule_ids": [
+        "eng_ai_engineer",
+        "eng_ml"
+      ],
+      "rule_patterns_preview": [
+        "\\bsenior ai engineer\\b|\\bai engineer\\b",
+        "\\bmachine learning engineer\\b|\\bml engineer\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Senior Machine Learning Engineer",
+          "count": 61
+        },
+        {
+          "title": "Machine Learning Engineer",
+          "count": 38
+        },
+        {
+          "title": "Senior AI Engineer",
+          "count": 34
+        },
+        {
+          "title": "AI Engineer",
+          "count": 32
+        },
+        {
+          "title": "Staff Machine Learning Engineer",
+          "count": 27
+        },
+        {
+          "title": "Applied AI Engineer",
+          "count": 14
+        },
+        {
+          "title": "Staff AI Engineer - AI Creator",
+          "count": 10
+        },
+        {
+          "title": "AI Engineer - FDE (Forward Deployed Engineer)",
+          "count": 9
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "network_engineer",
+      "role_family": "it_operations",
+      "aliases": [
+        "network engineer"
+      ],
+      "rule_ids": [
+        "infra_network_engineer_core"
+      ],
+      "rule_patterns_preview": [
+        "^(?:senior|staff|principal|lead|sr\\.?)?\\s*network engineer(?:\\s*(?:i|ii|iii|iv|v))?$"
+      ],
+      "sample_titles": [
+        {
+          "title": "Network Engineer",
+          "count": 22
+        },
+        {
+          "title": "Senior Network Engineer",
+          "count": 22
+        },
+        {
+          "title": "Staff Network Engineer",
+          "count": 3
+        },
+        {
+          "title": "Sr. Network Engineer",
+          "count": 2
+        },
+        {
+          "title": "Principal Network Engineer",
+          "count": 2
+        },
+        {
+          "title": "Network Engineer (Starshield)",
+          "count": 2
+        },
+        {
+          "title": "Senior Network Engineer (CHI)",
+          "count": 1
+        },
+        {
+          "title": "Sr Network Engineer",
+          "count": 1
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "nurse_practitioner",
+      "role_family": "healthcare_clinical",
+      "aliases": [
+        "family nurse practitioner or physician assistant",
+        "nurse practitioner",
+        "nurse practitioner addiction medicine",
+        "nurse practitioner massachusetts ma license",
+        "psychiatric mental health nurse practitioner pmhnp"
+      ],
+      "rule_ids": [
+        "health_nurse_practitioner"
+      ],
+      "rule_patterns_preview": [
+        "\\bpsychiatric mental health nurse practitioner\\b|\\bpmhnp\\b|\\bnurse practitioner\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Psychiatric Mental Health Nurse Practitioner (PMHNP)",
+          "count": 381
+        },
+        {
+          "title": "Nurse Practitioner – Addiction Medicine",
+          "count": 53
+        },
+        {
+          "title": "Psychiatric Mental Health Nurse Practitioner - PMHNP",
+          "count": 12
+        },
+        {
+          "title": "Nurse Practitioner - Massachusetts (MA) License",
+          "count": 12
+        },
+        {
+          "title": "Family Nurse Practitioner or Physician Assistant",
+          "count": 11
+        },
+        {
+          "title": "Nurse Practitioner",
+          "count": 10
+        },
+        {
+          "title": "Psychiatric Nurse Practitioner (PMHNP) - Remote",
+          "count": 10
+        },
+        {
+          "title": "Obesity Medicine Nurse Practitioner - Telemedicine W2",
+          "count": 9
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "occupational_therapist",
+      "role_family": "healthcare_clinical",
+      "aliases": [
+        "contracted in home occupational therapist",
+        "occupational therapist",
+        "pediatric occupational therapist",
+        "regional traveling occupational therapist",
+        "traveling occupational therapist"
+      ],
+      "rule_ids": [
+        "health_occupational_therapist_core_v2"
+      ],
+      "rule_patterns_preview": [
+        "\\boccupational therapist\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Occupational Therapist",
+          "count": 14
+        },
+        {
+          "title": "Contracted In-Home Occupational Therapist",
+          "count": 12
+        },
+        {
+          "title": "Pediatric Occupational Therapist",
+          "count": 8
+        },
+        {
+          "title": "Traveling Occupational Therapist",
+          "count": 8
+        },
+        {
+          "title": "Regional Traveling Occupational Therapist",
+          "count": 2
+        },
+        {
+          "title": "Occupational Therapist I - PRN - AAMC",
+          "count": 2
+        },
+        {
+          "title": "Full Time  Occupational Therapist",
+          "count": 1
+        },
+        {
+          "title": "In Center, Full Time Occupational Therapist",
+          "count": 1
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "operations_specialist",
+      "role_family": "operations",
+      "aliases": [
+        "implementation consultant",
+        "operations manager",
+        "operations specialist",
+        "rental coordinator",
+        "team market operations"
+      ],
+      "rule_ids": [
+        "operations_support_cluster",
+        "ops_rental_coordinator",
+        "ops_specialist",
+        "retail_store_management"
+      ],
+      "rule_patterns_preview": [
+        "\\bassistant store manager\\b|\\bretail store manager\\b|\\bstore manager\\b|\\bretail manager\\b|\\bstore leader\\b|\\bstore director\\b|\\bretail assistant manager\\b",
+        "\\brental coordinator\\b",
+        "\\boperations manager\\b|\\bmarket operations\\b|\\bimplementation manager\\b|\\bimplementation consultant\\b|\\bcustomer support representative\\b|\\bcustomer support specialist\\b|\\bcustomer service representative\\b|\\bclient service specialist\\b|\\bservice manager\\b|\\badministrative assistant\\b|\\brecruiting coordinator\\b",
+        "\\boperations specialist\\b|\\boperations coordinator\\b|\\bdelivery specialist\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Rental Coordinator",
+          "count": 37
+        },
+        {
+          "title": "Operations Manager",
+          "count": 24
+        },
+        {
+          "title": "Team Lead, Market Operations",
+          "count": 21
+        },
+        {
+          "title": "Implementation Consultant",
+          "count": 17
+        },
+        {
+          "title": "Operations Specialist",
+          "count": 17
+        },
+        {
+          "title": "Client Service Specialist",
+          "count": 17
+        },
+        {
+          "title": "Recruiting Coordinator",
+          "count": 16
+        },
+        {
+          "title": "Administrative Assistant",
+          "count": 16
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "other",
+      "role_family": "other",
+      "aliases": [
+        "other"
+      ],
+      "rule_ids": [
+        "exact_general_application"
+      ],
+      "rule_patterns_preview": [
+        "\\bgeneral application\\b"
+      ],
+      "sample_titles": [],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "paralegal",
+      "role_family": "legal",
+      "aliases": [
+        "corporate governance paralegals remote toronto based",
+        "corporate paralegal",
+        "corporate paralegal chicago",
+        "paralegal",
+        "paralegal corporate"
+      ],
+      "rule_ids": [
+        "legal_corporate_paralegal_v47"
+      ],
+      "rule_patterns_preview": [
+        "^(?:senior|sr\\.?)?\\s*corporate paralegal(?:\\b.*)?$|^paralegal(?:\\s+(?:i|ii|iii|iv|v))?\\s*,?\\s*corporate$|^corporate governance paralegals?(?:\\s*\\(.*\\))?$"
+      ],
+      "sample_titles": [
+        {
+          "title": "Corporate Paralegal",
+          "count": 9
+        },
+        {
+          "title": "Paralegal II, Corporate",
+          "count": 6
+        },
+        {
+          "title": "Senior Corporate Paralegal",
+          "count": 4
+        },
+        {
+          "title": "Corporate Governance Paralegals (Remote, Toronto-based)",
+          "count": 1
+        },
+        {
+          "title": "Corporate Paralegal Chicago",
+          "count": 1
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "patient_care_technician",
+      "role_family": "healthcare_clinical",
+      "aliases": [
+        "patient care technician",
+        "patient care technician 1 medical cpt prn nights",
+        "patient care technician ft nights telemetry",
+        "patient care technician gsu ft d n",
+        "patient care technician hvu ft d n"
+      ],
+      "rule_ids": [
+        "health_patient_care_technician"
+      ],
+      "rule_patterns_preview": [
+        "\\bpatient care technician\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Patient Care Technician - HVU - FT - D/N",
+          "count": 3
+        },
+        {
+          "title": "Patient Care Technician-FT-Nights-Telemetry",
+          "count": 2
+        },
+        {
+          "title": "Patient Care Technician - GSU - FT - D/N",
+          "count": 2
+        },
+        {
+          "title": "Patient Care Technician",
+          "count": 1
+        },
+        {
+          "title": "Patient Care Technician - 1 Medical - CPT/PRN - NIghts",
+          "count": 1
+        },
+        {
+          "title": "Patient Care Technician - 1 Medical - FT - D/N",
+          "count": 1
+        },
+        {
+          "title": "Patient Care Technician - 3 East Med/Surg Telemetry-FT-Days",
+          "count": 1
+        },
+        {
+          "title": "Patient Care Technician - 4 East M/S Ortho - FT - Days",
+          "count": 1
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "people_business_partner",
+      "role_family": "people_operations",
+      "aliases": [
+        "hr business partner",
+        "human resources business partner",
+        "people business partner"
+      ],
+      "rule_ids": [
+        "people_business_partner"
+      ],
+      "rule_patterns_preview": [
+        "\\bpeople business partner\\b|\\bhr business partner\\b|\\bhrbp\\b|\\bhuman resources? business partner\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Senior People Business Partner",
+          "count": 19
+        },
+        {
+          "title": "HR Business Partner",
+          "count": 14
+        },
+        {
+          "title": "People Business Partner",
+          "count": 14
+        },
+        {
+          "title": "Senior HR Business Partner",
+          "count": 12
+        },
+        {
+          "title": "Human Resources Business Partner",
+          "count": 12
+        },
+        {
+          "title": "Senior Human Resources Business Partner",
+          "count": 6
+        },
+        {
+          "title": "HR Business Partner, Product",
+          "count": 6
+        },
+        {
+          "title": "HRBP",
+          "count": 5
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "pharmacy_technician",
+      "role_family": "healthcare_clinical",
+      "aliases": [
+        "pharmacy technician",
+        "pharmacy technician closed door pharmacy",
+        "pharmacy technician pharmacotherapy support",
+        "specialty pharmacy technician"
+      ],
+      "rule_ids": [
+        "health_pharmacy_technician"
+      ],
+      "rule_patterns_preview": [
+        "\\bpharmacy technician\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Specialty Pharmacy Technician",
+          "count": 15
+        },
+        {
+          "title": "Pharmacy Technician Closed Door Pharmacy",
+          "count": 7
+        },
+        {
+          "title": "Lead Pharmacy Technician",
+          "count": 4
+        },
+        {
+          "title": "Pharmacy Technician Pharmacotherapy Support",
+          "count": 4
+        },
+        {
+          "title": "Pharmacy Technician",
+          "count": 3
+        },
+        {
+          "title": "Pharmacy Technician Refill Calls",
+          "count": 3
+        },
+        {
+          "title": "Specialty Pharmacy Technician ~ $4,000 Sign-on Bonus",
+          "count": 3
+        },
+        {
+          "title": "Pharmacy Technician Full-time D/E, M-F and rotating weekend",
+          "count": 2
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "physician",
+      "role_family": "healthcare_clinical",
+      "aliases": [
+        "collaborating physician 1099 contract virtual women s health",
+        "family medicine physician",
+        "obesity medicine physician dedicated collaborator w2 telemedicine",
+        "per diem primary care physician casual employee",
+        "physician",
+        "primary care physician"
+      ],
+      "rule_ids": [
+        "health_physician"
+      ],
+      "rule_patterns_preview": [
+        "\\bprimary care physician\\b|\\bphysician\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Primary Care Physician",
+          "count": 27
+        },
+        {
+          "title": "Collaborating Physician (1099 Contract) – Virtual Women’s Health",
+          "count": 14
+        },
+        {
+          "title": "Family Medicine Physician",
+          "count": 12
+        },
+        {
+          "title": "Per Diem Primary Care Physician (Casual Employee)",
+          "count": 11
+        },
+        {
+          "title": "Obesity Medicine Physician - Dedicated Collaborator W2 Telemedicine",
+          "count": 9
+        },
+        {
+          "title": "Family Medicine Physician - Sign-On Bonus Available",
+          "count": 9
+        },
+        {
+          "title": "Per Diem Family Medicine Physician (Casual Employee)",
+          "count": 9
+        },
+        {
+          "title": "Primary Care Physician - Sign-On Bonus Available",
+          "count": 8
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "product_designer",
+      "role_family": "design",
+      "aliases": [
+        "product designer",
+        "ux designer"
+      ],
+      "rule_ids": [
+        "design_designer_variants_explicit",
+        "design_product_design_leadership_explicit",
+        "design_product_designer"
+      ],
+      "rule_patterns_preview": [
+        "\\b(?:senior|staff|principal|lead|sr\\.?)?\\s*(?:ux|ui|ux\\s*-\\s*ui|ui\\s*-\\s*ux|user experience|visual|graphic|web|digital|content|motion|integrated)\\s+designer(?:\\s*(?:i|ii|iii|iv|v))?\\b",
+        "\\b(?:director|head|manager|senior manager|senior director|vp),?\\s*product design\\b|\\bproduct design (?:manager|lead)\\b|\\bsenior product design manager\\b",
+        "\\bproduct designer\\b|\\bsenior product designer\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Senior Product Designer",
+          "count": 101
+        },
+        {
+          "title": "Product Designer",
+          "count": 49
+        },
+        {
+          "title": "Staff Product Designer",
+          "count": 27
+        },
+        {
+          "title": "Lead Product Designer",
+          "count": 18
+        },
+        {
+          "title": "Senior UX Designer",
+          "count": 12
+        },
+        {
+          "title": "UX Designer",
+          "count": 10
+        },
+        {
+          "title": "Integrated Designer",
+          "count": 10
+        },
+        {
+          "title": "Visual Designer",
+          "count": 9
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "product_manager",
+      "role_family": "product_management",
+      "aliases": [
+        "product manager",
+        "product owner",
+        "technical product manager"
+      ],
+      "rule_ids": [
+        "product_manager"
+      ],
+      "rule_patterns_preview": [
+        "\\bproduct manager\\b|\\bproduct owner\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Senior Product Manager",
+          "count": 115
+        },
+        {
+          "title": "Product Manager",
+          "count": 82
+        },
+        {
+          "title": "Technical Product Manager",
+          "count": 24
+        },
+        {
+          "title": "Product Owner",
+          "count": 14
+        },
+        {
+          "title": "Staff Product Manager",
+          "count": 14
+        },
+        {
+          "title": "Associate Product Manager",
+          "count": 13
+        },
+        {
+          "title": "Principal Product Manager",
+          "count": 11
+        },
+        {
+          "title": "Lead Product Manager",
+          "count": 11
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "project_manager",
+      "role_family": "program_management",
+      "aliases": [
+        "program manager",
+        "project manager",
+        "technical project manager"
+      ],
+      "rule_ids": [
+        "program_project_manager"
+      ],
+      "rule_patterns_preview": [
+        "\\bproject manager\\b|\\bprogram manager\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Project Manager",
+          "count": 62
+        },
+        {
+          "title": "Program Manager",
+          "count": 26
+        },
+        {
+          "title": "Technical Project Manager",
+          "count": 25
+        },
+        {
+          "title": "Senior Project Manager",
+          "count": 23
+        },
+        {
+          "title": "Senior Program Manager",
+          "count": 16
+        },
+        {
+          "title": "Construction Project Managers",
+          "count": 13
+        },
+        {
+          "title": "Project Manager - Land Development",
+          "count": 11
+        },
+        {
+          "title": "Construction Project Manager",
+          "count": 7
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "psychiatrist",
+      "role_family": "healthcare_clinical",
+      "aliases": [
+        "child and adolescent psychiatrist",
+        "psychiatrist",
+        "psychiatrist md",
+        "psychiatrist remote",
+        "virtual adult psychiatrist telehealth"
+      ],
+      "rule_ids": [
+        "health_psychiatrist"
+      ],
+      "rule_patterns_preview": [
+        "\\bpsychiatrist\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Psychiatrist (MD)",
+          "count": 324
+        },
+        {
+          "title": "Psychiatrist - (Remote)",
+          "count": 25
+        },
+        {
+          "title": "Virtual Adult Psychiatrist (Telehealth)",
+          "count": 4
+        },
+        {
+          "title": "Psychiatrist",
+          "count": 3
+        },
+        {
+          "title": "Child and Adolescent Psychiatrist",
+          "count": 3
+        },
+        {
+          "title": "Psychiatrist (Part-time)",
+          "count": 2
+        },
+        {
+          "title": "Psychiatrist - Outpatient",
+          "count": 1
+        },
+        {
+          "title": "Collaborating Psychiatrist (1099 Contract) - Georgia",
+          "count": 1
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "psychotherapist",
+      "role_family": "healthcare_clinical",
+      "aliases": [
+        "child and adolescent therapist lcsw lpc lmft",
+        "child and adolescent therapist lcsw lpc lmft contract 1099",
+        "licensed mental health therapist remote",
+        "psychotherapist",
+        "psychotherapists"
+      ],
+      "rule_ids": [
+        "health_clinical_social_worker",
+        "health_licensed_mental_health_therapist",
+        "health_mental_or_clinical_therapist",
+        "health_psychotherapist"
+      ],
+      "rule_patterns_preview": [
+        "\\bpsychotherapists?\\b",
+        "\\blicensed mental health therapist\\b",
+        "\\blicensed clinical social worker\\b|\\blcsw\\b",
+        "\\bmental health therapist\\b|\\bclinical therapist\\b|\\bprimary clinical therapist\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Psychotherapist",
+          "count": 177
+        },
+        {
+          "title": "Psychotherapists",
+          "count": 61
+        },
+        {
+          "title": "Licensed Mental Health Therapist - Remote",
+          "count": 26
+        },
+        {
+          "title": "Child and Adolescent Therapist - LCSW, LPC, LMFT - Contract/1099",
+          "count": 10
+        },
+        {
+          "title": "Child and Adolescent Therapist - LCSW, LPC, LMFT",
+          "count": 9
+        },
+        {
+          "title": "Licensed Mental Health Therapist",
+          "count": 6
+        },
+        {
+          "title": "Licensed Clinical Social Worker",
+          "count": 5
+        },
+        {
+          "title": "Mental Health Therapist",
+          "count": 4
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "registered_nurse",
+      "role_family": "healthcare_clinical",
+      "aliases": [
+        "acute care nurse",
+        "nurse general surgical unit",
+        "per diem clinical research nurse home visits",
+        "registered nurse",
+        "registered nurse rn",
+        "registered nurse rn rehab nurse full time 12 hour day shift"
+      ],
+      "rule_ids": [
+        "health_clinical_research_nurse",
+        "health_registered_nurse",
+        "health_staff_nurse"
+      ],
+      "rule_patterns_preview": [
+        "\\bregistered nurse\\b|\\brn\\b",
+        "\\bclinical research nurse\\b",
+        "\\bstaff nurse\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Registered Nurse (RN)",
+          "count": 31
+        },
+        {
+          "title": "Per Diem Clinical Research Nurse - Home Visits",
+          "count": 25
+        },
+        {
+          "title": "Staff Nurse - General Surgical Unit",
+          "count": 9
+        },
+        {
+          "title": "Registered Nurse (RN) Rehab Nurse Full-Time 12-Hour Day Shift",
+          "count": 9
+        },
+        {
+          "title": "Acute Care Staff Nurse",
+          "count": 8
+        },
+        {
+          "title": "Registered Nurse",
+          "count": 7
+        },
+        {
+          "title": "Staff Nurse",
+          "count": 5
+        },
+        {
+          "title": "Staff Nurse - Emergency Department",
+          "count": 5
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "respiratory_therapist",
+      "role_family": "healthcare_clinical",
+      "aliases": [
+        "respiratory therapist",
+        "respiratory therapist registered",
+        "respiratory therapist registered float pool",
+        "respiratory therapist registered ft m f 7p 7 30a rotating weekend",
+        "respiratory therapist registered full time day 7a 7 30p rotating weekends",
+        "respiratory therapist therapy adherence"
+      ],
+      "rule_ids": [
+        "health_respiratory_therapist_core_v2"
+      ],
+      "rule_patterns_preview": [
+        "\\brespiratory therapist\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Respiratory Therapist - Registered",
+          "count": 13
+        },
+        {
+          "title": "Respiratory Therapist - Registered - Float Pool",
+          "count": 3
+        },
+        {
+          "title": "Respiratory Therapist - Registered FT, M-F 7p-7:30a rotating weekend",
+          "count": 2
+        },
+        {
+          "title": "Respiratory Therapist - Registered Full-time Day 7a-7:30p, rotating weekends",
+          "count": 1
+        },
+        {
+          "title": "Respiratory Therapist (Therapy Adherence)",
+          "count": 1
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "sales_engineer",
+      "role_family": "sales",
+      "aliases": [
+        "sales engineer",
+        "solutions engineer",
+        "technical sales and field service engineer"
+      ],
+      "rule_ids": [
+        "sales_engineer",
+        "sales_field_service_engineer",
+        "sales_solution_engineer_singular",
+        "sales_solution_specialist_consultant",
+        "sales_solution_specialist_core"
+      ],
+      "rule_patterns_preview": [
+        "\\btechnical sales and field service engineer\\b",
+        "^(?:senior|staff|principal|lead|sr\\.?)?\\s*solution specialist$",
+        "\\bsolution engineer\\b",
+        "\\bsenior sales engineer\\b|\\bsales engineer\\b|\\bsolutions engineer\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Solutions Engineer",
+          "count": 56
+        },
+        {
+          "title": "Sales Engineer",
+          "count": 44
+        },
+        {
+          "title": "Senior Sales Engineer",
+          "count": 40
+        },
+        {
+          "title": "Senior Solutions Engineer",
+          "count": 38
+        },
+        {
+          "title": "Technical Sales and Field Service Engineer",
+          "count": 33
+        },
+        {
+          "title": "Senior Sales Engineer, Enterprise",
+          "count": 20
+        },
+        {
+          "title": "Solution Specialist",
+          "count": 20
+        },
+        {
+          "title": "Solution Engineer",
+          "count": 19
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "sales_manager",
+      "role_family": "sales",
+      "aliases": [
+        "director of sales",
+        "enterprise sales executive",
+        "sales manager",
+        "sales manager chinese vertical",
+        "territory sales manager mid market"
+      ],
+      "rule_ids": [
+        "sales_management_cluster"
+      ],
+      "rule_patterns_preview": [
+        "\\bsales manager(?:[_ -].+)?\\b|\\bterritory sales manager\\b|\\bregional sales director\\b|\\bdirector of sales\\b|\\bsales executive\\b|\\benterprise sales executive\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Sales Manager_Chinese Vertical",
+          "count": 62
+        },
+        {
+          "title": "Sales Manager",
+          "count": 18
+        },
+        {
+          "title": "Enterprise Sales Executive",
+          "count": 18
+        },
+        {
+          "title": "Territory Sales Manager (Mid-Market)",
+          "count": 18
+        },
+        {
+          "title": "Director of Sales",
+          "count": 15
+        },
+        {
+          "title": "Regional Sales Director",
+          "count": 14
+        },
+        {
+          "title": "Sales Executive",
+          "count": 13
+        },
+        {
+          "title": "Solution Sales Executive",
+          "count": 12
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "school_administrator",
+      "role_family": "education",
+      "aliases": [
+        "school administrator",
+        "school director",
+        "school leadership",
+        "school office manager",
+        "school office manager sy 26 27"
+      ],
+      "rule_ids": [
+        "education_school_administration_edge"
+      ],
+      "rule_patterns_preview": [
+        "^school director$|^school leadership$|^school office manager(?:\\s*-\\s*sy\\s*\\d{2}-\\d{2})?$"
+      ],
+      "sample_titles": [
+        {
+          "title": "School Director",
+          "count": 6
+        },
+        {
+          "title": "School Leadership",
+          "count": 5
+        },
+        {
+          "title": "School Office Manager - SY 26-27",
+          "count": 3
+        },
+        {
+          "title": "School Office Manager",
+          "count": 1
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "school_counselor",
+      "role_family": "education",
+      "aliases": [
+        "school counselor",
+        "virtual school counselor 2026 2027 school year",
+        "virtual school counselor sy 26 27"
+      ],
+      "rule_ids": [
+        "education_school_counselor_edge"
+      ],
+      "rule_patterns_preview": [
+        "^school counselor$|^virtual school counselor(?:\\s*\\(.*\\)|\\s*-\\s*sy\\s*\\d{2}-\\d{2})?$"
+      ],
+      "sample_titles": [
+        {
+          "title": "School Counselor",
+          "count": 2
+        },
+        {
+          "title": "Virtual School Counselor (2026-2027 School Year)",
+          "count": 2
+        },
+        {
+          "title": "Virtual School Counselor - SY 26-27",
+          "count": 2
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "site_reliability_engineer",
+      "role_family": "sre",
+      "aliases": [
+        "site reliability engineer",
+        "site reliability engineer sre"
+      ],
+      "rule_ids": [
+        "eng_sre"
+      ],
+      "rule_patterns_preview": [
+        "\\bsite reliability engineer\\b|\\bsre\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Senior Site Reliability Engineer",
+          "count": 57
+        },
+        {
+          "title": "Site Reliability Engineer",
+          "count": 57
+        },
+        {
+          "title": "Staff Site Reliability Engineer",
+          "count": 26
+        },
+        {
+          "title": "Site Reliability Engineer II",
+          "count": 11
+        },
+        {
+          "title": "Senior Site Reliability Engineer (SRE)",
+          "count": 9
+        },
+        {
+          "title": "Senior SRE Engineer",
+          "count": 6
+        },
+        {
+          "title": "Senior Software Engineer, Cloud Infrastructure / SRE",
+          "count": 5
+        },
+        {
+          "title": "Senior Site Reliability Engineer- Remote",
+          "count": 4
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "software_engineer",
+      "role_family": "software_engineering",
+      "aliases": [
+        "backend engineer",
+        "software engineer"
+      ],
+      "rule_ids": [
+        "eng_forward_deployed",
+        "eng_fullstack_and_servicenow",
+        "eng_fullstack_developer_core_safe_v5",
+        "eng_mobile_engineer_android_ios_v46",
+        "eng_python",
+        "eng_qa_quality",
+        "eng_security",
+        "eng_software",
+        "eng_software_development_engineer_variants_v34",
+        "eng_systems_network_platform",
+        "eng_tech_lead_core_product_v38"
+      ],
+      "rule_patterns_preview": [
+        "\\bforward deployed engineer\\b",
+        "\\bplatform engineer\\b|\\binfrastructure engineer\\b|\\bcloud engineer\\b|\\blinux engineer\\b",
+        "\\bqa engineer\\b|\\bquality engineer\\b",
+        "\\bfull stack developer\\b|\\bservicenow developer\\b|\\bgtm engineer\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Senior Software Engineer",
+          "count": 285
+        },
+        {
+          "title": "Staff Software Engineer",
+          "count": 143
+        },
+        {
+          "title": "Software Engineer",
+          "count": 131
+        },
+        {
+          "title": "Senior Backend Engineer",
+          "count": 63
+        },
+        {
+          "title": "Principal Software Engineer",
+          "count": 49
+        },
+        {
+          "title": "Software Engineer II",
+          "count": 46
+        },
+        {
+          "title": "Python Engineer",
+          "count": 41
+        },
+        {
+          "title": "Backend Engineer, Python",
+          "count": 39
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "solutions_architect",
+      "role_family": "architecture",
+      "aliases": [
+        "resident solutions architect",
+        "solution architect",
+        "solution architect personalization strategist",
+        "solutions architect"
+      ],
+      "rule_ids": [
+        "arch_data_architect_core_safe_v3",
+        "arch_enterprise_architect_core_safe_v5",
+        "arch_solution_architect_singular",
+        "arch_solutions"
+      ],
+      "rule_patterns_preview": [
+        "\\bsolution architect\\b",
+        "\\bsolutions architect\\b",
+        "^(?:senior|sr\\.?|staff|principal|lead)?\\s*data architect(?:\\s*(?:i|ii|iii|iv|v))?(?:\\s*[-,:].*)?$",
+        "\\b(?:principal|senior|sr\\.?|staff|lead|associate|it|ai|applications|salesforce|advisory services|technical advisory services)?\\s*enterprise architect\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Solutions Architect",
+          "count": 50
+        },
+        {
+          "title": "Senior Solutions Architect",
+          "count": 34
+        },
+        {
+          "title": "Solution Architect",
+          "count": 23
+        },
+        {
+          "title": "Resident Solutions Architect",
+          "count": 17
+        },
+        {
+          "title": "Senior Solution Architect - Personalization Strategist",
+          "count": 15
+        },
+        {
+          "title": "Data Architect",
+          "count": 12
+        },
+        {
+          "title": "Partner Solutions Architect",
+          "count": 12
+        },
+        {
+          "title": "Delivery Solutions Architect",
+          "count": 11
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "speech_language_pathologist",
+      "role_family": "healthcare_clinical",
+      "aliases": [
+        "pediatric speech language pathologist",
+        "speech language pathologist",
+        "speech language pathologist clinical fellow",
+        "virtual speech language pathologist",
+        "virtual speech language pathologist slp"
+      ],
+      "rule_ids": [
+        "health_speech_language_pathologist_core_safe_v4"
+      ],
+      "rule_patterns_preview": [
+        "\\bspeech language pathologist\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Virtual Speech Language Pathologist (SLP)",
+          "count": 12
+        },
+        {
+          "title": "Speech Language Pathologist",
+          "count": 9
+        },
+        {
+          "title": "Speech Language Pathologist, Clinical Fellow",
+          "count": 5
+        },
+        {
+          "title": "Pediatric Speech Language Pathologist",
+          "count": 4
+        },
+        {
+          "title": "Virtual Speech Language Pathologist",
+          "count": 1
+        },
+        {
+          "title": "Virtual Speech Language Pathologist (2026-2027)",
+          "count": 1
+        },
+        {
+          "title": "Full-Time Speech Language Pathologist",
+          "count": 1
+        },
+        {
+          "title": "In Center, Full Time Speech Language Pathologist",
+          "count": 1
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "store_associate",
+      "role_family": "sales",
+      "aliases": [
+        "floor retail part time",
+        "retail sales part time",
+        "sales",
+        "store",
+        "stylist retail part time"
+      ],
+      "rule_ids": [
+        "retail_budtender_core_safe_v5",
+        "retail_dashmart_team_member_safe_v6",
+        "retail_floor_lead_explicit",
+        "retail_sales_associate",
+        "retail_store_advisor_associate",
+        "retail_stylist_explicit",
+        "trades_automotive_parts_associate"
+      ],
+      "rule_patterns_preview": [
+        "\\b(?:entry-level|mid-level|senior|junior)\\s+automotive parts associate\\b|\\bautomotive parts associate\\b",
+        "\\blead store associate\\b|\\bretail sales associate\\b|\\bsales associate\\b",
+        "\\bstylist\\b.*\\bretail\\b|\\bretail\\b.*\\bstylist\\b",
+        "\\bfloor lead\\b.*\\bretail\\b|\\bretail\\b.*\\bfloor lead\\b|\\bfloor supervisor\\b.*\\bretail\\b|\\bretail\\b.*\\bfloor supervisor\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Retail Sales Associate - Part Time",
+          "count": 102
+        },
+        {
+          "title": "Lead Store Associate",
+          "count": 50
+        },
+        {
+          "title": "Sales Associate",
+          "count": 37
+        },
+        {
+          "title": "Stylist (Retail) (Part-time)",
+          "count": 27
+        },
+        {
+          "title": "Floor Lead (Retail) (Part-time)",
+          "count": 25
+        },
+        {
+          "title": "Mid-Level Automotive Parts Associate",
+          "count": 21
+        },
+        {
+          "title": "Entry-Level Automotive Parts Associate",
+          "count": 19
+        },
+        {
+          "title": "Retail Sales Associate - Full Time",
+          "count": 16
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "story_editor",
+      "role_family": "content",
+      "aliases": [
+        "content editor",
+        "data science editor",
+        "story desk editor",
+        "story editor",
+        "video editor"
+      ],
+      "rule_ids": [
+        "content_editorial_editors_edge_v30",
+        "content_story_desk_editor",
+        "content_video_editor_core"
+      ],
+      "rule_patterns_preview": [
+        "^story desk editor$",
+        "\\b(?:senior\\s+)?video editor\\b|\\bvideographer and video editor\\b|\\b(?:photojournalist|photographer|lifestyle photographer)\\s*-\\s*editor\\b",
+        "^content editor$|^data science editor$|^copy editor$|^technical content editor$|^video content editor$|^executive editor$|^associate managing editor(?:\\s*-\\s*healthcare agency)?$|^managing editor\\s+\\w.*$|^senior editor editorial review$"
+      ],
+      "sample_titles": [
+        {
+          "title": "Story Desk Editor",
+          "count": 19
+        },
+        {
+          "title": "Video Editor",
+          "count": 6
+        },
+        {
+          "title": "Data Science Editor",
+          "count": 3
+        },
+        {
+          "title": "Content Editor",
+          "count": 3
+        },
+        {
+          "title": "Senior Video Editor",
+          "count": 3
+        },
+        {
+          "title": "Executive Editor (based in Madrid)",
+          "count": 3
+        },
+        {
+          "title": "Video Editor Intern",
+          "count": 3
+        },
+        {
+          "title": "Photographer/Editor",
+          "count": 3
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "substitute_teacher",
+      "role_family": "education",
+      "aliases": [
+        "banning lewis academy daily substitute teacher",
+        "building substitute teacher",
+        "daily substitute teacher",
+        "daily substitute teacher sy 26 27",
+        "substitute teacher"
+      ],
+      "rule_ids": [
+        "education_substitute_teacher"
+      ],
+      "rule_patterns_preview": [
+        "\\bsubstitute teacher\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Substitute Teacher",
+          "count": 72
+        },
+        {
+          "title": "Daily Substitute Teacher",
+          "count": 23
+        },
+        {
+          "title": "Daily Substitute Teacher - SY 26-27",
+          "count": 3
+        },
+        {
+          "title": "Banning Lewis Academy - Daily Substitute Teacher",
+          "count": 2
+        },
+        {
+          "title": "Building Substitute Teacher",
+          "count": 1
+        },
+        {
+          "title": "Daily Substitute Teacher - SY 25/26",
+          "count": 1
+        },
+        {
+          "title": "Montessori Substitute Teacher",
+          "count": 1
+        },
+        {
+          "title": "Preschool Substitute Teacher",
+          "count": 1
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "supply_chain_specialist",
+      "role_family": "logistics",
+      "aliases": [
+        "director of supply chain",
+        "global supply chain manager",
+        "supply chain intern",
+        "supply chain manager",
+        "supply chain specialist"
+      ],
+      "rule_ids": [
+        "logistics_supply_chain_explicit"
+      ],
+      "rule_patterns_preview": [
+        "^supply chain specialist$|^senior supply chain specialist$|^supply chain intern$|^supply chain manager$|^global supply chain manager$|^director of supply chain$|^head of supply chain$|^staff supply chain planner$"
+      ],
+      "sample_titles": [
+        {
+          "title": "Supply Chain Specialist",
+          "count": 8
+        },
+        {
+          "title": "Supply Chain Manager",
+          "count": 5
+        },
+        {
+          "title": "Supply Chain Intern",
+          "count": 4
+        },
+        {
+          "title": "Director of Supply Chain",
+          "count": 3
+        },
+        {
+          "title": "Global Supply Chain Manager",
+          "count": 3
+        },
+        {
+          "title": "Head of Supply Chain",
+          "count": 2
+        },
+        {
+          "title": "Senior Supply Chain Specialist",
+          "count": 2
+        },
+        {
+          "title": "Staff Supply Chain Planner",
+          "count": 2
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "systems_engineer",
+      "role_family": "it_operations",
+      "aliases": [
+        "systems engineer"
+      ],
+      "rule_ids": [
+        "infra_systems_engineer_core"
+      ],
+      "rule_patterns_preview": [
+        "^(?:senior|staff|principal|lead|sr\\.?)?\\s*systems engineer(?:\\s*(?:i|ii|iii|iv|v))?$"
+      ],
+      "sample_titles": [
+        {
+          "title": "Senior Systems Engineer",
+          "count": 25
+        },
+        {
+          "title": "Systems Engineer",
+          "count": 18
+        },
+        {
+          "title": "Sr. Systems Engineer",
+          "count": 3
+        },
+        {
+          "title": "Systems Engineer II",
+          "count": 3
+        },
+        {
+          "title": "Systems Engineer III",
+          "count": 2
+        },
+        {
+          "title": "Staff Systems Engineer",
+          "count": 2
+        },
+        {
+          "title": "Lead Systems Engineer",
+          "count": 2
+        },
+        {
+          "title": "Principal Systems Engineer",
+          "count": 1
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "teacher",
+      "role_family": "education",
+      "aliases": [
+        "6 8th grade teacher sy 26 27",
+        "infant teacher",
+        "k 5th grade teacher sy 26 27",
+        "preschool teacher",
+        "teacher",
+        "toddler teacher"
+      ],
+      "rule_ids": [
+        "education_childcare_teacher",
+        "education_grade_specific_teacher",
+        "education_teacher"
+      ],
+      "rule_patterns_preview": [
+        "\\b(?:lead\\s+)?(?:preschool|infant|toddler)\\s+teacher\\b|\\blead\\s+spanish\\s+preschool\\s+teacher\\b|\\blead\\s+preschool\\s+spanish\\s+teacher\\b|\\bearly childhood teacher\\b",
+        "\\blead toddler teacher\\b",
+        "\\bk[- ]?5(?:th)?\\s+grade\\s+teacher\\b|\\b6[- ]?8(?:th)?\\s+grade\\s+teacher\\b|\\b9[- ]?12(?:th)?\\s+grade\\s+teacher\\b|\\b(?:1st|2nd|3rd|4th|5th)\\s+grade\\s+teacher\\b|\\b5[- ]?8(?:th)?\\s+grade\\s+ela\\s+teacher\\b|\\btitle i teacher\\b|\\b(?:virtual\\s+)?special education teacher\\b|\\bp\\.?\\s*e\\.?\\s+teacher\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Lead Toddler Teacher",
+          "count": 29
+        },
+        {
+          "title": "Lead Preschool Teacher",
+          "count": 25
+        },
+        {
+          "title": "Lead Infant Teacher",
+          "count": 22
+        },
+        {
+          "title": "K-5th Grade Teacher - SY 26-27",
+          "count": 17
+        },
+        {
+          "title": "6-8th Grade Teacher - SY 26-27",
+          "count": 12
+        },
+        {
+          "title": "9-12th Grade Teacher - SY 26-27",
+          "count": 6
+        },
+        {
+          "title": "P.E. Teacher",
+          "count": 4
+        },
+        {
+          "title": "P.E. Teacher - SY 26-27",
+          "count": 4
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "technical_program_manager",
+      "role_family": "program_management",
+      "aliases": [
+        "technical program manager",
+        "technical program manager adoption and enablement"
+      ],
+      "rule_ids": [
+        "program_tpm"
+      ],
+      "rule_patterns_preview": [
+        "\\btechnical program manager\\b|\\btpm\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Technical Program Manager",
+          "count": 35
+        },
+        {
+          "title": "Senior Technical Program Manager",
+          "count": 27
+        },
+        {
+          "title": "Staff Technical Program Manager",
+          "count": 11
+        },
+        {
+          "title": "Sr Technical Program Manager I - Adoption and Enablement",
+          "count": 5
+        },
+        {
+          "title": "Technical Program Manager II",
+          "count": 4
+        },
+        {
+          "title": "Principal Technical Program Manager",
+          "count": 4
+        },
+        {
+          "title": "Senior Security Technical Program Manager",
+          "count": 3
+        },
+        {
+          "title": "Senior Technical Program Manager, RMS",
+          "count": 3
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "technical_recruiter",
+      "role_family": "recruiting",
+      "aliases": [
+        "recruiter",
+        "talent acquisition partner",
+        "talent acquisition specialist",
+        "technical recruiter"
+      ],
+      "rule_ids": [
+        "recruiter"
+      ],
+      "rule_patterns_preview": [
+        "\\brecruiter\\b|\\btalent acquisition\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Technical Recruiter",
+          "count": 35
+        },
+        {
+          "title": "Senior Technical Recruiter",
+          "count": 18
+        },
+        {
+          "title": "Recruiter",
+          "count": 18
+        },
+        {
+          "title": "Talent Acquisition Partner",
+          "count": 16
+        },
+        {
+          "title": "Talent Acquisition Specialist",
+          "count": 15
+        },
+        {
+          "title": "Senior Recruiter",
+          "count": 14
+        },
+        {
+          "title": "Travel Nurse Recruiter",
+          "count": 9
+        },
+        {
+          "title": "Sr. Sales Recruiter",
+          "count": 9
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "technical_writer",
+      "role_family": "content",
+      "aliases": [
+        "technical writer",
+        "technical writer remote eligible costa rica"
+      ],
+      "rule_ids": [
+        "content_technical_writer"
+      ],
+      "rule_patterns_preview": [
+        "^(?:senior|staff|principal|lead|sr\\.?)?\\s*technical writer(?:\\s*(?:i|ii|iii|iv|v))?$"
+      ],
+      "sample_titles": [
+        {
+          "title": "Technical Writer",
+          "count": 17
+        },
+        {
+          "title": "Senior Technical Writer",
+          "count": 13
+        },
+        {
+          "title": "Staff Technical Writer",
+          "count": 4
+        },
+        {
+          "title": "Sr Technical Writer",
+          "count": 2
+        },
+        {
+          "title": "Sr. Technical Writer (Remote Eligible - Costa Rica)",
+          "count": 1
+        },
+        {
+          "title": "Technical Writer (Remote in South Africa)",
+          "count": 1
+        },
+        {
+          "title": "Technical Writer II, (Hardware)",
+          "count": 1
+        },
+        {
+          "title": "Technical Writer II, (Software)",
+          "count": 1
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "technician",
+      "role_family": "skilled_trades",
+      "aliases": [
+        "future technicians",
+        "landscape technician stormwater",
+        "maintenance technician",
+        "production technician",
+        "technician",
+        "yard technician"
+      ],
+      "rule_ids": [
+        "trades_contract_field_service_technician_v27",
+        "trades_high_volume_technician_explicit",
+        "trades_hvac_install_edge_v28",
+        "trades_hvac_service_technician_explicit",
+        "trades_maintenance_technician",
+        "trades_mechanical_electrical_tool_technician_explicit",
+        "trades_production_technician",
+        "trades_technician",
+        "trades_telematics_installer_explicit",
+        "trades_tool_trailer_technician_edge_v31",
+        "trades_yard_technician"
+      ],
+      "rule_patterns_preview": [
+        "\\bfuture technicians?\\b",
+        "\\byard technician\\b|\\blandscape technician\\b",
+        "\\bproduction technician\\b",
+        "\\bfield service maintenance technician\\b|\\bindustrial maintenance technician\\b|\\bfacilities maintenance technician\\b|\\bequipment maintenance technician\\b|\\bmaintenance technician\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Future Technicians",
+          "count": 279
+        },
+        {
+          "title": "Yard Technician",
+          "count": 49
+        },
+        {
+          "title": "Landscape Technician (Stormwater)",
+          "count": 46
+        },
+        {
+          "title": "Production Technician",
+          "count": 27
+        },
+        {
+          "title": "Maintenance Technician",
+          "count": 18
+        },
+        {
+          "title": "Commercial HVAC Service Technician",
+          "count": 15
+        },
+        {
+          "title": "Telematics Installer",
+          "count": 13
+        },
+        {
+          "title": "Field Service Maintenance Technician",
+          "count": 11
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "ux_researcher",
+      "role_family": "design",
+      "aliases": [
+        "ux researcher",
+        "ux researcher arcgis apps",
+        "ux researcher metamask"
+      ],
+      "rule_ids": [
+        "design_ux_researcher_core"
+      ],
+      "rule_patterns_preview": [
+        "\\b(?:senior|staff|principal|sr\\.?)?\\s*ux researcher\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "UX Researcher",
+          "count": 12
+        },
+        {
+          "title": "Sr. UX Researcher - ArcGIS Apps",
+          "count": 3
+        },
+        {
+          "title": "Senior UX Researcher",
+          "count": 2
+        },
+        {
+          "title": "Staff UX Researcher",
+          "count": 2
+        },
+        {
+          "title": "Staff UX Researcher - MetaMask",
+          "count": 1
+        },
+        {
+          "title": "UX Researcher, AI",
+          "count": 1
+        },
+        {
+          "title": "Senior UX researcher",
+          "count": 1
+        },
+        {
+          "title": "UX Researcher II",
+          "count": 1
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "warehouse_associate",
+      "role_family": "logistics",
+      "aliases": [
+        "material planner",
+        "materials specialist",
+        "warehouse",
+        "warehouse specialist",
+        "warehouse technician"
+      ],
+      "rule_ids": [
+        "logistics_warehouse_inventory_materials"
+      ],
+      "rule_patterns_preview": [
+        "^(?:seasonal\\s+ft\\s+)?warehouse associate\\b|^warehouse operations associate$|^warehouse specialist$|^warehouse manager$|^warehouse general operator$|^warehouse technician$|^onsite warehouse support specialist$|^receiving associate$|^inventory (?:associate|specialist|lead|coordinator(?:\\s+ii)?)$|^lead inventory coordinator$|^material handler(?:\\s+i)?$|^materials specialist$|^material planner$|^materials technician$"
+      ],
+      "sample_titles": [
+        {
+          "title": "Warehouse Associate",
+          "count": 13
+        },
+        {
+          "title": "Warehouse Specialist",
+          "count": 5
+        },
+        {
+          "title": "Material Planner",
+          "count": 5
+        },
+        {
+          "title": "Warehouse Technician",
+          "count": 5
+        },
+        {
+          "title": "Materials Specialist",
+          "count": 4
+        },
+        {
+          "title": "Warehouse Manager",
+          "count": 4
+        },
+        {
+          "title": "Inventory Associate",
+          "count": 4
+        },
+        {
+          "title": "Inventory Specialist",
+          "count": 3
+        }
+      ],
+      "corpus_source": "taxonomy"
+    },
+    {
+      "normalized_title": "wealth_advisor",
+      "role_family": "finance",
+      "aliases": [
+        "vice president focus team wealth advisor",
+        "wealth advisor",
+        "wealth advisor ultra high net worth"
+      ],
+      "rule_ids": [
+        "wealth_advisor"
+      ],
+      "rule_patterns_preview": [
+        "\\bassociate wealth advisor\\b|\\bwealth advisor\\b"
+      ],
+      "sample_titles": [
+        {
+          "title": "Associate Wealth Advisor",
+          "count": 39
+        },
+        {
+          "title": "Wealth Advisor, Ultra High Net Worth",
+          "count": 2
+        },
+        {
+          "title": "Senior Associate Wealth Advisor",
+          "count": 2
+        },
+        {
+          "title": "Wealth Advisor",
+          "count": 2
+        },
+        {
+          "title": "Associate Vice President, Focus Team - Wealth Advisor",
+          "count": 1
+        },
+        {
+          "title": "Financial Wealth Advisor (Advisory Team)",
+          "count": 1
+        },
+        {
+          "title": "Financial Wealth Advisor (Focus Team)",
+          "count": 1
+        },
+        {
+          "title": "Senior Wealth Advisor",
+          "count": 1
+        }
+      ],
+      "corpus_source": "taxonomy"
+    }
+  ],
+  "semantic_overlay": {
+    "existing_label_aliases": {},
+    "proposed_new_labels": []
+  }
+}

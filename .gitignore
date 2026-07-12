@@ -1,0 +1,55 @@
+.venv/
+.pytest_cache/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Dati locali e credenziali
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+
+# Ambienti Python
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Dataset locali molto grandi
+data/all_greenhouse_jobs_from_targets.jsonl
+data/jobs/jobs_en_filtered.jsonl
+data/jobs/jobs_cleaned_en.jsonl
+data/jobs/jobs_extracted_en.jsonl
+data/jobs/jobs_titled_en.jsonl
+data/jobs/jobs_titled_en_recovery_*.jsonl
+
+# Dati locali e credenziali
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+
+# Ambienti Python
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Dataset locali molto grandi
+data/all_greenhouse_jobs_from_targets.jsonl
+data/jobs/jobs_en_filtered.jsonl
+data/jobs/jobs_cleaned_en.jsonl
+data/jobs/jobs_extracted_en.jsonl
+data/jobs/jobs_titled_en.jsonl
+data/jobs/jobs_titled_en_recovery_*.jsonl

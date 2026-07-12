@@ -1,0 +1,2307 @@
+{
+  "baseline": {
+    "dataset": "data/jobs/jobs_titled_en_recovery_v54_semantic_patch.jsonl",
+    "rows_total": 81011,
+    "other_total": 36015,
+    "status": "mismatch"
+  },
+  "semantic_bootstrap_summary": {
+    "internal_canonical_count": 83,
+    "overlay_enabled": true,
+    "esco_rows": 3043,
+    "onet_rows": 1016,
+    "embedding_method": "hashed_char_trigram_cosine",
+    "embedding_fallback_reason": "sentence-transformers not configured in this environment; using deterministic local semantic-lite vectors",
+    "esco_assets": {
+      "occupations_en": "/home/afio/Documenti/Code/Python_code/Jinaj/joballert2/ESCOfiles/ESCO dataset - v1.2.1 - classification - en - csv/occupations_en.csv",
+      "broaderRelationsOccPillar_en": "/home/afio/Documenti/Code/Python_code/Jinaj/joballert2/ESCOfiles/ESCO dataset - v1.2.1 - classification - en - csv/broaderRelationsOccPillar_en.csv",
+      "ISCOGroups_en": "/home/afio/Documenti/Code/Python_code/Jinaj/joballert2/ESCOfiles/ESCO dataset - v1.2.1 - classification - en - csv/ISCOGroups_en.csv",
+      "occupationSkillRelations_en": "/home/afio/Documenti/Code/Python_code/Jinaj/joballert2/ESCOfiles/ESCO dataset - v1.2.1 - classification - en - csv/occupationSkillRelations_en.csv"
+    },
+    "onet_assets": {
+      "Occupation Data": "/home/afio/Documenti/Code/Python_code/Jinaj/joballert2/ONETfiles/db_30_2_excel/Occupation Data.xlsx",
+      "Alternate Titles": "/home/afio/Documenti/Code/Python_code/Jinaj/joballert2/ONETfiles/db_30_2_excel/Alternate Titles.xlsx",
+      "Related Occupations": "/home/afio/Documenti/Code/Python_code/Jinaj/joballert2/ONETfiles/db_30_2_excel/Related Occupations.xlsx"
+    }
+  },
+  "residual_discovery": {
+    "rows_total": 81011,
+    "other_total": 36015,
+    "top_raw_titles": [
+      {
+        "title": "General Manager",
+        "count": 40
+      },
+      {
+        "title": "Senior Market Strategy and Partnerships Manager",
+        "count": 36
+      },
+      {
+        "title": "Hair Color Bar Assistant, Licensed Cosmetologist",
+        "count": 32
+      },
+      {
+        "title": "General Application",
+        "count": 31
+      },
+      {
+        "title": "Producer",
+        "count": 27
+      },
+      {
+        "title": "Social Enterprise and Program Delivery-Evergreen",
+        "count": 27
+      },
+      {
+        "title": "Personal Care Specialist (Part Time)",
+        "count": 26
+      },
+      {
+        "title": "Quantitative Researcher",
+        "count": 24
+      },
+      {
+        "title": "Business Analyst",
+        "count": 20
+      },
+      {
+        "title": "Sonder Responder",
+        "count": 19
+      },
+      {
+        "title": "Restaurant General Manager",
+        "count": 19
+      },
+      {
+        "title": "Manager, Software Engineering",
+        "count": 18
+      },
+      {
+        "title": "Cultivation Associate",
+        "count": 18
+      },
+      {
+        "title": "Leader in Training",
+        "count": 17
+      },
+      {
+        "title": "Data Science Manager",
+        "count": 16
+      },
+      {
+        "title": "Principal Engineer",
+        "count": 16
+      },
+      {
+        "title": "Intelligence Operations Integrator",
+        "count": 16
+      },
+      {
+        "title": "Senior Firmware Engineer",
+        "count": 15
+      },
+      {
+        "title": "Manager, Paid Social",
+        "count": 15
+      },
+      {
+        "title": "Senior Technical Enablement Architect",
+        "count": 15
+      },
+      {
+        "title": "Chief of Staff",
+        "count": 14
+      },
+      {
+        "title": "Restaurant Manager",
+        "count": 14
+      },
+      {
+        "title": "Sales Enablement Manager",
+        "count": 13
+      },
+      {
+        "title": "Office Manager",
+        "count": 13
+      },
+      {
+        "title": "Client Partner",
+        "count": 13
+      },
+      {
+        "title": "Implementation Engineer",
+        "count": 13
+      },
+      {
+        "title": "Onboarding Specialist",
+        "count": 13
+      },
+      {
+        "title": "Procurement Manager",
+        "count": 13
+      },
+      {
+        "title": "Machine Learning Researcher",
+        "count": 13
+      },
+      {
+        "title": "Senior Business Analyst",
+        "count": 12
+      },
+      {
+        "title": "Payroll Specialist",
+        "count": 12
+      },
+      {
+        "title": "General Interest",
+        "count": 12
+      },
+      {
+        "title": "Production Lead",
+        "count": 12
+      },
+      {
+        "title": "Shift Lead, Licensed Cosmetologist",
+        "count": 12
+      },
+      {
+        "title": "Product Support Specialist",
+        "count": 11
+      },
+      {
+        "title": "GTM Planning Lead",
+        "count": 11
+      },
+      {
+        "title": "Contracts Manager",
+        "count": 11
+      },
+      {
+        "title": "FP&A Manager",
+        "count": 11
+      },
+      {
+        "title": "Partner Growth Manager",
+        "count": 11
+      },
+      {
+        "title": "Sales Director",
+        "count": 11
+      },
+      {
+        "title": "Clinical Trial Manager",
+        "count": 11
+      },
+      {
+        "title": "Designer",
+        "count": 11
+      },
+      {
+        "title": "Territory Manager",
+        "count": 11
+      },
+      {
+        "title": "Deal Desk Analyst",
+        "count": 11
+      },
+      {
+        "title": "Regional Director, Enterprise",
+        "count": 11
+      },
+      {
+        "title": "Strategic SI Partner Development Manager",
+        "count": 11
+      },
+      {
+        "title": "Don’t see what you’re looking for?",
+        "count": 11
+      },
+      {
+        "title": "General Manager, Licensed Cosmetologist",
+        "count": 11
+      },
+      {
+        "title": "Mortgage Loan Officer",
+        "count": 11
+      },
+      {
+        "title": "Paid Advertising Strategist",
+        "count": 11
+      }
+    ],
+    "top_normalized_titles": [
+      {
+        "title": "engineer",
+        "count": 45
+      },
+      {
+        "title": "general manager",
+        "count": 41
+      },
+      {
+        "title": "market strategy and partnerships manager",
+        "count": 41
+      },
+      {
+        "title": "business analyst",
+        "count": 36
+      },
+      {
+        "title": "firmware engineer",
+        "count": 34
+      },
+      {
+        "title": "manager software engineering",
+        "count": 33
+      },
+      {
+        "title": "hair color bar assistant licensed cosmetologist",
+        "count": 32
+      },
+      {
+        "title": "general application",
+        "count": 31
+      },
+      {
+        "title": "",
+        "count": 31
+      },
+      {
+        "title": "designer",
+        "count": 31
+      },
+      {
+        "title": "producer",
+        "count": 28
+      },
+      {
+        "title": "social enterprise and program delivery evergreen",
+        "count": 27
+      },
+      {
+        "title": "join our talent community",
+        "count": 26
+      },
+      {
+        "title": "personal care specialist part time",
+        "count": 26
+      },
+      {
+        "title": "quantitative researcher",
+        "count": 25
+      },
+      {
+        "title": "engagement manager",
+        "count": 24
+      },
+      {
+        "title": "production",
+        "count": 23
+      },
+      {
+        "title": "business development",
+        "count": 22
+      },
+      {
+        "title": "don t see what you re looking for",
+        "count": 22
+      },
+      {
+        "title": "salesforce administrator",
+        "count": 21
+      },
+      {
+        "title": "database engineer",
+        "count": 21
+      },
+      {
+        "title": "consultant",
+        "count": 21
+      },
+      {
+        "title": "product engineer",
+        "count": 21
+      },
+      {
+        "title": "manager engineering",
+        "count": 20
+      },
+      {
+        "title": "security operations engineer",
+        "count": 20
+      },
+      {
+        "title": "salesforce developer",
+        "count": 19
+      },
+      {
+        "title": "machine learning scientist",
+        "count": 19
+      },
+      {
+        "title": "architect",
+        "count": 19
+      },
+      {
+        "title": "test engineer",
+        "count": 19
+      },
+      {
+        "title": "fp a analyst",
+        "count": 19
+      },
+      {
+        "title": "implementation engineer",
+        "count": 19
+      },
+      {
+        "title": "buyer",
+        "count": 19
+      },
+      {
+        "title": "sonder responder",
+        "count": 19
+      },
+      {
+        "title": "restaurant general manager",
+        "count": 19
+      },
+      {
+        "title": "payroll specialist",
+        "count": 18
+      },
+      {
+        "title": "cultivation",
+        "count": 18
+      },
+      {
+        "title": "operations",
+        "count": 17
+      },
+      {
+        "title": "data science manager",
+        "count": 17
+      },
+      {
+        "title": "sales enablement manager",
+        "count": 17
+      },
+      {
+        "title": "people partner",
+        "count": 17
+      },
+      {
+        "title": "software architect",
+        "count": 17
+      },
+      {
+        "title": "leader in training",
+        "count": 17
+      },
+      {
+        "title": "client partner",
+        "count": 16
+      },
+      {
+        "title": "it systems engineer",
+        "count": 16
+      },
+      {
+        "title": "demand generation manager",
+        "count": 16
+      },
+      {
+        "title": "procurement manager",
+        "count": 16
+      },
+      {
+        "title": "finance",
+        "count": 16
+      },
+      {
+        "title": "aircraft mechanic instructor",
+        "count": 16
+      },
+      {
+        "title": "intelligence operations integrator",
+        "count": 16
+      },
+      {
+        "title": "director product management",
+        "count": 15
+      }
+    ],
+    "top_tokens": [
+      {
+        "token": "manager",
+        "count": 5912
+      },
+      {
+        "token": "engineer",
+        "count": 5639
+      },
+      {
+        "token": "director",
+        "count": 3067
+      },
+      {
+        "token": "specialist",
+        "count": 2224
+      },
+      {
+        "token": "operations",
+        "count": 1987
+      },
+      {
+        "token": "analyst",
+        "count": 1849
+      },
+      {
+        "token": "of",
+        "count": 1589
+      },
+      {
+        "token": "sales",
+        "count": 1382
+      },
+      {
+        "token": "and",
+        "count": 1312
+      },
+      {
+        "token": "engineering",
+        "count": 1217
+      },
+      {
+        "token": "business",
+        "count": 1097
+      },
+      {
+        "token": "product",
+        "count": 1058
+      },
+      {
+        "token": "data",
+        "count": 1049
+      },
+      {
+        "token": "systems",
+        "count": 1049
+      },
+      {
+        "token": "development",
+        "count": 1027
+      },
+      {
+        "token": "ai",
+        "count": 1022
+      },
+      {
+        "token": "technician",
+        "count": 1000
+      },
+      {
+        "token": "technical",
+        "count": 917
+      },
+      {
+        "token": "intern",
+        "count": 830
+      },
+      {
+        "token": "developer",
+        "count": 829
+      },
+      {
+        "token": "support",
+        "count": 817
+      },
+      {
+        "token": "design",
+        "count": 816
+      },
+      {
+        "token": "management",
+        "count": 770
+      },
+      {
+        "token": "strategy",
+        "count": 758
+      },
+      {
+        "token": "consultant",
+        "count": 732
+      },
+      {
+        "token": "partner",
+        "count": 676
+      },
+      {
+        "token": "time",
+        "count": 654
+      },
+      {
+        "token": "security",
+        "count": 591
+      },
+      {
+        "token": "research",
+        "count": 551
+      },
+      {
+        "token": "head",
+        "count": 545
+      },
+      {
+        "token": "coordinator",
+        "count": 525
+      },
+      {
+        "token": "shift",
+        "count": 524
+      },
+      {
+        "token": "architect",
+        "count": 517
+      },
+      {
+        "token": "test",
+        "count": 510
+      },
+      {
+        "token": "2026",
+        "count": 502
+      },
+      {
+        "token": "services",
+        "count": 495
+      },
+      {
+        "token": "global",
+        "count": 493
+      },
+      {
+        "token": "team",
+        "count": 491
+      },
+      {
+        "token": "customer",
+        "count": 483
+      },
+      {
+        "token": "software",
+        "count": 466
+      },
+      {
+        "token": "strategic",
+        "count": 447
+      },
+      {
+        "token": "part",
+        "count": 446
+      },
+      {
+        "token": "finance",
+        "count": 442
+      },
+      {
+        "token": "enterprise",
+        "count": 430
+      },
+      {
+        "token": "growth",
+        "count": 426
+      },
+      {
+        "token": "partnerships",
+        "count": 425
+      },
+      {
+        "token": "client",
+        "count": 422
+      },
+      {
+        "token": "starlink",
+        "count": 410
+      },
+      {
+        "token": "scientist",
+        "count": 407
+      },
+      {
+        "token": "remote",
+        "count": 402
+      }
+    ],
+    "top_bigrams": [
+      {
+        "ngram": "director of",
+        "count": 576
+      },
+      {
+        "ngram": "head of",
+        "count": 519
+      },
+      {
+        "ngram": "part time",
+        "count": 443
+      },
+      {
+        "ngram": "systems engineer",
+        "count": 354
+      },
+      {
+        "ngram": "business development",
+        "count": 317
+      },
+      {
+        "ngram": "design engineer",
+        "count": 281
+      },
+      {
+        "ngram": "test engineer",
+        "count": 260
+      },
+      {
+        "ngram": "vice president",
+        "count": 251
+      },
+      {
+        "ngram": "software engineering",
+        "count": 212
+      },
+      {
+        "ngram": "business analyst",
+        "count": 196
+      },
+      {
+        "ngram": "full time",
+        "count": 182
+      },
+      {
+        "ngram": "machine learning",
+        "count": 180
+      },
+      {
+        "ngram": "operations engineer",
+        "count": 178
+      },
+      {
+        "ngram": "summer 2026",
+        "count": 168
+      },
+      {
+        "ngram": "data center",
+        "count": 163
+      },
+      {
+        "ngram": "territory manager",
+        "count": 159
+      },
+      {
+        "ngram": "operations analyst",
+        "count": 158
+      },
+      {
+        "ngram": "2nd shift",
+        "count": 158
+      },
+      {
+        "ngram": "automation engineer",
+        "count": 153
+      },
+      {
+        "ngram": "sales director",
+        "count": 150
+      },
+      {
+        "ngram": "general manager",
+        "count": 147
+      },
+      {
+        "ngram": "research engineer",
+        "count": 145
+      },
+      {
+        "ngram": "product management",
+        "count": 143
+      },
+      {
+        "ngram": "partnerships manager",
+        "count": 143
+      },
+      {
+        "ngram": "support specialist",
+        "count": 139
+      },
+      {
+        "ngram": "supply chain",
+        "count": 139
+      },
+      {
+        "ngram": "of product",
+        "count": 139
+      },
+      {
+        "ngram": "fp a",
+        "count": 131
+      },
+      {
+        "ngram": "integration engineer",
+        "count": 126
+      },
+      {
+        "ngram": "partner manager",
+        "count": 124
+      }
+    ],
+    "top_trigrams": [
+      {
+        "ngram": "m f d",
+        "count": 115
+      },
+      {
+        "ngram": "director of product",
+        "count": 100
+      },
+      {
+        "ngram": "operations part time",
+        "count": 97
+      },
+      {
+        "ngram": "manager software engineering",
+        "count": 92
+      },
+      {
+        "ngram": "intern summer 2026",
+        "count": 88
+      },
+      {
+        "ngram": "member of technical",
+        "count": 88
+      },
+      {
+        "ngram": "director business development",
+        "count": 88
+      },
+      {
+        "ngram": "bangkok based relocation",
+        "count": 64
+      },
+      {
+        "ngram": "ai trainer advanced",
+        "count": 61
+      },
+      {
+        "ngram": "join our talent",
+        "count": 59
+      },
+      {
+        "ngram": "don t see",
+        "count": 53
+      },
+      {
+        "ngram": "medical science liaison",
+        "count": 50
+      },
+      {
+        "ngram": "based relocation provided",
+        "count": 50
+      },
+      {
+        "ngram": "director product management",
+        "count": 48
+      },
+      {
+        "ngram": "our talent community",
+        "count": 48
+      },
+      {
+        "ngram": "and partnerships manager",
+        "count": 47
+      },
+      {
+        "ngram": "market strategy and",
+        "count": 46
+      },
+      {
+        "ngram": "strategy and partnerships",
+        "count": 46
+      },
+      {
+        "ngram": "4 000 bonus",
+        "count": 45
+      },
+      {
+        "ngram": "of product management",
+        "count": 44
+      },
+      {
+        "ngram": "director of strategic",
+        "count": 43
+      },
+      {
+        "ngram": "regional vice president",
+        "count": 43
+      },
+      {
+        "ngram": "global supply manager",
+        "count": 41
+      },
+      {
+        "ngram": "back end engineer",
+        "count": 40
+      },
+      {
+        "ngram": "specialist part time",
+        "count": 40
+      },
+      {
+        "ngram": "go to market",
+        "count": 40
+      },
+      {
+        "ngram": "aircraft maintenance instructor",
+        "count": 39
+      },
+      {
+        "ngram": "machine learning scientist",
+        "count": 38
+      },
+      {
+        "ngram": "re looking for",
+        "count": 38
+      },
+      {
+        "ngram": "personal care specialist",
+        "count": 38
+      }
+    ]
+  },
+  "retrieval_quality_sample": [
+    {
+      "title": "General Manager",
+      "count": 40,
+      "top_internal": {
+        "text": "finance manager",
+        "score": 0.5538,
+        "lexical_score": 0.6667,
+        "semantic_score": 0.4615,
+        "normalized_title": "financial_analyst",
+        "role_family": "finance",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "general manager",
+        "score": 1.0,
+        "lexical_score": 1.0,
+        "semantic_score": 1.0,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/146f2c99-3f8b-4856-95ba-3ecfea681809",
+        "esco_preferred_label": "gambling manager",
+        "esco_broader_label": "recreational facilities manager",
+        "esco_isco_group": "Sports, recreation and cultural centre managers"
+      },
+      "top_onet": {
+        "text": "General Manager (GM)",
+        "score": 0.9049,
+        "lexical_score": 0.9091,
+        "semantic_score": 0.9014,
+        "source": "onet",
+        "onet_soc_code": "11-1021.00",
+        "onet_title": "General and Operations Managers"
+      },
+      "support_strength": "strong",
+      "overmatch_risk": "high",
+      "suggested_action": "keep_other_for_now"
+    },
+    {
+      "title": "Senior Market Strategy and Partnerships Manager",
+      "count": 36,
+      "top_internal": {
+        "text": "territory sales manager mid market",
+        "score": 0.4681,
+        "lexical_score": 0.6216,
+        "semantic_score": 0.3426,
+        "normalized_title": "sales_manager",
+        "role_family": "sales",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "strategy manager",
+        "score": 0.5825,
+        "lexical_score": 0.5714,
+        "semantic_score": 0.5916,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/3e213d52-e7a0-4980-99d9-23da1f717f50",
+        "esco_preferred_label": "political campaign officer",
+        "esco_broader_label": "Public relations professionals",
+        "esco_isco_group": "Public relations professionals"
+      },
+      "top_onet": {
+        "text": "Sales and Marketing Manager",
+        "score": 0.5433,
+        "lexical_score": 0.6866,
+        "semantic_score": 0.426,
+        "source": "onet",
+        "onet_soc_code": "11-2021.00",
+        "onet_title": "Marketing Managers"
+      },
+      "support_strength": "none",
+      "overmatch_risk": "medium",
+      "suggested_action": "keep_other_for_now"
+    },
+    {
+      "title": "Hair Color Bar Assistant, Licensed Cosmetologist",
+      "count": 32,
+      "top_internal": {
+        "text": "medical assistant cardiology specialists",
+        "score": 0.4384,
+        "lexical_score": 0.5517,
+        "semantic_score": 0.3457,
+        "normalized_title": "medical_assistant",
+        "role_family": "healthcare_clinical",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "metrologist assistant",
+        "score": 0.5504,
+        "lexical_score": 0.5882,
+        "semantic_score": 0.5195,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/0d7ae791-653e-4297-9f61-8bad87f61d57",
+        "esco_preferred_label": "meteorology technician",
+        "esco_broader_label": "Chemical and physical science technicians",
+        "esco_isco_group": "Chemical and physical science technicians"
+      },
+      "top_onet": {
+        "text": "Licensed Cosmetologist",
+        "score": 0.683,
+        "lexical_score": 0.6377,
+        "semantic_score": 0.7202,
+        "source": "onet",
+        "onet_soc_code": "39-5012.00",
+        "onet_title": "Hairdressers, Hairstylists, and Cosmetologists"
+      },
+      "support_strength": "weak",
+      "overmatch_risk": "medium",
+      "suggested_action": "keep_other_for_now"
+    },
+    {
+      "title": "General Application",
+      "count": 31,
+      "top_internal": {
+        "text": "graduate hr generalist apac",
+        "score": 0.4206,
+        "lexical_score": 0.4783,
+        "semantic_score": 0.3734,
+        "normalized_title": "hr_generalist",
+        "role_family": "people_operations",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "application designer",
+        "score": 0.6836,
+        "lexical_score": 0.8205,
+        "semantic_score": 0.5717,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/bd272aee-adc9-4a06-a15c-a73b4b4a46a7",
+        "esco_preferred_label": "ICT application developer",
+        "esco_broader_label": "Applications programmers",
+        "esco_isco_group": "Applications programmers"
+      },
+      "top_onet": {
+        "text": "Applications Trainer",
+        "score": 0.6606,
+        "lexical_score": 0.7692,
+        "semantic_score": 0.5717,
+        "source": "onet",
+        "onet_soc_code": "13-1151.00",
+        "onet_title": "Training and Development Specialists"
+      },
+      "support_strength": "weak",
+      "overmatch_risk": "high",
+      "suggested_action": "noise_or_non_role"
+    },
+    {
+      "title": "Producer",
+      "count": 27,
+      "top_internal": {
+        "text": "producer",
+        "score": 1.0,
+        "lexical_score": 1.0,
+        "semantic_score": 1.0,
+        "normalized_title": "content_producer",
+        "role_family": "content",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "producer",
+        "score": 1.0,
+        "lexical_score": 1.0,
+        "semantic_score": 1.0,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/52b9e8dc-de6c-41dd-b29a-e1291c273f6f",
+        "esco_preferred_label": "producer",
+        "esco_broader_label": "Film, stage and related directors and producers",
+        "esco_isco_group": "Film, stage and related directors and producers"
+      },
+      "top_onet": {
+        "text": "Producer",
+        "score": 1.0,
+        "lexical_score": 1.0,
+        "semantic_score": 1.0,
+        "source": "onet",
+        "onet_soc_code": "27-2012.00",
+        "onet_title": "Producers and Directors"
+      },
+      "support_strength": "strong",
+      "overmatch_risk": "high",
+      "suggested_action": "keep_other_for_now"
+    },
+    {
+      "title": "Social Enterprise and Program Delivery-Evergreen",
+      "count": 27,
+      "top_internal": {
+        "text": "delivery driver",
+        "score": 0.4118,
+        "lexical_score": 0.4444,
+        "semantic_score": 0.3851,
+        "normalized_title": "delivery_driver",
+        "role_family": "logistics",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "social enterprise founder",
+        "score": 0.5114,
+        "lexical_score": 0.5479,
+        "semantic_score": 0.4815,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/73b10c97-b003-45dc-a36d-c1d585c04be1",
+        "esco_preferred_label": "social entrepreneur",
+        "esco_broader_label": "Managing directors and chief executives",
+        "esco_isco_group": "Managing directors and chief executives"
+      },
+      "top_onet": {
+        "text": "Pick-Up and Delivery Driver",
+        "score": 0.4731,
+        "lexical_score": 0.56,
+        "semantic_score": 0.402,
+        "source": "onet",
+        "onet_soc_code": "53-3031.00",
+        "onet_title": "Driver/Sales Workers"
+      },
+      "support_strength": "none",
+      "overmatch_risk": "medium",
+      "suggested_action": "keep_other_for_now"
+    },
+    {
+      "title": "Personal Care Specialist (Part Time)",
+      "count": 26,
+      "top_internal": {
+        "text": "stylist retail part time",
+        "score": 0.5228,
+        "lexical_score": 0.6552,
+        "semantic_score": 0.4146,
+        "normalized_title": "store_associate",
+        "role_family": "sales",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "hair-care specialist",
+        "score": 0.6208,
+        "lexical_score": 0.6667,
+        "semantic_score": 0.5833,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/099c6bb0-22d3-4c5d-8bf5-70910af381ef",
+        "esco_preferred_label": "hairdresser",
+        "esco_broader_label": "Hairdressers",
+        "esco_isco_group": "Hairdressers"
+      },
+      "top_onet": {
+        "text": "PC Specialist (Personal Computer Specialist)",
+        "score": 0.6719,
+        "lexical_score": 0.6842,
+        "semantic_score": 0.6618,
+        "source": "onet",
+        "onet_soc_code": "15-1232.00",
+        "onet_title": "Computer User Support Specialists"
+      },
+      "support_strength": "weak",
+      "overmatch_risk": "medium",
+      "suggested_action": "keep_other_for_now"
+    },
+    {
+      "title": "Quantitative Researcher",
+      "count": 24,
+      "top_internal": {
+        "text": "ux researcher",
+        "score": 0.5757,
+        "lexical_score": 0.5556,
+        "semantic_score": 0.5922,
+        "normalized_title": "ux_researcher",
+        "role_family": "design",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "quantitative trader",
+        "score": 0.6845,
+        "lexical_score": 0.8095,
+        "semantic_score": 0.5822,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/60bc7374-9fa1-4bbd-b936-2676fca0bfb6",
+        "esco_preferred_label": "financial trader",
+        "esco_broader_label": "Securities and finance dealers and brokers",
+        "esco_isco_group": "Securities and finance dealers and brokers"
+      },
+      "top_onet": {
+        "text": "Quantitative Researcher",
+        "score": 1.0,
+        "lexical_score": 1.0,
+        "semantic_score": 1.0,
+        "source": "onet",
+        "onet_soc_code": "13-2099.01",
+        "onet_title": "Financial Quantitative Analysts"
+      },
+      "support_strength": "strong",
+      "overmatch_risk": "high",
+      "suggested_action": "keep_other_for_now"
+    },
+    {
+      "title": "Business Analyst",
+      "count": 20,
+      "top_internal": {
+        "text": "data analyst",
+        "score": 0.536,
+        "lexical_score": 0.5714,
+        "semantic_score": 0.5071,
+        "normalized_title": "data_analyst",
+        "role_family": "data_analytics",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "business analyst",
+        "score": 1.0,
+        "lexical_score": 1.0,
+        "semantic_score": 1.0,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/12ff7f9c-c5b5-4d4a-b585-c350dd1400eb",
+        "esco_preferred_label": "business economics researcher",
+        "esco_broader_label": "economist",
+        "esco_isco_group": "Economists"
+      },
+      "top_onet": {
+        "text": "Business Analyst",
+        "score": 1.0,
+        "lexical_score": 1.0,
+        "semantic_score": 1.0,
+        "source": "onet",
+        "onet_soc_code": "13-1111.00",
+        "onet_title": "Management Analysts"
+      },
+      "support_strength": "strong",
+      "overmatch_risk": "high",
+      "suggested_action": "keep_other_for_now"
+    },
+    {
+      "title": "Restaurant General Manager",
+      "count": 19,
+      "top_internal": {
+        "text": "human resources generalist",
+        "score": 0.4776,
+        "lexical_score": 0.6538,
+        "semantic_score": 0.3333,
+        "normalized_title": "hr_generalist",
+        "role_family": "people_operations",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "restaurant manager",
+        "score": 0.7892,
+        "lexical_score": 0.8182,
+        "semantic_score": 0.7655,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/53cdd34e-22f2-41bd-b3c7-de22bf9bbcae",
+        "esco_preferred_label": "accommodation manager",
+        "esco_broader_label": "Hotel managers",
+        "esco_isco_group": "Hotel managers"
+      },
+      "top_onet": {
+        "text": "Restaurant GM (Restaurant General Manager)",
+        "score": 0.8558,
+        "lexical_score": 0.7879,
+        "semantic_score": 0.9113,
+        "source": "onet",
+        "onet_soc_code": "11-9051.00",
+        "onet_title": "Food Service Managers"
+      },
+      "support_strength": "strong",
+      "overmatch_risk": "high",
+      "suggested_action": "keep_other_for_now"
+    },
+    {
+      "title": "Sonder Responder",
+      "count": 19,
+      "top_internal": {
+        "text": "respiratory therapist",
+        "score": 0.3036,
+        "lexical_score": 0.4865,
+        "semantic_score": 0.1539,
+        "normalized_title": "respiratory_therapist",
+        "role_family": "healthcare_clinical",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "blender tender",
+        "score": 0.6768,
+        "lexical_score": 0.6667,
+        "semantic_score": 0.6852,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/66d22b81-1b5e-42a1-b904-ac67b4a896c6",
+        "esco_preferred_label": "mineral processing operator",
+        "esco_broader_label": "Mineral and stone processing plant operators",
+        "esco_isco_group": "Mineral and stone processing plant operators"
+      },
+      "top_onet": {
+        "text": "Responder",
+        "score": 0.7888,
+        "lexical_score": 0.72,
+        "semantic_score": 0.8452,
+        "source": "onet",
+        "onet_soc_code": "29-2043.00",
+        "onet_title": "Paramedics"
+      },
+      "support_strength": "medium",
+      "overmatch_risk": "medium",
+      "suggested_action": "keep_other_for_now"
+    },
+    {
+      "title": "Manager, Software Engineering",
+      "count": 18,
+      "top_internal": {
+        "text": "software engineering manager",
+        "score": 0.9411,
+        "lexical_score": 1.0,
+        "semantic_score": 0.8929,
+        "normalized_title": "engineering_manager",
+        "role_family": "software_engineering",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "software engineer",
+        "score": 0.7694,
+        "lexical_score": 0.7556,
+        "semantic_score": 0.7807,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/f2b15a0e-e65a-438a-affb-29b9d50b77d1",
+        "esco_preferred_label": "software developer",
+        "esco_broader_label": "Software developers",
+        "esco_isco_group": "Software developers"
+      },
+      "top_onet": {
+        "text": "Software Engineer",
+        "score": 0.7694,
+        "lexical_score": 0.7556,
+        "semantic_score": 0.7807,
+        "source": "onet",
+        "onet_soc_code": "15-1252.00",
+        "onet_title": "Software Developers"
+      },
+      "support_strength": "medium",
+      "overmatch_risk": "low",
+      "suggested_action": "needs_tighter_rule"
+    },
+    {
+      "title": "Cultivation Associate",
+      "count": 18,
+      "top_internal": {
+        "text": "implementation consultant",
+        "score": 0.4029,
+        "lexical_score": 0.5556,
+        "semantic_score": 0.278,
+        "normalized_title": "operations_specialist",
+        "role_family": "operations",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "hop cultivator",
+        "score": 0.6415,
+        "lexical_score": 0.72,
+        "semantic_score": 0.5774,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/a6af318e-8a3a-4266-a1ef-cf7afe588201",
+        "esco_preferred_label": "hop farmer",
+        "esco_broader_label": "Tree and shrub crop growers",
+        "esco_isco_group": "Tree and shrub crop growers"
+      },
+      "top_onet": {
+        "text": "Cultivator",
+        "score": 0.7746,
+        "lexical_score": 0.8571,
+        "semantic_score": 0.7071,
+        "source": "onet",
+        "onet_soc_code": "45-2091.00",
+        "onet_title": "Agricultural Equipment Operators"
+      },
+      "support_strength": "medium",
+      "overmatch_risk": "medium",
+      "suggested_action": "keep_other_for_now"
+    },
+    {
+      "title": "Leader in Training",
+      "count": 17,
+      "top_internal": {
+        "text": "engineering team leader",
+        "score": 0.4068,
+        "lexical_score": 0.5854,
+        "semantic_score": 0.2606,
+        "normalized_title": "engineering_manager",
+        "role_family": "software_engineering",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "training adviser",
+        "score": 0.5646,
+        "lexical_score": 0.7647,
+        "semantic_score": 0.4009,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/2412bbb1-29ca-4e17-a2b8-70694f0cb14f",
+        "esco_preferred_label": "educational counsellor",
+        "esco_broader_label": "Teaching professionals not elsewhere classified",
+        "esco_isco_group": "Teaching professionals not elsewhere classified"
+      },
+      "top_onet": {
+        "text": "Training Manager",
+        "score": 0.5646,
+        "lexical_score": 0.7647,
+        "semantic_score": 0.4009,
+        "source": "onet",
+        "onet_soc_code": "11-1021.00",
+        "onet_title": "General and Operations Managers"
+      },
+      "support_strength": "none",
+      "overmatch_risk": "medium",
+      "suggested_action": "keep_other_for_now"
+    },
+    {
+      "title": "Data Science Manager",
+      "count": 16,
+      "top_internal": {
+        "text": "data science manager",
+        "score": 1.0,
+        "lexical_score": 1.0,
+        "semantic_score": 1.0,
+        "normalized_title": "data_science_manager",
+        "role_family": "data_science",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "data manager",
+        "score": 0.7065,
+        "lexical_score": 0.75,
+        "semantic_score": 0.6708,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/8c57af09-719c-42b3-be40-6ed4946236cc",
+        "esco_preferred_label": "database administrator",
+        "esco_broader_label": "Database designers and administrators",
+        "esco_isco_group": "Database designers and administrators"
+      },
+      "top_onet": {
+        "text": "Social Science Manager",
+        "score": 0.7273,
+        "lexical_score": 0.7143,
+        "semantic_score": 0.7379,
+        "source": "onet",
+        "onet_soc_code": "11-9199.00",
+        "onet_title": "Managers, All Other"
+      },
+      "support_strength": "weak",
+      "overmatch_risk": "low",
+      "suggested_action": "needs_tighter_rule"
+    },
+    {
+      "title": "Principal Engineer",
+      "count": 16,
+      "top_internal": {
+        "text": "ai engineer",
+        "score": 0.8528,
+        "lexical_score": 0.8421,
+        "semantic_score": 0.8616,
+        "normalized_title": "ml_engineer",
+        "role_family": "machine_learning",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "junior engineer",
+        "score": 1.0,
+        "lexical_score": 1.0,
+        "semantic_score": 1.0,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/9dbbeb2c-0d51-4c03-8ef6-8dfa7360db22",
+        "esco_preferred_label": "ship assistant engineer",
+        "esco_broader_label": "Ships’ engineers",
+        "esco_isco_group": "Ships’ engineers"
+      },
+      "top_onet": {
+        "text": "Engineer",
+        "score": 1.0,
+        "lexical_score": 1.0,
+        "semantic_score": 1.0,
+        "source": "onet",
+        "onet_soc_code": "13-1081.01",
+        "onet_title": "Logistics Engineers"
+      },
+      "support_strength": "strong",
+      "overmatch_risk": "low",
+      "suggested_action": "needs_tighter_rule"
+    },
+    {
+      "title": "Intelligence Operations Integrator",
+      "count": 16,
+      "top_internal": {
+        "text": "operations manager",
+        "score": 0.4827,
+        "lexical_score": 0.5769,
+        "semantic_score": 0.4056,
+        "normalized_title": "operations_specialist",
+        "role_family": "operations",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "communications intelligence intercept operator",
+        "score": 0.6976,
+        "lexical_score": 0.625,
+        "semantic_score": 0.7571,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/35e67944-231e-4bc9-8c69-560f203167ff",
+        "esco_preferred_label": "intelligence communications interceptor",
+        "esco_broader_label": "Armed forces occupations, other ranks",
+        "esco_isco_group": "Armed forces occupations, other ranks"
+      },
+      "top_onet": {
+        "text": "Intelligence, Operations",
+        "score": 0.8304,
+        "lexical_score": 0.807,
+        "semantic_score": 0.8496,
+        "source": "onet",
+        "onet_soc_code": "55-1019.00",
+        "onet_title": "Military Officer Special and Tactical Operations Leaders, All Other"
+      },
+      "support_strength": "medium",
+      "overmatch_risk": "medium",
+      "suggested_action": "keep_other_for_now"
+    },
+    {
+      "title": "Senior Firmware Engineer",
+      "count": 15,
+      "top_internal": {
+        "text": "software engineer",
+        "score": 0.7739,
+        "lexical_score": 0.8235,
+        "semantic_score": 0.7333,
+        "normalized_title": "software_engineer",
+        "role_family": "software_engineering",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "senior fire engineer",
+        "score": 0.8182,
+        "lexical_score": 0.8667,
+        "semantic_score": 0.7785,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/4c9ca706-3973-4926-854d-44011662ca83",
+        "esco_preferred_label": "fire protection technician",
+        "esco_broader_label": "civil engineering technician",
+        "esco_isco_group": "Civil engineering technicians"
+      },
+      "top_onet": {
+        "text": "Firmware Engineer",
+        "score": 1.0,
+        "lexical_score": 1.0,
+        "semantic_score": 1.0,
+        "source": "onet",
+        "onet_soc_code": "15-1299.07",
+        "onet_title": "Blockchain Engineers"
+      },
+      "support_strength": "strong",
+      "overmatch_risk": "medium",
+      "suggested_action": "needs_tighter_rule"
+    },
+    {
+      "title": "Senior Technical Enablement Architect",
+      "count": 15,
+      "top_internal": {
+        "text": "technical architect",
+        "score": 0.7636,
+        "lexical_score": 0.7755,
+        "semantic_score": 0.7539,
+        "normalized_title": "solutions_architect",
+        "role_family": "architecture",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "naval architect",
+        "score": 0.5585,
+        "lexical_score": 0.6222,
+        "semantic_score": 0.5064,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/5a58da2b-2fa0-40d4-a9f5-fead48e7de88",
+        "esco_preferred_label": "naval architect",
+        "esco_broader_label": "mechanical engineer",
+        "esco_isco_group": "Mechanical engineers"
+      },
+      "top_onet": {
+        "text": "Technical Architect",
+        "score": 0.7636,
+        "lexical_score": 0.7755,
+        "semantic_score": 0.7539,
+        "source": "onet",
+        "onet_soc_code": "15-1299.08",
+        "onet_title": "Computer Systems Engineers/Architects"
+      },
+      "support_strength": "medium",
+      "overmatch_risk": "low",
+      "suggested_action": "needs_tighter_rule"
+    },
+    {
+      "title": "Manager, Paid Social",
+      "count": 15,
+      "top_internal": {
+        "text": "manager google paid media",
+        "score": 0.5236,
+        "lexical_score": 0.5455,
+        "semantic_score": 0.5057,
+        "normalized_title": "marketing_specialist",
+        "role_family": "marketing",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "manager of social service",
+        "score": 0.661,
+        "lexical_score": 0.7273,
+        "semantic_score": 0.6069,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/c18fddf5-cfc4-4f9c-94d6-86608faaa1dd",
+        "esco_preferred_label": "social services manager",
+        "esco_broader_label": "Social welfare managers",
+        "esco_isco_group": "Social welfare managers"
+      },
+      "top_onet": {
+        "text": "Social Media Manager",
+        "score": 0.6522,
+        "lexical_score": 0.8205,
+        "semantic_score": 0.5145,
+        "source": "onet",
+        "onet_soc_code": "11-2032.00",
+        "onet_title": "Public Relations Managers"
+      },
+      "support_strength": "weak",
+      "overmatch_risk": "medium",
+      "suggested_action": "keep_other_for_now"
+    },
+    {
+      "title": "Restaurant Manager",
+      "count": 14,
+      "top_internal": {
+        "text": "tax manager",
+        "score": 0.5853,
+        "lexical_score": 0.6897,
+        "semantic_score": 0.5,
+        "normalized_title": "financial_analyst",
+        "role_family": "finance",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "restaurant manager",
+        "score": 1.0,
+        "lexical_score": 1.0,
+        "semantic_score": 1.0,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/53cdd34e-22f2-41bd-b3c7-de22bf9bbcae",
+        "esco_preferred_label": "accommodation manager",
+        "esco_broader_label": "Hotel managers",
+        "esco_isco_group": "Hotel managers"
+      },
+      "top_onet": {
+        "text": "Restaurant Manager",
+        "score": 1.0,
+        "lexical_score": 1.0,
+        "semantic_score": 1.0,
+        "source": "onet",
+        "onet_soc_code": "11-9051.00",
+        "onet_title": "Food Service Managers"
+      },
+      "support_strength": "strong",
+      "overmatch_risk": "high",
+      "suggested_action": "keep_other_for_now"
+    },
+    {
+      "title": "Chief of Staff",
+      "count": 14,
+      "top_internal": {
+        "text": "compliance officer",
+        "score": 0.2638,
+        "lexical_score": 0.4615,
+        "semantic_score": 0.1021,
+        "normalized_title": "compliance_manager",
+        "role_family": "compliance_risk",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "chief of staff",
+        "score": 1.0,
+        "lexical_score": 1.0,
+        "semantic_score": 1.0,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/0752ed49-03e7-4d75-8314-a051b3771a1d",
+        "esco_preferred_label": "public administration manager",
+        "esco_broader_label": "Senior government officials",
+        "esco_isco_group": "Senior government officials"
+      },
+      "top_onet": {
+        "text": "Staff Chief",
+        "score": 0.7351,
+        "lexical_score": 0.7692,
+        "semantic_score": 0.7071,
+        "source": "onet",
+        "onet_soc_code": "11-1011.00",
+        "onet_title": "Chief Executives"
+      },
+      "support_strength": "strong",
+      "overmatch_risk": "medium",
+      "suggested_action": "keep_other_for_now"
+    },
+    {
+      "title": "Office Manager",
+      "count": 13,
+      "top_internal": {
+        "text": "school office manager",
+        "score": 0.7971,
+        "lexical_score": 0.8,
+        "semantic_score": 0.7947,
+        "normalized_title": "school_administrator",
+        "role_family": "education",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "office manager",
+        "score": 1.0,
+        "lexical_score": 1.0,
+        "semantic_score": 1.0,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/6e6839b6-099c-4802-906e-7f2c8203ee69",
+        "esco_preferred_label": "office manager",
+        "esco_broader_label": "Office supervisors",
+        "esco_isco_group": "Office supervisors"
+      },
+      "top_onet": {
+        "text": "Office Manager",
+        "score": 1.0,
+        "lexical_score": 1.0,
+        "semantic_score": 1.0,
+        "source": "onet",
+        "onet_soc_code": "11-1021.00",
+        "onet_title": "General and Operations Managers"
+      },
+      "support_strength": "strong",
+      "overmatch_risk": "high",
+      "suggested_action": "keep_other_for_now"
+    },
+    {
+      "title": "Onboarding Specialist",
+      "count": 13,
+      "top_internal": {
+        "text": "marketing specialist",
+        "score": 0.7081,
+        "lexical_score": 0.7805,
+        "semantic_score": 0.6489,
+        "normalized_title": "marketing_specialist",
+        "role_family": "marketing",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "nursing specialist",
+        "score": 0.7478,
+        "lexical_score": 0.8205,
+        "semantic_score": 0.6882,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/18e14e61-495b-44cc-a7c6-df4c625934ba",
+        "esco_preferred_label": "specialist nurse",
+        "esco_broader_label": "Nursing professionals",
+        "esco_isco_group": "Nursing professionals"
+      },
+      "top_onet": {
+        "text": "Coding Specialist",
+        "score": 0.8025,
+        "lexical_score": 0.8421,
+        "semantic_score": 0.7701,
+        "source": "onet",
+        "onet_soc_code": "29-2072.00",
+        "onet_title": "Medical Records Specialists"
+      },
+      "support_strength": "medium",
+      "overmatch_risk": "medium",
+      "suggested_action": "semantic_layer_candidate"
+    },
+    {
+      "title": "Sales Enablement Manager",
+      "count": 13,
+      "top_internal": {
+        "text": "sales manager",
+        "score": 0.6886,
+        "lexical_score": 0.7027,
+        "semantic_score": 0.677,
+        "normalized_title": "sales_manager",
+        "role_family": "sales",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "sales development manager",
+        "score": 0.7185,
+        "lexical_score": 0.8163,
+        "semantic_score": 0.6384,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/2eac08c2-a81a-46fc-8d75-eb0e0f3e0f6d",
+        "esco_preferred_label": "sales account manager",
+        "esco_broader_label": "Retail and wholesale trade managers",
+        "esco_isco_group": "Retail and wholesale trade managers"
+      },
+      "top_onet": {
+        "text": "Department Sales Manager",
+        "score": 0.6958,
+        "lexical_score": 0.8333,
+        "semantic_score": 0.5833,
+        "source": "onet",
+        "onet_soc_code": "41-1011.00",
+        "onet_title": "First-Line Supervisors of Retail Sales Workers"
+      },
+      "support_strength": "weak",
+      "overmatch_risk": "medium",
+      "suggested_action": "semantic_layer_candidate"
+    },
+    {
+      "title": "Implementation Engineer",
+      "count": 13,
+      "top_internal": {
+        "text": "implementation consultant",
+        "score": 0.6441,
+        "lexical_score": 0.7083,
+        "semantic_score": 0.5915,
+        "normalized_title": "operations_specialist",
+        "role_family": "operations",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "instrumentation engineer",
+        "score": 0.7732,
+        "lexical_score": 0.8085,
+        "semantic_score": 0.7444,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/e6800524-eec2-4c33-af0e-6f36d1d679bc",
+        "esco_preferred_label": "instrumentation engineer",
+        "esco_broader_label": "electronics engineer",
+        "esco_isco_group": "Electronics engineers"
+      },
+      "top_onet": {
+        "text": "Fermentation Engineer",
+        "score": 0.8292,
+        "lexical_score": 0.8636,
+        "semantic_score": 0.801,
+        "source": "onet",
+        "onet_soc_code": "17-2031.00",
+        "onet_title": "Bioengineers and Biomedical Engineers"
+      },
+      "support_strength": "medium",
+      "overmatch_risk": "high",
+      "suggested_action": "keep_other_for_now"
+    },
+    {
+      "title": "Procurement Manager",
+      "count": 13,
+      "top_internal": {
+        "text": "product manager",
+        "score": 0.6401,
+        "lexical_score": 0.7647,
+        "semantic_score": 0.5381,
+        "normalized_title": "product_manager",
+        "role_family": "product_management",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "energy procurement manager",
+        "score": 0.8429,
+        "lexical_score": 0.8444,
+        "semantic_score": 0.8416,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/a005f8a2-2d8a-433e-8d89-13575f822fd4",
+        "esco_preferred_label": "energy manager",
+        "esco_broader_label": "Professional services managers not elsewhere classified",
+        "esco_isco_group": "Professional services managers not elsewhere classified"
+      },
+      "top_onet": {
+        "text": "Procurement Manager",
+        "score": 1.0,
+        "lexical_score": 1.0,
+        "semantic_score": 1.0,
+        "source": "onet",
+        "onet_soc_code": "11-3061.00",
+        "onet_title": "Purchasing Managers"
+      },
+      "support_strength": "strong",
+      "overmatch_risk": "medium",
+      "suggested_action": "semantic_layer_candidate"
+    },
+    {
+      "title": "Machine Learning Researcher",
+      "count": 13,
+      "top_internal": {
+        "text": "machine learning engineer",
+        "score": 0.6368,
+        "lexical_score": 0.6154,
+        "semantic_score": 0.6543,
+        "normalized_title": "ml_engineer",
+        "role_family": "machine_learning",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "engineering researcher",
+        "score": 0.6507,
+        "lexical_score": 0.6939,
+        "semantic_score": 0.6155,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/3dab5c3f-84d0-4d52-901d-dd262eaea509",
+        "esco_preferred_label": "research engineer",
+        "esco_broader_label": "application engineer",
+        "esco_isco_group": "Engineering professionals not elsewhere classified"
+      },
+      "top_onet": {
+        "text": "Machine Learning Research Scientist",
+        "score": 0.8247,
+        "lexical_score": 0.8387,
+        "semantic_score": 0.8133,
+        "source": "onet",
+        "onet_soc_code": "15-1221.00",
+        "onet_title": "Computer and Information Research Scientists"
+      },
+      "support_strength": "medium",
+      "overmatch_risk": "medium",
+      "suggested_action": "keep_other_for_now"
+    },
+    {
+      "title": "Client Partner",
+      "count": 13,
+      "top_internal": {
+        "text": "client service",
+        "score": 0.5185,
+        "lexical_score": 0.6429,
+        "semantic_score": 0.4167,
+        "normalized_title": "customer_service_specialist",
+        "role_family": "operations",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "client manager",
+        "score": 0.5827,
+        "lexical_score": 0.7857,
+        "semantic_score": 0.4167,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/725090a7-9943-4dae-8079-a6999d21ddba",
+        "esco_preferred_label": "client relations manager",
+        "esco_broader_label": "Advertising and marketing professionals",
+        "esco_isco_group": "Advertising and marketing professionals"
+      },
+      "top_onet": {
+        "text": "Audit Partner",
+        "score": 0.6684,
+        "lexical_score": 0.7407,
+        "semantic_score": 0.6093,
+        "source": "onet",
+        "onet_soc_code": "13-2011.00",
+        "onet_title": "Accountants and Auditors"
+      },
+      "support_strength": "weak",
+      "overmatch_risk": "high",
+      "suggested_action": "keep_other_for_now"
+    },
+    {
+      "title": "Production Lead",
+      "count": 12,
+      "top_internal": {
+        "text": "production engineer",
+        "score": 0.6876,
+        "lexical_score": 0.6897,
+        "semantic_score": 0.686,
+        "normalized_title": "manufacturing_engineer",
+        "role_family": "industrial_engineering",
+        "source": "internal"
+      },
+      "top_esco": {
+        "text": "production buyer",
+        "score": 0.7619,
+        "lexical_score": 0.7692,
+        "semantic_score": 0.7559,
+        "source": "esco",
+        "esco_concept_uri": "http://data.europa.eu/esco/occupation/9b3c6dd8-4d3b-4a12-8bb8-55bb2e92c3a6",
+        "esco_preferred_label": "set buyer",
+        "esco_broader_label": "Buyers",
+        "esco_isco_group": "Buyers"
+      },
+      "top_onet": {
+        "text": "Production Associate",
+        "score": 1.0,
+        "lexical_score": 1.0,
+        "semantic_score": 1.0,
+        "source": "onet",
+        "onet_soc_code": "43-5061.00",
+        "onet_title": "Production, Planning, and Expediting Clerks"
+      },
+      "support_strength": "strong",
+      "overmatch_risk": "medium",
+      "suggested_action": "semantic_layer_candidate"
+    }
+  ],
+  "reviewer_output": {
+    "category_split": {
+      "keep_other_for_now": 1919,
+      "noise_or_non_role": 79,
+      "needs_tighter_rule": 467,
+      "semantic_layer_candidate": 401,
+      "safe_rule_candidate": 18,
+      "taxonomy_gap": 111
+    },
+    "category_counts": {
+      "keep_other_for_now": 219,
+      "noise_or_non_role": 6,
+      "needs_tighter_rule": 55,
+      "semantic_layer_candidate": 53,
+      "safe_rule_candidate": 2,
+      "taxonomy_gap": 15
+    }
+  },
+  "top_opportunities": [
+    {
+      "cluster_or_title": "Manager, Software Engineering",
+      "estimated_volume": 18,
+      "target_label": "engineering_manager",
+      "target_family": "software_engineering",
+      "suggested_action": "needs_tighter_rule",
+      "risk": "low",
+      "internal_score": 0.9411,
+      "why_semantic_layer_adds_value": "external ESCO/O*NET candidate agreement improves confidence gating"
+    },
+    {
+      "cluster_or_title": "Data Science Manager",
+      "estimated_volume": 16,
+      "target_label": "data_science_manager",
+      "target_family": "data_science",
+      "suggested_action": "needs_tighter_rule",
+      "risk": "low",
+      "internal_score": 1.0,
+      "why_semantic_layer_adds_value": "external ESCO/O*NET candidate agreement improves confidence gating"
+    },
+    {
+      "cluster_or_title": "Principal Engineer",
+      "estimated_volume": 16,
+      "target_label": "ml_engineer",
+      "target_family": "machine_learning",
+      "suggested_action": "needs_tighter_rule",
+      "risk": "low",
+      "internal_score": 0.8528,
+      "why_semantic_layer_adds_value": "external ESCO/O*NET candidate agreement improves confidence gating"
+    },
+    {
+      "cluster_or_title": "Senior Firmware Engineer",
+      "estimated_volume": 15,
+      "target_label": "software_engineer",
+      "target_family": "software_engineering",
+      "suggested_action": "needs_tighter_rule",
+      "risk": "medium",
+      "internal_score": 0.7739,
+      "why_semantic_layer_adds_value": "external ESCO/O*NET candidate agreement improves confidence gating"
+    },
+    {
+      "cluster_or_title": "Senior Technical Enablement Architect",
+      "estimated_volume": 15,
+      "target_label": "solutions_architect",
+      "target_family": "architecture",
+      "suggested_action": "needs_tighter_rule",
+      "risk": "low",
+      "internal_score": 0.7636,
+      "why_semantic_layer_adds_value": "external ESCO/O*NET candidate agreement improves confidence gating"
+    },
+    {
+      "cluster_or_title": "Product Support Specialist",
+      "estimated_volume": 11,
+      "target_label": "it_support_specialist",
+      "target_family": "it_operations",
+      "suggested_action": "needs_tighter_rule",
+      "risk": "low",
+      "internal_score": 0.8537,
+      "why_semantic_layer_adds_value": "external ESCO/O*NET candidate agreement improves confidence gating"
+    },
+    {
+      "cluster_or_title": "Designer",
+      "estimated_volume": 11,
+      "target_label": "product_designer",
+      "target_family": "design",
+      "suggested_action": "needs_tighter_rule",
+      "risk": "low",
+      "internal_score": 0.828,
+      "why_semantic_layer_adds_value": "external ESCO/O*NET candidate agreement improves confidence gating"
+    },
+    {
+      "cluster_or_title": "Territory Manager",
+      "estimated_volume": 11,
+      "target_label": "account_manager",
+      "target_family": "sales",
+      "suggested_action": "needs_tighter_rule",
+      "risk": "medium",
+      "internal_score": 0.7788,
+      "why_semantic_layer_adds_value": "external ESCO/O*NET candidate agreement improves confidence gating"
+    },
+    {
+      "cluster_or_title": "Sales Director",
+      "estimated_volume": 11,
+      "target_label": "sales_manager",
+      "target_family": "sales",
+      "suggested_action": "needs_tighter_rule",
+      "risk": "low",
+      "internal_score": 0.7754,
+      "why_semantic_layer_adds_value": "external ESCO/O*NET candidate agreement improves confidence gating"
+    },
+    {
+      "cluster_or_title": "Senior Salesforce Administrator",
+      "estimated_volume": 10,
+      "target_label": "it_support_specialist",
+      "target_family": "it_operations",
+      "suggested_action": "safe_rule_candidate",
+      "risk": "low",
+      "internal_score": 1.0,
+      "why_semantic_layer_adds_value": "external ESCO/O*NET candidate agreement improves confidence gating"
+    },
+    {
+      "cluster_or_title": "Manager, Business Development",
+      "estimated_volume": 10,
+      "target_label": "account_manager",
+      "target_family": "sales",
+      "suggested_action": "needs_tighter_rule",
+      "risk": "low",
+      "internal_score": 0.9365,
+      "why_semantic_layer_adds_value": "external ESCO/O*NET candidate agreement improves confidence gating"
+    },
+    {
+      "cluster_or_title": "Senior Manager, Engineering",
+      "estimated_volume": 10,
+      "target_label": "engineering_manager",
+      "target_family": "software_engineering",
+      "suggested_action": "needs_tighter_rule",
+      "risk": "low",
+      "internal_score": 0.9132,
+      "why_semantic_layer_adds_value": "external ESCO/O*NET candidate agreement improves confidence gating"
+    },
+    {
+      "cluster_or_title": "Child and Adolescent Therapist - LSW - Contract/1099",
+      "estimated_volume": 10,
+      "target_label": "psychotherapist",
+      "target_family": "healthcare_clinical",
+      "suggested_action": "needs_tighter_rule",
+      "risk": "low",
+      "internal_score": 0.879,
+      "why_semantic_layer_adds_value": "external ESCO/O*NET candidate agreement improves confidence gating"
+    },
+    {
+      "cluster_or_title": "Business Development Associate",
+      "estimated_volume": 10,
+      "target_label": "business_development_representative",
+      "target_family": "sales",
+      "suggested_action": "needs_tighter_rule",
+      "risk": "low",
+      "internal_score": 0.8564,
+      "why_semantic_layer_adds_value": "external ESCO/O*NET candidate agreement improves confidence gating"
+    },
+    {
+      "cluster_or_title": "Senior Engineer",
+      "estimated_volume": 10,
+      "target_label": "ml_engineer",
+      "target_family": "machine_learning",
+      "suggested_action": "needs_tighter_rule",
+      "risk": "low",
+      "internal_score": 0.8528,
+      "why_semantic_layer_adds_value": "external ESCO/O*NET candidate agreement improves confidence gating"
+    },
+    {
+      "cluster_or_title": "Operations Analyst",
+      "estimated_volume": 10,
+      "target_label": "data_analyst",
+      "target_family": "data_analytics",
+      "suggested_action": "needs_tighter_rule",
+      "risk": "low",
+      "internal_score": 0.8173,
+      "why_semantic_layer_adds_value": "external ESCO/O*NET candidate agreement improves confidence gating"
+    },
+    {
+      "cluster_or_title": "Photojournalist",
+      "estimated_volume": 10,
+      "target_label": "journalist",
+      "target_family": "content",
+      "suggested_action": "needs_tighter_rule",
+      "risk": "low",
+      "internal_score": 0.7915,
+      "why_semantic_layer_adds_value": "external ESCO/O*NET candidate agreement improves confidence gating"
+    },
+    {
+      "cluster_or_title": "Firmware Engineer",
+      "estimated_volume": 10,
+      "target_label": "software_engineer",
+      "target_family": "software_engineering",
+      "suggested_action": "needs_tighter_rule",
+      "risk": "medium",
+      "internal_score": 0.7739,
+      "why_semantic_layer_adds_value": "external ESCO/O*NET candidate agreement improves confidence gating"
+    },
+    {
+      "cluster_or_title": "Sales Representative",
+      "estimated_volume": 10,
+      "target_label": "business_development_representative",
+      "target_family": "sales",
+      "suggested_action": "taxonomy_gap",
+      "risk": "low",
+      "internal_score": 0.7587,
+      "why_semantic_layer_adds_value": "external ESCO/O*NET candidate agreement improves confidence gating"
+    },
+    {
+      "cluster_or_title": "Engineering Director",
+      "estimated_volume": 9,
+      "target_label": "engineering_manager",
+      "target_family": "software_engineering",
+      "suggested_action": "needs_tighter_rule",
+      "risk": "low",
+      "internal_score": 0.8546,
+      "why_semantic_layer_adds_value": "external ESCO/O*NET candidate agreement improves confidence gating"
+    }
+  ],
+  "top_failure_modes": [
+    {
+      "cluster_or_title": "General Manager",
+      "estimated_volume": 40,
+      "reason": "keep_other_for_now",
+      "risk": "high"
+    },
+    {
+      "cluster_or_title": "Senior Market Strategy and Partnerships Manager",
+      "estimated_volume": 36,
+      "reason": "keep_other_for_now",
+      "risk": "medium"
+    },
+    {
+      "cluster_or_title": "Hair Color Bar Assistant, Licensed Cosmetologist",
+      "estimated_volume": 32,
+      "reason": "keep_other_for_now",
+      "risk": "medium"
+    },
+    {
+      "cluster_or_title": "General Application",
+      "estimated_volume": 31,
+      "reason": "noise_or_non_role",
+      "risk": "high"
+    },
+    {
+      "cluster_or_title": "Producer",
+      "estimated_volume": 27,
+      "reason": "keep_other_for_now",
+      "risk": "high"
+    },
+    {
+      "cluster_or_title": "Social Enterprise and Program Delivery-Evergreen",
+      "estimated_volume": 27,
+      "reason": "keep_other_for_now",
+      "risk": "medium"
+    },
+    {
+      "cluster_or_title": "Personal Care Specialist (Part Time)",
+      "estimated_volume": 26,
+      "reason": "keep_other_for_now",
+      "risk": "medium"
+    },
+    {
+      "cluster_or_title": "Quantitative Researcher",
+      "estimated_volume": 24,
+      "reason": "keep_other_for_now",
+      "risk": "high"
+    },
+    {
+      "cluster_or_title": "Business Analyst",
+      "estimated_volume": 20,
+      "reason": "keep_other_for_now",
+      "risk": "high"
+    },
+    {
+      "cluster_or_title": "Restaurant General Manager",
+      "estimated_volume": 19,
+      "reason": "keep_other_for_now",
+      "risk": "high"
+    },
+    {
+      "cluster_or_title": "Sonder Responder",
+      "estimated_volume": 19,
+      "reason": "keep_other_for_now",
+      "risk": "medium"
+    },
+    {
+      "cluster_or_title": "Cultivation Associate",
+      "estimated_volume": 18,
+      "reason": "keep_other_for_now",
+      "risk": "medium"
+    },
+    {
+      "cluster_or_title": "Leader in Training",
+      "estimated_volume": 17,
+      "reason": "keep_other_for_now",
+      "risk": "medium"
+    },
+    {
+      "cluster_or_title": "Intelligence Operations Integrator",
+      "estimated_volume": 16,
+      "reason": "keep_other_for_now",
+      "risk": "medium"
+    },
+    {
+      "cluster_or_title": "Manager, Paid Social",
+      "estimated_volume": 15,
+      "reason": "keep_other_for_now",
+      "risk": "medium"
+    },
+    {
+      "cluster_or_title": "Restaurant Manager",
+      "estimated_volume": 14,
+      "reason": "keep_other_for_now",
+      "risk": "high"
+    },
+    {
+      "cluster_or_title": "Chief of Staff",
+      "estimated_volume": 14,
+      "reason": "keep_other_for_now",
+      "risk": "medium"
+    },
+    {
+      "cluster_or_title": "Office Manager",
+      "estimated_volume": 13,
+      "reason": "keep_other_for_now",
+      "risk": "high"
+    },
+    {
+      "cluster_or_title": "Onboarding Specialist",
+      "estimated_volume": 13,
+      "reason": "semantic_layer_candidate",
+      "risk": "medium"
+    },
+    {
+      "cluster_or_title": "Sales Enablement Manager",
+      "estimated_volume": 13,
+      "reason": "semantic_layer_candidate",
+      "risk": "medium"
+    }
+  ],
+  "recommendation": "semantic_layer_useful_only_as_reviewer",
+  "recommendation_rationale": "The residual has many high-ambiguity manager/analyst/partner titles; semantic retrieval improves triage and candidate ranking, but confidence is insufficient for direct auto-adoption without tighter human-in-the-loop review."
+}

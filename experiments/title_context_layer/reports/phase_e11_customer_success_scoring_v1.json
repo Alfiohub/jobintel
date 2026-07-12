@@ -1,0 +1,505 @@
+{
+  "input_path": "experiments/title_context_layer/reports/phase_e11_customer_success_promotable_v1.jsonl",
+  "rows_scored": 40,
+  "decision_counts": {
+    "exclude": 14,
+    "shadow_match": 25,
+    "review_only": 1
+  },
+  "top_shadow_titles": {
+    "Onboarding Specialist": 11,
+    "Customer Onboarding Specialist": 2,
+    "Manager, Customer Adoption & Success (EMEA)": 2,
+    "Customer Onboarding Specialist - French Market": 1,
+    "Technical Onboarding Specialist [Contract]": 1,
+    "SaaS Onboarding Specialist": 1,
+    "Onboarding Specialist III": 1,
+    "Service Enablement Manager, CX": 1,
+    "AI Onboarding Specialist": 1,
+    "AI Onboarding Specialist - Automotive": 1,
+    "AI Onboarding Specialist - Home Services": 1,
+    "AI Onboarding Specialist - Medspa": 1
+  },
+  "top_review_titles": {
+    "SaaS Onboarding Specialist": 1
+  },
+  "top_excluded_titles": {
+    "Client Retention Specialist (Remote)": 5,
+    "Onboarding Specialist": 2,
+    "Counterparty Onboarding Specialist": 1,
+    "Data Onboarding Specialist": 1,
+    "Bilingual Client Retention Specialist": 1,
+    "Client Retention Specialist": 1,
+    "Client Onboarding Specialist": 1,
+    "Patient Onboarding Specialist": 1,
+    "Vendor Onboarding Specialist": 1
+  },
+  "sample_shadow_matches": [
+    {
+      "url": "https://job-boards.eu.greenhouse.io/amenitiz/jobs/4765645101",
+      "title_clean": "Customer Onboarding Specialist - French Market",
+      "company_name": "amenitiz",
+      "decision": "shadow_match",
+      "score": 13,
+      "evidence_hits": [
+        "customer onboarding",
+        "onboarding",
+        "customer",
+        "client",
+        "adoption",
+        "launch",
+        "platform",
+        "product",
+        "saas",
+        "training"
+      ],
+      "exclusion_hits": [],
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://job-boards.eu.greenhouse.io/cision/jobs/4745539101",
+      "title_clean": "Onboarding Specialist",
+      "company_name": "cision",
+      "decision": "shadow_match",
+      "score": 7,
+      "evidence_hits": [
+        "customer",
+        "client",
+        "onboarding",
+        "adoption",
+        "implementation",
+        "platform",
+        "product"
+      ],
+      "exclusion_hits": [],
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://www.clever.com/about/careers?gh_jid=7600446",
+      "title_clean": "Technical Onboarding Specialist [Contract]",
+      "company_name": "clever",
+      "decision": "shadow_match",
+      "score": 5,
+      "evidence_hits": [
+        "onboarding",
+        "customer",
+        "launch",
+        "platform",
+        "product"
+      ],
+      "exclusion_hits": [
+        "aml"
+      ],
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/glossgenius/jobs/7581091003",
+      "title_clean": "Onboarding Specialist",
+      "company_name": "glossgenius",
+      "decision": "shadow_match",
+      "score": 5,
+      "evidence_hits": [
+        "customer",
+        "onboarding",
+        "adoption",
+        "implementation",
+        "platform",
+        "product",
+        "saas"
+      ],
+      "exclusion_hits": [
+        "aml"
+      ],
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://www.housecallpro.com/careers/open-positions/?gh_jid=4286314004",
+      "title_clean": "SaaS Onboarding Specialist",
+      "company_name": "housecall",
+      "decision": "shadow_match",
+      "score": 7,
+      "evidence_hits": [
+        "customer success",
+        "customer",
+        "client",
+        "onboarding",
+        "adoption",
+        "implementation",
+        "platform",
+        "product"
+      ],
+      "exclusion_hits": [
+        "aml"
+      ],
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://www.hubspot.com/careers/jobs/7589346?gh_jid=7589346",
+      "title_clean": "Customer Onboarding Specialist",
+      "company_name": "hubspotjobs",
+      "decision": "shadow_match",
+      "score": 7,
+      "evidence_hits": [
+        "services",
+        "customer",
+        "onboarding",
+        "time to value",
+        "platform",
+        "product"
+      ],
+      "exclusion_hits": [],
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/lightspeedhq/jobs/7620025",
+      "title_clean": "Manager, Customer Adoption & Success (EMEA)",
+      "company_name": "lightspeedhq",
+      "decision": "shadow_match",
+      "score": 11,
+      "evidence_hits": [
+        "launch services",
+        "services",
+        "customer",
+        "adoption",
+        "launch",
+        "platform",
+        "product",
+        "saas",
+        "training"
+      ],
+      "exclusion_hits": [],
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/lightspeedhq/jobs/7757924",
+      "title_clean": "Manager, Customer Adoption & Success (EMEA)",
+      "company_name": "lightspeedhq",
+      "decision": "shadow_match",
+      "score": 11,
+      "evidence_hits": [
+        "launch services",
+        "services",
+        "customer",
+        "adoption",
+        "launch",
+        "platform",
+        "product",
+        "saas",
+        "training"
+      ],
+      "exclusion_hits": [],
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/m3/jobs/7592709003",
+      "title_clean": "Onboarding Specialist III",
+      "company_name": "m3",
+      "decision": "shadow_match",
+      "score": 8,
+      "evidence_hits": [
+        "customer operations",
+        "customer",
+        "onboarding",
+        "implementation",
+        "product",
+        "saas",
+        "training"
+      ],
+      "exclusion_hits": [],
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://boards.eu.greenhouse.io/nice/jobs/4795139101?gh_jid=4795139101",
+      "title_clean": "Service Enablement Manager, CX",
+      "company_name": "nice",
+      "decision": "shadow_match",
+      "score": 10,
+      "evidence_hits": [
+        "customer success",
+        "services",
+        "customer",
+        "adoption",
+        "implementation",
+        "launch",
+        "product",
+        "training"
+      ],
+      "exclusion_hits": [],
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/podium81/jobs/7597038",
+      "title_clean": "AI Onboarding Specialist",
+      "company_name": "podium81",
+      "decision": "shadow_match",
+      "score": 11,
+      "evidence_hits": [
+        "customer success",
+        "customer",
+        "client",
+        "onboarding",
+        "adoption",
+        "implementation",
+        "platform",
+        "product",
+        "saas",
+        "training"
+      ],
+      "exclusion_hits": [],
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/podium81/jobs/7557676",
+      "title_clean": "AI Onboarding Specialist - Automotive",
+      "company_name": "podium81",
+      "decision": "shadow_match",
+      "score": 11,
+      "evidence_hits": [
+        "customer success",
+        "customer",
+        "client",
+        "onboarding",
+        "adoption",
+        "implementation",
+        "platform",
+        "product",
+        "saas",
+        "training"
+      ],
+      "exclusion_hits": [],
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success"
+    }
+  ],
+  "sample_exclusions": [
+    {
+      "url": "https://job-boards.greenhouse.io/drweng/jobs/7743573",
+      "title_clean": "Counterparty Onboarding Specialist",
+      "company_name": "drweng",
+      "decision": "exclude",
+      "score": -6,
+      "evidence_hits": [
+        "onboarding",
+        "product"
+      ],
+      "exclusion_hits": [
+        "business management",
+        "counterparty",
+        "compliance",
+        "kyc"
+      ],
+      "normalized_title": null,
+      "role_family": null
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/adyen/jobs/7422228",
+      "title_clean": "Onboarding Specialist",
+      "company_name": "adyen",
+      "decision": "exclude",
+      "score": 0,
+      "evidence_hits": [
+        "customer",
+        "onboarding",
+        "platform",
+        "product"
+      ],
+      "exclusion_hits": [
+        "compliance",
+        "kyc"
+      ],
+      "normalized_title": null,
+      "role_family": null
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/addepar1/jobs/8353530002",
+      "title_clean": "Data Onboarding Specialist",
+      "company_name": "addepar1",
+      "decision": "exclude",
+      "score": 1,
+      "evidence_hits": [
+        "customer",
+        "client",
+        "onboarding",
+        "platform",
+        "product"
+      ],
+      "exclusion_hits": [
+        "data operations",
+        "aml"
+      ],
+      "normalized_title": null,
+      "role_family": null
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/beyondfinance/jobs/7746618",
+      "title_clean": "Bilingual Client Retention Specialist",
+      "company_name": "beyondfinance",
+      "decision": "exclude",
+      "score": 3,
+      "evidence_hits": [
+        "client success",
+        "customer",
+        "client",
+        "training"
+      ],
+      "exclusion_hits": [
+        "compliance"
+      ],
+      "normalized_title": null,
+      "role_family": null
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/beyondfinance/jobs/7746619",
+      "title_clean": "Client Retention Specialist",
+      "company_name": "beyondfinance",
+      "decision": "exclude",
+      "score": 3,
+      "evidence_hits": [
+        "client success",
+        "customer",
+        "client",
+        "training"
+      ],
+      "exclusion_hits": [
+        "compliance"
+      ],
+      "normalized_title": null,
+      "role_family": null
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/beyondfinance/jobs/7746647",
+      "title_clean": "Client Retention Specialist (Remote)",
+      "company_name": "beyondfinance",
+      "decision": "exclude",
+      "score": 3,
+      "evidence_hits": [
+        "client success",
+        "customer",
+        "client",
+        "training"
+      ],
+      "exclusion_hits": [
+        "compliance"
+      ],
+      "normalized_title": null,
+      "role_family": null
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/beyondfinance/jobs/7746640",
+      "title_clean": "Client Retention Specialist (Remote)",
+      "company_name": "beyondfinance",
+      "decision": "exclude",
+      "score": 3,
+      "evidence_hits": [
+        "client success",
+        "customer",
+        "client",
+        "training"
+      ],
+      "exclusion_hits": [
+        "compliance"
+      ],
+      "normalized_title": null,
+      "role_family": null
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/beyondfinance/jobs/7746636",
+      "title_clean": "Client Retention Specialist (Remote)",
+      "company_name": "beyondfinance",
+      "decision": "exclude",
+      "score": 3,
+      "evidence_hits": [
+        "client success",
+        "customer",
+        "client",
+        "training"
+      ],
+      "exclusion_hits": [
+        "compliance"
+      ],
+      "normalized_title": null,
+      "role_family": null
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/beyondfinance/jobs/7746643",
+      "title_clean": "Client Retention Specialist (Remote)",
+      "company_name": "beyondfinance",
+      "decision": "exclude",
+      "score": 3,
+      "evidence_hits": [
+        "client success",
+        "customer",
+        "client",
+        "training"
+      ],
+      "exclusion_hits": [
+        "compliance"
+      ],
+      "normalized_title": null,
+      "role_family": null
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/beyondfinance/jobs/7746635",
+      "title_clean": "Client Retention Specialist (Remote)",
+      "company_name": "beyondfinance",
+      "decision": "exclude",
+      "score": 3,
+      "evidence_hits": [
+        "client success",
+        "customer",
+        "client",
+        "training"
+      ],
+      "exclusion_hits": [
+        "compliance"
+      ],
+      "normalized_title": null,
+      "role_family": null
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/focusfinancialpartners/jobs/5704625004",
+      "title_clean": "Onboarding Specialist",
+      "company_name": "focusfinancialpartners",
+      "decision": "exclude",
+      "score": 1,
+      "evidence_hits": [
+        "client",
+        "onboarding",
+        "training"
+      ],
+      "exclusion_hits": [
+        "compliance"
+      ],
+      "normalized_title": null,
+      "role_family": null
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/janestreet/jobs/8429864002",
+      "title_clean": "Client Onboarding Specialist",
+      "company_name": "janestreet",
+      "decision": "exclude",
+      "score": -2,
+      "evidence_hits": [
+        "client",
+        "onboarding"
+      ],
+      "exclusion_hits": [
+        "sales & trading",
+        "listed derivatives"
+      ],
+      "normalized_title": null,
+      "role_family": null
+    }
+  ]
+}

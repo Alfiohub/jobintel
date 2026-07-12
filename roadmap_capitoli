@@ -1,0 +1,397 @@
+Sì. La cosa giusta ora è trasformare tutto in una **checklist master** con capitoli, stato e criterio di chiusura.
+
+Puoi usare questa come documento di controllo progetto.
+
+# Checklist Master — Job Title Normalization
+
+## Scopo finale
+Costruire una pipeline di title normalization:
+- ad alta precisione
+- tassonomicamente coerente
+- utile ai downstream
+- sostenibile da mantenere nel tempo
+
+---
+
+# Capitolo 1 — Fondazione del sistema
+## Obiettivo
+Definire il contratto del sistema e la struttura minima stabile.
+
+## Checklist
+- [x] Definire output standard della pipeline
+- [x] Stabilire `normalized_title`, `role_family`, `match_status`
+- [x] Rendere il classifier rule-based il source of truth iniziale
+- [x] Stabilire benchmark fisso su dataset versionato
+- [x] Introdurre report before/after per ogni pass
+
+## Chiusura capitolo
+**Chiuso**
+
+---
+
+# Capitolo 2 — Safe Recovery Rule-Based
+## Obiettivo
+Ridurre `other` con batch piccoli, leggibili e testabili.
+
+## Checklist
+- [x] Residual analysis per cluster
+- [x] Guided recovery pass iterativi
+- [x] Guardrail anti-overmatch
+- [x] Test positivi e negativi per ogni pass
+- [x] Eval completo per ogni batch
+- [x] Naming coerente dei dataset/report safe
+
+## Chiusura capitolo
+**Chiuso**
+
+---
+
+# Capitolo 3 — Shadow Discovery Layer
+## Obiettivo
+Costruire una pipeline parallela per discovery e ranking dei residual.
+
+## Checklist
+- [x] Frequency analysis del residuo
+- [x] Token / n-gram analysis
+- [x] Fuzzy clustering
+- [x] ESCO lookup offline
+- [x] O*NET lookup offline
+- [x] Candidate cluster ranking
+- [x] Shadow report comparativo vs baseline
+
+## Chiusura capitolo
+**Chiuso**
+
+---
+
+# Capitolo 4 — Safe Adoption da Shadow
+## Obiettivo
+Promuovere solo i cluster shadow a basso rischio.
+
+## Checklist
+- [x] Review dei candidati shadow
+- [x] Classificazione `promote_safe / tighter_rule / reject`
+- [x] Batch piccoli max 3 cluster
+- [x] Patch ufficiali conservative
+- [x] Test completi
+- [x] Eval benchmark
+- [x] Stop quando ROI scende
+
+## Chiusura capitolo
+**Chiuso**
+
+---
+
+# Capitolo 5 — Semantic Layer Bootstrap
+## Obiettivo
+Aprire un layer semantico di supporto senza toccare la produzione.
+
+## Checklist
+- [x] Branch dedicato semantic phase
+- [x] Corpus interno canonical titles
+- [x] Corpus ESCO
+- [x] Corpus O*NET
+- [x] Retrieval layer
+- [x] Ranking layer
+- [x] Reviewer report
+- [x] Residual categorization
+
+## Chiusura capitolo
+**Chiuso**
+
+---
+
+# Capitolo 6 — Semantic Reviewer
+## Obiettivo
+Usare il semantic layer come reviewer/ranker, non come auto-classifier.
+
+## Checklist
+- [x] Reviewer scoring trasparente
+- [x] Convergenza internal/ESCO/O*NET
+- [x] Cluster verdict:
+  - [x] `promote_safe`
+  - [x] `promote_with_tighter_rule`
+  - [x] `needs_taxonomy_decision`
+  - [x] `keep_other_for_now`
+- [x] Shortlist candidate safe batch
+- [x] Failure modes espliciti
+
+## Chiusura capitolo
+**Chiuso**
+
+---
+
+# Capitolo 7 — Taxonomy Gap Review
+## Obiettivo
+Capire se il blocco è taxonomy, ambiguità del titolo o mancanza di contesto.
+
+## Checklist
+- [x] Inventory dei taxonomy gap
+- [x] Review cluster con internal target incoerente
+- [x] Decision table:
+  - [x] `map_to_existing_label`
+  - [x] `new_label_worth_adding`
+  - [x] `keep_other_by_policy`
+  - [x] `needs_context_not_title_only`
+  - [x] `taxonomy_merge_or_cleanup_needed`
+- [x] Priority shortlist
+- [x] Final recommendation di tipo architetturale
+
+## Chiusura capitolo
+**Chiuso**
+
+---
+
+# Capitolo 8 — Targeted Taxonomy Cleanup
+## Obiettivo
+Stabilizzare i remap tassonomici ad alta fiducia nel semantic layer.
+
+## Checklist
+- [x] Proposal E.3 scritta
+- [x] Overlay sperimentale semantic-only
+- [x] Remap in scope verificati:
+  - [x] `software_development_manager -> engineering_manager`
+  - [x] `production_engineer -> manufacturing_engineer`
+  - [x] `fpga_engineer -> electrical_engineer`
+  - [x] `it_administrator -> it_support_specialist`
+  - [x] `technical_architect -> solutions_architect`
+- [x] Esperimento nuova label:
+  - [x] `data_science_manager`
+- [x] Reviewer rerun completato
+- [x] Report patch generato
+
+## Chiusura capitolo
+**Chiuso**
+
+---
+
+# Capitolo 9 — Promotion Planning verso produzione
+## Obiettivo
+Decidere cosa del lavoro semantico va promosso davvero nel classifier ufficiale.
+
+## Checklist
+- [x] Decidere se promuovere i 5 remap E.3 nel sistema ufficiale
+- [x] Decidere `add vs defer` per `data_science_manager`
+- [x] Preparare candidate patch ufficiale separata
+- [x] Verificare che non allarghi il comportamento di produzione
+- [x] Definire test di regressione per i remap promossi
+
+## Chiusura capitolo
+**Chiuso**
+
+---
+
+# Capitolo 10 — Next Semantic-Assisted Safe Batch
+## Obiettivo
+Usare taxonomy ripulita + reviewer per scegliere il prossimo batch reale.
+
+## Checklist
+- [x] Rerun reviewer sul setup ripulito
+- [x] Estrarre shortlist aggiornata
+- [x] Tenere solo cluster con rischio `low` o `medium-low`
+- [x] Tradurre shortlist in safe batch ufficiale
+- [x] Patchare `rules.py` solo sui casi davvero puliti
+- [x] Eseguire test completi
+- [x] Eseguire eval benchmark
+- [x] Misurare delta `other` e overmatch risk
+
+## Chiusura capitolo
+**Chiuso**
+
+---
+
+# Capitolo 11 — Hybrid Title + Context Design
+## Obiettivo
+Affrontare i cluster che non si risolvono col solo titolo.
+
+## Checklist
+- [x] Identificare i cluster title-only ambigui persistenti
+- [x] Definire quali segnali di contesto usare
+- [x] Disegnare fallback path per `other` ambigui
+- [x] Stabilire quando il contesto può influenzare il mapping
+- [x] Evitare che il contesto diventi black box non auditabile
+
+## Chiusura capitolo
+**Chiuso**
+
+---
+
+# Capitolo 12 — Definition of Done del progetto
+## Obiettivo
+Formalizzare quando il sistema è “abbastanza maturo”.
+
+## Checklist
+- [x] Definire soglia minima di precisione auditata
+- [x] Definire soglia massima accettabile di overmatch
+- [x] Definire target realistico di `other`
+- [x] Definire policy ufficiale per `keep_other`
+- [x] Definire workflow standard di manutenzione
+- [x] Definire governance per nuove label
+- [x] Definire ciclo operativo continuo:
+  - [x] analysis
+  - [x] taxonomy review
+  - [x] safe batch
+  - [x] test
+  - [x] eval
+  - [x] stop
+
+## Chiusura capitolo
+**Chiuso**
+
+---
+
+# Stato sintetico adesso
+## Capitoli chiusi
+- [x] 1. Fondazione
+- [x] 2. Safe Recovery Rule-Based
+- [x] 3. Shadow Discovery
+- [x] 4. Safe Adoption da Shadow
+- [x] 5. Semantic Layer Bootstrap
+- [x] 6. Semantic Reviewer
+- [x] 7. Taxonomy Gap Review
+- [x] 8. Targeted Taxonomy Cleanup
+- [x] 9. Promotion Planning verso produzione
+- [x] 10. Next Semantic-Assisted Safe Batch
+- [x] 11. Hybrid Title + Context Design
+- [x] 12. Definition of Done
+
+---
+
+# Prossimo stato corretto
+**Manutenzione controllata del sistema**
+
+## Primo task concreto
+- [ ] decidere se proporre in produzione i gate contestuali per `Onboarding Specialist` e `Producer`
+- [ ] continuare con batch piccoli solo se superano audit e guardrail
+- [ ] lasciare in `other` i cluster senza segnale stabile o senza contesto sufficiente
+
+Se vuoi, nel prossimo step te la trasformo in un file vero, per esempio:
+[project_master_checklist.md](/home/afio/Documenti/Code/Python_code/Jinaj/joballert/project_master_checklist.md)
+
+Oppure posso fare direttamente una versione con:
+- `Status`
+- `Owner`
+- `Evidence`
+- `Exit criteria`
+per usarla come tracker operativo.
+
+Capitolo 13 — Attack-Now Batch v60: chiuso
+Capitolo 14 — Attack-Now Batch v61: chiuso
+Capitolo 15 — Account Manager Context Lane Review: chiuso
+Capitolo 16 — Partner Lane Shadow Refinement: chiuso
+Capitolo 17 — Partner Lane Formal Review: chiuso
+
+- [x] Capitolo 18 — Residual Recovery Orchestrator v1
+
+---
+
+# Capitolo 13 — Recoverable-Now Batch v60
+## Obiettivo
+Promuovere un nuovo batch title-only stretto guidato dall'audit del residuo.
+
+## Checklist
+- [x] Selezionare cluster `attack_now` a basso rischio
+- [x] Scrivere patch title-only conservative
+- [x] Eseguire test completi
+- [x] Eseguire eval benchmark
+- [x] Misurare delta `other`
+
+## Chiusura capitolo
+**Chiuso**
+
+---
+
+# Capitolo 14 — Recoverable-Now Batch v61
+## Obiettivo
+Chiudere un secondo batch title-only stretto e misurare il ROI residuo.
+
+## Checklist
+- [x] Selezionare lane residue title-only ad alta precisione
+- [x] Aggiungere regole strette
+- [x] Eseguire test completi
+- [x] Eseguire eval benchmark
+- [x] Concludere sulla decrescita del ROI title-only
+
+## Chiusura capitolo
+**Chiuso**
+
+---
+
+# Capitolo 15 — Account / Partner Context Lane
+## Obiettivo
+Aprire, restringere e validare un lane `recoverable_with_context` in area partner/commerciale.
+
+## Checklist
+- [x] Join contestuale sul residual reale
+- [x] Reviewer-first su `account_manager`
+- [x] Shadow batch su lane largo
+- [x] Refinement partner-only
+- [x] Shadow batch ristretto
+- [x] Formal review del lane partner
+- [x] Rule proposal contestuale
+
+## Chiusura capitolo
+**Chiuso**
+
+---
+
+# Capitolo 16 — Engine Hardening
+## Obiettivo
+Rendere il motore più orchestrabile prima dell'automazione del ciclo di recovery.
+
+## Checklist
+- [x] Promuovere `non_role_recruiting_entry`
+- [x] Introdurre `classification_status = non_role`
+- [x] Esportare `top_non_role_titles` nei report
+- [x] Standardizzare metadata lane/risk/concentration
+- [x] Verificare compatibilità downstream
+- [x] Rieseguire test completi
+
+## Chiusura capitolo
+**Chiuso**
+
+---
+
+# Capitolo 17 — Residual Recovery Orchestrator v1
+## Obiettivo
+Costruire un orchestratore che riassuma backlog, lane e prossime azioni dal residual corrente.
+
+## Checklist
+- [x] Leggere baseline reale
+- [x] Aggregare lane `attack_now / recoverable_with_context / taxonomy_gap / non_role`
+- [x] Restituire piano operativo unico
+- [x] Ordinare i prossimi step consigliati
+
+## Chiusura capitolo
+**Chiuso**
+
+---
+
+# Capitolo 18 — Non-Role Official Rerun
+## Obiettivo
+Promuovere e validare ufficialmente la macro-classe `non_role_recruiting_entry`.
+
+## Checklist
+- [x] Rerun completo ufficiale
+- [x] Eval benchmark vs baseline precedente
+- [x] Misurare delta `other / matched / non_role`
+- [x] Confermare pulizia strutturale del residual
+
+## Chiusura capitolo
+**Chiuso**
+
+---
+
+# Capitolo 19 — Partner Lane Production Candidate
+## Obiettivo
+Trasformare il miglior lane `recoverable_with_context` in una candidate patch reale e benchmarkarla.
+
+## Checklist
+- [x] Implementare regola contestuale nel motore ufficiale
+- [x] Aggiungere test positivi e negativi
+- [x] Eseguire benchmark completo `v66`
+- [x] Confrontare risultato ufficiale vs shadow
+- [x] Formalizzare decisione di accettazione precision-first
+
+## Chiusura capitolo
+**Chiuso**

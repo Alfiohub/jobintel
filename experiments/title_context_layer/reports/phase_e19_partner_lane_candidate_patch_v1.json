@@ -1,0 +1,41 @@
+{
+  "phase": "E.19",
+  "decision": "candidate_patch_benchmarked_ready_for_review",
+  "implementation": {
+    "files": [
+      "src/jobintel_next/pipelines/titles/context_rules.py",
+      "src/jobintel_next/pipelines/titles/run.py"
+    ]
+  },
+  "tests": {
+    "command": "uv run pytest tests/pipelines/test_titles_stage_step12.py tests/pipelines/test_titles_eval_step13.py tests/pipelines/test_indexed_stage_step14.py tests/test_cli_titles_step12.py",
+    "result": "81 passed"
+  },
+  "streaming_eval": {
+    "baseline_dataset": "data/jobs/jobs_titled_en_recovery_v64_non_role_official.jsonl",
+    "baseline_other": 35273,
+    "candidate_matches": 18,
+    "projected_other_after": 35255,
+    "projected_delta_other": -18,
+    "artifact": "experiments/title_context_layer/reports/phase_e15_partner_lane_candidate_streaming_eval_v1.json"
+  },
+  "full_rerun_eval": {
+    "output_dataset": "data/jobs/jobs_titled_en_recovery_v66_partner_lane_candidate.jsonl",
+    "report_dir": "docs/title_recovery_pass_v66_partner_lane_candidate",
+    "baseline_other": 35273,
+    "baseline_matched": 45399,
+    "baseline_non_role": 339,
+    "v66_other": 35255,
+    "v66_matched": 45417,
+    "v66_non_role": 339,
+    "candidate_matches": 18,
+    "delta_other": -18,
+    "delta_matched": 18,
+    "delta_non_role": 0
+  },
+  "shadow_reference": {
+    "v64_shadow_delta_other": -27,
+    "candidate_streaming_delta_other": -18,
+    "candidate_full_rerun_delta_other": -18
+  }
+}

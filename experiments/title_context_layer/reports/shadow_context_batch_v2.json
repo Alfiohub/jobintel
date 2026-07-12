@@ -1,0 +1,318 @@
+{
+  "baseline": {
+    "dataset": "data/jobs/jobs_titled_en_recovery_v55_semantic_batch.jsonl",
+    "other_before": 35952
+  },
+  "shadow_result": {
+    "output_dataset": "data/jobs/jobs_titled_en_recovery_v56_context_shadow_v2.jsonl",
+    "matches_added": 37,
+    "other_after": 35915,
+    "delta_other": -37,
+    "rule_hits": {
+      "ctx_onboarding_specialist_customer_success_v2": 11,
+      "ctx_producer_content_v1": 26
+    }
+  },
+  "sample_matches": [
+    {
+      "url": "https://job-boards.eu.greenhouse.io/cision/jobs/4745539101",
+      "title_clean": "Onboarding Specialist",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success",
+      "matched_rule_id": "ctx_onboarding_specialist_customer_success_v2",
+      "evidence_hits": [
+        "customer",
+        "client",
+        "implementation",
+        "onboarding",
+        "platform",
+        "product",
+        "software",
+        "adoption"
+      ],
+      "exclusion_hits": [
+        "employee"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/dept/jobs/7740135",
+      "title_clean": "Producer",
+      "normalized_title": "content_producer",
+      "role_family": "content",
+      "matched_rule_id": "ctx_producer_content_v1",
+      "evidence_hits": [
+        "content",
+        "creative",
+        "campaign"
+      ],
+      "exclusion_hits": []
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/eucalyptus/jobs/4651418005",
+      "title_clean": "Producer",
+      "normalized_title": "content_producer",
+      "role_family": "content",
+      "matched_rule_id": "ctx_producer_content_v1",
+      "evidence_hits": [
+        "content",
+        "creative"
+      ],
+      "exclusion_hits": []
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/glossgenius/jobs/7581091003",
+      "title_clean": "Onboarding Specialist",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success",
+      "matched_rule_id": "ctx_onboarding_specialist_customer_success_v2",
+      "evidence_hits": [
+        "customer",
+        "implementation",
+        "onboarding",
+        "platform",
+        "product",
+        "software",
+        "saas",
+        "adoption",
+        "customer success",
+        "implementation process",
+        "sales"
+      ],
+      "exclusion_hits": [
+        "aml",
+        "employee"
+      ]
+    },
+    {
+      "url": "https://www.rxvantage.com/company/careers/jobs?gh_jid=5832005004",
+      "title_clean": "Onboarding Specialist",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success",
+      "matched_rule_id": "ctx_onboarding_specialist_customer_success_v2",
+      "evidence_hits": [
+        "customer",
+        "client",
+        "implementation",
+        "onboarding",
+        "platform",
+        "product",
+        "software",
+        "saas",
+        "sales"
+      ],
+      "exclusion_hits": [
+        "employee"
+      ]
+    },
+    {
+      "url": "https://www.rxvantage.com/company/careers/jobs?gh_jid=5832012004",
+      "title_clean": "Onboarding Specialist",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success",
+      "matched_rule_id": "ctx_onboarding_specialist_customer_success_v2",
+      "evidence_hits": [
+        "customer",
+        "client",
+        "implementation",
+        "onboarding",
+        "platform",
+        "product",
+        "software",
+        "saas",
+        "sales"
+      ],
+      "exclusion_hits": [
+        "employee"
+      ]
+    },
+    {
+      "url": "https://www.rxvantage.com/company/careers/jobs?gh_jid=5832010004",
+      "title_clean": "Onboarding Specialist",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success",
+      "matched_rule_id": "ctx_onboarding_specialist_customer_success_v2",
+      "evidence_hits": [
+        "customer",
+        "client",
+        "implementation",
+        "onboarding",
+        "platform",
+        "product",
+        "software",
+        "saas",
+        "sales"
+      ],
+      "exclusion_hits": [
+        "employee"
+      ]
+    },
+    {
+      "url": "https://www.rxvantage.com/company/careers/jobs?gh_jid=5832009004",
+      "title_clean": "Onboarding Specialist",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success",
+      "matched_rule_id": "ctx_onboarding_specialist_customer_success_v2",
+      "evidence_hits": [
+        "customer",
+        "client",
+        "implementation",
+        "onboarding",
+        "platform",
+        "product",
+        "software",
+        "saas",
+        "sales"
+      ],
+      "exclusion_hits": [
+        "employee"
+      ]
+    },
+    {
+      "url": "https://www.rxvantage.com/company/careers/jobs?gh_jid=5830997004",
+      "title_clean": "Onboarding Specialist",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success",
+      "matched_rule_id": "ctx_onboarding_specialist_customer_success_v2",
+      "evidence_hits": [
+        "customer",
+        "client",
+        "implementation",
+        "onboarding",
+        "platform",
+        "product",
+        "software",
+        "saas",
+        "sales"
+      ],
+      "exclusion_hits": [
+        "employee"
+      ]
+    },
+    {
+      "url": "https://www.rxvantage.com/company/careers/jobs?gh_jid=5832006004",
+      "title_clean": "Onboarding Specialist",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success",
+      "matched_rule_id": "ctx_onboarding_specialist_customer_success_v2",
+      "evidence_hits": [
+        "customer",
+        "client",
+        "implementation",
+        "onboarding",
+        "platform",
+        "product",
+        "software",
+        "saas",
+        "sales"
+      ],
+      "exclusion_hits": [
+        "employee"
+      ]
+    },
+    {
+      "url": "https://www.rxvantage.com/company/careers/jobs?gh_jid=5832007004",
+      "title_clean": "Onboarding Specialist",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success",
+      "matched_rule_id": "ctx_onboarding_specialist_customer_success_v2",
+      "evidence_hits": [
+        "customer",
+        "client",
+        "implementation",
+        "onboarding",
+        "platform",
+        "product",
+        "software",
+        "saas",
+        "sales"
+      ],
+      "exclusion_hits": [
+        "employee"
+      ]
+    },
+    {
+      "url": "https://www.rxvantage.com/company/careers/jobs?gh_jid=5832004004",
+      "title_clean": "Onboarding Specialist",
+      "normalized_title": "customer_success_manager",
+      "role_family": "customer_success",
+      "matched_rule_id": "ctx_onboarding_specialist_customer_success_v2",
+      "evidence_hits": [
+        "customer",
+        "client",
+        "implementation",
+        "onboarding",
+        "platform",
+        "product",
+        "software",
+        "saas",
+        "sales"
+      ],
+      "exclusion_hits": [
+        "employee"
+      ]
+    }
+  ],
+  "excluded_examples": [
+    {
+      "url": "https://job-boards.greenhouse.io/2k/jobs/7564923003",
+      "title_clean": "Producer",
+      "evidence_hits": [
+        "creative"
+      ],
+      "exclusion_hits": [
+        "game",
+        "jira",
+        "scrum",
+        "engineers"
+      ],
+      "score": -3,
+      "hard_exclusion_hits": [],
+      "soft_exclusion_hits": []
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/adyen/jobs/7422228",
+      "title_clean": "Onboarding Specialist",
+      "evidence_hits": [
+        "customer",
+        "merchant",
+        "onboarding",
+        "platform",
+        "product"
+      ],
+      "exclusion_hits": [
+        "kyc",
+        "underwriting",
+        "compliance"
+      ],
+      "score": 11,
+      "hard_exclusion_hits": [],
+      "soft_exclusion_hits": [
+        "kyc",
+        "underwriting",
+        "compliance"
+      ]
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/focusfinancialpartners/jobs/5704625004",
+      "title_clean": "Onboarding Specialist",
+      "evidence_hits": [
+        "client",
+        "onboarding"
+      ],
+      "exclusion_hits": [
+        "compliance",
+        "employee"
+      ],
+      "score": 3,
+      "hard_exclusion_hits": [],
+      "soft_exclusion_hits": [
+        "compliance",
+        "employee"
+      ]
+    }
+  ],
+  "final_recommendation": {
+    "decision": "shadow_context_rules_viable_for_review",
+    "reason": "Tuned context-gated rules generated enough shadow matches to justify formal review before any production candidate patch."
+  }
+}

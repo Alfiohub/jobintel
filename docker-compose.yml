@@ -1,0 +1,41 @@
+services:
+  app:
+    build: .
+    image: jobintel-next:demo
+    env_file:
+      - .env
+    environment:
+      APP_HOST: ${APP_HOST:-0.0.0.0}
+      APP_PORT: ${APP_PORT:-8000}
+      JOBINTEL_INDEXED_INPUT: ${JOBINTEL_INDEXED_INPUT:-data/demo/jobs_indexed_demo.jsonl}
+      JOBINTEL_SQLITE_PATH: ${JOBINTEL_SQLITE_PATH:-data/demo/jobs_indexed_demo.db}
+      JOBINTEL_SAVED_DB_PATH: ${JOBINTEL_SAVED_DB_PATH:-data/demo/saved_searches_demo.db}
+      JOBINTEL_JOB_STATE_DB_PATH: ${JOBINTEL_JOB_STATE_DB_PATH:-data/demo/job_state_demo.db}
+      JOBINTEL_ALERT_RUNS_DIR: ${JOBINTEL_ALERT_RUNS_DIR:-data/demo/alerts/runs}
+      JOBINTEL_SESSION_SECRET: ${JOBINTEL_SESSION_SECRET:-}
+      JOBINTEL_REQUIRE_SESSION_SECRET: ${JOBINTEL_REQUIRE_SESSION_SECRET:-true}
+      JOBINTEL_SESSION_MAX_AGE: ${JOBINTEL_SESSION_MAX_AGE:-43200}
+      JOBINTEL_SESSION_COOKIE_NAME: ${JOBINTEL_SESSION_COOKIE_NAME:-jobintel_session}
+      JOBINTEL_SESSION_HTTPS_ONLY: ${JOBINTEL_SESSION_HTTPS_ONLY:-false}
+      JOBINTEL_SESSION_SAME_SITE: ${JOBINTEL_SESSION_SAME_SITE:-lax}
+      JOBINTEL_SMTP_HOST: ${JOBINTEL_SMTP_HOST:-}
+      JOBINTEL_SMTP_PORT: ${JOBINTEL_SMTP_PORT:-587}
+      JOBINTEL_SMTP_USER: ${JOBINTEL_SMTP_USER:-}
+      JOBINTEL_SMTP_PASSWORD: ${JOBINTEL_SMTP_PASSWORD:-}
+      JOBINTEL_SMTP_FROM: ${JOBINTEL_SMTP_FROM:-}
+      JOBINTEL_SMTP_USE_TLS: ${JOBINTEL_SMTP_USE_TLS:-true}
+    ports:
+      - "${APP_PORT:-8000}:${APP_PORT:-8000}"
+    volumes:
+      - ./data:/app/data
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "python -c \"import os,urllib.request,sys; p=os.getenv('APP_PORT','8000'); u=f'http://127.0.0.1:{p}/health'; sys.exit(0 if urllib.request.urlopen(u, timeout=3).status == 200 else 1)\"",
+        ]
+      interval: 30s
+      timeout: 5s
+      start_period: 20s
+      retries: 3
+    restart: unless-stopped

@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Account Settings</h1>
+
+<div class="kpi-grid">
+  <div class="kpi"><div class="k">User ID</div><div class="v mono">{{ settings.user_id }}</div></div>
+  <div class="kpi"><div class="k">Created At</div><div class="v mono">{{ settings.created_at }}</div></div>
+  <div class="kpi"><div class="k">Active</div><div class="v">{{ "yes" if settings.is_active else "no" }}</div></div>
+</div>
+
+<form method="post" action="/admin/account">
+  <h2>Profile & Preferences</h2>
+  <p>
+    <label>Email</label><br>
+    <input type="text" name="email" value="{{ settings.email }}" required>
+  </p>
+  <p>
+    <label>Default alert email (optional)</label><br>
+    <input type="text" name="default_alert_email" value="{{ settings.default_alert_email or '' }}" placeholder="alerts@example.com">
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" name="include_dismissed_default" {% if settings.include_dismissed_default %}checked{% endif %}>
+      Include dismissed by default in inbox
+    </label>
+  </p>
+  <h3>Notification Preferences</h3>
+  <p>
+    <label>
+      <input type="checkbox" name="show_follow_up_attention" {% if settings.show_follow_up_attention %}checked{% endif %}>
+      Show follow-up attention items
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" name="show_due_saved_search_attention" {% if settings.show_due_saved_search_attention %}checked{% endif %}>
+      Show due saved searches attention
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" name="show_saved_search_quality_attention" {% if settings.show_saved_search_quality_attention %}checked{% endif %}>
+      Show saved search quality attention
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" name="show_digest_error_attention" {% if settings.show_digest_error_attention %}checked{% endif %}>
+      Show digest error attention
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" name="digest_include_attention" {% if settings.digest_include_attention %}checked{% endif %}>
+      Include attention section in digest email
+    </label>
+  </p>
+  <h3>Target Search Profile</h3>
+  <p>
+    <label>Target titles (comma-separated)</label><br>
+    <input type="text" name="target_titles" value="{{ settings.target_titles or '' }}" placeholder="backend engineer, data engineer">
+  </p>
+  <p>
+    <label>Target role families (comma-separated)</label><br>
+    <input type="text" name="target_role_families" value="{{ settings.target_role_families or '' }}" placeholder="software_engineering, data_engineering">
+  </p>
+  <p>
+    <label>Preferred location types (comma-separated)</label><br>
+    <input type="text" name="preferred_location_types" value="{{ settings.preferred_location_types or '' }}" placeholder="remote, hybrid">
+  </p>
+  <p>
+    <label>Salary target note</label><br>
+    <input type="text" name="salary_target_note" value="{{ settings.salary_target_note or '' }}" placeholder="e.g. target base 80k+">
+  </p>
+  <p>
+    <label>Keywords note</label><br>
+    <input type="text" name="keywords_note" value="{{ settings.keywords_note or '' }}" placeholder="python, dbt, fastapi">
+  </p>
+  <p><button type="submit">Save settings</button></p>
+</form>
+
+<form method="post" action="/admin/account/password">
+  <h2>Change Password</h2>
+  <p>
+    <label>Current password</label><br>
+    <input type="password" name="current_password" required>
+  </p>
+  <p>
+    <label>New password</label><br>
+    <input type="password" name="new_password" required>
+  </p>
+  <p>
+    <label>Confirm new password</label><br>
+    <input type="password" name="confirm_password" required>
+  </p>
+  <p><button type="submit">Update password</button></p>
+</form>
+
+<p class="muted">These settings are per-user and applied to your current account session.</p>
+{% endblock %}
