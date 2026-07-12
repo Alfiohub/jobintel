@@ -1,0 +1,12 @@
+O*NET Mapping Coverage Comparison
+Total jobs: 1025 -> 1025 (delta +0)
+Matched: 811 -> 811 (delta +0)
+No match: 214 -> 214 (delta +0)
+Coverage: 79.12% -> 79.12% (delta +0.00 pp)
+
+Counts by onet_match_type (delta):
+- exact: 71 -> 71 (delta +0)
+- fuzzy: 14 -> 14 (delta +0)
+- manual_crosswalk: 24 -> 24 (delta +0)
+- no_match_low_score: 214 -> 214 (delta +0)
+- normalized_exact: 702 -> 702 (delta +0)

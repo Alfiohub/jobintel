@@ -1,0 +1,21 @@
+{
+  "baseline_name": "mvp_taxonomy_v2_candidate",
+  "old_db": "data/jobintel_microsaas_loccheck_2k_prod_candidate.sqlite",
+  "new_db": "data/jobintel_microsaas_loccheck_2k_v6r_plus.sqlite",
+  "old_stats": {
+    "total_rows": 2000,
+    "other_rows": 215,
+    "other_rate": 0.1075
+  },
+  "new_stats": {
+    "total_rows": 2000,
+    "other_rows": 174,
+    "other_rate": 0.087
+  },
+  "artifacts": {
+    "families": "docs/taxonomy_v2_families.csv",
+    "titles": "docs/taxonomy_v2_titles.csv",
+    "crosswalk": "docs/title_crosswalk_v2.csv",
+    "qa_summary": "docs/review_analysis_locv6r_plus/qa_mirata_summary.md"
+  }
+}

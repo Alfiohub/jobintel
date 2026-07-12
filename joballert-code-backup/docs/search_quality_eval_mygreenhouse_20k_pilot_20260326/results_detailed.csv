@@ -1,0 +1,51 @@
+query_id,description,rank,coherence,job_id,title_clean,normalized_title,role_family,country,location_type,url
+q1_sw_us_remote_skills,Software jobs US remote with python/aws preference,1,1.0,18913,Senior Software Engineer,software_engineer,software_engineering,US,remote,https://www.carta.healthcare/careers/job/5628216004?gh_jid=5628216004
+q1_sw_us_remote_skills,Software jobs US remote with python/aws preference,2,1.0,18815,Staff Applied AI Product Engineer,software_engineer,software_engineering,US,remote,https://www.carrumhealth.com/careers-list/?gh_jid=5786196004
+q1_sw_us_remote_skills,Software jobs US remote with python/aws preference,3,1.0,18745,Product Security Engineer,software_engineer,software_engineering,US,remote,https://www.cedar.com/careers/open-roles?gh_jid=7507682
+q1_sw_us_remote_skills,Software jobs US remote with python/aws preference,4,1.0,18755,Sr Software Engineer (Data Acquisition),software_engineer,software_engineering,US,remote,https://www.cedar.com/careers/open-roles?gh_jid=7579580
+q1_sw_us_remote_skills,Software jobs US remote with python/aws preference,5,1.0,18754,Sr. Software Engineer (Communications & Login),software_engineer,software_engineering,US,remote,https://www.cedar.com/careers/open-roles?gh_jid=7255524
+q2_data_us_remote,Data analytics roles US remote,1,1.0,18813,"Senior Manager, Data Engineering",analytics_manager,data_analytics,US,remote,https://www.carrumhealth.com/careers-list/?gh_jid=5755667004
+q2_data_us_remote,Data analytics roles US remote,2,1.0,18756,"Strategist III, Value Analytics",data_analyst,data_analytics,US,remote,https://www.cedar.com/careers/open-roles?gh_jid=7563763
+q2_data_us_remote,Data analytics roles US remote,3,1.0,18733,Business Intelligence Lead,analytics_manager,data_analytics,US,remote,https://www.cedar.com/careers/open-roles?gh_jid=7550834
+q2_data_us_remote,Data analytics roles US remote,4,1.0,18043,Junior Data Analyst,data_analyst,data_analytics,US,remote,https://job-boards.greenhouse.io/calibratecareers/jobs/5811557004
+q2_data_us_remote,Data analytics roles US remote,5,1.0,16148,Analytics Scientist (Compliance),data_analyst,data_analytics,US,remote,https://bitso.com/jobs/7602252003?gh_jid=7602252003
+q3_customer_success_us,Customer success roles in US,1,1.0,18803,Client Success Manager,customer_success_manager,customer_success,US,remote,https://www.carrumhealth.com/careers-list/?gh_jid=5775747004
+q3_customer_success_us,Customer success roles in US,2,1.0,18390,Bilingual Senior Customer Success Manager,customer_success_manager,customer_success,US,remote,https://job-boards.greenhouse.io/capintel/jobs/5048808007
+q3_customer_success_us,Customer success roles in US,3,1.0,17849,Director of Client Services (Remote),customer_success_manager,customer_success,US,remote,https://www.businessolver.com/careers/openings/?gh_jid=5842437
+q3_customer_success_us,Customer success roles in US,4,1.0,17844,Client Services Manager (Remote),customer_success_manager,customer_success,US,remote,https://www.businessolver.com/careers/openings/?gh_jid=4776507
+q3_customer_success_us,Customer success roles in US,5,1.0,17789,Customer Success Manager,customer_success_manager,customer_success,US,hybrid,https://buildops.com/careers/job-application?gh_jid=5763795004
+q4_product_remote,Product management remote,1,1.0,18848,Lead Product Manager,product_manager,product_management,NY,remote,https://job-boards.greenhouse.io/carta/jobs/7548543003
+q4_product_remote,Product management remote,2,1.0,18801,AI Product Manager,product_manager,product_management,US,remote,https://www.carrumhealth.com/careers-list/?gh_jid=5784744004
+q4_product_remote,Product management remote,3,1.0,18770,Principal Product Manager - Horizon Initiatives,product_manager,product_management,US,remote,https://job-boards.greenhouse.io/caribou/jobs/7525709003
+q4_product_remote,Product management remote,4,1.0,18753,Sr. Product Manager (Integration Standards),product_manager,product_management,US,remote,https://www.cedar.com/careers/open-roles?gh_jid=7647826
+q4_product_remote,Product management remote,5,1.0,18110,"Senior Product Manager, Cait",product_manager,product_management,US,remote,https://job-boards.greenhouse.io/candidly/jobs/5018922007
+q5_marketing_remote,Marketing remote,1,1.0,18856,Marketing Internship - Graphic Designer / Art Director,marketing_specialist,marketing,CA,remote,https://job-boards.greenhouse.io/carta/jobs/7637375003
+q5_marketing_remote,Marketing remote,2,1.0,18787,"Director, Content Marketing",marketing_specialist,marketing,,remote,https://job-boards.greenhouse.io/carrotfertility/jobs/5803767004
+q5_marketing_remote,Marketing remote,3,1.0,18782,Content Design Lead (Contract Role),marketing_specialist,marketing,,remote,https://job-boards.greenhouse.io/carrotfertility/jobs/5786951004
+q5_marketing_remote,Marketing remote,4,1.0,18759,Training & Content Operations Lead,marketing_specialist,marketing,US,remote,https://www.cedar.com/careers/open-roles?gh_jid=7339649
+q5_marketing_remote,Marketing remote,5,1.0,18207,"Marketing Specialist, West Region",marketing_specialist,marketing,US,remote,http://www.cannondesign.com/careers/?gh_jid=8349786002
+q6_finance_us,Finance roles in US,1,1.0,18809,Senior Accountant,accountant,finance,US,remote,https://www.carrumhealth.com/careers-list/?gh_jid=5783342004
+q6_finance_us,Finance roles in US,2,1.0,18773,Strategic Finance Associate,financial_analyst,finance,US,remote,https://job-boards.greenhouse.io/caribou/jobs/7647202003
+q6_finance_us,Finance roles in US,3,1.0,18752,"Sr. Manager, Billing & Revenue Accounting",accountant,finance,US,remote,https://www.cedar.com/careers/open-roles?gh_jid=7466740
+q6_finance_us,Finance roles in US,4,1.0,18739,Head of Strategic Finance,financial_analyst,finance,US,remote,https://www.cedar.com/careers/open-roles?gh_jid=7543478
+q6_finance_us,Finance roles in US,5,1.0,18102,Tax Entry Level Accountant 2026,accountant,finance,US,,https://job-boards.greenhouse.io/campusopportunities/jobs/8142890002
+q7_partnerships,Partnerships roles,1,1.0,17877,Channel Partner Manager,alliance_manager,partnerships,MA,remote,https://job-boards.greenhouse.io/buyersedgeplatformrecruiting/jobs/4667463005
+q7_partnerships,Partnerships roles,2,1.0,17633,"Startups Partner Manager, Y Combinator",alliance_manager,partnerships,US,hybrid,https://www.brex.com/careers/8402852002?gh_jid=8402852002
+q7_partnerships,Partnerships roles,3,1.0,17164,Partner Alliance Manager,alliance_manager,partnerships,US,,https://job-boards.greenhouse.io/boxinc/jobs/7572019
+q7_partnerships,Partnerships roles,4,1.0,17163,Partner Alliance Manager,alliance_manager,partnerships,US,,https://job-boards.greenhouse.io/boxinc/jobs/7206462
+q7_partnerships,Partnerships roles,5,1.0,16913,"Senior Manager, EMEA Alliances & Channels (Barcelona, Hybrid)",alliance_manager,partnerships,ES,hybrid,https://boomi.com/boomi-jobs/?gh_jid=5735553004
+q8_program_management,Program management roles,1,1.0,18842,"Implementations Project Manager, Fund Admin",technical_program_manager,program_management,BR,,https://job-boards.greenhouse.io/carta/jobs/4936521003
+q8_program_management,Program management roles,2,1.0,18585,"Technical Program Manager, Manufacturing",technical_program_manager,program_management,WA,onsite,https://carbonrobotics.com/job-openings?gh_jid=4656593006
+q8_program_management,Program management roles,3,1.0,18325,Sr. Project Manager - Design Integration,technical_program_manager,program_management,MN,onsite,http://www.cannondesign.com/careers/?gh_jid=8427446002
+q8_program_management,Program management roles,4,1.0,18324,Sr. Project Manager - Design Integration,technical_program_manager,program_management,US,onsite,http://www.cannondesign.com/careers/?gh_jid=8427405002
+q8_program_management,Program management roles,5,1.0,18323,Sr. Project Manager,technical_program_manager,program_management,TX,,http://www.cannondesign.com/careers/?gh_jid=8443762002
+q9_us_remote_python_sql,US remote jobs with python/sql preference (broad query),1,1.0,18815,Staff Applied AI Product Engineer,software_engineer,software_engineering,US,remote,https://www.carrumhealth.com/careers-list/?gh_jid=5786196004
+q9_us_remote_python_sql,US remote jobs with python/sql preference (broad query),2,1.0,18913,Senior Software Engineer,software_engineer,software_engineering,US,remote,https://www.carta.healthcare/careers/job/5628216004?gh_jid=5628216004
+q9_us_remote_python_sql,US remote jobs with python/sql preference (broad query),3,0.35,19415,CDL-A Over The Road Vehicle Transporter Truck Driver,other,other,US,remote,https://www.carvana.com/careers/apply?gh_jid=7336380
+q9_us_remote_python_sql,US remote jobs with python/sql preference (broad query),4,0.35,18934,Psychiatric Nurse Practitioner (Contractor / Remote),other,other,US,remote,https://job-boards.greenhouse.io/cartwheelcare/jobs/4144927007
+q9_us_remote_python_sql,US remote jobs with python/sql preference (broad query),5,0.35,18933,"Mental Health Therapist, Part-time - MA / Remote",other,other,US,remote,https://job-boards.greenhouse.io/cartwheelcare/jobs/4219415007
+q10_gb_general,UK jobs broad preference on tech/data/finance,1,0.35,18900,"Strategic Account Executive, Private Equity",account_executive,sales,GB,,https://job-boards.greenhouse.io/carta/jobs/7492870003
+q10_gb_general,UK jobs broad preference on tech/data/finance,2,1.0,18897,Solutions Engineer,software_engineer,software_engineering,GB,,https://job-boards.greenhouse.io/carta/jobs/7543368003
+q10_gb_general,UK jobs broad preference on tech/data/finance,3,1.0,18894,"Senior Software Engineer, Limited Partner Portfolio Analytics",software_engineer,software_engineering,GB,,https://job-boards.greenhouse.io/carta/jobs/7528273003
+q10_gb_general,UK jobs broad preference on tech/data/finance,4,0.35,18882,Senior Product Marketing Manager,marketing_specialist,marketing,GB,,https://job-boards.greenhouse.io/carta/jobs/6650288003
+q10_gb_general,UK jobs broad preference on tech/data/finance,5,0.35,18844,Integrated Marketing Manager,marketing_specialist,marketing,GB,,https://job-boards.greenhouse.io/carta/jobs/7617959003

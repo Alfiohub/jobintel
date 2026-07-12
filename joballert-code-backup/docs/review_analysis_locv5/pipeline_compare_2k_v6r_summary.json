@@ -1,0 +1,13 @@
+{
+  "rows_compared_shared": 2000,
+  "old_country_filled": 1293,
+  "new_country_filled": 1517,
+  "country_delta": 224,
+  "old_currency_filled": 255,
+  "new_currency_filled": 294,
+  "currency_delta": 39,
+  "country_changed_rows": 289,
+  "currency_changed_rows": 39,
+  "diff_rows_total": 319,
+  "output_csv": "docs/review_analysis_locv5/pipeline_compare_2k_v6r_country_currency_changes.csv"
+}

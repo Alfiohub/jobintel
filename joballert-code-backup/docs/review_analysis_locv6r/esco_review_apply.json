@@ -1,0 +1,96 @@
+{
+  "db": "data/jobintel_microsaas_loccheck_2k_v6r_plus.sqlite",
+  "queue_csv": "docs/esco_crosswalk_review_queue.csv",
+  "dry_run": true,
+  "touched_normalized_titles": 12,
+  "stats": {
+    "queue_rows": 12,
+    "updates": 12
+  },
+  "details": [
+    {
+      "normalized_title": "business_development_representative",
+      "action": "approve",
+      "esco_id": "57b459d4-655c-4053-b189-3c249ce33faf",
+      "esco_label": "ICT business development manager",
+      "mapping_confidence": "0.710"
+    },
+    {
+      "normalized_title": "office_administrator",
+      "action": "approve",
+      "esco_id": "35fbb8cd-c044-49a1-850c-010481c99b4a",
+      "esco_label": "financial markets back office administrator",
+      "mapping_confidence": "0.710"
+    },
+    {
+      "normalized_title": "business_intelligence_engineer",
+      "action": "approve",
+      "esco_id": "207d7b18-6540-432e-8aa6-785ed434572f",
+      "esco_label": "business intelligence manager",
+      "mapping_confidence": "0.750"
+    },
+    {
+      "normalized_title": "chief_revenue_officer",
+      "action": "approve",
+      "esco_id": "0ddbf393-38f1-4c22-b14c-fe775008f321",
+      "esco_label": "chief marketing officer",
+      "mapping_confidence": "0.750"
+    },
+    {
+      "normalized_title": "consultant",
+      "action": "approve",
+      "esco_id": "068370e0-9c27-4814-87d0-44fbb3140815",
+      "esco_label": "recruitment consultant",
+      "mapping_confidence": "0.750"
+    },
+    {
+      "normalized_title": "customer_success_manager",
+      "action": "approve",
+      "esco_id": "9c9752b7-3e3b-4a08-8553-b63a013f8072",
+      "esco_label": "customer experience manager",
+      "mapping_confidence": "0.750"
+    },
+    {
+      "normalized_title": "solutions_architect",
+      "action": "approve",
+      "esco_id": "8c3f536e-ba66-4321-ba40-363dc39f129b",
+      "esco_label": "architect",
+      "mapping_confidence": "0.750"
+    },
+    {
+      "normalized_title": "account_manager",
+      "action": "approve",
+      "esco_id": "2eac08c2-a81a-46fc-8d75-eb0e0f3e0f6d",
+      "esco_label": "sales account manager",
+      "mapping_confidence": "0.817"
+    },
+    {
+      "normalized_title": "business_intelligence_analyst",
+      "action": "approve",
+      "esco_id": "60082a99-d8ef-4e84-9290-78902681b6ed",
+      "esco_label": "business analyst",
+      "mapping_confidence": "0.817"
+    },
+    {
+      "normalized_title": "business_systems_analyst",
+      "action": "approve",
+      "esco_id": "60082a99-d8ef-4e84-9290-78902681b6ed",
+      "esco_label": "business analyst",
+      "mapping_confidence": "0.817"
+    },
+    {
+      "normalized_title": "devops_engineer",
+      "action": "approve",
+      "esco_id": "cc867bee-ab5c-427f-9244-f7a204d9574b",
+      "esco_label": "cloud DevOps engineer",
+      "mapping_confidence": "0.817"
+    },
+    {
+      "normalized_title": "sales_representative",
+      "action": "approve",
+      "esco_id": "14031d4a-6e99-442f-b4fe-18262b6432b2",
+      "esco_label": "commercial sales representative",
+      "mapping_confidence": "0.817"
+    }
+  ]
+}

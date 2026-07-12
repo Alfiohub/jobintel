@@ -1,0 +1,4 @@
+db=data/jobintel_microsaas_taxonomy_v1_final_2k_20260326.sqlite
+rows=2000
+other_rows=264
+other_pct=13.2

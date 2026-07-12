@@ -1,0 +1,6 @@
+r4_other_pct=32.83
+r5_other_pct=33.48
+delta_other_pct_points=0.65
+r5_qa_titles=57 r5_qa_titles_other=57
+r5_rvp_titles=10 r5_rvp_as_cro=3
+r5_tech_support_titles=80 r5_tech_support_as_it_support=54

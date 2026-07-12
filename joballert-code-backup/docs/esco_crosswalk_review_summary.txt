@@ -1,0 +1,2 @@
+total_crosswalk_rows=22
+review_rows_conf_lt_0_90=12

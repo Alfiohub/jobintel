@@ -1,0 +1,14 @@
+Gold Title Canonical Backfill Report
+Input: docs/gold_eval_set_v1_en_locv4_autolabeled.csv
+Output: docs/gold_eval_set_v1_en_locv4_autolabeled.csv
+Dry-run: 0
+Changed rows: 0
+Queue rows: 67
+
+Stats:
+- total_rows: 800
+- keep_token: 783
+- queue_title_still_other_after_canonicalization: 39
+- keep_empty: 17
+- queue_gold_vs_pred_title_mismatch: 16
+- queue_missing_gold_role_family_with_canonical_title: 12

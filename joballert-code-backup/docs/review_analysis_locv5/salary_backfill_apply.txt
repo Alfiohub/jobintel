@@ -1,0 +1,10 @@
+Salary Period Backfill Report
+Input: docs/gold_eval_set_v1_en_locv5_autolabeled.csv
+Output: docs/gold_eval_set_v1_en_locv5_autolabeled.csv
+Dry-run: 0
+Changed rows: 0
+
+Stats:
+- total_rows: 800
+- skip_no_salary_values: 692
+- already_has_period: 108

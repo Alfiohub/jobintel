@@ -1,0 +1,9 @@
+{
+  "input_csv": "docs/taxonomy_nightly/20260324_180959/taxonomy_expansion_candidates.csv",
+  "approved_rules": 0,
+  "rejected_rows": 0,
+  "min_confidence": 0.85,
+  "min_count": 5,
+  "applied": true,
+  "out_patch": "docs/taxonomy_nightly/20260324_180959/taxonomy_patch_map_existing_safe.py"
+}

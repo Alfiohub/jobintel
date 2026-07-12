@@ -1,0 +1,5 @@
+flowchart LR
+    M[main/stable] --> P[mvp/prod-hardening]
+    M --> R[research/taxonomy-and-model]
+    R -->|small validated patches| P
+    P -->|release| M

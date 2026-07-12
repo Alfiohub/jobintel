@@ -1,0 +1,11 @@
+flowchart LR
+    A[Job Sources\nGreenhouse/ATS exports] --> B[Ingestion Pipeline\nautomation/microsaas/run_microsaas_pipeline.py]
+    B --> C[(SQLite MVP DB\ndata/jobintel_microsaas_loccheck_2k_v6r_plus.sqlite)]
+
+    C --> D[Search API\nautomation/microsaas/search_api.py]
+    D --> E[Web UI / Landing\nMVP client]
+
+    C --> F[Batch QA / Eval Tools\nautolabel, review_analysis, labelstudio export]
+    F --> G[Taxonomy Ops\nauto_expand_taxonomy.py\napply_map_existing_safe.py\nvalidate_and_promote_taxonomy.py]
+    G --> H[title_normalization.py\nTITLE_RULES update]
+    H --> B

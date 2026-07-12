@@ -1,0 +1,12 @@
+ESCO Backfill Report
+DB: data/jobintel_microsaas_loccheck_2k_v6r_plus.sqlite
+Dry-run: 0
+Crosswalk titles total: 22
+Crosswalk titles mapped: 18
+Crosswalk titles keep_separate: 4
+jobs_indexed mapped: 886 -> 1162
+extraction_cache mapped: 874 -> 1150
+jobs updated mapped: 481
+jobs cleared: 148
+cache updated mapped: 478
+cache cleared: 147

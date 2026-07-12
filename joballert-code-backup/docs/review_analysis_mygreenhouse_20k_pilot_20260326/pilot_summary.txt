@@ -1,0 +1,4 @@
+db=data/jobintel_microsaas_mygreenhouse_20k_pilot_20260326.sqlite
+rows=20000
+other_rows=6654
+other_pct=33.27

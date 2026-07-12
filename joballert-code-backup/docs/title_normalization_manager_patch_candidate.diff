@@ -1,0 +1,22 @@
+*** Begin Patch
+*** Update File: automation/microsaas/title_normalization.py
+@@
+-    if "manager" in t:
+-        return "manager", "operations", "business"
++    if re.search(r"\b(project|program) manager\b", t):
++        return "technical_program_manager", "program_management", "product"
++    if re.search(r"\b(partner success|customer success) manager\b", t):
++        return "customer_success_manager", "customer_success", "business"
++    if re.search(r"\b(visual|design) manager\b", t):
++        return "product_designer", "design", "design"
++    if re.search(r"\b(solution services|solutions? architecture) manager\b", t):
++        return "solutions_architect", "architecture", "engineering"
++    if re.search(r"\b(campaign|marketing) manager\b", t):
++        return "marketing_specialist", "marketing", "business"
++    if re.search(r"\b(accounting|finance|commodity) manager\b", t):
++        return "accountant", "finance", "finance"
++    if re.search(r"\b(partner) manager\b", t):
++        return "alliance_manager", "partnerships", "business"
++    if "manager" in t:
++        return "operations_specialist", "operations", "business"
+*** End Patch

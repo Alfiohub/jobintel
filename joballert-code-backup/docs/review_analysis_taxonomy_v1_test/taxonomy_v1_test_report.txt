@@ -1,0 +1,27 @@
+Taxonomy v1 Test Report
+DB: data/jobintel_microsaas_taxonomy_v1_test_500.sqlite
+Rows total: 500
+Other count: 10
+Other percentage: 2.00%
+Crosswalk jobs_indexed updates (backend/frontend/fullstack): 0
+Crosswalk jobs_indexed updates (general_application->other): 0
+Multi-family violations: 0
+
+Top unmapped titles:
+- manager: 35
+- alliance_manager: 14
+- operations_specialist: 11
+- other: 10
+- implementation_consultant: 4
+- product_designer: 3
+- consultant: 2
+- general_application: 2
+- office_administrator: 2
+- talent_analytics_specialist: 2
+- technical_program_manager: 2
+- chief_revenue_officer: 1
+- healthcare_provider: 1
+- hr_manager: 1
+- implementation_coordinator: 1
+- operations_analyst: 1
+- program_analyst: 1

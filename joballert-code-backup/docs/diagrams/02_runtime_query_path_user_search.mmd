@@ -1,0 +1,12 @@
+sequenceDiagram
+    participant U as User
+    participant UI as MVP UI
+    participant API as Search API
+    participant DB as SQLite DB
+
+    U->>UI: Search (title/country/location_type)
+    UI->>API: HTTP request
+    API->>DB: SQL query + ranking filters
+    DB-->>API: Matching jobs
+    API-->>UI: JSON results
+    UI-->>U: Ranked job list

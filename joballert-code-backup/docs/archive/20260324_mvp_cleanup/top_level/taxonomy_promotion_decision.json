@@ -1,0 +1,27 @@
+{
+  "baseline_db": "data/jobintel_microsaas_loccheck_2k_prod_candidate.sqlite",
+  "candidate_db": "data/jobintel_microsaas_loccheck_2k_v6r_plus.sqlite",
+  "baseline": {
+    "total_rows": 2000,
+    "other_rows": 215,
+    "other_rate": 0.1075
+  },
+  "candidate": {
+    "total_rows": 2000,
+    "other_rows": 174,
+    "other_rate": 0.087
+  },
+  "delta": {
+    "other_abs_improvement": 41,
+    "other_rate_delta": -0.020500000000000004
+  },
+  "thresholds": {
+    "min_other_abs_improvement": 20,
+    "max_other_rate_increase": 0.0
+  },
+  "checks": {
+    "abs_improvement_ok": true,
+    "rate_increase_ok": true
+  },
+  "promotion_passed": true
+}

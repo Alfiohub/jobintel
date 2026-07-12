@@ -1,0 +1,11 @@
+Gold Title Canonical Backfill Report
+Input: docs/gold_eval_set_v2_en_locv6r_autolabeled.csv
+Output: docs/gold_eval_set_v2_en_locv6r_autolabeled.csv
+Dry-run: 0
+Changed rows: 0
+Queue rows: 92
+
+Stats:
+- total_rows: 255
+- keep_token: 255
+- queue_title_still_other_after_canonicalization: 92

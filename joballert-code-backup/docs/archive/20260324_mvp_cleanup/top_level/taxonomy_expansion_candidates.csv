@@ -1,0 +1,49 @@
+cluster_key,sample_titles,count,proposed_action,proposed_normalized_title,proposed_role_family,confidence_score,rationale
+ext::talent_bank,Banco de Talentos - Energia | Banco de Talentos,2,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=2
+ext::aiproduct_domain_lead,Product / Domain Lead (AI + Banking domain) – Toronto - Hybrid,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::analyst_cyber_security,Analyst - Global Cyber Defense Team (GDCT),1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::architect_observability,"Observability Architect | Washington, DC | Remote",1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::banking_and_payments_specialist,SC - Banking & Payments,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::capco_talent_program_associate_houston_jan_2027,Capco Associate Talent Program - Houston Jan 2027,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::career_development_coach,Career Success Coach,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::cloud_architect,Principal Architect: Google Cloud (GCP),1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::content_creator,Technical Writer,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::content_writer,Proposal Writer,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::contract_lifecycle_management_expert,CLM Expert,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::country_lead_people_and_culture,"People and Culture, Country Lead UK, Australia & Dubai",1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::country_manager,Country Lead The Netherlands,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::creative_strategist_ui_design,"Senior Creative Strategist (UI Design) - Hybrid, Istanbul",1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::dynamics_365_expert,Dynamics 365,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::full_stack_developer,Full Stack - COM INGLÊS - Remoto,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::graduate_trader_programme,Chicago Graduate Trader Programme 2026,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::head_of_international_partnerships,Head of Partnerships - EMEA,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::industry_leader_cpg_retail_manufacturing,"Industry Principal - CPG, Retail, Manufacturing",1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::instructor_cybersecurity_general_interest,Lead Instructor: Cybersecurity (General Interest),1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::instructor_general_artificial_intelligence,Lead Instructor: GenAI,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::integration_lead,Post Merger / Operating Model Integration Lead – Wealth & Asset Management,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::lead_operations,LD Ops,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::management_reporting_analyst,Management reporting analyst / SMEs,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::marketing_executive,Campaign Executive,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::onboarding_lead,Onboarding & Training Lead,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::partner_relations_representative,Partner Development Representative (PDR),1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::payroll_analyst_shift,Senior Payroll Analyst - Shift (4 PM – 1 AM IST),1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::product_analyst,Staff Product Analyst | USA | Remote,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::project_manager_capital_markets,PM - Capital Market/Trading,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::projectprogram_lead,Murex Project/ Program Lead,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::python_developer,Banco de Talentos - Python,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::qa_lead,QA Lead - Remoto,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::quantitative_analyst,Quantitative Trading Analyst,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::recruitment_coordinator_with_language_skills,Recruitment Administrator with English language,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::sales_development_representative,Representante de Desarrollo de Ventas,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::senior_business_analystproject_manager,Senior BA/PM | Securities Services,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::senior_fullstack_developer_with_ai_experience_remote,Senior Dev Fullstack com IA - Remoto,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::senior_payable_associate,Senior Accounts Payable Associate,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::senior_staff_applied_scientist,Senior/Staff Applied Scientist,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::senior_system_architect_observability_focus,Senior Observability Architect | USA PST| Remote,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::specialist,Way4 Specialist,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::success_coach,Pro Success Specialist,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::supply_chain_architect_public_sector,Lead Supply Chain Optimization Deployment Architect - Public Sector,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::technical_analyst,Technical Strategy Analyst,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+ext::video_production_specialist_senior_video_production_specialist,Video Producer / Senior Video Producer,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+title::accountant,Financial Accounting,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1
+title::business_analyst,BA Avaloq,1,keep_other,other,other,1.0000,cluster_too_small; best_agreement=1.00; cluster_size=1

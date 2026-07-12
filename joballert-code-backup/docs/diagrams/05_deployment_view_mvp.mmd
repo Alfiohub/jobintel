@@ -1,0 +1,9 @@
+flowchart LR
+    subgraph Container_or_VM[Single host Docker VM]
+      API[Search API process]
+      DB[(SQLite file volume)]
+      CRON[Scheduled batch jobs\noptional cron]
+    end
+
+    API <--> DB
+    CRON --> DB

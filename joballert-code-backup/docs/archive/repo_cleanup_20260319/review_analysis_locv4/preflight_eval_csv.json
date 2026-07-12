@@ -1,0 +1,65 @@
+{
+  "db": "data/jobintel_microsaas_loccheck_2k_v4.sqlite",
+  "db_stats": {
+    "total_jobs_indexed": 2000,
+    "title_clean_non_empty": 2000,
+    "title_raw_non_empty": 0,
+    "description_clean_non_empty": 2000,
+    "country_non_empty": 1211,
+    "title_clean_pct": 100.0,
+    "title_raw_pct": 0.0,
+    "description_clean_pct": 100.0,
+    "country_pct": 60.550000000000004
+  },
+  "eval_csv": "docs/gold_eval_set_v1_en_locv4.csv",
+  "eval_csv_stats": {
+    "rows": 800,
+    "counts_non_empty": {
+      "title_clean": 800,
+      "description_clean_excerpt": 800,
+      "pred_normalized_title": 800,
+      "pred_role_family": 800,
+      "pred_location_type": 637,
+      "pred_country": 480,
+      "gold_normalized_title": 0
+    }
+  },
+  "checks": [
+    {
+      "name": "db_has_rows",
+      "passed": true,
+      "details": "total_jobs_indexed=2000"
+    },
+    {
+      "name": "title_clean_coverage",
+      "passed": true,
+      "details": "title_clean_pct=100.00% threshold=95.00%"
+    },
+    {
+      "name": "description_clean_coverage",
+      "passed": true,
+      "details": "description_clean_pct=100.00% threshold=95.00%"
+    },
+    {
+      "name": "country_coverage",
+      "passed": true,
+      "details": "country_pct=60.55% threshold=20.00%"
+    },
+    {
+      "name": "eval_csv_rows",
+      "passed": true,
+      "details": "rows=800 threshold=800"
+    },
+    {
+      "name": "eval_csv_has_title_clean",
+      "passed": true,
+      "details": "title_clean_non_empty=800/800"
+    },
+    {
+      "name": "eval_csv_has_description_excerpt",
+      "passed": true,
+      "details": "description_clean_excerpt_non_empty=800/800"
+    }
+  ],
+  "safe_to_run": true
+}

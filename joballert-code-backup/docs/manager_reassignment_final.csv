@@ -1,0 +1,33 @@
+title_clean,current_normalized_title,current_role_family,final_normalized_title,final_role_family,rationale
+Project Manager - Ubuntu Embedded Systems,manager,operations,technical_program_manager,program_management,final_rule_match
+Partner Success Manager - Installations,manager,operations,customer_success_manager,customer_success,final_rule_match
+"Accounting Manager, Corporate Accounting",manager,operations,accountant,finance,final_rule_match
+"Associate Manager, Deal Desk - (Remote)",manager,operations,operations_specialist,operations,final_rule_match
+Business Services Team Manager,manager,operations,operations_specialist,operations,final_rule_match
+Cloud Professional Services Manager,manager,operations,operations_specialist,operations,final_rule_match
+Design Manager (Visual),manager,operations,product_designer,design,final_rule_match
+Enablement Program Manager,manager,operations,technical_program_manager,program_management,final_rule_match
+Enterprise Project Manager,manager,operations,technical_program_manager,program_management,final_rule_match
+IoT Solutions Architecture Manager (Americas only),manager,operations,solutions_architect,architecture,final_rule_match
+Junior Campaign Manager,manager,operations,marketing_specialist,marketing,final_rule_match
+Junior Project Manager,manager,operations,technical_program_manager,program_management,final_rule_match
+"Manager, Solution Services (Remote elegible - Costa Rica)",manager,operations,other,other,ambiguous_manager_fallback_other
+Principal Commodity Manager,manager,operations,other,other,ambiguous_manager_fallback_other
+"Program Manager, Localization",manager,operations,technical_program_manager,program_management,final_rule_match
+Public Cloud Project Manager,manager,operations,technical_program_manager,program_management,final_rule_match
+Public Sector Partner Manager,manager,operations,alliance_manager,partnerships,final_rule_match
+Regional HR Manager - EMEA,manager,operations,hr_manager,hr,final_rule_match
+"Regional Partner Manager, Mexico",manager,operations,alliance_manager,partnerships,final_rule_match
+Revenue Accounting Manager,manager,operations,accountant,finance,final_rule_match
+Senior Communications Manager - Analyst Relations,manager,operations,marketing_specialist,marketing,final_rule_match
+Senior Design Manager (Infrastructure),manager,operations,product_designer,design,final_rule_match
+Senior Insurance Partner Manager (Carriers),manager,operations,alliance_manager,partnerships,final_rule_match
+"Senior Manager, Health Information Management",manager,operations,operations_specialist,operations,final_rule_match
+Senior Member Growth Manager,manager,operations,marketing_specialist,marketing,final_rule_match
+Solution Architecture Manager,manager,operations,solutions_architect,architecture,final_rule_match
+"Sr. Manager, Accounting (Hybrid in Bangalore)",manager,operations,accountant,finance,final_rule_match
+Sr. Systems Project Manager (Hybrid in Bangalore),manager,operations,technical_program_manager,program_management,final_rule_match
+Trial Success Manager (Central),manager,operations,customer_success_manager,customer_success,final_rule_match
+Trial Success Manager (East),manager,operations,customer_success_manager,customer_success,final_rule_match
+Trial Success Manager (Mountains),manager,operations,customer_success_manager,customer_success,final_rule_match
+Trial Success Manager (UK/EU),manager,operations,customer_success_manager,customer_success,final_rule_match

@@ -1,0 +1,114 @@
+[architecture] (2)
+- enterprise_architect
+- solutions_architect
+
+[backend] (1)
+- backend_engineer
+
+[business_analysis] (2)
+- business_analyst
+- business_systems_analyst
+
+[consulting] (3)
+- consultant
+- implementation_consultant
+- implementation_coordinator
+
+[customer_success] (1)
+- customer_success_manager
+
+[data_analytics] (6)
+- analytics_director
+- analytics_engineer
+- analytics_manager
+- business_intelligence_analyst
+- business_intelligence_engineer
+- data_analyst
+
+[data_engineering] (1)
+- data_engineer
+
+[data_science] (1)
+- data_scientist
+
+[design] (2)
+- content_designer
+- product_designer
+
+[devops] (1)
+- devops_engineer
+
+[executive_leadership] (2)
+- chief_revenue_officer
+- chief_technology_officer
+
+[finance] (3)
+- accountant
+- financial_analyst
+- investment_analyst
+
+[frontend] (1)
+- frontend_engineer
+
+[fullstack] (1)
+- fullstack_engineer
+
+[healthcare] (1)
+- healthcare_provider
+
+[hr] (4)
+- hr_business_partner
+- hr_generalist
+- hr_manager
+- talent_analytics_specialist
+
+[it_operations] (2)
+- it_support_specialist
+- systems_administrator
+
+[legal] (1)
+- legal_counsel
+
+[machine_learning] (2)
+- ml_engineer
+- ml_scientist
+
+[marketing] (2)
+- marketing_specialist
+- seo_specialist
+
+[operations] (4)
+- localization_intern
+- office_administrator
+- operations_analyst
+- operations_specialist
+
+[partnerships] (1)
+- alliance_manager
+
+[product_management] (1)
+- product_manager
+
+[program_management] (2)
+- program_analyst
+- technical_program_manager
+
+[recruiting] (2)
+- general_application
+- technical_recruiter
+
+[sales] (5)
+- account_executive
+- account_manager
+- business_development_representative
+- industry_lead
+- sales_representative
+
+[software_engineering] (1)
+- software_engineer
+
+[sre] (1)
+- site_reliability_engineer
+
+[strategy] (1)
+- corporate_development

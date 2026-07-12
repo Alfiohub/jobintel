@@ -1,0 +1,729 @@
+{
+  "total_no_match_rows": 235,
+  "counts_per_normalized_title_without_match": [
+    {
+      "normalized_title": "manager",
+      "count": 81
+    },
+    {
+      "normalized_title": "other",
+      "count": 53
+    },
+    {
+      "normalized_title": "backend_engineer",
+      "count": 21
+    },
+    {
+      "normalized_title": "alliance_manager",
+      "count": 14
+    },
+    {
+      "normalized_title": "technical_program_manager",
+      "count": 9
+    },
+    {
+      "normalized_title": "systems_administrator",
+      "count": 7
+    },
+    {
+      "normalized_title": "consultant",
+      "count": 7
+    },
+    {
+      "normalized_title": "ml_engineer",
+      "count": 7
+    },
+    {
+      "normalized_title": "hr_business_partner",
+      "count": 6
+    },
+    {
+      "normalized_title": "fullstack_engineer",
+      "count": 6
+    },
+    {
+      "normalized_title": "analytics_engineer",
+      "count": 5
+    },
+    {
+      "normalized_title": "hr_generalist",
+      "count": 5
+    },
+    {
+      "normalized_title": "talent_analytics_specialist",
+      "count": 4
+    },
+    {
+      "normalized_title": "seo_specialist",
+      "count": 3
+    },
+    {
+      "normalized_title": "general_application",
+      "count": 2
+    },
+    {
+      "normalized_title": "healthcare_provider",
+      "count": 1
+    },
+    {
+      "normalized_title": "implementation_coordinator",
+      "count": 1
+    },
+    {
+      "normalized_title": "chief_revenue_officer",
+      "count": 1
+    },
+    {
+      "normalized_title": "hr_manager",
+      "count": 1
+    },
+    {
+      "normalized_title": "frontend_engineer",
+      "count": 1
+    }
+  ],
+  "top_title_clean_per_normalized_title_without_match": {
+    "manager": [
+      {
+        "title_clean": "Senior GTM Enablement Manager | EMEA | Remote",
+        "count": 4
+      },
+      {
+        "title_clean": "Project Manager - Ubuntu Embedded Systems",
+        "count": 3
+      },
+      {
+        "title_clean": "Manager, AI Outcomes",
+        "count": 3
+      },
+      {
+        "title_clean": "Partner Success Manager - Installations",
+        "count": 2
+      },
+      {
+        "title_clean": "AI Outcomes Manager- Central",
+        "count": 2
+      },
+      {
+        "title_clean": "AI Outcomes Manager- East",
+        "count": 2
+      },
+      {
+        "title_clean": "AI Outcomes Manager- West",
+        "count": 2
+      },
+      {
+        "title_clean": "Delivery Excellence Manager- Central",
+        "count": 2
+      },
+      {
+        "title_clean": "Delivery Excellence Manager- East",
+        "count": 2
+      },
+      {
+        "title_clean": "Accounting Manager, Corporate Accounting",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Member Growth Manager",
+        "count": 1
+      },
+      {
+        "title_clean": "Manager, Solution Services (Remote elegible - Costa Rica)",
+        "count": 1
+      },
+      {
+        "title_clean": "Program Manager, Localization",
+        "count": 1
+      },
+      {
+        "title_clean": "Sr. Manager, Accounting (Hybrid in Bangalore)",
+        "count": 1
+      },
+      {
+        "title_clean": "Sr. Systems Project Manager (Hybrid in Bangalore)",
+        "count": 1
+      },
+      {
+        "title_clean": "Associate Manager, Deal Desk - (Remote)",
+        "count": 1
+      },
+      {
+        "title_clean": "Enablement Program Manager",
+        "count": 1
+      },
+      {
+        "title_clean": "Public Sector Partner Manager",
+        "count": 1
+      },
+      {
+        "title_clean": "Regional Partner Manager, Mexico",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Insurance Partner Manager (Carriers)",
+        "count": 1
+      }
+    ],
+    "other": [
+      {
+        "title_clean": "Information Systems - Open Source Technical Architect",
+        "count": 1
+      },
+      {
+        "title_clean": "Junior Ads Specialist",
+        "count": 1
+      },
+      {
+        "title_clean": "Public Cloud Enablement Professional",
+        "count": 1
+      },
+      {
+        "title_clean": "Représentant du Développement des Ventes",
+        "count": 1
+      },
+      {
+        "title_clean": "Representante de Desarrollo de Ventas",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Design Researcher - User Science",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Jira Administrator",
+        "count": 1
+      },
+      {
+        "title_clean": "Software Architect - Containers / Virtualisation",
+        "count": 1
+      },
+      {
+        "title_clean": "Technical Author (multiple roles and seniority levels)",
+        "count": 1
+      },
+      {
+        "title_clean": "Threat Intelligence Lead",
+        "count": 1
+      },
+      {
+        "title_clean": "Accounting Apprentice",
+        "count": 1
+      },
+      {
+        "title_clean": "Customer Education and Certification Lead",
+        "count": 1
+      },
+      {
+        "title_clean": "Customer Reference Specialist (Contract)",
+        "count": 1
+      },
+      {
+        "title_clean": "Head of Human Resources (Americas)",
+        "count": 1
+      },
+      {
+        "title_clean": "Head of Partnerships - EMEA",
+        "count": 1
+      },
+      {
+        "title_clean": "Industry Principal - CPG, Retail, Manufacturing",
+        "count": 1
+      },
+      {
+        "title_clean": "Onboarding & Training Lead",
+        "count": 1
+      },
+      {
+        "title_clean": "Partner Innovation Architect",
+        "count": 1
+      },
+      {
+        "title_clean": "Recruiting Coordinator (Contract)",
+        "count": 1
+      },
+      {
+        "title_clean": "Regional Vice President- San Francisco",
+        "count": 1
+      }
+    ],
+    "backend_engineer": [
+      {
+        "title_clean": "Sr. Backend Engineer",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Backend Engineer - Grafana App Platform | Canada | Remote",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Backend Engineer - Grafana App Platform | US (EST) | Remote",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Backend Engineer - Grafana k6 | Germany | Remote",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Backend Engineer - Grafana k6 | Spain | Remote",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Backend Engineer - Grafana k6 | Sweden | Remote",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Backend Engineer - Grafana k6 | UK | Remote",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Backend Engineer - Mimir | Canada | Remote",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Backend Engineer | Mimir OSS | Germany | Remote",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Backend Engineer | Mimir OSS | Spain | Remote",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Backend Engineer | Mimir OSS | Sweden | Remote",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Backend Engineer | Mimir OSS | United Kingdom | Remote",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Backend Engineer - Mimir | USA | Remote",
+        "count": 1
+      },
+      {
+        "title_clean": "Staff Backend Engineer - Adaptive Telemetry | Germany | Remote",
+        "count": 1
+      },
+      {
+        "title_clean": "Staff Backend Engineer - Adaptive Telemetry | Spain | Remote",
+        "count": 1
+      },
+      {
+        "title_clean": "Staff Backend Engineer - Adaptive Telemetry | Sweden | Remote",
+        "count": 1
+      },
+      {
+        "title_clean": "Staff Backend Engineer - Adaptive Telemetry | UK | Remote",
+        "count": 1
+      },
+      {
+        "title_clean": "Staff Backend Engineer - Databases Pyroscope | Canada | Remote",
+        "count": 1
+      },
+      {
+        "title_clean": "Staff Backend Engineer - Databases Pyroscope | US | Remote",
+        "count": 1
+      },
+      {
+        "title_clean": "Staff Backend Engineer - Observability Knowledge Graph Backend | Canada | Remote",
+        "count": 1
+      }
+    ],
+    "alliance_manager": [
+      {
+        "title_clean": "Strategic Alliance Manager",
+        "count": 1
+      },
+      {
+        "title_clean": "Alliances Field Engineer",
+        "count": 1
+      },
+      {
+        "title_clean": "Cloud Alliances Business Development Lead",
+        "count": 1
+      },
+      {
+        "title_clean": "Dell Global Alliance Director",
+        "count": 1
+      },
+      {
+        "title_clean": "Global Head of Cloud Alliances",
+        "count": 1
+      },
+      {
+        "title_clean": "Global Head of GSI Alliances",
+        "count": 1
+      },
+      {
+        "title_clean": "IBM Global Alliance Director",
+        "count": 1
+      },
+      {
+        "title_clean": "ISV Technical Alliance Manager",
+        "count": 1
+      },
+      {
+        "title_clean": "Silicon Alliances Ecosystem Development Manager",
+        "count": 1
+      },
+      {
+        "title_clean": "Silicon Alliances Ecosystem Development Manager - APAC",
+        "count": 1
+      },
+      {
+        "title_clean": "Silicon Alliances Ecosystem Development Manager - Shanghai or Beijing",
+        "count": 1
+      },
+      {
+        "title_clean": "Software Alliance Ecosystem Manager",
+        "count": 1
+      },
+      {
+        "title_clean": "Software Alliances Director, Americas",
+        "count": 1
+      },
+      {
+        "title_clean": "Software Alliances Director, EMEA",
+        "count": 1
+      }
+    ],
+    "technical_program_manager": [
+      {
+        "title_clean": "Sr. Technical Program Manager (Hybrid in Bangalore)",
+        "count": 1
+      },
+      {
+        "title_clean": "Director of TPM, Connected Devices",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Security Technical Program Manager",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Technical Program Manager",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Technical Program Manager, Billing (TPM)",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Technical Program Manager, Infrastructure (TPM)",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Technical Program Manager (TPM)",
+        "count": 1
+      },
+      {
+        "title_clean": "Technical Program Manager, Connectors (TPM)",
+        "count": 1
+      },
+      {
+        "title_clean": "Technical Program Manager, Data",
+        "count": 1
+      }
+    ],
+    "systems_administrator": [
+      {
+        "title_clean": "Senior Salesforce Administrator",
+        "count": 1
+      },
+      {
+        "title_clean": "Salesforce Administrator (Remote Eligible - Costa Rica)",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior NetSuite Administrator (Hybrid in Bangalore)",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior NetSuite Administrator (in Bangalore)",
+        "count": 1
+      },
+      {
+        "title_clean": "Associate Systems Administrator (Salesforce)",
+        "count": 1
+      },
+      {
+        "title_clean": "NetSuite Administrator",
+        "count": 1
+      },
+      {
+        "title_clean": "Salesforce Administrator",
+        "count": 1
+      }
+    ],
+    "consultant": [
+      {
+        "title_clean": "Business Value Consultant",
+        "count": 2
+      },
+      {
+        "title_clean": "AI Coach (Gemini, Copilot, ChatGPT, Claude)",
+        "count": 2
+      },
+      {
+        "title_clean": "GenAI Curriculum Consultant",
+        "count": 2
+      },
+      {
+        "title_clean": "Embedded Linux Consultant - Japan",
+        "count": 1
+      }
+    ],
+    "ml_engineer": [
+      {
+        "title_clean": "Machine Learning Engineer, AI Assistant + Autonomous AI Agents",
+        "count": 1
+      },
+      {
+        "title_clean": "Machine Learning Engineer, Enterprise Brain",
+        "count": 1
+      },
+      {
+        "title_clean": "Machine Learning Engineer, Infrastructure",
+        "count": 1
+      },
+      {
+        "title_clean": "Machine Learning Engineer, Search Quality",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior ML Engineer, Product",
+        "count": 1
+      },
+      {
+        "title_clean": "Staff ML Engineer, Product",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior AI/ML Engineer",
+        "count": 1
+      }
+    ],
+    "hr_business_partner": [
+      {
+        "title_clean": "HR Business Partner (HRBP)",
+        "count": 2
+      },
+      {
+        "title_clean": "Talent Development Partner",
+        "count": 1
+      },
+      {
+        "title_clean": "VP, People Business Partnerships",
+        "count": 1
+      },
+      {
+        "title_clean": "Associate People Business Partner",
+        "count": 1
+      },
+      {
+        "title_clean": "People Business Partner | 12 Month Contract | Sydney or Melbourne | Remote",
+        "count": 1
+      }
+    ],
+    "fullstack_engineer": [
+      {
+        "title_clean": "Senior Full Stack Engineer, Account Linking",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Full Stack Engineer, AI & Data Products",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Full Stack Engineer, Compass",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Full Stack Engineer, Credit Products",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Full Stack Engineer, Horizon",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior Full Stack Engineer, Product",
+        "count": 1
+      }
+    ],
+    "analytics_engineer": [
+      {
+        "title_clean": "Principal Analytics Engineer (Data Architect) - Hybrid in Bangalore",
+        "count": 1
+      },
+      {
+        "title_clean": "Sr. Analytics Engineer- Hybrid in Bangalore",
+        "count": 1
+      },
+      {
+        "title_clean": "MAAS Data Center Infrastructure Engineer (Toronto area)",
+        "count": 1
+      },
+      {
+        "title_clean": "Python Engineer - Data Center Hardware Integration (Taipei)",
+        "count": 1
+      },
+      {
+        "title_clean": "Analytics Engineer",
+        "count": 1
+      }
+    ],
+    "hr_generalist": [
+      {
+        "title_clean": "Graduate HR Generalist - AMER",
+        "count": 1
+      },
+      {
+        "title_clean": "Graduate HR Generalist - APAC",
+        "count": 1
+      },
+      {
+        "title_clean": "HR Generalist",
+        "count": 1
+      },
+      {
+        "title_clean": "Lead HR Generalist - Americas",
+        "count": 1
+      },
+      {
+        "title_clean": "Senior HR Generalist - EMEA",
+        "count": 1
+      }
+    ],
+    "talent_analytics_specialist": [
+      {
+        "title_clean": "Director, Talent Science",
+        "count": 1
+      },
+      {
+        "title_clean": "Graduate Talent Scientist",
+        "count": 1
+      },
+      {
+        "title_clean": "Talent Scientist",
+        "count": 1
+      },
+      {
+        "title_clean": "Talent Scientist - Graduate Lead",
+        "count": 1
+      }
+    ],
+    "seo_specialist": [
+      {
+        "title_clean": "Lead International SEO",
+        "count": 2
+      },
+      {
+        "title_clean": "Lead Technical SEO",
+        "count": 1
+      }
+    ],
+    "general_application": [
+      {
+        "title_clean": "Interested in joining our team?",
+        "count": 2
+      }
+    ],
+    "healthcare_provider": [
+      {
+        "title_clean": "Telehealth Provider (MD & DO)",
+        "count": 1
+      }
+    ],
+    "implementation_coordinator": [
+      {
+        "title_clean": "Install Coordinator-1 (Spanish)",
+        "count": 1
+      }
+    ],
+    "chief_revenue_officer": [
+      {
+        "title_clean": "Chief Revenue Officer",
+        "count": 1
+      }
+    ],
+    "hr_manager": [
+      {
+        "title_clean": "Head of Talent Development",
+        "count": 1
+      }
+    ],
+    "frontend_engineer": [
+      {
+        "title_clean": "Web Frontend Engineer - JS, CSS, React, Flutter",
+        "count": 1
+      }
+    ]
+  },
+  "counts_per_role_family_without_match": [
+    {
+      "role_family": "operations",
+      "count": 81
+    },
+    {
+      "role_family": "other",
+      "count": 53
+    },
+    {
+      "role_family": "backend",
+      "count": 21
+    },
+    {
+      "role_family": "hr",
+      "count": 16
+    },
+    {
+      "role_family": "partnerships",
+      "count": 14
+    },
+    {
+      "role_family": "program_management",
+      "count": 9
+    },
+    {
+      "role_family": "consulting",
+      "count": 8
+    },
+    {
+      "role_family": "it_operations",
+      "count": 7
+    },
+    {
+      "role_family": "machine_learning",
+      "count": 7
+    },
+    {
+      "role_family": "fullstack",
+      "count": 6
+    },
+    {
+      "role_family": "data_analytics",
+      "count": 5
+    },
+    {
+      "role_family": "marketing",
+      "count": 3
+    },
+    {
+      "role_family": "recruiting",
+      "count": 2
+    },
+    {
+      "role_family": "healthcare",
+      "count": 1
+    },
+    {
+      "role_family": "executive_leadership",
+      "count": 1
+    },
+    {
+      "role_family": "frontend",
+      "count": 1
+    }
+  ]
+}

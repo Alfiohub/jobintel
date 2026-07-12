@@ -1,0 +1,8 @@
+flowchart TD
+    A[Production data with some 'other'] --> B[auto_expand_taxonomy.py\ncreates candidates]
+    B --> C[apply_map_existing_safe.py\nauto-safe mappings]
+    C --> D[validate_and_promote_taxonomy.py\nquality gates]
+    D -->|pass| E[Promote patch to TITLE_RULES]
+    D -->|fail| F[Keep as other + report]
+    E --> G[Re-run pipeline on validation sample]
+    G --> H[If metrics improve -> release]

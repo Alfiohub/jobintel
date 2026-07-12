@@ -1,0 +1,51 @@
+query_id,description,rank,coherence,job_id,title_clean,normalized_title,role_family,country,location_type,url
+q1_sw_us_remote_skills,Software jobs US remote with python/aws preference,1,1.0,1494,Senior Backend Engineer – Submission Processing Team (USA),backend_engineer,software_engineering,US,remote,https://job-boards.greenhouse.io/kalepa/jobs/5755122004
+q1_sw_us_remote_skills,Software jobs US remote with python/aws preference,2,1.0,934,"Senior Product Engineer, Rocket Ready",software_engineer,software_engineering,US,remote,https://job-boards.greenhouse.io/truebill/jobs/7583320003
+q1_sw_us_remote_skills,Software jobs US remote with python/aws preference,3,1.0,881,Staff Software Engineer - Grafana Cloud k6 | USA | Remote,software_engineer,software_engineering,US,remote,https://job-boards.greenhouse.io/grafanalabs/jobs/5800213004
+q1_sw_us_remote_skills,Software jobs US remote with python/aws preference,4,1.0,1499,Senior Platform Engineer - Infrastructure (USA),software_engineer,software_engineering,US,remote,https://job-boards.greenhouse.io/kalepa/jobs/5742656004
+q1_sw_us_remote_skills,Software jobs US remote with python/aws preference,5,1.0,1497,Senior Full Stack Engineer - Core UX (USA),fullstack_engineer,software_engineering,US,remote,https://job-boards.greenhouse.io/kalepa/jobs/5737424004
+q2_data_us_remote,Data analytics roles US remote,1,1.0,13,"Senior Data Analyst, B2B Analytics",data_analyst,data_analytics,US,remote,https://job-boards.greenhouse.io/omadahealth/jobs/7371153
+q2_data_us_remote,Data analytics roles US remote,2,1.0,1458,Curriculum Manager - Data Science,analytics_manager,data_analytics,US,remote,https://job-boards.greenhouse.io/datacamp/jobs/7261637
+q2_data_us_remote,Data analytics roles US remote,3,1.0,1457,Curriculum Manager - Data Science,analytics_manager,data_analytics,US,remote,https://job-boards.greenhouse.io/datacamp/jobs/7261634
+q2_data_us_remote,Data analytics roles US remote,4,1.0,1456,Curriculum Manager - Data Science,analytics_manager,data_analytics,US,remote,https://job-boards.greenhouse.io/datacamp/jobs/7067243
+q2_data_us_remote,Data analytics roles US remote,5,1.0,1455,Curriculum Manager - Data Science,analytics_manager,data_analytics,US,remote,https://job-boards.greenhouse.io/datacamp/jobs/7531007
+q3_customer_success_us,Customer success roles in US,1,1.0,1480,Senior Customer Success Manager,customer_success_manager,customer_success,US,,https://job-boards.greenhouse.io/datacamp/jobs/7361123
+q3_customer_success_us,Customer success roles in US,2,1.0,1479,Senior Customer Success Manager,customer_success_manager,customer_success,US,,https://job-boards.greenhouse.io/datacamp/jobs/7327829
+q3_customer_success_us,Customer success roles in US,3,1.0,899,Career Success Coach,customer_success_manager,customer_success,US,remote,https://job-boards.greenhouse.io/correlationone/jobs/5475234004
+q3_customer_success_us,Customer success roles in US,4,1.0,259,Trial Success Manager (Mountains),customer_success_manager,customer_success,US,onsite,https://job-boards.greenhouse.io/gomotive/jobs/8376673002
+q3_customer_success_us,Customer success roles in US,5,1.0,258,Trial Success Manager (East),customer_success_manager,customer_success,US,onsite,https://job-boards.greenhouse.io/gomotive/jobs/8376670002
+q4_product_remote,Product management remote,1,1.0,1349,"Senior Product Manager, Partnerships",product_manager,product_management,US,remote,https://job-boards.greenhouse.io/thumbtack/jobs/7638146
+q4_product_remote,Product management remote,2,1.0,1348,"Senior Product Manager, Partnerships",product_manager,product_management,US,remote,https://job-boards.greenhouse.io/thumbtack/jobs/7638142
+q4_product_remote,Product management remote,3,1.0,1028,"Principal Product Manager, AI",product_manager,product_management,US,remote,https://job-boards.greenhouse.io/webflow/jobs/7456857
+q4_product_remote,Product management remote,4,1.0,513,Technical Product Manager,product_manager,product_management,,remote,https://job-boards.greenhouse.io/canonical/jobs/6980703
+q4_product_remote,Product management remote,5,1.0,404,Product Manager - Ubuntu,product_manager,product_management,,remote,https://job-boards.greenhouse.io/canonical/jobs/6643481
+q5_marketing_remote,Marketing remote,1,1.0,1385,Product Marketing Associate (Personalization/Data Cloud),marketing_specialist,marketing,TW,remote,https://job-boards.greenhouse.io/appier/jobs/7192666
+q5_marketing_remote,Marketing remote,2,1.0,1336,"Head of Brand Production Studio, Brand Marketing",marketing_specialist,marketing,PH,remote,https://job-boards.greenhouse.io/thumbtack/jobs/7278486
+q5_marketing_remote,Marketing remote,3,1.0,1335,Growth Marketing Associate,marketing_specialist,marketing,PH,remote,https://job-boards.greenhouse.io/thumbtack/jobs/7649054
+q5_marketing_remote,Marketing remote,4,1.0,826,"Senior Product Marketing Manager | USA (EST, CST) | Remote",marketing_specialist,marketing,US,remote,https://job-boards.greenhouse.io/grafanalabs/jobs/5783877004
+q5_marketing_remote,Marketing remote,5,1.0,825,Senior Product Marketing Manager | United Kingdom | Remote,marketing_specialist,marketing,GB,remote,https://job-boards.greenhouse.io/grafanalabs/jobs/5783879004
+q6_finance_us,Finance roles in US,1,1.0,1381,Investment Analyst,investment_analyst,finance,US,remote,https://job-boards.greenhouse.io/appier/jobs/7566092
+q6_finance_us,Finance roles in US,2,1.0,1236,"Senior Manager, Technical Accounting & Financial Reporting",accountant,finance,US,hybrid,https://job-boards.greenhouse.io/celonis/jobs/7592901003?gh_jid=7592901003
+q6_finance_us,Finance roles in US,3,1.0,1235,"Senior Manager, Technical Accounting & Financial Reporting",accountant,finance,US,hybrid,https://job-boards.greenhouse.io/celonis/jobs/6685374003?gh_jid=6685374003
+q6_finance_us,Finance roles in US,4,1.0,1099,Corporate Accounting Manager,accountant,finance,US,hybrid,https://job-boards.greenhouse.io/celonis/jobs/7627604003?gh_jid=7627604003
+q6_finance_us,Finance roles in US,5,1.0,973,Senior Revenue Accountant,accountant,finance,US,hybrid,https://job-boards.greenhouse.io/gofundme/jobs/7584501
+q7_partnerships,Partnerships roles,1,1.0,1024,"Partner Manager, EMEA",alliance_manager,partnerships,GB,hybrid,https://job-boards.greenhouse.io/webflow/jobs/7624091
+q7_partnerships,Partnerships roles,2,1.0,1023,"Partner Manager, Agencies",alliance_manager,partnerships,US,remote,https://job-boards.greenhouse.io/webflow/jobs/7408665
+q7_partnerships,Partnerships roles,3,1.0,651,Regional Partner Manager - Singapore,alliance_manager,partnerships,SG,remote,https://job-boards.greenhouse.io/gleanwork/jobs/4528493005
+q7_partnerships,Partnerships roles,4,1.0,632,"Partner Manager, Boutique SI",alliance_manager,partnerships,US,hybrid,https://job-boards.greenhouse.io/gleanwork/jobs/4665727005
+q7_partnerships,Partnerships roles,5,1.0,629,National Channel Partner Manager,alliance_manager,partnerships,US,remote,https://job-boards.greenhouse.io/gleanwork/jobs/4646677005
+q8_program_management,Program management roles,1,1.0,1975,Wealth & Asset Management - Project Manager,technical_program_manager,program_management,,hybrid,https://job-boards.greenhouse.io/capco/jobs/7665186
+q8_program_management,Program management roles,2,1.0,1960,Technical Project Manager,technical_program_manager,program_management,,,https://job-boards.greenhouse.io/capco/jobs/7335064
+q8_program_management,Program management roles,3,1.0,1843,Project Manager – Wealth & Asset Management,technical_program_manager,program_management,,hybrid,https://job-boards.greenhouse.io/capco/jobs/7657691
+q8_program_management,Program management roles,4,1.0,1842,Project Manager - Transformation projects (She/He/They),technical_program_manager,program_management,PL,hybrid,https://job-boards.greenhouse.io/capco/jobs/7645890
+q8_program_management,Program management roles,5,1.0,1841,Project Manager - Product Control (She/He/They),technical_program_manager,program_management,PL,hybrid,https://job-boards.greenhouse.io/capco/jobs/6973397
+q9_us_remote_python_sql,US remote jobs with python/sql preference (broad query),1,1.0,1458,Curriculum Manager - Data Science,analytics_manager,data_analytics,US,remote,https://job-boards.greenhouse.io/datacamp/jobs/7261637
+q9_us_remote_python_sql,US remote jobs with python/sql preference (broad query),2,1.0,1457,Curriculum Manager - Data Science,analytics_manager,data_analytics,US,remote,https://job-boards.greenhouse.io/datacamp/jobs/7261634
+q9_us_remote_python_sql,US remote jobs with python/sql preference (broad query),3,1.0,1456,Curriculum Manager - Data Science,analytics_manager,data_analytics,US,remote,https://job-boards.greenhouse.io/datacamp/jobs/7067243
+q9_us_remote_python_sql,US remote jobs with python/sql preference (broad query),4,1.0,1455,Curriculum Manager - Data Science,analytics_manager,data_analytics,US,remote,https://job-boards.greenhouse.io/datacamp/jobs/7531007
+q9_us_remote_python_sql,US remote jobs with python/sql preference (broad query),5,0.35,1355,"Staff Data Scientist, Marketing",data_scientist,data_science,US,remote,https://job-boards.greenhouse.io/thumbtack/jobs/7308673
+q10_gb_general,UK jobs broad preference on tech/data/finance,1,0.35,2000,Quant Trader - Equity Options,other,other,GB,onsite,https://job-boards.greenhouse.io/mavensecuritiesholdingltd/jobs/7588724
+q10_gb_general,UK jobs broad preference on tech/data/finance,2,0.35,1999,Quantitative Trading Analyst,other,other,GB,,https://job-boards.greenhouse.io/mavensecuritiesholdingltd/jobs/7582506
+q10_gb_general,UK jobs broad preference on tech/data/finance,3,1.0,1997,Python Developer - Data & Analytics Team - Options Market Making,data_analyst,data_analytics,GB,,https://job-boards.greenhouse.io/mavensecuritiesholdingltd/jobs/7163447
+q10_gb_general,UK jobs broad preference on tech/data/finance,4,0.35,1992,Portfolio Manager - European SMID cap equities,other,other,GB,,https://job-boards.greenhouse.io/mavensecuritiesholdingltd/jobs/4685116
+q10_gb_general,UK jobs broad preference on tech/data/finance,5,0.35,1991,Portfolio Manager (Europe),other,other,GB,onsite,https://job-boards.greenhouse.io/mavensecuritiesholdingltd/jobs/6196780

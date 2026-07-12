@@ -1,0 +1,241 @@
+{
+  "rows": 2000,
+  "other_rows": 400,
+  "other_pct": 20.0,
+  "counts_by_normalized_title": {
+    "analytics_director": 5,
+    "marketing_specialist": 59,
+    "healthcare_provider": 1,
+    "other": 400,
+    "software_engineer": 453,
+    "product_manager": 57,
+    "operations_specialist": 50,
+    "chief_revenue_officer": 2,
+    "accountant": 19,
+    "financial_analyst": 10,
+    "legal_counsel": 9,
+    "data_analyst": 50,
+    "systems_administrator": 8,
+    "operations_analyst": 1,
+    "product_designer": 21,
+    "account_executive": 152,
+    "alliance_manager": 18,
+    "business_development_representative": 41,
+    "customer_success_manager": 17,
+    "data_scientist": 21,
+    "sales_representative": 80,
+    "analytics_engineer": 6,
+    "account_manager": 33,
+    "consultant": 140,
+    "technical_program_manager": 13,
+    "it_support_specialist": 15,
+    "hr_business_partner": 6,
+    "data_engineer": 33,
+    "implementation_consultant": 4,
+    "implementation_coordinator": 1,
+    "content_designer": 8,
+    "general_application": 2,
+    "site_reliability_engineer": 15,
+    "analytics_manager": 18,
+    "program_analyst": 1,
+    "office_administrator": 5,
+    "solutions_architect": 24,
+    "technical_recruiter": 12,
+    "hr_generalist": 5,
+    "hr_manager": 3,
+    "frontend_engineer": 4,
+    "ml_engineer": 12,
+    "backend_engineer": 37,
+    "fullstack_engineer": 18,
+    "seo_specialist": 3,
+    "business_analyst": 63,
+    "corporate_development": 2,
+    "chief_technology_officer": 6,
+    "industry_lead": 4,
+    "enterprise_architect": 8,
+    "localization_intern": 2,
+    "investment_analyst": 2,
+    "ml_scientist": 8,
+    "devops_engineer": 13
+  },
+  "counts_by_role_family": {
+    "data_analytics": 79,
+    "marketing": 62,
+    "healthcare": 1,
+    "other": 402,
+    "software_engineering": 512,
+    "product_management": 57,
+    "operations": 58,
+    "executive_leadership": 8,
+    "finance": 31,
+    "legal": 9,
+    "it_operations": 23,
+    "design": 29,
+    "sales": 310,
+    "partnerships": 18,
+    "customer_success": 17,
+    "data_science": 21,
+    "consulting": 145,
+    "program_management": 14,
+    "hr": 14,
+    "data_engineering": 33,
+    "sre": 15,
+    "architecture": 32,
+    "recruiting": 12,
+    "machine_learning": 20,
+    "business_analysis": 63,
+    "strategy": 2,
+    "devops": 13
+  },
+  "counts_by_status": {
+    "matched": 1199,
+    "other": 400,
+    "fallback": 401
+  },
+  "rule_usage": {
+    "data_analytics_director": 1,
+    "marketing_generic": 56,
+    "healthcare_provider": 1,
+    "product_manager": 51,
+    "exec_rvp_sales": 2,
+    "finance_accounting": 14,
+    "finance_analyst": 8,
+    "legal_counsel": 9,
+    "data_analyst": 12,
+    "it_sysadmin": 8,
+    "eng_software": 155,
+    "ops_analyst": 1,
+    "design_product": 21,
+    "sales_account_exec": 152,
+    "partnerships_alliance": 18,
+    "sales_bdr": 41,
+    "csm": 17,
+    "data_scientist": 21,
+    "ops_generic": 4,
+    "sales_generic": 80,
+    "data_analytics_engineer": 3,
+    "sales_account_manager": 33,
+    "consultant_generic": 140,
+    "program_tpm": 13,
+    "it_support_specialist": 2,
+    "qa_ambiguous": 7,
+    "hrbp": 6,
+    "data_engineer": 33,
+    "consulting_implementation": 4,
+    "consulting_coordinator": 1,
+    "design_content": 8,
+    "exact_general_application": 2,
+    "it_technical_support_generic": 13,
+    "eng_sre": 15,
+    "program_analyst": 1,
+    "ops_office": 5,
+    "arch_solutions": 23,
+    "recruiting_tech": 6,
+    "hr_generalist": 5,
+    "hr_head": 3,
+    "marketing_ads": 1,
+    "ops_delivery": 10,
+    "finance_treasury": 1,
+    "eng_frontend": 4,
+    "ml_engineer": 12,
+    "arch_partner_innovation": 1,
+    "recruiting_coordinator": 1,
+    "eng_backend": 37,
+    "recruiting_generic": 5,
+    "eng_fullstack": 18,
+    "marketing_seo": 3,
+    "business_analyst": 63,
+    "strategy_corp_dev": 2,
+    "exec_cto": 6,
+    "sales_industry": 4,
+    "arch_enterprise": 8,
+    "ops_localization": 2,
+    "finance_investment": 2,
+    "ml_scientist": 8,
+    "qa_automation": 4,
+    "eng_devops": 13,
+    "product_owner": 6
+  },
+  "top_unmatched_titles": [
+    {
+      "title_clean": "Senior GTM Enablement Manager",
+      "count": 4
+    },
+    {
+      "title_clean": "Engineering Manager",
+      "count": 3
+    },
+    {
+      "title_clean": "Project Manager - Ubuntu Embedded Systems",
+      "count": 3
+    },
+    {
+      "title_clean": "Manager, AI Outcomes",
+      "count": 3
+    },
+    {
+      "title_clean": "Project Manager",
+      "count": 3
+    },
+    {
+      "title_clean": "Manager, Engineering",
+      "count": 2
+    },
+    {
+      "title_clean": "Partner Success Manager - Installations",
+      "count": 2
+    },
+    {
+      "title_clean": "Linux Enablement - Software Engineering Manager",
+      "count": 2
+    },
+    {
+      "title_clean": "AI Outcomes Manager- Central",
+      "count": 2
+    },
+    {
+      "title_clean": "AI Outcomes Manager- East",
+      "count": 2
+    },
+    {
+      "title_clean": "AI Outcomes Manager- West",
+      "count": 2
+    },
+    {
+      "title_clean": "Engineering Manager, Process Intelligence",
+      "count": 2
+    },
+    {
+      "title_clean": "Lead AI Deployment Architect",
+      "count": 2
+    },
+    {
+      "title_clean": "Manager, Cloud Security",
+      "count": 2
+    },
+    {
+      "title_clean": "Manager, Value Engineering - Nordics",
+      "count": 2
+    },
+    {
+      "title_clean": "Senior Manager, Technical Accounting & Financial Reporting",
+      "count": 2
+    },
+    {
+      "title_clean": "Services Manager",
+      "count": 2
+    },
+    {
+      "title_clean": "Curriculum Manager - Software Engineering",
+      "count": 2
+    },
+    {
+      "title_clean": "Accounting Manager, Corporate Accounting",
+      "count": 1
+    },
+    {
+      "title_clean": "Senior Manager, Health Information Management",
+      "count": 1
+    }
+  ]
+}

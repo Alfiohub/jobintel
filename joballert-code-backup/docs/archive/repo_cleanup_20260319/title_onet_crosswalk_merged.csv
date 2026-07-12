@@ -1,0 +1,4 @@
+normalized_title,onet_soc_code,onet_title,mapping_confidence,mapping_source,suggestion_source,suggestion_score,merge_decision
+manager,11-1021.00,General and Operations Managers,0.80,manual_v1,,,kept_base
+backend_engineer,15-1252.00,Software Developers,0.90,manual_v1,,,kept_base
+technical_program_manager,15-1299.08,Computer Systems Engineers/Architects,0.75,manual_v1,,,kept_base

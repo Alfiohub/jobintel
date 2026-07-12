@@ -1,0 +1,22 @@
+*** Begin Patch
+*** Update File: automation/microsaas/title_normalization.py
+@@
+-    (r"\binterested in joining our team\b|\bgeneral application\b", "general_application", "recruiting", "hr"),
++    (r"\binterested in joining our team\b|\bgeneral application\b", "general_application", "other", "hr"),
+@@
+-    (r"\bdesenvolvedor\(a\)? backend\b|\bdesenvolvedor backend\b", "backend_engineer", "backend", "engineering"),
++    (r"\bdesenvolvedor\(a\)? backend\b|\bdesenvolvedor backend\b", "backend_engineer", "software_engineering", "engineering"),
+@@
+-        "general_application",
+-        "recruiting",
++        "general_application",
++        "other",
+         "hr",
+@@
+-    (r"\bbackend engineer\b|\bbackend developer\b", "backend_engineer", "backend", "engineering"),
+-    (r"\bfrontend engineer\b|\bfrontend developer\b", "frontend_engineer", "frontend", "engineering"),
+-    (r"\bfull[ -]?stack engineer\b|\bfull[ -]?stack developer\b", "fullstack_engineer", "fullstack", "engineering"),
++    (r"\bbackend engineer\b|\bbackend developer\b", "backend_engineer", "software_engineering", "engineering"),
++    (r"\bfrontend engineer\b|\bfrontend developer\b", "frontend_engineer", "software_engineering", "engineering"),
++    (r"\bfull[ -]?stack engineer\b|\bfull[ -]?stack developer\b", "fullstack_engineer", "software_engineering", "engineering"),
+*** End Patch

@@ -1,0 +1,11 @@
+{
+  "rows_compared": 500,
+  "old_country_filled": 236,
+  "new_country_filled": 288,
+  "old_currency_filled": 0,
+  "new_currency_filled": 4,
+  "country_changed_rows": 75,
+  "currency_changed_rows": 4,
+  "diff_rows_total": 79,
+  "output_csv": "docs/review_analysis_locv5/pipeline_compare_500_v6_country_currency_changes.csv"
+}

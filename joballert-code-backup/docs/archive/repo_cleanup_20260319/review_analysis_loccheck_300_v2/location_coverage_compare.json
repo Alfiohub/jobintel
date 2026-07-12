@@ -1,0 +1,60 @@
+{
+  "before": {
+    "db": "data/jobintel_microsaas_loccheck.sqlite",
+    "total": 300,
+    "with_country": 182,
+    "with_country_pct": 60.67,
+    "no_country": 118,
+    "no_country_pct": 39.33,
+    "missing_country_by_location_type": [
+      {
+        "location_type": "remote",
+        "count": 88
+      },
+      {
+        "location_type": "hybrid",
+        "count": 24
+      },
+      {
+        "location_type": "(empty)",
+        "count": 4
+      },
+      {
+        "location_type": "onsite",
+        "count": 2
+      }
+    ]
+  },
+  "after": {
+    "db": "data/jobintel_microsaas_loccheck_v2.sqlite",
+    "total": 300,
+    "with_country": 209,
+    "with_country_pct": 69.67,
+    "no_country": 91,
+    "no_country_pct": 30.33,
+    "missing_country_by_location_type": [
+      {
+        "location_type": "remote",
+        "count": 71
+      },
+      {
+        "location_type": "hybrid",
+        "count": 16
+      },
+      {
+        "location_type": "(empty)",
+        "count": 3
+      },
+      {
+        "location_type": "onsite",
+        "count": 1
+      }
+    ]
+  },
+  "delta": {
+    "with_country": 27,
+    "with_country_pct": 9.0,
+    "no_country": -27,
+    "no_country_pct": -9.0
+  }
+}

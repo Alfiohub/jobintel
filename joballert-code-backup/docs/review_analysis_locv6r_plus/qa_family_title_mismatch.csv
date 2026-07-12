@@ -1,0 +1,174 @@
+source_job_id,url,title_clean,normalized_title,role_family,reason
+6630931,https://job-boards.greenhouse.io/omadahealth/jobs/6630931,"Accounting Manager, Corporate Accounting",manager,operations,sales_title_family_mismatch
+7565149,https://job-boards.greenhouse.io/omadahealth/jobs/7565149,"Senior Accountant, Financial Reporting & Technical Accounting",accountant,finance,sales_title_family_mismatch
+7648699,https://job-boards.greenhouse.io/omadahealth/jobs/7648699,Senior Salesforce Administrator,systems_administrator,it_operations,sales_title_family_mismatch
+7235663,https://job-boards.greenhouse.io/omadahealth/jobs/7235663,Staff Product Designer,product_designer,design,product_title_family_mismatch
+7630792,https://job-boards.greenhouse.io/smartsheet/jobs/7630792,"Director, Product Design (Remote Eligible)",product_designer,design,product_title_family_mismatch
+7592404,https://job-boards.greenhouse.io/smartsheet/jobs/7592404,Indirect Tax Accountant (Remote Elegible - Costa Rica),accountant,finance,sales_title_family_mismatch
+7603997,https://job-boards.greenhouse.io/smartsheet/jobs/7603997,Salesforce Administrator (Remote Eligible - Costa Rica),systems_administrator,it_operations,sales_title_family_mismatch
+7567092,https://job-boards.greenhouse.io/smartsheet/jobs/7567092,"Sr. Accountant, Corporate Accounting (Hybrid in Bangalore)",accountant,finance,sales_title_family_mismatch
+7105333,https://job-boards.greenhouse.io/smartsheet/jobs/7105333,"Sr. Data Scientist II, Product Analytics (Hybrid in Bangalore)",data_scientist,data_science,product_title_family_mismatch
+7102194,https://job-boards.greenhouse.io/smartsheet/jobs/7102194,"Sr. Data Scientist, Product Analytics (Hybrid in Bangalore)",data_scientist,data_science,product_title_family_mismatch
+7642923,https://job-boards.greenhouse.io/smartsheet/jobs/7642923,"Sr. Director, Product Marketing",marketing_specialist,marketing,product_title_family_mismatch
+7492226,https://job-boards.greenhouse.io/smartsheet/jobs/7492226,"Sr. Manager, Accounting (Hybrid in Bangalore)",manager,operations,sales_title_family_mismatch
+7634548,https://job-boards.greenhouse.io/smartsheet/jobs/7634548,Sr. Product Designer (Hybrid in Bangalore),product_designer,design,product_title_family_mismatch
+7571887,https://job-boards.greenhouse.io/smartsheet/jobs/7571887,Sr. Tax Accountant - International,accountant,finance,sales_title_family_mismatch
+8175044002,https://job-boards.greenhouse.io/gomotive/jobs/8175044002,Associate Systems Administrator (Salesforce),systems_administrator,it_operations,sales_title_family_mismatch
+8376465002,https://job-boards.greenhouse.io/gomotive/jobs/8376465002,Sales Data Engineering Manager,sales_representative,sales,data_title_family_mismatch
+8350176002,https://job-boards.greenhouse.io/gomotive/jobs/8350176002,"Senior Product Manager, Analytics",product_manager,product_management,data_title_family_mismatch
+8235620002,https://job-boards.greenhouse.io/gomotive/jobs/8235620002,"Senior Product Marketing Manager, México",marketing_specialist,marketing,product_title_family_mismatch
+8235467002,https://job-boards.greenhouse.io/gomotive/jobs/8235467002,Senior Product Operations Manager - International,operations_manager,operations,product_title_family_mismatch
+7784063002,https://job-boards.greenhouse.io/gomotive/jobs/7784063002,Senior Salesforce Engineer (CPQ),software_engineer,software_engineering,sales_title_family_mismatch
+8416916002,https://job-boards.greenhouse.io/gomotive/jobs/8416916002,"Strategic Product Sales Specialist, Equipment Monitoring",sales_representative,sales,product_title_family_mismatch
+5569916,https://job-boards.greenhouse.io/canonical/jobs/5569916,Accountant,accountant,finance,sales_title_family_mismatch
+4981245,https://job-boards.greenhouse.io/canonical/jobs/4981245,Graduate Product Marketing Manager,marketing_specialist,marketing,product_title_family_mismatch
+6643484,https://job-boards.greenhouse.io/canonical/jobs/6643484,Product Manager - Data,product_manager,product_management,data_title_family_mismatch
+7601064,https://job-boards.greenhouse.io/canonical/jobs/7601064,Product Marketing Manager,marketing_specialist,marketing,product_title_family_mismatch
+5326649,https://job-boards.greenhouse.io/canonical/jobs/5326649,Product Marketing Manager – IoT & Embedded Systems,marketing_specialist,marketing,product_title_family_mismatch
+5703396,https://job-boards.greenhouse.io/canonical/jobs/5703396,"Python and Kubernetes Software Engineer - Data, Workflows, AI/ML & Analytics",software_engineer,software_engineering,data_title_family_mismatch
+6180909,https://job-boards.greenhouse.io/canonical/jobs/6180909,Regional HR Manager - EMEA,manager,operations,hr_title_family_mismatch
+3830645,https://job-boards.greenhouse.io/canonical/jobs/3830645,Revenue Accountant,accountant,finance,sales_title_family_mismatch
+5830044,https://job-boards.greenhouse.io/canonical/jobs/5830044,Revenue Accounting Manager,manager,operations,sales_title_family_mismatch
+6371231,https://job-boards.greenhouse.io/canonical/jobs/6371231,Salesforce Administrator,systems_administrator,it_operations,sales_title_family_mismatch
+4582078,https://job-boards.greenhouse.io/canonical/jobs/4582078,"Salesforce/NetSuite Engineering Manager, Commercial Systems",software_engineer,software_engineering,sales_title_family_mismatch
+3109976,https://job-boards.greenhouse.io/canonical/jobs/3109976,Senior Product Marketing Manager,marketing_specialist,marketing,product_title_family_mismatch
+3014391,https://job-boards.greenhouse.io/canonical/jobs/3014391,Software Engineer - Data Infrastructure,software_engineer,software_engineering,data_title_family_mismatch
+5218601,https://job-boards.greenhouse.io/canonical/jobs/5218601,Software Engineer - Data Infrastructure - Kafka,software_engineer,software_engineering,data_title_family_mismatch
+5002072,https://job-boards.greenhouse.io/canonical/jobs/5002072,Software Engineer - Data Infrastructure - OpenSearch/ElasticSearch,software_engineer,software_engineering,data_title_family_mismatch
+7556942,https://job-boards.greenhouse.io/canonical/jobs/7556942,Systems & Controls Accountant,accountant,finance,sales_title_family_mismatch
+6793868,https://job-boards.greenhouse.io/canonical/jobs/6793868,Technical Product Marketing Manager - Cybersecurity,marketing_specialist,marketing,product_title_family_mismatch
+4521356005,https://job-boards.greenhouse.io/gleanwork/jobs/4521356005,"Data Scientist, Core Product",data_scientist,data_science,product_title_family_mismatch
+4598386005,https://job-boards.greenhouse.io/gleanwork/jobs/4598386005,"Lead Software Engineer, Product Backend",software_engineer,software_engineering,product_title_family_mismatch
+4577381005,https://job-boards.greenhouse.io/gleanwork/jobs/4577381005,Product Designer,product_designer,design,product_title_family_mismatch
+4389568005,https://job-boards.greenhouse.io/gleanwork/jobs/4389568005,Product Designer,product_designer,design,product_title_family_mismatch
+4600865005,https://job-boards.greenhouse.io/gleanwork/jobs/4600865005,"Product Design Lead, AI Products",product_designer,design,product_title_family_mismatch
+4665663005,https://job-boards.greenhouse.io/gleanwork/jobs/4665663005,Product Marketing Manager (Competitive Intelligence),marketing_specialist,marketing,product_title_family_mismatch
+4661658005,https://job-boards.greenhouse.io/gleanwork/jobs/4661658005,Product Marketing Manager (Pricing & Packaging),marketing_specialist,marketing,product_title_family_mismatch
+4665968005,https://job-boards.greenhouse.io/gleanwork/jobs/4665968005,Sales Recruiter (Contract - Bay Area),sales_representative,sales,hr_title_family_mismatch
+4666997005,https://job-boards.greenhouse.io/gleanwork/jobs/4666997005,Sales Recruiter (Contract - Nashville),sales_representative,sales,hr_title_family_mismatch
+4667002005,https://job-boards.greenhouse.io/gleanwork/jobs/4667002005,Sales Recruiter (Contract - NYC),sales_representative,sales,hr_title_family_mismatch
+4648700005,https://job-boards.greenhouse.io/gleanwork/jobs/4648700005,Senior Salesforce Developer,software_engineer,software_engineering,sales_title_family_mismatch
+4637208005,https://job-boards.greenhouse.io/gleanwork/jobs/4637208005,"Software Engineer, Data Foundations",software_engineer,software_engineering,data_title_family_mismatch
+4614706005,https://job-boards.greenhouse.io/gleanwork/jobs/4614706005,"Software Engineer, Developer Productivity",software_engineer,software_engineering,product_title_family_mismatch
+4428090005,https://job-boards.greenhouse.io/gleanwork/jobs/4428090005,"Software Engineer, Product Backend",software_engineer,software_engineering,product_title_family_mismatch
+4012744005,https://job-boards.greenhouse.io/gleanwork/jobs/4012744005,"Software Engineer, Product Backend (India)",software_engineer,software_engineering,product_title_family_mismatch
+4378974005,https://job-boards.greenhouse.io/gleanwork/jobs/4378974005,Tech Lead Manager (Full Stack) -- AI Assistant Product,manager,operations,product_title_family_mismatch
+5814154004,https://job-boards.greenhouse.io/grafanalabs/jobs/5814154004,Senior Product Counsel | Ireland | Remote,legal_counsel,legal,product_title_family_mismatch
+5814142004,https://job-boards.greenhouse.io/grafanalabs/jobs/5814142004,Senior Product Counsel | United Kingdom | Remote,legal_counsel,legal,product_title_family_mismatch
+5811263004,https://job-boards.greenhouse.io/grafanalabs/jobs/5811263004,Senior Product Counsel | United States | Remote,legal_counsel,legal,product_title_family_mismatch
+5784736004,https://job-boards.greenhouse.io/grafanalabs/jobs/5784736004,"Senior Product Marketing Manager | Canada (EST, CST) | Remote",marketing_specialist,marketing,product_title_family_mismatch
+5783881004,https://job-boards.greenhouse.io/grafanalabs/jobs/5783881004,Senior Product Marketing Manager | Germany | Remote,marketing_specialist,marketing,product_title_family_mismatch
+5783880004,https://job-boards.greenhouse.io/grafanalabs/jobs/5783880004,Senior Product Marketing Manager | Spain | Remote,marketing_specialist,marketing,product_title_family_mismatch
+5783882004,https://job-boards.greenhouse.io/grafanalabs/jobs/5783882004,Senior Product Marketing Manager | Sweden | Remote,marketing_specialist,marketing,product_title_family_mismatch
+5783879004,https://job-boards.greenhouse.io/grafanalabs/jobs/5783879004,Senior Product Marketing Manager | United Kingdom | Remote,marketing_specialist,marketing,product_title_family_mismatch
+5783877004,https://job-boards.greenhouse.io/grafanalabs/jobs/5783877004,"Senior Product Marketing Manager | USA (EST, CST) | Remote",marketing_specialist,marketing,product_title_family_mismatch
+5735539004,https://job-boards.greenhouse.io/grafanalabs/jobs/5735539004,Senior Salesforce CPQ Developer| United States |Remote,software_engineer,software_engineering,sales_title_family_mismatch
+5802047004,https://job-boards.greenhouse.io/grafanalabs/jobs/5802047004,"Senior Software Engineer - Grafana Databases, Managed Services | Canada | Remote",software_engineer,software_engineering,data_title_family_mismatch
+5802045004,https://job-boards.greenhouse.io/grafanalabs/jobs/5802045004,"Senior Software Engineer - Grafana Databases, Managed Services | USA | Remote",software_engineer,software_engineering,data_title_family_mismatch
+5808863004,https://job-boards.greenhouse.io/grafanalabs/jobs/5808863004,"Senior Software Engineer - Grafana Databases, SRE | Germany | Remote",site_reliability_engineer,sre,data_title_family_mismatch
+5808860004,https://job-boards.greenhouse.io/grafanalabs/jobs/5808860004,"Senior Software Engineer - Grafana Databases, SRE | Spain | Remote",site_reliability_engineer,sre,data_title_family_mismatch
+5808861004,https://job-boards.greenhouse.io/grafanalabs/jobs/5808861004,"Senior Software Engineer - Grafana Databases, SRE | Sweden | Remote",site_reliability_engineer,sre,data_title_family_mismatch
+5808862004,https://job-boards.greenhouse.io/grafanalabs/jobs/5808862004,"Senior Software Engineer - Grafana Databases, SRE | United Kingdom | Remote",site_reliability_engineer,sre,data_title_family_mismatch
+5807088004,https://job-boards.greenhouse.io/grafanalabs/jobs/5807088004,Staff Backend Engineer - Databases Pyroscope | Canada | Remote,backend_engineer,backend,data_title_family_mismatch
+5807096004,https://job-boards.greenhouse.io/grafanalabs/jobs/5807096004,Staff Backend Engineer - Databases Pyroscope | US | Remote,backend_engineer,backend,data_title_family_mismatch
+5802016004,https://job-boards.greenhouse.io/grafanalabs/jobs/5802016004,"Staff Software Engineer - Grafana Databases, Managed Services | Canada | Remote",software_engineer,software_engineering,data_title_family_mismatch
+5802014004,https://job-boards.greenhouse.io/grafanalabs/jobs/5802014004,"Staff Software Engineer - Grafana Databases, Managed Services | USA | Remote",software_engineer,software_engineering,data_title_family_mismatch
+5811992004,https://job-boards.greenhouse.io/grafanalabs/jobs/5811992004,Strategic Finance & Analytics Manager | USA | Remote,financial_analyst,finance,data_title_family_mismatch
+7601490003,https://job-boards.greenhouse.io/truebill/jobs/7601490003,"Senior Full Stack Engineer, Account Linking",fullstack_engineer,fullstack,sales_title_family_mismatch
+7637297003,https://job-boards.greenhouse.io/truebill/jobs/7637297003,"Senior Full Stack Engineer, AI & Data Products",fullstack_engineer,fullstack,product_title_family_mismatch
+7590626003,https://job-boards.greenhouse.io/truebill/jobs/7590626003,"Senior Full Stack Engineer, Credit Products",fullstack_engineer,fullstack,product_title_family_mismatch
+7641073003,https://job-boards.greenhouse.io/truebill/jobs/7641073003,"Senior Full Stack Engineer, Product",fullstack_engineer,fullstack,product_title_family_mismatch
+7501181003,https://job-boards.greenhouse.io/truebill/jobs/7501181003,"Senior ML Engineer, Product",ml_engineer,machine_learning,product_title_family_mismatch
+7641075003,https://job-boards.greenhouse.io/truebill/jobs/7641075003,"Senior Product Engineer, Compass",software_engineer,software_engineering,product_title_family_mismatch
+7583320003,https://job-boards.greenhouse.io/truebill/jobs/7583320003,"Senior Product Engineer, Rocket Ready",software_engineer,software_engineering,product_title_family_mismatch
+6657749003,https://job-boards.greenhouse.io/truebill/jobs/6657749003,"Staff ML Engineer, Product",ml_engineer,machine_learning,product_title_family_mismatch
+7598590003,https://job-boards.greenhouse.io/truebill/jobs/7598590003,"Team Leader, Data Analytics - Product",data_analyst,data_analytics,product_title_family_mismatch
+7619953003,https://job-boards.greenhouse.io/truebill/jobs/7619953003,"Technical Program Manager, Data",technical_program_manager,program_management,data_title_family_mismatch
+7166369,https://job-boards.greenhouse.io/gofundme/jobs/7166369,Principal Product Marketing Manager,marketing_specialist,marketing,product_title_family_mismatch
+6081057,https://job-boards.greenhouse.io/gofundme/jobs/6081057,"Principal Product Marketing Manager, Nonprofits",marketing_specialist,marketing,product_title_family_mismatch
+7298988,https://job-boards.greenhouse.io/gofundme/jobs/7298988,"Product Marketing Lead, Nonprofits",marketing_specialist,marketing,product_title_family_mismatch
+7398239,https://job-boards.greenhouse.io/gofundme/jobs/7398239,Senior Product Designer,product_designer,design,product_title_family_mismatch
+7584501,https://job-boards.greenhouse.io/gofundme/jobs/7584501,Senior Revenue Accountant,accountant,finance,sales_title_family_mismatch
+7592223,https://job-boards.greenhouse.io/gofundme/jobs/7592223,Staff Product Designer,product_designer,design,product_title_family_mismatch
+8425563002,https://job-boards.greenhouse.io/levio/jobs/8425563002,HRIS Business Analyst,business_analyst,business_analysis,hr_title_family_mismatch
+8425530002,https://job-boards.greenhouse.io/levio/jobs/8425530002,HRIS PMO Project Manager,manager,operations,hr_title_family_mismatch
+7287511,https://job-boards.greenhouse.io/webflow/jobs/7287511,"Director of Product, Infrastructure and Developer Productivity",software_engineer,software_engineering,product_title_family_mismatch
+7648674,https://job-boards.greenhouse.io/webflow/jobs/7648674,"Engineering Manager, Datastores",software_engineer,software_engineering,data_title_family_mismatch
+7293932,https://job-boards.greenhouse.io/webflow/jobs/7293932,Senior Database Engineer,software_engineer,software_engineering,data_title_family_mismatch
+7658245,https://job-boards.greenhouse.io/webflow/jobs/7658245,"Senior Product Designer, Analyze",product_designer,design,product_title_family_mismatch
+7558007,https://job-boards.greenhouse.io/webflow/jobs/7558007,"Senior Product Designer, Lifecycle",product_designer,design,product_title_family_mismatch
+7658221,https://job-boards.greenhouse.io/webflow/jobs/7658221,Senior Product Design Manager,product_designer,design,product_title_family_mismatch
+7624566,https://job-boards.greenhouse.io/webflow/jobs/7624566,"Staff Product Designer, New Products",product_designer,design,product_title_family_mismatch
+7271901,https://job-boards.greenhouse.io/webflow/jobs/7271901,"Webflow Lead Solutions Architect, Strategic Accounts",solutions_architect,architecture,sales_title_family_mismatch
+6605731003,https://job-boards.greenhouse.io/celonis/jobs/6605731003?gh_jid=6605731003,Application Product Manager - Accounts Payable,product_manager,product_management,sales_title_family_mismatch
+7627624003,https://job-boards.greenhouse.io/celonis/jobs/7627624003?gh_jid=7627624003,Associate Value Engineer (AI-Driven Data Science & Analytics) - Orbit Program,software_engineer,software_engineering,data_title_family_mismatch
+7627647003,https://job-boards.greenhouse.io/celonis/jobs/7627647003?gh_jid=7627647003,Associate Value Engineer (AI-Driven Data Science & Analytics) - Orbit Program,software_engineer,software_engineering,data_title_family_mismatch
+7627604003,https://job-boards.greenhouse.io/celonis/jobs/7627604003?gh_jid=7627604003,Corporate Accounting Manager,manager,operations,sales_title_family_mismatch
+7532064003,https://job-boards.greenhouse.io/celonis/jobs/7532064003?gh_jid=7532064003,Lead Consultant - Data Science & Artificial Intelligence,consultant,consulting,data_title_family_mismatch
+7633877003,https://job-boards.greenhouse.io/celonis/jobs/7633877003?gh_jid=7633877003,Lead Solution Consultant (Data & AI) - Financial Services and Insurance,consultant,consulting,data_title_family_mismatch
+7540471003,https://job-boards.greenhouse.io/celonis/jobs/7540471003?gh_jid=7540471003,Principal Product Manager - Celonis Data Core,product_manager,product_management,data_title_family_mismatch
+7540468003,https://job-boards.greenhouse.io/celonis/jobs/7540468003?gh_jid=7540468003,Principal Product Manager - Celonis Data Core,product_manager,product_management,data_title_family_mismatch
+7566428003,https://job-boards.greenhouse.io/celonis/jobs/7566428003?gh_jid=7566428003,Product Data Scientist,data_scientist,data_science,product_title_family_mismatch
+7600432003,https://job-boards.greenhouse.io/celonis/jobs/7600432003?gh_jid=7600432003,Product Engineer Sustainability Intern,software_engineer,software_engineering,product_title_family_mismatch
+7594944003,https://job-boards.greenhouse.io/celonis/jobs/7594944003?gh_jid=7594944003,Senior Consultant - Data Analytics and Supply Chain Transformation,consultant,consulting,data_title_family_mismatch
+7614040003,https://job-boards.greenhouse.io/celonis/jobs/7614040003?gh_jid=7614040003,Senior Management Consultant (AI & Data) - Public Sector,consultant,consulting,data_title_family_mismatch
+6685374003,https://job-boards.greenhouse.io/celonis/jobs/6685374003?gh_jid=6685374003,"Senior Manager, Technical Accounting & Financial Reporting",manager,operations,sales_title_family_mismatch
+7592901003,https://job-boards.greenhouse.io/celonis/jobs/7592901003?gh_jid=7592901003,"Senior Manager, Technical Accounting & Financial Reporting",manager,operations,sales_title_family_mismatch
+6610627003,https://job-boards.greenhouse.io/celonis/jobs/6610627003?gh_jid=6610627003,Senior Product Marketing Manager - IT Modernization,marketing_specialist,marketing,product_title_family_mismatch
+7639697003,https://job-boards.greenhouse.io/celonis/jobs/7639697003?gh_jid=7639697003,Senior Product Operations Manager,operations_manager,operations,product_title_family_mismatch
+7612653003,https://job-boards.greenhouse.io/celonis/jobs/7612653003?gh_jid=7612653003,Senior Product Operations Manager,operations_manager,operations,product_title_family_mismatch
+6554352003,https://job-boards.greenhouse.io/celonis/jobs/6554352003?gh_jid=6554352003,Senior Product Security Engineer,software_engineer,software_engineering,product_title_family_mismatch
+6320587003,https://job-boards.greenhouse.io/celonis/jobs/6320587003?gh_jid=6320587003,Senior Services Consultant (AI & Process Analytics),consultant,consulting,data_title_family_mismatch
+7629335003,https://job-boards.greenhouse.io/celonis/jobs/7629335003?gh_jid=7629335003,Senior Threat Detection Engineer,software_engineer,software_engineering,hr_title_family_mismatch
+7523069003,https://job-boards.greenhouse.io/celonis/jobs/7523069003?gh_jid=7523069003,Senior Threat Detection Engineer,software_engineer,software_engineering,hr_title_family_mismatch
+7614050003,https://job-boards.greenhouse.io/celonis/jobs/7614050003?gh_jid=7614050003,Senior Value Consultant - Data Analytics & Supply Chain Transformation,consultant,consulting,data_title_family_mismatch
+6548060003,https://job-boards.greenhouse.io/celonis/jobs/6548060003?gh_jid=6548060003,"Staff Software Engineer, Data Platform",software_engineer,software_engineering,data_title_family_mismatch
+7278486,https://job-boards.greenhouse.io/thumbtack/jobs/7278486,"Head of Brand Production Studio, Brand Marketing",marketing_specialist,marketing,product_title_family_mismatch
+3073599,https://job-boards.greenhouse.io/appier/jobs/3073599,Account Operations Intern,operations_specialist,operations,sales_title_family_mismatch
+6753727,https://job-boards.greenhouse.io/appier/jobs/6753727,"Account Operations Intern, Seoul",operations_specialist,operations,sales_title_family_mismatch
+6958296,https://job-boards.greenhouse.io/appier/jobs/6958296,HR Employee Experience Senior Manager / Associate Director,manager,operations,hr_title_family_mismatch
+7609851,https://job-boards.greenhouse.io/appier/jobs/7609851,HR Operations & Global Mobility Specialist,operations_specialist,operations,hr_title_family_mismatch
+7192666,https://job-boards.greenhouse.io/appier/jobs/7192666,Product Marketing Associate (Personalization/Data Cloud),marketing_specialist,marketing,product_title_family_mismatch
+5476743,https://job-boards.greenhouse.io/appier/jobs/5476743,"Senior Software Engineer, Data Backend (Ad Cloud)",software_engineer,software_engineering,data_title_family_mismatch
+6170956,https://job-boards.greenhouse.io/appier/jobs/6170956,"Senior Software Engineer, Data Backend(Data Platform)",software_engineer,software_engineering,data_title_family_mismatch
+7019766,https://job-boards.greenhouse.io/appier/jobs/7019766,"Senior Software Engineer, Data Backend EDP (Enterprise Data Platform) - Tokyo,Japan",software_engineer,software_engineering,data_title_family_mismatch
+7525624,https://job-boards.greenhouse.io/appier/jobs/7525624,Senior/Staff Product designer,product_designer,design,product_title_family_mismatch
+7089272,https://job-boards.greenhouse.io/appier/jobs/7089272,"Software Engineer, Data Backend (Ad Cloud)",software_engineer,software_engineering,data_title_family_mismatch
+6523646,https://job-boards.greenhouse.io/appier/jobs/6523646,"Staff Software Engineer, Data Backend - Tokyo, Japan",software_engineer,software_engineering,data_title_family_mismatch
+7083060,https://job-boards.greenhouse.io/datacamp/jobs/7083060,Product Marketing Manager,marketing_specialist,marketing,product_title_family_mismatch
+5748962004,https://job-boards.greenhouse.io/kalepa/jobs/5748962004,Senior Product Designer,product_designer,design,product_title_family_mismatch
+5737445004,https://job-boards.greenhouse.io/kalepa/jobs/5737445004,Staff Backend Engineer - New Products (Europe),backend_engineer,backend,product_title_family_mismatch
+5739150004,https://job-boards.greenhouse.io/kalepa/jobs/5739150004,Staff Backend Engineer - New Products (New York),backend_engineer,backend,product_title_family_mismatch
+5739149004,https://job-boards.greenhouse.io/kalepa/jobs/5739149004,Staff Backend Engineer - New Products (USA),backend_engineer,backend,product_title_family_mismatch
+7654880,https://job-boards.greenhouse.io/capco/jobs/7654880,Actuarial Data Consultant,consultant,consulting,data_title_family_mismatch
+7612097,https://job-boards.greenhouse.io/capco/jobs/7612097,Actuarial Data Consultant,consultant,consulting,data_title_family_mismatch
+7585221,https://job-boards.greenhouse.io/capco/jobs/7585221,Application Support Engineer with Salesforce,software_engineer,software_engineering,sales_title_family_mismatch
+7581025,https://job-boards.greenhouse.io/capco/jobs/7581025,Applied AI & Analytics - Principal Consultant,consultant,consulting,data_title_family_mismatch
+7443994,https://job-boards.greenhouse.io/capco/jobs/7443994,Banco de Talentos - Product Owner,product_manager,product_management,hr_title_family_mismatch
+7573514,https://job-boards.greenhouse.io/capco/jobs/7573514,BA- Reference Data - Mumbai,business_analyst,business_analysis,data_title_family_mismatch
+7217669,https://job-boards.greenhouse.io/capco/jobs/7217669,Business Analyst - Product Control/Financial Accounting (She/He/They),business_analyst,business_analysis,product_title_family_mismatch
+7215592,https://job-boards.greenhouse.io/capco/jobs/7215592,Business Analyst - Product Control/ FX products (She/He/They),business_analyst,business_analysis,product_title_family_mismatch
+7594438,https://job-boards.greenhouse.io/capco/jobs/7594438,Business Analyst - Product Control/ Regulatory Reporting (She/He/They),business_analyst,business_analysis,product_title_family_mismatch
+7573533,https://job-boards.greenhouse.io/capco/jobs/7573533,Consultant | AI Product Analyst,consultant,consulting,product_title_family_mismatch
+7522164,https://job-boards.greenhouse.io/capco/jobs/7522164,Consultant | Data Analyst,consultant,consulting,data_title_family_mismatch
+7278861,https://job-boards.greenhouse.io/capco/jobs/7278861,Consultant / Senior Consultant / Principal Consultant - Data,consultant,consulting,data_title_family_mismatch
+7570849,https://job-boards.greenhouse.io/capco/jobs/7570849,Data & AI Strategy Consultant - Manager/Senior Manager,consultant,consulting,data_title_family_mismatch
+7549000,https://job-boards.greenhouse.io/capco/jobs/7549000,Data Engineer/Consultant (Databricks),consultant,consulting,data_title_family_mismatch
+7526533,https://job-boards.greenhouse.io/capco/jobs/7526533,Data Management Consultant,consultant,consulting,data_title_family_mismatch
+6247156,https://job-boards.greenhouse.io/capco/jobs/6247156,Data Management Consultant (Banking/Financial Service),consultant,consulting,data_title_family_mismatch
+7529761,https://job-boards.greenhouse.io/capco/jobs/7529761,Data Modelling Consultant - Riyadh,consultant,consulting,data_title_family_mismatch
+7558759,https://job-boards.greenhouse.io/capco/jobs/7558759,Data Product Manager Principal Consultant,consultant,consulting,product_title_family_mismatch
+7610059,https://job-boards.greenhouse.io/capco/jobs/7610059,Engenheiro(a) Sênior de Data & Analytics (Microsoft Fabric & Power BI) — Marketing Analytics | Inglês,marketing_specialist,marketing,data_title_family_mismatch
+7664921,https://job-boards.greenhouse.io/capco/jobs/7664921,HR Business Analyst - 6 Month FTC,business_analyst,business_analysis,hr_title_family_mismatch
+7573808,https://job-boards.greenhouse.io/capco/jobs/7573808,Lead Data Analytics Consultant,consultant,consulting,data_title_family_mismatch
+7593670,https://job-boards.greenhouse.io/capco/jobs/7593670,Management Consultant: Data Analytics Lead – Managing Principal (Director),consultant,consulting,data_title_family_mismatch
+7641148,https://job-boards.greenhouse.io/capco/jobs/7641148,MuleSoft and Salesforce Developer,software_engineer,software_engineering,sales_title_family_mismatch
+7431318,https://job-boards.greenhouse.io/capco/jobs/7431318,Program Manager | Digital Product & Wealth Management,manager,operations,product_title_family_mismatch
+6973397,https://job-boards.greenhouse.io/capco/jobs/6973397,Project Manager - Product Control (She/He/They),manager,operations,product_title_family_mismatch
+7493742,https://job-boards.greenhouse.io/capco/jobs/7493742,Salesforce Developer - Remoto,software_engineer,software_engineering,sales_title_family_mismatch
+7559815,https://job-boards.greenhouse.io/capco/jobs/7559815,Salesforce Developer with Aura/ Lightning - Bangalore,software_engineer,software_engineering,sales_title_family_mismatch
+7532921,https://job-boards.greenhouse.io/capco/jobs/7532921,Senior Consultant | Data Analyst,consultant,consulting,data_title_family_mismatch
+7597716,https://job-boards.greenhouse.io/capco/jobs/7597716,Senior Consultant - Data Modeler,consultant,consulting,data_title_family_mismatch
+7573811,https://job-boards.greenhouse.io/capco/jobs/7573811,Senior Data Analytics Consultant,consultant,consulting,data_title_family_mismatch
+7570751,https://job-boards.greenhouse.io/capco/jobs/7570751,Senior Data Modelling Consultant,consultant,consulting,data_title_family_mismatch
+7567091,https://job-boards.greenhouse.io/capco/jobs/7567091,Senior DevOps Engineer - AI Products (She/ He/ They),devops_engineer,devops,product_title_family_mismatch

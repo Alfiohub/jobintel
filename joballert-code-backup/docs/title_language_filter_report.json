@@ -1,0 +1,530 @@
+{
+  "input_path": "data/ner/phase1_greenhouse/all_greenhouse_jobs_en.jsonl",
+  "rows_total": 81911,
+  "rows_with_title": 81911,
+  "rows_skipped_no_title": 0,
+  "rows_en": 81616,
+  "rows_non_en": 201,
+  "rows_unknown": 94,
+  "pct_en": 99.64,
+  "pct_non_en": 0.25,
+  "pct_unknown": 0.11,
+  "policy": {
+    "language_hints_first": true,
+    "detector": "lingua-language-detector",
+    "candidate_languages": [
+      "ENGLISH",
+      "GERMAN",
+      "FRENCH",
+      "ITALIAN",
+      "SPANISH",
+      "DUTCH",
+      "PORTUGUESE"
+    ],
+    "minimum_relative_distance": 0.3,
+    "minimum_confidence": 0.55,
+    "non_en_heuristics": [
+      "\\bm\\s*-\\s*w\\s*-\\s*d\\b",
+      "\\bfür\\b",
+      "\\bund\\b",
+      "\\bmitarbeiter\\b",
+      "\\bmechaniker\\b",
+      "\\blagerlogistik\\b",
+      "\\bmechatroniker\\b"
+    ],
+    "notes": "Prefer conservative unknown/non_en over false EN classifications."
+  },
+  "top_50_non_en_titles": [
+    {
+      "title": "Brand Ambassador (Evenementen)",
+      "count": 6
+    },
+    {
+      "title": "Business Intelligence Analyst - Hìbrido CDMX",
+      "count": 3
+    },
+    {
+      "title": "Técnico en Mantenimiento III",
+      "count": 3
+    },
+    {
+      "title": "Lead Recruiter Sales (x/f/m)",
+      "count": 2
+    },
+    {
+      "title": "Brand Ambassador (Events)",
+      "count": 2
+    },
+    {
+      "title": "KI-Trainer:in & -Consultant (m/w/d)",
+      "count": 2
+    },
+    {
+      "title": "Senior Data Scientist",
+      "count": 2
+    },
+    {
+      "title": "Initiativbewerbung / Initiative Application - Mediabrands",
+      "count": 2
+    },
+    {
+      "title": "Senior Product Owner",
+      "count": 2
+    },
+    {
+      "title": "Industrial Engineer Holzbautechnik (m/w/d)",
+      "count": 2
+    },
+    {
+      "title": "Senior Architekt (m/w/d)",
+      "count": 2
+    },
+    {
+      "title": "Senior Structural Engineer (m/w/d)",
+      "count": 2
+    },
+    {
+      "title": "Account Executive, Mid-Market",
+      "count": 1
+    },
+    {
+      "title": "Chief of Staff to the Managing Director Germany (x/f/m)",
+      "count": 1
+    },
+    {
+      "title": "Engineering Manager - Observability & Reliability Engineering Obsession (x/f/m)",
+      "count": 1
+    },
+    {
+      "title": "Medical Expert (x/f/m)",
+      "count": 1
+    },
+    {
+      "title": "Patient Growth Marketing Manager (x/f/m)",
+      "count": 1
+    },
+    {
+      "title": "Senior ML Ops Engineer (x/f/m)",
+      "count": 1
+    },
+    {
+      "title": "Workplace Experience Lead (x/f/m)",
+      "count": 1
+    },
+    {
+      "title": "Brand Ambassador NL (Telefonisch)",
+      "count": 1
+    },
+    {
+      "title": "Sales Representative",
+      "count": 1
+    },
+    {
+      "title": "Telesales agent",
+      "count": 1
+    },
+    {
+      "title": "Verkoper (Vlaanderen)",
+      "count": 1
+    },
+    {
+      "title": "Operations Associate (20/25 Hours) - Via Del Babuino, Rome",
+      "count": 1
+    },
+    {
+      "title": "Sales Associate - Via Del Babuino, Rome",
+      "count": 1
+    },
+    {
+      "title": "Chef de produit senior",
+      "count": 1
+    },
+    {
+      "title": "Chef.fe de produit senior",
+      "count": 1
+    },
+    {
+      "title": "Développeur/développeuse de logiciel principal(e)",
+      "count": 1
+    },
+    {
+      "title": "Développeur/développeuse de logiciels principal(e)",
+      "count": 1
+    },
+    {
+      "title": "Développeur/Développeuse de logiciels senior",
+      "count": 1
+    },
+    {
+      "title": "Développeur/développeuse logiciel",
+      "count": 1
+    },
+    {
+      "title": "Développeur/développeuse logiciel senior",
+      "count": 1
+    },
+    {
+      "title": "Développeur/développeuse senior, plateforme",
+      "count": 1
+    },
+    {
+      "title": "Gestionnaire, développement logiciel (GO)",
+      "count": 1
+    },
+    {
+      "title": "Gestionnaire en comptabilité",
+      "count": 1
+    },
+    {
+      "title": "Responsable des comptes partenaires",
+      "count": 1
+    },
+    {
+      "title": "Responsable du développement logiciel - Facturation",
+      "count": 1
+    },
+    {
+      "title": "Responsables des comptes fournisseurs",
+      "count": 1
+    },
+    {
+      "title": "Spécialiste de la mise en œuvre du programme Microsoft",
+      "count": 1
+    },
+    {
+      "title": "Data Analyst - Casablanca",
+      "count": 1
+    },
+    {
+      "title": "Customer Success Champion - on site",
+      "count": 1
+    },
+    {
+      "title": "Senior Machine Learning Engineer",
+      "count": 1
+    },
+    {
+      "title": "Business Development Representative",
+      "count": 1
+    },
+    {
+      "title": "Growth Manager",
+      "count": 1
+    },
+    {
+      "title": "Software Engineer I -  Development Program 2026",
+      "count": 1
+    },
+    {
+      "title": "(Associate) Consultant (m/w/d) CRM & Service Transformation",
+      "count": 1
+    },
+    {
+      "title": "(Associate) Consultant (m/w/d) Customer Experience Strategy",
+      "count": 1
+    },
+    {
+      "title": "(Associate) Consultant (m/w/d) Public Sector – Digitale Transformation mit SAP",
+      "count": 1
+    },
+    {
+      "title": "Senior Consultant / Manager (m/w/d) Customer Experience Strategy",
+      "count": 1
+    },
+    {
+      "title": "Senior Consultant/Manager (m/w/d) Service Transformation",
+      "count": 1
+    }
+  ],
+  "top_50_unknown_titles": [
+    {
+      "title": "Manager, Account Management SMB",
+      "count": 2
+    },
+    {
+      "title": "Lead Project Manager",
+      "count": 1
+    },
+    {
+      "title": "Fleet Specialist",
+      "count": 1
+    },
+    {
+      "title": "Sales Associate_도산 플래그십",
+      "count": 1
+    },
+    {
+      "title": "Sales Associate_한남점(FT/PT30)",
+      "count": 1
+    },
+    {
+      "title": "Store Manager (Future Talent)",
+      "count": 1
+    },
+    {
+      "title": "Frontend Engineer",
+      "count": 1
+    },
+    {
+      "title": "CXオペレーションサポート",
+      "count": 1
+    },
+    {
+      "title": "Director Tax",
+      "count": 1
+    },
+    {
+      "title": "Principal I, Program Management - Retail Program",
+      "count": 1
+    },
+    {
+      "title": "Principal Product Manager",
+      "count": 1
+    },
+    {
+      "title": "Product Manager II (Advertiser Acquisition Product)",
+      "count": 1
+    },
+    {
+      "title": "Senior Data Analyst (Coupang Eats)",
+      "count": 1
+    },
+    {
+      "title": "Senior Incident Specialist",
+      "count": 1
+    },
+    {
+      "title": "Senior Principal, Field Sales",
+      "count": 1
+    },
+    {
+      "title": "WFM Analyst",
+      "count": 1
+    },
+    {
+      "title": "プロデューサー、アニメコープロダクション",
+      "count": 1
+    },
+    {
+      "title": "シニア・プロデューサー、アニメコープロダクション",
+      "count": 1
+    },
+    {
+      "title": "アソシエイト・プロデューサー、アニメコープロダクション",
+      "count": 1
+    },
+    {
+      "title": "Partner Solutions Architect",
+      "count": 1
+    },
+    {
+      "title": "SAP FI Developer",
+      "count": 1
+    },
+    {
+      "title": "SAP MM Consultant",
+      "count": 1
+    },
+    {
+      "title": "Senior PP Consultant",
+      "count": 1
+    },
+    {
+      "title": "クライアントオンボーディング・アソシエイト",
+      "count": 1
+    },
+    {
+      "title": "口座開設手続きサポート",
+      "count": 1
+    },
+    {
+      "title": "クライアントサービス担当者",
+      "count": 1
+    },
+    {
+      "title": "Sales Manager, Tokyo - Japan",
+      "count": 1
+    },
+    {
+      "title": "[Finance Div.] 연결회계팀원 (3~8년 / 계약직)",
+      "count": 1
+    },
+    {
+      "title": "[HR Div.] 자회사 HR Specialist (8년 이상)",
+      "count": 1
+    },
+    {
+      "title": "[Infra Div.] IT 구매 및 경영 지원 담당자 (2년 이상 / 계약직)",
+      "count": 1
+    },
+    {
+      "title": "[Space & Property Center] 용인 정글캠퍼스 편의시설 및 운영지원 담당자 (2년 이상 / 계약직)",
+      "count": 1
+    },
+    {
+      "title": "Lead Store Advisor, Tokyo Ginza",
+      "count": 1
+    },
+    {
+      "title": "Store Advisor, Hannam Store",
+      "count": 1
+    },
+    {
+      "title": "Store Advisor, The Hyundai Seoul",
+      "count": 1
+    },
+    {
+      "title": "Store Advisor, Tokyo Ginza",
+      "count": 1
+    },
+    {
+      "title": "Product PMO",
+      "count": 1
+    },
+    {
+      "title": "[PUBG STUDIOS] Animator - PUBG: BLINDSPOT (5년 이상)",
+      "count": 1
+    },
+    {
+      "title": "[PUBG STUDIOS] Client Programmer (Game Content) - Project Uropa (2년 이상)",
+      "count": 1
+    },
+    {
+      "title": "[PUBG STUDIOS] Client Programmer (Gameplay) - Project Uropa (3년 이상)",
+      "count": 1
+    },
+    {
+      "title": "[PUBG STUDIOS] Client Programmer (Mobile Platform & Outgame System) - Project Uropa (3년 이상)",
+      "count": 1
+    },
+    {
+      "title": "[PUBG STUDIOS] Game Programmer - PUBG: BLINDSPOT (3년 이상)",
+      "count": 1
+    },
+    {
+      "title": "[PUBG STUDIOS] Level Designer - PUBG: BLINDSPOT (3년 이상)",
+      "count": 1
+    },
+    {
+      "title": "[PUBG STUDIOS] TA - Project Uropa (5년 이상)",
+      "count": 1
+    },
+    {
+      "title": "Medical Assistant / 医疗助理",
+      "count": 1
+    },
+    {
+      "title": "プラットフォームサポートエンジニア",
+      "count": 1
+    },
+    {
+      "title": "Editorial Manager - PlayStation Store",
+      "count": 1
+    },
+    {
+      "title": "ゲームプレイプログラマー・Gameplay Programmer/Team ASOBI",
+      "count": 1
+    },
+    {
+      "title": "【ITで支えるPlayStationの未来】業務システムアナリスト/アーキテクト（コーポレート領域)",
+      "count": 1
+    },
+    {
+      "title": "ITサポート チームリード (グローバル連携の推進)",
+      "count": 1
+    },
+    {
+      "title": "ITサポート マネージャー (グローバル連携の推進)",
+      "count": 1
+    }
+  ],
+  "top_reason_counts": [
+    {
+      "reason": "hint_en",
+      "count": 81560
+    },
+    {
+      "reason": "hint_non_en",
+      "count": 201
+    },
+    {
+      "reason": "unknown_detector_none",
+      "count": 65
+    },
+    {
+      "reason": "unknown_short_or_ambiguous",
+      "count": 21
+    },
+    {
+      "reason": "unknown_low_confidence_0.54",
+      "count": 5
+    },
+    {
+      "reason": "detector_english_0.95",
+      "count": 4
+    },
+    {
+      "reason": "detector_english_0.63",
+      "count": 3
+    },
+    {
+      "reason": "detector_english_0.77",
+      "count": 3
+    },
+    {
+      "reason": "detector_english_0.59",
+      "count": 3
+    },
+    {
+      "reason": "detector_english_0.82",
+      "count": 3
+    },
+    {
+      "reason": "detector_english_0.75",
+      "count": 3
+    },
+    {
+      "reason": "detector_english_0.91",
+      "count": 3
+    },
+    {
+      "reason": "detector_english_0.60",
+      "count": 3
+    },
+    {
+      "reason": "detector_english_0.76",
+      "count": 2
+    },
+    {
+      "reason": "detector_english_0.79",
+      "count": 2
+    },
+    {
+      "reason": "detector_english_0.93",
+      "count": 2
+    },
+    {
+      "reason": "detector_english_0.65",
+      "count": 2
+    },
+    {
+      "reason": "detector_english_0.96",
+      "count": 2
+    },
+    {
+      "reason": "detector_english_0.68",
+      "count": 2
+    },
+    {
+      "reason": "detector_english_0.74",
+      "count": 2
+    }
+  ],
+  "outputs": {
+    "en_titles_txt": "data/titles/all_greenhouse_titles_en_filtered.txt",
+    "non_en_titles_txt": "data/titles/all_greenhouse_titles_non_en.txt",
+    "unknown_titles_txt": "data/titles/all_greenhouse_titles_unknown.txt",
+    "decisions_csv": "docs/title_language_filter_decisions.csv",
+    "decisions_jsonl": "docs/title_language_filter_decisions.jsonl"
+  }
+}

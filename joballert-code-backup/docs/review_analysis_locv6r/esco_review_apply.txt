@@ -1,0 +1,9 @@
+ESCO Crosswalk Review Apply Report
+DB: data/jobintel_microsaas_loccheck_2k_v6r_plus.sqlite
+Queue: docs/esco_crosswalk_review_queue.csv
+Dry-run: 1
+Touched normalized titles: 12
+
+Stats:
+- queue_rows: 12
+- updates: 12

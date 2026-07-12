@@ -1,0 +1,3 @@
+rows=2000
+other_rows=174
+other_pct=8.7

@@ -1,0 +1,20 @@
+Review Analysis Summary
+Input: docs/archive/20260324_mvp_cleanup/top_level/gold_eval_set_v2_en_locv6r_autolabeled.csv
+Total rows: 801
+Total review rows: 319
+
+Counts By Category:
+- too_many_core_fields_missing: 319
+- low_confidence: 181
+
+Counts By Primary Review Category:
+- low_confidence: 181
+- too_many_core_fields_missing: 138
+
+Top Category Combinations:
+- low_confidence|too_many_core_fields_missing: 181
+- too_many_core_fields_missing: 138
+
+Wrote: docs/review_analysis_locv6r/review_cases.csv
+Wrote: docs/review_analysis_locv6r/review_summary.json
+Per-primary CSV files: 2

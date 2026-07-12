@@ -1,0 +1,28 @@
+{
+  "db": "data/jobintel_microsaas_loccheck_2k_v6r_plus.sqlite",
+  "dry_run": false,
+  "crosswalk_titles_total": 33,
+  "crosswalk_titles_mapped": 26,
+  "crosswalk_titles_keep_separate": 7,
+  "jobs_before_total": 2000,
+  "jobs_before_mapped": 1341,
+  "jobs_after_total": 2000,
+  "jobs_after_mapped": 1417,
+  "extraction_cache_before_total": 1983,
+  "extraction_cache_before_mapped": 1327,
+  "extraction_cache_after_total": 1983,
+  "extraction_cache_after_mapped": 1402,
+  "jobs_updated_mapped": 736,
+  "jobs_cleared": 338,
+  "cache_updated_mapped": 730,
+  "cache_cleared": 337,
+  "keep_separate_titles": [
+    "business_intelligence_engineer",
+    "chief_revenue_officer",
+    "consultant",
+    "manager",
+    "office_administrator",
+    "operations_specialist",
+    "product_designer"
+  ]
+}

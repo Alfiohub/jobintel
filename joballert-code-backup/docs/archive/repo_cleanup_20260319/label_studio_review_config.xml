@@ -1,0 +1,67 @@
+<View>
+  <Header value="Job Review Queue (Autolabel QA)"/>
+  <Text name="meta" value="Primary: $primary_review_category | Categories: $review_categories | Missing core: $missing_core_count | Confidence: $label_confidence"/>
+
+  <View style="display:flex; gap:16px;">
+    <View style="width:50%;">
+      <Header value="Input Context"/>
+      <Text name="title_raw" value="Title raw: $title_raw"/>
+      <Text name="title_clean" value="Title clean: $title_clean"/>
+      <Text name="desc" value="Description excerpt: $description_clean_excerpt"/>
+      <Text name="pred" value="Pred: title=$pred_normalized_title | role=$pred_role_family | seniority=$pred_seniority | employment=$pred_employment_type | location_type=$pred_location_type | city=$pred_city | country=$pred_country | salary=[$pred_salary_min,$pred_salary_max,$pred_salary_currency]"/>
+    </View>
+    <View style="width:50%;">
+      <Header value="Autolabel Output"/>
+      <Text name="gold" value="Gold: title=$gold_normalized_title | role=$gold_role_family | exp=[$gold_experience_years_min,$gold_experience_years_max] req=$gold_experience_required | edu=$gold_education_level degree=$gold_degree_required | soft=$gold_soft_skills | loc=[$gold_location_type,$gold_country,$gold_location_city] | emp=$gold_employment_type | seniority=$gold_seniority | lang=$gold_language_requirements | salary=[$gold_salary_min,$gold_salary_max,$gold_salary_currency,$gold_salary_period] | tools=$gold_tools_tech"/>
+      <Text name="notes" value="Notes: $notes"/>
+      <Text name="status" value="Review status: $review_status | needs_review: $needs_review"/>
+    </View>
+  </View>
+
+  <Header value="Review Decision"/>
+  <Choices name="decision" toName="desc" choice="single" showInline="true" required="true">
+    <Choice value="approve_as_is"/>
+    <Choice value="approve_with_edits"/>
+    <Choice value="reject_needs_rework"/>
+  </Choices>
+
+  <Header value="Detected Issue Type"/>
+  <Choices name="issue_type" toName="desc" choice="multiple" showInline="false">
+    <Choice value="timeout_error"/>
+    <Choice value="network_error"/>
+    <Choice value="json_parse_error"/>
+    <Choice value="runtime_error"/>
+    <Choice value="low_confidence"/>
+    <Choice value="missing_normalized_title"/>
+    <Choice value="missing_role_family"/>
+    <Choice value="location_without_country"/>
+    <Choice value="salary_without_currency"/>
+    <Choice value="salary_without_period"/>
+    <Choice value="experience_range_invalid"/>
+    <Choice value="experience_parse_invalid"/>
+    <Choice value="too_many_core_fields_missing"/>
+    <Choice value="sparse_output"/>
+    <Choice value="other"/>
+  </Choices>
+
+  <Header value="Manual Edits (optional)"/>
+  <TextArea name="edit_gold_normalized_title" toName="desc" placeholder="gold_normalized_title" rows="1"/>
+  <TextArea name="edit_gold_role_family" toName="desc" placeholder="gold_role_family" rows="1"/>
+  <TextArea name="edit_gold_location_type" toName="desc" placeholder="gold_location_type (remote/hybrid/onsite/unspecified)" rows="1"/>
+  <TextArea name="edit_gold_country" toName="desc" placeholder="gold_country (ISO-2, es. US)" rows="1"/>
+  <TextArea name="edit_gold_location_city" toName="desc" placeholder="gold_location_city" rows="1"/>
+  <TextArea name="edit_gold_employment_type" toName="desc" placeholder="gold_employment_type" rows="1"/>
+  <TextArea name="edit_gold_seniority" toName="desc" placeholder="gold_seniority" rows="1"/>
+  <TextArea name="edit_gold_salary_min" toName="desc" placeholder="gold_salary_min" rows="1"/>
+  <TextArea name="edit_gold_salary_max" toName="desc" placeholder="gold_salary_max" rows="1"/>
+  <TextArea name="edit_gold_salary_currency" toName="desc" placeholder="gold_salary_currency (ISO-3, es. USD)" rows="1"/>
+  <TextArea name="edit_gold_salary_period" toName="desc" placeholder="gold_salary_period (hourly/daily/weekly/monthly/yearly)" rows="1"/>
+  <TextArea name="edit_gold_tools_tech" toName="desc" placeholder="gold_tools_tech (es. python;sql;aws)" rows="2"/>
+
+  <TextArea
+    name="reviewer_note"
+    toName="desc"
+    placeholder="Short rationale for this decision"
+    rows="4"
+  />
+</View>

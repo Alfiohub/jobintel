@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant SRC as Source files (JSONL)
+    participant PIPE as run_microsaas_pipeline.py
+    participant DB as SQLite DB
+    participant API as Search API
+
+    SRC->>PIPE: New/updated raw jobs
+    PIPE->>PIPE: cleaning + enrichment + normalization
+    PIPE->>DB: upsert raw_jobs/jobs_clean/jobs_indexed
+    API->>DB: reads latest indexed jobs

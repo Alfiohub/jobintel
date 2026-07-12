@@ -1,0 +1,35 @@
+pipeline:
+  instant_threshold: 85
+  digest_threshold: 70
+  digest_max_items: 15
+
+sources:
+  greenhouse:
+    enabled: true
+    boards: []
+    content: true
+  smartrecruiters:
+    enabled: false
+    companies: []
+    limit: 100
+
+scoring:
+  include:
+    roles: []
+    skills: []
+  exclude:
+    keywords: []
+  weights: {}
+
+enrichment:
+  enabled: true
+  min_quality_score: 0.25
+
+storage:
+  sqlite_path: "data/jobintel.sqlite"
+
+notify:
+  mode: "stdout"
+  telegram:
+    bot_token: ""
+    chat_id: ""

@@ -1,0 +1,45 @@
+{
+  "rows": 3,
+  "other_rows": 1,
+  "other_pct": 33.33,
+  "counts_by_normalized_title": {
+    "backend_engineer": 1,
+    "other": 1,
+    "chief_revenue_officer": 1
+  },
+  "counts_by_role_family": {
+    "software_engineering": 1,
+    "other": 1,
+    "executive_leadership": 1
+  },
+  "counts_by_status": {
+    "matched": 2,
+    "other": 1
+  },
+  "rule_usage": [
+    {
+      "rule_id": "eng_backend",
+      "count": 1
+    },
+    {
+      "rule_id": "qa_ambiguous",
+      "count": 1
+    },
+    {
+      "rule_id": "exec_rvp_sales",
+      "count": 1
+    }
+  ],
+  "other_by_reason": [
+    {
+      "reason": "avoid_forced_qa_mapping",
+      "count": 1
+    }
+  ],
+  "top_unmatched_titles": [
+    {
+      "title_clean": "QA Engineer",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "source_run_dir": "docs/title_eval_greenhouse_full_v4",
+  "source_files": {
+    "coverage_report_json": "docs/title_eval_greenhouse_full_v4/coverage_report.json",
+    "top_unmatched_titles_csv": "docs/title_eval_greenhouse_full_v4/top_unmatched_titles.csv",
+    "results_jsonl": "docs/title_eval_greenhouse_full_v4/results.jsonl"
+  },
+  "rows": 81911,
+  "other_rows": 27546,
+  "clusters": [
+    {
+      "cluster_name": "other_long_tail",
+      "sample_titles": [
+        "Producer",
+        "Senior Product Analyst",
+        "Senior QA Engineer",
+        "Per Diem Clinical Research Nurse - Home Visits",
+        "Story Desk Editor",
+        "Implementation Manager",
+        "Customer Support Representative",
+        "Sonder Responder",
+        "Medical Assistant",
+        "Hair Color Bar Assistant, Licensed Cosmetologist",
+        "Customer Support Specialist",
+        "Manager, Software Engineering"
+      ],
+      "total_frequency": 24815,
+      "recommended_action": "keep_other",
+      "proposed_role_family": "other",
+      "proposed_normalized_title": "other",
+      "rationale": "Lunga coda eterogenea: bassa frequenza o alta ambiguità; mantenere other in questa fase."
+    },
+    {
+      "cluster_name": "operations_support_coordinator",
+      "sample_titles": [
+        "Rental Coordinator",
+        "Payroll Specialist",
+        "Project Coordinator",
+        "Office Coordinator",
+        "Logistics Coordinator",
+        "Production Coordinator",
+        "Workplace Experience Coordinator",
+        "Payroll Specialist Lead - Croatia - Serbia"
+      ],
+      "total_frequency": 582,
+      "recommended_action": "map_to_existing",
+      "proposed_role_family": "operations",
+      "proposed_normalized_title": "operations_specialist",
+      "rationale": "Pattern operativo/backoffice; copribile senza nuova family."
+    },
+    {
+      "cluster_name": "healthcare_nursing_physician",
+      "sample_titles": [
+        "Primary Care Physician",
+        "Registered Nurse (RN)",
+        "Licensed Practical Nurse (LPN)",
+        "Family Medicine Physician",
+        "Collaborating Physician (1099 Contract) - Virtual Women’s Health",
+        "Obesity Medicine Physician - Dedicated Collaborator W2 Telemedicine",
+        "Per Diem Family Medicine Physician (Casual Employee)",
+        "Registered Nurse (RN) Rehab Nurse Full-Time 12-Hour Day Shift"
+      ],
+      "total_frequency": 497,
+      "recommended_action": "add_new_normalized_title",
+      "proposed_role_family": "healthcare_clinical",
+      "proposed_normalized_title": "registered_nurse",
+      "rationale": "Volume alto; inferenza forte dal titolo. Conviene introdurre almeno il nodo nurse (ed eventualmente physician in step successivo)."
+    },
+    {
+      "cluster_name": "mental_health_therapy",
+      "sample_titles": [
+        "Intervention Specialist",
+        "Direct Support Professional (DSP)",
+        "Behavioral Interventionist",
+        "Board Certified Behavior Analyst",
+        "Contracted In-Home Occupational Therapist",
+        "Occupational Therapist",
+        "Respiratory Therapist - Registered",
+        "Child and Adolescent Therapist - LCSW, LPC, LMFT - Contract - Hybrid"
+      ],
+      "total_frequency": 487,
+      "recommended_action": "add_new_normalized_title",
+      "proposed_role_family": "healthcare_clinical",
+      "proposed_normalized_title": "mental_health_specialist",
+      "rationale": "Cluster ricorrente e semanticamente coeso; oggi frammentato tra therapist/intervention/behavioral support."
+    },
+    {
+      "cluster_name": "retail_store",
+      "sample_titles": [
+        "Entry-Level Automotive Detailer - Lot Attendant",
+        "Entry-Level Automotive Parts Associate",
+        "Entry-Level Automotive Detailer - Lot Attendant Post Production",
+        "Stylist (Retail) (Part-time)",
+        "Floor Lead (Retail) (Part-time)",
+        "Mid-Level Automotive Parts Associate",
+        "Retail Store Manager",
+        "Automotive Detailer - Lot Attendant"
+      ],
+      "total_frequency": 370,
+      "recommended_action": "add_new_normalized_title",
+      "proposed_role_family": "sales",
+      "proposed_normalized_title": "store_associate",
+      "rationale": "Cluster retail operativo frequente, poco coperto dalle label attuali enterprise/SaaS."
+    },
+    {
+      "cluster_name": "manager_generic_business_manager",
+      "sample_titles": [
+        "General Manager",
+        "Business Development Manager",
+        "Regional Safety Manager",
+        "Social Media Manager",
+        "Assistant General Manager",
+        "Restaurant General Manager",
+        "Senior Business Development Manager",
+        "General Manager, Licensed Cosmetologist"
+      ],
+      "total_frequency": 353,
+      "recommended_action": "map_to_existing",
+      "proposed_role_family": "mixed_policy",
+      "proposed_normalized_title": "mixed_policy",
+      "rationale": "Non trattare come un cluster unico: parte mappabile (business development/social media), parte da tenere other (general manager/safety manager ambiguo)."
+    },
+    {
+      "cluster_name": "research_quant",
+      "sample_titles": [
+        "Quantitative Researcher",
+        "Machine Learning Researcher",
+        "UX Researcher",
+        "Cubist Quantitative Researcher",
+        "Senior UX Researcher",
+        "Market Microstructure Researcher",
+        "Security Researcher",
+        "Senior Researcher"
+      ],
+      "total_frequency": 268,
+      "recommended_action": "add_new_normalized_title",
+      "proposed_role_family": "data_science",
+      "proposed_normalized_title": "research_scientist",
+      "rationale": "Ruolo distinto e frequente in dataset tech/quant; valutare label dedicata se confermato su più run."
+    },
+    {
+      "cluster_name": "customer_service",
+      "sample_titles": [
+        "Customer Service Representative",
+        "Bilingual Customer Service Representative",
+        "Senior Agent, Customer Service (Russian Speaker) - Willing to relocate to Kuala Lumpur, Malaysia",
+        "Full-Time Customer Service Representative",
+        "Customer Service Coordinator - Vehicle Delivery",
+        "Team Lead, Vendor Customer Service",
+        "Customer Service Supervisor",
+        "Customer Service Advisor"
+      ],
+      "total_frequency": 113,
+      "recommended_action": "map_to_existing",
+      "proposed_role_family": "operations",
+      "proposed_normalized_title": "customer_service_specialist",
+      "rationale": "Cluster operativo service già introdotto; estendere varianti testuali."
+    },
+    {
+      "cluster_name": "technicians_skilled_trades",
+      "sample_titles": [
+        "Telematics Installer",
+        "HVAC Lead Installer (Relocation Offered!!!)",
+        "Quality Assurance Technician",
+        "Onsite POS Installer, Sr Associate",
+        "ADESA - Detailer",
+        "Auto Detailer - ADESA Lansing",
+        "Auto Detailer - ADESA Lexington",
+        "Auto Detailer - ADESA Orlando"
+      ],
+      "total_frequency": 52,
+      "recommended_action": "map_to_existing",
+      "proposed_role_family": "skilled_trades",
+      "proposed_normalized_title": "technician",
+      "rationale": "Molti titoli possono essere assorbiti da technician/car_detailer/mechanic già in taxonomy."
+    },
+    {
+      "cluster_name": "logistics_drivers",
+      "sample_titles": [
+        "Autonomous Vehicle Test Operator - CDL",
+        "Customer Support (Driver) Representative",
+        "Autonomous Vehicle Operator (Driver)",
+        "Autonomous Vehicle Test Operator - CDL & IT Specialist",
+        "CDL or Non CDL (Delivery Driver)"
+      ],
+      "total_frequency": 7,
+      "recommended_action": "map_to_existing",
+      "proposed_role_family": "logistics",
+      "proposed_normalized_title": "driver",
+      "rationale": "Driver/CDL cluster già standardizzabile con label esistenti."
+    },
+    {
+      "cluster_name": "project_program",
+      "sample_titles": [
+        "Specialist Education Professional, Actimize(Content Developer, Project Manager)",
+        "Contractor Staffing Lead (Operations Program Manager)"
+      ],
+      "total_frequency": 2,
+      "recommended_action": "map_to_existing",
+      "proposed_role_family": "program_management",
+      "proposed_normalized_title": "project_manager",
+      "rationale": "Cluster già indirizzato dal pass precedente; mantenere come policy stabile."
+    }
+  ],
+  "implementation_pass_v1": [
+    {
+      "priority": 1,
+      "intervention": "Nursing/physician healthcare pack",
+      "type": "add_new_normalized_title",
+      "details": "Aggiungere registered_nurse (+ opzionale physician) in healthcare_clinical e relative regole RN/LPN/Primary Care Physician."
+    },
+    {
+      "priority": 2,
+      "intervention": "Mental health pack",
+      "type": "add_new_normalized_title",
+      "details": "Aggiungere mental_health_specialist in healthcare_clinical e regole therapist/intervention/behavioral/DSP."
+    },
+    {
+      "priority": 3,
+      "intervention": "Retail/store associate pack",
+      "type": "add_new_normalized_title",
+      "details": "Aggiungere store_associate in sales e mappare lead store associate / parts associate / stylist retail / lot attendant."
+    },
+    {
+      "priority": 4,
+      "intervention": "Manager policy hardening",
+      "type": "map_to_existing",
+      "details": "Business Development Manager -> account_manager; Social Media Manager -> marketing_specialist; General Manager resta other con reason esplicita."
+    },
+    {
+      "priority": 5,
+      "intervention": "Operations support pack",
+      "type": "map_to_existing",
+      "details": "Rental Coordinator e Case Manager -> operations_specialist; Payroll Specialist -> financial_analyst (finance)."
+    },
+    {
+      "priority": 6,
+      "intervention": "Skilled trades variants pack",
+      "type": "map_to_existing",
+      "details": "Telematics Installer/Installer -> technician; Automotive Detailer/Lot Attendant -> car_detailer."
+    },
+    {
+      "priority": 7,
+      "intervention": "Project/program normalization closure",
+      "type": "map_to_existing",
+      "details": "Confermare Program Manager -> project_manager in modo stabile in tutte le varianti."
+    },
+    {
+      "priority": 8,
+      "intervention": "Research/quant decision gate",
+      "type": "add_new_normalized_title",
+      "details": "Valutare research_scientist in data_science solo se volume persistente su 2-3 run consecutivi."
+    }
+  ]
+}

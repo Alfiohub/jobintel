@@ -1,0 +1,66 @@
+source_job_id,url,title_clean,location_type,city,old_country,new_country,old_currency,new_currency,review_reason
+7490948,https://job-boards.greenhouse.io/smartsheet/jobs/7490948,"Sr Enterprise Account Executive, Asia",hybrid,,DE,SG,,,country_nonempty_changed;no_city_with_remote_hybrid;broad_scope_title
+6806756,https://job-boards.greenhouse.io/smartsheet/jobs/6806756,"Senior Manager, Engineering - Enterprise Audit",remote,,DE,BG,,,country_nonempty_changed;no_city_with_remote_hybrid
+7560195,https://job-boards.greenhouse.io/smartsheet/jobs/7560195,"Manager, Engineering",remote,,DE,BG,,,country_nonempty_changed;no_city_with_remote_hybrid
+7491110,https://job-boards.greenhouse.io/smartsheet/jobs/7491110,Principal Partner Account Manager,hybrid,,DE,SG,,,country_nonempty_changed;no_city_with_remote_hybrid
+7293932,https://job-boards.greenhouse.io/webflow/jobs/7293932,Senior Database Engineer,remote,,US,AR,,,country_nonempty_changed;no_city_with_remote_hybrid
+7293969,https://job-boards.greenhouse.io/webflow/jobs/7293969,"Senior Software Engineer, Fullstack",remote,,US,AR,,,country_nonempty_changed;no_city_with_remote_hybrid
+7456130,https://job-boards.greenhouse.io/webflow/jobs/7456130,Senior Brand Designer,remote,,US,AR,,,country_nonempty_changed;no_city_with_remote_hybrid
+7543012,https://job-boards.greenhouse.io/webflow/jobs/7543012,"Technical Support Associate, Argentina",remote,,US,AR,,,country_nonempty_changed;no_city_with_remote_hybrid
+7572627,https://job-boards.greenhouse.io/webflow/jobs/7572627,Senior Infrastructure Engineer,remote,,US,AR,,,country_nonempty_changed;no_city_with_remote_hybrid
+7648674,https://job-boards.greenhouse.io/webflow/jobs/7648674,"Engineering Manager, Datastores",remote,,US,AR,,,country_nonempty_changed;no_city_with_remote_hybrid
+7657237,https://job-boards.greenhouse.io/webflow/jobs/7657237,People Analytics & Insights Analyst,remote,,US,AR,,,country_nonempty_changed;no_city_with_remote_hybrid
+8235467002,https://job-boards.greenhouse.io/gomotive/jobs/8235467002,Senior Product Operations Manager - International,remote,,US,MX,,,country_nonempty_changed;no_city_with_remote_hybrid
+8235635002,https://job-boards.greenhouse.io/gomotive/jobs/8235635002,"Account Executive, CMRL - MX",hybrid,,US,MX,,,country_nonempty_changed;no_city_with_remote_hybrid
+7278486,https://job-boards.greenhouse.io/thumbtack/jobs/7278486,"Head of Brand Production Studio, Brand Marketing",remote,,US,PH,,,country_nonempty_changed;no_city_with_remote_hybrid
+7342995,https://job-boards.greenhouse.io/thumbtack/jobs/7342995,Senior Accounts Payable Associate,remote,,US,PH,,,country_nonempty_changed;no_city_with_remote_hybrid
+7649054,https://job-boards.greenhouse.io/thumbtack/jobs/7649054,Growth Marketing Associate,remote,,US,PH,,,country_nonempty_changed;no_city_with_remote_hybrid
+6854597002,https://job-boards.greenhouse.io/gomotive/jobs/6854597002,"Manager, Commercial Sales - Outbound",remote,,US,PK,,,country_nonempty_changed;no_city_with_remote_hybrid
+8021088002,https://job-boards.greenhouse.io/gomotive/jobs/8021088002,Technical Support Eng- MM/CMRL,remote,,US,PK,,,country_nonempty_changed;no_city_with_remote_hybrid
+8174963002,https://job-boards.greenhouse.io/gomotive/jobs/8174963002,"Sales Engineer, Commercial",remote,,US,PK,,,country_nonempty_changed;no_city_with_remote_hybrid
+8344647002,https://job-boards.greenhouse.io/gomotive/jobs/8344647002,"Account Executive, SMB New Logo – Spanish Speaking",hybrid,,US,PK,,,country_nonempty_changed;no_city_with_remote_hybrid
+8381853002,https://job-boards.greenhouse.io/gomotive/jobs/8381853002,"Sales Manager, SMB",remote,,US,PK,,,country_nonempty_changed;no_city_with_remote_hybrid
+8387980002,https://job-boards.greenhouse.io/gomotive/jobs/8387980002,Instructional Designer,remote,,US,PK,,,country_nonempty_changed;no_city_with_remote_hybrid
+8395398002,https://job-boards.greenhouse.io/gomotive/jobs/8395398002,"Regional Partner Manager, Mexico",hybrid,Mexico City,US,MX,,,country_nonempty_changed;broad_scope_title
+7102393,https://job-boards.greenhouse.io/canonical/jobs/7102393,Ubuntu Enablement Engineer,remote,Beijing,US,CN,,,country_nonempty_changed
+5812228004,https://job-boards.greenhouse.io/correlationone/jobs/5812228004,Sales Development Representative,remote,: MENA,US,JO,,,country_nonempty_changed
+6587626003,https://job-boards.greenhouse.io/celonis/jobs/6587626003?gh_jid=6587626003,Strategic Account Executive - Manufacturing,hybrid,Tokyo,US,JP,,,country_nonempty_changed
+7019766,https://job-boards.greenhouse.io/appier/jobs/7019766,"Senior Software Engineer, Data Backend EDP (Enterprise Data Platform) - Tokyo,Japan",remote,Tokyo,US,JP,,,country_nonempty_changed
+7092458,https://job-boards.greenhouse.io/appier/jobs/7092458,Staff/Senior Machine Learning Scientist (Ad Cloud),,Tokyo,US,JP,,,country_nonempty_changed
+7366768,https://job-boards.greenhouse.io/appier/jobs/7366768,Senior Machine Learning Scientist (Ads incrementality) - Tokyo,,Tokyo,US,JP,,,country_nonempty_changed
+7382788,https://job-boards.greenhouse.io/appier/jobs/7382788,"Senior Software Engineer, C++ Backend Development (Ad Cloud Bidding)- Tokyo Relocation required",hybrid,Tokyo,US,JP,,,country_nonempty_changed
+7382795,https://job-boards.greenhouse.io/appier/jobs/7382795,"Staff Software Engineer, C++ Backend Development (Ad Cloud Bidding) - Tokyo Relocation required",hybrid,Tokyo,US,JP,,,country_nonempty_changed
+7382873,https://job-boards.greenhouse.io/appier/jobs/7382873,"Senior Software Engineer (Ad Cloud Bidding) - Tokyo,Japan",hybrid,Tokyo,US,JP,,,country_nonempty_changed
+7493249,https://job-boards.greenhouse.io/appier/jobs/7493249,"Agentic AI Engineering Manager – Tokyo, Japan (Relocation Required)",hybrid,Tokyo,US,JP,,,country_nonempty_changed
+7551536003,https://job-boards.greenhouse.io/celonis/jobs/7551536003?gh_jid=7551536003,Portfolio (Scale) Account Executive,hybrid,Tokyo,US,JP,,,country_nonempty_changed
+7582284,https://job-boards.greenhouse.io/appier/jobs/7582284,"Senior Software Engineer, Backend Development - OJM team - Tokyo,Japan",remote,Tokyo,US,JP,,,country_nonempty_changed
+7588024,https://job-boards.greenhouse.io/appier/jobs/7588024,"Software Engineer, General Backend Development, Enterprise Solution - Tokyo,Japan",hybrid,Tokyo,US,JP,,,country_nonempty_changed
+7667321002,https://job-boards.greenhouse.io/gomotive/jobs/7667321002,Sales Development Representative - Mexico City,hybrid,Mexico City,US,MX,,,country_nonempty_changed
+7941129002,https://job-boards.greenhouse.io/gomotive/jobs/7941129002,"Strategic Account Executive, Mexico",onsite,,US,MX,,,country_nonempty_changed
+8129164002,https://job-boards.greenhouse.io/gomotive/jobs/8129164002,Customer Success Manager,hybrid,Mexico City,US,MX,,,country_nonempty_changed
+8235620002,https://job-boards.greenhouse.io/gomotive/jobs/8235620002,"Senior Product Marketing Manager, México",hybrid,Mexico City,US,MX,,,country_nonempty_changed
+7870024002,https://job-boards.greenhouse.io/gomotive/jobs/7870024002,"Senior Manager, Account Management",remote,Islamabad & Lahore,US,PK,,,country_nonempty_changed
+6366658,https://job-boards.greenhouse.io/smartsheet/jobs/6366658,Software Engineer II (Remote Eligible from Bulgaria),remote,,DE,BG,,,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title
+7385653,https://job-boards.greenhouse.io/smartsheet/jobs/7385653,Sr. DevSecOps Engineer- Reliability & Security (Remote from Bulgaria),remote,,DE,BG,,,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title
+7386364,https://job-boards.greenhouse.io/smartsheet/jobs/7386364,Product Manager II (Remote from Bulgaria),remote,,DE,BG,,,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title
+7388435,https://job-boards.greenhouse.io/smartsheet/jobs/7388435,"Senior Software Engineer, Platform Security (Remote from Bulgaria)",remote,,DE,BG,,,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title
+7599444,https://job-boards.greenhouse.io/smartsheet/jobs/7599444,Sr. Software Engineer (Remote Eligible from Bulgaria),remote,,DE,BG,,,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title
+5813618004,https://job-boards.greenhouse.io/grafanalabs/jobs/5813618004,Senior Engineering Manager - Platform Metal | Sweden | Remote,remote,,DE,SE,,,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title
+5783162004,https://job-boards.greenhouse.io/grafanalabs/jobs/5783162004,Senior Backend Engineer | Mimir OSS | Sweden | Remote,remote,,ES,SE,,,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title
+5799037004,https://job-boards.greenhouse.io/grafanalabs/jobs/5799037004,Backend Software Engineer - Mimir Ingest | Sweden | Remote,remote,,ES,SE,,,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title
+5804920004,https://job-boards.greenhouse.io/grafanalabs/jobs/5804920004,Staff Mobile Engineer: Instrumentation SDK (iOS/Android) - Observability | Sweden | Remote,remote,,ES,SE,,,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title
+5808861004,https://job-boards.greenhouse.io/grafanalabs/jobs/5808861004,"Senior Software Engineer - Grafana Databases, SRE | Sweden | Remote",remote,,ES,SE,,SEK,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title
+5809259004,https://job-boards.greenhouse.io/grafanalabs/jobs/5809259004,"Staff Software Engineer - Grafana Cloud Observability, Kubernetes Monitoring | Sweden | Remote",remote,,ES,SE,,SEK,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title
+5662098004,https://job-boards.greenhouse.io/grafanalabs/jobs/5662098004,"Senior Solutions Engineer | Tokyo, Japan | Remote",remote,,FR,JP,,,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title
+5728176004,https://job-boards.greenhouse.io/grafanalabs/jobs/5728176004,Strategic Channel Manager | Japan | Remote,remote,,FR,JP,,,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title
+5592708004,https://job-boards.greenhouse.io/grafanalabs/jobs/5592708004,"Senior Enterprise Account Executive, Growth | Sweden | Remote",remote,,FR,SE,,,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title
+5688186004,https://job-boards.greenhouse.io/grafanalabs/jobs/5688186004,"Senior Software Security Engineer, Detection Engineering | Sweden | Remote",hybrid,,FR,SE,,SEK,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title
+5693691004,https://job-boards.greenhouse.io/grafanalabs/jobs/5693691004,Senior Backend Engineer - Grafana k6 | Sweden | Remote,remote,,FR,SE,,SEK,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title
+5764236004,https://job-boards.greenhouse.io/grafanalabs/jobs/5764236004,Senior Software Engineer - Grafana k6 | Sweden | Remote,remote,,FR,SE,,SEK,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title
+5783882004,https://job-boards.greenhouse.io/grafanalabs/jobs/5783882004,Senior Product Marketing Manager | Sweden | Remote,remote,,FR,SE,,SEK,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title
+5789039004,https://job-boards.greenhouse.io/grafanalabs/jobs/5789039004,"Director, Solutions Engineering | EMEA | Remote",remote,,FR,SE,,,country_nonempty_changed;no_city_with_remote_hybrid;broad_scope_title;remote_in_title
+5789080004,https://job-boards.greenhouse.io/grafanalabs/jobs/5789080004,Senior Solutions Engineer | Sweden | Remote,remote,,FR,SE,,SEK,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title
+5790622004,https://job-boards.greenhouse.io/grafanalabs/jobs/5790622004,Observability Architect | Sweden | Remote,remote,,FR,SE,,SEK,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title
+5725860004,https://job-boards.greenhouse.io/grafanalabs/jobs/5725860004,Solutions Engineer | Singapore | Remote,remote,,FR,SG,USD,USD,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title
+5766331004,https://job-boards.greenhouse.io/grafanalabs/jobs/5766331004,"Enterprise Account Executive, New Business Acquisition - ASIA | Singapore | Remote",remote,,FR,SG,USD,USD,country_nonempty_changed;no_city_with_remote_hybrid;broad_scope_title;remote_in_title
+5801260004,https://job-boards.greenhouse.io/grafanalabs/jobs/5801260004,Staff Backend Engineer - Adaptive Telemetry | Sweden | Remote,remote,,GB,SE,,SEK,country_nonempty_changed;no_city_with_remote_hybrid;remote_in_title

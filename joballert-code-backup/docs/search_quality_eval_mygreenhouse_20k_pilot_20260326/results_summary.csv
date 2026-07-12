@@ -1,0 +1,11 @@
+query_id,description,returned_count,avg_coherence_at_5,relevant_at_5,hit_at_5
+q1_sw_us_remote_skills,Software jobs US remote with python/aws preference,30,1.0,5,1
+q2_data_us_remote,Data analytics roles US remote,30,1.0,5,1
+q3_customer_success_us,Customer success roles in US,30,1.0,5,1
+q4_product_remote,Product management remote,30,1.0,5,1
+q5_marketing_remote,Marketing remote,30,1.0,5,1
+q6_finance_us,Finance roles in US,30,1.0,5,1
+q7_partnerships,Partnerships roles,30,1.0,5,1
+q8_program_management,Program management roles,30,1.0,5,1
+q9_us_remote_python_sql,US remote jobs with python/sql preference (broad query),30,0.61,2,1
+q10_gb_general,UK jobs broad preference on tech/data/finance,30,0.61,2,1

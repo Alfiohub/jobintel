@@ -1,0 +1,252 @@
+{
+  "db": "data/jobintel_microsaas_taxonomy_v1_final_2k_20260326.sqlite",
+  "rows": 2000,
+  "other_rows": 264,
+  "other_pct": 13.2,
+  "top_normalized_title": [
+    [
+      "software_engineer",
+      528
+    ],
+    [
+      "other",
+      248
+    ],
+    [
+      "account_executive",
+      152
+    ],
+    [
+      "consultant",
+      142
+    ],
+    [
+      "sales_representative",
+      87
+    ],
+    [
+      "marketing_specialist",
+      63
+    ],
+    [
+      "business_analyst",
+      61
+    ],
+    [
+      "product_manager",
+      56
+    ],
+    [
+      "data_analyst",
+      48
+    ],
+    [
+      "technical_program_manager",
+      45
+    ],
+    [
+      "operations_specialist",
+      44
+    ],
+    [
+      "business_development_representative",
+      40
+    ],
+    [
+      "backend_engineer",
+      39
+    ],
+    [
+      "account_manager",
+      35
+    ],
+    [
+      "data_engineer",
+      32
+    ],
+    [
+      "customer_success_manager",
+      25
+    ],
+    [
+      "solutions_architect",
+      25
+    ],
+    [
+      "alliance_manager",
+      24
+    ],
+    [
+      "accountant",
+      23
+    ],
+    [
+      "product_designer",
+      21
+    ]
+  ],
+  "top_role_family": [
+    [
+      "software_engineering",
+      589
+    ],
+    [
+      "sales",
+      318
+    ],
+    [
+      "other",
+      264
+    ],
+    [
+      "consulting",
+      147
+    ],
+    [
+      "data_analytics",
+      77
+    ],
+    [
+      "marketing",
+      66
+    ],
+    [
+      "business_analysis",
+      62
+    ],
+    [
+      "product_management",
+      56
+    ],
+    [
+      "operations",
+      52
+    ],
+    [
+      "program_management",
+      46
+    ],
+    [
+      "architecture",
+      39
+    ],
+    [
+      "finance",
+      33
+    ],
+    [
+      "data_engineering",
+      32
+    ],
+    [
+      "it_operations",
+      28
+    ],
+    [
+      "design",
+      26
+    ],
+    [
+      "customer_success",
+      25
+    ],
+    [
+      "partnerships",
+      24
+    ],
+    [
+      "data_science",
+      21
+    ],
+    [
+      "machine_learning",
+      20
+    ],
+    [
+      "hr",
+      19
+    ]
+  ],
+  "top_other_titles": [
+    [
+      "Senior GTM Enablement Manager | EMEA | Remote",
+      4
+    ],
+    [
+      "Manager, AI Outcomes",
+      3
+    ],
+    [
+      "Interested in joining our team?",
+      2
+    ],
+    [
+      "AI Outcomes Manager- Central",
+      2
+    ],
+    [
+      "AI Outcomes Manager- East",
+      2
+    ],
+    [
+      "AI Outcomes Manager- West",
+      2
+    ],
+    [
+      "Delivery Excellence Manager- Central",
+      2
+    ],
+    [
+      "Delivery Excellence Manager- East",
+      2
+    ],
+    [
+      "Manager, Cloud Security",
+      2
+    ],
+    [
+      "Services Manager",
+      2
+    ],
+    [
+      "Manager, Solution Services (Remote elegible - Costa Rica)",
+      1
+    ],
+    [
+      "Principal Commodity Manager",
+      1
+    ],
+    [
+      "Public Cloud Enablement Professional",
+      1
+    ],
+    [
+      "Représentant du Développement des Ventes",
+      1
+    ],
+    [
+      "Representante de Desarrollo de Ventas",
+      1
+    ],
+    [
+      "Security Risk Management Specialist",
+      1
+    ],
+    [
+      "Senior Design Researcher - User Science",
+      1
+    ],
+    [
+      "Senior Jira Administrator",
+      1
+    ],
+    [
+      "Software Architect - Containers / Virtualisation",
+      1
+    ],
+    [
+      "Tax Senior Associate",
+      1
+    ]
+  ]
+}

@@ -1,0 +1,6 @@
+queue_rows: 59
+updates: 0
+skipped_non_fix: 59
+invalid_fixes: 0
+missing_job_ids: 0
+touched_job_ids: 0

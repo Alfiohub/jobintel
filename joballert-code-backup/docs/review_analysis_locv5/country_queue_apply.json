@@ -1,0 +1,12 @@
+{
+  "gold_csv": "docs/gold_eval_set_v1_en_locv5_autolabeled.csv",
+  "queue_csv": "docs/country_fix_queue_locv5.csv",
+  "output_csv": "docs/gold_eval_set_v1_en_locv5_autolabeled.csv",
+  "queue_rows": 59,
+  "updates": 0,
+  "touched_job_ids": [],
+  "skipped_non_fix": 59,
+  "invalid_fixes": 0,
+  "missing_job_ids": 0,
+  "details": []
+}

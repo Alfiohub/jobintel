@@ -1,0 +1,33 @@
+Review Analysis Summary
+Input: docs/gold_eval_set_v1_en_locv2_autolabeled.csv
+Total rows: 800
+Total review rows: 800
+
+Counts By Category:
+- low_confidence: 800
+- missing_normalized_title: 800
+- too_many_core_fields_missing: 156
+- location_without_country: 151
+- missing_role_family: 149
+- sparse_output: 99
+- timeout_error: 1
+
+Counts By Primary Review Category:
+- low_confidence: 799
+- timeout_error: 1
+
+Top Category Combinations:
+- low_confidence|missing_normalized_title: 473
+- low_confidence|missing_normalized_title|location_without_country: 114
+- low_confidence|missing_normalized_title|missing_role_family|too_many_core_fields_missing|sparse_output: 86
+- low_confidence|missing_normalized_title|too_many_core_fields_missing: 54
+- low_confidence|missing_normalized_title|missing_role_family|location_without_country: 29
+- low_confidence|missing_normalized_title|missing_role_family: 28
+- low_confidence|missing_normalized_title|too_many_core_fields_missing|sparse_output: 7
+- low_confidence|missing_normalized_title|missing_role_family|location_without_country|too_many_core_fields_missing|sparse_output: 5
+- low_confidence|missing_normalized_title|location_without_country|too_many_core_fields_missing: 3
+- timeout_error|low_confidence|missing_normalized_title|missing_role_family|too_many_core_fields_missing|sparse_output: 1
+
+Wrote: docs/review_analysis_locv2/review_cases.csv
+Wrote: docs/review_analysis_locv2/review_summary.json
+Per-primary CSV files: 2

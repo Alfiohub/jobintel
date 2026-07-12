@@ -1,0 +1,12 @@
+{
+  "input_csv": "docs/gold_eval_set_v1_en_locv5_autolabeled.csv",
+  "output_csv": "docs/gold_eval_set_v1_en_locv5_autolabeled.csv",
+  "dry_run": false,
+  "changed_rows": 0,
+  "stats": {
+    "total_rows": 800,
+    "skip_no_salary_values": 692,
+    "already_has_period": 108
+  },
+  "backup_csv": "docs/gold_eval_set_v1_en_locv5_autolabeled.csv.bak"
+}

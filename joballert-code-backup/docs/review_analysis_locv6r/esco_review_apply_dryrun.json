@@ -1,0 +1,11 @@
+{
+  "db": "data/jobintel_microsaas_loccheck_2k_v6r_plus.sqlite",
+  "queue_csv": "docs/esco_crosswalk_review_queue.csv",
+  "dry_run": true,
+  "touched_normalized_titles": 0,
+  "stats": {
+    "queue_rows": 12,
+    "skip_empty_action": 12
+  },
+  "details": []
+}

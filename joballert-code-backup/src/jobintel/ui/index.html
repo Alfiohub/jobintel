@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jobintel UI</title>
+  <link rel="stylesheet" href="/ui-assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>jobintel</h1>
+    <div class="user-row">
+      <label for="userId">user</label>
+      <input id="userId" value="demo" />
+      <button id="reloadAllBtn">Reload</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel" id="filtersPanel">
+      <h2>Saved Filters</h2>
+      <form id="filterForm" class="stack">
+        <input id="filterName" placeholder="Filter name" required />
+        <label for="roleFamily">role_family</label>
+        <select id="roleFamily" multiple size="5"></select>
+        <label for="seniority">seniority</label>
+        <select id="seniority" multiple size="5"></select>
+        <label for="locationType">location_type</label>
+        <select id="locationType" multiple size="4"></select>
+        <label for="country">country</label>
+        <select id="country" multiple size="6"></select>
+        <label for="source">source</label>
+        <select id="source" multiple size="4"></select>
+        <label for="skills">skills</label>
+        <select id="skills" multiple size="8"></select>
+        <input id="skillsCustom" placeholder="extra skills (comma, optional)" />
+        <p class="hint">Tip: click sulle voci per selezionare/deselezionare (non serve Ctrl/Cmd).</p>
+        <button type="button" id="resetFiltersBtn">Reset Selezioni</button>
+        <button type="submit">Create Filter</button>
+      </form>
+      <div id="filtersList" class="stack"></div>
+    </section>
+
+    <section class="panel" id="resultsPanel">
+      <h2>Recommendations</h2>
+      <div class="toolbar">
+        <button id="refreshMatchesBtn">Refresh Matches</button>
+        <button id="markSeenBtn">Mark Inbox Seen</button>
+      </div>
+      <div id="activeFilterInfo" class="hint">Select a filter</div>
+      <div id="recommendationsList" class="stack"></div>
+    </section>
+
+    <section class="panel" id="inboxPanel">
+      <h2>New Matches Inbox</h2>
+      <div id="inboxList" class="stack"></div>
+    </section>
+  </main>
+
+  <template id="filterItemTpl">
+    <article class="card">
+      <div class="card-head">
+        <strong class="filter-title"></strong>
+        <span class="badge filter-id"></span>
+      </div>
+      <p class="criteria"></p>
+      <div class="actions">
+        <button data-action="select">Open</button>
+        <button data-action="delete" class="danger">Delete</button>
+      </div>
+      <div class="webhook-row">
+        <input class="webhook-input" placeholder="https://..." />
+        <button data-action="upsert-webhook">Save Webhook</button>
+      </div>
+      <div class="targets"></div>
+    </article>
+  </template>
+
+  <template id="jobItemTpl">
+    <article class="card">
+      <div class="card-head">
+        <a class="job-title" target="_blank" rel="noreferrer"></a>
+        <span class="badge score"></span>
+      </div>
+      <p class="meta"></p>
+      <p class="reasons"></p>
+      <div class="actions">
+        <button data-action="save">Save</button>
+        <button data-action="dismiss">Dismiss</button>
+        <button data-action="apply">Apply</button>
+      </div>
+    </article>
+  </template>
+
+  <script src="/ui-assets/app.js"></script>
+</body>
+</html>

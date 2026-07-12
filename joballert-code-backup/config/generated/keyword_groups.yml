@@ -1,0 +1,809 @@
+meta:
+  input: config/generated/keywords.yml
+  total_keywords: 400
+groups:
+  roles:
+  - keyword: engineer
+    count: 19752
+  - keyword: software engineer
+    count: 7318
+  - keyword: executive
+    count: 3960
+  - keyword: specialist
+    count: 3928
+  - keyword: director
+    count: 3887
+  - keyword: associate
+    count: 3004
+  - keyword: analyst
+    count: 2917
+  - keyword: engineering
+    count: 2432
+  - keyword: technician
+    count: 2126
+  - keyword: representative
+    count: 1479
+  - keyword: developer
+    count: 1412
+  - keyword: designer
+    count: 1244
+  - keyword: architect
+    count: 1142
+  - keyword: consultant
+    count: 1135
+  - keyword: scientist
+    count: 992
+  - keyword: data engineer
+    count: 736
+  - keyword: engineer ii
+    count: 718
+  - keyword: coordinator
+    count: 705
+  - keyword: product designer
+    count: 562
+  - keyword: security engineer
+    count: 476
+  - keyword: backend engineer
+    count: 453
+  - keyword: engineer platform
+    count: 451
+  - keyword: systems engineer
+    count: 428
+  - keyword: solutions engineer
+    count: 419
+  - keyword: data analyst
+    count: 401
+  - keyword: reliability engineer
+    count: 399
+  - keyword: solutions architect
+    count: 397
+  - keyword: engineer data
+    count: 374
+  - keyword: learning engineer
+    count: 369
+  - keyword: support engineer
+    count: 369
+  - keyword: engineer artificialintelligence
+    count: 357
+  - keyword: engineer ios
+    count: 353
+  - keyword: engineer macos
+    count: 329
+  - keyword: engineer backend
+    count: 313
+  - keyword: engineer core
+    count: 302
+  - keyword: sales engineer
+    count: 294
+  - keyword: managers equipmentsharecom
+    count: 293
+  - keyword: engineer launch2
+    count: 292
+  - keyword: account managers
+    count: 289
+  - keyword: design engineer
+    count: 286
+  - keyword: artificialintelligence engineer
+    count: 285
+  - keyword: staff engineer
+    count: 265
+  - keyword: software engineering
+    count: 264
+  - keyword: mechanical engineer
+    count: 263
+  - keyword: engineer windows
+    count: 258
+  - keyword: devops engineer
+    count: 253
+  - keyword: development engineer
+    count: 248
+  - keyword: platform engineer
+    count: 247
+  - keyword: test engineer
+    count: 244
+  skills:
+  - keyword: artificialintelligence
+    count: 2951
+  - keyword: security
+    count: 1423
+  - keyword: backend
+    count: 1085
+  - keyword: infrastructure
+    count: 774
+  - keyword: cloud
+    count: 684
+  - keyword: machine learning
+    count: 629
+  - keyword: android
+    count: 591
+  - keyword: full stack
+    count: 454
+  - keyword: android core
+    count: 396
+  - keyword: tech android
+    count: 395
+  - keyword: site reliability
+    count: 320
+  - keyword: ios core
+    count: 311
+  locations:
+  - keyword: united
+    count: 16724
+  - keyword: states
+    count: 14679
+  - keyword: united states
+    count: 14626
+  - keyword: ca
+    count: 6885
+  - keyword: usa
+    count: 5441
+  - keyword: california
+    count: 5121
+  - keyword: california united
+    count: 3455
+  - keyword: ny
+    count: 3168
+  - keyword: india
+    count: 3086
+  - keyword: us
+    count: 2972
+  - keyword: london
+    count: 2796
+  - keyword: canada
+    count: 2391
+  - keyword: tx
+    count: 2247
+  - keyword: united kingdom
+    count: 1844
+  - keyword: washington
+    count: 1773
+  - keyword: usa speechify
+    count: 1679
+  - keyword: chicago
+    count: 1548
+  - keyword: ma
+    count: 1540
+  - keyword: wa
+    count: 1436
+  - keyword: singapore
+    count: 1418
+  - keyword: york united
+    count: 1359
+  - keyword: york city
+    count: 1354
+  - keyword: seattle
+    count: 1291
+  - keyword: uk
+    count: 1189
+  - keyword: boston
+    count: 1172
+  - keyword: texas
+    count: 1171
+  - keyword: berlin
+    count: 1086
+  - keyword: austin
+    count: 1030
+  - keyword: francisco california
+    count: 942
+  - keyword: toronto
+    count: 933
+  - keyword: nc
+    count: 841
+  - keyword: mesa california
+    count: 839
+  - keyword: paris
+    count: 819
+  - keyword: london england
+    count: 709
+  - keyword: emea
+    count: 667
+  - keyword: tokyo
+    count: 655
+  - keyword: england united
+    count: 646
+  - keyword: amsterdam
+    count: 633
+  - keyword: texas united
+    count: 612
+  - keyword: florida
+    count: 570
+  - keyword: berlin germany
+    count: 456
+  - keyword: city ny
+    count: 454
+  - keyword: washington united
+    count: 436
+  - keyword: austin texas
+    count: 411
+  - keyword: jose california
+    count: 409
+  - keyword: tokyo japan
+    count: 403
+  - keyword: massachusetts united
+    count: 397
+  - keyword: london uk
+    count: 388
+  - keyword: london united
+    count: 380
+  - keyword: mexico city
+    count: 377
+  - keyword: view california
+    count: 321
+  - keyword: beach california
+    count: 315
+  - keyword: angeles california
+    count: 313
+  - keyword: florida united
+    count: 304
+  - keyword: colorado united
+    count: 287
+  - keyword: illinois united
+    count: 280
+  - keyword: arizona united
+    count: 270
+  - keyword: georgia united
+    count: 260
+  - keyword: kansas city
+    count: 247
+  - keyword: lake city
+    count: 246
+  company_tokens:
+  - keyword: speechify
+    count: 2425
+  - keyword: equipmentsharecom
+    count: 1539
+  - keyword: carvana
+    count: 1534
+  - keyword: andurilindustries
+    count: 1524
+  - keyword: spacex
+    count: 1478
+  - keyword: launch2
+    count: 1110
+  - keyword: blueskytelepsych
+    count: 922
+  - keyword: agency
+    count: 805
+  - keyword: databricks
+    count: 739
+  - keyword: stone
+    count: 732
+  - keyword: cloudflare
+    count: 670
+  - keyword: capco
+    count: 661
+  - keyword: stripe
+    count: 620
+  - keyword: doordashusa
+    count: 594
+  - keyword: feverup
+    count: 580
+  - keyword: coupang
+    count: 574
+  - keyword: luminishealth
+    count: 569
+  noise:
+  - keyword: software
+    count: 8459
+  - keyword: york
+    count: 7836
+  - keyword: product
+    count: 5907
+  - keyword: san
+    count: 5773
+  - keyword: account
+    count: 5511
+  - keyword: sales
+    count: 4148
+  - keyword: francisco
+    count: 4128
+  - keyword: san francisco
+    count: 4122
+  - keyword: data
+    count: 3670
+  - keyword: staff
+    count: 3347
+  - keyword: account executive
+    count: 3302
+  - keyword: city
+    count: 3226
+  - keyword: operations
+    count: 3124
+  - keyword: development
+    count: 2538
+  - keyword: of
+    count: 2530
+  - keyword: business
+    count: 2237
+  - keyword: marketing
+    count: 2190
+  - keyword: technical
+    count: 2142
+  - keyword: customer
+    count: 2036
+  - keyword: york ny
+    count: 1971
+  - keyword: francisco ca
+    count: 1955
+  - keyword: core
+    count: 1927
+  - keyword: sr.
+    count: 1875
+  - keyword: enterprise
+    count: 1861
+  - keyword: kingdom
+    count: 1849
+  - keyword: platform
+    count: 1785
+  - keyword: project
+    count: 1781
+  - keyword: germany
+    count: 1669
+  - keyword: or
+    count: 1650
+  - keyword: de
+    count: 1586
+  - keyword: solutions
+    count: 1525
+  - keyword: systems
+    count: 1489
+  - keyword: support
+    count: 1477
+  - keyword: york york
+    count: 1446
+  - keyword: ii
+    count: 1399
+  - keyword: md
+    count: 1380
+  - keyword: core product
+    count: 1362
+  - keyword: paulo
+    count: 1221
+  - keyword: nurse
+    count: 1209
+  - keyword: partner
+    count: 1208
+  - keyword: in
+    count: 1182
+  - keyword: health
+    count: 1155
+  - keyword: los
+    count: 1152
+  - keyword: mexico
+    count: 1139
+  - keyword: angeles
+    count: 1126
+  - keyword: los angeles
+    count: 1125
+  - keyword: success
+    count: 1093
+  - keyword: fl
+    count: 1086
+  - keyword: strategic
+    count: 1083
+  - keyword: program
+    count: 1069
+  - keyword: management
+    count: 1067
+  - keyword: south
+    count: 1041
+  - keyword: bengaluru
+    count: 1037
+  - keyword: tech
+    count: 1029
+  - keyword: brazil
+    count: 1027
+  - keyword: assistant
+    count: 1013
+  - keyword: costa
+    count: 1000
+  - keyword: north
+    count: 982
+  - keyword: brasil
+    count: 949
+  - keyword: design
+    count: 947
+  - keyword: il
+    count: 941
+  - keyword: spain
+    count: 927
+  - keyword: development representative
+    count: 920
+  - keyword: growth
+    count: 906
+  - keyword: mesa
+    count: 906
+  - keyword: business development
+    count: 894
+  - keyword: staff software
+    count: 891
+  - keyword: strategy
+    count: 887
+  - keyword: service
+    count: 881
+  - keyword: customer success
+    count: 880
+  - keyword: services
+    count: 878
+  - keyword: england
+    count: 860
+  - keyword: costa mesa
+    count: 857
+  - keyword: japan
+    count: 841
+  - keyword: andurilindustries costa
+    count: 834
+  - keyword: trainer
+    count: 834
+  - keyword: freelance
+    count: 822
+  - keyword: va
+    count: 815
+  - keyword: practitioner
+    count: 811
+  - keyword: kong
+    count: 810
+  - keyword: territory
+    count: 810
+  - keyword: denver
+    count: 808
+  - keyword: hong
+    count: 808
+  - keyword: hong kong
+    count: 808
+  - keyword: nurse practitioner
+    count: 803
+  - keyword: bangalore
+    count: 801
+  - keyword: field
+    count: 799
+  - keyword: finance
+    count: 794
+  - keyword: shift
+    count: 788
+  - keyword: learning
+    count: 782
+  - keyword: commercial
+    count: 773
+  - keyword: mo
+    count: 772
+  - keyword: artificialintelligence trainer
+    count: 769
+  - keyword: '2026'
+    count: 767
+  - keyword: analytics
+    count: 766
+  - keyword: co
+    count: 757
+  - keyword: project agency
+    count: 746
+  - keyword: france
+    count: 740
+  - keyword: director of
+    count: 737
+  - keyword: atlanta
+    count: 732
+  - keyword: enterprise account
+    count: 723
+  - keyword: mental
+    count: 706
+  - keyword: illinois
+    count: 698
+  - keyword: based
+    count: 695
+  - keyword: test
+    count: 692
+  - keyword: mental health
+    count: 691
+  - keyword: australia
+    count: 690
+  - keyword: jose
+    count: 688
+  - keyword: san jose
+    count: 678
+  - keyword: chicago il
+    count: 672
+  - keyword: nj
+    count: 670
+  - keyword: dublin
+    count: 669
+  - keyword: massachusetts
+    count: 665
+  - keyword: beach
+    count: 664
+  - keyword: columbia
+    count: 663
+  - keyword: trainer project
+    count: 661
+  - keyword: freelance artificialintelligence
+    count: 660
+  - keyword: az
+    count: 659
+  - keyword: machine
+    count: 658
+  - keyword: boston ma
+    count: 655
+  - keyword: client
+    count: 654
+  - keyword: global
+    count: 654
+  - keyword: experience
+    count: 653
+  - keyword: netherlands
+    count: 650
+  - keyword: research
+    count: 649
+  - keyword: market
+    count: 641
+  - keyword: head
+    count: 633
+  - keyword: mountain
+    count: 631
+  - keyword: angeles ca
+    count: 626
+  - keyword: dallas
+    count: 620
+  - keyword: pa
+    count: 617
+  - keyword: seattle wa
+    count: 616
+  - keyword: colorado
+    count: 614
+  - keyword: madrid
+    count: 608
+  - keyword: view
+    count: 607
+  - keyword: virginia
+    count: 607
+  - keyword: mountain view
+    count: 604
+  - keyword: full
+    count: 602
+  - keyword: head of
+    count: 602
+  - keyword: poland
+    count: 601
+  - keyword: sales development
+    count: 598
+  - keyword: care
+    count: 596
+  - keyword: quality
+    count: 594
+  - keyword: area
+    count: 592
+  - keyword: data scientist
+    count: 591
+  - keyword: ca york
+    count: 590
+  - keyword: hawthorne
+    count: 590
+  - keyword: dc
+    count: 588
+  - keyword: regional
+    count: 575
+  - keyword: talent
+    count: 570
+  - keyword: it
+    count: 561
+  - keyword: america
+    count: 553
+  - keyword: delivery
+    count: 552
+  - keyword: ireland
+    count: 552
+  - keyword: office
+    count: 546
+  - keyword: ga
+    count: 543
+  - keyword: tel
+    count: 543
+  - keyword: territory account
+    count: 542
+  - keyword: santa
+    count: 541
+  - keyword: sunnyvale
+    count: 537
+  - keyword: oh
+    count: 536
+  - keyword: hawthorne ca
+    count: 533
+  - keyword: retail
+    count: 533
+  - keyword: therapist
+    count: 532
+  - keyword: ontario
+    count: 529
+  - keyword: spacex hawthorne
+    count: 527
+  - keyword: washington dc
+    count: 521
+  - keyword: part-time
+    count: 520
+  - keyword: israel
+    count: 517
+  - keyword: palo alto
+    count: 493
+  - keyword: specialist freelance
+    count: 462
+  - keyword: tel aviv
+    count: 458
+  - keyword: austin tx
+    count: 444
+  - keyword: long beach
+    count: 442
+  - keyword: bangalore india
+    count: 436
+  - keyword: health nurse
+    count: 422
+  - keyword: denver co
+    count: 418
+  - keyword: psychiatric mental
+    count: 418
+  - keyword: practitioner pmhnp
+    count: 405
+  - keyword: annapolis md
+    count: 404
+  - keyword: seattle washington
+    count: 402
+  - keyword: paris france
+    count: 401
+  - keyword: karnataka india
+    count: 394
+  - keyword: product marketing
+    count: 394
+  - keyword: luminishealth annapolis
+    count: 391
+  - keyword: ontario canada
+    count: 382
+  - keyword: pmhnp blueskytelepsych
+    count: 379
+  - keyword: states san
+    count: 377
+  - keyword: bengaluru karnataka
+    count: 376
+  - keyword: sao paulo
+    count: 369
+  - keyword: north carolina
+    count: 367
+  - keyword: south korea
+    count: 358
+  - keyword: strategic account
+    count: 354
+  - keyword: sunnyvale ca
+    count: 350
+  - keyword: amsterdam netherlands
+    count: 348
+  - keyword: bay area
+    count: 348
+  - keyword: rio de
+    count: 348
+  - keyword: de janeiro
+    count: 342
+  - keyword: toronto ontario
+    count: 332
+  - keyword: sales associate
+    count: 330
+  - keyword: macos core
+    count: 325
+  - keyword: starlink spacex
+    count: 324
+  - keyword: atlanta ga
+    count: 323
+  - keyword: md blueskytelepsych
+    count: 323
+  - keyword: psychiatrist md
+    count: 323
+  - keyword: sales representative
+    count: 323
+  - keyword: web core
+    count: 323
+  - keyword: paulo brasil
+    count: 322
+  - keyword: dublin ireland
+    count: 321
+  - keyword: summer 2026
+    count: 316
+  - keyword: singapore singapore
+    count: 312
+  - keyword: san diego
+    count: 311
+  - keyword: vice president
+    count: 311
+  - keyword: boston massachusetts
+    count: 310
+  - keyword: technical program
+    count: 310
+  - keyword: chrome extension
+    count: 307
+  - keyword: 2nd shift
+    count: 306
+  - keyword: product chrome
+    count: 306
+  - keyword: tech web
+    count: 306
+  - keyword: bengaluru india
+    count: 301
+  - keyword: staff product
+    count: 301
+  - keyword: dallas tx
+    count: 298
+  - keyword: chicago illinois
+    count: 296
+  - keyword: home based
+    count: 296
+  - keyword: relativity long
+    count: 291
+  - keyword: alto ca
+    count: 288
+  - keyword: santa clara
+    count: 286
+  - keyword: customer service
+    count: 285
+  - keyword: operations associate
+    count: 283
+  - keyword: part time
+    count: 283
+  - keyword: cdl drivers
+    count: 282
+  - keyword: drivers equipmentsharecom
+    count: 282
+  - keyword: technical support
+    count: 282
+  - keyword: future technicians
+    count: 281
+  - keyword: technicians equipmentsharecom
+    count: 281
+  - keyword: czech republic
+    count: 280
+  - keyword: seoul south
+    count: 279
+  - keyword: taipei taiwan
+    count: 275
+  - keyword: anthropic san
+    count: 272
+  - keyword: louis mo
+    count: 266
+  - keyword: operations specialist
+    count: 258
+  - keyword: st. louis
+    count: 258
+  - keyword: atlanta georgia
+    count: 257
+  - keyword: bastrop tx
+    count: 256
+  - keyword: bonus carvana
+    count: 255
+  - keyword: kong hong
+    count: 255
+  - keyword: redmond wa
+    count: 254
+  - keyword: windows desktop
+    count: 254
+  - keyword: desktop applications
+    count: 253
+  - keyword: district of
+    count: 253
+  - keyword: of columbia
+    count: 253
+  - keyword: support specialist
+    count: 252
+  - keyword: canonical home
+    count: 251
+  - keyword: language specialist
+    count: 250
+  - keyword: spacex bastrop
+    count: 250
+  - keyword: bellevue wa
+    count: 248
+  - keyword: salt lake
+    count: 248
+  - keyword: charlotte nc
+    count: 245
+  - keyword: francisco bay
+    count: 244
+  - keyword: washington district
+    count: 240
+  - keyword: supply chain
+    count: 239
+  - keyword: munich germany
+    count: 238

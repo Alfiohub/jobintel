@@ -1,0 +1,9 @@
+{
+  "db": "data/jobintel_microsaas_mygreenhouse_20k_pilot_20260326.sqlite",
+  "queries_file": "docs/search_quality_queries_v1.json",
+  "queries_count": 10,
+  "top_k": 5,
+  "relevant_threshold": 0.75,
+  "overall_avg_coherence": 0.922,
+  "overall_hit_rate": 1.0
+}

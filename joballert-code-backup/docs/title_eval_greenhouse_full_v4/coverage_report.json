@@ -1,0 +1,598 @@
+{
+  "rows": 81911,
+  "other_rows": 27546,
+  "other_pct": 33.63,
+  "counts_by_normalized_title": {
+    "analytics_director": 151,
+    "marketing_specialist": 2322,
+    "healthcare_provider": 1,
+    "accountant": 1126,
+    "software_engineer": 17114,
+    "product_manager": 2027,
+    "project_manager": 1443,
+    "chief_revenue_officer": 15,
+    "financial_analyst": 273,
+    "legal_counsel": 833,
+    "data_analyst": 1133,
+    "operations_specialist": 2530,
+    "other": 27546,
+    "systems_administrator": 84,
+    "operations_analyst": 2,
+    "product_designer": 847,
+    "account_executive": 3269,
+    "alliance_manager": 165,
+    "business_development_representative": 841,
+    "customer_success_manager": 896,
+    "data_scientist": 589,
+    "sales_representative": 3228,
+    "analytics_engineer": 335,
+    "account_manager": 1725,
+    "consultant": 918,
+    "it_support_specialist": 237,
+    "hr_business_partner": 154,
+    "data_engineer": 731,
+    "technical_program_manager": 9,
+    "engineering_manager": 814,
+    "implementation_consultant": 56,
+    "implementation_coordinator": 1,
+    "content_designer": 58,
+    "general_application": 58,
+    "site_reliability_engineer": 385,
+    "analytics_manager": 544,
+    "program_analyst": 1,
+    "office_administrator": 12,
+    "solutions_architect": 667,
+    "technical_recruiter": 600,
+    "hr_generalist": 34,
+    "hr_manager": 11,
+    "frontend_engineer": 158,
+    "ml_engineer": 462,
+    "backend_engineer": 480,
+    "technician": 2236,
+    "fullstack_engineer": 402,
+    "executive_assistant": 130,
+    "seo_specialist": 57,
+    "business_analyst": 204,
+    "corporate_development": 53,
+    "chief_technology_officer": 30,
+    "industry_lead": 9,
+    "enterprise_architect": 26,
+    "localization_intern": 2,
+    "investment_analyst": 71,
+    "ml_scientist": 40,
+    "devops_engineer": 348,
+    "driver": 457,
+    "mechanic": 239,
+    "business_intelligence_analyst": 40,
+    "nurse_practitioner": 811,
+    "business_intelligence_engineer": 12,
+    "teacher": 201,
+    "substitute_teacher": 106,
+    "psychotherapist": 430,
+    "psychiatrist": 399,
+    "field_technician": 118,
+    "car_detailer": 70,
+    "delivery_driver": 181,
+    "customer_service_specialist": 100,
+    "health_information_specialist": 121,
+    "assistant_teacher": 84,
+    "landscape_technician": 49
+  },
+  "counts_by_role_family": {
+    "data_analytics": 2215,
+    "marketing": 2379,
+    "healthcare": 1,
+    "finance": 1470,
+    "software_engineering": 18968,
+    "product_management": 2027,
+    "program_management": 1453,
+    "executive_leadership": 45,
+    "legal": 833,
+    "operations": 2646,
+    "other": 27604,
+    "it_operations": 321,
+    "design": 905,
+    "sales": 9072,
+    "partnerships": 165,
+    "customer_success": 896,
+    "data_science": 589,
+    "consulting": 975,
+    "hr": 199,
+    "data_engineering": 731,
+    "sre": 385,
+    "architecture": 693,
+    "recruiting": 600,
+    "machine_learning": 502,
+    "skilled_trades": 2712,
+    "administrative_support": 130,
+    "business_analysis": 204,
+    "strategy": 53,
+    "devops": 348,
+    "logistics": 638,
+    "healthcare_clinical": 1761,
+    "education": 391
+  },
+  "counts_by_status": {
+    "matched": 39950,
+    "fallback": 14415,
+    "other": 27546
+  },
+  "rule_usage": [
+    {
+      "rule_id": "eng_software",
+      "count": 7302
+    },
+    {
+      "rule_id": "sales_account_exec",
+      "count": 3269
+    },
+    {
+      "rule_id": "sales_generic",
+      "count": 3178
+    },
+    {
+      "rule_id": "trades_technician",
+      "count": 2236
+    },
+    {
+      "rule_id": "product_manager",
+      "count": 1933
+    },
+    {
+      "rule_id": "marketing_generic",
+      "count": 1906
+    },
+    {
+      "rule_id": "sales_account_manager",
+      "count": 1725
+    },
+    {
+      "rule_id": "consultant_generic",
+      "count": 918
+    },
+    {
+      "rule_id": "csm",
+      "count": 896
+    },
+    {
+      "rule_id": "design_product",
+      "count": 847
+    },
+    {
+      "rule_id": "sales_bdr",
+      "count": 841
+    },
+    {
+      "rule_id": "legal_counsel",
+      "count": 833
+    },
+    {
+      "rule_id": "eng_manager",
+      "count": 814
+    },
+    {
+      "rule_id": "healthcare_nurse_practitioner",
+      "count": 811
+    },
+    {
+      "rule_id": "program_manager_generic",
+      "count": 757
+    },
+    {
+      "rule_id": "data_engineer",
+      "count": 731
+    },
+    {
+      "rule_id": "program_project_manager",
+      "count": 686
+    },
+    {
+      "rule_id": "arch_solutions",
+      "count": 666
+    },
+    {
+      "rule_id": "data_scientist",
+      "count": 589
+    },
+    {
+      "rule_id": "finance_accounting",
+      "count": 507
+    },
+    {
+      "rule_id": "eng_backend",
+      "count": 480
+    },
+    {
+      "rule_id": "ml_engineer",
+      "count": 462
+    },
+    {
+      "rule_id": "logistics_driver",
+      "count": 457
+    },
+    {
+      "rule_id": "eng_fullstack",
+      "count": 402
+    },
+    {
+      "rule_id": "recruiting_generic",
+      "count": 399
+    },
+    {
+      "rule_id": "healthcare_psychiatrist",
+      "count": 399
+    },
+    {
+      "rule_id": "eng_sre",
+      "count": 385
+    },
+    {
+      "rule_id": "data_analyst",
+      "count": 374
+    },
+    {
+      "rule_id": "eng_devops",
+      "count": 348
+    },
+    {
+      "rule_id": "qa_ambiguous",
+      "count": 268
+    },
+    {
+      "rule_id": "ops_generic",
+      "count": 249
+    },
+    {
+      "rule_id": "trades_mechanic",
+      "count": 239
+    },
+    {
+      "rule_id": "finance_analyst",
+      "count": 237
+    },
+    {
+      "rule_id": "healthcare_psychotherapist",
+      "count": 219
+    },
+    {
+      "rule_id": "healthcare_licensed_mental_health_therapist",
+      "count": 211
+    },
+    {
+      "rule_id": "business_analyst",
+      "count": 204
+    },
+    {
+      "rule_id": "it_technical_support_generic",
+      "count": 202
+    },
+    {
+      "rule_id": "education_teacher",
+      "count": 201
+    },
+    {
+      "rule_id": "logistics_delivery_driver",
+      "count": 181
+    },
+    {
+      "rule_id": "eng_frontend",
+      "count": 158
+    },
+    {
+      "rule_id": "hrbp",
+      "count": 154
+    },
+    {
+      "rule_id": "admin_executive_assistant",
+      "count": 130
+    },
+    {
+      "rule_id": "manager_general_ambiguous",
+      "count": 129
+    },
+    {
+      "rule_id": "recruiting_tech",
+      "count": 123
+    },
+    {
+      "rule_id": "marketing_paid_media_manager",
+      "count": 123
+    },
+    {
+      "rule_id": "healthcare_health_info_specialist",
+      "count": 121
+    },
+    {
+      "rule_id": "data_analytics_engineer",
+      "count": 120
+    },
+    {
+      "rule_id": "trades_field_technician",
+      "count": 118
+    },
+    {
+      "rule_id": "partnerships_alliance",
+      "count": 116
+    },
+    {
+      "rule_id": "education_substitute_teacher",
+      "count": 106
+    },
+    {
+      "rule_id": "data_analytics_manager",
+      "count": 101
+    },
+    {
+      "rule_id": "ops_customer_service",
+      "count": 100
+    },
+    {
+      "rule_id": "finance_accounting_manager",
+      "count": 97
+    },
+    {
+      "rule_id": "product_owner",
+      "count": 94
+    },
+    {
+      "rule_id": "it_sysadmin",
+      "count": 84
+    },
+    {
+      "rule_id": "education_assistant_teacher",
+      "count": 84
+    },
+    {
+      "rule_id": "trades_car_detailer",
+      "count": 70
+    },
+    {
+      "rule_id": "finance_wealth_advisor",
+      "count": 65
+    },
+    {
+      "rule_id": "design_content",
+      "count": 58
+    },
+    {
+      "rule_id": "exact_general_application",
+      "count": 58
+    },
+    {
+      "rule_id": "marketing_seo",
+      "count": 57
+    },
+    {
+      "rule_id": "consulting_implementation",
+      "count": 56
+    },
+    {
+      "rule_id": "strategy_corp_dev",
+      "count": 53
+    },
+    {
+      "rule_id": "ops_case_manager",
+      "count": 51
+    },
+    {
+      "rule_id": "sales_store_associate",
+      "count": 50
+    },
+    {
+      "rule_id": "recruiting_coordinator",
+      "count": 49
+    },
+    {
+      "rule_id": "partnerships_strategy_manager",
+      "count": 49
+    },
+    {
+      "rule_id": "trades_landscape_technician",
+      "count": 49
+    },
+    {
+      "rule_id": "ops_intervention_specialist_ambiguous",
+      "count": 45
+    },
+    {
+      "rule_id": "ml_scientist",
+      "count": 40
+    },
+    {
+      "rule_id": "data_bi_analyst",
+      "count": 40
+    },
+    {
+      "rule_id": "it_support_specialist",
+      "count": 35
+    },
+    {
+      "rule_id": "hr_generalist",
+      "count": 34
+    },
+    {
+      "rule_id": "exec_cto",
+      "count": 30
+    },
+    {
+      "rule_id": "qa_automation",
+      "count": 30
+    },
+    {
+      "rule_id": "arch_enterprise",
+      "count": 26
+    },
+    {
+      "rule_id": "ops_delivery",
+      "count": 21
+    },
+    {
+      "rule_id": "exec_rvp_sales",
+      "count": 15
+    },
+    {
+      "rule_id": "finance_treasury",
+      "count": 14
+    },
+    {
+      "rule_id": "ops_office",
+      "count": 12
+    },
+    {
+      "rule_id": "data_bi_engineer",
+      "count": 12
+    },
+    {
+      "rule_id": "hr_head",
+      "count": 11
+    },
+    {
+      "rule_id": "program_tpm",
+      "count": 9
+    },
+    {
+      "rule_id": "sales_industry",
+      "count": 9
+    },
+    {
+      "rule_id": "data_analytics_director",
+      "count": 7
+    },
+    {
+      "rule_id": "finance_investment",
+      "count": 6
+    },
+    {
+      "rule_id": "marketing_ads",
+      "count": 3
+    },
+    {
+      "rule_id": "ops_analyst",
+      "count": 2
+    },
+    {
+      "rule_id": "ops_localization",
+      "count": 2
+    },
+    {
+      "rule_id": "healthcare_provider",
+      "count": 1
+    },
+    {
+      "rule_id": "consulting_coordinator",
+      "count": 1
+    },
+    {
+      "rule_id": "program_analyst",
+      "count": 1
+    },
+    {
+      "rule_id": "arch_partner_innovation",
+      "count": 1
+    }
+  ],
+  "other_by_reason": [
+    {
+      "reason": "fallback_other",
+      "count": 22036
+    },
+    {
+      "reason": "fallback_manager_ambiguous",
+      "count": 5068
+    },
+    {
+      "reason": "avoid_forced_qa_mapping",
+      "count": 268
+    },
+    {
+      "reason": "ambiguous_general_manager",
+      "count": 129
+    },
+    {
+      "reason": "ambiguous_intervention_specialist",
+      "count": 45
+    }
+  ],
+  "top_unmatched_titles": [
+    {
+      "title_clean": "General Manager",
+      "count": 36
+    },
+    {
+      "title_clean": "Intervention Specialist",
+      "count": 36
+    },
+    {
+      "title_clean": "Primary Care Physician",
+      "count": 34
+    },
+    {
+      "title_clean": "Registered Nurse (RN)",
+      "count": 31
+    },
+    {
+      "title_clean": "Producer",
+      "count": 30
+    },
+    {
+      "title_clean": "Quantitative Researcher",
+      "count": 30
+    },
+    {
+      "title_clean": "Rental Coordinator",
+      "count": 30
+    },
+    {
+      "title_clean": "Business Development Manager",
+      "count": 29
+    },
+    {
+      "title_clean": "Entry-Level Automotive Detailer - Lot Attendant",
+      "count": 29
+    },
+    {
+      "title_clean": "Regional Safety Manager",
+      "count": 28
+    },
+    {
+      "title_clean": "Direct Support Professional (DSP)",
+      "count": 26
+    },
+    {
+      "title_clean": "Entry-Level Automotive Parts Associate",
+      "count": 25
+    },
+    {
+      "title_clean": "Behavioral Interventionist",
+      "count": 24
+    },
+    {
+      "title_clean": "Entry-Level Automotive Detailer - Lot Attendant Post Production",
+      "count": 24
+    },
+    {
+      "title_clean": "Payroll Specialist",
+      "count": 23
+    },
+    {
+      "title_clean": "Stylist (Retail) (Part-time)",
+      "count": 23
+    },
+    {
+      "title_clean": "Board Certified Behavior Analyst",
+      "count": 22
+    },
+    {
+      "title_clean": "Telematics Installer",
+      "count": 22
+    },
+    {
+      "title_clean": "Licensed Practical Nurse (LPN)",
+      "count": 22
+    },
+    {
+      "title_clean": "Social Media Manager",
+      "count": 21
+    }
+  ]
+}

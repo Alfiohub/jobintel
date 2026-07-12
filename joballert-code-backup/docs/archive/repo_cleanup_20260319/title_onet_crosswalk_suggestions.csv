@@ -1,0 +1,21 @@
+normalized_title,suggested_onet_soc_code,suggested_onet_title,suggested_match_score,suggested_source_table,suggestion_reason
+manager,11-1021.00,General and Operations Managers,0.8,title_onet_crosswalk,normalized_title_query:manual_crosswalk
+other,51-8092.00,Gas Plant Operators,0.7434,alternate_titles,title_clean_sample:fuzzy
+backend_engineer,15-1252.00,Software Developers,0.9,title_onet_crosswalk,normalized_title_query:manual_crosswalk
+alliance_manager,11-2022.00,Sales Managers,0.6144,alternate_titles,title_clean_sample:fuzzy
+systems_administrator,11-3021.00,Computer and Information Systems Managers,0.7224,alternate_titles,normalized_title_query:fuzzy
+consultant,13-1111.00,Management Analysts,0.727,alternate_titles,title_clean_sample:fuzzy
+ml_engineer,17-2171.00,Petroleum Engineers,0.7018,alternate_titles,normalized_title_query:fuzzy
+technical_program_manager,15-1299.08,Computer Systems Engineers/Architects,0.75,title_onet_crosswalk,normalized_title_query:manual_crosswalk
+hr_business_partner,13-2011.00,Accountants and Auditors,0.6755,alternate_titles,normalized_title_query:fuzzy
+fullstack_engineer,15-1252.00,Software Developers,0.7453,alternate_titles,normalized_title_query:fuzzy
+analytics_engineer,17-2011.00,Aerospace Engineers,0.6527,alternate_titles,normalized_title_query:fuzzy
+hr_generalist,,,0.0,,no_candidate_found
+talent_analytics_specialist,15-2041.00,Statisticians,0.7418,alternate_titles,normalized_title_query:fuzzy
+seo_specialist,19-2099.01,Remote Sensing Scientists and Technologists,0.7255,alternate_titles,normalized_title_query:fuzzy
+general_application,11-3051.00,Industrial Production Managers,0.6222,alternate_titles,normalized_title_query:fuzzy
+healthcare_provider,31-1122.00,Personal Care Aides,0.6615,alternate_titles,normalized_title_query:fuzzy
+implementation_coordinator,33-1021.00,First-Line Supervisors of Firefighting and Prevention Workers,0.6762,alternate_titles,normalized_title_query:fuzzy
+chief_revenue_officer,13-2081.00,"Tax Examiners and Collectors, and Revenue Agents",0.7056,alternate_titles,normalized_title_query:fuzzy
+hr_manager,11-3021.00,Computer and Information Systems Managers,0.6439,alternate_titles,title_clean_sample:fuzzy
+frontend_engineer,15-1254.00,Web Developers,0.7442,alternate_titles,normalized_title_query:fuzzy

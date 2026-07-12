@@ -1,0 +1,15 @@
+Manual Review Queue Apply Report
+Gold input: docs/gold_eval_set_v1_en_locv4_autolabeled.csv
+Queue input: docs/manual_review_queue_filled.csv
+Output: docs/gold_eval_set_v1_en_locv4_autolabeled.csv
+Dry-run: 0
+Touched job ids: 67
+
+Stats:
+- queue_rows: 67
+- updated_notes: 67
+- set_in_review: 60
+- decision_needs_manual_rule: 56
+- decision_accept: 7
+- decision_reject: 4
+- changed_gold_title: 4

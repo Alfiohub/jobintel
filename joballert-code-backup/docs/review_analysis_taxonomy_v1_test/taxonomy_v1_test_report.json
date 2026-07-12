@@ -1,0 +1,85 @@
+{
+  "db": "data/jobintel_microsaas_taxonomy_v1_test_500.sqlite",
+  "rows_total": 500,
+  "other_count": 10,
+  "other_percentage": 2.0,
+  "crosswalk_updates_jobs_indexed": {
+    "backend_frontend_fullstack_to_software_engineering": 0,
+    "general_application_recruiting_to_other": 0
+  },
+  "crosswalk_updates_extraction_cache": {
+    "backend_frontend_fullstack_to_software_engineering": 0,
+    "general_application_recruiting_to_other": 0
+  },
+  "normalized_title_multi_family_violations": [],
+  "top_unmapped_titles": [
+    {
+      "normalized_title": "manager",
+      "count": 35
+    },
+    {
+      "normalized_title": "alliance_manager",
+      "count": 14
+    },
+    {
+      "normalized_title": "operations_specialist",
+      "count": 11
+    },
+    {
+      "normalized_title": "other",
+      "count": 10
+    },
+    {
+      "normalized_title": "implementation_consultant",
+      "count": 4
+    },
+    {
+      "normalized_title": "product_designer",
+      "count": 3
+    },
+    {
+      "normalized_title": "consultant",
+      "count": 2
+    },
+    {
+      "normalized_title": "general_application",
+      "count": 2
+    },
+    {
+      "normalized_title": "office_administrator",
+      "count": 2
+    },
+    {
+      "normalized_title": "talent_analytics_specialist",
+      "count": 2
+    },
+    {
+      "normalized_title": "technical_program_manager",
+      "count": 2
+    },
+    {
+      "normalized_title": "chief_revenue_officer",
+      "count": 1
+    },
+    {
+      "normalized_title": "healthcare_provider",
+      "count": 1
+    },
+    {
+      "normalized_title": "hr_manager",
+      "count": 1
+    },
+    {
+      "normalized_title": "implementation_coordinator",
+      "count": 1
+    },
+    {
+      "normalized_title": "operations_analyst",
+      "count": 1
+    },
+    {
+      "normalized_title": "program_analyst",
+      "count": 1
+    }
+  ]
+}

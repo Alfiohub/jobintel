@@ -1,0 +1,5 @@
+old_role_family,new_role_family,scope
+backend,software_engineering,all_titles_in_family
+frontend,software_engineering,all_titles_in_family
+fullstack,software_engineering,all_titles_in_family
+recruiting,other,title_specific:general_application_only
